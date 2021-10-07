@@ -2,21 +2,20 @@
 title: OWASP Top 10
 seo-title: OWASP Top 10
 description: Läs om hur AEM hanterar de 10 viktigaste säkerhetsriskerna i OWASP.
-seo-description: Läs om hur AEM hanterar de 10 viktigaste säkerhetsriskerna i OWASP.
+seo-description: Learn how AEM deals with the top 10 OWASP security risks.
 uuid: a5a7e130-e15b-47ae-ba21-448f9ac76074
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: e5323ae8-bc37-4bc6-bca6-9763e18c8e76
-translation-type: tm+mt
-source-git-commit: 280c2b3cc8026988472d4ad0cf6649fa8a7c9c38
+exl-id: c29472c8-9a93-4cb1-9cb1-05fc155ba736
+source-git-commit: 31d6111a82a3cbfef22970d05280b0d3fd1c0de7
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
-
 
 # OWASP Top 10{#owasp-top}
 
@@ -64,13 +63,12 @@ Känsliga data, som autentiseringsuppgifter från tredje part, lagras i kryptera
 
 ## 8. Det gick inte att begränsa URL-åtkomst {#failure-to-restrict-url-access}
 
-Databasen tillåter inställning av [finstilt kornig behörighet (enligt JCR)](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/16_Access_Control_Management.html) för en given användare eller grupp på en given sökväg, via åtkomstkontrollposter. Åtkomstbegränsningar används av databasen.
+Databasen tillåter inställning av [finstilt kornig behörighet (enligt JCR)](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html) för en given användare eller grupp på en given sökväg, via åtkomstkontrollposter. Åtkomstbegränsningar används av databasen.
 
-## 9. Otillräckligt skydd för transportskikt {#insufficient-transport-layer-protection}
+## 9. Otillräckligt skydd av transportlager {#insufficient-transport-layer-protection}
 
 Hanteras av serverkonfigurationen (använd t.ex. endast HTTPS).
 
 ## 10. Ovaliderade omdirigeringar och vidarebefordringar {#unvalidated-redirects-and-forwards}
 
 Begränsad genom att alla omdirigeringar till destinationer som användaren anger begränsas till interna platser.
-

@@ -1,29 +1,28 @@
 ---
-title: Behörighetsadministration för användare, grupp och åtkomst
-seo-title: Behörighetsadministration för användare, grupp och åtkomst
+title: User, Group and Access Rights Administration
+seo-title: User, Group and Access Rights Administration
 description: Läs mer om administration av användare, grupper och åtkomsträttigheter i AEM.
 feature: Security
-seo-description: Läs mer om administration av användare, grupper och åtkomsträttigheter i AEM.
+seo-description: Learn about user, group and access rights administration in AEM.
 uuid: 30e0d4dc-261d-4dc2-aff7-29179eca1cc2
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: cc0637ef-4a9e-454f-899d-655c9caebe2b
 exl-id: 9c14e57b-019e-45ae-9e96-40424fa609c2
-translation-type: tm+mt
-source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
+source-git-commit: 31d6111a82a3cbfef22970d05280b0d3fd1c0de7
 workflow-type: tm+mt
-source-wordcount: '3138'
+source-wordcount: '3120'
 ht-degree: 0%
 
 ---
 
-# Administrering av användar-, grupp- och åtkomsträttigheter{#user-group-and-access-rights-administration}
+# Behörighetsadministration för användare, grupp och åtkomst{#user-group-and-access-rights-administration}
 
-Att ge åtkomst till en CRX-databas omfattar flera ämnen:
+Enabling access to a CRX repository involves several topics:
 
 * [Åtkomsträttigheter](#how-access-rights-are-evaluated)  - begrepp för hur de definieras och utvärderas
-* [Användaradministration](#user-administration)  - hantera enskilda konton som används för åtkomst
+* [User Administration](#user-administration) - managing the individual accounts used for access
 * [Gruppadministration](#group-administration)  - förenkla användarhantering genom att skapa grupper
 
 * [Hantering](#access-right-management)  av åtkomsträttigheter - definiera principer som styr hur dessa användare och grupper kan få åtkomst till resurser
@@ -64,7 +63,7 @@ Med CRX kan du konfigurera åtkomsträttigheter för både användar- och gruppk
 
 >[!NOTE]
 >
->CRX implementerar [åtkomstkontroll enligt definitionen i JSR-283](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/16_Access_Control_Management.html).
+>CRX implementerar [åtkomstkontroll enligt definitionen i JSR-283](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html).
 >
 >En standardinstallation av en CRX-databas är konfigurerad att använda resursbaserade åtkomstkontrollistor. Detta är en möjlig implementering av åtkomstkontrollen JSR-283 och en av implementeringarna i Jackrabbit.
 
@@ -109,14 +108,13 @@ Den förteckning över åtkomsträttigheter som är tillämpliga för föremåle
 >[!NOTE]
 >
 >* CRX tar ingen hänsyn till användarhierarkin när listan kompileras.
->* CRX använder bara en grupphierarki när du tar med en grupp som medlem i en annan grupp. Det finns inget automatiskt arv av gruppbehörigheter.
->* Den ordning som du anger grupperna i påverkar inte åtkomsträttigheterna.
+>* CRX uses a group hierarchy only when you include a group as a member of another group. There is no automatic inheritance of group permissions.
+>* The order in which you specify the groups does not affect the access rights.
 
 >
 
 
-
-### Åtgärdar begäran och åtkomsträttigheter {#resolving-request-and-access-rights}
+### Löser begäran och åtkomsträttigheter {#resolving-request-and-access-rights}
 
 När CRX hanterar begäran jämför den åtkomstbegäran från ämnet med åtkomstkontrollistan på databasnoden:
 
@@ -235,8 +233,8 @@ NameEtt fullständigt textnamn för kontot.
 * ****
 PasswordNeeded when accessing CRX with this account.
 
-* **ntlmhash**
-Tilldelas automatiskt för varje nytt konto och uppdateras när lösenordet ändras.
+* ****
+ntlmhashTilldelas automatiskt för varje nytt konto och uppdateras när lösenordet ändras.
 
 * Du kan lägga till nya egenskaper genom att definiera namn, typ och värde. Klicka på Spara (grön bocksymbol) för varje ny egenskap.
 
@@ -250,17 +248,17 @@ Det innebär att ett användarkonto kan ange andra konton (användare eller grup
 
 Detta gör att persondatorkonton kan slutföra uppgifter som om de använde det konto de personifierar. t.ex. under frånvaro eller för att på kort sikt dela en för hög belastning.
 
-Om ett konto personifierar ett annat är det väldigt svårt att se. Loggfilerna innehåller ingen information om att personifiering har skett för händelserna. Så om användare-B personifierar användare-A ser alla händelser ut som om de utförts av användare-A personligen.
+If an account impersonates another it is very difficult to see. Loggfilerna innehåller ingen information om att personifiering har skett för händelserna. Så om användare-B personifierar användare-A ser alla händelser ut som om de utförts av användare-A personligen.
 
-### Skapa ett användarkonto {#creating-a-user-account}
+### Creating a User Account {#creating-a-user-account}
 
 1. Öppna dialogrutan **Användaradministration**.
 1. Klicka på **Skapa användare**.
-1. Sedan kan du ange Egenskaper:
+1. You can then enter the Properties:
 
-   * **** Användar-ID som används som kontonamn.
-   * **Lösenord** krävs vid inloggning.
-   * **Principal** Name för att ange ett fullständigt textnamn.
+   * **** Används som kontonamn.
+   * **** Lösenord krävs vid inloggning.
+   * **Principal Name** to provide a full textual name.
    * **Mellanliggande** sökväg som kan användas för att skapa en trädstruktur.
 
 1. Klicka på Spara (grön bocksymbol).
@@ -280,8 +278,7 @@ Om ett konto personifierar ett annat är det väldigt svårt att se. Loggfilerna
 >
 
 
-
-### Uppdaterar ett användarkonto {#updating-a-user-account}
+### Uppdatera ett användarkonto {#updating-a-user-account}
 
 1. Med dialogrutan **Användaradministration** öppnar du listvyn för alla konton.
 
@@ -290,7 +287,7 @@ Om ett konto personifierar ett annat är det väldigt svårt att se. Loggfilerna
 1. Gör en ändring och klicka sedan på Spara (grön bocksymbol) för den posten.
 1. Klicka på **Stäng** för att slutföra, eller **Lista...** om du vill återgå till listan över alla användarkonton.
 
-### Tar bort ett användarkonto {#removing-a-user-account}
+### Ta bort ett användarkonto {#removing-a-user-account}
 
 1. Med dialogrutan **Användaradministration** öppnar du listvyn för alla konton.
 
@@ -347,8 +344,8 @@ Du måste vara inloggad på rätt arbetsyta och sedan kan du öppna dialogrutan 
 
 **Egenskaper**
 
-* **GroupIDShort-**
-namn för gruppkontot.
+* ****
+GroupIDShort name for the group account.
 
 * **Principal**
 NameEtt fullständigt textnamn för gruppkontot.
@@ -361,15 +358,15 @@ MedlemmarDu kan lägga till användare eller andra grupper som medlemmar i den h
 
 Om du klickar på ett GroupID öppnas dialogrutan för den gruppen.
 
-**Medlemmar** Visar alla konton (användare och/eller grupper) som är medlemmar i den aktuella gruppen.
+**Members** Lists all accounts (users and/or groups) that are members of the current group.
 
-Kolumnen **Ärvd** anger medlemskap som har ärvts som ett resultat av medlemskap i en annan grupp.
+The **Inherited** column indicates membership that has been inherited as a result of membership of another group.
 
 >[!NOTE]
 >
->När rollen Ägare, Redigerare eller Visningsprogram tilldelas till en användare i en resursmapp skapas en ny grupp. Gruppnamnet har formatet `mac-default-<foldername>` för varje mapp som rollerna är definierade för.
+>When the Owner, Editor, or Viewer role is assigned to a user on any Asset folder, a new group gets created. Gruppnamnet har formatet `mac-default-<foldername>` för varje mapp som rollerna är definierade för.
 
-### Skapar ett gruppkonto {#creating-a-group-account}
+### Skapa ett gruppkonto {#creating-a-group-account}
 
 1. Öppna dialogrutan **Gruppadministration**.
 1. Klicka på **Skapa grupp**.
@@ -385,7 +382,7 @@ Kolumnen **Ärvd** anger medlemskap som har ärvts som ett resultat av medlemska
    1. Se **Gruppmedlemskap**.
    1. Hantera **medlemmar**.
 
-### Uppdaterar ett gruppkonto {#updating-a-group-account}
+### Uppdatera ett gruppkonto {#updating-a-group-account}
 
 1. Med dialogrutan **Gruppadministration** öppnar du listvyn för alla konton.
 
@@ -394,7 +391,7 @@ Kolumnen **Ärvd** anger medlemskap som har ärvts som ett resultat av medlemska
 1. Gör en ändring och klicka sedan på Spara (grön bocksymbol) för den posten.
 1. Klicka på **Stäng** för att slutföra, eller **Lista...** om du vill återgå till listan över alla gruppkonton.
 
-### Tar bort ett gruppkonto {#removing-a-group-account}
+### Ta bort ett gruppkonto {#removing-a-group-account}
 
 1. Med dialogrutan **Gruppadministration** öppnar du listvyn för alla konton.
 
@@ -433,7 +430,7 @@ Du kan lägga till medlemmar i den aktuella gruppen:
 
 Eller ta bort en befintlig medlem med papperskorgssymbolen.
 
-## Hantering av åtkomsträttighet {#access-right-management}
+## Behörighetshantering {#access-right-management}
 
 Med fliken **Åtkomstkontroll** på CRXDE Lite kan du definiera åtkomstkontrollprinciper och tilldela de relaterade behörigheterna.
 
@@ -456,21 +453,21 @@ Detta är åtkomstkontrollprinciper som du har tillämpat. Du kan sedan uppdater
 * **Effektiva**
 åtkomstkontrollprinciperDessa är de åtkomstkontrollprinciper som nu gäller för alla åtkomstbegäranden. De visar de aggregerade policyer som härletts från både lokala policyer och eventuella ärvda från det överordnade.
 
-### Principval {#policy-selection}
+### Välj profil {#policy-selection}
 
 Du kan välja profiler för:
 
 * **Aktuell**
 sökvägSom i exemplet ovan väljer du en resurs i databasen. Profiler för den här &quot;aktuella sökvägen&quot; visas.
 
-* **Databas**
-Väljer åtkomstkontroll på databasnivå. När du till exempel anger 
-`jcr:namespaceManagement` privilegium, som bara är relevant för databasen, inte en nod.
+* ****
+DatabasVäljer åtkomstkontroll på databasnivå. När du till exempel anger 
+`jcr:namespaceManagement` privilege, which is only relevant for the repository, not a node.
 
-* **Principal**
-Ett huvudkonto som är registrerat i databasen.
+* ****
+PrincipalEtt huvudkonto som är registrerat i databasen.
 
-   Du kan antingen skriva in namnet **Principal** eller klicka på ikonen till höger om fältet för att öppna dialogrutan **Välj säkerhetsobjekt**.
+   You can either type in the **Principal** name or click the icon to the right of the field to open the **Select Principal** dialog.
 
    Detta gör att du kan **söka** efter en **användare** eller **grupp**. Välj önskat huvudkonto i listan och klicka sedan på **OK** för att överföra värdet tillbaka till föregående dialogruta.
 
@@ -482,7 +479,7 @@ Ett huvudkonto som är registrerat i databasen.
 >
 >Det är enklare att hantera ett fåtal grupper än många användarkonton.
 
-### Behörigheter {#privileges}
+### Behörighet {#privileges}
 
 Följande behörigheter är tillgängliga när du lägger till en åtkomstkontrollpost (mer information finns i [API](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/security/Privilege.html)):
 
@@ -593,7 +590,7 @@ Du kan även registrera nya behörigheter:
 
 1. Klicka på **OK** för att spara. Privilegiet är nu tillgängligt för val.
 
-### Lägger till en åtkomstkontrollpost {#adding-an-access-control-entry}
+### Lägga till en åtkomstkontrollpost {#adding-an-access-control-entry}
 
 1. Markera resursen och öppna fliken **Åtkomstkontroll**.
 
@@ -622,7 +619,7 @@ Du kan även registrera nya behörigheter:
 
 CRX validerar ditt val; för ett givet huvudkonto finns (högst) 1 neka och 1 tillåt post på en viss nod. Implementeringen rensar alltid bort redundanta poster och ser till att samma privilegium inte finns med i både Tillåt- och Neka-posterna.
 
-### Beställa lokala åtkomstkontrollprinciper {#ordering-local-access-control-policies}
+### Principer för lokal åtkomstkontroll vid beställning {#ordering-local-access-control-policies}
 
 Ordningen i listan anger i vilken ordning profilerna tillämpas.
 
@@ -632,7 +629,7 @@ Ordningen i listan anger i vilken ordning profilerna tillämpas.
 
 1. Ändringarna visas i båda tabellerna för **Local** och **Effektiva åtkomstkontrollprinciper**.
 
-### Tar bort en åtkomstkontrollprincip {#removing-an-access-control-policy}
+### Ta bort en åtkomstkontrollprincip {#removing-an-access-control-policy}
 
 1. I tabellen **Local Access Control Policies** klickar du på den röda ikonen (-) till höger om posten.
 

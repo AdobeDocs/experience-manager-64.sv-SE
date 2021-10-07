@@ -2,7 +2,7 @@
 title: Concepts
 seo-title: Concepts
 description: Allmänna koncept för e-handel med AEM.
-seo-description: Allmänna koncept för e-handel med AEM.
+seo-description: General Concepts of eCommerce with AEM.
 uuid: 1e3f0518-7797-48a7-bac7-0dc3ddaa0385
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,16 +10,15 @@ topic-tags: e-commerce
 content-type: reference
 discoiquuid: c8ef374a-38d8-4cd4-a86e-69f0a5b4c2bc
 feature: Commerce Integration Framework
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 8140db99-fec6-4efd-87d9-62efd157d54a
+source-git-commit: 31d6111a82a3cbfef22970d05280b0d3fd1c0de7
 workflow-type: tm+mt
-source-wordcount: '4535'
+source-wordcount: '4524'
 ht-degree: 0%
 
 ---
 
-
-# Koncept{#concepts}
+# Concepts{#concepts}
 
 Integreringsramverket innehåller mekanismer och komponenter för att
 
@@ -40,15 +39,12 @@ Detta innebär att
 >e-handelsramverket kan användas med:
 >
 >* [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
-   >
-   >
-* [SAP Commerce Cloud](/help/sites-administering/sap-commerce-cloud.md)
-   >
-   >
-* [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
+>
+>* [SAP Commerce Cloud](/help/sites-administering/sap-commerce-cloud.md)
+>
+>* [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
 
 >
-
 
 
 >[!CAUTION]
@@ -76,7 +72,7 @@ För att optimera driften koncentrerar sig både AEM och e-handelsmotorn på sin
    * Begäran:
 
       * Produktinformation från e-handelsmotorn.
-   * Ange:
+   * Provide:
 
       * Användarvyer för produktinformation, kundvagn och utcheckning.
       * Information om varukorgar och utcheckning till e-handelsmotorn.
@@ -124,7 +120,7 @@ Ramverket ger dig tillgång till funktioner som:
 
 ![chlimage_1-168](assets/chlimage_1-168.png)
 
-### Implementeringar {#implementations}
+### Implementations {#implementations}
 
 AEM e-handel genomförs med en e-handelsmotor:
 
@@ -139,16 +135,13 @@ AEM e-handel genomförs med en e-handelsmotor:
 >
 >AEM eCommerce som genomförs inom AEM med allmän utveckling baserad på JCR är:
 >
->* Ett fristående, AEM e-handelsexempel som visar hur API används. Detta kan användas för att kontrollera produktdata, varukorgar och utcheckning i samband med befintliga dataspresentations- och marknadsföringskampanjer. I det här fallet lagras produktdatabasen i databasen native to AEM (Adobe implementation av [JCR](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html)).\
+>* Ett fristående, AEM e-handelsexempel som visar hur API används. Detta kan användas för att kontrollera produktdata, varukorgar och utcheckning i samband med befintliga dataspresentations- och marknadsföringskampanjer. I det här fallet lagras produktdatabasen i databasen native to AEM (Adobe implementation av [JCR](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/index.html)).\
    >  Standardinstallationen AEM innehåller grunderna i [den generiska e-handelsimplementeringen](/help/sites-administering/generic.md).
 
->
 
+### Leverantörer av handel {#commerce-providers}
 
-
-### Commerce Providers {#commerce-providers}
-
-När du importerar data från en e-handelsmotor till din AEM e-handelsplats används en e-handelsleverantör för att förse importörerna med data. En e-handelsleverantör kan stödja flera importörer.
+When importing data from a commerce engine into your AEM eCommerce site, a commerce provider is used to supply the importers with data. One commerce provider can support multiple importers.
 
 En e-handelsleverantör AEM kod som är anpassad till antingen:
 
@@ -187,8 +180,8 @@ Det integrerade systemet fångar upp följande roller för att underhålla data:
 
    * Produktinformation.
    * Taxonomi, kategorisering, godkännande.
-   * Samverkar med digital resurshantering.
-   * Priser - gäller ofta från ett ERP-system och upprätthålls inte uttryckligen i handelssystemet.
+   * Interacts with digital asset management.
+   * Pricing - often this comes from an ERP system and is not explicitly maintained in the commerce system.
 
 * Författare/Marknadsförare som underhåller:
 
@@ -210,7 +203,7 @@ Det integrerade systemet fångar upp följande roller för att underhålla data:
 
 ## Produkter {#products}
 
-### Produkt Data kontra marknadsföringsdata {#product-data-versus-marketing-data}
+### Produktdata kontra marknadsföringsdata {#product-data-versus-marketing-data}
 
 #### Strukturella kontra marknadsföringskategorier {#structural-versus-marketing-categories}
 
@@ -222,7 +215,7 @@ Om följande två kategorier kan särskiljas kan du på så sätt skapa tydliga 
 
    `/products/mens/shoes/sneakers`
 
-* ** marknadsföringskategorier
+* ** Marknadskategorier
 
    Alla andra kategorier i en *produkt kan tillhöra*; till exempel:
 
@@ -230,14 +223,14 @@ Om följande två kategorier kan särskiljas kan du på så sätt skapa tydliga 
 
 ### Produktdata {#product-data}
 
-Om du vill visa och hantera en produkt måste du lagra information om den.
+To portray and manage your product you will want to hold a range of information about them.
 
 Produktdata kan vara:
 
 * bevaras direkt i AEM (generiskt).
 * i eCommerce Engine och i AEM.
 
-   Beroende på datatypen är den [synkroniserad](#catalog-maintenance-data-synchronization) efter behov, eller direkt åtkomlig. mycket volatila och kritiska data som t.ex. produktpriser hämtas från e-handelsmotorn på varje sidbegäran för att säkerställa att de alltid är aktuella.
+   Depending on the data type it is [synchronized](#catalog-maintenance-data-synchronization) as necessary, or accessed directly; for example, highly volatile and critial data such as product prices are retrieved from the ecommerce engine on every page request to ensure they are always up-to-date.
 
 Oavsett vilket kan du se produktdata från konsolen **Produkter** när produktdata har angetts/importerats till AEM. Här visas kort- och listvyerna för en produkt, t.ex.:
 
@@ -323,7 +316,7 @@ Liksom för språk kan stora flernationella företag behöva ta hand om flera va
 
 Taggar kan också användas för att gruppera produkter i en katalog. De kan användas för mer dynamiska kataloger, till exempel säsongserbjudanden.
 
-### Kataloginställning (inledande import) {#catalog-setup-initial-import}
+### Kataloginställningar (inledande import) {#catalog-setup-initial-import}
 
 Beroende på implementeringen kan du importera produktdata som krävs för din baskatalog till AEM från:
 
@@ -337,11 +330,11 @@ Ytterligare ändringar i produktinformationen är oundvikliga:
 * för den allmänna implementeringen kan dessa hanteras med [produktredigeraren](/help/sites-administering/generic.md#editing-product-information)
 * när en [e-handelsmotor används måste ändringarna synkroniseras](#data-synchronization-with-an-ecommerce-engine-ongoing)
 
-#### Datasynkronisering med en e-handelsmotor (pågående) {#data-synchronization-with-an-ecommerce-engine-ongoing}
+#### Data Synchronization with an eCommerce Engine (Ongoing) {#data-synchronization-with-an-ecommerce-engine-ongoing}
 
 Efter den första importen är det oundvikligt att ändra produktinformationen.
 
-När du använder en e-handelsmotor upprätthålls produktdata där och måste vara tillgängliga i AEM. Produktdata måste synkroniseras när uppdateringar görs.
+When using an eCommerce engine the product data is maintained there and needs to be available in AEM. This product data needs to be synchronized when updates are made.
 
 Detta kan bero på datatypen:
 
@@ -353,7 +346,7 @@ Detta kan bero på datatypen:
 
 ### Kataloger - prestanda och skalning {#catalogs-performance-and-scaling}
 
-Om du importerar en stor katalog med ett stort antal produkter (vanligtvis fler än 100 000) från en e-handelsmotor (PIM) kan det påverka systemet på grund av det stora antalet noder. Det kan också göra redigeringsinstansen långsammare om produkterna har associerade resurser (t.ex. produktbilder). Detta beror på att efterbearbetningen av dessa resurser är processor- och minneskrävande.
+Om du importerar en stor katalog med ett stort antal produkter (vanligtvis fler än 100 000) från en e-handelsmotor (PIM) kan det påverka systemet på grund av det stora antalet noder. It can also slow down the authoring instance if the products have associated assets (eg product images). This is due to the fact that the post-processing of these assets is CPU and memory intensive.
 
 Det finns olika strategier du kan välja mellan för att lösa dessa problem:
 
@@ -364,13 +357,13 @@ Det finns olika strategier du kan välja mellan för att lösa dessa problem:
 * [Prestandatestning](#performance-testing)
 * [Prestanda - övriga](#performance-miscellaneous)
 
-#### Buckling {#bucketing}
+#### Bucketing {#bucketing}
 
 Om en JCR-nod har många direkta underordnade noder (t.ex. 1000 eller fler) krävs det bucket (phantom-mappar) för att säkerställa att prestandan inte påverkas. Dessa genereras enligt en algoritm vid import.
 
 De här bucklarna har formen av fantommappar som introduceras i katalogstrukturen, men kan konfigureras så att de inte visas i offentliga URL:er.
 
-#### Avlasta resurshanteringen till en dedikerad instans {#offload-asset-post-processing-to-a-dedicated-instance}
+#### Avlasta efterbearbetning av resurser till en dedikerad instans {#offload-asset-post-processing-to-a-dedicated-instance}
 
 I det här scenariot ställs två författarinstanser in:
 
@@ -461,7 +454,7 @@ För alla implementeringar kan följande punkter beaktas:
 * Planera en mycket faktoriserad modell och tjänster för innehållsåtkomst i er tekniska hög. Detta är en allmän bästa praxis, men det är ännu viktigare för henne, eftersom du kan lägga till programcacher i optimeringsfaser för data som läses mycket ofta (och som du inte vill fylla i paketcachen med).
 
    Attributhantering är till exempel mycket ofta en bra kandidat för cachelagring eftersom den gäller data som uppdateras via produktimport.
-* Använd [proxysidor](/help/sites-administering/concepts.md#proxy-pages).
+* Consider use of [proxy pages](/help/sites-administering/concepts.md#proxy-pages).
 
 ### Avsnittssidor för katalog {#catalog-section-pages}
 
@@ -547,7 +540,7 @@ I AEM:
 >
 >AEM använder termen **Voucher**, som är synonym med termen **Kupong**.
 
-### Kampanjer {#promotions}
+### Erbjudanden {#promotions}
 
 Kampanjer, tillsammans med kuponger, gör att du kan förverkliga scenarier som:
 
@@ -576,7 +569,7 @@ Kampanjer underhålls vanligtvis inte av produktinformationsansvariga, utan av m
 I AEM är kampanjerna också integrerade i [Campaign Management](/help/sites-authoring/personalization.md):
 
 * en [kampanj](/help/sites-authoring/personalization.md) anger på/av-tider
-* [De ](/help/sites-authoring/personalization.md) ** upplevelser som finns i kampanjen används för att gruppera resurser (testsidor, kampanjer osv.) utifrån det målgruppssegment som de motsvarar
+* [](/help/sites-authoring/personalization.md) ** upplevelser i kampanjen används för att gruppera resurser (scensidor, kampanjer osv.) efter vilket målgruppssegment de motsvarar
 
 En kampanj kan hållas antingen som en upplevelse eller direkt i kampanjen:
 
@@ -698,7 +691,7 @@ E-handelsmotorn använder kontexten (i huvudsak kundinformationen) för att avg�
 
 När kunden handlar hittar han/hon produktsidorna och väljer artiklar som ska placeras i kundvagnen. När de går vidare till kassan kan en beställning placeras.
 
-### Anonyma shoppare {#anonymous-shoppers}
+### Anonyma köpare {#anonymous-shoppers}
 
 En anonym kund kan
 
@@ -761,7 +754,7 @@ I båda fallen behålls objekten i vagnen (och kan återställas) mellan inloggn
 
 Före utcheckningen återspeglas prisförändringarna (i båda systemen) när de inträffar.
 
-### Orderinformation {#order-information}
+### Beställningsinformation {#order-information}
 
 Beroende på din implementeringsinformation om en beställning finns antingen i eCommerce-motorn eller AEM återges den här informationen av AEM.
 
@@ -859,7 +852,7 @@ Beställningsleveranser och -spårning hanteras vanligtvis av e-handelsmotorn. I
 
 ![chlimage_1-180](assets/chlimage_1-180.png)
 
-## Kassa {#checkout}
+## Utcheckning {#checkout}
 
 Utcheckning implementeras med AEM. På så sätt kan marknadschefen anpassa upplevelsen av marknadsföringsmaterialet.
 
@@ -887,4 +880,3 @@ Om du behöver en mer detaljerad implementering kan du antingen:
 * Implementera sökmetoden i `CommerceService` och använd sedan sökkomponenten för eCommerce på söksidan.
 
 När du använder en eCommerce-motor kan e-handelssöknings-API:t implementeras helt i eCommerce-motorlösningen, så att du kan använda eCommerce-sökkomponenten som medföljer. Med den fasetterade sökningen kan du söka i antingen JCR och/eller motorn:
-
