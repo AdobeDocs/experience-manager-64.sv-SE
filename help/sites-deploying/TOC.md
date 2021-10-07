@@ -6,11 +6,11 @@ audience: end-user
 user-guide-title: AEM 6.4 Distributionshandbok
 breadcrumb-title: Distributionsguide
 user-guide-description: Läs mer om installation, distribution och arkitekturen för Adobe Experience Manager 6.4, inklusive vår molndistribution av Adobe Managed Services.
-feature: Distribuerar
+feature: Deploying
 role: Architect
-source-git-commit: 17c9f8523992b5ba87125c77d3e4f70f86f89c58
+source-git-commit: cda63b9ece88d8172fa4d9817e315c9cff88c224
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '370'
 ht-degree: 1%
 
 ---
@@ -85,7 +85,7 @@ ht-degree: 1%
    + [Omstrukturering av lager i AEM 6.4](repository-restructuring.md)
    + [Omstrukturering av de gemensamma tillgångarna i AEM 6.4](all-repository-restructuring-in-aem-6-4.md)
    + [Omstrukturering av anläggningar Repository i AEM 6.4](sites-repository-restructuring-in-aem-6-4.md)
-   + [Omstrukturering av tillgångar Repository i AEM 6.4](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
+   + [Omstrukturering av tillgångar Repository i AEM 6.4](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html)
    + [Omstrukturering av Dynamic Media-lager i AEM 6.4](dynamicmedia-repository-restructuring-in-aem-6-4.md)
    + [Omstrukturering av Forms-lager i AEM 6.4](forms-repository-restructuring-in-aem-6-4.md)
    + [Omstrukturering av e-handelslager i AEM 6.4](ecommerce-repository-restructuring-in-aem-6-4.md)

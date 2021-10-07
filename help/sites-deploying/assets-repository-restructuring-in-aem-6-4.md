@@ -1,18 +1,18 @@
 ---
 title: Omstrukturering av tillgångar Repository i AEM 6.4
-seo-title: Omstrukturering av tillgångar Repository i AEM 6.4
+seo-title: Assets Repository Restructuring in AEM 6.4
 description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 for Assets.
-seo-description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 for Assets.
+seo-description: Learn how to make the necessary changes in order to migrate to the new repository structure in AEM 6.4 for Assets.
 uuid: 0e3d8163-6274-4d1b-91c7-32ca927fb83c
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 212930fc-3430-4a0a-842c-2fb613ef981f
-feature: Uppgraderar
+feature: Upgrading
 exl-id: 3d5bbf95-bd1e-453b-b487-517a56fe727f
-source-git-commit: 98b6a34d678827b8ced0dfc3b153a92d63c1c0de
+source-git-commit: cda63b9ece88d8172fa4d9817e315c9cff88c224
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1113'
 ht-degree: 0%
 
 ---
@@ -23,19 +23,19 @@ Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/he
 
 **Med 6.4-uppgradering**
 
-* [Diverse](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html?lang=en#misc)
+* [Diverse](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#misc)
 
 **Före 6.5-uppgradering**
 
-* [E-postmeddelandemall för tillgångs-/samlingshändelse](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html?lang=en#asset-collection-event-e-mail-notification-template)
-* [Klassisk resursdelningsdesign](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html?lang=en#classic-asset-share-designs)
-* [Ladda ned mall för e-postmeddelanden om tillgångar](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html?lang=en#download-asset-e-mail-notification-template)
-* [Exempel på DRM-licenser](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html?lang=en#example-drm-licenses)
+* [E-postmeddelandemall för tillgångs-/samlingshändelse](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#asset-collection-event-e-mail-notification-template)
+* [Klassisk resursdelningsdesign](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#classic-asset-share-designs)
+* [Ladda ned mall för e-postmeddelanden om tillgångar](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#download-asset-e-mail-notification-template)
+* [Exempel på DRM-licenser](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#example-drm-licenses)
 
-* [E-postmeddelandemall för länkdelning](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html?lang=en#link-share-e-mail-notification-template)
-* [InDesign Workflow Scripts](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html?lang=en#indesign-workflow-scripts)
-* [Konfigurationer för videoomkodning](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html?lang=en#video-transcoding-configurations)
-* [Diverse](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html?lang=en#misc2)
+* [E-postmeddelandemall för länkdelning](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#link-share-e-mail-notification-template)
+* [InDesign Workflow Scripts](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#indesign-workflow-scripts)
+* [Konfigurationer för videoomkodning](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#video-transcoding-configurations)
+* [Diverse](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#misc2)
 
 ## Med 6.4-uppgradering {#with-upgrade}
 
