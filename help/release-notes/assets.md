@@ -2,7 +2,7 @@
 title: Versionsinformation för AEM Assets
 seo-title: AEM Assets
 description: Versionsinformation om Adobe Experience Manager 6.4 Assets.
-seo-description: Versionsinformation om Adobe Experience Manager 6.4 Assets.
+seo-description: Release notes specific to Adobe Experience Manager 6.4 Assets.
 uuid: f5e7608d-f906-4a35-b442-899703de3587
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4
@@ -10,10 +10,9 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 397b3267-1437-4263-963c-9d68ccc928ab
 exl-id: 3f2cb2f9-2a4e-4c5d-b937-b693f27e11da
-translation-type: tm+mt
 source-git-commit: 55e904cb24bac68c0b1bbea59786cb4c0c711d61
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1647'
 ht-degree: 0%
 
 ---
@@ -90,21 +89,21 @@ AEM 6.4 innehåller flera avancerade metadatahanteringsfunktioner för att hante
 AEM 6.4 ger betydande förbättringar i tillgångsrapporteringen:
 
 * Nytt skalbart ramverk (för stora databaser) på företagsnivå som använder Sling-jobb för asynkron bearbetning av rapportbegäranden. Du kan schemalägga rapporter vid ett visst datum och en viss tidpunkt. Du kan också lägga till anpassade kolumner i en rapport.
-* Nya OTB-rapporter som oftast efterfrågas av kunder som t.ex. Diskanvändning, Filer, Länkresurser, Publicera på varumärkesportal och Utbildning i smarta taggar.
+* Nya OTB-rapporter som oftast efterfrågas av kunder som Diskanvändning, Filer, Länkresurser, Publicera på Brand Portal och Utbildning för smarta taggar.
 * Nytt gränssnitt för att skapa och hantera rapporter med finkorniga alternativ, möjlighet att komma åt arkiverade rapporter, se status för rapportkörning (lyckades, misslyckades, köades osv.).
 
-## Varumärkesportal {#brand-portal}
+## Brand Portal {#brand-portal}
 
-* **6.3 Platform Upgrade**: Varumärkesportalen har uppgraderats från AEM 6.0 till AEM 6.3 med nya funktioner och prestandaförbättringar.
-* **Parallell publicering**: Upp till replikeringar kan ske mellan AEM Assets och Brand Portal (tidigare 1), vilket förbättrar publiceringsprestandan avsevärt
-* **Publicering** av schema- och sökfasett: Möjlighet att publicera metadatamatcheman och anpassade sökaspekter på varumärkesportalen, vilket eliminerar behovet av dubbelarbete.
-* **Publicera** flera taggar: Möjlighet att publicera taxonomi (tillsammans med hierarki) till varumärkesportalen, vilket eliminerar dubbelarbete.
-* **Självregistrering eller Begär åtkomst**: Arbetsflöde för oregistrerade användare på varumärkesportalen.
+* **6.3 Platform Upgrade**: Brand Portal har uppgraderats från AEM 6.0 till AEM 6.3 med nya funktioner och prestandaförbättringar.
+* **Parallell publicering**: Upp till replikeringar kan göras mellan AEM Assets och Brand Portal (tidigare 1), vilket avsevärt förbättrar publiceringsprestanda
+* **Publicering** av schema- och sökfasett: Möjlighet att publicera metadatamatcheman och anpassade sökfaktorer till Brand Portal, vilket eliminerar dubbelarbete.
+* **Publicera** flera taggar: Möjlighet att publicera taxonomi (tillsammans med hierarki) till Brand Portal, vilket eliminerar dubbelarbete.
+* **Självregistrering eller Begär åtkomst**: Arbetsflöde för oregistrerade användare till Brand Portal.
 * **Underhållsmeddelande** i appen (på skärmen): Meddelanden visas i god tid för att undvika störningar i verksamheten.
 * **Förbättrade** rapporter: Tre OOTB-rapporter finns: ladda ned, publicera och dela länkar.
-* **DRM-baserade begränsningar**: När en licensierad mediefil har gått ut är den inte längre tillgänglig för hämtning från varumärkesportalen.
+* **DRM-baserade begränsningar**: När en licensierad mediefil har gått ut är den inte längre tillgänglig för hämtning från Brand Portal.
 
-## AEM datorprogram {#aem-desktop-app}
+## AEM {#aem-desktop-app}
 
 AEM uppdateras till version 1.8, som är kompatibel med AEM 6.4. Den fullständiga listan över ändringar för AEM datorprogram finns i ett [AEM versionsinformation för skrivbordsprogram](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)-dokument.\
 Här är en lista AEM datorprogram har markerats sedan AEM 6.3 släpptes:
@@ -139,7 +138,7 @@ En översikt över vilka plattformar som stöds finns i [Teknisk kravdokumentati
 
 Dynamic Media i 6.4 har stöd för ett nytt läge - där överordnad resurser överförs och hanteras med AEM Assets webbgränssnitt, och dynamiska återgivningar och andra dynamiska mediefunktioner hanteras i bakgrunden av Dynamic Media molntjänst.
 
-I det här läget (som introducerades först i releasen av [AEM 6.3 Feature Pack 14410 och 18912](https://helpx.adobe.com/experience-manager/6-3/release-notes/dynamic-media-featurepack-14410.html)) drar användarna nytta av komplett resurshantering och dynamiska mediefunktioner med det moderna AEM Assets webbgränssnitt, och utnyttjar fortfarande leveranstjänsterna som är bakåtkompatibla med Dynamic Media Classic (Scene7), inklusive leverans-URL:er, som är oförändrade.
+I det här läget (som introducerades först i releasen av [AEM 6.3 Feature Pack 14410 och 18912](https://helpx.adobe.com/experience-manager/6-3/release-notes/dynamic-media-featurepack-14410.html)) drar användarna nytta av komplett resurshantering och dynamiska mediefunktioner med det moderna AEM Assets webbgränssnitt, och utnyttjar fortfarande leveranstjänster som är bakåtkompatibla med Dynamic Media Classic (Scene7) - inklusive leverans-URL:er som inte ändras.
 
 Dessutom innehåller AEM 6.4 nya funktioner som drivs av Adobe Sensei, förbättringar för nya medier som VR och 3D, visningsprogram för Dynamic Media samt stöd för Experience Fragments i Interactive Images och Carousel Banners.
 
@@ -160,7 +159,7 @@ Läs även [Lägga till Dynamic Media-resurser på sidor](../assets/adding-dynam
 
 Mer information finns i [dokumentationen för smarta bilder](../assets/imaging-faq.md).
 
-### Förbättringar av nya media och visningsprogram {#emerging-media-amp-viewer-enhancements}
+### Förbättringar av nya medier och visningsprogram {#emerging-media-amp-viewer-enhancements}
 
 * Nya visningsprogram stöds, vilket ger användaren bättre och mer engagerande upplevelser.
 * Panoramavisningsprogrammet hjälper till att engagera användaren och ger möjlighet att bättre uppleva rumsscener, egenskaper, platser och landskap. Mer information finns i [Dokumentation för panoramabilder](../assets/panoramic-images.md).
