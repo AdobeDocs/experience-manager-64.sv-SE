@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management
 role: Architect,Leader
 exl-id: f0afdae4-5777-464c-9203-e9d19c6d62f6
-source-git-commit: a3289431adb80162340a1acdbc9b91e0c29e99a0
+source-git-commit: 50ba3937ef5d3f6e5b56df99ebdca337e5e9eac9
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
@@ -53,9 +53,6 @@ Media Library omfattar i stort sett följande användningsområden:
 <!-- TBD: Remove this after confirmation. May need to merge this list with the list provided by PMs.
 
 * Static renditions
-* Projects, tasks authoring
-* Activity stream (timeline)
-* Comments and annotation
 -->
 
 Om du vill använda Media Library-funktionen kan du använda standardanvändargränssnittet för [!DNL Experience Manager]. Media Library ingår i [!DNL Experience Manager Sites]-installationen och inget separat gränssnitt eller tillägg krävs. Med det befintliga gränssnittet har Media Library-användare rätt att utföra följande uppgifter:
@@ -78,6 +75,9 @@ Om du vill använda Media Library-funktionen kan du använda standardanvändargr
 * Anpassa och utöka gränssnittet för resurshantering.
 * Gå till Query Builder (API) för att utöka sökfunktionen.
 * Skapa statiska taggar.
+* Skapa projekt och uppgifter.
+* Aktivitetsström (tidslinje).
+* Kommentarer och kommentarer.
 
 <!-- TBD: Define exactly which basic Assets workflow are available for use with Media Library?
 
@@ -88,7 +88,7 @@ As per PM, we must avoid stating such a list, as we don't have a list that makes
 >
 >Många avancerade DAM-användningsfall uppfylls av [!DNL Experience Manager Assets]. Media Library-licens berättigar dig att endast fylla i de angivna användningsområdena med Media Library. Om ett användningsexempel inte finns med i listan ska du inte använda det med Media Library-licens. Kontakta Adobe kundsupport om du har frågor.
 
-Observera att du inte kan använda smarta taggar, [!DNL Asset]-länk, [!DNL Asset]-väljare, bulktaggning, ändra resursarbetsflöden utan [!DNL Assets]-licens.
+Observera att du inte kan använda smarta taggar, [!DNL Asset]-länk, [!DNL Asset]-väljare, bulktaggning, ändra resursarbetsflöden eller standardanvändargränssnittet för [!DNL Adobe Experience Manager] för att få åtkomst till Media Library utan [!DNL Assets] licens.
 
 <!-- TBD: Add a CTA - how to contact Adobe for queries. -->
 
