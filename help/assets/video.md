@@ -8,7 +8,7 @@ content-type: reference
 exl-id: acb95a2b-0171-449e-97fa-f9a533f990de
 feature: Video
 role: User
-source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
+source-git-commit: 877eade71c2ec57ff534ba2649275111c5326d75
 workflow-type: tm+mt
 source-wordcount: '9888'
 ht-degree: 3%
@@ -72,7 +72,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
          [Visa videoåtergivningar](video-renditions.md)
 
-         [Hantera videoåtergivningar](managing-assets-touch-ui.md#managing-renditions)
+[Hantera videoåtergivningar](managing-assets-touch-ui.md#managing-renditions)
 
       * [Hantera förinställningar för visningsprogram](managing-viewer-presets.md)
       * [Publicera resurser](publishing-dynamicmedia-assets.md)
@@ -84,7 +84,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
       * Redigera egenskaperna för video, till exempel titel, beskrivning och taggar, anpassade metadatafält:
 
-         [Redigera videoegenskaper](managing-assets-touch-ui.md#editing-properties)
+[Redigera videoegenskaper](managing-assets-touch-ui.md#editing-properties)
 
       * [Hantera metadata för digitala resurser](metadata.md)
       * [Metadata-scheman](metadata-schemas.md)
@@ -119,9 +119,9 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
 ## Arbeta med video i Dynamic Media {#working-with-video-in-dynamic-media}
 
-Video i Dynamic Media är en totallösning som gör det enkelt att publicera högkvalitativ adaptiv video för direktuppspelning på flera skärmar, inklusive datorer, iOS, Android, Blackberry och Windows-enheter. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Den stationära datorn eller mobila enheten känner av den tillgängliga bandbredden.
+Video i Dynamic Media är en totallösning som gör det enkelt att publicera högkvalitativ adaptiv video för direktuppspelning på flera skärmar, inklusive datorer, iOS, Android, Blackberry och Windows-mobilenheter. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Den stationära datorn eller mobila enheten känner av den tillgängliga bandbredden.
 
-På en iOS-mobil enhet upptäcker den till exempel en bandbredd som 3G, 4G eller Wi-Fi. Sedan väljs automatiskt rätt kodad video bland de olika videobithastigheterna i den adaptiva videouppsättningen. Videon strömmas till datorer, mobila enheter eller surfplattor.
+På en mobilenhet från iOS identifieras t.ex. en bandbredd som 3G, 4G eller Wi-Fi. Sedan väljs automatiskt rätt kodad video bland de olika videobithastigheterna i den adaptiva videouppsättningen. Videon strömmas till datorer, mobila enheter eller surfplattor.
 
 Dessutom ändras videokvaliteten dynamiskt automatiskt om nätverksförhållandena ändras på datorn eller den mobila enheten. Om en kund går över till helskärmsläge på en stationär dator svarar den adaptiva videouppsättningen med en bättre upplösning, vilket förbättrar kundens tittarupplevelse. Med adaptiva videouppsättningar får du bästa möjliga uppspelning för kunder som spelar upp Dynamic Media-video på flera skärmar och enheter.
 
@@ -146,7 +146,7 @@ Följande stöds för hantering av enstaka video och adaptiva videouppsättninga
 * Ordna, bläddra bland och sök videoklipp med fullt stöd för metadata för effektiv hantering av videomaterial.
 * Leverera adaptiva videouppsättningar till webben, datorer och mobila enheter som iPhone, iPad, Android, Blackberry och Windows Phone.
 
-Adaptiv videoströmning stöds på flera olika iOS-plattformar. Se [Referenshandboken för visningsprogram för Adobe](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html).
+Adaptiv videoströmning stöds på en rad olika iOS-plattformar. Se [Referenshandboken för visningsprogram för Adobe](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html).
 
 Dynamic Media har stöd för videouppspelning i mobiler för MP4 H.264-video. Du kan hitta Blackberry-enheter som stöder det här videoformatet på följande sätt: [Videoformat som stöds på Blackberry](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482).
 
@@ -162,21 +162,21 @@ Windows-enheter som stöder det här videoformatet finns på följande plats: [V
 
 <!-- See [Dynamic video playback](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&config=GeoRetail/Universal_Video1&stageSize=640,480). -->
 
-Se även [Om HTML5-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only) i referenshandboken för Dynamic Media-visningsprogram för Adobe.
+Se även [Om HTML5-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only) i referenshandboken för Adobe Dynamic Media-visningsprogram.
 
 ## Bästa praxis: Använda videovisningsprogrammet för HTML5 {#best-practice-using-the-html-video-viewer}
 
-Förinställningarna för visningsprogrammet för Dynamic Media HTML5-video är robusta videospelare. Du kan använda dem för att undvika många vanliga problem som är kopplade till videouppspelning i HTML5 och problem som är kopplade till mobila enheter, som brist på adaptiv strömning och begränsad webbläsarräckvidd för stationära datorer.
+Förinställningarna för videovisningsprogrammet i Dynamic Media HTML 5 är robusta videospelare. Du kan använda dem för att undvika många vanliga problem som är kopplade till videouppspelning i HTML5 och problem som är kopplade till mobila enheter, som brist på adaptiv strömning och begränsad webbläsarräckvidd för stationära datorer.
 
-På designsidan av spelaren kan du utforma alla videospelarens funktioner med standardverktyg för webbutveckling. Du kan till exempel utforma knappar, kontroller och anpassad förhandsgranskningsbildbakgrund med HTML5 och CSS så att du kan nå dina kunder med ett anpassat utseende.
+På designsidan av spelaren kan du utforma alla videospelarens funktioner med standardverktyg för webbutveckling. Du kan till exempel utforma knapparna, kontrollerna och den anpassade bakgrunden för förhandsvisningsbilder med HTML5 och CSS så att du kan nå dina kunder med ett anpassat utseende.
 
-På visningsprogrammets uppspelningssida identifieras webbläsarens videokapacitet automatiskt. Sedan visas videon med HLS-strömning (adaptiv videoströmning). Om leveransmetoderna saknas används i stället HTML5 progressiv.
+På visningsprogrammets uppspelningssida identifieras webbläsarens videokapacitet automatiskt. Sedan visas videon med HLS-strömning (adaptiv videoströmning). Om leveransmetoderna inte finns används HTML5 progressiv i stället.
 
-Genom att i en enda spelare kombinera möjligheten att utforma uppspelningskomponenterna med HTML5 och CSS, ha inbäddad uppspelning och använda adaptiv och progressiv strömning beroende på webbläsarens kapacitet, kan du utöka räckvidden för ditt multimedieinnehåll till både dator- och mobilanvändare och säkerställa en smidig videoupplevelse.
+Genom att i en enda spelare kombinera möjligheten att utforma uppspelningskomponenterna med HTML 5 och CSS, ha inbäddad uppspelning och använda adaptiv och progressiv strömning beroende på webbläsarens kapacitet, kan du utöka räckvidden för ditt multimedieinnehåll till både dator- och mobilanvändare och säkerställa en smidig videoupplevelse.
 
-Se även [Om HTML5-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html) i referenshandboken för Adobe-visningsprogram.
+Se även [Om visningsprogram för HTML5](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html) i referenshandboken för visningsprogram för Adobe.
 
-### Uppspelning av video på stationära datorer och mobila enheter med HTML5-videovisningsprogrammet {#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}
+### Uppspelning av video på stationära datorer och mobila enheter med videovisningsprogrammet HTML5 {#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}
 
 För strömning av anpassningsbara video för datorer och mobilenheter baseras de videor som används för växling av bithastighet på alla MP4-videor i den adaptiva videouppsättningen.
 
@@ -187,7 +187,7 @@ I AEM 6.3 och senare direktuppspelas videor nu via HTTPS (dvs. HLS-videoströmni
 * Om du har en HTTPS-webbplats med HTTPS-videoströmning går det bra att strömma.
 * Om du har en HTTP-webbplats med HTTPS-videoströmning går det bra att strömma och det finns inga blandade innehållsproblem i webbläsaren.
 
-HLS (HTTP Live Streaming) är en Apple-standard för adaptiv videoströmning som automatiskt justerar uppspelningen baserat på nätverkets bandbreddskapacitet. Man kan också &quot;söka&quot; till valfri punkt i videon utan att behöva vänta på att resten av videon ska laddas ned (se även HTTP-direktuppspelning).
+HLS (HTTP Live Streaming) är en Apple-standard för adaptiv videoströmning som automatiskt anpassar uppspelningen baserat på nätverkets bandbreddskapacitet. Man kan också &quot;söka&quot; till valfri punkt i videon utan att behöva vänta på att resten av videon ska laddas ned (se även HTTP-direktuppspelning).
 
 Progressiv video levereras genom att videon hämtas och lagras lokalt på en användares datorskärm eller mobila enhet.
 
@@ -305,11 +305,11 @@ Du kan hämta metadata för en fil genom att visa dess metadata med ett videored
 
 1. Gå till den här webbsidan: [https://mediaarea.net/en/MediaInfo](https://mediaarea.net/en/MediaInfo).
 1. Välj och hämta installationsprogrammet för den GUI-version som du använder och följ installationsanvisningarna.
-1. Efter installationen högerklickar du på videofilen (endast Windows) och väljer **[!UICONTROL MediaInfo]** eller öppnar **[!UICONTROL MediaInfo]** och drar videofilen till programmet. Alla metadata som är associerade med videofilen, inklusive bredd, höjd och fps, visas.
+1. After installation, either right-click the video file (Windows only) and select **[!UICONTROL MediaInfo]**, or open **[!UICONTROL MediaInfo]** and drag your video file into the application. Alla metadata som är associerade med videofilen, inklusive bredd, höjd och fps, visas.
 
 ### Proportioner {#aspect-ratio}
 
-När du väljer eller skapar en förinställning för videokodning för den överordnad videofilen måste du se till att förinställningen har samma proportioner som den överordnad videofilen. Proportionerna är proportionerna mellan videons bredd och höjd.
+When you choose or create a video encoding preset for your master video file, make sure that the preset has the same aspect ratio as the master video file. Proportionerna är proportionerna mellan videons bredd och höjd.
 
 Om du vill ta reda på videofilens proportioner hämtar du filens metadata och noterar filens bredd och höjd (se Hämta filens metadata ovan). Använd sedan den här formeln för att bestämma proportionerna:
 
@@ -321,7 +321,7 @@ I följande tabell beskrivs hur formelresultaten översätts till vanliga altern
 |--- |--- |
 | 1,33 | 4:3 |
 | 0,75 | 3:4 |
-| 1,78 | 16:9 |
+| 1.78 | 16:9 |
 | 0,56 | 9:16 |
 
 En video som till exempel är 1440 bredd x 1080 höjd har proportionerna 1440/1080 eller 1,33. I det här fallet väljer du en förinställning för videokodning med 4:3-proportioner för att koda videofilen.
@@ -358,7 +358,7 @@ I den här tabellen beskrivs datahastigheten för typiska anslutningshastigheter
 
 ### Upplösning {#resolution}
 
-**Upplösning** beskriver videofilens höjd och bredd i pixlar. Den mesta källvideon lagras med hög upplösning (till exempel 1 920 x 1 080). Vid direktuppspelning komprimeras källvideo till en lägre upplösning (640 x 480 eller lägre).
+**** Upplösningen beskriver videofilens höjd och bredd i pixlar. Den mesta källvideon lagras med hög upplösning (till exempel 1 920 x 1 080). Vid direktuppspelning komprimeras källvideo till en lägre upplösning (640 x 480 eller lägre).
 
 Upplösning och datahastighet är två sammankopplade faktorer som avgör videokvaliteten. Om du vill behålla samma videokvalitet måste datahastigheten vara högre ju fler pixlar en videofil har (ju högre upplösning). Ta till exempel antalet pixlar per bildruta i en 320 x 240-upplösning och en 640 x 480-upplösningsvideofil:
 
@@ -427,7 +427,7 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
    <td><p>Kodad</p> </td> 
    <td><p>640 x 360</p> </td> 
    <td><p>3</p> </td> 
-   <td><p>1</p> </td> 
+   <td><p>3</p> </td> 
   </tr> 
   <tr> 
    <td><p>Kodad</p> </td> 
@@ -438,15 +438,15 @@ Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de t
  </tbody> 
 </table>
 
-### Kodat videofilformat {#encoded-video-file-format}
+### Encoded video file format {#encoded-video-file-format}
 
-Dynamic Media rekommenderar att du använder MP4 H.264-videokodningsförinställningar. Eftersom MP4-filer använder H.264-videokodeken ger den video med hög kvalitet men i en komprimerad filstorlek.
+Dynamic Media rekommenderar att du använder MP4 H.264-videokodningsförinställningar. Because MP4 files use the H.264 video codec, it provides high-quality video but in a compressed file size.
 
 ## Publicera videor på YouTube {#publishing-videos-to-youtube}
 
 Du kan publicera lokalt AEM videomaterial direkt till en YouTube-kanal som du tidigare har skapat.
 
-Om du vill publicera videomaterial till YouTube skapar du AEM Assets med taggar. Du kopplar dessa taggar till en YouTube-kanal. Om videoresursens tagg matchar taggen för en YouTube-kanal publiceras videon till YouTube. Om videoresursen inte har någon tagg publiceras den inte till YouTube.
+Om du vill publicera videomaterial till YouTube skapar du AEM Assets med taggar. Du kopplar dessa taggar till en YouTube-kanal. If a video asset&#39;s tag matches the tag of a YouTube channel, then the video is published to YouTube. Om videoresursen inte har någon tagg publiceras den inte till YouTube.
 
 När du publicerar till YouTube kringgås även bearbetningsprofilsystemet i AEM och därmed även videokodningsprofilen. Den här åsidosättningen inträffar eftersom YouTube har en egen kodning, vilket innebär att en videobearbetningsprofil inte behövs. I de flesta fall förväntas du dock redan ha fått ditt videomaterial via en videobearbetningsprofil. När du åsidosätter videobearbetningsprofilen och publicerar direkt till YouTube betyder det bara att videomaterialet i AEM inte får någon miniatyrbild som kan visas. Det innebär också att om du kör i dynamiskt medieläge kommer videoklipp som inte är kodade inte att fungera med någon av Dynamic Media resurstyper.
 
@@ -456,7 +456,7 @@ När du publicerar videomaterial till YouTube-servrar utför du följande uppgif
 1. [Skapa en YouTube-kanal](#creating-a-youtube-channel)
 1. [Lägga till taggar för publicering](#adding-tags-for-publishing)
 1. [Aktivera YouTube Publish Replication Agent](#enabling-the-youtube-publish-replication-agent)
-1. [Konfigurera YouTube i AEM](#setting-up-youtube-in-aem)
+1. [Set up YouTube in AEM](#setting-up-youtube-in-aem)
 1. [(Valfritt) Automatisera inställningen av YouTube standardegenskaper för överförda videofilmer](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
 1. [Publicera videor i din YouTube-kanal](#publishing-videos-to-your-youtube-channel)
 1. [(Valfritt) Verifiera den publicerade videon på YouTube](video.md#optional-verifying-the-published-video-on-youtube)
@@ -466,13 +466,13 @@ Du kan även [avpublicera videoklipp för att ta bort dem från YouTube](#unpubl
 
 ### Konfigurera inställningar för Google Cloud {#configuring-google-cloud-settings}
 
-Du behöver ett Google-konto för att publicera till YouTube. Om du har ett GMAIL-konto har du redan ett Google-konto. Om du inte har något Google-konto kan du enkelt skapa ett. Du behöver kontot eftersom du behöver inloggningsuppgifter för att publicera videoresurser på YouTube. Om du redan har skapat ett konto hoppar du över den här uppgiften och fortsätter till [Skapa en YouTube-kanal](#creating-a-youtube-channel).
+Du behöver ett Google-konto för att kunna publicera till YouTube. Om du har ett GMAIL-konto har du redan ett Google-konto. Om du inte har något Google-konto kan du enkelt skapa ett. Du behöver kontot eftersom du behöver inloggningsuppgifter för att publicera videoresurser på YouTube. Om du redan har skapat ett konto hoppar du över den här uppgiften och fortsätter till [Skapa en YouTube-kanal](#creating-a-youtube-channel).
 
 >[!NOTE]
 >
 >Följande steg var korrekta när detta skrevs. Google uppdaterar dock regelbundet sina webbplatser utan föregående meddelande. De här stegen kan därför vara något annorlunda.
 
-**Så här konfigurerar du Google Cloud-inställningar:**
+**Så här konfigurerar du inställningarna för Google Cloud:**
 
 1. Skapa ett nytt Google-konto.
 
@@ -481,7 +481,7 @@ Du behöver ett Google-konto för att publicera till YouTube. Om du har ett GMAI
    Om du redan har ett Google-konto går du vidare till nästa steg.
 
 1. Gå till [https://cloud.google.com/](https://cloud.google.com/).
-1. Tryck **[!UICONTROL Console]** längst upp på Google Cloud Platform-sidan. Du kan behöva **logga in** med inloggningsuppgifterna för ditt Google-konto.
+1. På sidan Google Cloud Platform trycker du **[!UICONTROL Console]** längst upp. Du kan behöva **logga in** med inloggningsuppgifterna för ditt Google-konto.
 1. Tryck på **[!UICONTROL Create Project]** på sidan **[!UICONTROL Dashboard]**.
 1. Ange ett projektnamn i dialogrutan **[!UICONTROL New Project]**.
 
@@ -539,7 +539,7 @@ Du måste ha en eller flera kanaler för att kunna publicera videofilmer på You
 
 **Så här skapar du en YouTube-kanal:**
 
-1. Gå till [https://www.youtube.com](https://www.youtube.com/) och logga in med inloggningsuppgifterna för ditt Google-konto.
+1. Gå till [https://www.youtube.com](https://www.youtube.com/) och logga in med autentiseringsuppgifterna för ditt Google-konto.
 1. I det övre högra hörnet av YouTube-sidan trycker du på din profilbild (kan också visas som en bokstav i en enfärgad cirkel) och sedan på **[!UICONTROL YouTube settings]** (runda kugghjulsikonen).
 1. Tryck på **[!UICONTROL See all my channels or create a new channel]** under rubriken **[!UICONTROL Additional Features]** på sidan **[!UICONTROL Overview]**.
 1. Tryck på **[!UICONTROL Create a new channel]** på sidan **[!UICONTROL Channels]**.
@@ -573,13 +573,13 @@ Om du tänker använda standardtaggarna i AEM kan du hoppa över den här uppgif
 1. Under rubriken **[!UICONTROL Third Party Services]** trycker du på **[!UICONTROL Configure now]** under YouTube.
 1. I dialogrutan **[!UICONTROL Create Configuration]** anger du en rubrik (obligatorisk) och ett namn (valfritt) i respektive fält.
 1. Tryck på **[!UICONTROL Create]**.
-1. I dialogrutan **[!UICONTROL YouTube Account Settings]** anger du ditt projekt-ID för Google i fältet **[!UICONTROL Application Name]**.
+1. I dialogrutan **[!UICONTROL YouTube Account Settings]** anger du Google Project ID i fältet **[!UICONTROL Application Name]**.
 
-   Du angav projekt-ID när du konfigurerade Google Cloud-inställningarna tidigare.
+   Du angav projekt-ID:t när du konfigurerade Google Cloud-inställningarna tidigare.
 
    Lämna dialogrutan **[!UICONTROL YouTube Account Setting]** öppen; kommer du tillbaka till den om en stund.
 
-1. Öppna JSON-filen som du hämtade och sparade tidigare i uppgiften Konfigurera inställningarna för Google Cloud med en vanlig textredigerare.
+1. Använd en vanlig textredigerare för att öppna JSON-filen som du hämtade och sparade tidigare i uppgiften Konfigurera inställningar för Google Cloud.
 1. Markera och kopiera hela JSON-texten.
 1. Återgå till dialogrutan **[!UICONTROL YouTube Account Settings]**. Klistra in JSON-texten i fältet **[!UICONTROL JSON Config]**.
 1. Tryck på **[!UICONTROL OK]**.
@@ -594,7 +594,7 @@ Om du tänker använda standardtaggarna i AEM kan du hoppa över den här uppgif
 1. Tryck på **[!UICONTROL OK]**.
 1. YouTube/Google-autentisering visas. Om du inte redan är inloggad på Google Cloud-kontot hoppar du över det här steget.
 
-   * Ange det Google-användarnamn och lösenord som är kopplat till Googles projekt-ID och JSON-texten ovan.
+   * Ange det användarnamn och lösenord för Google som är kopplat till Google projekt-ID och JSON-texten ovan.
    * Beroende på hur många kanaler ditt konto har visas två eller flera objekt. Välj en kanal. Välj inte e-postadressen.
    * På nästa sida trycker du på **[!UICONTROL Accept]** för att tillåta åtkomst till den här kanalen.
 
@@ -614,13 +614,13 @@ Om du tänker använda standardtaggarna i AEM kan du hoppa över den här uppgif
 
 ### (Valfritt) Automatisera inställningen av YouTube standardegenskaper för överförda videofilmer {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
 
-Du kan automatisera inställningen av YouTube-egenskaper när du överför videoklipp. Du uppnår detta genom att skapa en metadatabearbetningsprofil i AEM.
+Du kan automatisera inställningen av YouTube-egenskaper när du överför videoklipp. You accomplish this by creating a metadata processing profile in AEM.
 
 Om du vill skapa en profil för metadatabearbetning kopierar du först värden från fälten **[!UICONTROL Field Label]**, **[!UICONTROL Map to property]** och **[!UICONTROL Choices]**, som alla finns i metadatascheman för video. Sedan skapar du din YouTube-profil för videometadatabearbetning genom att lägga till dessa värden i den.
 
-**Om du vill automatisera inställningen av YouTube standardegenskaper för dina överförda videofilmer:**
+**To optionally automate the setting of default YouTube properties for your uploaded videos:**
 
-1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **[!UICONTROL Tools > Assets > Metadata Schemas]** i den vänstra listen.
+1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools > Assets > Metadata Schemas]**.
 1. Tryck på **[!UICONTROL default]**. (Lägg inte till en bockmarkering i markeringsrutan till vänster om &quot;standard&quot;.)
 1. Markera rutan till vänster om **[!UICONTROL video]** på **[!UICONTROL default]**-sidan och tryck sedan på **[!UICONTROL Edit]**.
 1. Tryck på fliken **[!UICONTROL Advanced]** på sidan **[!UICONTROL Metadata Schema Editor]**.
@@ -904,11 +904,11 @@ För att videorapporter ska fungera på rätt sätt skapas ett Report Suite-ID a
 
 ### Visa videorapporter baserade på ett videovisningsprogram som du har skapat med Dynamic Media HTML5 Viewer SDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
-Om du använder ett användningsklart visningsprogram från Dynamic Media, eller om du har skapat en anpassad visningsförinställning baserad på ett skräddarsytt visningsprogram, krävs inga ytterligare steg för att visa videorapporter. Om du har skapat ett eget videovisningsprogram baserat på SDK-API:t för HTML5-visningsprogrammet ska du följa de här stegen för att se till att videovisningsprogrammet skickar spårningshändelser till Dynamic Media videorapporter.
+Om du använder ett användningsklart visningsprogram från Dynamic Media, eller om du har skapat en anpassad visningsförinställning baserad på ett skräddarsytt visningsprogram, krävs inga ytterligare steg för att visa videorapporter. Om du har skapat ett eget videovisningsprogram baserat på SDK-API:t för visningsprogrammet för HTML5, ska du följa de här stegen för att se till att videovisningsprogrammet skickar spårningshändelser till Dynamic Media videorapporter.
 
-Använd [Adobe Dynamic Media Viewer Reference Guide](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html) och [HTML5 Viewer SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) för att skapa egna videovisningsprogram.
+Använd [Adobe Dynamic Media Viewer Reference Guide](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html) och [HTML Viewer SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) för att skapa egna videovisningsprogram.
 
-Så här visar du videorapporter baserade på ett videovisningsprogram som du har skapat med HTML5 Viewer SDK API:
+Så här visar du videorapporter baserade på ett videovisningsprogram som du har skapat med SDK-API:t för HTML5-visningsprogrammet:
 
 1. Navigera till alla publicerade videoresurser.
 1. I listrutan i det övre vänstra hörnet på resursens sida väljer du **[!UICONTROL Viewers]**.
@@ -917,7 +917,7 @@ Så här visar du videorapporter baserade på ett videovisningsprogram som du ha
 
    `videoViewer.setParam("config2", "<value>");`
 
-   Parametern `config2` aktiverar spårning i HTML5-visningsprogram. Det är också en företagsspecifik förinställning som innehåller konfigurationsinformationen för Videorapportering och för kundspecifika Adobe Analytics-konfigurationer.
+   Parametern `config2` aktiverar spårning i visningsprogram för HTML5. Det är också en företagsspecifik förinställning som innehåller konfigurationsinformationen för Videorapportering och för kundspecifika Adobe Analytics-konfigurationer.
 
    Det korrekta värdet för parametern config2 finns både i **[!UICONTROL Embed Code]** och i kopieringsfunktionen **[!UICONTROL URL]**. I URL:en från kopieringskommandot **[!UICONTROL URL]** letar du efter parametern `&config2=<value>`. Värdet är nästan alltid `companypreset`, men i vissa fall kan det också vara `companypreset-1`, `companypreset-2` osv.
 
@@ -1032,7 +1032,7 @@ Du kan göra det enklare att titta på och navigera i videoklipp med långa form
 >
 >Den videospelare som används måste ha stöd för kapitelmarkörer. Dynamic Media videospelare har stöd för kapitelmarkörer, men det är inte säkert att de använder tredjepartsvideospelare.
 
-Om du vill kan du skapa och märka ut ett eget anpassat visningsprogram med kapitel i stället för att använda en förinställning för visningsprogrammet för video. Instruktioner om hur du skapar ett eget HTML5-visningsprogram med kapitelnavigering finns i Adobe HTML5 Viewer SDK API:t i rubriken&quot;Anpassa beteende med modifierare&quot; under klasserna `s7sdk.video.VideoPlayer` och `s7sdk.video.VideoScrubber`. Se dokumentationen för [HTML5 Viewer SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html).
+Om du vill kan du skapa och märka ut ett eget anpassat visningsprogram med kapitel i stället för att använda en förinställning för visningsprogrammet för video. Instruktioner om hur du skapar ett eget HTML5-visningsprogram med kapitelnavigering finns i Adobe HTML5-visningsprogrammets SDK-API, under klasserna `s7sdk.video.VideoPlayer` och `s7sdk.video.VideoScrubber`. Se [HTML5 Viewer SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)-dokumentationen.
 
 Du skapar en kapitellista för videon på ungefär samma sätt som du skapar bildtexter. Det innebär att du skapar en WebVTT-fil. Observera dock att den här filen måste vara separat från alla WebVTT-beskrivningsfiler som du också använder. du kan inte kombinera bildtexter och kapitel i en WebVTT-fil.
 
@@ -1149,9 +1149,9 @@ Om du vill konfigurera det standardtidsintervall som videominiatyrbilder generer
 
 1. I AEM trycker du på **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 
-1. Gå till `o etc/dam/imageserver/configuration/jcr:content/settings.` på CRXDE Lite-sidan i katalogpanelen till vänster
+1. In the CRXDE Lite page, in the directory panel on the left, navigate t `o etc/dam/imageserver/configuration/jcr:content/settings.`
 
-   Om katalogpanelen inte visas kan du behöva trycka på ikonen >> till vänster om fliken Hem.
+   if the directory panel is not visible, you may need to tap the >> icon to the left of the Home tab.
 
 1. Dubbeltryck `thumbnailtime` på den nedre högra panelen på fliken **[!UICONTROL Properties]**.
 1. I dialogrutan Redigera miniatyrtid använder du textfälten för att ange intervallvärden som procentvärden.
