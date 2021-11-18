@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, leverera och optimera digitala resurser.
-source-git-commit: d9649477328b3249dae396bbdca0f660c9c8faca
+source-git-commit: 18901a6b1e5035e16cb4f30a040ec8a42f704d87
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '636'
 ht-degree: 34%
 
 ---
@@ -101,7 +101,7 @@ ht-degree: 34%
    + [XMP-metadata](xmp.md)
    + [Resurser för nätverksaspekter](assets-network-considerations.md)
    + [AEM Assets vs. AEM MediaLibrary](medialibrary.md)
-   + [Använda PDF-rastrering](aem-pdf-rasterizer.md)
+   + [Använda rastrering i PDF](aem-pdf-rasterizer.md)
    + [Konfigurera överföringsbegränsningar för resurser](configuring-asset-upload-restrictions.md)
    + [Bästa praxis för integrering av AEM och Creative Cloud](aem-cc-integration-best-practices.md)
    + [Integrera AEM Assets med InDesign-server](indesign.md)
@@ -165,3 +165,7 @@ ht-degree: 34%
    + [Delning av privata mappar](private-folder.md)
    + [Riktlinjer för utbildning i smarta innehållstjänster](smart-tags-training-guidelines.md)
    + [Videoåtergivningar](video-renditions.md)
++ Integration med andra lösningar {#integrations}
+   + [Integrering med [!DNL Adobe Workfront]](workfront-integrations.md)
+   + [Installera [!DNL enhanced connector] for [!DNL Workfront]](workfront-connector-install.md)
+   + [Konfigurera [!DNL enhanced connector] for [!DNL Workfront]](workfront-connector-configure.md)
