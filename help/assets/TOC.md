@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, leverera och optimera digitala resurser.
-source-git-commit: 18901a6b1e5035e16cb4f30a040ec8a42f704d87
+source-git-commit: ac358965790694a51d866a4cdb97810b0983bbca
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '640'
 ht-degree: 34%
 
 ---
@@ -104,6 +104,7 @@ ht-degree: 34%
    + [Använda rastrering i PDF](aem-pdf-rasterizer.md)
    + [Konfigurera överföringsbegränsningar för resurser](configuring-asset-upload-restrictions.md)
    + [Bästa praxis för integrering av AEM och Creative Cloud](aem-cc-integration-best-practices.md)
+   + [Konfigurera Adobe-resurslänk](configure-asset-link.md)
    + [Integrera AEM Assets med InDesign-server](indesign.md)
    + [Metadataprofiler](metadata-profiles.md)
    + [Digital Rights Management in Assets](drm.md)
