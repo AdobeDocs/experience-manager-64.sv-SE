@@ -4,8 +4,7 @@ description: Konfigurera Experience Manager Assets för användning med tillägg
 contentOwner: Vishabh Gupta
 role: Admin
 feature: Asset Management
-exl-id: null
-source-git-commit: 5228db46ddbf08905477ddbab721f2b1ef7279ed
+source-git-commit: 227b929c7eecb4fa65f5c50fffc5d9ed802411e1
 workflow-type: tm+mt
 source-wordcount: '2927'
 ht-degree: 0%
