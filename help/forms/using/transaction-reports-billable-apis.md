@@ -1,23 +1,22 @@
 ---
 title: Fakturerbara API:er för transaktionsrapporter
-seo-title: Fakturerbara API:er för transaktionsrapporter
+seo-title: Transaction Reports Billable APIs
 description: Lista över alla API:er som räknas som transaktioner
-seo-description: Lista över alla API:er som räknas som transaktioner
+seo-description: List of all the APIs that are accounted as transactions
 uuid: 8861e325-7393-4d2c-9ec1-17f391ca3909
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-manager
 discoiquuid: 82e72ffb-2faa-45fe-8bb2-f485d8fa043e
-translation-type: tm+mt
-source-git-commit: ecaeabfdd31ed35229fe7e41b5472e8582fa28db
+exl-id: 18b5c6e2-3b0c-4ec8-9e65-c4105b47be4e
+source-git-commit: eeaa70855980ca62574f89e280b46c02c0b65bdc
 workflow-type: tm+mt
-source-wordcount: '1877'
+source-wordcount: '1859'
 ht-degree: 1%
 
 ---
 
-
-# Transaktionsrapporter fakturerbara API:er {#transaction-reports-billable-apis}
+# Fakturerbara API:er för transaktionsrapporter {#transaction-reports-billable-apis}
 
 Lista över alla API:er som räknas som transaktioner
 
@@ -34,8 +33,8 @@ AEM Forms har flera API:er för att skicka formulär, bearbeta dokument och åte
 
 Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett dokument eller formulär eller det återgivna dokumentets slutliga format. En transaktionsrapport delar upp transaktionerna i tre kategorier: Bearbetade dokument, dokument återgivna och Forms skickade.
 
-* **Forms har skickats:** När data har skickats in från en typ av formulär som skapats med AEM Forms och data har skickats till en datalagringsplats eller databas betraktas det som en formuläröverföring. Om du t.ex. skickar ett adaptivt formulär, HTML5-formulär, PDF forms och formuläruppsättning, räknas de som skickade formulär. Varje formulär i en formuläruppsättning betraktas som en inlämning. Om en formuläruppsättning till exempel har fem formulär, räknas den som 5 inskickade när formuläruppsättningen skickas.
-* **Återgivna dokument:** Generera ett dokument genom att kombinera en mall och data, signera digitalt eller certifiera ett dokument, använda ett fakturerbart dokument-API:er för dokumenttjänster eller konvertera ett dokument från ett format till ett annat, räknas som dokument som återges.
+* **Forms:** När data skickas in från någon typ av formulär som skapats med AEM Forms och data skickas till en datalagringsplats eller databas anses det som en formuläröverföring. Om du t.ex. skickar in ett anpassningsbart formulär, HTML5-formulär, PDF forms och formuläruppsättning, räknas de som inskickade formulär. Varje formulär i en formuläruppsättning betraktas som en inlämning. Om en formuläruppsättning till exempel har fem formulär, räknas den som 5 inskickade när formuläruppsättningen skickas.
+* **Återgivna dokument:** Generering av ett dokument genom att kombinera en mall och data, digitalt signera eller certifiera ett dokument, använda ett fakturerbart API:er för dokumenttjänster eller konvertering av ett dokument från ett format till ett annat, räknas som dokument som återges.
 
 >[!NOTE]
 >
@@ -43,7 +42,7 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
 
 ## Fakturerbara API:er för dokumenttjänster {#billable-document-services-apis}
 
-### Generera PDF-tjänst {#generate-pdf-service}
+### Generera tjänsten PDF {#generate-pdf-service}
 
 <table> 
  <tbody>
@@ -85,25 +84,25 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlFileToPdf-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-">htmlFileToPdf</a></td> 
-   <td><p>Skapar PDF från HTML-sidor.</p> </td> 
+   <td><p>Skapar PDF från HTML.</p> </td> 
    <td>Bearbetade dokument<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlToPdf-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">htmlToPdf</a></td> 
-   <td>Skapar PDF från URL:er som pekar på en HTML-sida.</td> 
+   <td>Skapar PDF från URL:er som pekar mot en HTML-sida.</td> 
    <td>Bearbetade dokument<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlToPdf2-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">htmlToPdf2</a></td> 
-   <td>Skapar PDF från URL:er som pekar på en HTML-sida.</td> 
+   <td>Skapar PDF från URL:er som pekar mot en HTML-sida.</td> 
    <td>Bearbetade dokument<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#optimizePDF-com.adobe.aemfd.docmanager.Document-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">optimeraPDF</a></td> 
-   <td>Optimerar PDF-filen för att minska filstorleken genom att ta bort onödiga metadata utan att påverka kvaliteten.</td> 
+   <td>Optimerar PDF för att minska filstorleken genom att ta bort onödiga metadata utan att påverka kvaliteten.</td> 
    <td>Bearbetade dokument<br /> </td> 
    <td> </td> 
   </tr>
@@ -222,7 +221,7 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
  </tbody>
 </table>
 
-### Konvertera PDF-tjänst {#convert-pdf-service}
+### Konvertera tjänsten PDF {#convert-pdf-service}
 
 <table> 
  <tbody>
@@ -278,7 +277,7 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#invoke-com.adobe.aemfd.docmanager.Document-java.util.Map-com.adobe.fd.assembler.client.AssemblerOptionSpec-">invoke</a></td> 
-   <td>Kör det angivna DDX-dokumentet och returnerar ett <a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html">AssemblerResult</a>-objekt som innehåller de resulterande dokumenten. </td> 
+   <td>Kör det angivna DDX-dokumentet och returnerar ett <a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html">AssemblerResult</a> objekt som innehåller de resulterande dokumenten. </td> 
    <td>Bearbetade dokument</td> 
    <td>Följande operationer redovisas inte som transaktioner:
     <ul> 
@@ -288,7 +287,7 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#invoke-com.adobe.aemfd.docmanager.Document-java.util.Map-com.adobe.fd.assembler.client.AssemblerOptionSpec-" target="_blank">invoke</a></td> 
-   <td>Kör det angivna DDX-dokumentet och returnerar ett <a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html"> AssemblerResult</a>-objekt som innehåller de resulterande dokumenten. </td> 
+   <td>Kör det angivna DDX-dokumentet och returnerar ett <a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html"> AssemblerResult</a> objekt som innehåller de resulterande dokumenten. </td> 
    <td>Bearbetade dokument</td> 
    <td>Alla indatafilformat som stöds av PDF Generator-, Forms- och Output-tjänsterna har stöd för alla dessa format som utdatafilformat. </td> 
   </tr>
@@ -304,13 +303,12 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
 >[!NOTE]
 >
 >* Anrop-API:t för sammansättartjänsten kan internt anropa ett fakturerbart API för en annan tjänst beroende på indata. Detta innebär att invoke-API:t kan redovisas som inga, enskilda eller flera transaktioner. Antalet transaktioner som räknas beror på indata och de interna API:erna som anropas.
->* Ett PDF-dokument som skapats med sammansättningstjänsten kan redovisas som inga, enskilda eller flera transaktioner. Antalet transaktioner som räknas beror på den angivna DDX-koden.
+>* Ett enda PDF-dokument som skapats med en monteringsfunktion kan redovisas som inga, enstaka eller flera transaktioner. Antalet transaktioner som räknas beror på den angivna DDX-koden.
 
 >
 
 
-
-### PDF Utility Service {#pdf-utility-service}
+### Verktygstjänsten PDF  {#pdf-utility-service}
 
 <table> 
  <tbody>
@@ -329,7 +327,7 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
  </tbody>
 </table>
 
-### Doc Assurance Service {#doc-assurance-service}
+### Doc Assurance-tjänst {#doc-assurance-service}
 
 <table> 
  <tbody>
@@ -343,14 +341,14 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
    <td><a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/docassurance/client/api/DocAssuranceService.html#secureDocument-com.adobe.aemfd.docmanager.Document-com.adobe.fd.docassurance.client.api.EncryptionOptions-com.adobe.fd.docassurance.client.api.SignatureOptions-com.adobe.fd.docassurance.client.api.ReaderExtensionOptions-com.adobe.fd.signatures.pdf.inputs.UnlockOptions-">secureDocument</a></td> 
    <td>Med API kan du skydda ditt dokument. Du kan använda API:t för att signera, certifiera, utöka eller kryptera ett PDF-dokument. </td> 
    <td>Bearbetade dokument</td> 
-   <td>Endast signerings- och certifieringsåtgärden för <a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/docassurance/client/api/DocAssuranceService.html#secureDocument-com.adobe.aemfd.docmanager.Document-com.adobe.fd.docassurance.client.api.EncryptionOptions-com.adobe.fd.docassurance.client.api.SignatureOptions-com.adobe.fd.docassurance.client.api.ReaderExtensionOptions-com.adobe.fd.signatures.pdf.inputs.UnlockOptions-">secureDocument</a> faktureras.</td> 
+   <td>Signera och certifiera endast <a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/docassurance/client/api/DocAssuranceService.html#secureDocument-com.adobe.aemfd.docmanager.Document-com.adobe.fd.docassurance.client.api.EncryptionOptions-com.adobe.fd.docassurance.client.api.SignatureOptions-com.adobe.fd.docassurance.client.api.ReaderExtensionOptions-com.adobe.fd.signatures.pdf.inputs.UnlockOptions-">secureDocument</a> faktureras.</td> 
   </tr>
  </tbody>
 </table>
 
-## Fakturerbara API:er för datainsamling {#billable-data-capture-apis}
+## Fakturerbara API:er för datainhämtning {#billable-data-capture-apis}
 
-Alla överföringshändelser för adaptiva formulär, HTML5 Forms och formuläruppsättningar räknas som transaktioner. Som standard räknas inte inlämning av ett PDF-formulär som en transaktion. Använd angivet [transaktionsrapports-API](record-transaction-custom-implementation.md) för att spela in en PDF forms-inlämning som en transaktion.
+Alla överföringshändelser för adaptiva formulär, HTML5 Forms och formuläruppsättningar redovisas som transaktioner. Som standard räknas inte inlämning av ett PDF-formulär som en transaktion. Använd den angivna [API för transaktionsrapporter](record-transaction-custom-implementation.md) för att spela in PDF forms som en transaktion.
 
 ### Adaptiv Forms {#adaptive-forms}
 
@@ -368,7 +366,7 @@ Alla överföringshändelser för adaptiva formulär, HTML5 Forms och formuläru
    <td>Forms har skickats</td> 
    <td>
     <ul> 
-     <li>Konto för slutförda överföringar för en eller två transaktioner. Antalet transaktioner som räknas beror på vilken typ av överföringsåtgärd som används för att skicka in. Du kan till exempel skicka PDF via e-poståtgärdskonton för två antal transaktioner. En transaktion för att skicka formulär och en annan för PDF som genereras med tjänsten Document of Record (DOR). </li> 
+     <li>Konto för slutförda överföringar för en eller två transaktioner. Antalet transaktioner som räknas beror på vilken typ av överföringsåtgärd som används för att skicka in. Du kan till exempel skicka PDF via e-poståtgärdskonton för att skicka två antal transaktioner. En transaktion för att skicka formulär och en annan för PDF som genereras med tjänsten Document of Record (DOR). </li> 
      <li>När du använder det adaptiva formuläret i ett adaptivt formulär (adaptiv formuläruppsättning) utförs endast en transaktion. Du kan ha ett obegränsat antal anpassningsbara formulär i ett anpassat formulär.</li> 
     </ul> </td> 
   </tr>
@@ -387,7 +385,7 @@ Alla överföringshändelser för adaptiva formulär, HTML5 Forms och formuläru
   </tr>
   <tr>
    <td>Skicka ett HTML5-formulär</td> 
-   <td>Skickar ett HTML5-formulär för att skicka en URL som konfigurerats i formuläret.</td> 
+   <td>Skickar ett HTML5-formulär till en skicka-URL som är konfigurerad i formuläret.</td> 
    <td>Forms har skickats</td> 
    <td> </td> 
   </tr>
@@ -411,7 +409,7 @@ Alla överföringshändelser för adaptiva formulär, HTML5 Forms och formuläru
    <td>
     <ul> 
      <li>När du använder det adaptiva formuläret i ett adaptivt formulär (adaptiv formuläruppsättning) utförs endast en transaktion. Du kan ha ett obegränsat antal anpassningsbara formulär i ett anpassat formulär.</li> 
-     <li>Alla formulär i HTML5 Forms-formuläruppsättningen har ett separat konto. </li> 
+     <li>Alla formulär i en HTML5 Forms-formuläruppsättning konton som en separat transaktion. </li> 
     </ul> </td> 
   </tr>
  </tbody>
@@ -442,7 +440,7 @@ Tilldela uppgifter och dokumenttjänster steg i formulärbaserade AEM arbetsflö
  </tbody>
 </table>
 
-### Interaktiv kommunikation - Utskriftskanal {#interactive-communication-print-channel}
+### Interaktiv kommunikation - tryckkanal {#interactive-communication-print-channel}
 
 <table> 
  <tbody>
@@ -453,7 +451,7 @@ Tilldela uppgifter och dokumenttjänster steg i formulärbaserade AEM arbetsflö
    <td>Ytterligare information</td> 
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/ccm/channels/print/api/model/PrintChannel.html" target="_blank">återge</a>  (konvertera till PDF)</td> 
+   <td><a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/ccm/channels/print/api/model/PrintChannel.html" target="_blank">återge</a> (konvertera till PDF)</td> 
    <td>Skapar PDF-versionen av en interaktiv kommunikation.</td> 
    <td>Återgivna dokument</td> 
    <td>
@@ -463,7 +461,7 @@ Tilldela uppgifter och dokumenttjänster steg i formulärbaserade AEM arbetsflö
  </tbody>
 </table>
 
-### Formulärbaserade AEM arbetsflöden på OSGi {#form-centric-aem-workflows-on-osgi}
+### Formulärbaserade AEM arbetsflöden i OSGi  {#form-centric-aem-workflows-on-osgi}
 
 <table> 
  <tbody>
@@ -492,13 +490,12 @@ Tilldela uppgifter och dokumenttjänster steg i formulärbaserade AEM arbetsflö
  </tbody>
 </table>
 
-## Registrerar fakturerbara API:er som transaktioner för anpassad kod {#recording-billable-apis-as-transactions-for-custom-code}
+## Registrera fakturerbara API:er som transaktioner för anpassad kod {#recording-billable-apis-as-transactions-for-custom-code}
 
-Åtgärder som att skicka ett PDF-formulär, använda agentgränssnittet för att förhandsgranska interaktiv kommunikation, skicka formulär som inte är standard och anpassade implementeringar räknas inte som transaktioner. AEM Forms tillhandahåller ett API för att spela in sådana åtgärder som transaktioner. Du kan anropa API:t från dina anpassade implementeringar för att [registrera en transaktion](https://www.bdnsw.gov.bn/PublishingImages/page-under-construction.jpg).
+Åtgärder som att skicka ett PDF-formulär, använda agentanvändargränssnittet för att förhandsgranska interaktiv kommunikation, skicka formulär som inte är standard och anpassade implementeringar räknas inte som transaktioner. AEM Forms tillhandahåller ett API för att spela in sådana åtgärder som transaktioner. Du kan anropa API:t från dina anpassade implementeringar till [registrera en transaktion](record-transaction-custom-implementation.md).
 
 ## Relaterade artiklar {#related-articles}
 
 * [Översikt över transaktionsrapporter](/help/forms/using/transaction-reports-overview.md)
 * [Visa och förstå transaktionsrapporter](/help/forms/using/viewing-and-understanding-transaction-reports.md)
 * [Registrera en transaktion för anpassade implementeringar](/help/forms/using/record-transaction-custom-implementation.md)
-
