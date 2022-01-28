@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, leverera och optimera digitala resurser.
-source-git-commit: ac358965790694a51d866a4cdb97810b0983bbca
+source-git-commit: 50b657456d2a0eaaaf681d3902eba38b15d00e12
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '639'
 ht-degree: 34%
 
 ---
@@ -49,7 +49,6 @@ ht-degree: 34%
    + [Bildprofiler för Dynamic Media](image-profiles.md)
    + [Smart bildbehandling](imaging-faq.md)
    + [Video](s7-video.md)
-   + [Lägga till Dynamic Media Classic-funktioner på sidan](scene7.md)
    + [Leverera innehåll med HTTP2](http2.md)
    + [Leverera Dynamic Media-resurser](delivering-dynamic-media-assets.md)
    + [Aktivera hotlink-skydd i Dynamic Media](hotlink-protection.md)
@@ -65,6 +64,7 @@ ht-degree: 34%
    + [Leverera optimerade bilder för en responsiv webbplats](responsive-site.md)
    + [Förhandsgranska Dynamic Media-resurser](previewing-assets.md)
    + [Lägga till Dynamic Media-resurser på sidor](adding-dynamic-media-assets-to-pages.md)
+   + [Lägga till Dynamic Media Classic-komponenter på sidor](scene7.md)
    + [Bädda in läsare för Dynamic-video eller -bilder på en webbsida](embed-code.md)
    + [Länka URL till ett webbprogram](linking-urls-to-yourwebapplication.md)
    + [Omforma URL:er med regeluppsättningar](using-rulesets-to-transform-urls.md)
