@@ -8,7 +8,7 @@ content-type: reference
 exl-id: acb95a2b-0171-449e-97fa-f9a533f990de
 feature: Video
 role: User
-source-git-commit: 642ade44cac29d38533cfe724f69ba95e691a647
+source-git-commit: f2b7ffa37bcb14e7be47c10ea9d3e39f89e1858d
 workflow-type: tm+mt
 source-wordcount: '9905'
 ht-degree: 3%
@@ -29,7 +29,6 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 >
 >* Se [Konfigurera Dynamic Media-Cloud Services i läget Konfigurera Dynamic Media - hybrid.](/help/assets/config-dynamic.md)
 >* Se [Konfigurera Dynamic Media - Scene7-läge](config-dms7.md) och [Felsökning av Dynamic Media - Scene7-läge](troubleshoot-dms7.md)
-
 >
 
 
@@ -46,7 +45,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
       * Läs mer om [Organisera digitala resurser](organize-assets.md).
    * Överför dina primära källvideor till mapparna. När du lägger till videofilmer i mappen kodas de enligt den videobearbetningsprofil som du tilldelade mappen.
 
-      * Dynamic Media har främst stöd för videoklipp i kort form med en maxlängd på 30 minuter och en minimiupplösning på mer än 50 x 50.
+      * Dynamic Media har främst stöd för videoklipp i kort form med en maxlängd på 30 minuter och en minimiupplösning på mer än 25 x 25.
       * Du kan överföra videofiler som är upp till 15 GB vardera.
       * [Ladda upp videor](managing-video-assets.md#uploading-and-previewing-video-assets).
       * Läs mer om [Indatafilformat som stöds](assets-formats.md#supported-multimedia-formats).
@@ -288,7 +287,7 @@ For advice about video encoding, see the following:
 
 När du kodar en videofil ska du använda en källvideofil med högsta möjliga kvalitet. Undvik att använda tidigare kodade videofiler eftersom dessa filer redan är komprimerade, och ytterligare kodning skapar en video med delkvalitet.
 
-* Dynamic Media har främst stöd för videoklipp i kort form med en maxlängd på 30 minuter och en minimiupplösning på mer än 50 x 50.
+* Dynamic Media har främst stöd för videoklipp i kort form med en maxlängd på 30 minuter och en minimiupplösning på mer än 25 x 25.
 * Du kan överföra primära källvideofiler på upp till 15 GB vardera.
 
 I följande tabell beskrivs rekommenderad storlek, proportioner och lägsta bithastighet som källvideofilerna ska ha innan du kodar dem:
