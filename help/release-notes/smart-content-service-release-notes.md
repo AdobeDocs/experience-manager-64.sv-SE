@@ -1,21 +1,21 @@
 ---
-title: Versionsinformation för Smart Content Service
-seo-title: Versionsinformation för Smart Content Service
+title: Versionsinformation för tjänsten Smart Content
+seo-title: Smart Content Service Release Notes
 description: Översikt över tjänsten Smart Content Service och kända problem med tjänsten.
-seo-description: Översikt över tjänsten Smart Content Service och kända problem med tjänsten.
+seo-description: Overview of the Smart Content Service and known issues around the service.
 uuid: 5f474b36-3451-48ea-8669-b2d793638b06
 content-type: reference
 products: SG_EXPERIENCEMANAGER
 discoiquuid: 9f88c773-ddeb-4c66-ac07-7d3aa196c51b
 exl-id: 6e7ac9d2-7181-48bb-82c4-61a90e594ff5
-source-git-commit: a842c45f0a0597f4c7f143974a550874258e5382
+source-git-commit: 354e3fcd747b7b0490599c3b84b8e58dac39ed05
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 1%
+source-wordcount: '307'
+ht-degree: 0%
 
 ---
 
-# Versionsinformation för Smart Content Service {#smart-content-service-release-notes}
+# Versionsinformation för tjänsten Smart Content {#smart-content-service-release-notes}
 
 Översikt över tjänsten Smart Content Service och kända problem med tjänsten.
 
@@ -32,55 +32,7 @@ Tjänsten Smart Content Service drivs av Adobe Sensei-plattformen som gör det m
 Tjänsten Smart Content innehåller följande viktiga förbättringar:
 
 * Algoritmoptimering för att ytterligare förbättra modellprecision, återkallningsvärden
-* Stöd för att återställa modellutbildning för alla taggar på innehavarnivå
-* Stöd för förbättrade namnutrymmen för smarta taggar för att undvika konflikter
-* Ny ersättningspolicy för modell för att undvika försämring på grund av omskolning
-* Klientvis övervakning för användning av tjänsten
 * Åtgärdar problem med klustring och anslutning, vilket ökar tillförlitligheten i tjänsten
-
-## Åtgärdade problem {#fixed-issues}
-
-Följande problem har åtgärdats i den här versionen:
-
-* Arbetsprocesserna för taggning och utbildning avslutas om det inte går att ansluta till MySQL-servern. CQ-4242886
-
-* Precisionsjusteringar har inte beräknats korrekt. CQ-4241797
-
-* Felaktig PR-beräkning för modellen. CQ-4241381
-
-* Utbildningsarbetsflödet saknar exempelresurser när de bearbetas från kö CQ-4240901
-
-* Förbättrad precisionsåterkallning. CQ-4239895
-
-* Modellersättningsprincip. CQ-4239886
-
-* Bilder på mäns skjorta är taggade med kofttaggen. CQ-4239650
-
-* Utbildningsexempel saknas vid driftsättning på scenen. CQ-4239483
-
-* Utbildningen ska valideras på en uppsättning resurser som lämnats in för utbildning. CQ-4238834
-
-* Det går inte att skapa modeller för negativ matning även om det finns minimala positiva/negativa för en tagg. CQ-4240741
-
-* Felaktiga poster för negativt födoämne i loggar för utbildare. CQ-4240738
-
-* Problem med förstagångsutbildning om taggar som lämnats in för utbildning är slumpmässiga negativ av varandra. CQ-4240118
-
-* Improvisionera loggar för att övervaka användningen av tjänsten per klientorganisation. CQ-4239781
-
-## Språk {#languages}
-
-Tjänsten för smart innehåll är tillgänglig för följande språk:
-
-* Engelska
-* Tyska
-* Franska
-* Spanska
-* Italienska
-* Portugisiska
-* Japanska
-* Förenklad kinesiska
-* Koreanska
 
 ## Länkar {#links}
 
@@ -92,6 +44,6 @@ Tjänsten för smart innehåll är tillgänglig för följande språk:
 Dessa webbplatser är bara tillgängliga för kunder. Om du är kund och behöver åtkomst kontaktar du din kontoansvarige på Adobe.
 
 * [Produktåtkomst](https://login.experiencecloud.adobe.com/exc-content/login.html)
-* [Nedladdning av produkt på licensing.adobe.com](https://licensing.adobe.com/).
-* Produktuppdateringar, patchar och paket för ytterligare funktionalitet i [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
-* [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [New Adobe Customer Support Experience](https://docs.adobe.com/content/help/en/customer-one/using/home.html).
+* [Produktnedladdning på licensing.adobe.com](https://licensing.adobe.com/).
+* Produktuppdateringar, patchar och paket för ytterligare funktionalitet i [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
+* [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [Ny Adobe-upplevelse för kundsupport](https://docs.adobe.com/content/help/en/customer-one/using/home.html).
