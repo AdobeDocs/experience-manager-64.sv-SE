@@ -1,14 +1,14 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites, Experience Manager 6.4
+solution: Experience Manager, Experience Manager Sites
 audience: end-user
 user-guide-title: AEM 6.4 Developing User Guide
 breadcrumb-title: Utvecklingshandbok
 user-guide-description: Den här guiden beskriver hur du skapar AEM.
 feature: Developing
 role: Developer
-source-git-commit: f6024ad5d213af0e726d95a5ab83ac3a271e8c18
+source-git-commit: 35aea0e087334a1c1e6a708f2182bd9dee799dc0
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 5%
@@ -49,7 +49,7 @@ ht-degree: 5%
    + [Övertäckningar](overlays.md)
    + [Namnkonventioner](naming-conventions.md)
    + [Skapa en ny GRE-fältkomponent](granite-ui-component.md)
-   + Frågebyggaren{#query-builder}
+   + Query Builder{#query-builder}
       + [Implementera en anpassad predikatutvärderare för Query Builder](implementing-custom-predicate-evaluator.md)
       + [Predikatreferens för Query Builder](querybuilder-predicate-reference.md)
       + [Query Builder API](querybuilder-api.md)
@@ -216,9 +216,9 @@ ht-degree: 5%
    + [JCR-integrering](jcr-integration.md)
    + [Kodexempel](code-samples.md)
    + [Felsöka långsamma frågor](troubleshooting-slow-queries.md)
-+ Mobil webb{#mobileweb}
-   + [Mobil webb](mobile-web.md)
++ Mobile Web{#mobileweb}
+   + [Mobile Web](mobile-web.md)
    + [Skapa enhetsgruppsfilter](groupfilters.md)
    + [Responsiv design för webbsidor](responsive.md)
-   + [Skapa platser för mobila enheter](mobile.md)
+   + [Skapa platser för Mobile-enheter](mobile.md)
    + [Emulatorer](emulators.md)

@@ -1,16 +1,16 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-sub-product: formulär
-solution: Experience Manager, Experience Manager Forms, Experience Manager 6.4
+sub-product: forms
+solution: Experience Manager, Experience Manager Forms
 audience: end-user
 user-guide-title: Adobe Experience Manager 6.4 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: 35aea0e087334a1c1e6a708f2182bd9dee799dc0
 workflow-type: tm+mt
-source-wordcount: '3730'
+source-wordcount: '3729'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
    + [Introduktion till utveckling av anpassningsbara formulär](using/introduction-forms-authoring.md)
    + [Introduktion till interaktiv kommunikation](using/interactive-communications-overview.md)
    + [Introduktion till hantering av formulär](using/introduction-managing-forms.md)
-   + Självstudiekurs: Skapa ditt första anpassade formulär {#create-first-adaptive-form}
+   + Självstudiekurs: Skapa ditt första adaptiva formulär {#create-first-adaptive-form}
       + [Självstudiekurs: Skapa ditt första anpassningsbara formulär](using/create-your-first-adaptive-form.md)
       + [Självstudiekurs: Skapa ett anpassat formulär](using/create-adaptive-form.md)
       + [Självstudiekurs: Skapa formulärdatamodell](using/create-form-data-model.md)
@@ -52,7 +52,7 @@ ht-degree: 0%
       + [Referera till adaptiva formulärfragment](using/reference-adaptive-form-fragments.md)
       + [Referensteman](using/reference-themes.md)
       + [Mallar för referensbrev](using/reference-cm-layout-templates.md)
-      + [Konfigurera Microsoft Dynamics 365 för arbetsflödet för bostadslån på referensplatsen Web.Finance](using/ms-dynamics-configuration-home-mortgage.md)
+      + [Konfigurera Microsoft Dynamics 365 för arbetsflödet för inteckning i hemmet på referenswebbplatsen för We.Finance](using/ms-dynamics-configuration-home-mortgage.md)
 + Installera och konfigurera AEM Forms {#install-aem-forms}
    + [Arkitektur och driftsättningstopologier för AEM Forms](using/aem-forms-architecture-deployment.md)
    + [Välja en beständig typ för en AEM Forms-installation](using/choosing-persistence-type-for-aem-forms.md)
@@ -62,11 +62,11 @@ ht-degree: 0%
       + [Installera och konfigurera datainhämtningsfunktioner](using/installing-configuring-aem-forms-osgi.md)
       + [Installera och konfigurera ett Forms-centrerat arbetsflöde i OSGi](using/installing-configuring-forms-centric-workflow-on-osgi.md)
       + [Installera och konfigurera interaktiv kommunikation](using/installing-configuring-intreactive-communication-correspondence-management.md)
-   + Installera AEM Forms på JEE {#jee-installation}
+   + Installera AEM Forms i JEE {#jee-installation}
       + [Plattformar som stöds för AEM formulär på JEE](using/aem-forms-jee-supported-platforms.md)
       + [Installera och distribuera AEM Forms på JEE med JBoss Turnkey](http://www.adobe.com/go/learn_aemforms_installTurnkey_64)
       + [Installera och konfigurera AEM Forms Document Security-servern](using/installing-and-configuring-the-document-security-server.md)
-      + [Installation av AEM Forms (Single Server) förbereds](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64)
+      + [Installationen av AEM Forms (Single Server) förbereds](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64)
       + [Installera och distribuera Adobe Experience Manager Forms på JEE för JBoss](http://www.adobe.com/go/learn_aemforms_installJBoss_64)
       + [Installera och distribuera AEM Forms på JEE för WebLogic](http://www.adobe.com/go/learn_aemforms_installWebLogic_64)
       + [Installera och distribuera Adobe Experience Manager Forms på JEE för WebSphere](http://www.adobe.com/go/learn_aemforms_installWebSphere_64)
@@ -83,7 +83,7 @@ ht-degree: 0%
       + [Konfigurera synkroniseringsplaneraren](using/configure-synchronization-scheduler.md)
       + [Konfigurera anslutningsprogrammet för Microsoft SharePoint](http://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html)
       + [Ansluta AEM Forms till Adobe LiveCycle](using/aem-livecycle-connector.md)
-      + [Konfigurera AEM Forms för att skicka formulärdata till en JEE-process i AEM Forms](using/submit-form-data-livecycle-process.md)
+      + [Konfigurera AEM Forms för att skicka formulärdata till en JEE-process från AEM Forms](using/submit-form-data-livecycle-process.md)
       + [AEM datorprogram för AEM Forms](/help/forms/using/aem-desktop-app-for-aem-forms.md)
 + Uppgradera AEM Forms {#upgrade-aem-forms}
    + [Tillgängliga uppgraderingssökvägar](using/upgrade.md)
@@ -93,7 +93,7 @@ ht-degree: 0%
       + [Migrera AEM Forms-resurser och -dokument](using/migration-utility.md)
    + Uppgradera AEM Forms på JEE {#aem-forms-jee-upgrade}
       + [Förbereder uppgradering av AEM Forms](http://www.adobe.com/go/learn_aemforms_prepareupgrade_64)
-      + [Adobe Experience Manager Forms i JEE-uppgraderingar - checklista och planering](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_64)
+      + [Adobe Experience Manager Forms i JEE - checklista och planering för uppgradering](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_64)
       + [Uppgradera till AEM 6.4-formulär på JEE](using/upgrade-forms-jee.md)
       + [Uppgradera till Adobe Experience Manager Forms på JEE för JBoss](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_64)
       + [Uppgradera från LiveCycle ES4 SP1 till Adobe Experience Manager Forms på JEE för JBoss](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-jboss-livecycle.pdf)
@@ -121,7 +121,7 @@ ht-degree: 0%
       + [Korrespondenshantering](using/correspondence-management-handling-user-data.md)
       + [Integrering med Adobe Sign](/help/forms/using/integration-adobe-sign-handling-user-data.md)
       + [Dokumentsäkerhet](/help/forms/using/document-security-handling-user-data.md)
-   + Försvårande AEM Forms-miljö {#hardening-aem-forms-environment}
+   + Förbättrad AEM Forms-miljö {#hardening-aem-forms-environment}
       + [Förbättra och skydda AEM formulär i OSGi-miljö](using/hardening-securing-aem-forms-environment.md)
       + [Allmänna säkerhetsfrågor för AEM Forms i JEE](using/general-security-considerations.md)
       + [Förbättra din AEM Forms på JEE-miljö](using/hardening-aem-forms-jee-environment.md)
@@ -129,7 +129,7 @@ ht-degree: 0%
 + Formulärdatamodell {#form-data-model}
    + [Introduktion till AEM Forms dataintegrering](using/data-integration.md)
    + [Konfigurera datakällor](using/configure-data-sources.md)
-   + [Microsoft Dynamics Odata-konfiguration](using/ms-dynamics-odata-configuration.md)
+   + [Konfiguration av Microsoft Dynamics Odata](using/ms-dynamics-odata-configuration.md)
    + [Skapa formulärdatamodell](using/create-form-data-models.md)
    + [Arbeta med formulärdatamodell](using/work-with-form-data-model.md)
    + [Använd formulärdatamodell](using/using-form-data-model.md)
@@ -242,11 +242,11 @@ ht-degree: 0%
    + [Starta processer](using/starting-processes.md)
    + [Spåra processer](using/tracking-processes.md)
    + [Hanterare för enkel inloggning och timeout](using/single-sign-timeout-handlers.md)
-   + [Använda ett anpassat formulär i HTML Workspace](using/using-adaptive-form-html-workspace.md)
-   + [Integrera AEM formulärarbetsyta med Microsoft Office SharePoint Server](using/integrating-aem-forms-workspace-with-microsoft-office-sharepoint-server.md)
+   + [Använda ett anpassat formulär på arbetsytan i HTML](using/using-adaptive-form-html-workspace.md)
+   + [Integrera AEM med Microsoft Office SharePoint Server](using/integrating-aem-forms-workspace-with-microsoft-office-sharepoint-server.md)
    + [Arbeta med att göra-listor](using/todo-lists.md)
    + [Felsökningsriktlinjer för arbetsytan i AEM Forms](using/troubleshooting-guidelines-html-workspace.md)
-+ AEM Forms app {#aem-forms-app}
++ AEM Forms {#aem-forms-app}
    + [Introduktion till AEM Forms](using/aem-forms-app.md)
    + [Konfigurera miljö för AEM Forms-program](using/setup-environment-mobile-workspace.md)
    + [Konfigurera Xcode-projektet och bygg iOS-appen](using/setup-xcode-project-build-installer.md)
@@ -278,21 +278,21 @@ ht-degree: 0%
    + [Skillnaden mellan HTML5-formulär och PDF forms](using/feature-differentiation-html5-forms-pdf-forms.md)
    + [Vanliga frågor och svar om HTML5-formulär](using/faq.md)
    + [Utforma formulärmallar för HTML5-formulär](using/designing-form-template.md)
-   + [Metodtips för HTML5-formulär](using/best-practices-for-html5-forms.md)
-   + [Utforma hjälpmedelsförberedda HTML5-formulär](using/design-accessible-html5-forms.md)
+   + [Bästa tillvägagångssätt för HTML5-formulär](using/best-practices-for-html5-forms.md)
+   + [Designa hjälpmedelsförberedda HTML5-formulär](using/design-accessible-html5-forms.md)
    + [Generera HTML5-förhandsgranskning av ett XDP-formulär](using/preview-xdp-forms-html.md)
    + [Återger formulärmall för HTML5-formulär](using/rendering-form-template.md)
    + [Aktivera bilagor för ett HTML5-formulär](using/enabling-attachments-html5-form.md)
-   + [Tjänstproxy för HTML5-formulär](using/service-proxy.md)
+   + [HTML 5-formulärtjänstproxy](using/service-proxy.md)
    + [Optimera HTML5-formulär](using/optimize-html5-forms.md)
    + [Skärmläsare för HTML5-formulär](using/screen-readers.md)
    + [Skapa en anpassad profil för HTML5-formulär](using/custom-profile.md)
-   + [höger-till-vänster-språk i HTML5-formulär](using/right-left-languages.md)
+   + [Höger till vänster-språk i HTML5-formulär](using/right-left-languages.md)
    + [Integrera Form Bridge med en anpassad portal för HTML5-formulär](using/integrate-form-bridge-forms-portal.md)
    + [Skapa anpassade utseenden i HTML5-formulär](using/custom-widgets.md)
    + [Ändra standardformat för HTML5-formulär](using/changing-default-styles.md)
-   + [Stöd för Picture-sats i HTML5-formulär](using/picture-clause-support.md)
-   + [Skapa hjälpmedelsanpassade komplexa tabeller i HTML5-formulär](using/accessible-tables.md)
+   + [Stöd för Picture-klausuler i HTML5-formulär](using/picture-clause-support.md)
+   + [Skapa tillgängliga komplexa tabeller i HTML 5-formulär](using/accessible-tables.md)
    + [Skapa CSS-format för HTML5-formulär](using/css-styles.md)
    + [Anpassa felmeddelanden för HTML5-formulär](using/customzing-errors-html5-forms.md)
    + [Spara ett HTML5-formulär som ett utkast](using/saving-html5-form-draft.md)
@@ -300,7 +300,7 @@ ht-degree: 0%
    + [Felsöka HTML5-formulär](using/debug.md)
    + [Skriptstöd för HTML5-formulär](using/scripting-support.md)
    + [Formuläruppsättning i AEM Forms](using/formset-in-aem-forms.md)
-+ Bokstäver och korrespondenser {#letters-correspondences}
++ Bokstäver och korrespondens {#letters-correspondences}
    + [Översikt över korrespondenshantering](using/cm-overview.md)
    + [Layoutdesign](using/layout-design-details.md)
    + [Dataordlista](using/data-dictionary.md)
@@ -319,7 +319,7 @@ ht-degree: 0%
    + [API:er för åtkomst till bokstavsinstanser](using/cm-apis-to-access-letter-instances.md)
    + [Integrera Create Correspondence UI med din anpassade portal](using/integrating-create-correspondence-ui-with-your-portal.md)
    + [Anpassade specialtecken i korrespondenshantering](using/custom-special-characters.md)
-   + [Egen vattenstämpel i PDF-förhandsgranskning med bokstav](using/custom-watermark.md)
+   + [Egen vattenstämpel i PDF förhandsvisning](using/custom-watermark.md)
    + [Konfigurera en Correspondence Management-lösning](using/configuring-a-cm-solution.md)
    + [Infogade villkor och upprepningar i interaktiv kommunikation och brev](using/cm-inline-condition.md)
    + [Dokumentfragment](using/lists.md)
@@ -364,8 +364,8 @@ ht-degree: 0%
 + Dokumentsäkerhet {#use-document-security}
    + [Dokumentsäkerhet](using/document-security-offerings.md)
    + [Aktivera AEM för att söka efter dokumentskyddade PDF-dokument](using/enable-search-for-drm-protected-pdf-documents-in-aem.md)
-   + [Reader genom att utöka profilskyddade PDF-dokument med hjälp av Portable Protection Library](using/reader-extending-policy-protected-pdf-documents-using-ppl.md)
-   + [Aktivera AEM för att söka efter dokumentskyddade PDF- och Microsoft Office-dokument](using/enable-search-for-drm-protected-pdf-and-office-documents-in-aem.md)
+   + [Reader utökar policyskyddade PDF-dokument med hjälp av Portable Protection Library](using/reader-extending-policy-protected-pdf-documents-using-ppl.md)
+   + [Aktivera AEM för att söka efter dokumentsäkerhetsskyddade PDF- och Microsoft Office-dokument](using/enable-search-for-drm-protected-pdf-and-office-documents-in-aem.md)
    + [Protect ett dokument för en annan användares räkning](using/protect-document-on-behalf-of-another-user.md)
 + Forms Designer {#use-forms-designer}
    + [Använda Designer](http://www.adobe.com/go/learn_aemforms_designer_64)
@@ -374,9 +374,9 @@ ht-degree: 0%
    + [Skriptgrunder för Designer ](http://www.adobe.com/go/learn_aemforms_scriptingBasics_64)
    + [Skriptreferens för Designer ](http://www.adobe.com/go/learn_aemforms_scriptingReference_64)
    + [FormCalc-referens för Designer ](http://www.adobe.com/go/learn_aemforms_formCalc_64)
-   + [Använda klottersignaturer i HTML5-formulär](using/scribble-signature.md)
+   + [Använda klottrar i HTML5-formulär](using/scribble-signature.md)
 + Anpassa AEM Forms {#customize-aem-forms}
-   + [Utseenderamverk för adaptiva formulär och HTML5-formulär](using/introduction-widgets.md)
+   + [Appearance Framework for adaptive and HTML5 forms](using/introduction-widgets.md)
    + [Skapa en anpassad anpassad formulärmall](using/custom-adaptive-forms-templates.md)
    + [Skapa anpassade layoutkomponenter för anpassade formulär](using/custom-layout-components-forms.md)
    + [Lägga till anpassad åtgärd för formulärlisteobjekt](using/add-custom-action-form-lister.md)
@@ -395,7 +395,7 @@ ht-degree: 0%
    + [Visa och förstå transaktionsrapporter](using/viewing-and-understanding-transaction-reports.md)
    + [Fakturerbara API:er för transaktionsrapporter](using/transaction-reports-billable-apis.md)
    + [Registrera en transaktion för anpassade implementeringar](using/record-transaction-custom-implementation.md)
-+ Administratörshjälp för AEM Forms på JEE {#administrator-help}
++ Administratörshjälp för AEM Forms i JEE {#administrator-help}
    + Kom igång {#get-started}
       + [Allmänna inställningar för AEM Forms](/help/forms/using/admin-help/configure-general-aem-forms-settings.md)
       + [Uppdatera licenstypen för distributionen](/help/forms/using/admin-help/update-license-type-deployment.md)
@@ -407,7 +407,7 @@ ht-degree: 0%
       + [Konfigurerar autentiseringsproviders](/help/forms/using/admin-help/configuring-authentication-providers.md)
       + [Synkroniserar kataloger](/help/forms/using/admin-help/synchronizing-directories.md)
       + [Konfigurera kataloger](/help/forms/using/admin-help/configuring-directories.md)
-   + Konfigurerar användarhantering {#configure-user-management}
+   + Konfigurera användarhantering {#configure-user-management}
       + [Ändra utvärderingsordningen för autentisering](/help/forms/using/admin-help/change-order-evaluation-authentication.md)
       + [Konfigurera LDAP-lösenordet för bindning](/help/forms/using/admin-help/configure-ldap-bind-password.md)
       + [Konfigurera AEM formulär för att hämta domäninformation i förväg](/help/forms/using/admin-help/configure-aem-forms-prefetch-domain.md)
@@ -426,9 +426,9 @@ ht-degree: 0%
       + [Skapa och konfigurera roller](/help/forms/using/admin-help/creating-configuring-roles.md)
    + Ansluta till ett innehållshanteringssystem {#connect-content-management-system}
       + [Konfigurera Connector for EMC Documentum](/help/forms/using/admin-help/configuring-connector-emc-documentum.md)
-      + [Konfigurerar Connector för IBM FileNet](/help/forms/using/admin-help/configuring-connector-ibm-filenet.md)
+      + [Konfigurera Connector för IBM FileNet](/help/forms/using/admin-help/configuring-connector-ibm-filenet.md)
       + [Konfigurera Connector för IBM Content Manager](/help/forms/using/admin-help/configuring-connector-ibm-content-manager.md)
-      + [Konfigurerar Connector för Microsoft SharePoint](/help/forms/using/admin-help/configuring-connector-microsoft-sharepoint.md)
+      + [Configuring Connector for Microsoft SharePoint](/help/forms/using/admin-help/configuring-connector-microsoft-sharepoint.md)
    + Hantera certifikat och autentiseringsuppgifter {#manage-certificates-credentials}
       + [Lägga till och ta bort inloggningsuppgifter för användarnamn och lösenord](/help/forms/using/admin-help/adding-removing-user-name-password.md)
       + [Hantera certifikatåterkallningslistor](/help/forms/using/admin-help/certificate-revocation-lists.md)
@@ -465,11 +465,11 @@ ht-degree: 0%
       + [Konfigurera Adobe PDF-inställningar](/help/forms/using/admin-help/configuring-pdf-settings.md)
       + [Konfigurera säkerhetsinställningar](/help/forms/using/admin-help/configuring-security-settings.md)
       + [Konfigurerar filtypsinställningar](/help/forms/using/admin-help/configuring-file-type-settings.md)
-      + [Importera och exportera PDF Generator-konfigurationsfiler](/help/forms/using/admin-help/importing-exporting-pdf-generator-configuration.md)
+      + [Importera och exportera konfigurationsfiler för PDF Generator](/help/forms/using/admin-help/importing-exporting-pdf-generator-configuration.md)
       + [Aktivera stöd för PDF/A](/help/forms/using/admin-help/enable-pdf-a-support.md)
       + [Konfigurera en PDFG-nätverksskrivare (endast Windows)](/help/forms/using/admin-help/setting-pdfg-network-printer-windows.md)
       + [Konfigurera reservteckensnitt](/help/forms/using/admin-help/configuring-fallback-fonts.md)
-      + [Ändra konverteringsinställningarna för PDF-export](/help/forms/using/admin-help/modifying-pdf-export-conversion-settings.md)
+      + [Ändra konverteringsinställningarna för export i PDF](/help/forms/using/admin-help/modifying-pdf-export-conversion-settings.md)
       + [Konvertera filer med PDF Generator](/help/forms/using/admin-help/converting-files-using-pdf-generator.md)
    + Konfigurerar SSL {#configure-ssl}
       + [Översikt över konfigurering av SSL](/help/forms/using/admin-help/overview-6.md)
@@ -488,7 +488,7 @@ ht-degree: 0%
       + [Använda webbsidor för dokumentsäkerhet](/help/forms/using/admin-help/using-document-security-web-pages.md)
       + [Skapa och hantera principuppsättningar](/help/forms/using/admin-help/creating-policy-sets.md)
       + [Registrera som användare](/help/forms/using/admin-help/registering-as-a-user.md)
-   + Konfigurerar Forms {#configure-forms}
+   + Konfigurera Forms {#configure-forms}
       + [Grunderna för att konfigurera formulär](/help/forms/using/admin-help/overview-7.md)
       + [Ange alternativ för internationalisering](/help/forms/using/admin-help/setting-internationalization-options.md)
       + [Konfigurera cachelagring för Forms](/help/forms/using/admin-help/configuring-caching-forms.md)
@@ -507,7 +507,7 @@ ht-degree: 0%
       + [Göra teckensnitt tillgängliga](/help/forms/using/admin-help/make-fonts-available.md)
       + [Ange teckensnitt som ska bäddas in](/help/forms/using/admin-help/specify-fonts-embed.md)
       + [Ange säkerhetsinställningar](/help/forms/using/admin-help/specify-security-settings.md)
-   + Konfigurerar formulärarbetsflöde{#configure-forms-workflow}
+   + Konfigurera arbetsflöde för formulär{#configure-forms-workflow}
       + [Om administration och processterminologi](/help/forms/using/admin-help/administration-process-terminology.md)
       + [Hantera processer](/help/forms/using/admin-help/processes.md)
       + [Konfigurera affärskalendrar](/help/forms/using/admin-help/configuring-business-calendars.md)
@@ -518,13 +518,13 @@ ht-degree: 0%
       + [Arbeta med fasta operationer och grenar](/help/forms/using/admin-help/stalled-operations-branches.md)
       + [Konfigurera delade köer](/help/forms/using/admin-help/configuring-shared-queues.md)
       + [Arbeta med uppgifter](/help/forms/using/admin-help/tasks.md)
-   + Konfigurerar arbetsytan {#configure-workspace}
+   + Konfigurera arbetsyta {#configure-workspace}
       + [Översikt över arbetsytan](/help/forms/using/admin-help/overview-10.md)
       + [Importera och exportera globala inställningar](/help/forms/using/admin-help/importing-exporting-global-settings.md)
       + [Ställa in dagens meddelande](/help/forms/using/admin-help/setting-message-day.md)
       + [Anpassa sökmallar](/help/forms/using/admin-help/customizing-search-templates.md)
       + [Hantera de kategorier som visas i Arbetsyta](/help/forms/using/admin-help/categories-displayed-workspace.md)
-   + Hälsoövervakaren {#health-monitor}
+   + Hälsoövervakning {#health-monitor}
       + [Översikt över hälsoövervakning](/help/forms/using/admin-help/overview-11.md)
       + [Finjustera prestanda för hälsoövervakning](/help/forms/using/admin-help/fine-tuning-health-monitor-performance.md)
       + [Visa statistik för Work Manager](/help/forms/using/admin-help/view-statistics-related-manager.md)
@@ -536,7 +536,7 @@ ht-degree: 0%
       + [Övervaka AEM](/help/forms/using/admin-help/monitoring-aem-forms-deployments.md)
       + [Arbetshanteraren och begränsning](/help/forms/using/admin-help/manager-throttling.md)
       + [Köra AEM formulär i underhållsläge](/help/forms/using/admin-help/running-aem-forms-maintenance-mode.md)
-   + Underhålla databasen för AEM formulär {#maintain-aem-forms-database}
+   + Underhålla AEM {#maintain-aem-forms-database}
       + [DB2-databas: Köra en process varje vecka](/help/forms/using/admin-help/db2-database-running-process-weekly.md)
       + [Tröskelvärde för högsta antal öppna markörer i oraclets databas](/help/forms/using/admin-help/oracle-database-maximum-open-cursors.md)
       + [IBM DB2-databas: Kör kommandon för regelbundet underhåll](/help/forms/using/admin-help/ibm-db2-database-running-commands.md)
@@ -550,13 +550,13 @@ ht-degree: 0%
       + [Startar och stoppar WebLogic-servern](/help/forms/using/admin-help/starting-stopping-weblogic-server.md)
       + [Förbättra programserverns prestanda](/help/forms/using/admin-help/enhancing-application-server-performance.md)
       + [Startar och stoppar WebSphere Application Server](/help/forms/using/admin-help/starting-stopping-websphere-application-server.md)
-   + AEM formulär Säkerhetskopiering och återställning {#aem-forms-backup-recovery}
+   + AEM säkerhetskopiering och återställning {#aem-forms-backup-recovery}
       + [Säkerhetskopiera och återställa EMC Documentum-databasen](/help/forms/using/admin-help/backing-recovering-emc-documentum-repository.md)
       + [Aktivera och inaktivera säkert säkerhetskopieringsläge](/help/forms/using/admin-help/enabling-disabling-safe-backup-mode.md)
       + [Säkerhetskopiera AEM formulärdata](/help/forms/using/admin-help/backing-aem-forms-data.md)
       + [Filer som ska säkerhetskopieras och återställas](/help/forms/using/admin-help/files-back-recover.md)
       + [Säkerhetskopierings- och återställningsstrategi för AEM formulär](/help/forms/using/admin-help/backup-recovery-strategy-aem-forms.md)
-      + [Begränsningar för PDF Generator-säkerhetskopiering](/help/forms/using/admin-help/pdf-generator-backup-limitations.md)
+      + [Begränsningar för säkerhetskopiering i PDF Generator](/help/forms/using/admin-help/pdf-generator-backup-limitations.md)
       + [Strategier för säkerhetskopiering av bevakade mappar](/help/forms/using/admin-help/backup-strategies-watched-folders.md)
       + [Återställa AEM formulärdata](/help/forms/using/admin-help/recovering-aem-forms-data.md)
       + [Säkerhetskopieringsstrategi för Connector for EMC Documentum-användare](/help/forms/using/admin-help/backup-strategy-connector-emc-documentum.md)
@@ -572,9 +572,9 @@ ht-degree: 0%
    + [Anpassade rapporter i processrapportering](/help/forms/using/process-reporting/process-reporting-custom-reports.md)
    + [Ad hoc-frågor i processrapportering](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md)
    + [Felsökning av processrapportering](/help/forms/using/process-reporting/troubleshooting-process-management.md)
-+ Utvecklarreferens {#developer-reference}
++ Referens för utvecklare {#developer-reference}
    + [Grundläggande om utvecklare](https://docs.adobe.com/content/help/en/experience-manager-64/developing/home.html)
-   + [HTML-mallspråk](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
+   + [HTML mallspråk](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
    + [AEM plugin-program för att felsöka adaptiva formulär](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
    + [AEM Forms Java API Reference](https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/index.html)
    + [AEM Forms on JEE Java API Reference](https://helpx.adobe.com/experience-manager/6-4/forms/ProgramLC/javadoc/index.html)
@@ -582,7 +582,7 @@ ht-degree: 0%
    + [API-referens för JavaScript-bibliotek för Adaptiv Forms](https://helpx.adobe.com/experience-manager/6-4/forms/javascript-api/index.html)
    + [Assembler Service och DDX Reference](http://www.adobe.com/go/learn_aemforms_ddxRef_64)
    + [Workbench Hjälp](http://www.adobe.com/go/learn_aemforms_workbench_64)
-   + Programmera med AEM Forms på JEE {#programming-aem-forms-jee}
+   + Programmera med AEM Forms i JEE {#programming-aem-forms-jee}
       + Introduktion till programmering med AEM Forms på JEE {#introduction-programming-aem-forms-jee}
          + [Introduktion till Java API QuickStart](developing/introducing-java-api-soap-quick.md)
          + [Anropa AEM Forms med API:er](developing/invoking-aem-forms-using-apis.md)
@@ -606,7 +606,7 @@ ht-degree: 0%
          + [Java API QuickStart(SOAP) för slutpunktsregister](developing/endpoint-registry-java-api-quick.md)
          + [JavaAPI snabbstart (SOAP) för integreringstjänsten för formulärdata](developing/form-data-integration-service-java.md)
          + [Snabbstart för Forms Service API](developing/forms-service-api-quick-starts.md)
-         + [Generera PDF Service Java API QuickStart(SOAP)](developing/generate-pdf-service-java-api.md)
+         + [Skapa Java API QuickStart (SOAP) för tjänsten PDF](developing/generate-pdf-service-java-api.md)
          + [Snabbstart för anrops-API](developing/invocation-api-quick-starts.md)
          + [LiveCycleProcess Java API(SOAP)Snabbstart](developing/livecycleprocess-java-api-soap-quick.md)
          + [Snabbstart för Java API för utdatatjänst (SOAP)](developing/output-service-java-api-quick.md)
@@ -636,10 +636,10 @@ ht-degree: 0%
          + [Sammanställa icke-interaktiva PDF-dokument](developing/assembling-non-interactive-pdf-documents.md)
          + [Sammanställa PDF-dokument med bokmärken](developing/assembling-pdf-documents-bookmarks.md)
          + [Tilldela användningsrättigheter](developing/assigning-usage-rights.md)
-         + [Sammanställa PDF-Portfolio](developing/assembling-pdf-portfolios.md)
+         + [Samla PDF Portfolio](developing/assembling-pdf-portfolios.md)
          + [Beräknar formulärdata](developing/calculating-form-data.md)
          + [Skapa webbprogram som återger Forms](developing/creating-web-applications-renders-forms.md)
-         + [Skapa PDF-dokument med skickade XML-data](developing/creating-pdf-documents-submitted-xml.md)
+         + [Skapa PDF-dokument med SubmitXML-data](developing/creating-pdf-documents-submitted-xml.md)
          + [Dela upp ett PDF-dokument med hjälp av webbtjänstens API](developing/disassemble-pdf-document-using-web.md)
          + [Avgöra om dokument är PDF/A-kompatibla](developing/determining-whether-documents-pdf-a.md)
          + [Skapa DDX-dokument dynamiskt](developing/dynamically-creating-ddx-documents.md)
@@ -652,12 +652,12 @@ ht-degree: 0%
          + [Återger Forms som HTML](developing/rendering-forms-html.md)
          + [Återger Forms på klienten](developing/rendering-forms-client.md)
          + [Återge HTML Forms med anpassade CSS-filer](developing/rendering-html-forms-using-custom.md)
-         + [Återge HTML Forms med CustomToolbars](developing/rendering-html-forms-custom-toolbars.md)
+         + [Återger HTML Forms med CustomToolbars](developing/rendering-html-forms-custom-toolbars.md)
          + [Återger interaktiv PDF forms](developing/rendering-interactive-pdf-forms.md)
          + [Rendering Rights-aktiverad Forms](developing/rendering-rights-enabled-forms.md)
          + [Validerar DDX-dokument](developing/validating-ddx-documents.md)
-         + [Konvertera PDF till PostScript och bildfiler](developing/converting-pdf-postscript-image-files.md)
-         + [Konvertera PostScript till PDF-dokument](developing/converting-postscript-pdf-documents.md)
+         + [Konverterar PDF till PostScript- och bildfiler](developing/converting-pdf-postscript-image-files.md)
+         + [Konverterar PostScript till PDF-dokument](developing/converting-postscript-pdf-documents.md)
          + [Skapa dokumentutdataströmmar](developing/creating-document-output-streams.md)
          + [Digitalt signera och certifiera dokument](developing/digitally-signing-certifying-documents.md)
          + [Kryptera och dekryptera PDF-dokument](developing/encrypting-decrypting-pdf-documents.md)
@@ -667,7 +667,7 @@ ht-degree: 0%
          + [Arbeta med streckkodade formulär](developing/barcoded-forms.md)
          + [Arbeta med autentiseringsuppgifter](developing/credentials.md)
          + [Arbeta med PDF/A-dokument](developing/pdf-a-documents.md)
-         + [Arbeta med PDF-verktyg](developing/pdf-utilities.md)
+         + [Arbeta med verktygen i PDF](developing/pdf-utilities.md)
          + [Arbeta med XMP](developing/xmp-utilities.md)
          + [Förbereder AEM Forms för säkerhetskopiering](developing/preparing-aem-forms-backup.md)
          + [Hantera slutpunkter programmatiskt](developing/programmatically-endpoints.md)

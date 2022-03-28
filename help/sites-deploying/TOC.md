@@ -1,14 +1,14 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites, Experience Manager 6.4
+solution: Experience Manager, Experience Manager Sites
 audience: end-user
 user-guide-title: AEM 6.4 Distributionshandbok
 breadcrumb-title: Distributionsguide
 user-guide-description: Läs mer om installation, distribution och arkitekturen för Adobe Experience Manager 6.4, inklusive vår molndistribution av Adobe Managed Services.
 feature: Deploying
 role: Architect
-source-git-commit: cda63b9ece88d8172fa4d9817e315c9cff88c224
+source-git-commit: 35aea0e087334a1c1e6a708f2182bd9dee799dc0
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 1%
@@ -19,12 +19,12 @@ ht-degree: 1%
 # Användarhandbok för distribution av AEM 6.4 {#deploying}
 
 + [Distribuera användarhandbok](home.md)
-+ Introduktion till AEM{#introduction}
++ Introduktion till AEM {#introduction}
    + [Introduktion till AEM](platform.md)
    + [Tekniska krav](technical-requirements.md)
    + [Lagringselement i AEM 6.4](storage-elements-in-aem-6.md)
    + [AEM med MongoDB](aem-with-mongodb.md)
-+ Distribuerar AEM {#deploying}
++ Distribuera AEM {#deploying}
    + [Driftsättning och underhåll](deploy.md)
    + [Rekommenderade distributioner](recommended-deploys.md)
    + [Installation av programserver](application-server-install.md)
@@ -40,7 +40,7 @@ ht-degree: 1%
    + [Felsöka ekindex](troubleshooting-oak-indexes.md)
    + [Insamling av aggregerad användningsstatistik](opt-in-aggregated-usage-statistics.md)
    + [Felsökning](troubleshooting.md)
-+ Konfigurerar AEM {#configuring}
++ Konfigurera AEM {#configuring}
    + [Grundläggande konfigurationskoncept](configuring.md)
    + [Loggning](configure-logging.md)
    + [Konfigurerar OSGi](configuring-osgi.md)
@@ -64,7 +64,7 @@ ht-degree: 1%
    + [Instruktionsartiklar för konfiguration](ht-deploy.md)
    + [Ta bort Geometrixx](removing-the-geometrixx-sites.md)
    + [Konfigurerar webbkonsolen](configuring-web-console.md)
-+ Uppgraderar till AEM 6.4 {#upgrading}
++ Uppgradera till AEM 6.4 {#upgrading}
    + [Uppgradera till AEM 6.4](upgrade.md)
    + [Planera din uppgradering](upgrade-planning.md)
    + [Utvärdera uppgraderingskomplexiteten med mönsteravkännaren](pattern-detector.md)
@@ -81,7 +81,7 @@ ht-degree: 1%
    + [Uppgradera kod och anpassningar](upgrading-code-and-customizations.md)
    + [Uppgradera steg för programserverinstallationer](app-server-upgrade.md)
    + [Lista över föråldrade paket som avinstallerats efter uppgraderingen](obsolete-bundles.md)
-+ Databasomstrukturering {#restructuring}
++ Omstrukturering av lager {#restructuring}
    + [Omstrukturering av lager i AEM 6.4](repository-restructuring.md)
    + [Omstrukturering av de gemensamma tillgångarna i AEM 6.4](all-repository-restructuring-in-aem-6-4.md)
    + [Omstrukturering av anläggningar Repository i AEM 6.4](sites-repository-restructuring-in-aem-6-4.md)
@@ -90,7 +90,7 @@ ht-degree: 1%
    + [Omstrukturering av Forms-lager i AEM 6.4](forms-repository-restructuring-in-aem-6-4.md)
    + [Omstrukturering av e-handelslager i AEM 6.4](ecommerce-repository-restructuring-in-aem-6-4.md)
    + [Repositionsomstrukturering för AEM Communities i 6.4](communities-repository-restructuring-in-aem-6-4.md)
-+ e-handel {#ecommerce}
++ eCommerce {#ecommerce}
    + [e-handel - översikt](ecommerce.md)
    + [SAP Commerce Cloud](sap-commerce-cloud.md)
    + [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
