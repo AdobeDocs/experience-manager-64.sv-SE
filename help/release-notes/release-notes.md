@@ -10,7 +10,7 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 2be468e7-2b4e-4e04-881b-b9bdd1f55e57
 exl-id: ee034595-2d2a-4887-86c4-6bf0770da6a2
-source-git-commit: d750c852b6367d753d18be57c8910bf5671fd5e8
+source-git-commit: 722a82c1048105c18d59dfc35815548f9b7eace4
 workflow-type: tm+mt
 source-wordcount: '2751'
 ht-degree: 1%
@@ -36,7 +36,7 @@ Adobe Experience Manager 6.4 är allmänt tillgängligt sedan 4 april 2018.
 
 >[!NOTE]
 >
->Adobe rekommenderar att du installerar det senaste Service Pack-versionen eftersom alla nya funktionspaket endast levereras via [Service Packs](https://helpx.adobe.com/experience-manager/maintenance-releases-roadmap.html).
+>Adobe rekommenderar att du installerar det senaste Service Pack-versionen eftersom alla nya funktionspaket endast levereras via [Service Pack](https://helpx.adobe.com/experience-manager/maintenance-releases-roadmap.html).
 
 ## Nyheter {#what-s-new}
 
@@ -46,7 +46,7 @@ Listan nedan innehåller en översikt, medan de efterföljande sidorna innehåll
 
 ### Experience Manager Foundation {#experience-manager-foundation}
 
-Fullständig lista över ändringar i [AEM Foundation](wcm-platform.md).
+Fullständig lista över ändringar i [AEM](wcm-platform.md).
 
 Plattformen för Adobe Experience Manager 6.4 bygger på uppdaterade versioner av det OSGi-baserade ramverket (Apache Sling och Apache Felix) och Java Content Repository: Apache Jackrabbit Oak 1.8.2.
 
@@ -56,14 +56,14 @@ Quickstart använder Eclipse Jetty 9.3.22 som servermotor.
 
 Ett antal förbättringar har gjorts i användargränssnittet för att göra det mer produktivt och enklare att använda.
 
-* [Ny innehållsträd ](/help/sites-authoring/basic-handling.md#content-tree) gör att du snabbt kan navigera i en hierarki. I kombination med listvyn återställs interaktionsmodellen för klassiskt användargränssnitt.
+* [Ny innehållsträd](/help/sites-authoring/basic-handling.md#content-tree) för att snabbt navigera i en hierarki. I kombination med listvyn återställs interaktionsmodellen för klassiskt användargränssnitt.
 * Förbättrad bläddringsupplevelse på kort- och listvyn för stora mappar.
-* [Förbättrad interaktion med sökresultaten](/help/sites-authoring/search.md)  - Bakåtknappen återställer det tidigare sökresultatet.
-* [Ytterligare kortkommandon](/help/sites-authoring/keyboard-shortcuts.md) för de flesta vanliga åtgärder, till exempel att öppna en viss räl, redigera, flytta och ta bort objekt eller öppna egenskaper.
-* [Möjlighet att inaktivera kortkommandon](/help/sites-authoring/user-properties.md)  (aktivera/inaktivera i Inställningar).
-* [Sluta visa tidsstämplar i alla ](/help/sites-authoring/user-properties.md) användargränssnittsrelativa efter 7 dagar (ange som standard i Inställningar).
+* [Förbättrad interaktion med sökresultaten](/help/sites-authoring/search.md) - knappen Bakåt återställer det tidigare sökresultatet.
+* [Ytterligare kortkommandon](/help/sites-authoring/keyboard-shortcuts.md), för de flesta vanliga åtgärder, till exempel att öppna en viss räl, för att redigera, flytta och ta bort objekt eller för att öppna egenskaper.
+* [Möjlighet att inaktivera kortkommandon](/help/sites-authoring/user-properties.md) (aktivera/inaktivera i Inställningar).
+* [Sluta visa tidsstämplar i hela användargränssnittet](/help/sites-authoring/user-properties.md) relativt efter 7 dagar (ange som standard i Inställningar).
 
-Mer information om dessa funktioner finns i [redigeringsdokumentationen](/help/sites-authoring/home.md).
+Se [Redigeringsdokumentation](/help/sites-authoring/home.md) för mer information om dessa funktioner.
 
 >[!CAUTION]
 >
@@ -91,8 +91,8 @@ Mer information finns på [den här dokumentationssidan](/help/sites-deploying/i
 
 #### Övervakning {#monitoring}
 
-* En ny [systemöversikt](/help/sites-administering/operations-dashboard.md#system-overview) ger en ögonblicksbild av alla prestandarelaterade systemstatus och aktiviteter.
-* En ny uppsättning [hälsokontroller](/help/sites-administering/operations-dashboard.md#health-checks) runt indexering, frågor och underhåll
+* En ny [Systemöversikt](/help/sites-administering/operations-dashboard.md#system-overview) ger en ögonblicksbild av alla prestandarelaterade systemstatus och aktiviteter.
+* En ny uppsättning [Hälsokontroller](/help/sites-administering/operations-dashboard.md#health-checks) runt indexering, frågor och underhåll
 
 #### Projekt och arbetsflöden {#projects-and-workflows}
 
@@ -103,9 +103,9 @@ Mer information finns på [den här dokumentationssidan](/help/sites-deploying/i
 #### Uppgradera från tidigare version {#upgrade-from-earlier-version}
 
 * [Bakåtkompatibilitet](/help/sites-deploying/backward-compatibility.md): Bakåtkompatibla funktioner i 6.4 hjälper din anpassade kod att förbli kompatibel i de flesta fall och minskar uppgraderingsbehovet.
-* [Utvärdering](/help/sites-deploying/pattern-detector.md) av komplexitet för uppgradering: Det nya mönsteravkännarverktyget kontrollerar komplexiteten hos dina uppgraderingar innan du uppgraderar.
-* [Omstrukturering](/help/sites-deploying/repository-restructuring.md) av lager: betydande omstrukturering (främst /etc) för att underlätta enklare uppgraderingar och främja bästa praxis för genomförandet
-* Mer allmän information om uppgraderingar finns på [den här sidan](/help/sites-deploying/upgrade.md) för mer information.
+* [Utvärdering av komplexitet för uppgradering](/help/sites-deploying/pattern-detector.md): Det nya mönsteravkännarverktyget kontrollerar komplexiteten hos dina uppgraderingar innan du uppgraderar.
+* [Omstrukturering av lager](/help/sites-deploying/repository-restructuring.md): betydande omstrukturering (främst /etc) för att underlätta enklare uppgraderingar och främja bästa praxis för genomförandet
+* Mer allmän information om uppgraderingar finns i [den här sidan](/help/sites-deploying/upgrade.md) för mer information.
 
 ### Experience Manager Sites {#experience-manager-sites}
 
@@ -117,7 +117,7 @@ Införandet av flytande upplevelser i början av 2017, med stöd av innehållsfr
 
 **[Innehållsfragment](/help/assets/content-fragments.md)**
 
-Nyheter i 6.4 är en visuell [innehållsmodell](/help/assets/content-fragments-models.md)-redigerare och en ny [konfigurerbar komponent](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html) som ger flexibla HTML-utdata och JSON som ska ingå i Content Services.
+Nytt i 6.4 är en visuell [innehållsmodell](/help/assets/content-fragments-models.md) redigerare och en ny [konfigurerbar komponent](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html) för att tillhandahålla flexibla HTML-utdata och JSON som ska ingå i Content Services.
 
 **Experience Fragments**
 
@@ -137,27 +137,27 @@ Rekommenderad självstudiekurs för att lära dig hur du bäst utnyttjar den nya
 
 AEM Screens står för att leverera ett enhetligt budskap i alla marknadsföringskanaler, inklusive digitala signaturer och kiosknätverk. AEM 6.4 har stöd för att köra signeringsspelaren på maskinvaran i Microsoft Windows och Google Chrome OS. Dessutom finns det förbättringar av enhetshantering och scheman (grupper av kanaler) på fjärrbasis.
 
-Mer information om skärmuppdateringar finns i [AEM Screens användarhandbok](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html).
+Mer information om skärmuppdateringar finns i [AEM Screens Användarhandbok](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html).
 
 ### Experience Manager Communities {#experience-manager-communities}
 
-AEM 6.4 innehåller många nya funktioner och förbättringar för Communities. En fullständig lista över ändringar finns i [AEM Communities](communities-release-notes.md). Högdagrar för den här versionen är:
+AEM 6.4 innehåller många nya funktioner och förbättringar för Communities. En fullständig lista över ändringarna finns i [AEM Communities](communities-release-notes.md). Högdagrar för den här versionen är:
 
 #### Förbättringar av moderering {#enhancements-to-moderation}
 
 **Automatisk identifiering av skräppost**
 
-Ny motor för skräppostavkänning har tillhandahållits för att filtrera bort oönskat användargenererat innehåll på communitywebbplatser och grupper. När den har aktiverats från system/console/configMgr markeras ett användargenererat innehåll som skräppost baserat på en fördefinierad uppsättning skräppostord. Mer information om skräppostavkänningsmotorn finns i [Användargenerering för bilar](/help/communities/moderate-ugc.md#spam-detection).
+Ny motor för skräppostavkänning har tillhandahållits för att filtrera bort oönskat användargenererat innehåll på communitywebbplatser och grupper. När den har aktiverats från system/console/configMgr markeras ett användargenererat innehåll som skräppost baserat på en fördefinierad uppsättning skräppostord. Mer information om skräppostavkänningsmotorn finns i [som genererar innehåll för användare inom bilbranschen](/help/communities/moderate-ugc.md#spam-detection).
 
 ![skräppidentifiering](assets/spamdetection.png)
 
 **Nya filter för QnA**
 
-Nya filter, som heter Answered och Not Answered, har lagts till i masmodereringskonsolen för att filtrera QnA-frågor. Om du vill veta hur statusfiltren Svarat och Obesvarat fungerar läser du [moderera användargenererat innehåll satsvis](/help/communities/moderation.md#main-pars-note-521961797).
+Nya filter, som heter Answered och Not Answered, har lagts till i masmodereringskonsolen för att filtrera QnA-frågor. Om du vill veta hur statusfiltren för svar och obesvarade fungerar läser du [massmoderera användargenererat innehåll](/help/communities/moderation.md#main-pars-note-521961797).
 
 **Kontrollfilter för bokmärken**
 
-Det finns möjlighet att bokmärka de fördefinierade modereringsfiltren på modereringskonsolen. Dessa filter läggs till i slutet av URL-strängen och kan därför delas, återanvändas och granskas senare. Ta reda på hur du bokmärker filter i [masmodereringskonsolen](/help/communities/moderation.md#main-pars-note-429176623).
+Det finns möjlighet att bokmärka de fördefinierade modereringsfiltren på modereringskonsolen. Dessa filter läggs till i slutet av URL-strängen och kan därför delas, återanvändas och granskas senare. Se hur du bokmärker filter i [masmodereringskonsol](/help/communities/moderation.md#main-pars-note-429176623).
 
 #### Ta bort användarprofiler och användarprofiler {#delete-ugc-and-user-profiles}
 
@@ -173,31 +173,31 @@ Möjlighet att skapa flerspråkiga grupper med en enda åtgärd har tillhandahå
 
 **[Ta bort communitysajter och grupper med ett klick](/help/communities/groups.md)**
 
-Ikonen Ta bort är nu tillgänglig på respektive webbplats och i respektive grupp, vid navigering från global navigering. Med den här ikonen tas alla objekt och allt innehåll som är kopplat till platsen eller gruppen bort, och alla användarassociationer tas bort. Mer information om den här funktionen finns i [hantering av communityplatser](/help/communities/create-site.md#main-pars-text-fe17) och [hantering av communitygrupper](/help/communities/groups.md#main-pars-text-5e8c).
+Ikonen Ta bort är nu tillgänglig på respektive webbplats och i respektive grupp, vid navigering från global navigering. Med den här ikonen tas alla objekt och allt innehåll som är kopplat till platsen eller gruppen bort, och alla användarassociationer tas bort. Mer information om den här funktionen finns i [hantera communitysajter](/help/communities/create-site.md#main-pars-text-fe17) och [hantera communitygrupper](/help/communities/groups.md#main-pars-text-5e8c).
 
 #### Förbättringar av aktivering {#enhancements-to-enablement}
 
-Tilldelnings- och katalogfunktionerna är nu tillgängliga i grupper. Detta gör att utbildningsinnehåll kan skapas, hanteras och publiceras för en viss uppsättning målgruppsmedlemmar. Mer information om att aktivera communitygrupper finns i [hantering av aktiveringsresurser](/help/communities/resource.md).
+Tilldelnings- och katalogfunktionerna är nu tillgängliga i grupper. Detta gör att utbildningsinnehåll kan skapas, hanteras och publiceras för en viss uppsättning målgruppsmedlemmar. Mer information om hur du aktiverar communitygrupper finns i [hantera aktiveringsresurser](/help/communities/resource.md).
 
 ![tilldelningskatalog](assets/assignmentcatalog.png)
 
 ### Experience Manager Assets {#experience-manager-assets}
 
-AEM 6.4 innehåller flera nya funktioner och förbättringar av Assets, bland annat ny, förbättrad Creative Cloud-integrering, viktiga innovationer inom artificiell intelligens, förbättrad metadatahantering, förbättrade rapporter och förbättringar av användarupplevelsen. Den fullständiga listan över ändringar i [AEM Assets](assets.md). Versionens högdagrar är:
+AEM 6.4 innehåller flera nya funktioner och förbättringar av Assets, bland annat ny, förbättrad Creative Cloud-integrering, viktiga innovationer inom artificiell intelligens, förbättrad metadatahantering, förbättrade rapporter och förbättringar av användarupplevelsen. En fullständig lista över de ändringar som är tillgängliga i [AEM Assets](assets.md). Versionens högdagrar är:
 
 **Adobe Asset Link**
 
 Adobe Asset Link i Creative Cloud for enterprise effektiviserar samarbetet mellan kreatörer och marknadsförare vid framtagningen av innehåll. Det är en ny inbyggd funktion i Creative Cloud for enterprise som kopplar Photoshop, Illustrator och InDesign till AEM - utan att kreatörerna behöver lämna sina valverktyg.
 
-Mer information om den här funktionen, de nödvändiga komponenterna och hur du får tillgång till den finns i [Adobe Asset Link](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html).
+Om du vill veta mer om den här funktionen, förutsättningarna och hur du får tillgång till den kan du läsa [Adobe Asset Link](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html).
 
 ![adobe_asset_link](assets/adobe_asset_link.png)
 
 **AEM**
 
-AEM har uppdaterats till version 1.8, som är kompatibel med AEM 6.4. Den fullständiga listan över ändringar för AEM datorprogram finns i ett [AEM versionsinformation för skrivbordsprogram](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)-dokument.
+AEM har uppdaterats till version 1.8, som är kompatibel med AEM 6.4. Den fullständiga listan över ändringar för AEM program finns i en [Versionsinformation för AEM](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html) -dokument.
 
-De förbättringar som har gjorts sedan AEM 6.3-versionen omfattar möjligheten att överföra hierarkiska mappar i bakgrunden, ett nytt användargränssnitt för att övervaka bakgrundsåtgärder för resurser, förbättrad cachelagring, nätverk och inloggning samt övergripande stabilitetsförbättringar. Dokumentationen innehåller även en [guide om bästa praxis](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html).
+De förbättringar som har gjorts sedan AEM 6.3-versionen omfattar möjligheten att överföra hierarkiska mappar i bakgrunden, ett nytt användargränssnitt för att övervaka bakgrundsåtgärder för resurser, förbättrad cachelagring, nätverk och inloggning samt övergripande stabilitetsförbättringar. Dokumentationen innehåller även en [metodguide](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html).
 
 **Adobe Sensei Services**
 
@@ -207,7 +207,7 @@ De nya funktionerna är bland annat Förbättrade smarta taggar, med möjlighet 
 
 **Metadata**
 
-Ett antal förbättringar är möjligheten att importera och exportera metadata samtidigt för ett stort antal resurser och avancerade metadatakonstruktioner, till exempel [Cascading Metadata](/help/assets/cascading-metadata.md).
+Ett antal förbättringar är möjligheten att importera och exportera metadata samtidigt för ett stort antal resurser och avancerade metadatakonstruktioner, till exempel [Överlappande metadata](/help/assets/cascading-metadata.md).
 
 **Rapporter**
 
@@ -229,15 +229,15 @@ AEM 6.4 innehåller många nya funktioner och förbättringar av Dynamic Media. 
 
 Smart Crop, som drivs av Adobe Sensei, ger automatiskt icke-förstörande beskärning av bilder och bevarar intressepunkten för responsiv design. Du kan förhandsgranska förslag på beskurna bilder och manuellt justera dem om det behövs. Den här funktionen möjliggör även automatisk generering av färgrutor för produktbilder.
 
-Läs [dokumentationen för bildprofiler](/help/assets/image-profiles.md) om du vill veta mer om hur du använder smart beskärning.
+Se [Bildprofiler](/help/assets/image-profiles.md) om du vill veta mer om hur du använder Smart Crop.
 
-Mer information om hur du arbetar med smart beskärning i Dynamic Media-komponenten finns i [Lägga till Dynamic Media-resurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md).
+Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md) om du vill veta mer om hur du arbetar med Smart Crop i Dynamic Media-komponenten.
 
 **Smart bildbehandling**
 
 Smart bildbehandling utnyttjar varje användares unika visningsegenskaper för att automatiskt leverera bilder som är optimerade för sin upplevelse, vilket ger bättre prestanda och engagemang.
 
-Mer information finns i [dokumentationen för smarta bilder](/help/assets/imaging-faq.md).
+Se [Smart bildbehandling](/help/assets/imaging-faq.md) dokumentation som lär dig mer.
 
 ![smart_crop](assets/smart_crop.png)
 
@@ -245,7 +245,7 @@ Mer information finns i [dokumentationen för smarta bilder](/help/assets/imagin
 
 Med nya visningsprogram, bland annat panoraman och VR, kan du skapa mer engagerande upplevelser.
 
-Mer information finns i [dokumentationen för panoramabilder](/help/assets/panoramic-images.md).
+Se [Panoramabilder](/help/assets/panoramic-images.md) dokumentation som lär dig mer.
 
 ### Experience Manager Forms {#experience-manager-forms}
 
@@ -257,7 +257,7 @@ AEM 6.4 Forms har flera nya funktioner och förbättringar. Högdagrarna är fö
 * Lazy loading av fragment
 * Uppgradering från LiveCycle till Experience Manager Forms 6.4
 
-Mer information finns på sidan [Versionsinformation för AEM Forms](forms.md). Se även [Sammanfattning av nya funktioner och förbättringar i AEM 6.4 Forms](/help/forms/using/whats-new.md) för information om nya och förbättrade funktioner och dokumentationsresurser.
+Mer information om [AEM Forms](forms.md) versionsinformation. Se även [Sammanfattning av nya funktioner och förbättringar i AEM 6.4 Forms](/help/forms/using/whats-new.md) för information om nya och förbättrade funktioner och dokumentationsresurser.
 
 ### Experience Manager Livefyre {#experience-manager-livefyre}
 
@@ -269,7 +269,7 @@ Du kan integrera Livefyre med AEM 6.4-instansen. Information om hur du integrera
 
 Adobe använder en kundfokuserad utvecklingsmodell som gör det möjligt för kunderna att bidra till alla faser i utvecklingsprocessen, under specifikation, utveckling och testning. Vi tackar alla kunder och partners som deltar i den här processen.
 
-Adobe har de rutiner och processer som behövs för att kunna samla in, prioritera och spåra kundfokuserade fellösningar och utveckla förbättringsförfrågningar. [Adobe Marketing Cloud supportportal](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) är integrerad med Adobe Enhancement &amp; Defect Tracking System. Kundfrågor identifieras och löses med kundtjänst där det är möjligt. När den eskaleras till FoU hämtas all kundinformation in och används för prioritering och rapportering. Vid utveckling ges prioritet åt betald support och garantifrågor samt betalda kundförbättringar.
+Adobe har de rutiner och processer som behövs för att kunna samla in, prioritera och spåra kundfokuserade fellösningar och utveckla förbättringsförfrågningar. The [Adobe Marketing Cloud supportportal](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) är integrerat med Adobe Enhancement &amp; Defect Tracking System. Kundfrågor identifieras och löses med kundtjänst där det är möjligt. När den eskaleras till FoU hämtas all kundinformation in och används för prioritering och rapportering. Vid utveckling ges prioritet åt betald support och garantifrågor samt betalda kundförbättringar.
 
 Denna prioriteringsprocess har resulterat i över 500 kundfokuserade förändringar som fastslagits i AEM 6.4.
 
@@ -279,18 +279,18 @@ Denna prioriteringsprocess har resulterat i över 500 kundfokuserade förändrin
 
 * Fristående QuickStart: cq-quickstart-6.4.0.jar
 * Snabbstart för programserver: cq-quickstart-6.4.0.war
-* Skicka 4.3.1 eller senare för olika webbservrar och plattformar. Se [nedladdningslänk](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/getting-started/release-notes.html).
+* Skicka 4.3.1 eller senare för olika webbservrar och plattformar. Se [ladda ned länk](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/getting-started/release-notes.html).
 * Plugin för Eclipse IDE. [Läs mer och ladda ned](/help/sites-developing/aem-eclipse.md).
 
 * Tillägg för Brackets Code Editor. [Läs mer och ladda ned](/help/sites-developing/aem-brackets.md).
-* Maven/Gradle-beroenden. Se [nedladdningslänk](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/aem/uber-jar/6.1.0/).
+* Maven/Gradle-beroenden. Se [ladda ned länk](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/aem/uber-jar/6.1.0/).
 
 **Sites**
 
 * Kärnkomponenter ([GitHub-projekt](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components))
 * Implementering av referens för Vi.butik ([läs mer](/help/sites-developing/we-retail.md))
 * Project Blueprint Archetype ([GitHub-projekt](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype))
-* AEM Screens Players for various target platforms ([download](https://download.macromedia.com/screens/))
+* AEM Screens Players for various target platforms ([ladda ned](https://download.macromedia.com/screens/))
 * Språkmodeller för smart innehåll. Engelska är förinstallerat - fler språk kan hämtas
 
    * [Tyska](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
@@ -298,15 +298,15 @@ Denna prioriteringsprocess har resulterat i över 500 kundfokuserade förändrin
    * [Italienska](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
    * [Franska](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
 
-* [AEM Moderniseringsverktyg ](/help/sites-developing/modernization-tools.md) för att migrera klassiska användargränssnittskomponenter till Coral 3
+* [AEM](/help/sites-developing/modernization-tools.md) för att migrera Classic UI-komponenter till Coral 3
 
 **Assets**
 
 * Adobe Experience Manager-datorprogram ([läs mer](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) och [ladda ned](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html))
 
-* Paket för att lägga till förbättrad PDF Rasterizer ([läs mer](/help/assets/aem-pdf-rasterizer.md) och [ladda ned](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg))
+* Paket för att lägga till utökad PDF rastrerare ([läs mer](/help/assets/aem-pdf-rasterizer.md) och [ladda ned](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg))
 
-* Paket för att lägga till stöd för utökad RAW-bild ([läs mer](/help/assets/camera-raw.md))
+* Paket för att lägga till utökat stöd för RAW-bilder ([läs mer](/help/assets/camera-raw.md))
 
 **Forms**
 
@@ -314,7 +314,7 @@ Denna prioriteringsprocess har resulterat i över 500 kundfokuserade förändrin
 
    * [adobe-aemfd-aix-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
    * [adobe-aemfd-linux-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
-   * [adobe-aemfd-solaris-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.htmlL)
+   * [adobe-aemfd-solaris-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
    * [adobe-aemfd-win-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
    * [adobe-aemfd-osx-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 
@@ -333,13 +333,13 @@ Användargränssnittet finns på följande språk:
 * Traditionell kinesiska (begränsat stöd)
 * Koreanska
 
-Experience Manager 6.4 har certifierats för GB18030-2005 CITS att använda den kinesiska kodningsstandarden.
+Experience Manager 6.4 har certifierats för GB18030-2005 CITS för att använda den kinesiska kodningsstandarden.
 
 ## Installera och uppdatera {#install-update}
 
 Se [installationsanvisningar](/help/sites-deploying/custom-standalone-install.md) för installationskrav.
 
-Mer information finns i [uppgraderingsdokumentationen](/help/sites-deploying/upgrade.md).
+Se [uppgraderingsdokumentation](/help/sites-deploying/upgrade.md) för detaljerade anvisningar.
 
 ## Plattformar som stöds {#supported-platforms}
 
@@ -347,7 +347,7 @@ Den fullständiga matrisen med plattformar som stöds finns här. Supportnivå p
 
 >[!NOTE]
 >
->Oraclet har flyttat till en LTS-modell (Long Term Support) för Oracle Java SE-produkter. Java 9 och 10 är icke-LTS-versioner som Oracle (se [Oracle Java SE support roadmap](https://www.oracle.com/technetwork/java/eol-135779.html)). Adobe tillhandahåller endast stöd för LTS-versioner av Java för AEM i produktionen. Därför är Java 8 den rekommenderade versionen som ska användas med AEM 6.4.
+>Oraclet har flyttat till en LTS-modell (Long Term Support) för Oracle Java SE-produkter. Java 9 och 10 är icke-LTS-versioner som Oracle (se [Oracle Java SE - supportöversikt](https://www.oracle.com/technetwork/java/eol-135779.html)). Adobe tillhandahåller endast stöd för LTS-versioner av Java för AEM i produktionen. Därför är Java 8 den rekommenderade versionen som ska användas med AEM 6.4.
 
 ## Föråldrade och borttagna funktioner {#deprecated-and-removed-features}
 
@@ -375,6 +375,6 @@ För Adobe Experience Manager 6.4 [läs listan över borttagna funktioner](depre
 
 Dessa webbplatser är bara tillgängliga för kunder. Om du är kund och behöver åtkomst kontaktar du din kontoansvarige på Adobe.
 
-* [Nedladdning av produkt på licensing.adobe.com](https://licensing.adobe.com/).
-* Produktuppdateringar, patchar och paket för ytterligare funktionalitet i [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
-* [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [New Adobe Customer Support Experience](https://docs.adobe.com/content/help/en/customer-one/using/home.html).
+* [Produktnedladdning på licensing.adobe.com](https://licensing.adobe.com/).
+* Produktuppdateringar, patchar och paket för ytterligare funktionalitet i [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
+* [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [Ny Adobe-upplevelse för kundsupport](https://docs.adobe.com/content/help/en/customer-one/using/home.html).
