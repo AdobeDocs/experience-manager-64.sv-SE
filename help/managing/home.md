@@ -1,16 +1,15 @@
 ---
 title: AEM 6.4 Handbok för användarhantering
-seo-title: AEM 6.4 Handbok för användarhantering
+seo-title: AEM 6.4 Managing User Guide
 description: 'I den här guiden beskrivs hur du hanterar ett AEM '
-seo-description: 'Omfattar hur du hanterar ett AEM projekt utan problem '
-translation-type: tm+mt
-source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+seo-description: Covers how to manage an AEM project successfully
+exl-id: 4fa34d1f-c41e-4b9b-98d3-8c364a60776d
+source-git-commit: a01f94ddcd84c4d3f7769d6a55fbfcbef131dc57
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 19%
+source-wordcount: '335'
+ht-degree: 17%
 
 ---
-
 
 # AEM 6.4 Handbok för användarhantering
 
@@ -47,7 +46,7 @@ I den här guiden beskrivs hur du hanterar ett AEM
 * [Användarhandbok för Dispatcher](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
 * [Användarhandbok för HTML](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
 * [Användarhandbok för kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
-* [Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=en)
 * [GDPR-efterlevnad](/help/managing/data-protection-and-privacy.md)
 * [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
 * [AEM-communityforum](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)

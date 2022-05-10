@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management,Renditions
 role: User,Admin
 exl-id: ee25fe8f-36fb-42b3-9f90-0ea77bc02e2f
-source-git-commit: cc6de21180c9fff74f7d64067db82f0c11ac9333
+source-git-commit: cc47644419f7b7f4f1f00bb848050aa4a98efa09
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1635'
 ht-degree: 2%
 
 ---
@@ -16,14 +16,14 @@ ht-degree: 2%
 
 [!DNL Experience Manager Assets] har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika MIME-typer.
 
-Om du vill integrera [!DNL Assets] med andra standardkompatibla DAM-lösningar (Digital Asset Management) och datorprogramvara använder du Adobe Extensible Metadata Platform (XMP).
+Integrera [!DNL Assets] använder Adobe Extensible Metadata Platform (XMP) tillsammans med andra standardkompatibla DAM-lösningar och datorprogram.
 
 Använd teckenförklaringen för att förstå supportnivån.
 
 | Supportnivå | Beskrivning |
 |:---:|---|
 | ✓ | Stöds |
-| * | Stöds med tilläggsfunktioner |
+| &#42; | Stöds med tilläggsfunktioner |
 | - | Ej relevant |
 
 ## Rasterbildformat {#supported-raster-image-formats}
@@ -46,11 +46,11 @@ Följande rasterbildformat stöds för filhanteringsfunktioner:
 | PICT |  |  |  |  |  |  | ✓ |
 | PSB | ✓ | ✓ | ✓ | ✓ |  |  |  |
 
-**‡** Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
+**‡** Den sammanfogade bilden extraheras från filen PSD. Det är en bild som genereras av Adobe Photoshop och inkluderas i filen PSD. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
 
 Följande rasterbildformat stöds för Dynamic Media-funktioner:
 
-| Format | Överför<br> (indataformat) | Skapa<br> bild<br> förinställning<br> (utdataformat) | Förhandsgranska<br> dynamisk<br> återgivning | Leverera en dynamisk<br>-rendering<br> | Ladda ned en dynamisk<br>-rendering<br> |
+| Format | Överför<br> (Indataformat) | Skapa<br> image<br> förinställning<br> (Utdataformat) | Förhandsgranska<br> dynamisk<br> rendering | Leverera<br> dynamisk<br> rendering | Hämta<br> dynamisk<br> rendering |
 |---|:---:|:---:|:---:|:---:|:---:|
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -66,58 +66,58 @@ Följande rasterbildformat stöds för Dynamic Media-funktioner:
 | PICT | ✓ |  |  |  |  |
 | PSB |  |  |  |  |  |
 
-**‡** Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
+**‡** Den sammanfogade bilden extraheras från filen PSD. Det är en bild som genereras av Adobe Photoshop och inkluderas i filen PSD. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
 
 Utöver informationen ovan bör du tänka på följande:
 
-* Stödet för EPS-filer gäller endast för rasterbilder. Generering av miniatyrbilder för EPS-vektorbilder stöds till exempel inte som standard. [Konfigurera ImageMagick](best-practices-for-imagemagick.md) om du vill lägga till stöd. Information om hur du integrerar tredjepartsverktyg för att aktivera ytterligare funktioner finns i [Kommandoradsbaserad mediehanterare](media-handlers.md#command-line-based-media-handler).
+* Stödet för EPS-filer gäller endast för rasterbilder. Generering av miniatyrbilder för EPS-vektorbilder stöds till exempel inte som standard. Om du vill lägga till stöd [konfigurera ImageMagick](best-practices-for-imagemagick.md). Information om hur du integrerar tredjepartsverktyg för att aktivera ytterligare funktioner finns i [Kommandoradsbaserad mediehanterare](media-handlers.md#command-line-based-media-handler).
 
-* Metadatatillbakaskrivning fungerar för PSB-filformat när det läggs till i `NComm`-hanteraren.
+* Metadatatillbakaskrivning fungerar för PSB-filformatet när det läggs till i `NComm` hanterare.
 
-* Information om hur du använder Dynamic Media för att förhandsgranska och generera dynamiska återgivningar för EPS-filer finns i [Adobe Illustrator (AI), Postscript (EPS) och PDF-filformat.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* Information om hur du använder Dynamic Media för att förhandsgranska och generera dynamiska återgivningar för EPS-filer finns i [Filformaten Adobe Illustrator (AI), Postscript (EPS) och PDF.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * För EPS-filer stöds tillbakaskrivning av metadata i PostScript Document Structuring Convention (PS-Adobe) version 3.0 eller senare.
 
 ## Rasterbildformat som inte stöds i Dynamic Media {#unsupported-image-formats-dynamic-media}
 
-I följande lista beskrivs de undertyper av rasterbildfilformat som *inte* stöds i Dynamic Media.
+I följande lista beskrivs de undertyper av rasterbildfilformat som *not* stöds i Dynamic Media.
 
 Se även [Identifiera filformat som inte stöds för Dynamic Media](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html).
 
 * PNG-filer som har en IDAT-segmentstorlek som är större än 100 MB.
 * PSB-filer.
-* PSD-filer med en annan färgrymd än CMYK, RGB, Gråskala eller Bitmapp stöds inte. Färgrymderna DuoTone, Lab och Indexed stöds inte.
+* PSD-filer med en annan färgmodell än CMYK, RGB, Gråskala eller Bitmapp stöds inte. Färgrymderna DuoTone, Lab och Indexed stöds inte.
 * PSD-filer med ett bitdjup som är större än 16.
-* TIFF-filer som har flyttalsdata.
+* TIFF-filer med flyttalsdata.
 * TIFF-filer med Lab-färgrymd.
 
 ## PDF Rasterizer-bibliotek {#supported-pdf-rasterizer-library}
 
-Adobe PDF Rasterizer-biblioteket genererar högkvalitativa miniatyrbilder och förhandsgranskningar för stora och innehållsintensiva Adobe Illustrator- och PDF-filer. Adobe rekommenderar att du använder PDF-rastreringsbiblioteket för följande:
+Adobe PDF Rasterizer-biblioteket genererar högkvalitativa miniatyrbilder och förhandsvisningar för stora och innehållsintensiva Adobe Illustrator- och PDF-filer. Adobe rekommenderar att du använder PDF rastrerarbiblioteket för följande:
 
 * Innehållsintensiva AI/PDF-filer som är resurskrävande att bearbeta.
-* AI/PDF-filer, för vilka miniatyrer inte genereras som standard.
+* AI/PDF-filer, för vilka miniatyrbilder inte genereras som standard.
 * AI-filer med Pantone Matching System-färger (PMS).
 
-Se [Använda PDF-rastrering](aem-pdf-rasterizer.md).
+Se [Använda PDF Rasterizer](aem-pdf-rasterizer.md).
 
 ## Bildomkodningsbibliotek {#supported-image-transcoding-library}
 
 Adobe Imaging Transcoding Library är en bildbehandlingslösning som utför viktiga bildhanteringsfunktioner, som kodning, omkodning, omsampling och storleksändring.
 
-Bildkonverteringsbiblioteket stöder JPG/JPEG, PNG (8-bitars och 16-bitars), GIF, BMP, TIFF/komprimerad TIFF (förutom 32-bitars TIFF-filer och PTIFF-filer), ICO och ICN MIME-typer.
+Bildkonverteringsbiblioteket har stöd för JPG/JPEG, PNG (8-bitars och 16-bitars), GIF, BMP, TIFF/komprimerat TIFF (förutom 32-bitars TIFF och PTIFF-filer), ICO och ICN MIME.
 
-Se [Bildkonverteringsbibliotek](imaging-transcoding-library.md).
+Se [Konverteringsbibliotek för bildbehandling](imaging-transcoding-library.md).
 
 ## Camera Raw {#supported-camera-raw}
 
-Med Adobe Camera Raw-biblioteket kan [!DNL Assets] importera råbilder. Se [Camera Raw Support](camera-raw.md).
+Adobe Camera Raw-biblioteket aktiverar [!DNL Assets] för att importera råbilder. Se [Camera Raw support](camera-raw.md).
 
 ## Dokumentformat {#supported-document-formats}
 
 Dokumentformat som stöds för filhanteringsfunktioner är följande:
 
-| Format | Lagring | Hantering av metadata<br> | Extrahering av fulltext<br> | Extrahering av metadata<br> | Generering av miniatyrbild<br> | Extrahering av delresurs<br> | Metadata<br> tillbakaskrivning |
+| Format | Lagring | Metadata<br> hantering | Fulltext<br> extrahering | Metadata<br> extrahering | Miniatyrbild<br> generering | Undertillgång<br> extrahering | Metadata<br> tillbakaskrivning |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |
 | DOC | ✓ | ✓ | ✓ | ✓ |  |  |  |
@@ -136,17 +136,17 @@ Dokumentformat som stöds för filhanteringsfunktioner är följande:
 | [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |
 | PS | ✓ | ✓ |  |  |  |  |  |
 | QXP | ✓ | ✓ |  |  |  |  |  |
-| EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |
+| ePub | ✓ | ✓ |  | ✓ | ✓ |  |  |
 
 Dokumentformat som stöds för Dynamic Media-funktioner är följande:
 
-| Format | Överför<br> (indataformat) | Skapa<br> bild<br> förinställning<br> (utdataformat) | Förhandsgranska<br> dynamisk<br> återgivning | Leverera en dynamisk<br>-rendering<br> | Ladda ned en dynamisk<br>-rendering<br> |
+| Format | Överför<br> (Indataformat) | Skapa<br> image<br> förinställning<br> (Utdataformat) | Förhandsgranska<br> dynamisk<br> rendering | Leverera<br> dynamisk<br> rendering | Hämta<br> dynamisk<br> rendering |
 |---|:---:|:---:|:---:|:---:|:---:|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ |  |  |  |  |
 | DOC |  |  |  |  |  |
 | DOCX |  |  |  |  |  |
 | ODT |  |  |  |  |  |
-| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) (Se anmärkningen nedan) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | HTML |  |  |  |  |  |
 | RTF |  |  |  |  |  |
 | TXT |  |  |  |  |  |
@@ -159,37 +159,41 @@ Dokumentformat som stöds för Dynamic Media-funktioner är följande:
 | [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ |  |  |  |  |
 | PS |  |  |  |  |  |
 | QXP |  |  |  |  |  |
-| EPUB |  |  |  |  |  |
+| ePub |  |  |  |  |  |
+
+>[!NOTE]
+>
+>För säker PDF stöds bara överföring.
 
 Utöver ovanstående funktioner bör du tänka på följande:
 
-* Information om hur du använder Dynamic Media för att generera dynamiska återgivningar för PDF-filer finns i [Adobe Illustrator (AI), Postscript (EPS) och PDF-filformat.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats).
+* Information om hur du använder Dynamic Media för att generera dynamiska renderingar för PDF-filer finns i [Filformaten Adobe Illustrator (AI), Postscript (EPS) och PDF.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* Information om hur du använder Dynamic Media för att förhandsgranska och generera dynamiska återgivningar för AI-filer finns i [Adobe Illustrator (AI), Postscript (EPS) och PDF-filformat.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* Information om hur du använder Dynamic Media för att förhandsgranska och generera dynamiska återgivningar för AI-filer finns i [Filformaten Adobe Illustrator (AI), Postscript (EPS) och PDF.](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* Information om hur du använder Dynamic Media för att generera dynamiska återgivningar för INDD-filer finns i [InDesign (INDD)-filformat](../assets/managing-image-presets.md#indesign-indd-file-format).
+* Information om hur du använder Dynamic Media för att generera dynamiska renderingar för INDD-filer finns i [InDesign (INDD), filformat](../assets/managing-image-presets.md#indesign-indd-file-format).
 
 ## Multimediaformat {#supported-multimedia-formats}
 
 | Format | Lagring | Metadatahantering | Extrahering av metadata | Generering av miniatyrbilder | FFMPEG-omkodning |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| AAC | ✓ | ✓ |  | - | * |
-| MIDI | ✓ | ✓ |  | - | * |
-| 3GP | ✓ | ✓ |  | - | * |
-| MP3 | ✓ | ✓ | ✓ | - | * |
-| MPG | ✓ | ✓ |  | - | * |
-| OGA | ✓ | ✓ |  | - | * |
-| OGG | ✓ | ✓ |  | - | * |
-| RA | ✓ | ✓ |  | - | * |
-| WAV | ✓ | ✓ |  | - | * |
-| WMA | ✓ | ✓ |  | - | * |
-| DVI | ✓ | ✓ |  | * | * |
-| FLV | ✓ | ✓ |  | * | * |
-| M4V | ✓ | ✓ |  | * | * |
-| MPEG | ✓ | ✓ |  | * | * |
-| OGV | ✓ | ✓ |  | * | * |
-| MOV | ✓ | ✓ |  | * | * |
-| WMV | ✓ | ✓ |  | * | * |
+| AAC | ✓ | ✓ |  | - | &#42; |
+| MIDI | ✓ | ✓ |  | - | &#42; |
+| 3GP | ✓ | ✓ |  | - | &#42; |
+| MP3 | ✓ | ✓ | ✓ | - | &#42; |
+| MPG | ✓ | ✓ |  | - | &#42; |
+| OGA | ✓ | ✓ |  | - | &#42; |
+| OGG | ✓ | ✓ |  | - | &#42; |
+| RA | ✓ | ✓ |  | - | &#42; |
+| WAV | ✓ | ✓ |  | - | &#42; |
+| WMA | ✓ | ✓ |  | - | &#42; |
+| DVI | ✓ | ✓ |  | &#42; | &#42; |
+| FLV | ✓ | ✓ |  | &#42; | &#42; |
+| M4V | ✓ | ✓ |  | &#42; | &#42; |
+| MPEG | ✓ | ✓ |  | &#42; | &#42; |
+| OGV | ✓ | ✓ |  | &#42; | &#42; |
+| MOV | ✓ | ✓ |  | &#42; | &#42; |
+| WMV | ✓ | ✓ |  | &#42; | &#42; |
 | SWF | ✓ | ✓ |  |  |  |
 
 ## Indatavideoformat för Dynamic Media Transcoding {#supported-input-video-formats-for-dynamic-media-transcoding}
@@ -199,7 +203,7 @@ Utöver ovanstående funktioner bör du tänka på följande:
 | MP4 | MPEG-4 | H264/AVC (alla profiler) |  |
 | MOV, QT | Apple QuickTime | H264/AVC, Apple ProRes422 &amp; HQ, Sony XDCAM, Sony DVCAM, HDV, Panasonic DVCPro, Apple DV (DV25), Apple PhotoJPEG, Sorenson, Avid DNxHD, Avid AVR | Apple Intermediate, Apple Animation |
 | FLV, F4V | Adobe Flash | H264/AVC, Flix VP6, H263, Sorenson | SWF (vektoranimeringsfiler) |
-| WMV | Windows Media 9 | WMV3 (v9), WMV2 (v8), WMV1 (v7), GoToMeeting (G2M2, G2M3, G2M4) | Microsoft-skärm (MSS2), Microsoft Photo Story (WVP2) |
+| WMV | Windows Media 9 | WMV3 (v9), WMV2 (v8), WMV1 (v7), GoToMeeting (G2M2, G2M3, G2M4) | Microsoft Screen (MSS2), Microsoft Photo Story (WVP2) |
 | MPG, VOB, M2V, MP2 | MPEG-2 | MPEG-2 |  |
 | M4V | Apple iTunes | H264/AVC |  |
 | AVI | A/V-sammanflätning | XVID, DIVX, HDV, MiniDV (DV25), Techsmith Camtasia, Huffyuv, Fraps, Panasonic DVCPro | Indeo3 (IV30), MJPEG, Microsoft Video 1 (MS-CRAM) |
@@ -225,7 +229,7 @@ De arkivformat som stöds och tillämpligheten för de vanliga DAM-arbetsflöden
 | TAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | ZIP **†** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-**†** Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av Adobe Photoshop och inkluderas i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte. ZIP-arkiven som skapats med algoritmen `Deflate64` har begränsat stöd i AEM. Arkiv- och arkiveringsåtgärder stöds inte. Åtgärder som att överföra, bläddra och hämta stöds emellertid.
+**†** Den sammanfogade bilden extraheras från filen PSD. Det är en bild som genereras av Adobe Photoshop och inkluderas i filen PSD. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte. ZIP-arkiv som skapats med `Deflate64` algoritmen har begränsat stöd i AEM. Arkiv- och arkiveringsåtgärder stöds inte. Åtgärder som att överföra, bläddra och hämta stöds emellertid.
 
 ## Andra format som stöds {#other-supported-formats}
 
@@ -240,11 +244,11 @@ Hur vanliga DAM-arbetsflöden kan användas för ett par andra filformat beskriv
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JavaScript (när konfigureras med egen leveransdomän) |  |  |  |  |  | ✓ |
 
-**#** Övriga format stöds i DAM för lagring, versionshantering, ACL, arbetsflöde, publicering och metadatahantering.
+**#** De andra formaten stöds i DAM för lagring, versionshantering, ACL, arbetsflöde, publicering och metadatahantering.
 
 ## MIME-typer som stöds {#supported-mime-types}
 
-Som standard identifierar [!DNL Experience Manager] filtypen med hjälp av filtillägget. [!DNL Experience Manager] kan identifiera det från innehållet i filerna. För det senare alternativet väljer du [!UICONTROL Detect MIME from content] i [!UICONTROL Day CQ DAM Mime Type Service] på webbkonsolen [!DNL Experience Manager].
+Som standard [!DNL Experience Manager] identifierar filtypen med hjälp av filtillägget. [!DNL Experience Manager] kan identifiera det från innehållet i filerna. För den senare väljer du [!UICONTROL Detect MIME from content] alternativ i [!UICONTROL Day CQ DAM Mime Type Service] i [!DNL Experience Manager] Webbkonsol.
 
 En lista över MIME-typer som stöds finns i CRXDE Lite på `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`.
 
@@ -296,7 +300,7 @@ En lista över MIME-typer som stöds finns i CRXDE Lite på `/conf/global/settin
 | TAR | application/x-tar |  |  |
 | TIF/TIFF | bild/tiff |  |  |
 | TTC | application/x-font-ttf |  |  |
-| RTF | application/x-font-ttf |  |  |
+| TTF | application/x-font-ttf |  |  |
 | VOB | video/dvd |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | VTT | text/vtt |  |  |
 | WAV | audio/x-wav |  |  |
@@ -308,6 +312,6 @@ En lista över MIME-typer som stöds finns i CRXDE Lite på `/conf/global/settin
 
 >[!MORELIKETHIS]
 >
->* [Aktivera stöd](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support) för MIME-typbaserade resurser/Dynamic Media Classic-överföringsjobbparametrar.
->* [Konfigurera MIME-typbaserad för stöd](config-dynamic.md) för överföringsjobbparametrar.
+>* [Aktivera stöd för MIME-typbaserade resurser/Dynamic Media Classic överföringsjobbparametrar](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support).
+>* [Konfigurera MIME-typbaserad för stöd av överföringsjobbparametrar](config-dynamic.md).
 
