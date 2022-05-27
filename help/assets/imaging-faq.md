@@ -9,9 +9,9 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 exl-id: 2f24c4bc-8071-4403-b959-00db0f08db34
 feature: Smart Services
 role: User
-source-git-commit: 675e98231e53bb9771446c33d9d8ec8968531014
+source-git-commit: 50d6ca4d7ead2b132f185590554d00c518fab996
 workflow-type: tm+mt
-source-wordcount: '3465'
+source-wordcount: '3466'
 ht-degree: 0%
 
 ---
@@ -129,7 +129,7 @@ Nej. Smart Imaging ingår i din befintliga licens. Den här regeln gäller antin
 
 ## Hur fungerar Smart Imaging? {#how-does-smart-imaging-work}
 
-När en bild efterfrågas av en konsument kontrollerar Smart Imaging användarens egenskaper och konverterar till rätt bildformat baserat på vilken webbläsare som används. Dessa formatkonverteringar görs på ett sätt som inte försämrar den visuella återgivningen. Smart bildbehandling konverterar automatiskt bilder till olika format baserat på webbläsarkapacitet på följande sätt.
+När en bild efterfrågas av en konsument kontrollerar Smart Imaging användarens egenskaper och konverterar den till rätt bildformat baserat på den webbläsare som används. Dessa formatkonverteringar görs på ett sätt som inte försämrar den visuella återgivningen. Smart bildbehandling konverterar automatiskt bilder till olika format baserat på webbläsarkapacitet på följande sätt.
 
 * Konvertera automatiskt till AVIF om webbläsaren stöder formatet
 * Konvertera automatiskt till WebP om AVIF-konverteringen inte var fördelaktig eller om webbläsaren inte stöder AVIF
