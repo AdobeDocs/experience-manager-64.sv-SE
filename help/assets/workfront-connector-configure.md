@@ -3,13 +3,13 @@ title: Konfigurera [!DNL Workfront for Experience Manager enhanced connector]
 description: Konfigurera [!DNL Workfront for Experience Manager enhanced connector]
 role: Admin
 feature: Integrations
-source-git-commit: 18901a6b1e5035e16cb4f30a040ec8a42f704d87
+exl-id: dcf90a29-59a9-40d1-b8ee-56d327072b3e
+source-git-commit: 6f9a682f441c1087558f86da65e092e549f75a17
 workflow-type: tm+mt
-source-wordcount: '1519'
+source-wordcount: '1598'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera [!DNL Workfront for Experience Manager enhanced connector] {#assets-integration-overview}
 
@@ -17,9 +17,14 @@ En användare med administratörsåtkomst i [!DNL Adobe Experience Manager] konf
 
 >[!IMPORTANT]
 >
->Adobe kräver installation och konfiguration av [!DNL Adobe Workfront for Experience Manager enhanced connector] endast via certifierade partners eller [!DNL Adobe Professional Services]. Om den distribueras och konfigureras utan en certifierad partner eller [!DNL Adobe Professional Services], stöds den inte av Adobe.
+>* Adobe kräver installation och konfiguration av [!DNL Adobe Workfront for Experience Manager enhanced connector] endast via certifierade partners eller [!DNL Adobe Professional Services]. Om den distribueras och konfigureras utan en certifierad partner eller [!DNL Adobe Professional Services], stöds den inte av Adobe.
 >
->Adobe kan släppa uppdateringar av [!DNL Adobe Workfront] och [!DNL Adobe Experience Manager] som gör denna koppling redundant, Om detta inträffar kan kunderna behöva gå över från att använda denna koppling.
+>* Adobe kan släppa uppdateringar av [!DNL Adobe Workfront] och [!DNL Adobe Experience Manager] som gör denna koppling redundant, Om detta inträffar kan kunderna behöva gå över från att använda denna koppling.
+>
+>* Adobe har stöd för utökade anslutningsversioner 1.7.4 och senare. Tidigare förhandsversioner och anpassade versioner stöds inte. Om du vill kontrollera den utökade anslutningsversionen går du till `digital.hoodoo` grupp tillgänglig i den vänstra rutan i [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=en).
+>
+>* Se [Partnercertifieringsprov för Workfront för Experience Manager Assets förbättrad anslutning](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html). Mer information om provet finns i [Provguide](https://express.adobe.com/page/Tc7Mq6zLbPFy8/).
+
 
 ## Konfigurera händelseprenumerationer {#event-subscriptions}
 
