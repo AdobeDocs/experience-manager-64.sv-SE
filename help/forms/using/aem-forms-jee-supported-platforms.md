@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 1b9f8d98-e7e8-4b9b-a0df-52ccba324da3
 role: Admin
 exl-id: 6609c625-0591-42fd-910b-c7c65d52c5f1
-source-git-commit: 393f665774a482e953e2594404ab22f7ce0bb259
+source-git-commit: 727dddccd7b7cdff29a00ef6f0f2e82f14e5c851
 workflow-type: tm+mt
-source-wordcount: '3315'
+source-wordcount: '3330'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,6 @@ I det här dokumentet visas vilka klient- och serverplattformar som stöds för 
 >
 >* En fullständig lista över undantag för serverplattformar som stöds finns i [Undantag för serverplattformar som stöds](#exceptions-to-supported-server-platforms).
 >* AEM Forms på JEE har endast stöd för engelska, franska, tyska och japanska versioner av de operativsystem och program som stöds.
-
 >
 
 
@@ -51,11 +50,11 @@ Adobe rekommenderar dessa konfigurationer och ger fullständig eller begränsad 
   </tr> 
   <tr> 
    <td>R: Begränsat stöd</td> 
-   <td>Adobe ger fullständigt stöd för den här konfigurationen när vissa förutsättningar är uppfyllda. Kontakta Adobe Enterprise Support om du vill veta mer om förutsättningarna och begära support.</td> 
+   <td>Adobe ger fullständigt stöd för den här konfigurationen när vissa förutsättningar är uppfyllda. Kontakta Adobe Enterprise Support för att få veta mer om förutsättningarna och begära support.</td> 
   </tr> 
   <tr> 
    <td>L: Begränsad support</td> 
-   <td>Adobe ger fullständigt stöd och underhåll för den här konfigurationen när vissa förutsättningar är uppfyllda. Alla funktioner är inte tillgängliga i konfigurationen. Kontakta Adobe Enterprise Support om du vill veta mer om förutsättningarna och begära support.<br /> </td> 
+   <td>Adobe ger fullständigt stöd och underhåll för den här konfigurationen när vissa förutsättningar är uppfyllda. Alla funktioner är inte tillgängliga i konfigurationen. Kontakta Adobe Enterprise Support för att få veta mer om förutsättningarna och begära support.<br /> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -95,7 +94,6 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
 >
 >* AEM Forms på JEE stöder endast 64-bitars JVM i produktionsmiljöer.
 >* Vi rekommenderar att du följer säkerhetsbulletinerna från Java-leverantören för att säkerställa säkerheten i produktionsmiljöer och installerar de senaste Java-uppdateringarna.
-
 >
 
 
@@ -197,13 +195,18 @@ Adobe Experience Manager Forms kräver att en Java Virtual Machine körs, vilket
   </tr> 
   <tr> 
    <td>MySQL</td> 
-   <td><p>MySQL Connector/J 5.7</p> <p>mysql-connector-java-5.1.30-bin.jar (version 5.1.30)</p> </td> 
+   <td><p>MySQL Connector/J 5.7</p> <p>mysql-connector-java-5.1.44-bin.jar (version 5.1.44)</p> </td> 
    <td><p>Tillhandahålls med AEM Forms i JEE-installation</p> </td> 
   </tr> 
   <tr> 
    <td>Microsoft SQL Server<br /> </td> 
-   <td><p>Microsoft® SQL Server JDBC Driver 6.2.1.0<br /> </p> <p>sqljdbc6.jar</p> </td> 
+   <td><p>Microsoft® SQL Server JDBC-drivrutin 6.2.1.0 (inaktuell) <br /> </p> <p>sqljdbc6.jar</p> </td> 
    <td><p>Tillhandahålls med AEM Forms för JEE-installation.</p> </td> 
+  </tr> 
+  <tr> 
+   <td>Microsoft SQL Server<br /> </td> 
+   <td><p>JDBC-drivrutin för Microsoft® SQL Server 6.2.2.0<br /> </p> <p>sqljdbc6.jar</p> </td> 
+   <td><p>Ladda ned från Microsoft webbplats.</p> </td> 
   </tr> 
   <tr> 
    <td>Oracle</td> 
@@ -332,7 +335,6 @@ Du kan köra AEM Forms på JEE på en fysisk dator eller en virtuell miljö. Om 
 >
 >* AEM Forms på JEE stöder endast 64-bitars operativsystem.
 >* Tjänsten PDF Generator stöds inte i Windows 10.
-
 >
 
 
@@ -520,7 +522,6 @@ AEM Forms App har nu stöd för Apache Cordova. Följande plattformsspecifika ve
 >* Tjänsten HTML2PDF används inte i AIX.
 >* Funktionerna OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
 >* En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator-funktionaliteten. Programmeringsversionen ska endast användas med AEM Forms under AEM Forms-licensens löptid, för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning för din distribution ([Lokal](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
-
 >
 
 
@@ -738,7 +739,6 @@ Ytterligare krav finns i:
 >[!NOTE]
 >
 >* Forms Portal stöds endast i Safari på iPad.
-
 >
 
 
