@@ -1,8 +1,8 @@
 ---
 title: Dynamic Media bildprofiler
-seo-title: Dynamic Media bildprofiler
+seo-title: Dynamic Media image profiles
 description: Skapa bildprofiler som innehåller inställningar för oskarp mask och smart beskärning eller smarta färgrutor, eller både och, och tillämpa sedan profilen på en mapp med bildresurser.
-seo-description: Skapa bildprofiler som innehåller inställningar för oskarp mask och smart beskärning eller smarta färgrutor, eller både och, och tillämpa sedan profilen på en mapp med bildresurser.
+seo-description: Create image profiles that contain settings for unsharp mask, and smart crop or smart swatch, or both, then apply the profile to a folder of image assets.
 uuid: 9049fab9-d2be-4118-8684-ce58f3c8c16a
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,11 +10,11 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 exl-id: 895103c8-df58-40f0-85d6-e29637edce53
-feature: Bildprofiler
+feature: Image Profiles
 role: Admin,User
-source-git-commit: ec0770120d04a1393c69786c0a46bb216dd67300
+source-git-commit: 8d049122fd2a5b39274d0fdcb268dcf660fbc40f
 workflow-type: tm+mt
-source-wordcount: '2639'
+source-wordcount: '2643'
 ht-degree: 10%
 
 ---
@@ -29,15 +29,24 @@ När du överför bilder kan du beskära bilden automatiskt vid överföring gen
 
 >[!IMPORTANT]
 >
->Bildprofiler kan inte användas för PDF-, animerade GIF- eller INDD-filer (Adobe InDesign).
+>Bildprofiler kan inte användas för PDF, animerade GIF eller INDD-filer (Adobe InDesign).
+
 
 ## Beskärningsalternativ {#crop-options}
+
+När du implementerar Smart Crop på bilder rekommenderar Adobe följande bästa praxis och tillämpar följande gräns:
+
+| Begränsningstyp | Bästa praxis | Implementerad gräns |
+| --- | --- | --- |
+| Antal smarta beskärningar per bild | 5 | 100 |
+
+Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 
 <!-- CQDOC-16069 for paragraph directly below -->
 
 Koordinaterna för smart beskärning är proportionella. Det vill säga, för de olika inställningarna för smart beskärning i en bildprofil, skickas samma proportioner till Dynamic Media om proportionerna är desamma för de nya måtten i bildprofilen. Därför rekommenderar Adobe att du använder samma beskärningsområde. Om du gör det påverkas inte de olika måtten som används i bildprofilen.
 
-Tänk på att varje generering av SmartCrop som du skapar kräver extra bearbetning. Om du till exempel lägger till fler än fem proportioner för smart beskärning kan det leda till en långsam intag av resurser. Det kan också ge ökad belastning på systemen. Eftersom du kan använda SmartCrop på mappnivå rekommenderar Adobe att du bara använder det på mappar *där det behövs.*
+Tänk på att varje generering av SmartCrop som du skapar kräver extra bearbetning. Om du till exempel lägger till mer än fem proportioner för smart beskärning kan det leda till en långsam intag av resurser. Det kan också ge ökad belastning på systemen. Eftersom du kan använda SmartCrop på mappnivå rekommenderar Adobe att du använder det på mappar *endast* där det behövs.
 
 Du kan välja mellan två bildbeskärningsalternativ. Du kan också automatisera skapandet av färg- och bildfärgrutor.
 
@@ -63,21 +72,21 @@ Du kan välja mellan två bildbeskärningsalternativ. Du kan också automatisera
   <tr> 
    <td>Smart beskärning</td> 
    <td>Massbeskär bilder baserat på deras visuella fokalpunkt.</td> 
-   <td><p>Smart Crop använder intelligensen i Adobe Sensei för att snabbt automatisera beskärningen av bilder i bulk. Smart Crop identifierar och beskär automatiskt fokalpunkten i alla bilder för att fånga den avsedda intressepunkten, oavsett skärmstorlek.</p> <p>Om du vill använda Smart beskärning väljer du <strong>Smart beskärning</strong> i listrutan Beskärningsalternativ. Aktivera sedan funktionen till höger om Responsiv bildbeskärning.</p> <p>Standardbrytpunktsstorlekarna Stora, Medel och Små täcker i allmänhet alla de storlekar som de flesta bilder används för mobila enheter och surfplattor, stationära datorer och banners. Om du vill kan du redigera standardnamnen för Stor, Medel och Liten.</p> <p>Om du vill lägga till fler brytpunkter klickar du på <strong>Lägg till beskärning</strong>; Om du vill ta bort en beskärning klickar du på ikonen Skräpburk.</p> </td> 
+   <td><p>Smart Crop använder intelligensen i Adobe Sensei för att snabbt automatisera beskärningen av bilder i bulk. Smart Crop identifierar och beskär automatiskt fokalpunkten i alla bilder för att fånga den avsedda intressepunkten, oavsett skärmstorlek.</p> <p>Om du vill använda smart beskärning väljer du <strong>Smart beskärning</strong> i listrutan Beskärningsalternativ, och sedan till höger om Responsiv bildbeskärning, aktivera (aktivera) funktionen.</p> <p>Standardbrytpunktsstorlekarna Stora, Medel och Små täcker i allmänhet alla de storlekar som de flesta bilder används för mobila enheter och surfplattor, stationära datorer och banners. Om du vill kan du redigera standardnamnen för Stor, Medel och Liten.</p> <p>Om du vill lägga till fler brytpunkter klickar du på <strong>Lägg till beskärning</strong>; Om du vill ta bort en beskärning klickar du på ikonen Skräpburk.</p> </td> 
   </tr> 
   <tr> 
    <td>Färg och bildfärgruta</td> 
    <td>Generera en färgruta för varje bild gruppvis.</td> 
-   <td><p><strong>Obs</strong>: Smarta färgrutor stöds inte i Dynamic Media Classic.</p> <p>Hitta och generera högkvalitativa färgrutor automatiskt från produktbilder som visar färg eller textur.</p> <p>Om du vill använda färg- och bildfärgruta väljer du <strong>Smart beskärning</strong> i listrutan Beskärningsalternativ. Aktivera sedan funktionen till höger om Färg och Bildfärgruta. Ange ett pixelvärde i textrutorna Bredd och Höjd.</p> <p>Alla bildbeskärningar är tillgängliga från renderingslisten, men färgrutor används bara via funktionen Kopiera URL. Observera att du måste använda en egen visningskomponent för att återge färgrutan på webbplatsen. (Undantaget är Carousel banners. Dynamic Media tillhandahåller visningskomponenten för den färgruta som används i karusellbanderoller.)</p> <p><strong>Använda färgrutor</strong></p> <p>URL:en för färgrutor är okomplicerad. Det vill säga:</p> <p><code>/is/image/company/&lt;asset_name&gt;:Swatch</code></p> <p>där <code>:Swatch</code> läggs till i resursbegäran.</p> <p><strong>Använda färgrutor</strong></p> <p>Om du vill använda färgrutor gör du en <code>req=userdata</code>-förfrågan med följande:</p> <p><code>/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata</code></p> <p>Följande är till exempel en färgruteresurs i Dynamic Media Classic:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch</code></p> <p>och här är färgruteresursens motsvarande <code>req=userdata</code>-URL:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata</code></p> <p><code>req=userdata</code>-svaret är följande:</p> <p><code class="code">SmartCropDef=Swatch
+   <td><p><strong>Anteckning</strong>: Smarta färgrutor stöds inte i Dynamic Media Classic.</p> <p>Hitta och generera högkvalitativa färgrutor automatiskt från produktbilder som visar färg eller textur.</p> <p>Om du vill använda färgruta och bildfärgruta väljer du <strong>Smart beskärning</strong> i listrutan Beskärningsalternativ och sedan till höger om Färg och Bildruta aktiverar (aktiverar) du funktionen. Ange ett pixelvärde i textrutorna Bredd och Höjd.</p> <p>Alla bildbeskärningar är tillgängliga från renderingslisten, men färgrutor används bara via funktionen Kopiera URL. Observera att du måste använda en egen visningskomponent för att återge färgrutan på webbplatsen. (Undantaget är Carousel banners. Dynamic Media tillhandahåller visningskomponenten för den färgruta som används i karusellbanderoller.)</p> <p><strong>Använda färgrutor</strong></p> <p>URL:en för färgrutor är okomplicerad. Det vill säga:</p> <p><code>/is/image/company/&lt;asset_name&gt;:Swatch</code></p> <p>där <code>:Swatch</code> läggs till i resursbegäran.</p> <p><strong>Använda färgrutor</strong></p> <p>Om du vill använda färgrutor skapar du en <code>req=userdata</code> begäran med följande:</p> <p><code>/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata</code></p> <p>Följande är till exempel en färgruteresurs i Dynamic Media Classic:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch</code></p> <p>och här motsvarar färgruteresursen <code>req=userdata</code> URL:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata</code></p> <p>The <code>req=userdata</code> Svaret är följande:</p> <p><code class="code">SmartCropDef=Swatch
        SmartCropHeight=200.0
        SmartCropRect=0.421671,0.389815,0.0848564,0.0592593,200,200
        SmartCropType=Swatch
        SmartCropWidth=200.0
-       SmartSwatchColor=0xA56DB2</code></p> <p>Du kan också begära ett <code>req=userdata</code>-svar i antingen XML- eller JSON-format, som i följande URL-exempel:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata,xml</code></p><p><code>SmartSwatchColor</code></p><p></p></td></tr></tbody></table>
+       SmartSwatchColor=0xA56DB2</code></p> <p>Du kan också begära en <code>req=userdata</code> svar i antingen XML- eller JSON-format, som i följande URL-exempel:</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata,xml</code></p><p><code>SmartSwatchColor</code></p><p></p></td></tr></tbody></table>
 
 ## Oskarp mask {#unsharp-mask}
 
-Du använder **Oskarp mask** för att finjustera en skärpefiltereffekt på den slutliga nedsamplade bilden. Du kan styra effektens intensitet, dess radie (mätt i pixlar) och ett tröskelvärde för kontrast som ska ignoreras. Effekten har samma alternativ som filtret Oskarp mask i Adobe Photoshop.
+Du använder **Oskarp mask** om du vill finjustera en skärpefiltereffekt på den slutliga nedsamplade bilden. Du kan styra effektens intensitet, dess radie (mätt i pixlar) och ett tröskelvärde för kontrast som ska ignoreras. Effekten har samma alternativ som filtret Oskarp mask i Adobe Photoshop.
 
 >[!NOTE]
 >
@@ -110,12 +119,12 @@ Skärpa beskrivs i [Skärpa bilder](/help/assets/assets/sharpening_images.pdf).
 
 ## Skapa Dynamic Media bildprofiler {#creating-image-profiles}
 
-Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera resursbearbetning](config-dms7.md#configuring-asset-processing).
+Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurerar resursbearbetning](config-dms7.md#configuring-asset-processing).
 
-**Så här skapar du Dynamic Media-bildprofiler**:
+**Skapa Dynamic Media bildprofiler**:
 
 1. Tryck på AEM-logotypen och navigera till **[!UICONTROL Tools > Assets > Image Profiles]**.
-1. Tryck på **[!UICONTROL Create]** för att lägga till en ny bildprofil.
+1. Tryck **[!UICONTROL Create]** för att lägga till en ny bildprofil.
 1. Ange ett profilnamn och värden för oskarp mask, beskärning eller färgruta, eller båda.
 
    Det kan vara praktiskt att använda ett profilnamn som är specifikt för dess avsedda syfte. Om du till exempel vill skapa en profil som bara genererar färgrutor, d.v.s. smart beskärning är inaktiverat (inaktiverat) och Färg och Bildruta är aktiverat (aktiverat), kan du använda profilnamnet&quot;Smarta färgrutor&quot;.
@@ -143,7 +152,7 @@ Om du har tilldelat en annan bildprofil till en mapp åsidosätter den nya profi
 
 Mappar som har tilldelats en profil visas i användargränssnittet med namnet på profilen som visas på kortet.
 
-När du lägger till smart beskärning i en befintlig bildprofil måste du återutlösa arbetsflödet [DAM Update Asset](assets-workflow.md) om du vill generera beskärningar för befintliga resurser i resurskatalogen.
+När du lägger till smart beskärning i en befintlig bildprofil måste du aktivera om [Arbetsflöde för DAM-uppdatering](assets-workflow.md) om du vill generera beskärningar för befintliga resurser i resurskatalogen.
 
 Du kan tillämpa bildprofiler på specifika mappar eller globalt på alla resurser.
 
@@ -160,7 +169,7 @@ För mappar som redan har tilldelats en profil visas profilens namn direkt under
 
    ![chlimage_1-255](assets/chlimage_1-255.png)
 
-1. Tryck på **[!UICONTROL Apply Processing Profile to Folder(s)]** och markera den eller de mappar som du vill använda för att ta emot de nyligen överförda resurserna. Tryck/klicka sedan på **[!UICONTROL Apply]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
+1. Tryck **[!UICONTROL Apply Processing Profile to Folder(s)]** och välj den eller de mappar som du vill använda för att ta emot de nyligen överförda resurserna och tryck/klicka **[!UICONTROL Apply]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
 
 #### Använda Dynamic Media-bildprofiler på mappar från Egenskaper {#applying-image-profiles-to-folders-from-properties}
 
@@ -174,17 +183,17 @@ För mappar som redan har tilldelats en profil visas profilens namn direkt under
 
 Förutom att tillämpa en profil på en mapp kan du även tillämpa en profil globalt så att allt innehåll som överförs till AEM resurser i en mapp har den valda profilen.
 
-**Så här använder du en Dynamic Media-bildprofil globalt**:
+**Använda en Dynamic Media-bildprofil globalt**:
 
 1. Gör något av följande:
 
-   * Navigera till **https://&lt;AEM server>/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam** och använd rätt profil och tryck på **Spara**.
+   * Navigera till **https://&lt;aem server=&quot;&quot;>/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam** och använda rätt profil och knacka **Spara**.
 
       ![chlimage_1-257](assets/chlimage_1-257.png)
 
    * Navigera till CRXDE Lite till följande nod: `/content/dam/jcr:content`.
 
-      Lägg till egenskapen `imageProfile:/conf/global/settings/dam/adminui-extension/imageprofile/<name of image profile>` och tryck på **[!UICONTROL Save All]**.
+      Lägg till egenskapen `imageProfile:/conf/global/settings/dam/adminui-extension/imageprofile/<name of image profile>` och trycka **[!UICONTROL Save All]**.
 
       ![configure_image_profiles](assets/configure_image_profiles.png)
 
@@ -200,39 +209,39 @@ När du har redigerat en smart beskärning och sparat sprids ändringen överall
 
 Om det behövs kan du köra smart beskärning igen för att generera ytterligare beskärningar.
 
-Se även [Redigera den smarta beskärningen eller den smarta färgrutan för flera bilder](#editing-the-smart-crop-or-smart-swatch-of-multiple-images).
+Se även [Redigera den smarta beskärningen eller smarta färgrutan för flera bilder](#editing-the-smart-crop-or-smart-swatch-of-multiple-images).
 
-**Så här redigerar du den smarta beskärningen eller smarta färgrutan för en enskild bild**:
+**Redigera smart beskärning eller smarta färgrutor för en enskild bild**:
 
-1. Tryck på AEM logotyp och navigera till **[!UICONTROL Assets]** och sedan till mappen där en smart beskärningsprofil eller en smart färgruteprofil används.
+1. Tryck på AEM logotyp och navigera till **[!UICONTROL Assets]** till den mapp där en smart beskärningsprofil eller en smart färgruteprofil används.
 
 1. Tryck på mappen för att öppna dess innehåll.
 1. Tryck på den bild vars smarta beskärning eller smarta färgruta du vill justera.
-1. Tryck på **[!UICONTROL Smart Crop]** i verktygsfältet.
+1. Tryck på i verktygsfältet **[!UICONTROL Smart Crop]**.
 
 1. Gör något av följande:
 
    * I närheten av det övre högra hörnet av sidan drar du skjutreglaget åt vänster eller höger för att öka respektive minska visningen av bilden.
    * Dra i ett hörnhandtag på bilden för att justera storleken på det visningsbara området för beskärningen eller färgrutan.
    * Dra rutan/färgrutan till en ny plats på bilden. Du kan bara redigera färgrutor för bilder; färgrutor är statiska.
-   * Ovanför bilden trycker du på **[!UICONTROL Revert]** för att ångra alla redigeringar och återställa den ursprungliga beskärningen eller färgrutan.
+   * Ovanför bilden trycker du  **[!UICONTROL Revert]** om du vill ångra alla redigeringar och återställa den ursprungliga beskärningen eller färgrutan.
 
-1. I närheten av det övre högra hörnet av sidan trycker du på **[!UICONTROL Save]** och sedan på **[!UICONTROL Close]** för att gå tillbaka till resursmappen.
+1. I sidans övre högra hörn trycker du **[!UICONTROL Save]** och sedan trycka **[!UICONTROL Close]** för att återgå till resursmappen.
 
 ## Redigera den smarta beskärningen eller smarta färgrutan för flera bilder {#editing-the-smart-crop-or-smart-swatch-of-multiple-images}
 
-När du har tillämpat en bildprofil, som innehåller Smart beskärning, på en mapp tillämpas en beskärning på alla bilder i den mappen. Om du vill kan du *manuellt* justera eller ändra storlek på det smarta beskärningsfönstret i flera bilder för att ytterligare förfina fokalpunkten.
+När du har tillämpat en bildprofil, som innehåller Smart beskärning, på en mapp tillämpas en beskärning på alla bilder i den mappen. Om du vill kan du *manuellt* justera om eller ändra storlek på det smarta beskärningsfönstret i flera bilder för att ytterligare förfina fokalpunkten.
 
 När du har redigerat en smart beskärning och sparat sprids ändringen överallt där du använder beskärningen för de specifika bilderna.
 
 Om det behövs kan du köra smart beskärning igen för att generera ytterligare beskärningar.
 
-**Så här redigerar du den smarta beskärningen eller smarta färgrutan för flera bilder**:
+**Redigera smart beskärning eller smart färgruta för flera bilder**:
 
-1. Tryck på AEM logotyp och navigera till **[!UICONTROL Assets]** och sedan till en mapp där en smart beskärningsprofil eller en smart färgruteprofil används.
-1. Tryck på ikonen **[!UICONTROL More Actions]** (..) i mappen och tryck sedan på **[!UICONTROL Smart Crop]**.
+1. Tryck på AEM logotyp och navigera till **[!UICONTROL Assets]** till en mapp där en smart beskärningsprofil eller en smart färgruteprofil används.
+1. Tryck på **[!UICONTROL More Actions]** (...) och tryck sedan på **[!UICONTROL Smart Crop]**.
 
-1. Gör något av följande på sidan **[!UICONTROL Edit Smart Crops]**:
+1. På **[!UICONTROL Edit Smart Crops]** gör du något av följande:
 
    * Justera visningsstorleken för bilder på sidan.
 
@@ -268,7 +277,7 @@ Om det behövs kan du köra smart beskärning igen för att generera ytterligare
 
 
 
-1. Tryck på **[!UICONTROL Save]** i sidans övre högra hörn. sedan trycka på **[!UICONTROL Close]** för att gå tillbaka till resursmappen.
+1. I sidans övre högra hörn trycker du **[!UICONTROL Save]**. tryck **[!UICONTROL Close]** för att återgå till resursmappen.
 
 ## Ta bort en bildprofil från mappar {#removing-an-image-profile-from-folders}
 
@@ -286,9 +295,9 @@ Du kan ta bort en bildprofil från en mapp från menyn **[!UICONTROL Tools]** el
 
 ### Ta bort Dynamic Media-bildprofiler från mappar via Egenskaper {#removing-image-profiles-from-folders-via-properties}
 
-1. Tryck på AEM logotyp, navigera till **[!UICONTROL Assets]** och sedan till mappen som du vill ta bort en bildprofil från.
-1. Markera mappen genom att trycka på bockmarkeringen och sedan på **[!UICONTROL Properties]**.
-1. Välj fliken **[!UICONTROL Image Profiles]**.
-1. Välj **[!UICONTROL None]** i listrutan **[!UICONTROL Profile Name]** och tryck sedan på **[!UICONTROL Save & Close]**.
+1. Tryck på AEM logotyp och navigera **[!UICONTROL Assets]** och sedan till mappen som du vill ta bort en bildprofil från.
+1. Markera mappen genom att trycka på bockmarkeringen och sedan trycka på **[!UICONTROL Properties]**.
+1. Välj **[!UICONTROL Image Profiles]** -fliken.
+1. Från **[!UICONTROL Profile Name]** nedrullningsbar lista, välja **[!UICONTROL None]** och sedan trycka **[!UICONTROL Save & Close]**.
 
    För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.

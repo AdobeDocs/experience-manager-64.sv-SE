@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Resurshandbok
 breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, leverera och optimera digitala resurser.
-source-git-commit: 675e98231e53bb9771446c33d9d8ec8968531014
+source-git-commit: 5d4d0c86a9d9e3eaaaca1e795260e8e49567ea73
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '649'
 ht-degree: 33%
 
 ---
@@ -53,6 +53,7 @@ ht-degree: 33%
    + [Leverera innehåll med HTTP2](http2.md)
    + [Leverera Dynamic Media-resurser](delivering-dynamic-media-assets.md)
    + [Aktivera hotlink-skydd i Dynamic Media](hotlink-protection.md)
+   + [Dynamic Media begränsningar](limitations.md)
    + [Bilduppsättningar](image-sets.md)
    + [Blandade medieuppsättningar](mixed-media-sets.md)
    + [Snurrande uppsättningar](spin-sets.md)
