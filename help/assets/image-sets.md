@@ -12,9 +12,9 @@ discoiquuid: e00e7cc9-b777-4f9e-906d-824bcb2bbd41
 exl-id: af3f95aa-a162-4212-a20a-68b5a0e72d6d
 feature: Image Sets
 role: User
-source-git-commit: 5d4d0c86a9d9e3eaaaca1e795260e8e49567ea73
+source-git-commit: 77b2643c91092a9a08b67fb5ad06a96a79f4deea
 workflow-type: tm+mt
-source-wordcount: '2084'
+source-wordcount: '2064'
 ht-degree: 10%
 
 ---
@@ -39,10 +39,10 @@ Anta till exempel att du vill visa bilder med olika färgskalor; räkningarna ä
 
 När du skapar en bilduppsättning rekommenderar Adobe följande metodtips och tillämpar följande begränsningar:
 
-| Resurs - begränsningstyp | Bästa praxis | Implementerad gräns | Ändringar av begränsningen 31 december 2022 |
-| --- | --- | --- | --- |
-| **Bilduppsättning** - Antal dubblettresurser per uppsättning | Inga dubbletter | 100 | 20 |
-| **Bilduppsättning** - Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
+| Begränsningstyp | Bästa praxis | Begränsning har införts |
+| --- | --- | --- |
+| Antal dubblettresurser per uppsättning | Inga dubbletter | 20 |
+| Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
 
 Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 
@@ -140,10 +140,10 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 
 När du skapar en bilduppsättning rekommenderar Adobe följande metodtips och tillämpar följande begränsningar:
 
-| Resurs - begränsningstyp | Bästa praxis | Implementerad gräns | Ändringar av begränsningen 31 december 2022 |
-| --- | --- | --- | --- |
-| **Bilduppsättning** - Antal dubblettresurser per uppsättning | Inga dubbletter | 100 | 20 |
-| **Bilduppsättning** - Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
+| Begränsningstyp | Bästa praxis | Begränsning har införts |
+| --- | --- | --- |
+| Antal dubblettresurser per uppsättning | Inga dubbletter | 20 |
+| Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
 
 Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 

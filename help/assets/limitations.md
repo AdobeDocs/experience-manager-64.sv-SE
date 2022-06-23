@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/Dynamic-Media-Classic
 geptopics: SG_SCENESEVENONDEMAND_PK/categories/ecatalogs
 feature: Dynamic Media Classic,Asset Management,Viewers,Image Sets,Spin Sets,eCatalog
 role: User
-source-git-commit: de466dda2dcafd4c7ba002e91133e975e07b392e
+source-git-commit: 77b2643c91092a9a08b67fb5ad06a96a79f4deea
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 3%
+source-wordcount: '189'
+ht-degree: 6%
 
 ---
 
@@ -28,12 +28,13 @@ Det här avsnittet innehåller följande avsnitt:
 
 När du skapar en snurra uppsättning eller en bilduppsättning, eller överför PDF för sidextrahering, rekommenderar Adobe följande metodtips och tillämpar följande begränsningar:
 
-| Resurs - begränsningstyp | Bästa praxis | Implementerad gräns | Ändringar av begränsningen 31 december 2022 |
+| Resurs - begränsningstyp | Bästa praxis | Begränsning har införts | Ändring till begränsning den 31 december 2022 |
 | --- | --- | --- | --- |
-| **Bild** - Antal smarta beskärningar per bild | 5 | 100 |  |
-| **Bilduppsättning** - Antal dubblettresurser per uppsättning | Inga dubbletter | 100 | 20 |
-| **Bilduppsättning** - Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
-| **Snurra uppsättning** - Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 |
+| **Bild** - Antal smarta beskärningar per bild | 5 | 100 | 20 |
+| **Alla uppsättningar** - Antal dubblettresurser per uppsättning | Inga dubbletter | 20 | Ej relevant |
+| **Alla uppsättningar** - Maximalt antal resurser per uppsättning | 5-10 bilder per uppsättning | 1000 | Ej relevant |
+| **Snurra uppsättning** - Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 | Ej relevant |
+| **PDF** - Maximalt antal sidor för PDF som ska användas för extrahering |  | 5000 (för nya överföringar) | 100 (för alla PDF) |
 
 <!-- NO PDF UPLOAD OPTION IN AEMaaCS | **PDF** - Maximum number of pages for a PDF to be considered for extraction |  | 5000 (for new uploads) | 100 | -->
 <!-- See also [Dynamic Media limitations](/help/assets/limitations.md). -->

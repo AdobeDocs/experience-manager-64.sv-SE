@@ -8,7 +8,7 @@ content-type: reference
 exl-id: 47cb6d40-a5c4-4f6a-9794-bd2eddfaa7d0
 feature: Spin Sets
 role: User
-source-git-commit: 5d4d0c86a9d9e3eaaaca1e795260e8e49567ea73
+source-git-commit: 77b2643c91092a9a08b67fb5ad06a96a79f4deea
 workflow-type: tm+mt
 source-wordcount: '1840'
 ht-degree: 7%
@@ -31,7 +31,7 @@ Snurra uppsättningar anges av en banderoll med ordet **[!UICONTROL SPINSET]**. 
 
 När du skapar en snurrsuppsättning rekommenderar Adobe följande bästa praxis och tillämpar följande gräns:
 
-| Begränsningstyp | Bästa praxis | Implementerad gräns |
+| Begränsningstyp | Bästa praxis | Begränsning har införts |
 | --- | --- | --- |
 | Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 |
 
@@ -117,7 +117,7 @@ Den ordning i vilken bilderna visas i en snurrfunktion. Se till att ordna dem s�
 
 När du skapar en snurrsuppsättning rekommenderar Adobe följande bästa praxis och tillämpar följande gräns:
 
-| Begränsningstyp | Bästa praxis | Implementerad gräns |
+| Begränsningstyp | Bästa praxis | Begränsning har införts |
 | --- | --- | --- |
 | Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 |
 
