@@ -7,7 +7,7 @@ uuid: 57c872d6-c6ca-4f78-a98c-f9487f1d673c
 contentOwner: aheimoz
 discoiquuid: f2bd4d96-55a5-4fbd-bede-1747c2ec63c8
 exl-id: f8e25989-6ed3-4b35-95e5-fbfd7c51d622
-source-git-commit: 0da4d864af8982b7faced50035f6bed376d8cd01
+source-git-commit: dba3b09035e6ffafd1681b370e3a10a76564bf65
 workflow-type: tm+mt
 source-wordcount: '4636'
 ht-degree: 0%
@@ -124,7 +124,7 @@ Dokumentsteget har följande egenskaper:
 
 **Sökväg för indata:** Sökväg till indata för det adaptiva formuläret. Du kan behålla data på en plats i förhållande till nyttolasten eller ange en absolut sökväg för data. Indata sammanfogas med det adaptiva formuläret för att skapa ett postdokument.
 
-**Sökväg till bifogad fil:** Sökväg för bifogad fil: Sökväg till de bifogade filerna. De här bifogade filerna ingår i dokumentdokumentet. Du kan behålla de bifogade filerna på en plats i förhållande till nyttolasten eller ange en absolut sökväg för de bifogade filerna.
+**Sökväg för bifogad fil:** Sökväg för bifogad fil: Sökväg till de bifogade filerna. De här bifogade filerna ingår i dokumentdokumentet. Du kan behålla de bifogade filerna på en plats i förhållande till nyttolasten eller ange en absolut sökväg för de bifogade filerna.
 
 Om du anger sökvägen till en mapp, till exempel bilagor, bifogas alla filer som är direkt tillgängliga i mappen till Dokument för post. Om det finns filer i de mappar som är direkt tillgängliga i den angivna sökvägen inkluderas filerna i Postdokument som bilagor. Om det finns mappar i direkt tillgängliga mappar hoppas de över.
 
