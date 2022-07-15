@@ -9,7 +9,7 @@ feature: Communities
 role: User
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 0%
    + [Uppgradera till AEM 6.4 Communities](upgrade.md)
    + [Rekommenderade topologier för communities](topologies.md)
    + [Konfigurera Dispatcher för Communities](dispatcher.md)
-+ Administrera {#administer}
++ Administratör {#administer}
    + [Tjänsten för hantering av användare och användargenererat innehåll i AEM Communities](user-ugc-management-service.md)
    + [Communities Sites](https://experienceleague.adobe.com/docs/experience-manager-64/communities/introduction/administer-landing.html)
    + [Communities-konsoler](consoles.md)
@@ -63,7 +63,7 @@ ht-degree: 0%
    + [Community-funktioner](functions.md)
    + [Lagringskonfiguration](srp-config.md)
    + [Badges Console](badges.md)
-   + [Konsolen Aktivera resurser](resources.md)
+   + [Resurskonsol för aktivering](resources.md)
    + [Rapportkonsol](reports.md)
    + [MySQL-konfiguration för aktiveringsfunktioner](mysql.md)
    + [FFmpeg for Communities](ffmpeg.md)

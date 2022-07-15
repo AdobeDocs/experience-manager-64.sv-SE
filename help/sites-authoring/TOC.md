@@ -6,11 +6,11 @@ audience: end-user
 user-guide-title: Användarhandbok för redigering av AEM 6.4
 breadcrumb-title: Redigeringshandbok
 user-guide-description: Lär dig grunderna för att skapa innehåll och redigering i AEM.
-feature: Redigering
+feature: Authoring
 role: User
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '292'
 ht-degree: 38%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 38%
 # Användarhandbok för redigering av AEM 6.4 {#authoring}
 
 + [Översikt över användarhandboken för redigering](home.md)
-+ Viktiga uppgifter, verktyg och koncept för redigering AEM {#essentials}
++ Viktiga uppgifter, verktyg och begrepp för AEM {#essentials}
    + [Steg 1 för författare](first-steps.md)
    + [Snabbguide till framtagning av sidor](qg-page-authoring.md)
    + [Begreppet redigering](author.md)

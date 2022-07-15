@@ -6,11 +6,11 @@ audience: admin-user
 user-guide-title: AEM 6.4 Handbok för administrationsanvändare
 breadcrumb-title: Administratörshandbok
 user-guide-description: Läs om hur du administrerar AEM.
-feature: Administratör
+feature: Administering
 role: Admin
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '648'
 ht-degree: 6%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 6%
    + [Identifiera innehåll som ska översättas](tc-rules.md)
    + [Förbereder innehåll för översättning](tc-prep.md)
    + [Skapa en språkrot med det klassiska användargränssnittet](tc-lroot-classic.md)
-   + [Ansluter till Microsoft Translator](tc-msconf.md)
+   + [Ansluta till Microsoft Translator](tc-msconf.md)
    + [Konfigurera översättningsintegreringsramverket](tc-tic.md)
    + [Guiden Kopiera språk](tc-wizard.md)
    + [Översättningsförbättringar](tc-enhancements.md)
@@ -77,7 +77,7 @@ ht-degree: 6%
    + [OWASP Top 10](owasp-top10.md)
    + [Köra AEM i produktionsklart läge](production-ready.md)
    + [Identity Management](identity-management.md)
-   + [Adobe IMS-autentisering och stöd för Admin Console för AEM Managed Services](ims-config-and-admin-console.md)
+   + [Adobe IMS-autentisering och Admin Console-stöd för AEM Managed Services](ims-config-and-admin-console.md)
    + [Skapa en stängd användargrupp](cug.md)
    + [Åtgärda serialiseringsproblem i AEM](mitigating-serialization-issues.md)
    + [Användarsynkronisering](sync.md)
@@ -104,7 +104,7 @@ ht-degree: 6%
    + [Konfigurera segmentering](campaign-segmentation.md)
    + [Utöka och konfigurera designimporteraren för landningssidor](extending-the-design-importer-for-landingpages.md)
    + [Integrera landningssidor med Adobe Analytics](integrating-landing-pages-with-adobe-analytics.md)
-+ e-handel {#ecommerce}
++ eCommerce {#ecommerce}
    + [eCommerce](ecommerce.md)
    + [Concepts](concepts.md)
    + [Administrera allmän e-handel](generic.md)
@@ -125,7 +125,7 @@ ht-degree: 6%
    + [Vanliga frågor om leverans av innehåll med HTTP2](scene7-http2faq.md)
    + [Felsöka Adobe Campaign-integreringen](troubleshooting-campaignintegration.md)
    + [SharePoint Connector-licenser, copyrightmeddelanden och friskrivningsklausuler](sharepoint-connector-licenses.md)
-   + [SharePoint-anslutning](sharepoint-connector.md)
+   + [SharePoint Connector](sharepoint-connector.md)
    + [Vanliga frågor om att DHTML Viewer upphör](dhtml-viewer-endoflifefaqs.md)
    + [Integrera med Adobe Campaign Classic](campaignonpremise.md)
    + [Relaterade artiklar i communityn](related-community-articles.md)
@@ -133,7 +133,7 @@ ht-degree: 6%
    + [Meddelande om att Flash Viewer har upphört](flash-viewers-eol.md)
    + [Integrera med Adobe Creative Cloud](https://docs.adobe.com/content/help/en/experience-manager-64/assets/administer/aem-cc-integration-best-practices.html)
    + [Produktfeed](product-feed.md)
-   + [Integrera med dynamisk tagghantering i Adobe](dtm.md)
+   + [Integrera med Adobe Dynamic Tag Management](dtm.md)
    + [Ingå i Adobe Analytics och Adobe Target](opt-in.md)
    + [AEM portaler och portlets](aem-as-portal.md)
    + [Integrera med Dynamic Media Classic](scene7.md)
