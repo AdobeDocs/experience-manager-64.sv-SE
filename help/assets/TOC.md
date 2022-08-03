@@ -8,8 +8,8 @@ breadcrumb-title: Resurshandbok
 user-guide-description: Skapa, hantera, leverera och optimera digitala resurser.
 source-git-commit: 5d4d0c86a9d9e3eaaaca1e795260e8e49567ea73
 workflow-type: tm+mt
-source-wordcount: '649'
-ht-degree: 33%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
