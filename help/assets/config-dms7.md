@@ -8,9 +8,9 @@ content-type: reference
 exl-id: b0f0c6e4-77c8-40db-a9f4-699d1a633571
 feature: Configuration,Scene7 Mode
 role: Admin,User,Developer
-source-git-commit: 4fdb290ddd7493a7ddbe399ebb76189718cff989
+source-git-commit: a045c70f8cbfa03295c4fcbfbb2df1831c3f7292
 workflow-type: tm+mt
-source-wordcount: '5196'
+source-wordcount: '5201'
 ht-degree: 2%
 
 ---
@@ -93,8 +93,8 @@ Se [Installerar funktionspaket 18912 för migrering av gruppresurser](bulk-inges
 
       >[!IMPORTANT]
       >
-      >Endast en Dynamic Media-konfiguration i Cloud Services stöds i en instans av Experience Manager. lägger inte till mer än en konfiguration. Flera Dynamic Media-konfigurationer i en Experience Manager-instans är _not_ som stöds eller rekommenderas av Adobe.<!-- CQDOC-19579 and CQDOC-19612 -->
-   * **[!UICONTROL Company Root Folder Path]**
+      >Endast en Dynamic Media-konfiguration i Cloud Services stöds i en instans av Experience Manager. lägger inte till mer än en konfiguration. Flera Dynamic Media-konfigurationer i en Experience Manager-instans är *not* som stöds eller rekommenderas av Adobe.<!-- CQDOC-19579 and CQDOC-19612 -->
+   * **[!UICONTROL Company Root Folder Path]** - Sökväg till företagets rotmapp.
    * **[!UICONTROL Publishing Assets]** - alternativet **[!UICONTROL Immediately]** betyder att när resurser överförs, importeras resurserna och URL:en/inbäddningen anges omedelbart. Ingen användaråtgärd krävs för att publicera resurser. Alternativet **[!UICONTROL Upon Activation]** betyder att du måste publicera resursen explicit innan en URL/Embed-länk anges.
    * **[!UICONTROL Secure Preview Server]** - gör att du kan ange URL-sökvägen till förhandsgranskningsservern för säkra återgivningar. Det innebär att när återgivningarna har genererats kan Experience Manager på ett säkert sätt komma åt och förhandsgranska Dynamic Media-fjärråtergivningarna (inga binärfiler skickas tillbaka till Experience Manager-instansen).
 
