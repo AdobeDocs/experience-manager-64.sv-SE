@@ -5,14 +5,13 @@ contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: extending-aem
 content-type: reference
-translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+exl-id: d2b8503e-8ac1-4617-ad76-b05d1e80a6b6
+source-git-commit: bbc13d64a33d9033e04fb4f37d60bcfe223be337
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '564'
 ht-degree: 1%
 
 ---
-
 
 # Cloud Service Configurations{#cloud-service-configurations}
 
@@ -20,7 +19,7 @@ Konfigurationer är utformade för att tillhandahålla logik och struktur för l
 
 Du kan utöka de befintliga instanserna för att skapa egna konfigurationer.
 
-## Koncept {#concepts}
+## Concepts {#concepts}
 
 De principer som har använts vid utvecklingen av konfigurationerna har baserats på följande begrepp:
 
@@ -28,8 +27,8 @@ De principer som har använts vid utvecklingen av konfigurationerna har baserats
 * Konfigurationer (t.ex. egenskaper/stycken) ärvs från de överordnade.
 * Refererad från analysnod(er) efter sökväg.
 * Enkelt att bygga ut.
-* Kan hantera mer komplexa konfigurationer, till exempel [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics).
-* Stöd för beroenden (t.ex. [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)-plugin-program behöver en [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)-konfiguration).
+* Har flexibiliteten att klara mer komplexa konfigurationer, som [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics).
+* Stöd för beroenden (t.ex. [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) plugin-program behöver en [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) konfiguration).
 
 ## Struktur {#structure}
 
@@ -68,7 +67,7 @@ Din mall utökar basmallen:
 
 `cq/cloudserviceconfigs/templates/configpage`
 
-och definiera en `resourceType` som pekar på den anpassade komponenten.
+och definiera `resourceType` som pekar på den anpassade komponenten.
 
 ```xml
 /libs/cq/analytics/templates/sitecatalyst
@@ -120,8 +119,8 @@ Innehållsmodellen lagras som `cq:Page` under:
 
 Konfigurationerna lagras under undernoden `jcr:content`.
 
-* Fasta egenskaper som definieras i en dialogruta ska lagras direkt på `jcr:node`.
-* Dynamiska element (med `parsys` eller `iparsys`) använder en undernod för att lagra komponentdata.
+* Fasta egenskaper som definieras i en dialogruta ska lagras på `jcr:node` direkt.
+* Dynamiska element (med `parsys` eller `iparsys`) använder du en undernod för att lagra komponentdata.
 
 ```xml
 /etc/cloudservices/service/config/jcr:content as nt:unstructured
@@ -136,9 +135,9 @@ propertyname
 
 Referensdokumentation om API finns i [com.day.cq.wcm.webservicesupport](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html).
 
-### AEM integrering {#aem-integration}
+### AEM {#aem-integration}
 
-Tillgängliga tjänster visas på fliken **Cloud Services** i dialogrutan **Sidegenskaper** (för alla sidor som ärver från `foundation/components/page` eller `wcm/mobile/components/page`).
+Tillgängliga tjänster visas i **Cloud Services** -fliken i **Sidegenskaper** dialogruta (för alla sidor som ärver från `foundation/components/page` eller `wcm/mobile/components/page`).
 
 Fliken innehåller även:
 
@@ -149,19 +148,19 @@ Fliken innehåller även:
 
 När inloggningsuppgifter för tjänsten lagras bör alla lösenord krypteras.
 
-Du kan uppnå detta genom att lägga till ett dolt formulärfält. Det här fältet ska ha anteckningen `@Encrypted` i egenskapsnamnet; För fältet `password` skulle namnet skrivas som:
+Du kan uppnå detta genom att lägga till ett dolt formulärfält. Det här fältet ska ha anteckningen `@Encrypted` i egenskapsnamnet, t.ex. för `password` fältet som namnet skulle skrivas som:
 
 `password@Encrypted`
 
-Egenskapen krypteras sedan automatiskt (med tjänsten `CryptoSupport`) av `EncryptionPostProcessor`.
+Egenskapen krypteras sedan automatiskt (med `CryptoSupport` på `EncryptionPostProcessor`.
 
 >[!NOTE]
 >
->Detta liknar standarden ` [SlingPostServlet](https://sling.apache.org/site/manipulating-content-the-slingpostservlet-servletspost.html)`-anteckningar.
+>Detta liknar standarden ` [SlingPostServlet](https://sling.apache.org/site/manipulating-content-the-slingpostservlet-servletspost.html)` anteckningar.
 
 >[!NOTE]
 >
->Som standard krypterar endast `EcryptionPostProcessor` `POST`-begäranden som görs till `/etc/cloudservices`.
+>Som standard är `EcryptionPostProcessor` endast krypterar `POST` förfrågningar `/etc/cloudservices`.
 
 #### Ytterligare egenskaper för tjänstsidans jcr:innehållsnoder {#additional-properties-for-service-page-jcr-content-nodes}
 
@@ -173,7 +172,7 @@ Egenskapen krypteras sedan automatiskt (med tjänsten `CryptoSupport`) av `Encry
   </tr> 
   <tr> 
    <td>componentReference</td> 
-   <td>Referenssökväg till en komponent som ska inkluderas automatiskt på sidan.<br /> Detta används för ytterligare funktioner och JS-tillägg.<br /> Detta inkluderar komponenten på sidan <br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> där den ingår (vanligtvis före  <code>body</code> taggen).<br /> När det gäller Analytics och Target använder vi detta för att inkludera ytterligare funktioner, som JavaScript-anrop för att spåra besökares beteende.</td> 
+   <td>Referenssökväg till en komponent som ska inkluderas automatiskt på sidan.<br /> Detta används för ytterligare funktioner och JS-tillägg.<br /> Detta inkluderar komponenten på sidan där<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> ingår (normalt före <code>body</code> tagg).<br /> När det gäller Analytics och Target använder vi detta för att inkludera ytterligare funktioner, som JavaScript-anrop för att spåra besökares beteende.</td> 
   </tr> 
   <tr> 
    <td>description</td> 
@@ -210,17 +209,15 @@ Egenskapen krypteras sedan automatiskt (med tjänsten `CryptoSupport`) av `Encry
  </tbody> 
 </table>
 
-### Använd fall {#use-cases}
+### Användningsexempel {#use-cases}
 
 Dessa tjänster tillhandahålls som standard:
 
-* [Spårarfragment](/help/sites-administering/external-providers.md)  (Google, WebTrends etc.)
+* [Spårarkodfragment](/help/sites-administering/external-providers.md) (Google, WebTrends etc.)
 * [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)
 * [Test&amp;Target](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-target)
-* [Search &amp; Promote](/help/sites-administering/marketing-cloud.md#integrating-with-search-promote)
 * [Dynamic Media](/help/sites-administering/marketing-cloud.md#integrating-with-scene)
 
 >[!NOTE]
 >
 >Se även [Skapa en anpassad Cloud Service](/help/sites-developing/extending-cloud-config-custom-cloud.md).
-

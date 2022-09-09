@@ -8,10 +8,10 @@ breadcrumb-title: Redigeringshandbok
 user-guide-description: Lär dig grunderna för att skapa innehåll och redigering i AEM.
 feature: Authoring
 role: User
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: bbc13d64a33d9033e04fb4f37d60bcfe223be337
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '285'
+ht-degree: 39%
 
 ---
 
@@ -78,7 +78,6 @@ ht-degree: 0%
    + [Content Insight](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/siteandpage/content-insights.html)
    + [Analyserar sidprestanda](ci-analyze.md)
    + [Visa sidanalysdata](pa-using.md)
-   + [Lägga till Search &amp; Promote på sidan](search-and-promote.md)
 + Personanpassning {#personalization}
    + [Personanpassning](personalization.md)
    + [Förhandsgranska sidor med ContextHub-data](ch-previewing.md)

@@ -8,10 +8,10 @@ breadcrumb-title: Administratörshandbok
 user-guide-description: Läs om hur du administrerar AEM.
 feature: Administering
 role: Admin
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: 7eaa338be262d953abc045ab88432507021734ca
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '641'
+ht-degree: 6%
 
 ---
 
@@ -132,7 +132,6 @@ ht-degree: 0%
    + [Integrera med Adobe Campaign Standard](campaignstandard.md)
    + [Meddelande om att Flash Viewer har upphört](flash-viewers-eol.md)
    + [Integrera med Adobe Creative Cloud](https://docs.adobe.com/content/help/en/experience-manager-64/assets/administer/aem-cc-integration-best-practices.html)
-   + [Produktfeed](product-feed.md)
    + [Integrera med Adobe Dynamic Tag Management](dtm.md)
    + [Ingå i Adobe Analytics och Adobe Target](opt-in.md)
    + [AEM portaler och portlets](aem-as-portal.md)
@@ -150,7 +149,6 @@ ht-degree: 0%
    + [Konfigurera integreringen med Adobe Target manuellt](target-configuring.md)
    + [Krav för integrering med Adobe Target](target-requirements.md)
    + [Adobe-klassificeringar](adobeanalytics-classifications.md)
-   + [Integrera med Adobe Search &amp; Promote](search-and-promote.md)
    + [Lösningsintegrering](integration.md)
    + [Målintegrering med upplevelsefragment](experience-fragments-target.md)
 + Bästa praxis {#bestpractices}

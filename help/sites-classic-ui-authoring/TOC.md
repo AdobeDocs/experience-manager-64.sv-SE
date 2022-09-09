@@ -6,12 +6,12 @@ audience: end-user
 user-guide-title: Användarhandbok för redigering av AEM 6.4 Classic UI
 breadcrumb-title: Användargränssnittets skrivguide
 user-guide-description: Den här handboken beskriver koncepten för redigering i AEM i det klassiska användargränssnittet.
-feature: Redigering
+feature: Authoring
 role: User
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: bbc13d64a33d9033e04fb4f37d60bcfe223be337
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 20%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 20%
 # Användarhandbok för redigering av AEM 6.4 Classic UI {#classic-ui}
 
 + [Översikt över redigeringshandboken för det klassiska användargränssnittet](home.md)
-+ Introduktion till redigering av klassiskt användargränssnitt {#introduction}
++ Introduktion till klassisk gränssnittsredigering {#introduction}
    + [Steg 1 för författare](classic-page-author-first-steps.md)
    + [Om du skriver i det klassiska gränssnittet](classicui.md)
    + [Arbeta med författarmiljön](author-env.md)
@@ -50,7 +50,6 @@ ht-degree: 20%
    + [Använda taggar](classic-feature-tags.md)
    + [Ställning](classic-feature-scaffolding.md)
    + [Konfigurera komponenter i designläge](classic-page-author-design-mode.md)
-   + [Lägga till Search &amp; Promote på sidan](classic-feature-search-promote.md)
    + [Komponenter](classic-page-author-default-components.md)
 + Arbetsflöden {#workflows}
    + [Delta i arbetsflöden](classic-workflows-participating.md)
@@ -63,7 +62,7 @@ ht-degree: 20%
    + [Marknadsföra Launches](classic-launches-promoting.md)
 + Personanpassning {#personalization}
    + [Förstå segmentering](classic-personalization-campaigns-segmentation.md)
-   + [Kampanjhantering](classic-personalization-campaigns.md)
+   + [Campaign Management](classic-personalization-campaigns.md)
    + [Lärare och strategier](classic-personalization-campaigns-teasers-strategy.md)
    + [Landningssidor](classic-personalization-campaigns-landingpage.md)
    + [Målerbjudanden](classic-personalization-campaigns-target-offers.md)
@@ -79,7 +78,7 @@ ht-degree: 20%
    + [Arbeta med Adobe Campaign](classic-personalization-ac.md)
    + [Adobe Campaign Components](classic-personalization-ac-components.md)
    + [Inrikta er på Adobe Campaign](classic-personalization-ac-target.md)
-+ Funktionsredigering i det klassiska användargränssnittet {#assets}
++ Skapa resurser i det klassiska användargränssnittet {#assets}
    + [Arbeta med resurser](classicui-assets.md)
    + [Leverera Dynamic Media Assets](dynamic-media-assets-delivering.md)
    + [Lägga till Dynamic Media-resurser på sidor](dynamic-media-assets-adding-to-page.md)
