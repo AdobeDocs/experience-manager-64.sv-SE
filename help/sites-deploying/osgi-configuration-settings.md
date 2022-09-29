@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ccddb2cd-8e67-43aa-a495-8996ad349761
 feature: Configuring
 exl-id: 5c07c773-53a3-41fd-860a-da0cb14f8bc6
-source-git-commit: b2888dd2d523488b416550d5826f8cf077a25e32
+source-git-commit: 5e6376f84b69022aec078d9f2f9163aaa8a0a37c
 workflow-type: tm+mt
-source-wordcount: '3483'
+source-wordcount: '3459'
 ht-degree: 0%
 
 ---
@@ -247,8 +247,6 @@ Du kan ange olika parametrar, bland annat:
 * **Skriptanvändare** - den här valfria egenskapen kan ange det databasanvändarkonto som används för att läsa skripten. Om inget konto anges `admin` används som standard.
 
 * **Standardtillägg** Listan över tillägg som standardbeteendet ska användas för. Det innebär att det sista sökvägssegmentet i resurstypen kan användas som skriptnamn.
-
-**Day Commons GFX Font Helper** När du återger bilder kan du använda DrawText för att bädda in text. För detta kan du även installera egna teckensnitt:
 
 * Definiera **Teckensnittssökväg** som ska genomsökas efter projektspecifika teckensnitt.
 
