@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ccddb2cd-8e67-43aa-a495-8996ad349761
 feature: Configuring
 exl-id: 5c07c773-53a3-41fd-860a-da0cb14f8bc6
-source-git-commit: b06865e213fd20ed328104642eda812d4dfe43ed
+source-git-commit: 904c7acc63dac5c92a5d1754380d075727e6a28a
 workflow-type: tm+mt
-source-wordcount: '3461'
+source-wordcount: '3460'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 OSGi &quot;*innehåller standardmallar som gör det möjligt att konstruera program utifrån små, återanvändbara och samverkansbaserade komponenter. Dessa komponenter kan sammanställas i ett program och distribueras*&quot;.
 
-Detta gör det enkelt att hantera paket när de kan stoppas, installeras och startas individuellt. De inbördes beroendena hanteras automatiskt. Varje OSGi-komponent (se [OSGi-specifikation](https://www.osgi.org/Specifications/HomePage)) finns i ett av de olika paketen. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana paket. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
+Detta gör det enkelt att hantera paket när de kan stoppas, installeras och startas individuellt. De inbördes beroendena hanteras automatiskt. Varje OSGi-komponent (se [OSGi-specifikation](https://docs.osgi.org/specification/)) finns i ett av de olika paketen. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana paket. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
 Följande OSGi-konfigurationsinställningar (listade efter paket) är relevanta för projektimplementeringen. Alla inställningar som visas behöver inte justeras, vissa anges för att du ska förstå hur AEM fungerar.
 
