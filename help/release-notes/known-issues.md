@@ -10,7 +10,7 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 266634ab-21d3-4aac-acfa-b799a7485507
 exl-id: ba65e853-d69a-4341-93c3-5628c60c403b
-source-git-commit: 7f80933dfe8439bbd57ef85ece96399f7ec39f64
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 0%
@@ -133,9 +133,9 @@ Om du använder Microsoft Edge som webbläsare:
 
 (CQ-4238462)
 
-### Integrering med Adobe Sign
+### Integrering med Acrobat Sign
 
-* Adobe Sign-schemaläggaren slutar fungera regelbundet och därför flyttas inte väntande signaturer till överföring. Lös problemet genom att starta om **Stöd för Apache Sling Scheduler** paket från AEM webbkonsol på https://[*server*]:[*port*]/system/console/bundles.
+* Acrobat Sign-schemaläggaren slutar fungera regelbundet och därför flyttas inte väntande signaturer till överföring. Lös problemet genom att starta om **Stöd för Apache Sling Scheduler** paket från AEM webbkonsol på https://[*server*]:[*port*]/system/console/bundles.
 
 ### Skapa anpassningsbara Forms-program
 

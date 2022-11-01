@@ -12,7 +12,7 @@ content-strategy: max-2018
 discoiquuid: a8b1f7df-e36f-4d02-883a-72120fea7046
 role: Admin
 exl-id: 72ead30c-648d-43ad-9826-9c8945a8860d
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
 source-wordcount: '1829'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Migrera AEM Forms-resurser och -dokument {#migrate-aem-forms-assets-and-documents}
 
-Migreringsverktyget konverterar [adaptiva Forms-resurser](/help/forms/using/introduction-forms-authoring.md), [molnkonfigurationer](/help/sites-developing/extending-cloud-config.md) och [Correspondence Management-resurser](/help/forms/using/cm-overview.md) från det format som användes i de tidigare versionerna till det format som användes i AEM 6.4 Forms. När du kör migreringsverktyget migreras följande:
+Migreringsverktyget konverterar [Adaptivt Forms-material](/help/forms/using/introduction-forms-authoring.md), [molnkonfigurationer](/help/sites-developing/extending-cloud-config.md)och [Korrespondenshanteringsresurser](/help/forms/using/cm-overview.md) från det format som användes i de tidigare versionerna till det format som användes i AEM 6.4 Forms. När du kör migreringsverktyget migreras följande:
 
 * Anpassade komponenter för adaptiva formulär
 * Anpassningsbara mallar för blanketter och korrespondenshantering
@@ -34,19 +34,19 @@ Migreringsverktyget konverterar [adaptiva Forms-resurser](/help/forms/using/intr
 
 ## Migreringsmetod {#approach-to-migration}
 
-Du kan [uppgradera](/help/forms/using/upgrade.md) till den senaste versionen av AEM Forms 6.4 från AEM Forms 6.3 eller 6.2 eller utföra en ny installation. Beroende på om du har uppgraderat din tidigare installation eller utfört en ny installation måste du göra något av följande:
+Du kan [uppgradera](/help/forms/using/upgrade.md) till den senaste versionen av AEM Forms 6.4 från AEM Forms 6.3 eller 6.2 eller utför en ny installation. Beroende på om du har uppgraderat din tidigare installation eller utfört en ny installation måste du göra något av följande:
 
 **Vid uppgradering på plats**
 
-Om du har utfört en uppgradering på plats har den uppgraderade instansen redan resurserna och dokumenten. Innan du kan använda resurserna och dokumenten måste du dock installera [AEMFD-kompatibilitetspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) (inkluderar kompatibilitetspaketet för hantering av korrespondence Management)
+Om du har utfört en uppgradering på plats har den uppgraderade instansen redan resurserna och dokumenten. Innan du kan använda resurserna och dokumenten måste du dock installera [AEMFD-kompatibilitetspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) (inkluderar kompatibilitetspaket för hantering av korrespondenshantering)
 
-Därefter måste du uppdatera resurserna och dokumenten genom att [köra migreringsverktyget](#runningmigrationutility).
+Sedan måste du uppdatera resurserna och dokumenten med [köra migreringsverktyget](#runningmigrationutility).
 
 **Om installationen inte är på plats**
 
-Om installationen är på fel plats (ny) måste du installera [AEMFD-kompatibilitetspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) innan du kan använda resurserna och dokumenten (innehåller Correspondence Management Compatibility-paketet).
+Om installationen är på fel plats (ny) måste du installera innan du kan använda resurserna och dokumenten [AEMFD-kompatibilitetspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) (inkluderar paketet Correspondence Management Compatibility).
 
-Därefter måste du importera resurspaketet (zip eller cmp) till den nya konfigurationen och sedan uppdatera resurserna och dokumenten genom att [köra migreringsverktyget](#runningmigrationutility). På grund av [bakåtkompatibilitetsrelaterade](/help/sites-deploying/backward-compatibility.md) ändringar ändras platserna för några mappar i crx-databasen. Exportera och importera beroenden manuellt (anpassade bibliotek och resurser) från tidigare inställningar till en ny miljö.
+Därefter måste du importera resurspaketet (zip eller cmp) till den nya konfigurationen och sedan uppdatera resurserna och dokumenten med [köra migreringsverktyget](#runningmigrationutility). Förfaller [bakåtkompatibilitetsrelaterad](/help/sites-deploying/backward-compatibility.md) ändringar, platserna för ett fåtal mappar i crx-databasen ändras. Exportera och importera beroenden manuellt (anpassade bibliotek och resurser) från tidigare inställningar till en ny miljö.
 
 ## Läs innan du fortsätter med migreringen {#prerequisites}
 
@@ -54,7 +54,7 @@ För Correspondence Management-resurser:
 
 * För resurser som importeras från den tidigare plattformen läggs en egenskap till: **fd:version=1.0**.
 * Eftersom AEM 6.1 Forms inte kan kommentera direkt i dokumentet. Kommentarerna som lades till tidigare är tillgängliga i resurserna men visas inte automatiskt i gränssnittet. Du måste anpassa egenskapen extendedProperties i AEM Forms användargränssnitt för att göra kommentarerna synliga.
-* I vissa tidigare versioner, till exempel LiveCycle ES4, redigerades text med Flex RichTextEditor, men sedan AEM 6.1 Forms används HTML-redigeraren. På grund av den här återgivningen och utseendet på teckensnitten kan teckenstorlekar och marginaler skilja sig från de tidigare versionerna i användargränssnittet för författare. Bokstäverna ser dock likadana ut när de återges.
+* I vissa tidigare versioner, till exempel LiveCycle ES4, redigerades text med Flex RichTextEditor, men sedan AEM 6.1 Forms används HTML Editor. På grund av den här återgivningen och utseendet på teckensnitten kan teckenstorlekar och marginaler skilja sig från de tidigare versionerna i användargränssnittet för författare. Bokstäverna ser dock likadana ut när de återges.
 * Listor i textmoduler har förbättrats och återges nu annorlunda. Det kan finnas skillnader i synen. Vi rekommenderar att du återger och ser bokstäverna där du använder listor i textmoduler.
 * Eftersom bildinnehållsmoduler konverteras till DAM-resurser och layouter och fragment läggs till i formulär under migreringen ändras egenskapen Uppdaterat av för dessa moduler till admin.
 * Resursernas versionshistorik migreras inte och är inte tillgänglig efter migreringen. Den efterföljande versionshistoriken efter migreringen bevaras.
@@ -81,7 +81,7 @@ När du kör migreringsverktyget för första gången skapas en logg med följan
 
 1. Öppna följande URL i webbläsaren:
 
-   https://[*värdnamn*]:[*port*]/[*kontextsökväg*]/libs/fd/foundation/gui/content/migration.html
+   https://[*värdnamn*]:[*port*]/[*context_path*]/libs/fd/foundation/gui/content/migration.html
 
    Webbläsaren visar fyra alternativ:
 
@@ -92,7 +92,7 @@ När du kör migreringsverktyget för första gången skapas en logg med följan
 
 1. Gör följande för att utföra migreringen:
 
-   * Om du vill migrera **resurser** trycker du på AEM Forms Assets Migration (Migrering av resurser) och trycker på **Starta migrering** på nästa skärm. Följande migreras:
+   * Migrera **resurser**, tryck på AEM Forms Assets Migration (migrering av-resurser) och tryck på **Starta migrering**. Följande migreras:
 
       * Anpassningsbara formulär
       * Dokumentfragment
@@ -116,16 +116,16 @@ När du kör migreringsverktyget för första gången skapas en logg med följan
    >  * Nya mallar - Anpassningsbara formulärmallar som skapats med mallredigerare under /conf. Detta inkluderar migrering av regler och skript som skapats med regelredigeraren.
 
 
-   * Om du vill migrera anpassade formulärkomponenter trycker du på **Anpassad migrering av Forms-komponenter** och på sidan Anpassad komponentmigrering trycker du på **Starta migrering**. Följande migreras:
+   * Om du vill migrera anpassade formulärkomponenter trycker du **Anpassad migrering av anpassade Forms-komponenter** och på sidan för migrering av anpassade komponenter trycker du på **Starta migrering**. Följande migreras:
 
       * Anpassade komponenter skrivna för Adaptive Forms
       * Komponentövertäckningar, om sådana finns.
-   * Om du vill migrera adaptiva formulärmallar trycker du på **Migrering av adaptiva Forms-mallar** och på sidan Migrering av anpassade komponenter trycker du på **Starta migrering**. Följande migreras:
+   * Om du vill migrera adaptiva formulärmallar trycker du **Adaptiv migrering av Forms-mallar** och på sidan för migrering av anpassade komponenter trycker du på **Starta migrering**. Följande migreras:
 
       * Anpassningsbara formulärmallar som skapats under /apps eller /conf med AEM mallredigeraren.
    * Migrera konfigurationstjänsterna i AEM Forms Cloud för att utnyttja det nya sammanhangsberoende molntjänstparadigmet, som inkluderar det beröringsaktiverade användargränssnittet (under /conf). När du migrerar konfigurationstjänsterna i AEM Forms Cloud flyttas molntjänsterna i /etc till /conf. Om du inte har några anpassningar av molntjänster som är beroende av de äldre sökvägarna (/etc) rekommenderar vi att du kör migreringsverktyget direkt efter uppgraderingen till 6.4 och använder molnkonfigurationsgränssnittet för ytterligare arbete. Om du har befintliga anpassningar av molntjänster kan du fortsätta använda det klassiska användargränssnittet vid uppgraderad installation tills anpassningarna har uppdaterats för att anpassas till de migrerade sökvägarna (/conf) och sedan köra migreringsverktyget.
 
-   Om du vill migrera **AEM Forms molntjänster**, som innehåller följande, trycker du på AEM Forms Cloud Configuration Migration (molnkonfigurationsmigrering är oberoende av AEMFD-kompatibilitetspaketet), trycker på AEM Forms Cloud Configurations Migration och sedan på sidan Configuration Migration (konfigurationsmigrering) trycker du på **Start Migration**:
+   Migrera **AEM Forms molntjänster**, som innehåller följande: tryck på migrering av AEM Forms Cloud-konfiguration (molnkonfigurationsmigreringen är oberoende av AEMFD-kompatibilitetspaketet), tryck på migrering av AEM Forms Cloud-konfigurationer och tryck sedan på sidan Konfigurationsmigrering **Starta migrering**:
 
    * Molntjänster för formulärdatamodell
 
@@ -135,7 +135,7 @@ När du kör migreringsverktyget för första gången skapas en logg med följan
 
       * Källsökväg: /etc/cloudservices/recaptcha
       * Målsökväg: /conf/global/settings/cloudconfigs/recaptcha
-   * Adobe Sign
+   * Acrobat Sign
 
       * Källsökväg: /etc/cloudServices/echosign
       * Målsökväg: /conf/global/settings/cloudconfigs/echosign
@@ -151,15 +151,15 @@ När du kör migreringsverktyget för första gången skapas en logg med följan
 
    När migreringsverktyget körs gör det följande:
 
-   * **Lägger till taggarna i resurserna**: Lägger till taggen &quot;Correspondence Management: Migrerade resurser/Adaptiv Forms: Migrerade resurser&quot;. till de migrerade resurserna, så att användarna kan identifiera migrerade resurser. När du kör migreringsverktyget markeras alla befintliga resurser i systemet som migrerade.
-   * **Genererar taggar**: Kategorier och underkategorier som finns i det tidigare systemet skapas som taggar, och sedan associeras dessa taggar med relevanta Correspondence Management-resurser i AEM. Exempelvis genereras en kategori (anspråk) och en underkategori (anspråk) för en bokstavsmall som taggar.
+   * **Lägger till taggar i resurserna**: Lägger till taggen &quot;Correspondence Management: Migrerade resurser/Adaptiv Forms: Migrerade resurser&quot;. till de migrerade resurserna, så att användarna kan identifiera migrerade resurser. När du kör migreringsverktyget markeras alla befintliga resurser i systemet som migrerade.
+   * **Skapar taggar**: Kategorier och underkategorier som finns i det tidigare systemet skapas som taggar, och sedan associeras dessa taggar med relevanta Correspondence Management-resurser i AEM. Exempelvis genereras en kategori (anspråk) och en underkategori (anspråk) för en bokstavsmall som taggar.
    * **Flyttar layouter och layoutfragment till AEM 6.4 Forms användargränssnitt**: Om du uppgraderar från 6.2 till 6.4 läggs layoutmallarna och layoutfragmenten till som formulär i användargränssnittsavsnittet i AEM Forms 6.4.
 
    >[!NOTE]
    >
    >Om du uppgraderar från 6.2 till 6.4 kan nya mappar med dina resurser visas i gränssnittet för Korrespondenshantering. Du kan behöva kontrollera dessa mappar för att hitta dina resurser.
 
-1. När migreringsverktyget har körts klart fortsätter du till [underhållsaktiviteterna](#housekeepingtasks).
+1. När migreringsverktyget är klart går du till [hushållssysslor](#housekeepingtasks).
 
 ### Hushållsuppgifter efter att migreringsverktyget har körts {#housekeepingtasks}
 
@@ -167,7 +167,7 @@ När du har kört migreringsverktyget ska du sköta följande uppgifter:
 
 1. Kontrollera att XFA-versionen av layouter och fragmentlayouter är 3.3 eller senare. Om du använder layouter och fragmentlayouter av en äldre version kan det uppstå problem när bokstaven återges. Så här uppdaterar du en äldre XFA-version till den senaste versionen:
 
-   1. [Ladda ned XFA som en zip-](/help/forms/using/import-export-forms-templates.md#p-import-and-export-assets-in-correspondence-management-p) fil från Forms användargränssnitt.
+   1. [Hämta XFA som en zip-fil](/help/forms/using/import-export-forms-templates.md#p-import-and-export-assets-in-correspondence-management-p) från Forms användargränssnitt.
    1. Extrahera filen.
    1. Öppna XFA-filen i den senaste Designer-filen och spara den. Versionen av XFA uppdateras till den senaste.
    1. Överför XFA i Forms användargränssnitt.

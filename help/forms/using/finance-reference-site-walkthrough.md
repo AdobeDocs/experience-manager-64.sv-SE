@@ -1,29 +1,28 @@
 ---
 title: Genomgång av referenswebbplatser för ekonomi
-seo-title: Genomgång av referenswebbplatser för ekonomi
-description: 'Utforska referenswebbplatsen We.Finance och se hur den har implementerats. Vi.Finance är ett exempel på implementering som visar AEM Forms viktigaste funktioner. '
-seo-description: 'Utforska referenswebbplatsen We.Finance och se hur den har implementerats. Vi.Finance är ett exempel på implementering som visar AEM Forms viktigaste funktioner. '
+seo-title: We.Finance reference site walkthrough
+description: Utforska referenswebbplatsen We.Finance och se hur den har implementerats. Vi.Finance är ett exempel på implementering som visar AEM Forms viktigaste funktioner.
+seo-description: Explore the We.Finance reference site and understand how it has been implemented. We.Finance is a sample implementation to showcase key features and functionalities of AEM Forms.
 uuid: cbcedba4-6151-475d-b6c2-9859e0382768
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: introduction
 discoiquuid: 0c1b6ad7-9d25-41dc-b1fe-a4cb9366c259
-translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+exl-id: 17e8c644-ee17-496c-a781-a295a4796cb9
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
-source-wordcount: '9150'
+source-wordcount: '9120'
 ht-degree: 0%
 
 ---
 
-
-# Genomgång av referenswebbplats för Web.Finance{#we-finance-reference-site-walkthrough}
+# Genomgång av referenswebbplatser för ekonomi {#we-finance-reference-site-walkthrough}
 
 ## Krav {#pre-requisites}
 
-Konfigurera referenswebbplatserna enligt beskrivningen i [Konfigurera och konfigurera AEM Forms referenswebbplatser](/help/forms/using/setup-reference-sites.md).
+Konfigurera referenswebbplatser enligt beskrivningen i [Konfigurera AEM Forms referenswebbplatser](/help/forms/using/setup-reference-sites.md).
 
-## Scenarier för webbsidan&quot;We.Finance Reference&quot; {#we-finance-reference-site-scenarios}
+## Scenarier om webbplatsen för Vi.Finance Reference {#we-finance-reference-site-scenarios}
 
 Vi.Finance är en ledande organisation inom finanssektorn som erbjuder omfattande och personaliserade finansiella lösningar som passar behoven i olika kundprofiler. De erbjuder kreditkort, bostadslån och hemförsäkring.
 
@@ -69,9 +68,9 @@ Nyhetsbrevet som skickas till Sarah är en anpassad implementering som utlöser 
 
 ### Sarah tycker att erbjudandet är intressant och väljer att tillämpa {#sarah-finds-the-offer-interesting-and-chooses-to-apply}
 
-Sarah bestämmer sig för att ansöka om kreditkort och trycker på **[!UICONTROL Apply Now]** i e-postmeddelandet. Det tar Sarah till kreditkortsapplikationen på We.Finance-portalen. Ansökningsformuläret är organiserat i avsnitt med hjälp av en kortlayout.
+Sarah bestämmer sig för att ansöka om kreditkort och kreditkort **[!UICONTROL Apply Now]** i e-postmeddelandet. Det tar Sarah till kreditkortsapplikationen på We.Finance-portalen. Ansökningsformuläret är organiserat i avsnitt med hjälp av en kortlayout.
 
-Sarah väljer ett kreditkort bland de tillgängliga alternativen och klickar på **[!UICONTROL Continue]**.
+Sarah väljer ett kreditkort bland de tillgängliga alternativen och klickar **[!UICONTROL Continue]**.
 
 ![cc-application-form-desktop](assets/cc-application-form-desktop.png)
 
@@ -79,16 +78,16 @@ På sidan Personlig information får hon ett meddelande om att hon måste logga 
 
 ![login-ssn](assets/login-ssn.png)
 
-Sarah är en befintlig We.Finance-kund. Hon loggar in med sina inloggningsuppgifter för kontot We.Finance och hennes personliga information fylls i automatiskt i formuläret. Sarah fortsätter att fylla i ansökningsformuläret och det är när en påminnelse visas för ett möte som hon måste närvara vid. Hon klickar **[!UICONTROL Save my progress]** på ansökningsformuläret. Den sparar all information som Sarah har fyllt i hittills och en dialogruta öppnas som bekräftar om hon vill få ett e-postmeddelande med en länk till hennes utkast till ansökan som ska fyllas i senare.
+Sarah är en befintlig We.Finance-kund. Hon loggar in med sina inloggningsuppgifter för kontot We.Finance och hennes personliga information fylls i automatiskt i formuläret. Sarah fortsätter att fylla i ansökningsformuläret och det är när en påminnelse visas för ett möte som hon måste närvara vid. Hon klickar **[!UICONTROL Save my progress]** i ansökningsformuläret. Den sparar all information som Sarah har fyllt i hittills och en dialogruta öppnas som bekräftar om hon vill få ett e-postmeddelande med en länk till hennes utkast till ansökan som ska fyllas i senare.
 
-Sarah klickar **[!UICONTROL Send mail]**. Hon får ett mejl med en länk för att återuppta sin kreditkortsansökan.
+Sarah klickade **[!UICONTROL Send mail]**. Hon får ett mejl med en länk för att återuppta sin kreditkortsansökan.
 
 ![meritförteckning](assets/resume.png)
 
 
 <!--Theses sections used to be an accordion until converted to straight Markdown. When accordions are enabled, revert-->
 
-### Sarah kommer åt kreditkortsprogrammet från sin mobila enhet {#a-sarah-access}
+### Sarah har åtkomst till kreditkortsprogrammet från sin mobila enhet {#a-sarah-access}
 
 Om Sarah använder kreditkortsprogrammet från sin mobila enhet öppnas det responsiva programmet i en vy som är optimerad för mobila enheter. I den här vyn återges programformuläret som ett avsnitt i taget. Det gör att Sarah kan visa och tillhandahålla information progressivt när hon navigerar i programmet.
 
@@ -96,14 +95,14 @@ Om Sarah använder kreditkortsprogrammet från sin mobila enhet öppnas det resp
 
 ### Så här fungerar det {#a-how-it-works}
 
-Knappen **[!UICONTROL Apply Now]** dirigerar Sarah till kreditkortsprogrammet. Programmet är ett anpassat formulär som du kan granska i redigeringsinstanserna på `https://[host]:[Port]/editor.html/content/forms/af/we-finance/cc-app.html`.
+The **[!UICONTROL Apply Now]** skickar Sarah till kreditkortsprogrammet. Programmet är ett anpassat formulär som du kan granska i redigeringsinstanserna på `https://[host]:[Port]/editor.html/content/forms/af/we-finance/cc-app.html`.
 
 Några av de funktioner du kan granska i den anpassade formen är:
 
 * Det baseras på ett XSD-schema.
 * Den har skapats med tema A för Web Finance för formatering och We.Finance för layout. Dessutom används Layout utan panelrubriker i formulärrubrikslayouten för mobil navigering. Den visar en progressiv mobil layout när den öppnas från en mobil enhet. Du kan granska mallen på `https://[host]:[Port]/libs/wcm/core/content/sites/templates.html/conf/we-finance` och temat på `https://[host]:[Port]/editor.html/content/dam/formsanddocuments-themes/we-finance/we-finance-theme-a/jcr:content`.
-* Den innehåller anpassningsbara formulärregler som anropar Form Data Model-tjänster för att förifylla användarinformation för inloggad användare. Den anropar också tjänster för att förifylla information med personnummer eller e-postadress som anges i formuläret. Du kan granska formulärdatamodeller och deras tjänster på `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
-* Här används olika adaptiva formulärkomponenter för att hämta in indata och anpassa dem efter användarens svar. Den använder också komponenter som e-post som stöder HTML5-indatatyper.
+* Den innehåller anpassningsbara formulärregler som anropar Form Data Model-tjänster för att förifylla användarinformation för inloggad användare. Den anropar också tjänster för att förifylla information med personnummer eller e-postadress som anges i formuläret. Du kan läsa formulärdatamodeller och deras tjänster på `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
+* Här används olika adaptiva formulärkomponenter för att hämta in indata och anpassa dem efter användarens svar. Den använder också komponenter som e-post som stöder indatatyperna HTML5.
 * Den använder komponenten Signature Step för att visa det ifyllda formuläret och tillåter elektronisk signatur i formuläret.
 * Knappen Spara mitt förlopp genererar ett unikt ID för användaren och sparar det delvis ifyllda programmet som ett utkast i en nod i AEM. Dessutom visas en dialogruta där du söker behörighet att skicka ett e-postmeddelande med en länk till noden som innehåller utkastet till program. Knappen Skicka e-post i bekräftelsedialogrutan utlöser ett e-postmeddelande med en länk till noden som innehåller utkastet.
 * Den använder åtgärden Anropa AEM arbetsflöde för att utlösa arbetsflödet för godkännande av kreditkort. Du kan granska arbetsflödet som används i det här formuläret på `https://[host]:[Port]/editor.html/conf/global/settings/workflow/models/we-finance-credit-card-workflow.html`
@@ -117,12 +116,12 @@ Se även följande dokumentation för mer information om funktioner som används
 * [Regelredigeraren](/help/forms/using/rule-editor.md)
 * [Teman](/help/forms/using/themes.md)
 * [Dataintegrering](/help/forms/using/data-integration.md)
-* [Använda Adobe Sign i anpassningsbara formulär](/help/forms/using/working-with-adobe-sign.md)
+* [Använda Acrobat Sign i anpassningsbara formulär](/help/forms/using/working-with-adobe-sign.md)
 * [Forms-centrerat arbetsflöde i OSGi](/help/forms/using/aem-forms-workflow.md)
 
 ### Se det själv {#a-see-it-yourself}
 
-När du är inloggad som Sarah Rose klickar du på knappen **[!UICONTROL Apply now]** i kreditkortsprogrammet. Fyll i viss information, utforska olika adaptiva formulärkomponenter och klicka på **[!UICONTROL Save my progress]** för att få ett e-postmeddelande med en **[!UICONTROL Resume]**-knapp som länkar till utkastsprogrammet. Se till att du anger ditt e-post-ID i programformuläret som ska ta emot e-postmeddelandet.
+När du är inloggad som Sarah Rose klickar du på **[!UICONTROL Apply now]** på kreditkortsprogrammet. Fyll i detaljer, utforska olika adaptiva formulärkomponenter och klicka **[!UICONTROL Save my progress]** för att få ett e-postmeddelande med **[!UICONTROL Resume]** som länkar till utkastet. Se till att du anger ditt e-post-ID i programformuläret som ska ta emot e-postmeddelandet.
 
 Läs mer om Web.Finance-temat:
 
@@ -132,13 +131,13 @@ Du kan läsa Web.Finance-mallen på:
 
 `https://<host>:<AuthorPort>/editor.html/conf/we-finance/settings/wcm/templates/we-finance-template/structure.html`
 
-### Sarah återupptar och skickar programmet {#sarah-resumes-and-submits-the-application}
+### Sarah återupptar och skickar ansökan {#sarah-resumes-and-submits-the-application}
 
-Sarah kommer tillbaka senare och hittar ett e-postmeddelande från We.Finance. Hon klickar på knappen **[!UICONTROL Resume]** i det e-postmeddelande som tar henne till utkastet till kreditkortsansökan. Informationen som hon fyllde tidigare är förifylld. Hon fyller i det återstående ansökningsformuläret, signerar ansökan och skickar in den.
+Sarah kommer tillbaka senare och hittar ett e-postmeddelande från We.Finance. Hon klickar på **[!UICONTROL Resume]** i e-postmeddelandet som tar henne till sin kreditkortsansökan. Informationen som hon fyllde tidigare är förifylld. Hon fyller i det återstående ansökningsformuläret, signerar ansökan och skickar in den.
 
 ![resume-1](assets/resume-1.png)
 
-Alternativt kan hon komma åt sitt utkast under **[!UICONTROL My Forms]** på startsidan för We.Finance.
+Alternativt kan hon få åtkomst till sitt utkast under **[!UICONTROL My Forms]** på startsidan för We.Finance.
 
 ![portalutkast](assets/portal-drafts.png)
 
@@ -150,7 +149,7 @@ Knappen Återuppta i e-postmeddelandet dirigerar om Sarah till noden som innehå
 
 Du måste ha fått ett e-postmeddelande med en länk till utkastet till program på ditt e-post-ID som du angav när du fyllde i ansökningsformuläret. Fyll i de återstående avsnitten i programmet och skicka in det.
 
-### We.Finance tar emot och godkänner programmet {#approving-the-application}
+### We.Finance tar emot och godkänner ansökan {#approving-the-application}
 
 We.Finance får den kreditkortsansökan som Sarah har lämnat in. Gloria Rios har tilldelats en uppgift. Hon granskar uppgiften i sin AEM Inbox och godkänner den.
 
@@ -160,15 +159,15 @@ We.Finance får den kreditkortsansökan som Sarah har lämnat in. Gloria Rios ha
 
 När Sarah fyller i och skickar kreditkortsprogrammet aktiveras en Forms Workflow och en uppgift skapas i Glorias AEM inkorg.
 
-AEM Forms on OSGi innehåller formulärbaserade arbetsflöden som gör att du kan skapa anpassningsbara formulärbaserade arbetsflöden. Dessa arbetsflöden kan användas för granskning och godkännande, affärsprocessflöden, för att starta dokumenttjänster, integrera med Adobe Sign signaturarbetsflöde och så vidare. Mer information finns i [Forms-centrerat arbetsflöde på OSGi](/help/forms/using/aem-forms-workflow.md).
+AEM Forms on OSGi innehåller formulärbaserade arbetsflöden som gör att du kan skapa anpassningsbara formulärbaserade arbetsflöden. Dessa arbetsflöden kan användas för granskning och godkännande, affärsprocessflöden, för att starta dokumenttjänster, integrera med Acrobat Sign signaturarbetsflöde och så vidare. Mer information finns i [Forms-centrerat arbetsflöde i OSGi](/help/forms/using/aem-forms-workflow.md).
 
-I följande bild visas det AEM arbetsflödet som behandlar kreditkortsprogrammet och genererar en PDF-fil av programmet.
+I följande bild visas det AEM arbetsflödet som behandlar kreditkortsprogrammet och genererar utdata från PDF i programmet.
 
 ![arbetsflöde](assets/workflow.png)
 
 #### Se det själv {#see-it-yourself-2}
 
-Du kan öppna AEM inkorg för webbplatsen we.Finance på https://&lt;*värdnamn*>:&lt;*PublishPort*>/content/we-finance/global/en.html. På sidan trycker du på **[!UICONTROL Sign In]**, markerar kryssrutan **[!UICONTROL Login as representative]**, loggar in i AEM inkorg med `grios/password` som användarnamn/lösenord för Gloria Rios och godkänner kreditkortsprogrammet. Information om hur du använder AEM Inkorg för formulärcentrerade arbetsflödesuppgifter finns i [Hantera Forms-program och -uppgifter i AEM Inkorg](/help/forms/using/manage-applications-inbox.md).
+Du kan öppna AEM inkorg för webbplatsen we.Finance på https://&lt;*värdnamn*>:&lt;*PublishPort*>/content/we-finance/global/en.html. Tryck på **[!UICONTROL Sign In]** väljer du **[!UICONTROL Login as representative]** kryssruta, logga in i AEM inkorg med `grios/password` som användarnamn/lösenord för Gloria Rios och godkänna kreditkortsansökan. Information om hur du använder AEM Inkorg för formulärbaserade arbetsflödesuppgifter finns i [Hantera Forms-program och -uppgifter i AEM Inkorg](/help/forms/using/manage-applications-inbox.md).
 
 ![inbox-1](assets/inbox-1.png)
 
@@ -190,17 +189,17 @@ Välkomstpaketet innehåller ett annat ansökningsformulär som Sarah kan fylla 
 
 #### Så här fungerar det {#how-it-works-3}
 
-Välkomstpaketet är en interaktiv kommunikation som ingår i `cq-we-finance-content-pkg.zip`-paketet. De interaktiva korten i persondatorversionen för att visa fördelarna med kreditkortet i välkomstpaketet är en anpassad layout som skapats med standardkortlayouten för ett dokumentfragment.
+Välkomstpaketet är en interaktiv kommunikation som ingår i `cq-we-finance-content-pkg.zip` paket. De interaktiva korten i persondatorversionen för att visa fördelarna med kreditkortet i välkomstpaketet är en anpassad layout som skapats med standardkortlayouten för ett dokumentfragment.
 
 Tilläggsprogrammet är en inbäddad adaptiv form i interaktiv kommunikation med välkomstpaketet.
 
 #### Se det själv {#see-it-yourself-3}
 
-Klicka på knappen **[!UICONTROL Resume]** i det e-postmeddelande som du fick i föregående steg. Utkastprogrammet öppnas. Fyll i alla uppgifter och skicka in ansökan. Du får då ett välkomstpaket. Läs välkomstpaketet.
+Klicka på **[!UICONTROL Resume]** i e-postmeddelandet som du fick i föregående steg. Utkastprogrammet öppnas. Fyll i alla uppgifter och skicka in ansökan. Du får då ett välkomstpaket. Läs välkomstpaketet.
 
 Du kan även visa välkomstpaketet på följande URL:
 
-https://&lt;*host*>:&lt;*port*>/content/aemforms-refsite/doclink.html?document=/content/forms/af/we-Finance/credit-card/creditcomekit&amp;customerId=197&amp;channel=web
+https://&lt;*värd*>:&lt;*port*>/content/aemforms-refsite/doclink.html?document=/content/forms/af/we-Finance/credit-card/creditcomekit&amp;customerId=197&amp;channel=web
 
 Du kan komma åt den på författare och publiceringsinstanser.
 
@@ -220,7 +219,7 @@ Sarah klickar på Visa kontoutdrag i e-postmeddelandet för att visa kontoutdrag
 
 ![Olika delar av kreditkortsutdraget](assets/sara-rose-statement.png)
 
-Sarah behöver inte gå till portalen eller söka i sina mejl efter PDF-version av kontoutdrag för arkivering offline. Hon klickar bara på nedladdningsinstruktionen för att ladda ned en PDF-version av kontoutdraget.
+Sarah behöver inte gå till portalen eller söka igenom sina mejl efter PDF-version av kontoutdraget för offlinearkivering. Hon klickar bara på nedladdningsinstruktionen för att ladda ned en PDF-version av kontoutdraget.
 
 Den detaljerade programsatsen läggs ut i en responsiv tabell. Programsatsen ger även möjlighet att betala en del eller hela förfallna beloppet inifrån utdraget.
 
@@ -240,11 +239,11 @@ https://&lt;*värdnamn*>:&lt;*port*>/content/aemforms-refsite/doclink.html?docum
 
 Du kan komma åt den på författare och publiceringsinstanser.
 
-Kreditkortsutdraget visar kampanjerbjudanden mot slutet av utdraget. Ni kan integrera Adobe Target med AEM Forms Interactive Communication för att leverera riktade kampanjer baserade på specifika kundsegment. Information om hur du konfigurerar din interaktiva kommunikation så att den använder Adobe Target för anpassade och riktade erbjudanden finns i [skapa riktade upplevelser](/help/forms/using/experience-targeting-forms.md).
+Kreditkortsutdraget visar kampanjerbjudanden mot slutet av utdraget. Ni kan integrera Adobe Target med AEM Forms Interactive Communication för att leverera riktade kampanjer baserade på specifika kundsegment. Information om hur du konfigurerar din interaktiva kommunikation för att använda Adobe Target för anpassade och riktade erbjudanden finns i [skapa riktade upplevelser](/help/forms/using/experience-targeting-forms.md).
 
 ![](do-not-localize/offers.png)
 
-### We.Finance analyserar kreditkortsprogrammets {#we-finance-analyzes-the-performance-of-the-credit-card-application} prestanda
+### Vi.Finance analyserar kreditkortsprogrammets prestanda {#we-finance-analyzes-the-performance-of-the-credit-card-application}
 
 Vi.Finance granskar då och då hur deras kreditkortsprogram fungerar för att hitta eventuella problem som kunderna kan ställas inför. De använder den här analysen för att fatta välgrundade beslut om de ändringar som krävs i kreditkortsansökan för att förbättra användarupplevelsen, minska avhoppsfrekvensen för formulär och därigenom förbättra konverteringsgraden. De utnyttjar integreringen av AEM Forms med Adobe Analytics för sin analys. Följande bild visar deras kontrollpanel för analys.
 
@@ -258,14 +257,14 @@ Prestandamätningarna för kreditkortsansökningsformuläret spåras med Adobe A
 
 #### Se det själv {#see-it-yourself-br}
 
-För att du ska kunna se och utforska analysrapporten tillhandahåller vi startdata för kreditkortstillämpningen på referenswebbplatsen. Se [Konfigurera analys](/help/forms/using/setup-reference-sites.md#configureanalytics) innan du använder dirigerade data. Utför följande steg i författarinstansen för att visa rapporten med startdata:
+För att du ska kunna se och utforska analysrapporten tillhandahåller vi startdata för kreditkortstillämpningen på referenswebbplatsen. Innan du använder startvärdesdata ska du läsa [Konfigurera analys](/help/forms/using/setup-reference-sites.md#configureanalytics). Utför följande steg i författarinstansen för att visa rapporten med startdata:
 
-1. Gå till **[!UICONTROL Forms & Documents]**-gränssnittet på https://&lt;*värdnamn*>:&lt;*AuthorPort*>/aem/forms.html/content/dam/formsanddocuments.
+1. Gå till **[!UICONTROL Forms & Documents]** Gränssnitt på https://&lt;*värdnamn*>:&lt;*AuthorPort*>/aem/forms.html/content/dam/formSanddocuments.
 
-1. Klicka för att öppna mappen **[!UICONTROL We.Finance]**.
-1. Välj **[!UICONTROL Application for Credit Card]** adaptivt formulär och klicka sedan på **[!UICONTROL Enable Analytics]** i verktygsfältet.
+1. Klicka för att öppna **[!UICONTROL We.Finance]** Mapp.
+1. Välj **[!UICONTROL Application for Credit Card]** anpassat formulär och klicka sedan på **[!UICONTROL Enable Analytics]**.
 
-1. Välj det adaptiva formuläret igen och klicka på **[!UICONTROL Analytics Report]** i verktygsfältet för att generera rapporten. Du kommer att se en tom rapport från början.
+1. Markera det anpassningsbara formuläret igen och klicka på **[!UICONTROL Analytics Report]** i verktygsfältet för att generera rapporten. Du kommer att se en tom rapport från början.
 
 Så här genererar du en analysrapport med dirigerade data:
 
@@ -274,33 +273,33 @@ Så här genererar du en analysrapport med dirigerade data:
 1. Dubbelklicka på den markerade filen för att öppna dess innehåll på den högra panelen.
 1. Kopiera allt innehåll i startdatafilen.
 1. I CRXDE navigerar du till: `/content/dam/formsanddocuments/we-finance/cc-app/jcr:content/analyticsdatanode/lastsevendays`
-1. Klistra in det kopierade innehållet i startdatafilen i fältet **[!UICONTROL analyticsdata]** under **[!UICONTROL Properties]**.
+1. I **[!UICONTROL analyticsdata]** fält under **[!UICONTROL Properties]**, klistra in det kopierade innehållet i startdatafilen.
 
-1. Välj **Ansökan för kreditkort** anpassat formulär och klicka på **[!UICONTROL Analytics Report]** i verktygsfältet för att generera rapporten med dirigerade data.
+1. Välj **Ansökan om kreditkort** anpassat formulär och klicka **[!UICONTROL Analytics Report]** i verktygsfältet för att generera rapporten med startdata.
 
 **A/B-testning av kreditkortsansökan**
 
 Förutom att analysera kreditkortsprogrammets prestanda och ständigt förbättra den, utnyttjar Web.Finance integreringen av AEM Forms med Target för att skapa A/B-tester. De kan leverera olika upplevelser av kreditkortsansökningsformuläret och identifiera den upplevelse som ger bättre konverteringsgrad när det gäller ifyllande och inlämning av formulär.
 
-Information om hur du konfigurerar mål på AEM Forms-servern finns i [Konfigurera och integrera mål i AEM Forms](/help/forms/using/ab-testing-adaptive-forms.md#set%20up%20and%20integrate%20target%20in%20aem%20forms).
+Information om hur du konfigurerar mål på AEM Forms-servern finns i [Konfigurera och integrera Target i AEM Forms](/help/forms/using/ab-testing-adaptive-forms.md#set%20up%20and%20integrate%20target%20in%20aem%20forms).
 
 Utför följande steg för att skapa ett A/B-test för ansökningsformuläret We.Finance:
 
-1. Gå till **[!UICONTROL Forms & Documents]** på https://&lt;*värdnamn*:&lt;*AuthorPort*>/aem/forms.html/content/dam/formsanddocuments.
+1. Gå till **[!UICONTROL Forms & Documents]** på https://&lt;*värdnamn*>:&lt;*AuthorPort*>/aem/forms.html/content/dam/formSanddocuments.
 
-1. Klicka för att öppna mappen **[!UICONTROL We.Finance]**.
-1. Välj **[!UICONTROL Application for Credit Card]** adaptivt formulär.
-1. Klicka på **[!UICONTROL More]** i verktygsfältet och välj **[!UICONTROL Configure A/B Testing]**. Sidan Konfigurera A/B-testning öppnas.
+1. Klicka för att öppna **[!UICONTROL We.Finance]** mapp.
+1. Välj **[!UICONTROL Application for Credit Card]** adaptiv form.
+1. Klicka **[!UICONTROL More]** i verktygsfältet och välj **[!UICONTROL Configure A/B Testing]**. Sidan Konfigurera A/B-testning öppnas.
 
 1. Ange en **[!UICONTROL Activity Name]**.
-1. I listrutan Målgrupp väljer du en målgrupp till vilken du vill leverera olika upplevelser av formuläret. Exempel: **Besökare som använder Chrome**.
-1. I fälten **[!UICONTROL Experience Distribution]** för upplevelserna A och B anger du fördelningen, uttryckt i procent, för att bestämma hur upplevelserna ska fördelas mellan den totala publiken. Om du till exempel anger 40, 60 för upplevelserna A respektive B kommer upplevelsen A att visas för 40 % av publiken och de återstående 60 % kommer att se upplevelsen B.
-1. Klicka på **Konfigurera**. En dialogruta visas som bekräftar att A/B-testet har skapats.
-1. Klicka på **Klar**.
-1. Välj formuläret **Ansökan för kreditkort** och klicka på **Redigera**. Det ger möjlighet att öppna en av upplevelserna. Klicka på **Upplev B**. Formuläret öppnas i redigeringsläge.
+1. I listrutan Målgrupp väljer du en målgrupp till vilken du vill leverera olika upplevelser av formuläret. Till exempel: **Besökare som använder Chrome**.
+1. I **[!UICONTROL Experience Distribution]** fält för upplevelserna A och B, ange fördelningen, uttryckt i procent, för att avgöra hur upplevelserna ska fördelas mellan den totala publiken. Om du till exempel anger 40, 60 för upplevelserna A respektive B kommer upplevelsen A att visas för 40 % av publiken och de återstående 60 % kommer att se upplevelsen B.
+1. Klicka **Konfigurera**. En dialogruta visas som bekräftar att A/B-testet har skapats.
+1. Klicka **Klar**.
+1. Välj **Ansökan om kreditkort** formulär och klicka **Redigera**. Det ger möjlighet att öppna en av upplevelserna. Klicka **Upplevelse B**. Formuläret öppnas i redigeringsläge.
 
 1. Ändra formuläret efter behov för att skapa en annan upplevelse än standardupplevelsen A.
-1. Gå till användargränssnittet för Forms och dokument, markera formuläret, klicka på **Mer** och välj **Starta A/B-testning**.
+1. Gå till användargränssnittet för Forms och dokument, markera formuläret, klicka på **Mer** och markera **Starta A/B-testning**.
 
 1. Öppna formuläret i webbläsaren flera gånger med följande URL:
 
@@ -308,24 +307,24 @@ Utför följande steg för att skapa ett A/B-test för ansökningsformuläret We
 
    >[!NOTE]
    >
-   >Ta bort cookien med namnet **mbox** från webbläsarens cookie persistence innan du öppnar formuläret nästa gång. Du kommer att se upplevelsen A och B av formuläret på måfå.
+   >Ta bort cookien med namnet **mbox** från webbläsarens cookie-beständighet innan formuläret öppnas nästa gång. Du kommer att se upplevelsen A och B av formuläret på måfå.
 
-1. Markera formuläret, klicka på **Mer** och klicka på **A/B-testrapport**. Du hittar inte så mycket data i rapporten som du just har påbörjat testningen. Nu ska vi tillhandahålla vissa startdata för att se hur A/B-testrapporten ser ut.
+1. Markera formuläret och klicka på **Mer** och klicka **A/B-testrapport**. Du hittar inte så mycket data i rapporten som du just har påbörjat testningen. Nu ska vi tillhandahålla vissa startdata för att se hur A/B-testrapporten ser ut.
 
 1. Öppna CRXDE Lite och gör en säkerhetskopia av följande fil: /libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
-1. Ersätt definitionen av funktionen `onReportLoadSuccess` i den ovannämnda filen med funktionsdefinitionen i följande fil: /apps/we-finance/demo-artifacts/targetreport.js
+1. Ersätt definitionen av funktion `onReportLoadSuccess` i den ovannämnda filen med funktionsdefinitionen i följande fil: /apps/we-finance/demo-artifacts/targetreport.js
 
-   **Obs!** Ändringarna är endast avsedda som demoversion. Se till att du återställer filinnehållet när du har slutfört den här proceduren.
+   **Obs!** Dessa ändringar är endast avsedda för demonstrationssyften. Se till att du återställer filinnehållet när du har slutfört den här proceduren.
 
 1. Uppdatera rapporten som du skapade så ser du något liknande. Granska rapportkontrollpanelen.
 
 ![ab-test-report-3](assets/ab-test-report-3.png)
 
-Om du vill avsluta A/B-testet klickar du på **Slut på A/B-test** på kontrollpanelen för rapporter. Nu visas en dialogruta där du uppmanas att deklarera en upplevelse. Välj en vinnare och bekräfta att du vill avsluta A/B-testet.
+Avsluta A/B-testet genom att klicka **Avsluta A/B-test** på rapportkontrollpanelen. Nu visas en dialogruta där du uppmanas att deklarera en upplevelse. Välj en vinnare och bekräfta att du vill avsluta A/B-testet.
 
 Om ni väljer upplevelse A som vinnare kommer A/B-testet att avslutas och om ni fortsätter kommer endast upplevelse A att användas för alla målgrupper, inklusive de i Chrome.
 
-## Gå igenom {#home-mortgage-application-walkthrough}
+## Genomgång av låneansökningar för hemmabruk {#home-mortgage-application-walkthrough}
 
 Scenariot för bostadslån hos We.Finance omfattar följande:
 
@@ -344,10 +343,10 @@ Nu ska vi i detalj titta på stegen i scenariot med referenswebbplatser för att
 Sarah Rose planerar att köpa ett hus och leta efter en bostadsplan. Hon är kund hos We.Finance och besöker därför Web.Finance-portalen för att utforska bostadserbjudanden. Hon går till lånedelen och hittar en låneberäkning på portalen. Hon fyller i detaljerna och klickar på Beräkna min inteckning, som returnerar en inteckningsplan.
 
 ![lån1](assets/loans1.png) ![lån2](assets/loans2.png)
-**Bild:** *Låneberäkning*
+**Bild:** *Lånekalkylator*
 
 ![lån3](assets/loans3.png)
-**Figur:** *Resultat av kreditberäkning*
+**Bild:** *Resultat av ränteberäkning*
 
 #### Så här fungerar det {#how-it-works-6}
 
@@ -357,11 +356,11 @@ Den inbäddade låneberäkningsenheten, som är en adaptiv form, använder regle
 
 #### Se det själv {#see-it-yourself-5}
 
-Gå till We.Finance-portalen på `https://<publishHost>:<publishPort>/content/we-finance/global/en.html` och klicka på **[!UICONTROL Loans]**. Ange detaljerad information i inteckningsberäkningen och se resultatet.
+Gå till webbportalen för ekonomi på `https://<publishHost>:<publishPort>/content/we-finance/global/en.html` och klicka **[!UICONTROL Loans]**. Ange detaljerad information i inteckningsberäkningen och se resultatet.
 
 ### Sarah tycker att erbjudandet är intressant och väljer att tillämpa {#sarah-finds-the-offer-interesting-and-chooses-to-apply-1}
 
-Sarah väljer att ansöka om bostadslån och klickar på **[!UICONTROL Apply Now]** för att beräkna bostadslån. Ansökan om bostadslån öppnas.
+Sarah väljer att ansöka om bostadslån och klickningar **[!UICONTROL Apply Now]** på inteckningsberäkningen. Ansökan om bostadslån öppnas.
 
 Om Sarah öppnar bostadslåneprogrammet från sin mobila enhet öppnas ansökningsformuläret i en vy som är optimerad för visning på en mobil enhet. I den här vyn återger programformuläret ett avsnitt i taget. Det gör att Sarah kan visa och ange information progressivt när hon navigerar i ansökningsformuläret.
 
@@ -369,7 +368,7 @@ Följande bilder visar arbetsflödet när Sarah navigerar genom bostadslådan p�
 
 ![Fylla i låneansökan på en mobil enhet](assets/mortgage-form-on-mobile.png)
 
-Om Sarah klickar på **Använd nu** från sin dator öppnas låneansökningsformuläret enligt följande. Den information Sarah har lämnat i låneberäkningen är förifylld i ansökningsformuläret. Sarah fyller i återstående information och klickar på **Fortsätt**.
+Om Sarah klickar **Ansök nu** från sin dator öppnas låneansökan enligt följande. Den information Sarah har lämnat i låneberäkningen är förifylld i ansökningsformuläret. Sarah fyller i återstående detaljer och klickar **Fortsätt**.
 
 ![pantbrev](assets/mortgage-application.png)
 
@@ -381,18 +380,18 @@ Den inskickade ansökan går till We.Finance för godkännande.
 
 #### Så här fungerar det {#how-it-works-7}
 
-Knappen **Använd nu** dirigerar Sarah till bostadslåneprogrammet. Programmet är ett anpassat formulär som du kan granska i redigeringsinstanserna på `https://[host]:[Port]/editor.html/content/forms/af/we-finance/hm-app.html`.
+The **Ansök nu** skickar Sarah till bostadslådan. Programmet är ett anpassat formulär som du kan granska i redigeringsinstanserna på `https://[host]:[Port]/editor.html/content/forms/af/we-finance/hm-app.html`.
 
 Några av de funktioner du kan granska i den anpassade formen är:
 
-* Det baseras på ett XSD-schema, `homeMortgageApplication.xsd`.
+* Den baseras på ett XSD-schema, `homeMortgageApplication.xsd`.
 * Det har skapats med We Finance Theme B för formatering och We.Finance för layout. Dessutom används Layout utan panelrubriker i formulärrubrikslayouten för mobil navigering. Den visar en progressiv mobil layout när den öppnas från en mobil enhet. Du kan granska mallen och temat som används i det adaptiva formuläret på följande platser i din AEM författarinstans:
 
    * `https://[host]:[Port]/libs/wcm/core/content/sites/templates.html/conf/we-finance`
    * `https://[host]:[Port]/editor.html/content/dam/formsanddocuments-themes/we-finance/we-finance-theme-b/jcr:content`
 
-* Den första fliken, Komma igång, i programmet är en dynamisk låneberäkning som visar alternativ baserat på vad användaren väljer. Fälten och värdena är till exempel olika för alternativen Inköp och Refinansiering. Den här funktionaliteten uppnås med hjälp av regler för att visa/dölja. När du klickar på Fortsätt och fliken Planer initieras anropas dessutom en webbtjänst som konfigurerats i en formulärdatamodell för att hämta och visa hypoteksplaner. Du kan granska formulärdatamodeller och konfigurerade tjänster på `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
-* Här används olika adaptiva formulärkomponenter för att hämta in indata och anpassa dem efter användarens svar. Den använder också komponenter som e-post som stöder HTML5-indatatyper.
+* Den första fliken, Komma igång, i programmet är en dynamisk låneberäkning som visar alternativ baserat på vad användaren väljer. Fälten och värdena är till exempel olika för alternativen Inköp och Refinansiering. Den här funktionaliteten uppnås med hjälp av regler för att visa/dölja. När du klickar på Fortsätt och fliken Planer initieras anropas dessutom en webbtjänst som konfigurerats i en formulärdatamodell för att hämta och visa hypoteksplaner. Du kan läsa formulärdatamodeller och konfigurerade tjänster på `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
+* Här används olika adaptiva formulärkomponenter för att hämta in indata och anpassa dem efter användarens svar. Den använder också komponenter som e-post som stöder indatatyperna HTML5.
 * Den använder komponenten Signature Step för att visa det ifyllda formuläret och tillåter elektronisk signatur i formuläret.
 * Den använder åtgärden Invoke AEM Workflow submit för att starta arbetsflödet för Web Finance Home Mortgage AEM. Du kan granska arbetsflödet som används i det här formuläret på `https://[host]:[Port]/editor.html/conf/global/settings/workflow/models/we-finance-home-mortgage-workflow.html`
 
@@ -405,16 +404,16 @@ Se även följande dokumentation för mer information om funktioner som används
 * [Regelredigeraren](/help/forms/using/rule-editor.md)
 * [Teman](/help/forms/using/themes.md)
 * [Dataintegrering](/help/forms/using/data-integration.md)
-* [Använda Adobe Sign i anpassningsbara formulär](/help/forms/using/working-with-adobe-sign.md)
+* [Använda Acrobat Sign i anpassningsbara formulär](/help/forms/using/working-with-adobe-sign.md)
 * [Forms-centrerat arbetsflöde i OSGi](/help/forms/using/aem-forms-workflow.md)
 
 #### Se det själv {#see-it-yourself-6}
 
-Gå till `https://[server]:[port]/content/we-finance/global/en/all-forms.html` och klicka på knappen **Tillämpa nu** i Home Mortgage Application. Fyll i informationen på fliken Komma igång, prova olika alternativ och skicka programmet.
+Gå till `https://[server]:[port]/content/we-finance/global/en/all-forms.html` och klicka på **Ansök nu** på Home Mortgage Application. Fyll i informationen på fliken Komma igång, prova olika alternativ och skicka programmet.
 
 Se till att du anger ett giltigt e-post-ID i programmet för att få ett bekräftelsemeddelande i inkorgen.
 
-### We.Finance tar emot programmet {#approving_the_application-1}
+### Vi.Finance tar emot ansökan {#approving_the_application-1}
 
 Vi.Finance får en låneansökan från Sarah. Uppgiften att godkänna eller avvisa programmet tilldelas Gloria Rios. Hon granskar ansökan och upptäcker att Sarah saknar myndighets-ID.
 
@@ -434,7 +433,7 @@ Uppgiften har tilldelats Gloria på nytt. Hon granskar det bifogade ID:t och god
 
 När Sarah fyller i och skickar in bostadslånen aktiveras en Forms Workflow och en uppgift skapas i Glorias AEM inkorg. När Gloria granskar programmet och begär mer information tilldelas uppgiften John Doe. När John Doe bifogar ID:t och skickar in programmet igen tilldelas det Gloria. Detta definieras i det AEM arbetsflöde som är kopplat till låneansökan.
 
-AEM Forms on OSGi innehåller formulärbaserade arbetsflöden som gör att du kan skapa anpassningsbara formulärbaserade arbetsflöden. Dessa arbetsflöden kan användas för granskning och godkännande, affärsprocessflöden, för att starta dokumenttjänster, integrera med Adobe Sign signaturarbetsflöde och så vidare. Mer information finns i [Forms-centrerat arbetsflöde på OSGi](/help/forms/using/aem-forms-workflow.md).
+AEM Forms on OSGi innehåller formulärbaserade arbetsflöden som gör att du kan skapa anpassningsbara formulärbaserade arbetsflöden. Dessa arbetsflöden kan användas för granskning och godkännande, affärsprocessflöden, för att starta dokumenttjänster, integrera med Acrobat Sign signaturarbetsflöde och så vidare. Mer information finns i [Forms-centrerat arbetsflöde i OSGi](/help/forms/using/aem-forms-workflow.md).
 
 I följande bild visas det AEM arbetsflödet som är kopplat till låneansökan.
 
@@ -442,9 +441,9 @@ I följande bild visas det AEM arbetsflödet som är kopplat till låneansökan.
 
 #### Se det själv {#see-it-yourself-7}
 
-Du kommer åt AEM i https://&lt;***värdnamn***>:&lt;***AuthorPort***>/content/we-finance/global/en/login.html?resource=/aem/inbox.html. Logga in i AEM inkorg med `grios/password` som användarnamn/lösenord för Gloria Rios och `jdoe/jdoe` för John Doe och utforska arbetsflödet för bostadslån.
+Du kommer åt AEM på https://&lt;***värdnamn***>:&lt;***AuthorPort***>/content/we-finance/global/en/login.html?resource=/aem/inbox.html. Logga in i AEM med `grios/password` som användarnamn/lösenord för Gloria Rios och `jdoe/jdoe` för John Doe, och utforska arbetsflödet för bostadslån.
 
-Information om hur du använder AEM Inkorg för formulärcentrerade arbetsflödesuppgifter finns i [Hantera Forms-program och -uppgifter i AEM Inkorg](/help/forms/using/manage-applications-inbox.md).
+Information om hur du använder AEM Inkorg för formulärbaserade arbetsflödesuppgifter finns i [Hantera Forms-program och -uppgifter i AEM Inkorg](/help/forms/using/manage-applications-inbox.md).
 
 ### Sarah får välkomstpaketet {#sarah-receives-the-welcome-kit}
 
@@ -456,7 +455,7 @@ Välkomstpaketet är personaliserat för Sarah och visar information som är rel
 
 #### Så här fungerar det {#how-it-works-9}
 
-Välkomstpaketet är en interaktiv kommunikation som ingår i `cq-we-finance-content-pkg.zip`-paketet. Kampanjerbjudandena i välkomstpaketet tillhandahålls av Adobe Target server. Erbjudandena är anpassade och inriktade på specifika kundsegment. Välkomstpaketet hämtar erbjudanden från en förkonfigurerad Adobe Target-server för ett målgruppssegment med kvinnliga kunder.
+Välkomstpaketet är en interaktiv kommunikation som ingår i `cq-we-finance-content-pkg.zip` paket. Kampanjerbjudandena i välkomstpaketet tillhandahålls av Adobe Target server. Erbjudandena är anpassade och riktade till specifika kundsegment. Välkomstpaketet hämtar erbjudanden från en förkonfigurerad Adobe Target-server för ett målgruppssegment med kvinnliga kunder.
 
 De interaktiva korten i skrivbordsversionen av välkomstpaketet använder en anpassad layout som skapats med standardkortlayouten för ett dokumentfragment.
 
@@ -511,12 +510,12 @@ Resultatstatistik för låneansökningsformuläret spåras med Adobe Analytics. 
 
 #### Se det själv {#see-it-yourself-br-1}
 
-För att du ska kunna se och utforska analysrapporten tillhandahåller vi startdata för låneansökan på referenswebbplatsen. Se [Konfigurera analys](/help/forms/using/setup-reference-sites.md#configureanalytics) innan du använder dirigerade data. Utför följande steg i författarinstansen för att visa rapporten med startdata:
+För att du ska kunna se och utforska analysrapporten tillhandahåller vi startdata för låneansökan på referenswebbplatsen. Innan du använder startvärdesdata ska du läsa [Konfigurera analys](/help/forms/using/setup-reference-sites.md#configureanalytics). Utför följande steg i författarinstansen för att visa rapporten med startdata:
 
-1. Gå till **Forms &amp; Documents**-gränssnittet på https://&lt;*värdnamn*>:&lt;*AuthorPort*>/aem/forms.html/content/dam/formsanddocuments.
+1. Gå till **Forms och dokument** Gränssnitt på https://&lt;*värdnamn*>:&lt;*AuthorPort*>/aem/forms.html/content/dam/formSanddocuments.
 
-1. Klicka för att öppna mappen **we-Finance**.
-1. Välj **[!UICONTROL Application for Home Mortgage]** adaptivt formulär och klicka sedan på **[!UICONTROL Enable Analytics]** i verktygsfältet.
+1. Klicka för att öppna **vi-finansiering** Mapp.
+1. Välj **[!UICONTROL Application for Home Mortgage]** anpassat formulär och klicka sedan på **[!UICONTROL Enable Analytics]**.
 
 1. Markera formuläret igen och klicka på **[!UICONTROL Analytics Report]** i verktygsfältet för att generera rapporten. Inledningsvis visas en tom rapport.
 
@@ -534,25 +533,25 @@ Så här genererar du en analysrapport med dirigerade data:
 
 Förutom att analysera hur låneansökan fungerar och ständigt förbättra den utnyttjar Web.Finance integreringen av AEM Forms med Target för att skapa A/B-tester. De kan leverera olika upplevelser av ansökningsformuläret och identifiera den upplevelse som ger bättre konverteringsgrad när det gäller ifyllande och inskickande av formulär.
 
-Information om hur du konfigurerar mål på AEM Forms-servern finns i [Konfigurera och integrera mål i AEM Forms](/help/forms/using/ab-testing-adaptive-forms.md#set%20up%20and%20integrate%20target%20in%20aem%20forms).
+Information om hur du konfigurerar mål på AEM Forms-servern finns i [Konfigurera och integrera Target i AEM Forms](/help/forms/using/ab-testing-adaptive-forms.md#set%20up%20and%20integrate%20target%20in%20aem%20forms).
 
 Utför följande steg i författarinstansen för att skapa A/B-test för låneansökningsformuläret We.Finance:
 
-1. Gå till **Forms &amp; Documents** på https://&lt;*värdnamn*>:&lt;*AuthorPort*>/aem/forms.html/content/dam/formsanddocuments.
+1. Gå till **Forms och dokument** på https://&lt;*värdnamn*>:&lt;*AuthorPort*>/aem/forms.html/content/dam/formSanddocuments.
 
-1. Klicka för att öppna mappen **We.Finance**.
-1. Välj **Ansökan för Home Mortgage** adaptiv form.
-1. Klicka på **Mer** i verktygsfältet och välj **Konfigurera A/B-testning**. Sidan Konfigurera A/B-testning öppnas.
+1. Klicka för att öppna **We.Finance** mapp.
+1. Välj **Ansökan om bostadslån** adaptiv form.
+1. Klicka **Mer** i verktygsfältet och välj **Konfigurera A/B-testning**. Sidan Konfigurera A/B-testning öppnas.
 
-1. Ange ett **aktivitetsnamn**.
-1. I listrutan Målgrupp väljer du en målgrupp till vilken du vill leverera olika upplevelser av formuläret. Exempel: **Besökare som använder Chrome**.
-1. I fälten **Experience Distribution** för upplevelserna A och B anger du fördelningen, uttryckt i procent, för att bestämma hur upplevelserna ska fördelas mellan den totala publiken. Om du till exempel anger 40, 60 för upplevelserna A respektive B kommer upplevelsen A att visas för 40 % av publiken och de återstående 60 % kommer att se upplevelsen B.
-1. Klicka på **Konfigurera**. En dialogruta visas som bekräftar att A/B-testet har skapats.
-1. Klicka på **Klar**.
-1. Välj det anpassade formuläret **Application for Home Mortgage** och klicka på **Redigera**. Det ger möjlighet att öppna en av upplevelserna. Klicka på **Upplev B**. Formuläret öppnas i redigeringsläge.
+1. Ange en **Aktivitetsnamn**.
+1. I listrutan Målgrupp väljer du en målgrupp till vilken du vill leverera olika upplevelser av formuläret. Till exempel: **Besökare som använder Chrome**.
+1. I **Experience Distribution** fält för upplevelserna A och B, ange fördelningen, uttryckt i procent, för att avgöra hur upplevelserna ska fördelas mellan den totala publiken. Om du till exempel anger 40, 60 för upplevelserna A respektive B kommer upplevelsen A att visas för 40 % av publiken och de återstående 60 % kommer att se upplevelsen B.
+1. Klicka **Konfigurera**. En dialogruta visas som bekräftar att A/B-testet har skapats.
+1. Klicka **Klar**.
+1. Välj **Ansökan om bostadslån** anpassat formulär och klicka **Redigera**. Det ger möjlighet att öppna en av upplevelserna. Klicka **Upplevelse B**. Formuläret öppnas i redigeringsläge.
 
 1. Ändra formuläret efter behov för att skapa en annan upplevelse än standardupplevelsen A.
-1. Gå till användargränssnittet för Forms och dokument, markera formuläret, klicka på **Mer** och välj **Starta A/B-testning**.
+1. Gå till användargränssnittet för Forms och dokument, markera formuläret, klicka på **Mer** och markera **Starta A/B-testning**.
 
 1. Öppna formuläret i webbläsaren flera gånger med följande URL:
 
@@ -560,12 +559,12 @@ Utför följande steg i författarinstansen för att skapa A/B-test för lånean
 
    >[!NOTE]
    >
-   >Ta bort cookien med namnet **mbox** från webbläsarens cookie persistence innan du öppnar formuläret nästa gång. Du kommer att se upplevelsen A och B av formuläret på måfå.
+   >Ta bort cookien med namnet **mbox** från webbläsarens cookie-beständighet innan formuläret öppnas nästa gång. Du kommer att se upplevelsen A och B av formuläret på måfå.
 
-1. Markera formuläret, klicka på **Mer** och klicka på **A/B-testrapport**. Du hittar inte så mycket data i rapporten som du just har påbörjat testningen. Nu ska vi tillhandahålla vissa startdata för att se hur A/B-testrapporten ser ut.
+1. Markera formuläret och klicka på **Mer** och klicka **A/B-testrapport**. Du hittar inte så mycket data i rapporten som du just har påbörjat testningen. Nu ska vi tillhandahålla vissa startdata för att se hur A/B-testrapporten ser ut.
 
 1. Öppna CRXDE Lite och gör en säkerhetskopia av följande fil: /libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
-1. Ersätt definitionen av funktionen `onReportLoadSuccess` i den ovannämnda filen med funktionsdefinitionen i följande fil: /apps/we-finance/demo-artifacts/targetreport.js
+1. Ersätt definitionen av `onReportLoadSuccess` i den ovannämnda filen med funktionsdefinitionen i följande fil: /apps/we-finance/demo-artifacts/targetreport.js
 
    >[!NOTE]
    >
@@ -575,28 +574,28 @@ Utför följande steg i författarinstansen för att skapa A/B-test för lånean
 
 ![ab-test-report-4](assets/ab-test-report-4.png)
 
-Om du vill avsluta A/B-testet klickar du på **Slut på A/B-test** på kontrollpanelen för rapporter. Nu visas en dialogruta där du uppmanas att deklarera en upplevelse. Välj en vinnare och bekräfta att du vill avsluta A/B-testet.
+Avsluta A/B-testet genom att klicka **Avsluta A/B-test** på rapportkontrollpanelen. Nu visas en dialogruta där du uppmanas att deklarera en upplevelse. Välj en vinnare och bekräfta att du vill avsluta A/B-testet.
 
 Om ni väljer upplevelse A som vinnare kommer A/B-testet att avslutas och om ni fortsätter kommer endast upplevelse A att användas för alla målgrupper, inklusive de i Chrome.
 
 ## Programgenomgång av Home Mortgage med Microsoft Dynamics {#home-mortgage-application-walkthrough-with-microsoft-dynamics}
 
-Scenariot Web.Finance-bostadslån med Microsoft Dynamics omfattar följande:
+Scenariot&quot;We.Finance home inteckning&quot; med Microsoft Dynamics omfattar följande:
 
 * Sarah Rose, en We.Finance-kund
-* Administratören för Microsoft Dynamics-instansen We.Finance
+* Administratören för instansen We.Finance Microsoft Dynamics
 
-Hemmasappen som genomsöker Microsoft Dynamics visar hur en We.Finance-kund kan använda webbplatsen för att ansöka om en bostadslån när referenswebbplatsen använder Microsoft Dynamics för dataintegrering. Genomgången avslutas med de data som fylls i av användaren som tas emot av Microsoft Dynamics. Innan du fortsätter med det här scenariot måste du slutföra konfigurationen av [Microsoft Dynamics 365 för heminteckningsarbetsflödet på referenswebbplatsen Web.Finance](/help/forms/using/ms-dynamics-configuration-home-mortgage.md).
+Home Mortgage-programmet som genomsöker Microsoft Dynamics visar hur en We.Finance-kund kan använda webbplatsen för att ansöka om en bostadslån när referenswebbplatsen använder Microsoft Dynamics för dataintegrering. Genomgången avslutas med data som fylls i av användaren som tas emot av Microsoft Dynamics. Innan du fortsätter med det här scenariot måste du slutföra [Microsoft Dynamics 365-konfiguration för arbetsflödet för inteckning hemma på webbsidan för Vi.Finance-referenswebbplatsen](/help/forms/using/ms-dynamics-configuration-home-mortgage.md).
 
 ### Sarah besöker webbplatsen We.Finance och ansöker om bostadslån {#sarah-visits-we-finance-website-and-applies-for-home-mortgage-1}
 
 Sarah Rose planerar att köpa ett hus och leta efter en bostadsplan. Hon är kund hos We.Finance och besöker därför Web.Finance-portalen för att utforska bostadserbjudanden. Hon går till lånedelen och hittar en låneberäkning på portalen. Hon fyller i detaljerna och klickar på Beräkna min inteckning, som returnerar en inteckningsplan.
 
 ![lån1](assets/loans1.png) ![lån2](assets/loans2.png)
-**Bild:** *Låneberäkning*
+**Bild:** *Lånekalkylator*
 
 ![lån3](assets/loans3.png)
-**Figur:** *Resultat av kreditberäkning*
+**Bild:** *Resultat av ränteberäkning*
 
 #### Så här fungerar det {#how-it-works-12}
 
@@ -606,11 +605,11 @@ Den inbäddade låneberäkningsenheten, som är en adaptiv form, använder regle
 
 #### Se det själv {#see-it-yourself-10}
 
-Gå till We.Finance-portalen på `https://<publishHost>:<publishPort>/content/we-finance/global/en.html` och klicka på **[!UICONTROL Loans]**. Ange detaljerad information i inteckningsberäkningen och se resultatet.
+Gå till webbportalen för ekonomi på `https://<publishHost>:<publishPort>/content/we-finance/global/en.html` och klicka **[!UICONTROL Loans]**. Ange detaljerad information i inteckningsberäkningen och se resultatet.
 
 ### Sarah tycker att erbjudandet är intressant och väljer att tillämpa {#sarah-finds-the-offer-interesting-and-chooses-to-apply-2}
 
-Sarah väljer att ansöka om bostadslån och klickar på **[!UICONTROL Apply Now]** för att beräkna bostadslån. Ansökan om bostadslån öppnas.
+Sarah väljer att ansöka om bostadslån och klickningar **[!UICONTROL Apply Now]** på inteckningsberäkningen. Ansökan om bostadslån öppnas.
 
 Om Sarah öppnar bostadslåneprogrammet från sin mobila enhet öppnas ansökningsformuläret i en vy som är optimerad för visning på en mobil enhet. I den här vyn återger programformuläret ett avsnitt i taget. Det gör att Sarah kan visa och ange information progressivt när hon navigerar i ansökningsformuläret.
 
@@ -618,7 +617,7 @@ Följande bilder visar arbetsflödet när Sarah navigerar genom bostadslådan p�
 
 ![Fylla i låneansökan på en mobil enhet](assets/mortgage-form-on-mobile.png)
 
-Om Sarah klickar på **Använd nu** från sin dator öppnas låneansökningsformuläret enligt följande. Den information Sarah har lämnat i låneberäkningen är förifylld i ansökningsformuläret. Sarah fyller i återstående information och klickar på **Fortsätt**.
+Om Sarah klickar **Ansök nu** från sin dator öppnas låneansökan enligt följande. Den information Sarah har lämnat i låneberäkningen är förifylld i ansökningsformuläret. Sarah fyller i återstående detaljer och klickar **Fortsätt**.
 
 ![pantbrev](assets/mortgage-application.png)
 
@@ -630,29 +629,29 @@ Den inskickade ansökan går till We.Finance för godkännande.
 
 #### Så här fungerar det {#how-it-works-13}
 
-Knappen **Använd nu** dirigerar Sarah till bostadslåneprogrammet. Programmet är ett anpassat formulär som du kan granska i redigeringsinstanserna på `https://[host]:[Port]/editor.html/content/forms/af/we-finance/ms-dynamics/application-for-home-mortgage.html`.
+The **Ansök nu** skickar Sarah till bostadslådan. Programmet är ett anpassat formulär som du kan granska i redigeringsinstanserna på `https://[host]:[Port]/editor.html/content/forms/af/we-finance/ms-dynamics/application-for-home-mortgage.html`.
 
 Några av de funktioner du kan granska i den anpassade formen är:
 
-* Det baseras på ett XSD-schema, `homeMortgageApplication.xsd`.
+* Den baseras på ett XSD-schema, `homeMortgageApplication.xsd`.
 * Det har skapats med We Finance Theme B för formatering och We.Finance för layout. Dessutom används Layout utan panelrubriker i formulärrubrikslayouten för mobil navigering. Den visar en progressiv mobil layout när den öppnas från en mobil enhet. Du kan granska mallen och temat som används i det adaptiva formuläret på följande platser i din AEM författarinstans:
 
    * `https://[host]:[Port]/libs/wcm/core/content/sites/templates.html/conf/we-finance`
    * `https://[host]:[Port]/editor.html/content/dam/formsanddocuments-themes/we-finance/we-finance-theme-b/jcr:content`
 
-* Den första fliken, Komma igång, i programmet är en dynamisk låneberäkning som visar alternativ baserat på vad användaren väljer. Fälten och värdena är till exempel olika för alternativen Inköp och Refinansiering. Den här funktionaliteten uppnås med hjälp av regler för att visa/dölja. När du klickar på Fortsätt och fliken Planer initieras anropas dessutom en webbtjänst som konfigurerats i en formulärdatamodell för att hämta och visa hypoteksplaner. Du kan granska formulärdatamodeller och konfigurerade tjänster på `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
-* Här används olika adaptiva formulärkomponenter för att hämta in indata och anpassa dem efter användarens svar. Den använder också komponenter som e-post som stöder HTML5-indatatyper.
+* Den första fliken, Komma igång, i programmet är en dynamisk låneberäkning som visar alternativ baserat på vad användaren väljer. Fälten och värdena är till exempel olika för alternativen Inköp och Refinansiering. Den här funktionaliteten uppnås med hjälp av regler för att visa/dölja. När du klickar på Fortsätt och fliken Planer initieras anropas dessutom en webbtjänst som konfigurerats i en formulärdatamodell för att hämta och visa hypoteksplaner. Du kan läsa formulärdatamodeller och konfigurerade tjänster på `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
+* Här används olika adaptiva formulärkomponenter för att hämta in indata och anpassa dem efter användarens svar. Den använder också komponenter som e-post som stöder indatatyperna HTML5.
 * Den använder komponenten Signature Step för att visa det ifyllda formuläret och tillåter elektronisk signatur i formuläret.
 
 Vi rekommenderar att du granskar formuläret för att förstå vilket schema, vilka komponenter, regler, formulärdatamodeller, arbetsflöde för formulär och vilken skicka-åtgärd som används för att skapa formuläret.
 
 ### Administratören visar skickade data i Microsoft Dynamics-instansen {#the-administrator-views-the-submitted-data-in-the-microsoft-dynamics-instance}
 
-Vi.Finance tar emot den låneansökan som Sarah har skickat in i Microsoft Dynamics-instansen. Administratören trycker på posten i lead-kolumnen för att gå till den lead-post som skapats för Sarah Rose.
+We.Finance tar emot den låneansökan som Sarah lämnat in i Microsoft Dynamics-instansen. Administratören trycker på posten i lead-kolumnen för att gå till den lead-post som skapats för Sarah Rose.
 
 ![msdynamicsrecord](assets/msdynamicsrecord.png)
 
-## Genomgång av försäkringsansökan på hemmet {#home-insurance-application-walkthrough}
+## Genomgång av försäkringsprogram för hemmabruk {#home-insurance-application-walkthrough}
 
 Scenariot för hemförsäkring inom We.Finance omfattar följande:
 
@@ -678,7 +677,7 @@ Nyhetsbrevet som skickas till Sarah är en anpassad implementering som utlöser 
 
 #### Se det själv {#see-it-yourself-11}
 
-Öppna följande URL för att utlösa ett nyhetsbrev via e-post. Se till att du ersätter `[emailID]` med ett giltigt e-postkonto för att ta emot nyhetsbrevet. Öppna nyhetsbrevet och klicka på **[!UICONTROL Apply Now]** för att gå till försäkringsansökan.
+Öppna följande URL för att utlösa ett nyhetsbrev via e-post. Se till att du ersätter `[emailID]` med ett giltigt e-postkonto för att ta emot nyhetsbrevet. Öppna nyhetsbrevet och klicka på **[!UICONTROL Apply Now]** för att gå till hemförsäkringsansökan.
 
 `https://[authorServer]:[authorPort]/content/campaigns/we-finance/start.html?app=ins&email=[emailID]&givenName=Sarah&familyName=Rose`
 
@@ -698,15 +697,15 @@ Om Sarah skickade in programmet på en mobil enhet skulle hon gå igenom följan
 
 #### Så här fungerar det {#how-it-works-15}
 
-Knappen **Använd nu** i nyhetsbrevet dirigerar Sarah till hemförsäkringsprogrammet på webbportalen. Programmet är ett anpassat formulär som du kan granska i redigeringsinstansen på `https://[host]:[Port]/editor.html/content/forms/af/we-finance/insurance/application-for-insurance.html`.
+The **Använd nu** på nyhetsbrevet dirigerar Sarah till hemförsäkringsprogrammet på We.Finance-portalen. Programmet är ett adaptivt formulär som du kan granska i utvecklingsinstansen på `https://[host]:[Port]/editor.html/content/forms/af/we-finance/insurance/application-for-insurance.html`.
 
 Några av de funktioner du kan granska i den anpassade formen är:
 
-* Det baseras på ett XSD-schema, `insurance.xsd`.
+* Den baseras på ett XSD-schema, `insurance.xsd`.
 * Det har skapats med försäkringstemat för formatering och använder Layout utan panelrubriker i formulärrubrikslayouten för mobil navigering. Den visar en progressiv mobil layout när den öppnas från en mobil enhet. Du kan granska mallen på `https://[host]:[Port]/libs/wcm/core/content/sites/templates.html/conf/we-finance` och temat på `https://[host]:[Port]/editor.html/content/dam/formsanddocuments-themes/we-finance/insurance/jcr:content`.
 
-* Den innehåller anpassningsbara formulärregler som anropar Form Data Model-tjänster för att förifylla användarinformation för inloggad användare. Den anropar också tjänster för att förifylla information med personnummer eller e-postadress som anges i formuläret. Du kan granska formulärdatamodeller och deras tjänster på `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
-* Här används olika adaptiva formulärkomponenter för att hämta in indata och anpassa dem efter användarens svar. Den använder också komponenter som e-post som stöder HTML5-indatatyper.
+* Den innehåller anpassningsbara formulärregler som anropar Form Data Model-tjänster för att förifylla användarinformation för inloggad användare. Den anropar också tjänster för att förifylla information med personnummer eller e-postadress som anges i formuläret. Du kan läsa formulärdatamodeller och deras tjänster på `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
+* Här används olika adaptiva formulärkomponenter för att hämta in indata och anpassa dem efter användarens svar. Den använder också komponenter som e-post som stöder indatatyperna HTML5.
 * Knappen Spara mitt förlopp genererar ett unikt ID för användaren och sparar det delvis ifyllda programmet som ett utkast i en nod i AEM. Dessutom visas en dialogruta där du söker behörighet att skicka ett e-postmeddelande med en länk till noden som innehåller utkastet till program. Knappen Skicka e-post i bekräftelsedialogrutan utlöser ett e-postmeddelande med en länk till noden som innehåller utkastet.
 * Den använder åtgärden Invoke AEM Workflow submit för att starta arbetsflödet för godkännande av försäkring. Du kan granska arbetsflödet som används i det här formuläret på `https://[host]:[Port]/editor.html/conf/global/settings/workflow/models/we-finance-insurance-workflow.html`
 
@@ -719,16 +718,16 @@ Se även följande dokumentation för mer information om funktioner som används
 * [Regelredigeraren](/help/forms/using/rule-editor.md)
 * [Teman](/help/forms/using/themes.md)
 * [Dataintegrering](/help/forms/using/data-integration.md)
-* [Använda Adobe Sign i anpassningsbara formulär](/help/forms/using/working-with-adobe-sign.md)
+* [Använda Acrobat Sign i anpassningsbara formulär](/help/forms/using/working-with-adobe-sign.md)
 * [Forms-centrerat arbetsflöde i OSGi](/help/forms/using/aem-forms-workflow.md)
 
 #### Se det själv {#see-it-yourself-12}
 
-Klicka på **Använd nu** på nyhetsbrevet som du skulle ha fått i ditt e-postmeddelande. Du kan också gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/all-forms.html` och klicka på **[!UICONTROL Apply]** i försäkringsansökan. Ange `123456789` i fältet socialförsäkringsnummer. När du uppmanas till det loggar du in med `srose/srose` som användarnamn/lösenord.
+Klicka **Ansök nu** på det nyhetsbrev som du skulle ha fått via ditt e-postmeddelande. Du kan också gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en/all-forms.html` och klicka **[!UICONTROL Apply]** på försäkringsansökan. Ange `123456789` i fältet socialförsäkringsnummer. Logga in med `srose/srose` som användarnamn/lösenord.
 
 Fyll i detaljer, utforska olika adaptiva formulärkomponenter och skicka in programmet. Du kan granska det adaptiva formuläret på `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/insurance/application-for-insurance.html`.
 
-### Vi.Ekonomi godkänner programmet och ett kontrakt är signerat {#we-finance-approves-the-application-and-a-contract-is-signed}
+### Vi.Ekonomi godkänner ansökan och ett kontrakt signeras {#we-finance-approves-the-application-and-a-contract-is-signed}
 
 Vi.Finance får en hemförsäkring från Sarah. Gloria Rios har tilldelats en uppgift. Hon granskar ansökan i sin AEM Inbox och godkänner den.
 
@@ -750,18 +749,18 @@ Följande bild visar det AEM arbetsflödet som är kopplat till försäkringspro
 
 ![we-Finance-Insurance-workflow-model](assets/we-finance-insurance-workflow-model.png)
 
-Frank använder korrespondenshantering för att förbereda ett försäkringsavtal. Han laddar ned PDF:en och bifogar den till Sarah och klickar på Skicka kontrakt. Arbetsflödet utlöser en post till Sarah med ett försäkringsavtal för hemförsäkring för signering.
+Frank använder korrespondenshantering för att förbereda ett försäkringsavtal. Han laddar ned kontraktet PDF och kopplar det till Sarah och klickar på Skicka kontrakt. Arbetsflödet utlöser en post till Sarah med ett försäkringsavtal för hemförsäkring för signering.
 
 #### Se det själv {#see-it-yourself-13}
 
 Gör följande:
 
-1. Gå till AEM Inbox, `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` och logga in med `grios/grios` som användarnamn för Gloria&#39;s persona. Godkänn uppgiften för Saras försäkringsansökan.
+1. Gå till AEM Inkorg, `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`och logga in med `grios/grios` som användarnamn för Glorias persona. Godkänn uppgiften för Saras försäkringsansökan.
 
-1. Logga sedan in i AEM Inbox med `fdcosta/password` som användarnamn för Frank&#39;s persona. Visa uppgiften.
+1. Logga sedan in AEM Inbox med `fdcosta/password` som användarnamn för Frank. Visa uppgiften.
 1. Gå till `https://[authorHost]:[authorPort]/aem/forms.html/content/dam/formsanddocuments/we-finance/insurance` och förhandsgranska brevmallen för HomeInsuranceWelcomeKit.
-1. Ange information i datapanelen. Klicka på **[!UICONTROL Preview]** och hämta PDF-filen till ditt lokala filsystem. Se till att PDF-filen sparas med filnamnet contract.pdf.
-1. Gå till Frank&#39;s AEM Inbox, öppna uppgiften, bifoga PDF:en med det hämtade kontraktet och klicka på **[!UICONTROL Send Contract]**.
+1. Ange information i datapanelen. Klicka **[!UICONTROL Preview]** och hämta sedan PDF till det lokala filsystemet. Se till att filen PDF sparas med filnamnet contract.pdf.
+1. Gå till Frank&#39;s AEM Inbox, öppna uppgiften, bifoga det nedladdade kontraktet PDF och klicka på **[!UICONTROL Send Contract]**.
 1. Öppna e-postmeddelandet med kontrakt och signera dokumentet.
 
 ### Sarah får ett välkomstpaket {#sarah-receives-a-welcome-kit}
@@ -776,7 +775,7 @@ Kort och gott får hon ett mejl från We.Finance med ett välkomstpaket för sin
 
 #### Se det själv {#see-it-yourself-14}
 
-Om du angav ditt e-post-ID i programmet skulle du ha fått ett e-postmeddelande med en länk till välkomstpaketet. Klicka på **[!UICONTROL My Welcome Kit]** för att öppna välkomstpaketet.
+Om du angav ditt e-post-ID i programmet skulle du ha fått ett e-postmeddelande med en länk till välkomstpaketet. Klicka **[!UICONTROL My Welcome Kit]** för att öppna välkomstpaketet.
 
 ![försäkring-welcome-kit-email](assets/insurance-welcome-kit-email.png)
 
@@ -786,13 +785,13 @@ Scenariot Web.Finance WeHealth Management omfattar följande:
 
 * Sarah Rose, en We.Finance-kund
 
-Genomgången av förmögenhetsförvaltning visar hur en We.Finance-kund kan använda webbplatsen för att lära sig mer om en gemensam fond, Blue Chip Growth Fund. Referenswebbplatsen använder en interaktiv kommunikation för att visa information om fonden. Informationen är tillgänglig i både webb- och PDF-format. Genomgången avslutas med att kunden mejlar PDF-versionen av informationen till sin bror.
+Genomgången av förmögenhetsförvaltning visar hur en We.Finance-kund kan använda webbplatsen för att lära sig mer om en gemensam fond, Blue Chip Growth Fund. Referenswebbplatsen använder en interaktiv kommunikation för att visa information om fonden. Informationen finns både på webben och i PDF. Genomgången avslutas med att kunden mejlar PDF-versionen av informationen till sin bror.
 
 Följande bild visar arbetsflödet för genomgången av förmögenhetsförvaltning:
 
 ![förmögenhetsförvaltning-prospekt-genomgång](assets/wealth-management-prospectus-walkthrough.png)
 
-### Sarah besöker webbplatsen We.Finance och öppnar prospektet för fonden för tillväxt av unga unga som heter Blue Chip Growth Fund {#sarah-visits-we-finance-website-and-opens-the-blue-chip-growth-fund-prospectus}
+### Sarah besöker webbplatsen We.Finance och öppnar prospektet om fonden för tillväxt av unga {#sarah-visits-we-finance-website-and-opens-the-blue-chip-growth-fund-prospectus}
 
 Sarah Rose planerar att investera i en gemensam fond. Hon är en befintlig We.Finance-kund och besöker därför Web.Finance-portalen för att utforska tillgängliga gemensamma medel. Hon går till avdelningen för förmögenhetsförvaltning och öppnar sidan&quot;We.Finance Blue Chip Growth Fund&quot;. Sidan innehåller länkar till prospekt som innehåller detaljer om aktuella och historiska priser, månadsvisa resultat, sektorsvis diversifiering, utgifter, avgifter, skatt och mer information om fonderna.
 
@@ -804,9 +803,9 @@ The Blue Chip Growth Fund protus is an interactive communication. Det använder 
 
 Diagrammen och tabellerna hämtar data från en formulärdatamodell. Formulärdatamodellen ansluter till konfigurerade datakällor, en databas i den här genomgången, för att hämta information som är specifik för fonden. Du kan granska formulärdatamodellen på https://[authorHost]:[authorPort]/aem/fdm/editor.html/content/dam/formsanddocuments-fdm/we-Finance/wealth-management
 
-#### Se det själv {#see-it-yourself-15}
+#### Se det själv  {#see-it-yourself-15}
 
-Gå till Web.Finance-portalen på https://[publishHost]:[publishPort]/weFinance, tryck på Health Management, expandera Funds efter Asset Class och tryck på We.Finance Blue Chip Growth Fund. Prospektet om fonden för tillväxt av den blå chipen, Web.Finance, öppnas.
+Gå till webbportalen We.Finance på https://[publishHost]:[publishPort]/weFinance, tap WeHealth Management, expand Funds by Asset Class och tap We.Finance Blue Growth Fund. Prospektet om fonden för tillväxt av den blå chipen, Web.Finance, öppnas.
 
 ### Sarah utforskar The Blue Chip Growth Fund-prospektet för att lära sig mer om fonden {#sarah-explores-the-blue-chip-growth-fund-prospectus-to-learn-about-the-fund}
 
@@ -820,13 +819,13 @@ I den interaktiva kommunikationen från Blue Chip Growth Fund används överordn
 
 Layouten för den överordnade fliken är inställd på Tabbar överst för att konvertera alla underordnade paneler till tabbar. Du kan granska panelerna i den interaktiva kommunikationen i redigeringsläget på https://[authorHost]:[ authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html.
 
-#### Se det själv {#see-it-yourself-16}
+#### Se det själv  {#see-it-yourself-16}
 
-Gå till den interaktiva kommunikationen med Blue Chip Growth Fund på https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html?wcmmode=disabled. Utforska alla flikar.
+Gå till interaktiv kommunikation för Blue Chip Growth Fund på https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html?wcmmode=disabled. Utforska alla flikar.
 
-### Sarah visar och mejlar PDF-versionen av Blue Chip Growth Fund {#sarah-views-and-emails-the-pdf-version-of-the-blue-chip-growth-fund-page}
+### Sarah tittar på och mejlar PDF-versionen av sidan Blue Chip Growth Fund {#sarah-views-and-emails-the-pdf-version-of-the-blue-chip-growth-fund-page}
 
-Sarah reser till landet i helgen. Hon planerar att diskutera Blue Chip Growth Fund med sin storebror. Hennes storebror arbetar med en bank och hjälper henne i beslut som rör ekonomi. Sarah laddar ned en PDF-version av Blue Chip Growth Fund på sin bärbara dator för läsning offline. Hon mejlar också en kopia av PDF-versionen till sin bror.
+Sarah reser till landet i helgen. Hon planerar att diskutera Blue Chip Growth Fund med sin storebror. Hennes storebror arbetar med en bank och hjälper henne i beslut som rör ekonomi. Sarah laddar ned en PDF-version av Blue Chip Growth Fund-sidan på sin bärbara dator för läsning offline. Hon mejlar också en kopia av PDF version till sin bror.
 
 ![blue-chip-pdf](assets/blue-chip-pdf.gif)
 
@@ -836,11 +835,11 @@ The Blue Chip Growth Fund protus is an interactive communication. Den har en web
 
 ![förmögenhetsförvaltning](assets/wealth-management.png)
 
-#### Se det själv {#see-it-yourself-17}
+#### Se det själv  {#see-it-yourself-17}
 
-Om du vill hämta PDF-versionen går du till det interaktiva meddelandet Blue Chip Growth Fund https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html.
+Om du vill hämta PDF går du till det interaktiva meddelandet Blue Chip Growth Fund https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html, tryck på Hämta PDF.
 
-Om du vill skicka PDF via e-post går du till den interaktiva kommunikationen Blue Chip Growth Fund https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html. Tryck på EMAIL PDF. Ange **Fullständigt namn** och **E-postadress**. Klicka på **Skicka e-post**.
+Om du vill skicka e-post till PDF går du till den interaktiva kommunikationen om Blue Chip Growth Fund https://[publishHost]:[ publishPort]/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html, tryck på EMAIL PDF. Ange **Fullständigt namn** och **E-postadress**. Klicka **Skicka e-post**.
 
 ## Genomgång av autoförsäkringsprogram {#auto-insurance-application-walkthrough}
 
@@ -849,25 +848,25 @@ Scenariot för autoförsäkring för Web.Finance omfattar följande:
 * Sarah Rose, en We.Finance-kund
 * Conrad Simms, Insurance Agent, We.Finance
 
-Sarah Rose är en befintlig We.Finance-kund och har köpt en bilförsäkring. Nu är det dags att förnya sin försäkring. Conrad Simms, Insurance Agent, We.Finance skickar en påminnelse till Sarah om förnyandet av sin policy. Påminnelsemeddelandet innehåller en PDF med information om förnyelse av profiler och en länk till webbversionen av den interaktiva kommunikationen. Den interaktiva kommunikationen har en mobilvänlig och responsiv design. Hon kan öppna den interaktiva kommunikationen på vilken enhet som helst och den interaktiva kommunikationen flödar om för att passa skärmstorleken på den underliggande enheten. PDF-versionen av den interaktiva kommunikationen, som bifogas till e-post, är användbar vid läsning offline.
+Sarah Rose är en befintlig We.Finance-kund och har köpt en bilförsäkring. Nu är det dags att förnya sin försäkring. Conrad Simms, Insurance Agent, We.Finance skickar en påminnelse till Sarah om förnyandet av sin policy. Påminnelsemeddelandet innehåller en PDF med information om förnyelse av princip och en länk till webbversionen av den interaktiva kommunikationen. Den interaktiva kommunikationen har en mobilvänlig och responsiv design. Hon kan öppna den interaktiva kommunikationen på vilken enhet som helst och den interaktiva kommunikationen flödar om för att passa skärmstorleken på den underliggande enheten. PDF-versionen av den interaktiva kommunikationen, som bifogas till e-post, är användbar för läsning offline.
 
-Sarah följer instruktionerna i e-postmeddelandet och förnyar processen. Följande bild visar arbetsflödet för genomgången av autoförsäkringsprogram:  ![autoförsäkring-program-genomgång](assets/auto-insurance-application-walkthrough.png)
+Sarah följer instruktionerna i e-postmeddelandet och förnyar processen. Följande bild visar arbetsflödet för genomgången av autoförsäkringsprogram:  ![autoförsäkring-tillämpning-genomgång](assets/auto-insurance-application-walkthrough.png)
 
 ### Conrad skickar ett meddelande om förnyelse av försäkringsavtal från We.Finance {#conrad-sends-an-insurance-policy-renewal-communication-from-we-finance}
 
-Conrad loggar in på AEM instans, öppnar kontrollpanelen för automatisk försäkring anger Sarah&#39;s **Customer ID** och klickar på **Renew Policy**. **Agentgränssnittet** öppnas med principinformation om Sarah Rose redan är ifylld. Conrad angav en e-postadress för Sarah och klickar på **Skicka**. Sarah får ett e-postmeddelande med ämnet **Förnyelsen av din automatiska försäkring**.
+Conrad loggar in AEM instansen, öppnar kontrollpanelen för automatisk försäkring anger Sarah&#39;s **Kund-ID** och klicka **Förnya princip**. The **Agentgränssnitt** öppnas med principinformation om Sarah Rose redan är ifylld. Conrad angav en e-postadress för Sarah och klickningar **Skicka**. Sarah får ett mejl med ämnet **Förnyelse av autoförsäkring**.
 
 ![cc-dashboard](assets/cc-dashboard.png)
 
 #### Så här fungerar det {#how-it-works-20}
 
-Förnyelsekommunikation om försäkringsbrev är en interaktiv kommunikation. Conrad Simms använder Agent UI för att skicka informationen om förnyelse av försäkringsavtal till Sarah. Kommunikationen innehåller utskrift (PDF) och länkar till webbkanalen för den interaktiva kommunikationen. Den interaktiva kommunikationen använder AEM arbetsflöde för att skicka e-postmeddelandet. Du kan se arbetsflödet på https://[authorHost]:[ authorPort]/editor.html/conf/global/settings/workflow/models/we-finance-auto-insurance-renewal.html
+Förnyelsekommunikation om försäkringsbrev är en interaktiv kommunikation. Conrad Simms använder Agent UI för att skicka informationen om förnyelse av försäkringsavtal till Sarah. Kommunikationen innehåller Print (PDF) och link to the Web channel of the interactive communication. Den interaktiva kommunikationen använder AEM arbetsflöde för att skicka e-postmeddelandet. Du kan se arbetsflödet på https://[authorHost]:[ authorPort]/editor.html/conf/global/settings/workflow/models/we-finance-auto-insurance-renewal.html
 
 ![bilförsäkring-arbetsflöde](assets/auto-insurance-workflow.png)
 
-#### Se det själv {#see-it-yourself-18}
+#### Se det själv  {#see-it-yourself-18}
 
-Logga in på **We.Finance Auto Insurance Dashboard** som Conrad Simms (csimms/password). URL:en är https://[publishhost]:[publish]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html. Ange **Kund-ID**. Sarah Rose kund-ID är 900001. Klicka på **Förnya princip**. Den interaktiva kommunikationen öppnas i agentgränssnittet. I agentgränssnittet anger du en giltig e-postadress att skicka e-postmeddelandet med ett policydokument bifogat och klickar på **Skicka**. Ett meddelande, Inskickning initierad, visas på skärmen och sedan visas ett meddelande, Skickat utan fel, om några sekunder. Ett e-postmeddelande med ämnet **Förnyelse av din autoförsäkring** skickas till den angivna e-postadressen. Den policy som Sarah Rose erbjuds är en premiepolicy.
+Logga in på **Instrumentpanel för automatisk försäkring för webbfinansiering** som Conrad Simms (csimms/password). URL:en är https://[utgivare]:[publicport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html. Ange **Kund-ID**. Sarah Rose kund-ID är 900001. Klicka **Förnya princip**. Den interaktiva kommunikationen öppnas i agentgränssnittet. Ange en giltig e-postadress för att skicka e-postmeddelandet med policydokumentet bifogat i agentgränssnittet och klicka på **Skicka**. Ett meddelande, Inskickning initierad, visas på skärmen och sedan visas ett meddelande, Skickat utan fel, om några sekunder. Ett e-postmeddelande med ämnet **Förnyelse av autoförsäkring** och skickas till den angivna e-postadressen. Den policy som Sarah Rose erbjuds är en premiepolicy.
 
 Genomgången av bilförsäkringen innehåller även en annan kund, Alison Jones. Alison Jones kund-ID är 900002. När du skickar den interaktiva kommunikationen till Alison Jones skickas en standardpolicy. Skillnaden mellan standardpolicy och premiepolicy är:
 
@@ -875,18 +874,18 @@ Genomgången av bilförsäkringen innehåller även en annan kund, Alison Jones.
 * Standardpolicyn kostar mindre än premiepolicyn.
 * Premiumpolicyn har antistölderbelöning och standardpolicyn har smart rightbelöning
 
-Båda profilerna använder samma interaktiva kommunikation. Avsnitten i profilen ändras eller döljs baserat på villkoret av principtyp. Du kan komma åt och granska den interaktiva kommunikationen om förnyelse av autoförsäkring direkt från `https://[authorHost]: [authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal`
+Båda profilerna använder samma interaktiva kommunikation. Avsnitten i profilen ändras eller döljs baserat på villkoret av principtyp. Du kan öppna och granska den interaktiva kommunikationen om förnyelse av autoförsäkring direkt från `https://[authorHost]: [authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal`
 
 **Använda Microsoft Dynamics som datakälla**
 
 Referenswebbplatsen innehåller också en interaktiv kommunikation som använder Microsoft Dynamics som datakälla för formulärdatamodellen. Utför följande steg för att konfigurera den interaktiva kommunikationen för genomgången av autoförsäkring:
 
 1. Logga in på https://[författare]:[port]/crx/de som administratör.
-1. Öppna `/apps/we-finance/components/ccrui/ccrui.jsp`filen.
-1. Ange värdet `FormFieldRequestParameter`till `/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal-dynamics`
-1. Tryck på **Spara alla**. Referenswebbplatsen är konfigurerad att använda interaktiv kommunikation som använder MS Dynamics som datakälla.
+1. Öppna `/apps/we-finance/components/ccrui/ccrui.jsp`-fil.
+1. Ange värdet för `FormFieldRequestParameter`till `/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal-dynamics`
+1. Tryck **Spara alla**. Referenswebbplatsen är konfigurerad att använda interaktiv kommunikation som använder MS Dynamics som datakälla.
 
-Logga nu in på **instrumentpanelen för automatisk försäkring för We.Finance** som Conrad Simms (csimms/password). URL:en är https://[publishhost]:[publish]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html. Ange **Kund-ID**. Sarah Rose kund-ID är 900001. Klicka på **Förnya princip**. Den interaktiva kommunikationen öppnas i agentgränssnittet. I agentgränssnittet anger du en giltig e-postadress att skicka e-postmeddelandet med ett policydokument bifogat och klickar på **Skicka**. Ett meddelande, Inskickning initierad, visas på skärmen och sedan visas ett meddelande, Skickat utan fel, om några sekunder. Ett e-postmeddelande med ämnet **Förnyelsen av din automatiska försäkring** skickas till den angivna e-postadressen.
+Logga in på **Instrumentpanel för automatisk försäkring för webbfinansiering** som Conrad Simms (csimms/password). URL:en är https://[utgivare]:[publicport]/content/we-finance/global/en/login.html?resource=/content/we-finance/ccdashboard.html. Ange **Kund-ID**. Sarah Rose kund-ID är 900001. Klicka **Förnya princip**. Den interaktiva kommunikationen öppnas i agentgränssnittet. Ange en giltig e-postadress för att skicka e-postmeddelandet med policydokumentet bifogat i agentgränssnittet och klicka på **Skicka**. Ett meddelande, Inskickning initierad, visas på skärmen och sedan visas ett meddelande, Skickat utan fel, om några sekunder. Ett e-postmeddelande med ämnet **Förnyelse av autoförsäkring** skickas till den angivna e-postadressen.
 
 >[!NOTE]
 >
@@ -898,21 +897,21 @@ Logga nu in på **instrumentpanelen för automatisk försäkring för We.Finance
 
 Sarah får ett mejl med en bilaga från We.Finance som påminner henne om att hennes bilförsäkring håller på att gå ut. Den bifogade filen är den utskrivna versionen av hennes förnyelseinformation för bilförsäkring.
 
-Sarah klickar på **Förnya nu** och dirigeras till webbversionen av sitt bilförsäkringsbrev. Utöver det här brevet hittar Sarah ett antal dagar kvar innan hennes policy upphör att gälla. Sidan ger Sarah en översikt över sin försäkringsinformation, t.ex. försäkringsnummer, förfallobelopp och annan information som rabatterbjudanden och förmånsersättningar. Sarah klickar igen på **Förnya nu** längst ned i profilen.
+Sarah klickade **Förnya nu** och hänvisas till webbversionen av hennes bilförsäkringsbrev. Utöver det här brevet hittar Sarah ett antal dagar kvar innan hennes policy upphör att gälla. Sidan ger Sarah en översikt över sin försäkringsinformation, t.ex. försäkringsnummer, förfallobelopp och annan information som rabatterbjudanden och förmånsersättningar. Sarah klickar igen **Förnya nu** längst ned i policyn.
 
 ![bilförsäkring-förnyelse-e-post](assets/auto-insurance-renewal-email.png)
 
-#### Så här fungerar det {#how-it-works-21}
+#### Så här fungerar det  {#how-it-works-21}
 
-Utdata för webb och utskrift av ditt automatiska försäkringsbrev skapas med hjälp av flerkanalsfunktionerna i Interactive Communications. Knappen **Förnya nu** i e-postmeddelandet är länkad till programmet för autoförsäkringsförnyelse, som är en interaktiv kommunikation i en publiceringsinstans.
+Utdata för webb och utskrift av ditt automatiska försäkringsbrev skapas med hjälp av flerkanalsfunktionerna i Interactive Communications. The **Förnya nu** knappen i e-postmeddelandet är länkad till programmet för förnyelse av autoförsäkring, som är en interaktiv kommunikation i en publiceringsinstans.
 
 ![ic-web-version](assets/ic-web-version.png)
 
-#### Se det själv {#see-it-yourself-19}
+#### Se det själv  {#see-it-yourself-19}
 
-Du måste ha fått ett e-postmeddelande med en bifogad PDF. PDF-filen är en utskriftsversion av ditt automatiska försäkringsbrev. Klicka på **Förnya nu** för att nå webbversionen av profilen. Kontrollera dina personuppgifter och din policy och klicka på **Förnya nu**. Du kommer till ett anpassat betalningsformulär.
+Du måste ha fått ett e-postmeddelande med en bifogad PDF. PDF är en tryckt version av ditt automatiska försäkringsbrev. Klicka **Förnya nu** för att nå webbversionen av policyn. Kontrollera din personliga information och policyinformation och klicka på **Förnya nu**. Du kommer till ett anpassat betalningsformulär.
 
-Knappen **Förnya nu** i e-postmeddelandet dirigerar Sarah till webbversionen av principen. Du kan gå till följande URL:
+The **Förnya nu** i e-postmeddelandet dirigerar Sarah till webbversionen av policyn. Du kan gå till följande URL:
 
 https://[publishServer]:[publishPort]/content/document.html?schema=fdm&amp;documentId=/content/forms/af/we-finance/autoinsurance/auto-insurance-renewal/channels/web.html&amp;customerId=900001
 
@@ -920,17 +919,17 @@ Du kan kontrollera den detaljerade sammanfattningen av förnyelsen av din automa
 
 ### Sarah öppnar betalningssidan och gör betalningen och slutför processen {#sarah-opens-the-payment-page-and-makes-the-payment-and-completes-the-process}
 
-När Sarah klickar på **Förnya nu** på webbversionen av den interaktiva kommunikationen öppnas betalningssidan. Sarah omkontrollerar sitt principnummer och utgångsdatum med sina register. Till höger på sidan kontrollerar hon betalningsöversikten för förnyelsen med 10 % premiumrabatt på det totala beloppet. Sarah fyller i sin kreditkortsinformation och klickar på **Gör betalning**.
+När Sarah klickar **Förnya nu** på webbversionen av den interaktiva kommunikationen öppnas betalningssidan. Sarah omkontrollerar sitt principnummer och utgångsdatum med sina register. Till höger på sidan kontrollerar hon betalningsöversikten för förnyelsen med 10 % premiumrabatt på det totala beloppet. Sarah fyller i sin kreditkortsinformation och klickar **Gör betalning**.
 
 ![blankett för betalning](assets/payment-adaptive-form.png)
 
-#### Så här fungerar det {#how-it-works-22}
+#### Så här fungerar det  {#how-it-works-22}
 
-Knappen Förnya nu dirigerar Sarah till betalningssidan. Betalningssidan är ett anpassningsbart formulär. Sarah fyller i kreditkortsinformationen och klickar på **Skicka**. Hennes kreditkortsbetalning behandlas och ett tackmeddelande som är konfigurerat i anpassningsformuläret visas på skärmen.
+Knappen Förnya nu dirigerar Sarah till betalningssidan. Betalningssidan är ett anpassningsbart formulär. Sarah fyller i kreditkortsinformationen och klickar **Skicka**. Hennes kreditkortsbetalning behandlas och ett tackmeddelande som är konfigurerat i anpassningsformuläret visas på skärmen.
 
-#### Se det själv {#see-it-yourself-20}
+#### Se det själv  {#see-it-yourself-20}
 
-Klicka på **Förnya nu** för att nå betalningssidan. Fyll i kreditkortsinformationen och klicka på **Gör betalning.** Du kan nå betalningssidan i utvecklingsinstansen på:
+Klicka **Förnya nu** för att nå betalningssidan. Fyll i kreditkortsinformationen och klicka på **Gör betalning.** Du kan nå betalningssidan i utvecklingsinstansen på:
 
 https://[authorServer]:[authorPort]/content/document.html?documentId=/content/forms/af/we-finance/credit-card/ccbillpayment.html&amp;schema=fdm&amp;customerId=900001
 

@@ -7,7 +7,7 @@ uuid: 57c872d6-c6ca-4f78-a98c-f9487f1d673c
 contentOwner: aheimoz
 discoiquuid: f2bd4d96-55a5-4fbd-bede-1747c2ec63c8
 exl-id: f8e25989-6ed3-4b35-95e5-fbfd7c51d622
-source-git-commit: dba3b09035e6ffafd1681b370e3a10a76564bf65
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
 source-wordcount: '4636'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## Forms Workflow {#forms-workflow-steps}
 
-Forms arbetsflödessteg utför AEM Forms-specifika åtgärder i ett AEM arbetsflöde. Med dessa steg kan du snabbt skapa anpassningsbara formulärbaserade Forms-baserade arbetsflöden i OSGi. Dessa arbetsflöden kan användas för att utveckla enkla arbetsflöden för granskning och godkännande samt interna och brandväggsrelaterade affärsprocesser. Du kan också använda steg för Forms Workflow för att starta dokumenttjänster, integrera med Adobe Sign signaturarbetsflöde och utföra andra AEM Forms-åtgärder. Du behöver [AEM Forms-tillägg](https://www.adobe.com/go/learn_aemforms_documentation_63) om du vill använda de här stegen i ett arbetsflöde.
+Forms arbetsflödessteg utför AEM Forms-specifika åtgärder i ett AEM arbetsflöde. Med dessa steg kan du snabbt skapa anpassningsbara formulärbaserade Forms-baserade arbetsflöden i OSGi. Dessa arbetsflöden kan användas för att utveckla enkla arbetsflöden för granskning och godkännande samt interna och brandväggsrelaterade affärsprocesser. Du kan också använda steg för Forms Workflow för att starta dokumenttjänster, integrera med Acrobat Sign signaturarbetsflöde och utföra andra AEM Forms-åtgärder. Du behöver [AEM Forms-tillägg](https://www.adobe.com/go/learn_aemforms_documentation_63) om du vill använda de här stegen i ett arbetsflöde.
 
 ## Tilldela aktivitetssteg {#assign-task-step}
 
@@ -214,11 +214,11 @@ I steget Anropa formulärdatamodelltjänst visas följande fält för att underl
 
 ## Underteckna dokumentsteg {#sign-document-step}
 
-Med steget Signera dokument kan du använda Adobe Sign för att signera dokument. Stegen Signera dokument har följande egenskaper:
+Med steget Signera dokument kan du använda Acrobat Sign för att signera dokument. Stegen Signera dokument har följande egenskaper:
 
 * **Avtalsnamn:** Ange avtalets namn. Avtalsnamnet blir en del av ämnet och brödtexten i det e-postmeddelande som skickas till signerarna.
 * **Språk:** Ange språk för alternativen för e-post och verifiering.
-* **Konfiguration av Adobe Sign Cloud**: Välj en Adobe Sign Cloud-konfiguration. Om du inte har konfigurerat Adobe Sign för AEM Forms går du till [Integrera Adobe Sign med AEM Forms](/help/forms/using/adobe-sign-integration-adaptive-forms.md).
+* **Konfiguration av Acrobat Sign Cloud**: Välj en Acrobat Sign Cloud-konfiguration. Om du inte har konfigurerat Acrobat Sign för AEM Forms går du till [Integrera Acrobat Sign med AEM Forms](/help/forms/using/adobe-sign-integration-adaptive-forms.md).
 
 * **Dokument som ska signeras:** Du kan välja ett dokument från en plats som är relativ till nyttolasten, använda nyttolasten som dokument eller ange en absolut sökväg för dokumentet.
 * **Sökväg för bifogad fil:** Välj en bifogad fil. Dessa bilagor inkluderas i signeringsdokumentet. Du kan behålla de bifogade filerna på en plats i förhållande till nyttolasten eller ange en absolut sökväg för de bifogade filerna.
@@ -234,8 +234,8 @@ Med steget Signera dokument kan du använda Adobe Sign för att signera dokument
 * **Välj signerare:** Ange metoden för att välja signerare för dokumentet. Du kan dynamiskt tilldela arbetsflödet till en användare eller en grupp eller manuellt lägga till information om en signerare.
 * **Skript eller tjänst för att välja signerare:** Alternativet är bara tillgängligt om alternativet Dynamiskt är markerat i fältet Välj signerare. Du kan ange ett ECMAScript eller en tjänst för att välja signerare och verifieringsalternativ för ett dokument.
 
-* **Signerarinformation:** Alternativet är bara tillgängligt om alternativet Manuellt är markerat i fältet Välj signerare. Ange e-postadress och välj en valfri verifieringsmekanism. Innan du väljer en verifieringsmekanism i två steg måste du se till att motsvarande verifieringsalternativ är aktiverat för det konfigurerade Adobe Sign-kontot.
-* **Statusvariabel:** I ett dokument som är aktiverat i Adobe Sign sparas dokumentets signeringsstatus i en variabel. Ange namnet på statusvariabeln (adobeSignStatus). En statusvariabel för en instans finns i CRXDE på /etc/workflow/instances/&lt;server>/&lt;date-time>/&lt;instance of=&quot;&quot; workflow=&quot;&quot; model=&quot;&quot;>/workItems/&lt;node>/metaData innehåller status för en variabel.
+* **Signerarinformation:** Alternativet är bara tillgängligt om alternativet Manuellt är markerat i fältet Välj signerare. Ange e-postadress och välj en valfri verifieringsmekanism. Innan du väljer en verifieringsmekanism i två steg måste du se till att motsvarande verifieringsalternativ är aktiverat för det konfigurerade Acrobat Sign-kontot.
+* **Statusvariabel:** I ett dokument som är aktiverat i Acrobat Sign sparas dokumentets signeringsstatus i en variabel. Ange namnet på statusvariabeln (adobeSignStatus). En statusvariabel för en instans finns i CRXDE på /etc/workflow/instances/&lt;server>/&lt;date-time>/&lt;instance of=&quot;&quot; workflow=&quot;&quot; model=&quot;&quot;>/workItems/&lt;node>/metaData innehåller status för en variabel.
 * **Sökväg till signerat dokument:** Ange platsen där signerade dokument ska sparas. Du kan välja att skriva över nyttolastfilen eller placera det signerade dokumentet på en plats i nyttolastkatalogen.
 
 ## Steg för Document Services {#document-services-steps}

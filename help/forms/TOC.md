@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.4 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: 35aea0e087334a1c1e6a708f2182bd9dee799dc0
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '3729'
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ ht-degree: 0%
       + [Forms JEE-arbetsflöden](using/forms-workflow-jee-handling-user-data.md)
       + [Forms Portal](using/forms-portal-handling-user-data.md)
       + [Korrespondenshantering](using/correspondence-management-handling-user-data.md)
-      + [Integrering med Adobe Sign](/help/forms/using/integration-adobe-sign-handling-user-data.md)
+      + [Integrering med Acrobat Sign](/help/forms/using/integration-adobe-sign-handling-user-data.md)
       + [Dokumentsäkerhet](/help/forms/using/document-security-handling-user-data.md)
    + Förbättrad AEM Forms-miljö {#hardening-aem-forms-environment}
       + [Förbättra och skydda AEM formulär i OSGi-miljö](using/hardening-securing-aem-forms-environment.md)
@@ -161,7 +161,7 @@ ht-degree: 0%
 + Adaptiv Forms - avancerad redigering {#adaptive-forms-advanced-authoring}
    + [Skapa anpassningsbara formulär med JSON-schema](using/adaptive-form-json-schema-form-model.md)
    + [Skapa anpassningsbara formulär med XML-schema](using/adaptive-form-xml-schema-form-model.md)
-   + [Använda Adobe Sign i en adaptiv form](using/working-with-adobe-sign.md)
+   + [Använda Acrobat Sign i en adaptiv form](using/working-with-adobe-sign.md)
    + [Skapa och använda teman](using/themes.md)
    + [Anpassad formulärregelredigerare](using/rule-editor.md)
    + [API för att anropa formulärdatamodelltjänst från anpassningsbara formulär](using/invoke-form-data-model-services.md)
@@ -181,7 +181,7 @@ ht-degree: 0%
    + [Automatisera testning av anpassningsbara formulär](using/calvin.md)
    + [Formateringskonstruktioner för adaptiva formulär](using/styling-constructs-adaptive-forms.md)
    + [Synkronisera adaptiv Forms med XFA-formulärmallar](using/synchronizing-adaptive-forms-xfa.md)
-   + [Integrera Adobe Sign med AEM Forms](using/adobe-sign-integration-adaptive-forms.md)
+   + [Integrera Acrobat Sign med AEM Forms](using/adobe-sign-integration-adaptive-forms.md)
    + [Skapa och hantera granskningar av resurser i formulär](using/create-reviews-forms.md)
    + [Standardvalideringsfelmeddelanden för anpassade formulär](using/standard-validation-error-messages-adaptive-forms.md)
 + Interaktiv kommunikation {#interactive-communications}

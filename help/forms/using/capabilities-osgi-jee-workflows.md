@@ -1,36 +1,35 @@
 ---
-title: 'Åtgärder och funktioner i formulärcentrerade AEM arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden '
-seo-title: 'Åtgärder och funktioner i formulärcentrerade AEM arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden '
-description: Läs mer om skillnaderna i åtgärder som stöds av AEM Inbox och HTML Workspace, skillnader i funktioner som stöds av formulärbaserade AEM Workflows i arbetsflöden för OSGi och AEM Forms JEE samt skillnader mellan funktionerna AEM Inbox och AEM Forms App.
-seo-description: Läs mer om skillnaderna i åtgärder som stöds av AEM Inbox och HTML Workspace, skillnader i funktioner som stöds av formulärbaserade AEM Workflows i arbetsflöden för OSGi och AEM Forms JEE samt skillnader mellan funktionerna AEM Inbox och AEM Forms App.
+title: Åtgärder och funktioner i formulärcentrerade AEM arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden
+seo-title: Actions and capabilities of Form-centric AEM Workflows on OSGi and AEM Forms JEE workflows
+description: Läs mer om skillnaderna i åtgärder som stöds av AEM Inbox och HTML Workspace, skillnaderna i funktioner som stöds av formulärbaserade AEM Workflows i arbetsflöden för OSGi och AEM Forms JEE samt skillnaderna mellan funktionerna AEM Inbox och AEM Forms App.
+seo-description: Learn more about the differences in actions supported by AEM Inbox and HTML Workspace, differences in capabilities supported by Form-centric AEM Workflows on OSGi and AEM Forms JEE Workflows, and differences between AEM Inbox and AEM Forms app features.
 uuid: ce2a05fe-ba45-42ed-880e-fb1d6efc1d26
 contentOwner: khsingh
 topic-tags: publish
 discoiquuid: 4c7ba430-25b2-4ba2-a5eb-4edaed0d599a
-translation-type: tm+mt
-source-git-commit: e077347bc202b6a411006032c68aa4a3152be7c5
+exl-id: 6172d936-9348-4f3f-a437-6465dd156f3b
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
-source-wordcount: '931'
-ht-degree: 16%
+source-wordcount: '878'
+ht-degree: 17%
 
 ---
 
+# Åtgärder och funktioner i formulärcentrerade AEM arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden  {#actions-and-capabilities-of-form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
 
-# Åtgärder och funktioner i formulärcentrerade AEM arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden {#actions-and-capabilities-of-form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
+## Arbetsytan AEM Inkorgen och HTML {#aem-inbox-and-html-workspace}
 
-## AEM Inkorgen och HTML-arbetsytan {#aem-inbox-and-html-workspace}
-
-AEM Inbox används för att köra och övervaka Forms-centrerade AEM Workflows on OSGi. Med HTML-arbetsytan kan du köra och övervaka AEM Forms JEE-arbetsflöden. I följande tabell visas viktiga åtgärder som är tillgängliga i AEM Inbox för Forms-centrerade AEM Workflows on OSGi och i HTML Workspace for AEM Forms JEE Workflows.
+AEM Inbox används för att köra och övervaka Forms-centrerade AEM Workflows on OSGi. Med arbetsytan i HTML kan du köra och övervaka AEM Forms JEE-arbetsflöden. I följande tabell visas viktiga åtgärder som är tillgängliga i AEM Inbox för Forms-centrerade AEM Workflows on OSGi and HTML Workspace for AEM Forms JEE Workflows.
 
 <table> 
  <tbody>
   <tr>
    <td>Åtgärder</td> 
    <td>AEM</td> 
-   <td>HTML-arbetsyta</td> 
+   <td>HTML arbetsyta</td> 
   </tr>
   <tr>
-   <td>Starta en process, en aktivitet eller ett formulärprogram<br /> </td> 
+   <td>Starta en process, en uppgift eller ett formulärprogram<br /> </td> 
    <td>Stöds<br /> </td> 
    <td>Stöds<br /> </td> 
   </tr>
@@ -97,7 +96,7 @@ AEM Inbox används för att köra och övervaka Forms-centrerade AEM Workflows o
  </tbody>
 </table>
 
-## Formulärbaserade AEM arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden {#form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
+## Formulärbaserade AEM arbetsflöden för OSGi- och AEM Forms JEE-arbetsflöden {#form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
 
 Formulärbaserade AEM arbetsflöden för OSGi- och AEM Forms JEE-arbetsflöden (AEM Forms on JEE Process Management) har en annan uppsättning funktioner. I följande tabell visas viktiga funktioner och stöd som är tillgängliga för funktionerna i formulärbaserade AEM arbetsflöden i OSGi och AEM Forms i JEE-arbetsflöden:
 
@@ -154,14 +153,14 @@ Formulärbaserade AEM arbetsflöden för OSGi- och AEM Forms JEE-arbetsflöden (
    <td>Stöds</td> 
   </tr>
   <tr>
-   <td>E-signatur (Adobe Sign)</td> 
-   <td><sup>[1]</sup> stöds</td> 
-   <td><sup>[5]</sup> stöds</td> 
+   <td>E-signatur (Acrobat Sign)</td> 
+   <td>Stöds <sup>[1]</sup></td> 
+   <td>Stöds <sup>[5]</sup></td> 
   </tr>
   <tr>
    <td>Hantera uppgifter och formulärprogram</td> 
-   <td><sup>[2]</sup><br /> stöds </td> 
-   <td><sup>[2]</sup> stöds</td> 
+   <td>Stöds <sup>[2]</sup><br /> </td> 
+   <td>Stöds <sup>[2]</sup></td> 
   </tr>
   <tr>
    <td>Dokumenttjänster</td> 
@@ -169,7 +168,7 @@ Formulärbaserade AEM arbetsflöden för OSGi- och AEM Forms JEE-arbetsflöden (
    <td>Stöds <sup>[3]</sup></td> 
   </tr>
   <tr>
-   <td>Rendera slutförda uppgifter som anpassningsbara formulär eller PDF-dokument</td> 
+   <td>Rendera den slutförda aktiviteten som ett anpassat formulär eller PDF-dokument</td> 
    <td>Stöds</td> 
    <td>Stöds [4]</td> 
   </tr>
@@ -285,7 +284,7 @@ Formulärbaserade AEM arbetsflöden för OSGi- och AEM Forms JEE-arbetsflöden (
   </tr>
   <tr>
    <td>Skicka ett e-postmeddelande i slutet av arbetsflödet</td> 
-   <td><sup>[7]</sup> stöds</td> 
+   <td>Stöds <sup>[7]</sup></td> 
    <td>Stöds</td> 
   </tr>
   <tr>
@@ -321,18 +320,18 @@ Formulärbaserade AEM arbetsflöden för OSGi- och AEM Forms JEE-arbetsflöden (
  </tbody>
 </table>
 
-1. Du kan använda formulärbaserade AEM arbetsflöden i OSGi för att signera ett redan ifyllt anpassat formulär. Formulärbaserade AEM i OSGi-arbetsflöden har stöd för formulärsignering. [signering i formulär](/help/forms/using/working-with-adobe-sign.md#create-in-form-signing-experience) stöds inte.
+1. Du kan använda formulärbaserade AEM arbetsflöden i OSGi för att signera ett redan ifyllt anpassat formulär. Formulärbaserade AEM i OSGi-arbetsflöden stöder inte formulärsignering. The [signering i formulär](/help/forms/using/working-with-adobe-sign.md#create-in-form-signing-experience) upplevelsen stöds inte.
 
 1. Du måste ha tillgång till AEM Inbox för att kunna köra och övervaka AEM Forms OSGi AEM Workflows och HTML Workspace för att kunna köra och övervaka AEM Forms JEE Workflows.
 1. AEM Forms Document Services finns för både formulärbaserade AEM arbetsflöden i OSGi och AEM Forms i JEE-arbetsflöden. AEM Workflow använder inbyggda dokumenttjänster för formulärbaserade AEM arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden (Process Management).
-1. AEM Forms JEE-arbetsflöden kan bara återge ett anpassat formulär. Det stöder inte återgivning av anpassningsbara formulär som PDF-dokument.
-1. AEM formulär JEE-arbetsflöden har inget separat steg för Adobe Sign. Du behöver ett anpassningsbart formulär som kan aktiveras av Adobe Sign för AEM formulär i JEE-arbetsflöden. Mer information finns i [Adobe Sign-dokumentation](/help/forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component).
-1. Du kan använda steget [Anropa datamodelltjänst](/help/forms/using/aem-forms-workflow-step-reference.md#p-invoke-form-data-model-service-step-p) för att anropa en webbtjänst och publicera eller hämta data från ett tredjepartsprogram.
-1. Du kan använda steget [Skicka e-post](/help/forms/using/aem-forms-workflow-step-reference.md#send-email-step) för att skicka e-postmeddelanden.
+1. AEM Forms JEE-arbetsflöden kan bara återge ett anpassat formulär. Det går inte att återge ett anpassat formulär som ett PDF-dokument.
+1. AEM formulär JEE-arbetsflöden har inget separat steg för Acrobat Sign. Du behöver ett anpassningsbart formulär som kan aktiveras av Acrobat Sign för AEM formulär i JEE-arbetsflöden. Mer information finns i [Acrobat Sign-dokumentation](/help/forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component).
+1. Du kan använda [Anropa datamodelltjänst för formulär](/help/forms/using/aem-forms-workflow-step-reference.md#p-invoke-form-data-model-service-step-p) steg för att anropa en webbtjänst och publicera eller hämta data från ett tredjepartsprogram.
+1. Du kan använda [Skicka e-post](/help/forms/using/aem-forms-workflow-step-reference.md#send-email-step) steg för att skicka e-post.
 
-## Skillnader mellan funktionerna AEM Inkorgen och AEM Forms-appen {#differences-between-aem-inbox-and-aem-forms-app-features}
+## Skillnader mellan funktionerna AEM Inkorgen och AEM Forms app {#differences-between-aem-inbox-and-aem-forms-app-features}
 
-Två av de framträdande sätten att starta ett Forms-centrerat arbetsflöde är att använda [AEM Inbox](/help/forms/using/manage-applications-inbox.md) och AEM Forms-appen. Funktionerna i AEM Inbox och AEM Forms App skiljer sig dock åt. AEM Inkorg fungerar endast med [Forms-centrerade arbetsflöden](/help/forms/using/aem-forms-workflow.md) medan AEM Forms-appen fungerar med både Forms-centrerade arbetsflöden och processhantering.
+Två av de framträdande sätten att starta ett Forms-centrerat arbetsflöde använder [AEM](/help/forms/using/manage-applications-inbox.md) och AEM Forms. Funktionerna i AEM Inbox och AEM Forms App skiljer sig dock åt. AEM Inkorgen fungerar bara med [Forms-centrerade arbetsflöden](/help/forms/using/aem-forms-workflow.md) medan AEM Forms-programmet fungerar med både Forms-centrerade arbetsflöden och processhantering.
 
 I följande tabell visas funktionerna i AEM Inbox och AEM Forms app:
 
@@ -390,4 +389,3 @@ I följande tabell visas funktionerna i AEM Inbox och AEM Forms app:
   </tr>
  </tbody>
 </table>
-

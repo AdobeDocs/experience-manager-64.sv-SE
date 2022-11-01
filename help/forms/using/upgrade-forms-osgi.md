@@ -1,8 +1,8 @@
 ---
 title: Uppgradera till AEM 6.4 Forms
-seo-title: Uppgradera till AEM 6.4 Forms
-description: 'Du kan uppgradera direkt från AEM 6.1 Forms, AEM 6.2 Forms och LiveCycle ES4 SP1 till AEM 6.3 Forms. '
-seo-description: 'Du kan uppgradera direkt från AEM 6.1 Forms, AEM 6.2 Forms och LiveCycle ES4 SP1 till AEM 6.3 Forms. '
+seo-title: Upgrade to AEM 6.4 Forms
+description: Du kan uppgradera direkt från AEM 6.1 Forms, AEM 6.2 Forms och LiveCycle ES4 SP1 till AEM 6.3 Forms.
+seo-description: You can perform a direct upgrade from AEM 6.1 Forms, AEM 6.2 Forms, and LiveCycle ES4 SP1 to AEM 6.3 Forms.
 uuid: 1435246a-9215-4d88-b52c-59a5c329bb77
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
@@ -11,9 +11,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 role: Admin
 exl-id: 183ed9c6-6a9a-4932-8405-5ae2c6fac1ec
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '812'
 ht-degree: 0%
 
 ---
@@ -33,15 +33,15 @@ Du kan uppgradera direkt från AEM 6.2 Forms eller AEM 6.3 Forms till AEM 6.4 Fo
       * [Versionsinformation för AEM 6.2](https://helpx.adobe.com/experience-manager/6-2/release-notes.html)
       * [Versionsinformation för AEM 6.3](https://helpx.adobe.com/experience-manager/6-3/release-notes.html)
       * [AEM](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)
-   1. Förbered källinstansen för uppgraderingen. Mer information finns i [Uppgradera till AEM 6.4](/help/sites-deploying/upgrade.md#preparing%20the%20source%20instance).
+   1. Förbered källinstansen för uppgraderingen. Detaljerade anvisningar finns i [Uppgradera till AEM 6.4](/help/sites-deploying/upgrade.md#preparing%20the%20source%20instance).
    1. Ladda ned [AEM 6.4 QuickStart](/help/sites-deploying/deploy.md#getting%20the%20software).
-   1. **(Endast Unix/Linux-baserade installationer)** Om du använder UNIX eller Linux som underliggande operativsystem öppnar du terminalfönstret, navigerar till mappen som innehåller crx-quickstart och kör följande kommando:
+   1. **(Endast Unix-/Linux-baserade installationer)** Om du använder UNIX eller Linux som underliggande operativsystem öppnar du terminalfönstret, navigerar till mappen som innehåller crx-quickstart och kör följande kommando:
 
       `chmod -R 755 ../crx-quickstart`
 
    1. Uppgradera din AEM till AEM 6.3. Stegvisa instruktioner finns i [Uppgradera till AEM 6.4](/help/sites-deploying/upgrade.md).
 
-      Innan du fortsätter med nästa steg väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i filen &lt;crx-database>/error.log.
+      Innan du fortsätter med nästa steg, vänta tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i &lt;crx-repository>/error.log fil.
 
       >[!NOTE]
       >
@@ -51,19 +51,19 @@ Du kan uppgradera direkt från AEM 6.2 Forms eller AEM 6.3 Forms till AEM 6.4 Fo
 1. Installera AEM Forms tilläggspaket. Stegen listas nedan:
 
    1. Öppna [Programvarudistribution](https://experience.adobe.com/downloads). Du behöver en Adobe ID för att logga in på Software Distribution.
-   1. Tryck på **[!UICONTROL Adobe Experience Manager]** som finns i rubrikmenyn.
-   1. I avsnittet **[!UICONTROL Filters]**:
-      1. Välj **[!UICONTROL Forms]** i listrutan **[!UICONTROL Solution]**.
-      1. Välj version och typ för paketet. Du kan också använda alternativet **[!UICONTROL Search Downloads]** för att filtrera resultaten.
-   1. Tryck på det paketnamn som gäller för ditt operativsystem, välj **[!UICONTROL Accept EULA Terms]** och tryck på **[!UICONTROL Download]**.
-   1. Öppna [Pakethanteraren](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html) och klicka på **[!UICONTROL Upload Package]** för att överföra paketet.
+   1. Tryck **[!UICONTROL Adobe Experience Manager]** finns i rubrikmenyn.
+   1. I **[!UICONTROL Filters]** avsnitt:
+      1. Välj **[!UICONTROL Forms]** från **[!UICONTROL Solution]** nedrullningsbar lista.
+      1. Välj version och typ för paketet. Du kan också använda **[!UICONTROL Search Downloads]** för att filtrera resultaten.
+   1. Tryck på det paketnamn som gäller för operativsystemet och välj **[!UICONTROL Accept EULA Terms]** och trycka **[!UICONTROL Download]**.
+   1. Öppna [Pakethanteraren](https://docs.adobe.com/content/help/en/experience-manager-65/administering/contentmanagement/package-manager.html)  och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
    1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
-      Du kan också hämta paketet via den direktlänk som anges i [AEM Forms-releaser](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)-artikeln.
+      Du kan även hämta paketet via länken direkt i [AEM Forms](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) artikel.
 
       >[!NOTE]
       >
-      >När paketet har installerats uppmanas du att starta om AEM. **Stoppa inte servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i  &lt;crx-repository>/error.log och loggen är stabil. Observera också att ett fåtal paket kan vara i installerat läge. Du kan ignorera dessa paketen.
+      >När paketet har installerats uppmanas du att starta om AEM. **Stoppa inte servern omedelbart.** Innan du stoppar AEM Forms-servern väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i &lt;crx-repository>/error.log och loggen är stabil. Observera också att ett fåtal paket kan vara i installerat läge. Du kan ignorera dessa paketen.
 
    1. Stoppa AEM och ta bort följande filer:
 
@@ -76,9 +76,9 @@ Du kan uppgradera direkt från AEM 6.2 Forms eller AEM 6.3 Forms till AEM 6.4 Fo
 
    * **Kör migreringsverktyg**
 
-      Migreringsverktyget gör att anpassningsbara formulär och korrespondenshanteringsresurser i tidigare versioner blir kompatibla med AEM 6.4-formulär. Du kan hämta verktyget från AEM Software Distribution. Stegvis information om hur du konfigurerar och använder migreringsverktyget finns i [migreringsverktyg](/help/forms/using/migration-utility.md).
+      Migreringsverktyget gör att anpassningsbara formulär och korrespondenshanteringsresurser i tidigare versioner blir kompatibla med AEM 6.4-formulär. Du kan hämta verktyget från AEM Software Distribution. Stegvisa instruktioner för hur du konfigurerar och använder migreringsverktyget finns i [migreringsverktyg](/help/forms/using/migration-utility.md).
 
-      Om du använder [Exempel för att integrera utkast och inskickningskomponent](integrate-draft-submission-database.md) med databasen och uppgradera från en tidigare version kör du följande SQL-frågor när du har utfört uppgraderingen:
+      Om du använder [Exempel för att integrera komponent för utkast och inskickat material](integrate-draft-submission-database.md) När du har uppdaterat databasen och uppgraderar från en tidigare version kör du följande SQL-frågor när du har uppgraderat:
 
       ```
       UPDATE metadata m, additionalmetadatatable am
@@ -92,17 +92,17 @@ Du kan uppgradera direkt från AEM 6.2 Forms eller AEM 6.3 Forms till AEM 6.4 Fo
       WHERE `key` = 'dataType'
       ```
 
-   * **(Endast vid uppgradering från AEM 6.2 Forms eller tidigare versioner) Konfigurera om Adobe Sign**
+   * **(Endast vid uppgradering från AEM 6.2 Forms eller tidigare versioner) Konfigurera om Acrobat Sign**
 
-      Om du hade konfigurerat Adobe Sign i den tidigare versionen av AEM Forms konfigurerar du om Adobe Sign från AEM Cloud-tjänsterna. Mer information finns i [Integrera Adobe Sign med AEM Forms](/help/forms/using/adobe-sign-integration-adaptive-forms.md).
+      Om du hade konfigurerat Acrobat Sign i den tidigare versionen av AEM Forms konfigurerar du om Acrobat Sign från AEM Cloud-tjänsterna. Mer information finns i [Integrera Acrobat Sign med AEM Forms](/help/forms/using/adobe-sign-integration-adaptive-forms.md).
 
    * **(Endast vid uppgradering från AEM 6.2 Forms eller tidigare versioner) Konfigurera om analyser och rapporter**
 
-      I AEM 6.4 Forms är inte trafikvariabeln source och success event för intryckt tillgänglig. Så när du uppgraderar från AEM 6.2 Forms eller tidigare, slutar AEM Forms skicka data till Adobe Analytics server och analysrapporter för adaptiva formulär är inte tillgängliga. Dessutom introducerar AEM 6.4 Forms trafikvariabler för den version av formuläranalysen och händelsen success för den tid som läggs på ett fält. Så konfigurera om analyser och rapporter för er AEM Forms-miljö. Detaljerade steg finns i [Konfigurera analyser och rapporter](/help/forms/using/configure-analytics-forms-documents.md).
+      I AEM 6.4 Forms är inte trafikvariabeln source och success event för intryckt tillgänglig. Så när du uppgraderar från AEM 6.2 Forms eller tidigare, slutar AEM Forms skicka data till Adobe Analytics server och analysrapporter för adaptiva formulär är inte tillgängliga. Dessutom introducerar AEM 6.4 Forms trafikvariabler för den version av formuläranalysen och händelsen success för den tid som läggs på ett fält. Så konfigurera om analyser och rapporter för er AEM Forms-miljö. Detaljerade anvisningar finns i [Konfigurera analyser och rapporter](/help/forms/using/configure-analytics-forms-documents.md).
 
 1. Kontrollera att servern har uppgraderats, att alla data har migrerats och att den fungerar som vanligt.
 
-   * **Kontrollera paketens status:** Kontrollera att alla paket är i aktivt läge.
+   * **Verifiera paketens status:** Kontrollera att alla paket är i aktivt läge.
    * **Verifiera replikering och omvänd replikering:** Publicera, fyll i och skicka några migrerade formulär. Verifiera också skickade data.
    * **Verifiera åtkomst till användargränssnitt för administratörer och utvecklare:** Logga in AEM instansen från ett administratörskonto och verifiera att du har åtkomst till följande URL:er:
 
@@ -111,8 +111,8 @@ Du kan uppgradera direkt från AEM 6.2 Forms eller AEM 6.3 Forms till AEM 6.4 Fo
       * `https://[server]:[port]/aem/forms.html/content/dam/formsanddocuments`
 
    >[!NOTE]
-   I AEM 6.4 Forms har strukturen för crx-database ändrats. När du har uppgraderat till AEM 6.4-formulär kan du använda de ändrade sökvägarna för anpassning som du skapar på nytt. En fullständig lista över ändrade sökvägar finns i [Omstrukturering av Forms-databaser i AEM 6.4](/help/sites-deploying/forms-repository-restructuring-in-aem-6-4.md).
+   I AEM 6.4 Forms har strukturen för crx-database ändrats. När du har uppgraderat till AEM 6.4-formulär kan du använda de ändrade sökvägarna för anpassning som du skapar på nytt. En fullständig lista över ändrade sökvägar finns på [Omstrukturering av Forms-lager i AEM 6.4](/help/sites-deploying/forms-repository-restructuring-in-aem-6-4.md).
 
 ## AEM 6.0 Forms och AEM 6.1 Forms > AEM 6.4 Forms {#upgrade-aem-forms-60-61-to-64}
 
-Direktuppgradering från **AEM 6.0 Forms** och **AEM 6.1 Forms** till AEM 6.4 Forms är inte tillgängligt. Utför en mellanliggande [uppgradering till AEM 6.2 Forms](/help/forms/using/upgrade.md) eller [uppgradering till AEM 6.3 Forms](/help/forms/using/upgrade.md) och uppgradera sedan från AEM 6.2 Forms eller AEM 6.3 Forms till AEM 6.4 Forms.
+Direktuppgradering från **AEM 6.0 Forms** och **AEM 6.1 Forms** till AEM 6.4 Forms inte är tillgängligt. Utför en mellanliggande [uppgradera till AEM 6.2 Forms](/help/forms/using/upgrade.md) eller [uppgradera till AEM 6.3 Forms](/help/forms/using/upgrade.md) och sedan uppgradera från AEM 6.2 Forms eller AEM 6.3 Forms till AEM 6.4 Forms.
