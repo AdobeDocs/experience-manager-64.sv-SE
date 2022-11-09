@@ -1,20 +1,20 @@
 ---
 title: Markdown
-seo-title: Markering
+seo-title: Markdown
 description: När du redigerar innehållsfragmentet använder redigeraren markeringssyntax så att du enkelt kan skriva innehåll.
-seo-description: När du redigerar innehållsfragmentet använder redigeraren markeringssyntax så att du enkelt kan skriva innehåll.
+seo-description: When you are authoring, the content fragment editor uses markdown syntax to allow you to easily write content.
 uuid: 12b185a5-3d87-4d7c-8d09-8cc2726009a8
-contentOwner: Alison Heimoz
+contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: content-fragments
 content-type: reference
 discoiquuid: bde54663-9050-4a5a-93cb-7cd84ac7f071
 exl-id: 209f0e02-b883-4104-8358-01cab15e5db2
-feature: Innehållsfragment
+feature: Content Fragments
 role: User
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '535'
 ht-degree: 4%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 4%
 
 >[!CAUTION]
 >
->Vissa funktioner för innehållsfragment kräver [AEM 6.4 Service Pack 2 (6.4.2.0) eller senare](/help/release-notes/sp-release-notes.md).
+>Vissa funktioner för innehållsfragment kräver att [AEM 6.4 Service Pack 2 (6.4.2.0) eller senare](/help/release-notes/sp-release-notes.md).
 
-När du [redigerar](content-fragments-variations.md#authoring-your-content) använder innehållsfragmentredigeraren syntaxen *markdown* så att du enkelt kan skriva innehåll:
+När du [redigering](content-fragments-variations.md#authoring-your-content)använder innehållsfragmentredigeraren *markering* så att du enkelt kan skriva innehåll:
 
 ![markeringsredigerare](/help/assets/assets/cfm-6420-08.png)
 
@@ -141,7 +141,7 @@ Du kan ha kapslade blockcitattecken. Till exempel:
 
 Du kan skapa både sorterade och osorterade listor.
 
-Om du vill skapa en osorterad lista använder du &amp;ast; -symbolen före objekten i listan. Till exempel:
+Skapa en osorterad &amp;lista med hjälp av den sista; -symbolen före objekten i listan. Till exempel:
 
     `* item in list`
 
@@ -177,7 +177,7 @@ Du kan fet text enligt följande:
 
     `Keyboard shortcut: Ctrl-B (Cmd-B)`
 
-Om du vill ange ett intervall med kod omsluter du det med citattecken (&amp;grave;). Till skillnad från ett förformaterat kodblock anger ett kodintervall koden i ett normalt stycke.
+Om du vill ange ett kodomfång omsluter du det med citattecken (&grave;). Till skillnad från ett förformaterat kodblock anger ett kodintervall koden i ett normalt stycke.
 
 Till exempel:
 
@@ -193,7 +193,7 @@ Kodblock används vanligtvis för att illustrera källkod. Du kan skapa kodblock
 
 ## Omvända snedstreck {#backslash-escapes}
 
-Du kan använda omvänt snedstreck för att generera litterala tecken som har en speciell betydelse för formateringssyntaxen. Om du till exempel vill omsluta ett ord med literala asterisker (i stället för en HTML &lt;em>-tagg) kan du använda omvända snedstreck före asteriskerna, enligt följande:
+Du kan använda omvänt snedstreck för att generera litterala tecken som har en speciell betydelse för formateringssyntaxen. Om du till exempel vill omge ett ord med literala asterisker (i stället för en HTML-tagg) kan du använda omvända snedstreck före asteriskerna, enligt följande:
 
     `\\*literal asterisks\\*`
 

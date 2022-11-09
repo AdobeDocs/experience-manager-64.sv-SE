@@ -1,22 +1,21 @@
 ---
 title: Använda arbetsflöden på sidor
-seo-title: Använda arbetsflöden på sidor
+seo-title: Applying Workflows to Pages
 description: När du redigerar kan du anropa arbetsflöden för att göra något på sidorna; det går även att använda mer än ett arbetsflöde.
-seo-description: När du redigerar kan du anropa arbetsflöden för att göra något på sidorna; det går även att använda mer än ett arbetsflöde.
+seo-description: When authoring, you can invoke workflows to take action on your pages; it is also possible to apply more than one workflow..
 uuid: 8a1d16f8-69fc-4e3a-b72a-b799ea381024
-contentOwner: Alison Heimoz
+contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 8556d20a-99bd-4942-b7b8-2db69f64e67c
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 05c52802-adfd-4b5f-a273-d6a261a00659
+source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 12%
+source-wordcount: '647'
+ht-degree: 11%
 
 ---
-
 
 # Använda arbetsflöden på sidor{#applying-workflows-to-pages}
 
@@ -33,70 +32,68 @@ När du använder arbetsflödet anger du följande information:
 
 Arbetsflöden kan startas från:
 
-* konsolen **[Platser](#starting-a-workflow-from-the-sites-console)**.
+* den **[Webbplatser](#starting-a-workflow-from-the-sites-console)** konsol.
 * när du redigerar en sida, från **[Sidinformation](#starting-a-workflow-from-the-page-editor)**.
 
 >[!NOTE]
 >
 >Se även:
 >
->* [Använda arbetsflöden för DAM-resurser](/help/assets/assets-workflow.md).
+>* [Tillämpa arbetsflöden på DAM-resurser](/help/assets/assets-workflow.md).
 >* [Arbeta med projektarbetsflöden](/help/sites-authoring/projects-with-workflows.md).
-
 >
-
 
 
 >[!NOTE]
 >
->AEM kan [starta arbetsflöden med flera andra metoder](/help/sites-administering/workflows-starting.md).
+>AEM administratörer kan [starta arbetsflöden med flera andra metoder](/help/sites-administering/workflows-starting.md).
 
 ## Starta ett arbetsflöde från platskonsolen {#starting-a-workflow-from-the-sites-console}
 
 Du kan starta ett arbetsflöde från:
 
-* **[Skapa](#starting-a-workflow-from-the-sites-toolbar)**-alternativet i verktygsfältet Platser.
-* **[tidslinjen](#starting-a-workflow-from-the-timeline)** i webbplatskonsolen.
+* den **[Skapa](#starting-a-workflow-from-the-sites-toolbar)** i verktygsfältet Platser.
+* den **[Tidslinje](#starting-a-workflow-from-the-timeline)** i webbplatskonsolen.
 
 I båda fallen måste du:
 
-* [Ange arbetsflödesinformation i guiden](#specifying-workflow-details-in-the-create-workflow-wizard) Skapa arbetsflöde.
+* [Ange arbetsflödesinformation i guiden Skapa arbetsflöde](#specifying-workflow-details-in-the-create-workflow-wizard).
 
 ### Starta ett arbetsflöde från verktygsfältet Platser {#starting-a-workflow-from-the-sites-toolbar}
 
-Du kan starta ett arbetsflöde från verktygsfältet i konsolen **Platser**:
+Du kan starta ett arbetsflöde från verktygsfältet i **Webbplatser** konsol:
 
 1. Navigera till och markera önskad sida.
 
-1. Från alternativet **Skapa** i verktygsfältet kan du nu välja **Arbetsflöde**.
+1. Från **Skapa** i verktygsfältet kan du nu välja **Arbetsflöde**.
 
    ![screen_shot_2019-03-06at121237pm](assets/screen_shot_2019-03-06at121237pm.png)
 
-1. Guiden **Skapa arbetsflöde** hjälper dig att [ange arbetsflödesinformation](#specifying-workflow-details-in-the-create-workflow-wizard).
+1. The **Skapa arbetsflöde** guiden hjälper dig [ange arbetsflödesinformation](#specifying-workflow-details-in-the-create-workflow-wizard).
 
 ### Starta ett arbetsflöde från tidslinjen {#starting-a-workflow-from-the-timeline}
 
-Från **tidslinjen** kan du starta ett arbetsflöde som ska användas för den valda resursen.
+Från **Tidslinje** du kan starta ett arbetsflöde som ska användas för den valda resursen.
 
-1. [Markera ](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) resursen och öppna  [tidslinjen](/help/sites-authoring/basic-handling.md#timeline)  (eller öppna tidslinjen och välj sedan resursen).
+1. [Välj resurs](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources) och öppna [Tidslinje](/help/sites-authoring/basic-handling.md#timeline) (eller öppna tidslinjen och välj sedan resursen).
 1. Pilen i kommentarfältet kan användas för att visa **Starta arbetsflöde**:
 
    ![wf-51](assets/wf-51.png)
 
-1. Guiden **Skapa arbetsflöde** hjälper dig att [ange arbetsflödesinformation](#specifying-workflow-details-in-the-create-workflow-wizard).
+1. The **Skapa arbetsflöde** guiden hjälper dig [ange arbetsflödesinformation](#specifying-workflow-details-in-the-create-workflow-wizard).
 
 ### Ange arbetsflödesinformation i guiden Skapa arbetsflöde {#specifying-workflow-details-in-the-create-workflow-wizard}
 
-Guiden **Skapa arbetsflöde** hjälper dig att välja arbetsflöde och ange nödvändig information.
+The **Skapa arbetsflöde** hjälper dig att välja arbetsflöde och ange nödvändig information.
 
-När du har öppnat guiden **Skapa arbetsflöde** från antingen:
+När du har öppnat **Skapa arbetsflöde** guide från antingen
 
-* **[Skapa](#starting-a-workflow-from-the-sites-toolbar)**-alternativet i verktygsfältet Platser.
-* **[tidslinjen](#starting-a-workflow-from-the-timeline)** i webbplatskonsolen.
+* den **[Skapa](#starting-a-workflow-from-the-sites-toolbar)** i verktygsfältet Platser.
+* den **[Tidslinje](#starting-a-workflow-from-the-timeline)** i webbplatskonsolen.
 
 Du kan ange information:
 
-1. I steget **Egenskaper** definieras de grundläggande alternativen för arbetsflödet:
+1. I **Egenskaper** de grundläggande alternativen för arbetsflödet definieras:
 
    * **Arbetsflödesmodell**
    * **Arbetsflödets titel**
@@ -113,16 +110,16 @@ Du kan ange information:
    >
    >Alternativet **Behåll arbetsflödespaket** är tillgängligt när arbetsflödet har konfigurerats med stöd för flera resurser och flera resurser har valts.[](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)
 
-   När du är klar använder du **Nästa** för att fortsätta.
+   När det är klart, använd **Nästa** för att fortsätta.
 
    ![wf-52](assets/wf-52.png)
 
-1. I steget **Scope** kan du välja:
+1. I **Omfång** steg du kan välja:
 
-   * **Lägg till** innehåll för att öppna  [sökvägsläsaren ](/help/sites-authoring/author-environment-tools.md#path-browser) och markera ytterligare resurser, när du är i webbläsaren klickar/trycker du på  **** Markering för att lägga till innehållet i arbetsflödesinstansen.
+   * **Lägg till innehåll** för att öppna [sökvägsläsare](/help/sites-authoring/author-environment-tools.md#path-browser) och välja ut ytterligare resurser, i webbläsaren klickar/trycker du **Välj** för att lägga till innehållet i arbetsflödesinstansen.
    * En befintlig resurs som visar ytterligare åtgärder:
 
-      * **Inkludera** underordnade anger att underordnade för resursen ska inkluderas i arbetsflödet.
+      * **Inkludera underordnade** för att ange att underordnade resurser ska inkluderas i arbetsflödet.
 
          En dialogruta öppnas där du kan förfina markeringen enligt:
 
@@ -132,7 +129,7 @@ Du kan ange information:
 
          Alla underordnade objekt läggs till i listan över resurser som arbetsflödet gäller för.
 
-      * **Ta bort** markering om du vill ta bort resursen från arbetsflödet.
+      * **Ta bort markering** för att ta bort resursen från arbetsflödet.
 
    ![wf-53](assets/wf-53.png)
 
@@ -144,7 +141,6 @@ Du kan ange information:
 
 ## Starta ett arbetsflöde från sidredigeraren {#starting-a-workflow-from-the-page-editor}
 
-När du redigerar en sida kan du välja **Sidinformation** i verktygsfältet. Listrutan har alternativet **Starta i arbetsflöde**. Då öppnas en dialogruta där du kan ange önskat arbetsflöde, tillsammans med en titel om det behövs:
+När du redigerar en sida kan du markera **Sidinformation** i verktygsfältet. Listrutan har ett alternativ **Starta i arbetsflöde**. Då öppnas en dialogruta där du kan ange önskat arbetsflöde, tillsammans med en titel om det behövs:
 
 ![wf-54](assets/wf-54.png)
-
