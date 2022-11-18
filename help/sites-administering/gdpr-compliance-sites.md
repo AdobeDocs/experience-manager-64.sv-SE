@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 772f6188-5e0b-4e66-b94a-65a0cc267ed3
 exl-id: 38bae0d7-9544-42d0-9766-45c66f254e5c
-source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '832'
 ht-degree: 0%
 
 ---
@@ -51,13 +51,13 @@ AEM har en [anmälningstjänst för cookie](/help/sites-developing/cookie-optout
 
 AEM Sites innehåller en valfri integrering med Enhanced Insights by Analytics som använder funktioner i Adobe Analytics On-Demand Service.
 
-Mer information om hur man hanterar förfrågningar från registrerade GDPR gällande Adobe Analytics finns på [Adobe Analytics och GDPR](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html).
+Mer information om hur man hanterar förfrågningar från registrerade GDPR gällande Adobe Analytics finns på [Adobe Analytics och GDPR](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html).
 
 ## Förbättrad personalisering med Target {#enhanced-personalization-by-target}
 
 AEM Sites innehåller en valfri integrering med Förbättrad personalisering via Target som använder funktioner i Adobe Target On-Demand Service.
 
-Mer information om hur man hanterar förfrågningar från registrerade GDPR gällande Adobe Target finns på [Adobe Target - Sekretess och allmänna dataskyddsförordningen](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
+Mer information om hur man hanterar förfrågningar från registrerade GDPR gällande Adobe Target finns på [Adobe Target - Sekretess och allmänna dataskyddsförordningen](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
 
 ## ContextHub {#contexthub}
 

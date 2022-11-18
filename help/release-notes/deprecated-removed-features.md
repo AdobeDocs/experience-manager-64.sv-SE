@@ -2,9 +2,9 @@
 title: Föråldrade och borttagna funktioner
 description: Versionsinformation om borttagna funktioner i Adobe Experience Manager 6.4.
 exl-id: 2fe0dad7-fc78-4aac-afa3-79a278008453
-source-git-commit: dcc36e499517f3f35d5f1d849802c4a5c35121bd
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1308'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 | Portal Director | Portal Director är en uppsättning funktioner som gör det möjligt att lägga AEM innehåll via Portlet i tredjepartsservrar. Adobe planerar inte att göra ytterligare förbättringar av portalfunktionen Director på den plats som anges nedan. AEM 6.4 har portalen Director och kunder som uppgraderar från tidigare versioner kan fortsätta använda den som den är. Observera att Portal Direct fortfarande stöds fullt ut när det är föråldrat. <ul><li>/libs/portal/director</li></ul> | Adobe planerar inte att tillhandahålla någon ersättning. |
 | Portlet-komponent | Portlet Components under /foundation/components/portlet gör att JSR Portlets i AEM kan användas som komponenter. Adobe planerar inte att göra fler förbättringar av funktionen Portlet Component. AEM 6.4 har Portlet Component inkluderat och kunder som uppgraderar från tidigare versioner kan fortsätta använda det som det är. Observera att Portlet Component fortfarande har fullt stöd medan det är föråldrat. | Adobe planerar inte att tillhandahålla någon ersättning. |
 | Forms | Stödet för tjänsten Adobe Central Migration Bridge har tagits bort eftersom Adobe Central inte längre stöds. | Ingen ersättning |
-| Forms | Användning av JSONObject i Query och OperationOptions har tagits bort. Följande API:er är inaktuella: <ul><li>`setArguments(JSONObject arguments)`</li><li> `JSONObject getArguments()`</li><li>`OperationOptions(String operationId, JSONObject arguments)`</li><li>`JSONObject getArguments()`</li><li> `void setArguments(JSONObject arguments)`</li></ul> | Använd API:t `IValueMap` |
+| Forms | Användning av JSONObject i Query och OperationOptions har tagits bort. Följande API:er är inaktuella: <ul><li>`setArguments(JSONObject arguments)`</li><li> `JSONObject getArguments()`</li><li>`OperationOptions(String operationId, JSONObject arguments)`</li><li>`JSONObject getArguments()`</li><li> `void setArguments(JSONObject arguments)`</li></ul> | Använd `IValueMap` API |
 | Forms | Tjänsten Central Migration Bridge är inaktuell. | Ingen ersättning erbjuds. |
 | Assets | Avlastning av resurser har tagits bort från och med AEM 6.4. |  |
 | Utvecklare | Klientbibliotek med Lodash/underscore. Adobe planerar inte att ytterligare underhålla och uppdatera Lodash-/understreckklientbiblioteket som levereras som en del av distributionen (QuickStart) | Adobe rekommenderar att kunder som fortfarande behöver Lodash/underscore för sin kod lägger till den i sin projektkodbas. |
@@ -146,13 +146,12 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 
 ## Borttagna funktioner {#removed-features}
 
-Tabellen nedan visar funktioner som har tagits bort från AEM 6.4. Tidigare versioner hade dessa funktioner markerats som
-föråldrad.
+Tabellen nedan visar funktioner som har tagits bort från AEM 6.4. Tidigare versioner hade dessa funktioner markerats som föråldrade.
 
 | Yta | Funktion | Ersättning |
 |---|---|---|
-| Integrering med [!DNL Experience Cloud] | Du kan synkronisera dina resurser med [!DNL Experience Cloud] genom att konfigurera via [!DNL Adobe I/O]. [!DNL Adobe Experience Cloud] kallades tidigare  [!DNL Adobe Marketing Cloud]. | Om du har frågor kan du kontakta [Adobe kundsupport](https://experienceleague.adobe.com/?support-solution=General#support). |
-| Analytics Activity Map | Den version av Activity Map som ingår i AEM. | På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM. Plugin-programmet [ActivityMap som tillhandahålls av Adobe Analytics](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) bör nu användas. |
+| Integration med [!DNL Experience Cloud] | Du kan synkronisera dina resurser med [!DNL Experience Cloud] använda en konfigurering via [!DNL Adobe I/O]. [!DNL Adobe Experience Cloud] kallades tidigare [!DNL Adobe Marketing Cloud]. | Om du har frågor kontaktar du [Adobe kundsupport](https://experienceleague.adobe.com/?support-solution=General#support). |
+| Analytics Activity Map | Den version av Activity Map som ingår i AEM. | På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM. The [ActivityMap-plugin från Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) bör nu användas. |
 | Components-Forms | Form Captcha (foundation/components/form/captcha) | Använd komponenten ReCaptcha från Google i stället |
 | Komponenter | Bildspel (grund/komponenter/bildspel) | Ingen ersättning |
 | Komponenter | Flash (grund/komponenter/flash) | Ingen ersättning |
@@ -165,7 +164,7 @@ föråldrad.
 | Forms | Uppgradering utanför kontoret | Det finns inget stöd för att utföra uppgraderingen utanför platsen |
 | Forms | Sidegrade för TjärMK till DocumentMK-migreringar | Du kan exportera data från ett äldre system och sedan importera dem i ett uppdateringssystem. Mer information finns i AEM Forms om JEE-uppgraderingsdokumentation |
 | Forms | AEM Forms på 32-bitars JEE-installationsprogrammet är inte tillgängligt. | Adobe har slutat leverera AEM Forms på JEE 32-bitars installationsprogram. Du kan fortsätta använda 64-bitars installationsprogram för att installera AEM Forms på JEE. |
-| Forms | Tog bort stöd för att använda DAM-bilder i Document Fragment Component. | Du kan använda komponenterna Bild och Diagram i den interaktiva kommunikationens tryckkanal. Om du använder adaptiv dokuments dokumentfragmentkomponent i adaptiva formulär slutar den att fungera efter uppgradering till AEM 6.4 Forms. |
+| Forms | Stöd för DAM-bilder i Document Fragment Component har tagits bort. | Du kan använda komponenterna Bild och Diagram i den interaktiva kommunikationens tryckkanal. Om du använder adaptiv dokuments dokumentfragmentkomponent i adaptiva formulär slutar den att fungera efter uppgradering till AEM 6.4 Forms. |
 | Forms | Funktionen Adaptiva dokument har tagits bort | Du kan använda funktionen för interaktiv kommunikation för att skapa tryckt och webbaserad kommunikation. Om du använder adaptiva dokument måste du installera kompatibilitetspaketet för att kunna fortsätta använda befintliga adaptiva dokument |
 | Forms | Borttagen AEM Forms på JEE-specifik landningssida. | AEM Forms på JEE-landningssida ersätts med AEM landningssida (/aem/start.html) |
 | Forms | Stöd för standard-Captcha har tagits bort | Använd tjänsten reCAPTCHA från Google. |

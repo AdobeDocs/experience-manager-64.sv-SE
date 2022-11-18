@@ -1,29 +1,28 @@
 ---
 title: Ansluta till Adobe Analytics och skapa ramverk
-seo-title: Ansluta till Adobe Analytics och skapa ramverk
+seo-title: Connecting to Adobe Analytics and Creating Frameworks
 description: Lär dig att ansluta AEM till SiteCatalyst och skapa ramverk.
-seo-description: Lär dig att ansluta AEM till SiteCatalyst och skapa ramverk.
+seo-description: Learn about connecting AEM to SiteCatalyst and creating frameworks.
 uuid: 04325409-435c-4394-9ab7-c9022e19e085
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: 88dbfd34-1f8d-47a2-893d-20faf1a80f95
-translation-type: tm+mt
-source-git-commit: fb4e6aef84d733c578e0f2ee7407016715e77cf5
+exl-id: 654387e3-d837-4bde-a9e4-962862ad69e9
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '1556'
+source-wordcount: '1534'
 ht-degree: 0%
 
 ---
-
 
 # Ansluta till Adobe Analytics och skapa ramverk{#connecting-to-adobe-analytics-and-creating-frameworks}
 
 Om du vill spåra webbdata från dina AEM sidor i Adobe Analytics skapar du en Adobe Analytics Cloud Services-konfiguration och ett Adobe Analytics-ramverk:
 
 * **Adobe Analytics-konfiguration:** Information om ditt Adobe Analytics-konto. Med Adobe Analytics-konfigurationen kan AEM ansluta till Adobe Analytics. Skapa en Adobe Analytics-konfiguration för varje konto som du använder.
-* **Adobe Analytics Framework:** En uppsättning mappningar mellan Adobe Analytics rapportsvitsegenskaper och CQ-variabler. Använd ett ramverk för att konfigurera hur webbplatsdata fyller i dina Adobe Analytics-rapporter. Ramverk är kopplade till en Adobe Analytics-konfiguration. Du kan skapa flera ramverk för varje konfiguration.
+* **Adobe Analytics Framework:** En uppsättning mappningar mellan egenskaper för Adobe Analytics rapportsserie och CQ-variabler. Använd ett ramverk för att konfigurera hur webbplatsdata fyller i dina Adobe Analytics-rapporter. Ramverk är kopplade till en Adobe Analytics-konfiguration. Du kan skapa flera ramverk för varje konfiguration.
 
 När du associerar en webbsida med ett ramverk, utför ramverket spårning för den sidan och dess underordnade sidor. Sidvyer kan sedan hämtas från Adobe Analytics och visas i webbplatskonsolen.
 
@@ -35,12 +34,12 @@ Om du vill spåra AEM i Adobe Analytics måste du ha ett giltigt Adobe Marketing
 
 Adobe Analytics-kontot behöver:
 
-* Har **administratörsprivilegier**
-* Anges till användargruppen **Webbtjänståtkomst**.
+* har **Administratör** behörigheter
+* Blanketten tilldelas **Webbtjänståtkomst** användargrupp.
 
 >[!CAUTION]
 >
->Att ange **administratörsbehörighet** (i Adobe Analytics) räcker inte för att en användare ska kunna ansluta från AEM till Adobe Analytics. Kontot måste också ha **Web Service Access**-behörighet.
+>Tillhandahållande **Administratör** behörighet (inom Adobe Analytics) inte räcker för att en användare ska kunna ansluta från AEM till Adobe Analytics. Kontot måste också ha **Webbtjänståtkomst** behörighet.
 
 ![chlimage_1-316](assets/chlimage_1-316.png)
 
@@ -50,9 +49,9 @@ Innan du fortsätter bör du kontrollera att du kan logga in på Adobe Analytics
 
 * [Adobe Analytics Sign In](https://sc.omniture.com/login/)
 
-### Konfigurera AEM att använda dina Adobe Analytics datacenter {#configuring-aem-to-use-your-adobe-analytics-data-centers}
+### Konfigurera AEM för användning av Adobe Analytics datacenter {#configuring-aem-to-use-your-adobe-analytics-data-centers}
 
-Adobe Analytics [datacenter](https://developer.omniture.com/en_US/content_page/concepts-terminology/c-how-is-data-stored) samlar in, bearbetar och lagrar data som är kopplade till din Adobe Analytics rapporteringsserie. Du måste konfigurera AEM att använda det datacenter som är värd för din Adobe Analytics rapporteringsprogramsvit. I följande tabell visas tillgängliga datacenter och deras URL.
+Adobe Analytics [datacenter](https://developer.omniture.com/en_US/content_page/concepts-terminology/c-how-is-data-stored) samla in, bearbeta och lagra data som är kopplade till Adobe Analytics rapporteringsprogram. Du måste konfigurera AEM att använda det datacenter som är värd för din Adobe Analytics rapporteringsprogramsvit. I följande tabell visas tillgängliga datacenter och deras URL.
 
 | Datacenter | Webbadress |
 |---|---|
@@ -64,7 +63,7 @@ Adobe Analytics [datacenter](https://developer.omniture.com/en_US/content_page/c
 
 AEM använder datacentret i San Jose (https://api.omniture.com/admin/1.4/rest/) som standard.
 
-Använd [webbkonsolen för att konfigurera OSGi-paketet](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) **Adobe AEM Analytics HTTP Client**. Lägg till **URL:en till datacentret** för det datacenter som är värd för en rapportsvit som dina AEM samlar in data för.
+Använd [Webbkonsol för att konfigurera OSGi-paketet](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) **Adobe AEM Analytics HTTP Client**. Lägg till **URL för datacenter** för det datacenter som är värd för en rapportsserie där dina AEM sidor samlar in data.
 
 ![aa-07](assets/aa-07.png)
 
@@ -75,8 +74,8 @@ Använd [webbkonsolen för att konfigurera OSGi-paketet](/help/sites-deploying/c
    >
    >Kontakta webbplatsadministratören för att ta reda på om du har tillgång till den här konsolen.
 
-1. Markera konfigurationsobjektet **Adobe AEM Analytics HTTP Client**.
-1. Om du vill lägga till URL:en för ett datacenter trycker du på plusknappen bredvid listan **URL:er för datacenter** och skriver URL:en i rutan.
+1. Välj konfigurationsobjektet som heter **Adobe AEM Analytics HTTP Client**.
+1. Om du vill lägga till URL:en för ett datacenter trycker du på +-knappen bredvid **URL för datacenter** och skriv webbadressen i rutan.
 
 1. Om du vill ta bort en URL-adress från listan klickar du på knappen - bredvid URL-adressen.
 1. Klicka på Spara.
@@ -87,7 +86,7 @@ Använd [webbkonsolen för att konfigurera OSGi-paketet](/help/sites-deploying/c
 >
 >På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM.
 >
->Det [ActivityMap-plugin som tillhandahålls av Adobe Analytics](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) bör nu användas.
+>The [ActivityMap-plugin från Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) bör nu användas.
 
 ## Konfigurera för Activity Map {#configuring-for-the-activity-map}
 
@@ -95,55 +94,55 @@ Använd [webbkonsolen för att konfigurera OSGi-paketet](/help/sites-deploying/c
 >
 >På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM.
 >
->Det [ActivityMap-plugin som tillhandahålls av Adobe Analytics](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) bör nu användas.
+>The [ActivityMap-plugin från Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) bör nu användas.
 
 ## Skapa ett Adobe Analytics Framework {#creating-a-adobe-analytics-framework}
 
 För det Report Suite-ID (RSID) som du använder kan du styra vilka serverinstanser (författare, publicera eller båda) som ska bidra med data till Report Suite:
 
 * **Alla**: Information från både författaren och publiceringsinstansen fyller i Report Suite.
-* **Författare**: Rapportsviten fylls bara i med information från författarinstansen.
+* **Upphovsman**: Rapportsviten fylls bara i med information från författarinstansen.
 * **Publicera**: Rapportsviten fylls bara i med information från publiceringsinstansen.
 
 >[!NOTE]
 >
 >När du väljer typ av serverinstans begränsas inte anrop till Adobe Analytics, utan bara vilka anrop som innehåller RSID.
 >
->Ett ramverk är till exempel konfigurerat att använda *diweretail*-rapportsviten och författaren är den valda serverinstansen. När sidor publiceras tillsammans med ramverket anropas fortfarande Adobe Analytics, men dessa anrop innehåller inte RSID. Endast anrop från författarinstansen innehåller RSID.
+>Ett ramverk är till exempel konfigurerat att använda *diiweretail* rapportsviten och författaren är den valda serverinstansen. När sidor publiceras tillsammans med ramverket anropas fortfarande Adobe Analytics, men dessa anrop innehåller inte RSID. Endast anrop från författarinstansen innehåller RSID.
 
-1. Använd **Navigering**, välj **Verktyg**, **Cloud Services** och sedan **Äldre Cloud Services**.
-2. Bläddra till **Adobe Analytics** och klicka på **[+]** bredvid **Tillgängliga konfigurationer**.
-3. Klicka på länken **[+]** bredvid din Adobe Analytics-konfiguration.
+1. Använda **Navigering**, markera **verktyg**, **Cloud Services** sedan **Äldre Cloud Services**.
+2. Bläddra till **Adobe Analytics** och klicka **[+]** nästa **Tillgängliga konfigurationer**.
+3. Klicka på **[+]** -länk bredvid din Adobe Analytics-konfiguration.
 
-4. I dialogrutan **Create Framework**:
+4. I **Skapa ramverk** dialog:
 
-   * Ange en **titel**.
-   * Du kan också ange **Namn** för noden som lagrar ramverksinformationen i databasen.
+   * Ange en **Titel**.
+   * Du kan också ange **Namn**, för noden som lagrar ramverksinformationen i databasen.
    * Välj **Adobe Analytics Framework**
 
-   Klicka på **Skapa**.
+   Och klicka **Skapa**.
 
    Ramverket öppnas för redigering.
 
-5. Klicka på **Lägg till objekt** i delen **Rapportsviter** på sidopanelen (höger sida av huvudpanelen). Använd sedan listrutan för att välja det Report Suite-ID (till exempel `geometrixxauth`) som ramverket ska interagera med.
+5. I **Rapportsviter** på sidopanelen (höger sida av huvudpanelen), klicka **Lägg till objekt**. Använd sedan listrutan för att välja ID för Report Suite (t.ex. `geometrixxauth`) som ramverket interagerar med.
 
    >[!NOTE]
    >
    >Innehållssökaren till vänster fylls i med Adobe Analytics-variabler (SiteCatalyst Variables) när du väljer ett Report Suite-ID.
 
-6. Använd sedan listrutan **Körningsläge** (bredvid Report Suite-ID:t) för att välja de serverinstanser som du vill skicka information till Report Suite.
+6. Använd sedan **Körningsläge** i listrutan (bredvid Report Suite-ID:t) för att välja de serverinstanser som du vill skicka information till Report Suite.
 
    ![aa-framework-01](assets/aa-framework-01.png)
 
-7. Klicka på **Aktivera ramverk på fliken** Sida **för att göra ramverket tillgängligt på publiceringsinstansen för din webbplats.**
+7. Gör ramverket tillgängligt på publiceringsinstansen av webbplatsen på **Sida** sidosparkflik, klicka **Aktivera Framework.**
 
-### Konfigurerar serverinställningar för Adobe Analytics {#configuring-server-settings-for-adobe-analytics}
+### Konfigurera serverinställningar för Adobe Analytics {#configuring-server-settings-for-adobe-analytics}
 
 Med ramverkssystemet kan du ändra serverinställningarna i varje Adobe Analytics-ramverk.
 
 >[!CAUTION]
 >
->Dessa inställningar avgör var dina data skickas och hur, så det är absolut nödvändigt att du *inte manipulerar dessa inställningar* och låter Adobe Analytics-representanten konfigurera dem i stället.
+>Dessa inställningar avgör var data skickas och hur. Det är därför viktigt att du *ändra inte inställningarna* och låt Adobe Analytics-representanten installera det istället.
 
 Börja med att öppna panelen. Tryck på nedåtpilen bredvid **Servrar**:
 
@@ -165,39 +164,39 @@ Börja med att öppna panelen. Tryck på nedåtpilen bredvid **Servrar**:
 * **Namnutrymme för besökare**
 
    * Namnutrymmet bestämmer den första delen av spårnings-URL:en.
-   * Om du t.ex. ändrar namnutrymmet till **CNAME** kommer de anrop som görs till Adobe Analytics att se ut som **CNAME.d1.omtrdc.net** i stället för som standard.
+   * t.ex. ändra namnutrymmet till **CNAME** kommer att få Adobe Analytics att se ut som **CNAME.d1.omtrdc.net** i stället för standardinställningen.
 
-## Associera en sida med ett Adobe Analytics Framework {#associating-a-page-with-a-adobe-analytics-framework}
+## Koppla en sida till ett Adobe Analytics Framework {#associating-a-page-with-a-adobe-analytics-framework}
 
 När en sida är kopplad till ett Adobe Analytics-ramverk skickar sidan data till Adobe Analytics när sidan läses in. Variabler som fylls i på sidan mappas och hämtas från Adobe Analytics-variabler i ramverket. Sidvyer hämtas till exempel från Adobe Analytics.
 
 Underordnade till sidan ärver kopplingen till ramverket. Om du till exempel associerar platsens rotsida med ett ramverk, kopplas alla sidor på webbplatsen till ramverket.
 
-1. På konsolen **Platser** väljer du den sida som du vill konfigurera med spårning.
-1. Öppna **[Sidegenskaperna](/help/sites-authoring/editing-page-properties.md)**, antingen direkt från konsolen eller sidredigeraren.
-1. Öppna fliken **Cloud Services**.
+1. Från **Webbplatser** väljer du den sida som du vill konfigurera med spårning.
+1. Öppna **[Sidegenskaper](/help/sites-authoring/editing-page-properties.md)**, antingen direkt från konsolen eller sidredigeraren.
+1. Öppna **Cloud Services** -fliken.
 
-1. Använd listrutan **Lägg till konfiguration** och välj **Adobe Analytics** bland de tillgängliga alternativen. Om arv är plats måste du inaktivera det innan väljaren blir tillgänglig.
+1. Använd **Lägg till konfiguration** listruta för att välja **Adobe Analytics** bland de tillgängliga alternativen. Om arv är plats måste du inaktivera det innan väljaren blir tillgänglig.
 
-1. Listrutan för **Adobe Analytics** läggs till i de tillgängliga alternativen. Använd detta för att välja den nödvändiga ramverkskonfigurationen.
+1. Den nedrullningsbara väljaren för **Adobe Analytics** läggs till de tillgängliga alternativen. Använd detta för att välja den nödvändiga ramverkskonfigurationen.
 
 1. Välj **Spara och stäng**.
-1. **[Publicera](/help/sites-authoring/publishing-pages.md)** sidan för att aktivera sidan och eventuella anslutna konfigurationer/filer.
-1. Det sista steget är att besöka sidan i publiceringsinstansen och söka efter ett nyckelord (t.ex. eggplant) med komponenten **Sök**.
-1. Sedan kan du kolla samtalen till Adobe Analytics med ett lämpligt verktyg; till exempel [Adobe Experience Cloud Debugger](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html).
+1. **[Publicera](/help/sites-authoring/publishing-pages.md)** den sida som ska aktivera sidan och alla anslutna konfigurationer/filer.
+1. Det sista steget är att besöka sidan i publiceringsinstansen och söka efter ett nyckelord (t.ex. eggplant) med hjälp av **Sök** -komponenten.
+1. Sedan kan du kolla samtalen till Adobe Analytics med ett lämpligt verktyg; till exempel [Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/debugger/using/experience-cloud-debugger.html).
 1. I exemplet som anges ska anropet innehålla det värde som anges (dvs. eggplant) i eVar7 och händelselistan ska innehålla event3.
 
 ### Sidvyer {#page-views}
 
 När en sida är kopplad till ett Adobe Analytics-ramverk kan antalet sidvyer visas i listvyn i webbplatskonsolen.
 
-Mer information finns i [Se sidanalysdata](/help/sites-authoring/pa-using.md).
+Se [Visa sidanalysdata](/help/sites-authoring/pa-using.md) för mer information.
 
 ### Konfigurera importintervallet {#configuring-the-import-interval}
 
-Konfigurera lämplig instans av tjänsten **Adobe AEM Managed Polling Configuration**:
+Konfigurera lämplig instans av **Konfiguration AEM hanterad avsökning för Adobe** tjänst:
 
-* **Avsökningsintervall**:
+* **Avfrågningsintervall**:
 
    Intervallet, i sekunder, där tjänsten hämtar sidvisningsdata från Adobe Analytics.
 
@@ -207,17 +206,16 @@ Konfigurera lämplig instans av tjänsten **Adobe AEM Managed Polling Configurat
 
    Aktivera eller inaktivera tjänsten. Som standard är tjänsten aktiverad.
 
-Om du vill konfigurera den här OSGi-tjänsten kan du antingen använda [webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) eller en [osgiConfig-nod i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) (tjänstens PID är `com.day.cq.polling.importer.impl.ManagedPollConfigImpl`).
+Om du vill konfigurera OSGi-tjänsten kan du antingen använda [Webbkonsol](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) eller en [osgiConfig-nod i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) (tjänstens PID är `com.day.cq.polling.importer.impl.ManagedPollConfigImpl`).
 
 ## Redigera Adobe Analytics-konfigurationer och/eller ramverk {#editing-adobe-analytics-configurations-and-or-frameworks}
 
-På samma sätt som när du skapar en Adobe Analytics-konfiguration eller ett ramverk går du till (äldre) **Cloud Services**-skärmen. Välj **Visa konfigurationer** och klicka sedan på länken till den specifika konfiguration som du vill uppdatera.
+På samma sätt som när du skapar en Adobe Analytics-konfiguration eller ett ramverk går du till (äldre) **Cloud Services** skärm. Välj **Visa konfigurationer** klickar sedan på länken till den specifika konfiguration som du vill uppdatera.
 
-När du redigerar en Adobe Analytics-konfiguration måste du också trycka på knappen **Redigera** på konfigurationssidan för att kunna öppna dialogrutan **Redigera komponent**.
+När du redigerar en Adobe Analytics-konfiguration måste du också trycka på **Redigera** när du befinner dig på konfigurationssidan för att öppna **Redigera komponent** -dialogrutan.
 
-## Tar bort Adobe Analytics Frameworks {#deleting-adobe-analytics-frameworks}
+## Ta bort Adobe Analytics-ramverk {#deleting-adobe-analytics-frameworks}
 
-Om du vill ta bort ett Adobe Analytics-ramverk måste du först [öppna det för redigering](#editing-adobe-analytics-configurations-and-or-frameworks).
+Om du vill ta bort ett Adobe Analytics-ramverk måste du först [öppna den för redigering](#editing-adobe-analytics-configurations-and-or-frameworks).
 
-Välj sedan **Ta bort ramverk** på fliken **Sida** i sidosparken.
-
+Välj sedan **Ta bort ramverk** från **Sida** sidosparkens flik.

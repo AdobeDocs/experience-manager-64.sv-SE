@@ -1,13 +1,13 @@
 ---
 title: Konfigurera AEM Assets med varumärkesportalen
-description: 'Lär dig hur du konfigurerar AEM Assets med Brand Portal för publicering av resurser och samlingar till Brand Portal. '
+description: Lär dig hur du konfigurerar AEM Assets med Brand Portal för publicering av resurser och samlingar till Brand Portal.
 contentOwner: VG
 feature: Brand Portal
 role: Admin
 exl-id: cde35555-259f-4d16-999f-2b93d597b8a5
-source-git-commit: a50cd2b50191b86ac27cc228944c6c9e917b08cb
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1550'
 ht-degree: 37%
 
 ---
@@ -271,14 +271,14 @@ Gör så här för att skapa molntjänstkonfigurationen för varumärkesportalen
    >
    >Undvik att inaktivera någon av replikeringsagenterna eftersom det kan göra att replikeringen av vissa resurser misslyckas.
    >
-   >Se till att alla fyra replikeringsagenterna är konfigurerade för att undvika timeout-fel. Se [felsöka problem vid parallell publicering till Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout).
+   >Se till att alla fyra replikeringsagenterna är konfigurerade för att undvika timeout-fel. Se [felsöka problem vid parallell publicering till Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout).
 
 Brand Portal har konfigurerats med din AEM Assets-författarinstans. Du kan nu:
 
 * [Publicera resurser från AEM Assets till varumärkesportalen](../assets/brand-portal-publish-assets.md)
 * [Publicera mappar från AEM Assets till varumärkesportalen](../assets/brand-portal-publish-folder.md)
 * [Publicera samlingar från AEM Assets till varumärkesportalen](../assets/brand-portal-publish-collection.md)
-* [Konfigurera resurskälla](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) gör det möjligt för Brand Portal-användare att bidra med och publicera material till AEM Assets.
+* [Konfigurera resurskälla](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) gör det möjligt för Brand Portal-användare att bidra med och publicera material till AEM Assets.
 
 ## Uppgraderingskonfiguration {#upgrade-integration-64}
 

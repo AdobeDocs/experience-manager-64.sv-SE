@@ -4,9 +4,9 @@ description: Versionsinformation om Adobe Experience Manager 6.4 Cumulative Fix 
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: a63e77a3-da48-4072-bc75-c4c41a2f62a3
-source-git-commit: 1d5d2ef3840a40df7c3b223c7b5835e41553e9f1
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '4608'
+source-wordcount: '4596'
 ht-degree: 0%
 
 ---
@@ -105,7 +105,7 @@ AEM 6.4.8.3 är ett Cumulative Fix Pack (CFP) som är beroende av AEM 6.4 Servic
 
 I AEM 6.4.8.3 uppdateras den inbyggda databasen (Apache Jackrabbit Oak) till version 1.8.23.
 
-Mer information om bestruket finpapper och andra typer av releaser finns i [Definitioner av AEM Uppdatera utgivningsfordon](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/update-release-vehicle-definitions.html)
+Mer information om bestruket finpapper och andra typer av releaser finns i [Definitioner av AEM Uppdatera utgivningsfordon](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/update-release-vehicle-definitions.html)
 
 Adobe Experience Manager 6.4.8.3 innehåller korrigeringar för följande problem.
 
@@ -199,7 +199,7 @@ AEM 6.4.8.2 är ett Cumulative Fix Pack (CFP) som är beroende av AEM 6.4 Servic
 
 I AEM 6.4.8.2 uppdateras den inbyggda databasen (Apache Jackrabbit Oak) till version 1.8.22.
 
-Mer information om bestruket finpapper och andra typer av releaser finns i [Definitioner av AEM Uppdatera utgivningsfordon](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/update-release-vehicle-definitions.html)
+Mer information om bestruket finpapper och andra typer av releaser finns i [Definitioner av AEM Uppdatera utgivningsfordon](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/update-release-vehicle-definitions.html)
 
 Adobe Experience Manager 6.4.8.2 innehåller korrigeringar för följande problem.
 
@@ -345,7 +345,7 @@ Några viktiga högdagrar i AEM 6.4.8.1 är:
 * Borttagen Paketdelningsintegrering med Adobe Experience Manager.
 * Den inbyggda databasen (Apache Jackrabbit Oak) uppdateras till version 1.8.21.
 
-Mer information om bestruket finpapper och andra typer av releaser finns i [Definitioner av AEM Uppdatera utgivningsfordon](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/update-release-vehicle-definitions.html)
+Mer information om bestruket finpapper och andra typer av releaser finns i [Definitioner av AEM Uppdatera utgivningsfordon](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/update-release-vehicle-definitions.html)
 
 Adobe Experience Manager 6.4.8.1 innehåller korrigeringar av följande problem.
 
@@ -523,7 +523,7 @@ som kopierar nya visningsförinställningar till /conf-platsen.
 
 1. Kontrollera att du har installerat AEM Cumulative Fix Pack.
 1. Hämta motsvarande tilläggspaket för formulär som finns på [AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates) för ditt operativsystem.
-1. Installera tilläggspaketet för formulär enligt beskrivningen i [Installera AEM formulärtilläggspaket](https://docs.adobe.com/content/help/en/experience-manager-64/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html#install-aem-forms-add-on-package).
+1. Installera tilläggspaketet för formulär enligt beskrivningen i [Installera AEM formulärtilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-64/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html#install-aem-forms-add-on-package).
 
 ### Installera AEM Forms JEE-installationsprogrammet {#install-aem-forms-jee-installer}
 
@@ -563,7 +563,7 @@ I det här avsnittet visas funktioner som har tagits bort eller tagits bort frå
 | Yta | Funktion | Ersättning | Version |
 |---|---|---|---|
 | Resurser | Hantera taggåtgärd för underresurser | Ingen ersättning | AEM 6.4.2.0 |
-| Resurser och integrering med Adobe Creative Cloud | [AEM till Creative Cloud-mappdelning](https://docs.adobe.com/content/help/en/experience-manager-64/assets/administer/aem-cc-folder-sharing-best-practices.html) introducerades i AEM 6.2 som ett sätt att ge kreativa användare tillgång till resurser från AEM. En ny funktion i Creative Cloud, Adobe Asset Link, ger en mycket bättre användarupplevelse och kraftfullare åtkomst till AEM direkt inifrån Photoshop, InDesign och Illustrator. Adobe kommer inte att förbättra mappdelningsfunktionen ytterligare. Funktionen ingår i AEM, men kunderna rekommenderas att använda ersättaren. | Adobe Asset Link eller datorprogram. Mer information finns på [Integrering med AEM Creative Cloud](/help/assets/aem-cc-integration-best-practices.md) artikel. | AEM 6.4.4.0 |
+| Resurser och integrering med Adobe Creative Cloud | [AEM till Creative Cloud-mappdelning](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/aem-cc-folder-sharing-best-practices.html) introducerades i AEM 6.2 som ett sätt att ge kreativa användare tillgång till resurser från AEM. En ny funktion i Creative Cloud, Adobe Asset Link, ger en mycket bättre användarupplevelse och kraftfullare åtkomst till AEM direkt inifrån Photoshop, InDesign och Illustrator. Adobe kommer inte att förbättra mappdelningsfunktionen ytterligare. Funktionen ingår i AEM, men kunderna rekommenderas att använda ersättaren. | Adobe Asset Link eller datorprogram. Mer information finns på [Integrering med AEM Creative Cloud](/help/assets/aem-cc-integration-best-practices.md) artikel. | AEM 6.4.4.0 |
 
 ## Kända fel {#known-issues}
 
@@ -595,4 +595,4 @@ Förteckning över innehållspaket som ingår i AEM 6.4.8.4
 Dessa webbplatser är bara tillgängliga för kunder. Om du är kund och behöver åtkomst kontaktar du din kontoansvarige på Adobe.
 
 * [Nedladdning av produkt på licensing.adobe.com](https://licensing.adobe.com/)
-* [Kontakta kundsupport](https://docs.adobe.com/content/help/en/customer-one/using/home.html)
+* [Kontakta kundsupport](https://experienceleague.adobe.com/docs/customer-one/using/home.html)

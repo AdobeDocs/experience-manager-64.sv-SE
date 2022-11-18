@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.4 Forms Guide
 breadcrumb-title: Forms Guide
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
-source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '3729'
+source-wordcount: '3721'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 + [AEM 6.4 Forms Guide](home.md)
 + Versionsinformation {#release-notes-new-features}
-   + [Versionsinformation](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/forms.html)
+   + [Versionsinformation](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/forms.html)
    + [Sammanfattning av nya funktioner](using/whats-new.md)
-   + [Föråldrade funktioner](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html)
+   + [Föråldrade funktioner](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html)
 + Komma igång {#getting-started}
    + [Introduktion till AEM Forms](using/introduction-aem-forms.md)
    + [Introduktion till utveckling av anpassningsbara formulär](using/introduction-forms-authoring.md)
@@ -573,8 +573,8 @@ ht-degree: 0%
    + [Ad hoc-frågor i processrapportering](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md)
    + [Felsökning av processrapportering](/help/forms/using/process-reporting/troubleshooting-process-management.md)
 + Referens för utvecklare {#developer-reference}
-   + [Grundläggande om utvecklare](https://docs.adobe.com/content/help/en/experience-manager-64/developing/home.html)
-   + [HTML mallspråk](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
+   + [Grundläggande om utvecklare](https://experienceleague.adobe.com/docs/experience-manager-64/developing/home.html)
+   + [HTML mallspråk](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html)
    + [AEM plugin-program för att felsöka adaptiva formulär](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
    + [AEM Forms Java API Reference](https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/index.html)
    + [AEM Forms on JEE Java API Reference](https://helpx.adobe.com/experience-manager/6-4/forms/ProgramLC/javadoc/index.html)

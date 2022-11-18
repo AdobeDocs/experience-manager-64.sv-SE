@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
 exl-id: d0da9390-2167-47ee-82fd-8c81d8d68a3e
-source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '21546'
+source-wordcount: '21516'
 ht-degree: 0%
 
 ---
@@ -1291,7 +1291,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.2.0 är:
 * Stöd för MongoDB Enterprise 3.6 har lagts till.
 * Sidredigeraren Sites har stöd för kontextredigering och komposition med komponenter på klientsidan som byggts i React eller Angular i kombination med <a href="../sites-developing/spa-walkthrough.md">AEM SPA Editor JS SDK</a>.
 * Förbättringar av innehållsfragment: lade till möjligheten att kommentera i textfält och en jämförelse av versioner sida vid sida.
-* Tillagd [integrering med Adobe Stock](/help/assets/aem-assets-adobe-stock.md) så att användarna kan söka efter, förhandsgranska, spara och licensiera Adobe Stock-mediefiler direkt AEM användargränssnittet. Mer detaljerad information finns i [Använda Adobe Stock-resurser med AEM Assets](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/creative-workflows/adobe-stock.html).
+* Tillagd [integrering med Adobe Stock](/help/assets/aem-assets-adobe-stock.md) så att användarna kan söka efter, förhandsgranska, spara och licensiera Adobe Stock-mediefiler direkt AEM användargränssnittet. Mer detaljerad information finns i [Använda Adobe Stock-resurser med AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html).
 * Resurser har fått stöd för dynamisk villkorsstyrd metaschema och möjlighet att ange ett metadataram för resursmappar.
 * Lagt till konfiguration i varje komponent för att aktivera/inaktivera funktionen för att skapa/uppdatera mappminiatyrer.
 * Förbättrad bildredigering vid sidredigering.
@@ -1312,7 +1312,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.2.0 är:
 * Generering av delresurser för pptx-filen innehåller inga bilder eller miniatyrbilder. NPR-24286: Programfix för CQ-4217986
 * migrateAllAssets - Lägg till stöd för gruppbearbetning och förbättra AEM som lägger till UUID till gamla resurser. NPR-24861: Programfix för CQ-4242863 och CQ-4247874
 * Prestandaproblem med generering av miniatyrbilder. NPR-24693: Programfix för CQ-4246960
-* (Touch UI) Komponenten för optionspredikat förblir tom när den läggs till på utgivarsidan för resursresurs. NPR-24643: Programfix för CQ-4245295
+* (Touch UI) Komponenten &quot;options predikate&quot; är tom när den läggs till på utgivarsidan för resursresurs. NPR-24643: Programfix för CQ-4245295
 * (Arbetsflöde) Resurser för smarta taggar bearbetas inte via proxykonfigurationen. NPR-25840: Programfix för CQ-4248202
 * (Omnissearch) När du tar bort filtypen:image från sökvillkoren tas inte bildtypen bort. NPR-25232: Programfix för CQ-4248280
 * När du försöker flytta en fil till en annan mapp visas inte mappar med apostrof i namnet. NPR-25125: Programfix för CQ-4248660
@@ -1338,7 +1338,7 @@ Några av de viktigaste högdagrarna i AEM 6.4.2.0 är:
 * ON/OFF-tid lagras i crx/de men hämtar inte samma i gränssnittskonsolen för sidegenskaper. NPR-25154: Programfix för CQ-4243431
 * Stilar Dialogrutans inledande egenskapsvärden bryts. NPR-25648: Programfix för CQ-4250073
 * När du definierar en cq:tagName-egenskap i en cq:htmlTag-nod beaktas inte taggnamnet om komponenten inkluderas via JSP. NPR-24154: Programfix för CQ-4244120
-* För kapslade parsyskomponenter tillämpas alltid den första (med den minst kapslade sökvägen) som uppfyller designen från flera tillgängliga komponenter. Mer information finns i [Design Path-upplösning](https://docs.adobe.com/content/help/en/experience-manager-64/developing/platform/templates/page-templates-static.html). NPR-24973: Programfix för CQ-4246276
+* För kapslade parsyskomponenter tillämpas alltid den första (med den minst kapslade sökvägen) som uppfyller designen från flera tillgängliga komponenter. Mer information finns i [Design Path-upplösning](https://experienceleague.adobe.com/docs/experience-manager-64/developing/platform/templates/page-templates-static.html). NPR-24973: Programfix för CQ-4246276
 * När du klistrar in text i en RTE-komponent visas en popup-dialogruta, men den återges inte korrekt. NPR-24895: Programfix för CQ-4245901
 * (RTE) Prestandaproblem med obligatorisk fältindikator. NPR-24894: Programfix för CQ-4241895
 * (Sidkomponent) Om du lägger till en komponent i Parsys klipps den av från höger och dras ut från enhetens bildrutebredd. NPR-25536: Programfix för CQ-4238224
@@ -1553,7 +1553,7 @@ Viktiga högdagrar för AEM 6.4.2.0-formulär är:
 * Funktioner som användaren kan använda samma WSDL-fil för flera tjänster har lagts till.
 * Tidsstämpelmönstret som inte stöds togs bort från listrutan för datumväljaren.
 * Stöd för underliggande xfaf och pdf i OSGI har lagts till.
-* Stöd för användning av [funktion för transaktionsrapporter](https://docs.adobe.com/content/help/en/experience-manager-64/forms/transaction-reports/transaction-reports-overview.html) på-plats-distributioner.
+* Stöd för användning av [funktion för transaktionsrapporter](https://experienceleague.adobe.com/docs/experience-manager-64/forms/transaction-reports/transaction-reports-overview.html) på-plats-distributioner.
 * Tillagd kod som inte visar underordnade var i villkorsregelredigeraren.
 
 **Forms tilläggspaket**
@@ -1656,17 +1656,17 @@ Viktiga högdagrar för AEM 6.4.2.0-formulär är:
 
 **Resurser**
 
-* Tillagd [integrering med Adobe Stock](/help/assets/aem-assets-adobe-stock.md) så att användare kan söka efter, förhandsgranska, spara och licensiera Adobe Stock-resurser direkt AEM användargränssnittet. Mer detaljerad information finns i [Använda Adobe Stock-resurser med AEM resurser](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/creative-workflows/adobe-stock.html). NPR-15779: Programfix för CQ-30857
+* Tillagd [integrering med Adobe Stock](/help/assets/aem-assets-adobe-stock.md) så att användare kan söka efter, förhandsgranska, spara och licensiera Adobe Stock-resurser direkt AEM användargränssnittet. Mer detaljerad information finns i [Använda Adobe Stock-resurser med AEM resurser](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html). NPR-15779: Programfix för CQ-30857
 * Stöd för dynamisk villkorsstyrd metaschema har lagts till. Mer information finns i [Överlappande metadata](/help/assets/cascading-metadata.md). NPR-25189: Programfix för CQ-4237413
 * Alternativet &quot;Resurshämtning&quot; har aktiverats för innehållsfragment. Mer information finns i [Resursrapporter](/help/assets/asset-reports.md). NPR-25186: Programfix för CQ-4237410
 * Möjlighet att ange ett metadatamatchema för resursmappar. Mer information finns i [Metadataschema för mapp](/help/assets/folder-metadata-schema.md) och hänvisa till [Konfigurationsinställningar](#configuration-settings-required-for-npr) installation AEM 6.4.2.0. NPR-21268: Programfix för CQ-4221574
 
 **Webbplatser**
 
-* Tillåt redigering av ett innehållsfragment utan borttagningsbehörigheter. Mer information finns i [Anpassa och utöka innehållsfragment](https://docs.adobe.com/content/help/en/experience-manager-64/assets/fragments/content-fragments-delete.html). NPR-25793: Programfix för CQ-4248750
-* Lagt till möjlighet att kommentera innehållsfragment. Mer information finns i [Variationer-redigeringsfragment](https://docs.adobe.com/content/help/en/experience-manager-64/assets/fragments/content-fragments-variations.html#annotating-a-content-fragment). NPR-25188: Programfix för CQ-4235336
-* Versionshantering: Jämför innehållsfragment sida vid sida. Mer information finns i [Hantera innehållsfragment](https://docs.adobe.com/content/help/en/experience-manager-64/assets/fragments/content-fragments-managing.html#comparing-fragment-versions). NPR-25187: Programfix för CQ-4237412
-* Förbättringar i bildredigeraren har stöd för AEM 6.4.2.0. Mer information finns i [Bildredigeraren](https://docs.adobe.com/content/help/en/experience-manager-64/developing/components/image-editor.html). NPR-24467
+* Tillåt redigering av ett innehållsfragment utan borttagningsbehörigheter. Mer information finns i [Anpassa och utöka innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-64/assets/fragments/content-fragments-delete.html). NPR-25793: Programfix för CQ-4248750
+* Lagt till möjlighet att kommentera innehållsfragment. Mer information finns i [Variationer-redigeringsfragment](https://experienceleague.adobe.com/docs/experience-manager-64/assets/fragments/content-fragments-variations.html#annotating-a-content-fragment). NPR-25188: Programfix för CQ-4235336
+* Versionshantering: Jämför innehållsfragment sida vid sida. Mer information finns i [Hantera innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-64/assets/fragments/content-fragments-managing.html#comparing-fragment-versions). NPR-25187: Programfix för CQ-4237412
+* Förbättringar i bildredigeraren har stöd för AEM 6.4.2.0. Mer information finns i [Bildredigeraren](https://experienceleague.adobe.com/docs/experience-manager-64/developing/components/image-editor.html). NPR-24467
 
 **OSGI-paket och innehållspaket som ingår**
 
@@ -1900,7 +1900,7 @@ AEM 6.4.1.0 kan installeras på AEM 6.4 GA. Några av huvudpunkterna i Service P
 
 **DAM - Smarta taggar**
 
-* Introducerat [Förbättrade smarta taggar](https://docs.adobe.com/content/help/en/experience-manager-64/assets/administer/enhanced-smart-tags.html). NPR-21951
+* Introducerat [Förbättrade smarta taggar](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/enhanced-smart-tags.html). NPR-21951
 
 **Forms**
 
@@ -1908,7 +1908,7 @@ AEM Forms-korrigeringar levereras via tilläggspaket och andra patch-installerar
 
 AEM Forms i korthet:
 
-* AEM Forms presenterar [funktion för transaktionsrapporter](https://docs.adobe.com/content/help/en/experience-manager-64/forms/transaction-reports/transaction-reports-overview.html) för att hålla reda på och hålla reda på transaktioner som skickade formulär, bearbetade dokument och återgivna dokument när du distribuerar AEM Forms. Den ger insikter om produktanvändning och hjälper företagsanvändare att förstå digitala bearbetningsvolymer.
+* AEM Forms presenterar [funktion för transaktionsrapporter](https://experienceleague.adobe.com/docs/experience-manager-64/forms/transaction-reports/transaction-reports-overview.html) för att hålla reda på och hålla reda på transaktioner som skickade formulär, bearbetade dokument och återgivna dokument när du distribuerar AEM Forms. Den ger insikter om produktanvändning och hjälper företagsanvändare att förstå digitala bearbetningsvolymer.
 * PDF/UA har stöd för XML-formulär.
 * Tillagd allowProxy = true för Clientlib **aemfd.ccm.channel.contentpage**
 * Uppdaterad kod som gör avancerad titelsökning som innehåller i stället för lika.
@@ -2066,12 +2066,12 @@ AEM Forms i korthet:
 
 **Resurser**
 
-* Förbättrade funktioner för smarta taggar. Mer information finns i [Förbättrade smarta taggar](https://docs.adobe.com/content/help/en/experience-manager-64/assets/administer/enhanced-smart-tags.html). NPR-21951: Programfix för CQ-4234883
+* Förbättrade funktioner för smarta taggar. Mer information finns i [Förbättrade smarta taggar](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/enhanced-smart-tags.html). NPR-21951: Programfix för CQ-4234883
 * Nu finns AEM Assets References i InDesign. Mer information finns i [AEM Assets-referenser i InDesign](/help/assets/managing-linked-subassets.md). NPR-23386
 
 **Webbplatser**
 
-* (Sidredigering) Förbättringar i bildredigeraren. Mer information finns i [Bildredigeraren](https://docs.adobe.com/content/help/en/experience-manager-64/developing/components/image-editor.html). NPR-24267: Programfix för CQ-4245502
+* (Sidredigering) Förbättringar i bildredigeraren. Mer information finns i [Bildredigeraren](https://experienceleague.adobe.com/docs/experience-manager-64/developing/components/image-editor.html). NPR-24267: Programfix för CQ-4245502
 
 **OSGI-paket och innehållspaket som ingår**
 
@@ -2172,7 +2172,7 @@ som kopierar nya visningsförinställningar till /conf-platsen.
 
 1. Kontrollera att du har installerat AEM Service Pack.
 1. Hämta motsvarande tilläggspaket för formulär som finns på [AEM Forms](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) för ditt operativsystem.
-1. Installera tilläggspaketet för formulär enligt beskrivningen i [Installera AEM formulärtilläggspaket](https://docs.adobe.com/content/help/en/experience-manager-64/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html#install-aem-forms-add-on-package).
+1. Installera tilläggspaketet för formulär enligt beskrivningen i [Installera AEM formulärtilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-64/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html#install-aem-forms-add-on-package).
 
 ### Installera AEM Forms JEE-installationsprogrammet {#install-aem-forms-jee-installer}
 
@@ -2227,7 +2227,7 @@ I det här avsnittet visas funktioner som har tagits bort eller tagits bort frå
 | Yta | Funktion | Ersättning | Version |
 |---|---|---|---|
 | Resurser | Hantera taggåtgärd för underresurser | Ingen ersättning | AEM 6.4.2.0 |
-| Resurser och integrering med Adobe Creative Cloud | [AEM till Creative Cloud-mappdelning](https://docs.adobe.com/content/help/en/experience-manager-64/assets/administer/aem-cc-folder-sharing-best-practices.html) introducerades i AEM 6.2 som ett sätt att ge kreativa användare tillgång till resurser från AEM. En ny funktion i Creative Cloud, Adobe Asset Link, ger en mycket bättre användarupplevelse och kraftfullare åtkomst till AEM direkt inifrån Photoshop, InDesign och Illustrator. Adobe kommer inte att förbättra mappdelningsfunktionen ytterligare. Funktionen ingår i AEM, men kunderna rekommenderas att använda ersättaren. | Adobe Asset Link eller datorprogram. Mer information finns på [Integrering med AEM Creative Cloud](/help/assets/aem-cc-integration-best-practices.md) artikel. | AEM 6.4.4.0 |
+| Resurser och integrering med Adobe Creative Cloud | [AEM till Creative Cloud-mappdelning](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/aem-cc-folder-sharing-best-practices.html) introducerades i AEM 6.2 som ett sätt att ge kreativa användare tillgång till resurser från AEM. En ny funktion i Creative Cloud, Adobe Asset Link, ger en mycket bättre användarupplevelse och kraftfullare åtkomst till AEM direkt inifrån Photoshop, InDesign och Illustrator. Adobe kommer inte att förbättra mappdelningsfunktionen ytterligare. Funktionen ingår i AEM, men kunderna rekommenderas att använda ersättaren. | Adobe Asset Link eller datorprogram. Mer information finns på [Integrering med AEM Creative Cloud](/help/assets/aem-cc-integration-best-practices.md) artikel. | AEM 6.4.4.0 |
 
 ### Kända fel {#known-issues}
 
@@ -2273,4 +2273,4 @@ Dessa webbplatser är bara tillgängliga för kunder. Om du är kund och behöve
 
 * [Produktnedladdning på licensing.adobe.com](https://licensing.adobe.com/).
 * Produktuppdateringar, patchar och paket för ytterligare funktionalitet i [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
-* [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [Ny Adobe-upplevelse för kundsupport](https://docs.adobe.com/content/help/en/customer-one/using/home.html).
+* [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [Ny Adobe-upplevelse för kundsupport](https://experienceleague.adobe.com/docs/customer-one/using/home.html).

@@ -6,10 +6,10 @@ seo-description: An overview of how to implement AEM 6.4
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 exl-id: e8434d46-b169-4408-85e7-b619c6f7b877
-source-git-commit: a01f94ddcd84c4d3f7769d6a55fbfcbef131dc57
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 22%
+source-wordcount: '102'
+ht-degree: 0%
 
 ---
 
@@ -21,11 +21,11 @@ ht-degree: 22%
 
 ## Kärnkomponenter för AEM {#core-components-for-aem}
 
-[Använd de utbyggbara kärnkomponenterna för att låta skribenterna enkelt skapa innehåll.](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
+[Använd de utbyggbara kärnkomponenterna för att låta skribenterna enkelt skapa innehåll.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 
 ## HTML (HTML Template Language) för AEM {#htl-for-aem}
 
-[Använd HTML Template Language för att utveckla för AEM.](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)
+[Använd HTML Template Language för att utveckla för AEM.](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html)
 
 ## Cloud Manager för AEM {#cloud-manager-for-aem}
 
@@ -33,4 +33,4 @@ ht-degree: 22%
 
 ## Dispatcher-konfiguration {#dispatcher-configuration}
 
-[Konfigurera dispatchern med AEM](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/dispatcher.html)
+[Konfigurera dispatchern med AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)

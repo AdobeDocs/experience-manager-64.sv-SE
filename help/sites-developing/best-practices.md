@@ -1,26 +1,25 @@
 ---
 title: Bästa praxis
-seo-title: Bästa praxis
+seo-title: Best Practices
 description: Adobe tekniker och konsultteam har utvecklat en omfattande uppsättning bästa metoder för AEM utvecklare
-seo-description: Adobe tekniker och konsultteam har utvecklat en omfattande uppsättning bästa metoder för AEM utvecklare
+seo-description: Adobe Engineering and Consulting teams have developed a comprehensive set of best practices for AEM developers
 uuid: f962c31f-8140-482f-b189-16376e23bfed
 contentOwner: Justin Edelson
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
-translation-type: tm+mt
-source-git-commit: 8c37e09d9b00ff26fc5a0549766080d593769a24
+exl-id: a2a299b5-a15a-47d9-a9d8-83f45917d080
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '462'
 ht-degree: 1%
 
 ---
 
-
 # Bästa praxis{#best-practices}
 
-## Bästa praxis för utvecklare - Komma igång {#best-practices-for-developers-getting-started}
+## Best Practices for Developers - Getting Started {#best-practices-for-developers-getting-started}
 
 Adobe tekniker och konsultteam har utvecklat en omfattande uppsättning bästa metoder för AEM utvecklare. Utvecklaren av Adobe följer de bästa metoderna när de utvecklar AEM produktuppdateringar och kundkod för kundimplementeringar.
 
@@ -33,7 +32,7 @@ Innan du börjar AEM utvecklingsprojektet bör du först granska följande metod
 * [Code Pitfalls](/help/sites-developing/code-pitfalls.md)
 * [JCR-interaktion](/help/sites-developing/jcr-integration.md)
 * [OSGi Bundles](/help/sites-developing/osgi-bundles.md)
-* [Java API Best Practices](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
+* [Java API Best Practices](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
 
 ### Ytterligare metodinformation {#additional-best-practices-information}
 
@@ -51,7 +50,7 @@ De bästa sätten att administrera, distribuera och underhålla, eller att skapa
 * [Bästa tillvägagångssätt](/help/sites-authoring/best-practices.md)
 * [Effektiva rutiner](/help/sites-deploying/best-practices.md)
 
-## Sites {#sites}
+## Webbplatser {#sites}
 
 Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
 
@@ -82,18 +81,18 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
 
 ## Communities {#communities}
 
-[AEM ](/help/communities/overview.md) förenklar framtagning och hantering av lokala communityn.
+[AEM Communities](/help/communities/overview.md) förenklar framtagning och hantering av lokala communityn.
 
 Här beskrivs några tips för Communities:
 
 |  |  |  |
 |---|---|---|
-| Bästa tillvägagångssätt för att arbeta med användargenererat innehåll (UGC) | [Riktlinjer för kodning](/help/communities/code-guide.md) | Riktlinjer för utveckling av flexibel, portabel kod för [ramverket för sociala komponenter](/help/communities/scf.md) (SCF). |
+| Bästa tillvägagångssätt för att arbeta med användargenererat innehåll (UGC) | [Riktlinjer för kodning](/help/communities/code-guide.md) | Riktlinjer för utveckling av flexibel, portabel kod för [ramverk för sociala komponenter](/help/communities/scf.md) (SCF). |
 | Exempel på användning av webbgruppskomponenter | [Community Components Guide](/help/communities/components-guide.md) | Ett interaktivt utvecklingsverktyg. |
 
 ## Verktyg/HTML {#tooling-htl}
 
-HTML-mallspråk (HTL) är ett nytt HTML-mallsystem som introducerades med AEM 6.0. Den ersätter JSP och ESP som det förvalda mallsystemet för AEM.
+HTML Template Language (HTL) är ett nytt mallsystem för HTML, som introducerades med AEM 6.0. Den ersätter JSP och ESP som det förvalda mallsystemet för AEM.
 
 |  |  |  |
 |---|---|---|
@@ -104,4 +103,3 @@ HTML-mallspråk (HTL) är ett nytt HTML-mallsystem som introducerades med AEM 6.
 >
 >Följande självstudiekurs i flera delar kan vara av intresse för den bästa metoden för att skapa ett nytt AEM, med information om kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling:\
 >[Komma igång med AEM Sites - WKND självstudiekurs](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
-

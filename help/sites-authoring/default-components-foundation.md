@@ -2,7 +2,7 @@
 title: Foundation Components
 seo-title: Foundation Components
 description: Foundation Components
-seo-description: 'null'
+seo-description: null
 uuid: c1eccd51-ee65-4c4d-8c27-c99b52574518
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,14 +11,13 @@ content-type: reference
 discoiquuid: 3619ded2-a67c-4b96-b634-4c0d68f5284a
 legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/editmode
 pagetitle: Foundation Components
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: c85e442a-eb24-4eda-a49b-089e5988150d
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '6671'
-ht-degree: 2%
+source-wordcount: '6642'
+ht-degree: 1%
 
 ---
-
 
 # Foundation Components{#foundation-components}
 
@@ -26,11 +25,11 @@ ht-degree: 2%
 >
 >I det här avsnittet beskrivs grundläggande komponenter som har varit tillgängliga med AEM i många versioner och som finns att få i en AEM standardinstallation. Ett antal av grundkomponenterna har dock ersatts med AEM 6.4.
 >
->Adobe rekommenderar att du använder de mer moderna och utökningsbara [kärnkomponenterna](https://helpx.adobe.com/experience-manager/core-components/using/authoring.html). Dessa är en del av [Web.Retail sample content](/help/sites-developing/we-retail.md) och kan även [installeras separat och användas för att utveckla](https://helpx.adobe.com/experience-manager/core-components/using/using.html) av administratören.
+>Adobe rekommenderar att man drar nytta av den mer moderna och utbyggbara [kärnkomponenter](https://helpx.adobe.com/experience-manager/core-components/using/authoring.html). De här är en del av [Exempelinnehåll för detaljhandeln](/help/sites-developing/we-retail.md) och kan också [installeras separat och används för utveckling](https://helpx.adobe.com/experience-manager/core-components/using/using.html) av administratören.
 
 Grundekomponenterna har utformats för att användas vid utveckling av innehåll för en standardwebbsida. De utgör en delmängd av de komponenter som finns tillgängliga direkt för en standardinstallation av AEM.
 
-Vissa är direkt tillgängliga via komponentwebbläsaren, andra är också tillgängliga genom att använda [designläge](/help/sites-authoring/default-components-designmode.md) (om sidan är baserad på en statisk mall) eller genom att [redigera mallen](/help/sites-authoring/templates.md) (om sidan är baserad på en redigerbar mall).
+Vissa är direkt tillgängliga via komponentwebbläsaren, andra är också tillgängliga genom att använda [designläge](/help/sites-authoring/default-components-designmode.md) (om sidan är baserad på en statisk mall) eller av [redigera mallen](/help/sites-authoring/templates.md) (om sidan är baserad på en redigerbar mall).
 
 Det finns stöd för att använda grundläggande komponenter, men de har ersatts av kärnkomponenter som erbjuder större flexibilitet och utbyggbarhet.
 
@@ -40,7 +39,7 @@ Det finns stöd för att använda grundläggande komponenter, men de har ersatts
 >
 >Beroende på vilken instans du har kan du ha utvecklat anpassade komponenter explicit för dina behov. De kan till och med ha samma namn som vissa av de komponenter som beskrivs här.
 
-Komponenterna finns på fliken **Komponenter** i sidpanelen i sidredigeraren när [du redigerar en sida](/help/sites-authoring/editing-content.md).
+Komponenterna finns på **Komponenter** fliken på sidpanelen i sidredigeraren när [redigera en sida](/help/sites-authoring/editing-content.md).
 
 Du kan markera en komponent och dra den till önskad plats på sidan. Du kan sedan redigera den med:
 
@@ -61,7 +60,7 @@ De allmänna komponenterna är de grundläggande komponenter som du använder f�
 ### Kontoobjekt {#account-item}
 
 >[!CAUTION]
->Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [kärnkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) i stället.
+>Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
 
 Du kan definiera en länk med rubrik och beskrivning.
 
@@ -70,7 +69,7 @@ Du kan definiera en länk med rubrik och beskrivning.
 ### Adaptiv bild {#adaptive-image}
 
 >[!CAUTION]
->Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder bildkomponenten [Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) i stället.
+>Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [Avbildningskomponent för kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) i stället.
 
 Med komponenten Adaptive Image Foundation genereras bilder som är storleksanpassade för att passa det fönster där webbsidan öppnas. Om du vill använda komponenten anger du en bildresurs från filsystemet eller DAM. När webbsidan öppnas hämtar webbläsaren en kopia av bilden som har ändrat storlek så att den passar för det aktuella fönstret.
 
@@ -94,11 +93,11 @@ Du kan använda bildfiler med följande filnamnstillägg med komponenten Adaptiv
 >
 >&amp;ast;&amp;ast; Animerade GIF-filer stöds inte i AEM för adaptiva återgivningar.
 
-#### Bildstorlekar och kvalitet {#images-sizes-and-quality}
+#### Bildstorlekar och -kvalitet {#images-sizes-and-quality}
 
 I följande tabell visas bredden på bilden som genereras för den angivna visningsrutans bredd. Höjden på den genererade bilden beräknas för att bibehålla en konstant proportion och inget mellanrum inträffar inuti bildkanten. Beskärning kan användas för att undvika mellanrum.
 
-När bilden är en JPEG-bild kan visningsrutans storlek även påverka JPEG-kvaliteten. Följande JPEG-egenskaper är möjliga:
+När bilden är en JPEG-bild kan visningsrutans storlek även påverka JPEG kvalitet. Följande JPEG-egenskaper är möjliga:
 
 * Låg (0,42)
 * Medel (0,82)
@@ -131,8 +130,8 @@ I dialogrutan kan du redigera egenskaper för din instans av komponenten Adaptiv
 
       Klicka på Rotera upprepade gånger tills bilden roteras som du vill.
 
-   * ****
-RaderaTa bort den aktuella bilden.
+   * **Rensa**
+Ta bort den aktuella bilden.
 
 * **Avancerat**
 
@@ -154,7 +153,7 @@ RaderaTa bort den aktuella bilden.
 
 #### Utöka den adaptiva bildkomponenten {#extending-the-adaptive-image-component}
 
-Mer information om hur du anpassar komponenten Adaptiv bild finns i [Förstå komponenten Adaptiv bild](/help/sites-developing/responsive.md#using-adaptive-images).
+Mer information om hur du anpassar komponenten Adaptive Image finns i [Förstå den adaptiva bildkomponenten](/help/sites-developing/responsive.md#using-adaptive-images).
 
 ### Carousel {#carousel}
 
@@ -201,12 +200,12 @@ Dessa finns på två flikar:
 
       * **Alternativ för underordnade sidor**
 
-         * **Överordnad**
-sidaAnge en bana antingen manuellt eller med väljaren. Lämna tomt om du vill använda den aktuella sidan som överordnad.
+         * **Överordnad sida**
+Ange en bana manuellt eller med väljaren. Lämna tomt om du vill använda den aktuella sidan som överordnad.
       * **Alternativ för fast lista**
 
-         * **SidorVälj en**
-lista med sidor. Användning 
+         * **Sidor**
+Välj en lista med sidor. Användning 
 `+` om du vill lägga till fler poster och upp-/nedknapparna för att justera ordningen.
       * **Alternativ för sökning**
 
@@ -223,10 +222,10 @@ lista med sidor. Användning
 
             Du kan ange en sökfråga med Querybuilder-predikatnotation. Du kan till exempel ange &quot;fulltext=Marketing&quot; om du vill att alla sidor med &quot;Marketing&quot; i innehållet ska visas i Carousel.
 
-            Mer information om frågeuttryck och fler exempel finns i [QueryBuilder API](/help/sites-developing/querybuilder-api.md).
+            Se [QueryBuilder API](/help/sites-developing/querybuilder-api.md) om du vill ha en fullständig diskussion om frågeuttryck och fler exempel.
    * **Beställ av**
 
-      Välj `jcr:title`, `jcr:created`, `cq:lastModified` eller `cq:template` i listrutan.
+      Välj `jcr:title`, `jcr:created`, `cq:lastModified`, eller `cq:template` i listrutan.
 
    * **Gräns**
 
@@ -278,7 +277,7 @@ I följande exempel visas ett exempel på diagramdata följt av det resulterande
 
 ### Innehållsfragment {#content-fragment}
 
-[Innehållsfragmentering ](/help/sites-authoring/content-fragments.md) skapas och hanteras som sidoberoende resurser. Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna.
+[Innehållsfragment](/help/sites-authoring/content-fragments.md) skapas och hanteras som sidoberoende resurser. Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna.
 
 ### Designimporteraren {#design-importer}
 
@@ -304,7 +303,7 @@ I följande exempel visas komponenten Download i Geometrixx:
 
 ### Extern {#external}
 
-Med den externa programintegrationskomponenten (**External**) kan du bädda in externa program på AEM med hjälp av en iframe.
+Integrationskomponenten för det externa programmet (**Extern**) kan du bädda in externa program på din AEM med hjälp av en iframe.
 
 * **Extern**
 
@@ -324,18 +323,18 @@ Med den externa programintegrationskomponenten (**External**) kan du bädda in e
 
       Definiera storleken på iframe
 
-Den externa tillämpningen är integrerad i den AEM sidans styckesystem. om du till exempel använder ett målprogram på `https://en.wikipedia.org/wiki/Main_Page`:
+Den externa tillämpningen är integrerad i den AEM sidans styckesystem. till exempel när du använder ett Target-program med `https://en.wikipedia.org/wiki/Main_Page`:
 
 ![chlimage_1-193](assets/chlimage_1-193.png)
 
 >[!NOTE]
 >
->Beroende på ditt sätt att arbeta är andra alternativ tillgängliga för integrering av externa program, till exempel. [Integrering av portlets](/help/sites-administering/aem-as-portal.md).
+>Beroende på ditt sätt att arbeta är andra alternativ tillgängliga för integrering av externa program, till exempel. den [Integrering av portlets](/help/sites-administering/aem-as-portal.md).
 
 ### Flash {#flash}
 
 >[!CAUTION]
->Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [kärnkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) i stället.
+>Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
 
 >[!CAUTION]
 >
@@ -385,7 +384,7 @@ I bildkomponenten visas en bild och tillhörande text enligt de angivna parametr
 
 Du kan överföra en bild och sedan redigera den (t.ex. beskära, rotera, lägga till länk/titel/text).
 
-Du kan antingen dra och släppa en bild från [Resursläsaren](/help/sites-authoring/author-environment-tools.md#assets-browser) direkt till komponenten eller dess [dialogruta](/help/sites-authoring/editing-content.md#component-edit-dialog). Du kan också överföra en bild från dialogrutan Konfigurera. Den här dialogrutan styr också alla definitioner och ändringar av bilden:
+Du kan antingen dra och släppa en bild från [Resursläsaren](/help/sites-authoring/author-environment-tools.md#assets-browser) direkt till komponenten eller dess [Konfigurera dialogruta](/help/sites-authoring/editing-content.md#component-edit-dialog). Du kan också överföra en bild från dialogrutan Konfigurera. Den här dialogrutan styr också alla definitioner och ändringar av bilden:
 
 ![chlimage_1-194](assets/chlimage_1-194.png)
 
@@ -407,9 +406,9 @@ Flera ytterligare alternativ finns i helskärmsläge. till exempel mappa och zoo
 >
 >Överföringens förlopp kan inte övervakas med Internet Explorer.
 >
->Användare av Internet Explorer måste överföra bilden och klicka på **OK** och sedan öppna bilden igen för att se den överförda filen i förhandsgranskningen och för att kunna utföra ändringar (d.v.s. beskära).
+>Internet Explorer-användare måste ladda upp bilden och klicka på **OK** öppna sedan bilden igen för att se den överförda filen i förhandsgranskningen och för att kunna utföra ändringar (t.ex. beskära).
 >
->Mer information om HTML5-funktioner som används av AEM finns i [Plattformar som stöds](/help/release-notes/release-notes.md#supported-platforms).
+>Se [Plattformar som stöds](/help/release-notes/release-notes.md#supported-platforms) för mer information om HTML5-funktioner som används av AEM.
 
 När en bild har lästs in kan du konfigurera följande:
 
@@ -453,13 +452,13 @@ När en bild har lästs in kan du konfigurera följande:
 >
 >Vissa alternativ är bara tillgängliga i helskärmsredigeraren.
 
-Den slutliga bilden (med **Rubrik** och **Beskrivning**) kan visas som:
+Den slutliga bilden (med **Titel** och **Beskrivning**) kan visas som:
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
 ### Layoutbehållare {#layout-container}
 
-Den här komponenten har ett rutnätsstyckesystem där du kan lägga till och placera komponenter i ett [responsivt rutnät](/help/sites-authoring/responsive-layout.md). På så sätt kan du definiera olika innehållslayouter baserat på målenheternas bredd, inklusive en rad telefoner, surfplattor och datorer.
+Den här komponenten har ett rutnätsstyckesystem där du kan lägga till och placera komponenter i en [responsiv stödraster](/help/sites-authoring/responsive-layout.md). På så sätt kan du definiera olika innehållslayouter baserat på målenheternas bredd, inklusive en rad telefoner, surfplattor och datorer.
 
 ![chlimage_1-196](assets/chlimage_1-196.png)
 
@@ -481,7 +480,7 @@ Med List-komponenten kan du konfigurera sökvillkor för att visa en lista:
 
       * **Alternativ för underordnade sidor**
 
-         * **Underordnade till**  (överordnad sida)
+         * **Barn** (Överordnad sida)
 
             Ange en bana manuellt eller med väljaren. Lämna tomt om du vill använda den aktuella sidan som överordnad.
       * **Alternativ för fast lista**
@@ -504,10 +503,10 @@ Med List-komponenten kan du konfigurera sökvillkor för att visa en lista:
 
             Du kan ange en sökfråga med Querybuilder-predikatnotation. Du kan till exempel ange &quot;fulltext=Marketing&quot; om du vill att alla sidor med &quot;Marketing&quot; i innehållet ska visas i Carousel.
 
-            Mer information om frågeuttryck och fler exempel finns i [QueryBuilder API](/help/sites-developing/querybuilder-api.md).
+            Se [QueryBuilder API](/help/sites-developing/querybuilder-api.md) om du vill ha en fullständig diskussion om frågeuttryck och fler exempel.
       * **Taggar**
 
-         Ange **överordnad sida**, **taggar/nyckelord** och de matchningskriterier som krävs.
+         Ange **Överordnad sida**, **Taggar/nyckelord** och de matchningskriterier som krävs.
    * **Visa som**
 
       Hur du vill att objekten ska listas; innehåller länkar, lärare och nyheter.
@@ -533,14 +532,14 @@ Med List-komponenten kan du konfigurera sökvillkor för att visa en lista:
 
 
 
-I följande exempel visas en **List**-komponent på samma sätt som en lista med underordnade sidor (designen styrs av en webbplatsdesigns anpassade CSS-definitioner).
+I följande exempel visas en **Lista** -komponenten som det kan visa en lista med underordnade sidor (designen styrs av en webbplatsdesigns anpassade CSS-definitioner).
 
 ![dc_list_use](assets/dc_list_use.png)
 
 ### Inloggning {#login}
 
 >[!CAUTION]
->Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [kärnkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) i stället.
+>Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
 
 >[!CAUTION]
 >
@@ -604,7 +603,7 @@ Du kan konfigurera:
 
 ### Referens {#reference}
 
-Med komponenten **Reference** kan du referera till text från en annan sida på AEM webbplats (i den aktuella instansen). Innehållet i det refererade stycket visas sedan som om det fanns på den aktuella sidan. Innehållet uppdateras när källstycket ändras (du kan behöva uppdatera sidan).
+The **Referens** kan du referera till text från en annan sida på AEM webbplats (i den aktuella instansen). Innehållet i det refererade stycket visas sedan som om det fanns på den aktuella sidan. Innehållet uppdateras när källstycket ändras (du kan behöva uppdatera sidan).
 
 * **Styckereferens**
 
@@ -635,7 +634,7 @@ När innehållet har konfigurerats visas det exakt som på källsidan. Det faktu
 ### Sökning {#search-features}
 
 >[!CAUTION]
->Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [kärnkomponenten för snabbsökning](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/quick-search.html) i stället.
+>Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [Kärnkomponent för snabbsökning](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/quick-search.html) i stället.
 
 Sökkomponenten lägger till sökfunktioner på sidan.
 
@@ -693,7 +692,7 @@ Du kan konfigurera:
 
       Namnet som visas på länken till efterföljande söksidor.
 
-I följande exempel visas sökkomponenten efter en sökning efter ordet *geometrixx* från rotkatalogen i en standardinstallation. Detta illustrerar också sidnumreringen av resultaten:
+I följande exempel visas sökkomponenten efter en sökning efter ordet *geometrixx* från rotkatalogen för en standardinstallation. Detta illustrerar också sidnumreringen av resultaten:
 
 ![dc_search_use](assets/dc_search_use.png)
 
@@ -701,10 +700,10 @@ I följande exempel visas en felstavad sökterm som inte är tillgänglig:
 
 ![dc_search_usenotfound](assets/dc_search_usenotfound.png)
 
-### Platskarta {#sitemap}
+### Webbplatskarta {#sitemap}
 
 >[!CAUTION]
->Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [navigeringen](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html), [språknavigeringen](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/language-navigation.html) och [Breadcrumb Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/breadcrumb.html) i stället.
+>Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [Navigering](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html), [Språknavigering](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/language-navigation.html)och [Breadcrumb Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/breadcrumb.html) i stället.
 
 En automatisk platskarta som (med standardinställningarna) visar alla sidor (som aktiva länkar) på den aktuella webbplatsen. Ett extrakt visar till exempel:
 
@@ -721,13 +720,13 @@ Om det behövs kan du konfigurera:
 ### Bildspel {#slideshow}
 
 >[!CAUTION]
->Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [Carousel Core Component](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html) i stället.
+>Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [Carousel Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html) i stället.
 
 >[!CAUTION]
 >
 >Den här komponenten förväntas inte längre fungera utan omfattande anpassning på projektnivå.
 
-Med den här komponenten kan du läsa in en serie bilder som ska visas som ett bildspel på sidan.Du kan lägga till eller ta bort bilder och tilldela varje rubrik. Under Avancerat kan du även ange storleken på visningsområdet.
+Med den här komponenten kan du läsa in en serie bilder som ska visas som ett bildspel på sidan.Du kan lägga till eller ta bort bilder och tilldela varje rubrik. Under Avancerat kan du även ange visningsområdets storlek.
 
 Du kan konfigurera:
 
@@ -735,7 +734,7 @@ Du kan konfigurera:
 
    * **Ny bild**
 
-      Du kan ange ett urval av bildrutor med knapparna **Lägg till** (och **Ta bort**).
+      Du kan ange ett urval av bildrutor med hjälp av **Lägg till** (och **Ta bort**).
 
    * **Titel**
 
@@ -751,18 +750,18 @@ Bildspelskomponenten visar sedan varje sekvens upprepade gånger, under en kort 
 
 ![dc_slideshow_use](assets/dc_slideshow_use.png)
 
-### Table {#table}
+### Tabell {#table}
 
 >[!CAUTION]
->Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [Text Core Component](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html) i stället.
+>Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [Textkärnkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html) i stället.
 
 >[!NOTE]
 >
->Komponenten **Tabell** är baserad på [RTF-redigeraren](/help/sites-authoring/rich-text-editor.md), liksom **[Text](#text)**-komponenten.
+>The **Tabell** -komponenten baseras på [RTF-redigerare](/help/sites-authoring/rich-text-editor.md), vilket är **[Text](#text)** -komponenten.
 >
->Du bör använda komponenten **Tabell** för tabeller, men de kan också skapas med komponenten **Text**.
+>Det rekommenderas att du använder **Tabell** för tabeller, även om de också kan skapas med **Text** -komponenten.
 
-Komponenten **Tabell** är förkonfigurerad så att du kan skapa, fylla i och formatera en tabell. I dialogrutan kan du konfigurera tabellen och skapa innehållet genom att antingen:
+The **Tabell** -komponenten är förkonfigurerad så att du kan skapa, fylla i och formatera en tabell. I dialogrutan kan du konfigurera tabellen och skapa innehållet genom att antingen:
 
 * från början
 * kopiera och klistra in ett kalkylblad eller en tabell från en extern redigerare (t.ex. Excel, OpenOffice, Anteckningar).
@@ -779,7 +778,7 @@ I följande skärmbild visas ett exempel på tabellkomponenten: designen bestäm
 
 ![dc_table_use](assets/dc_table_use.png)
 
-### Tagga molnet {#tag-cloud}
+### Tag Cloud {#tag-cloud}
 
 I ett taggmoln visas ett grafiskt presenterat urval av de taggar som används i innehållet på webbplatsen:
 
@@ -799,21 +798,21 @@ När du konfigurerar taggmolnkomponenten kan du ange:
 
    Anger om taggarna som visas ska fungera som länkar.
 
-Mer information om hur du använder taggar finns på [Använda taggar](/help/sites-authoring/tags.md).
+Mer information om märkord finns på [Använda taggar](/help/sites-authoring/tags.md).
 
 ### Text {#text}
 
 >[!NOTE]
 >
->Komponenten **Text** är baserad på [RTF-redigeraren](/help/sites-authoring/rich-text-editor.md), liksom **[Tabell](#table)**-komponenten.
+>The **Text** -komponenten baseras på [RTF-redigerare](/help/sites-authoring/rich-text-editor.md), vilket är **[Tabell](#table)** -komponenten.
 >
->Du bör använda komponenten **Tabell** för tabeller, men de kan också skapas med komponenten **Text**.
+>Det rekommenderas att du använder **Tabell** för tabeller, även om de också kan skapas med **Text** -komponenten.
 
-Med komponenten Text kan du ange ett textblock med en WYSIWYG-redigerare, med funktioner som finns i [RTF-redigeraren](/help/sites-authoring/rich-text-editor.md). Med ett urval ikoner kan du formatera texten, inklusive teckensnittsegenskaper, justering, länkar, listor och indrag.
+Med komponenten Text kan du ange ett textblock med en WYSIWYG-redigerare, som har funktioner från [RTF-redigerare](/help/sites-authoring/rich-text-editor.md). Med ett urval ikoner kan du formatera texten, inklusive teckensnittsegenskaper, justering, länkar, listor och indrag.
 
 ![chlimage_1-201](assets/chlimage_1-201.png)
 
-När du öppnar dialogrutan **Konfigurera** kan du även ange:
+När du öppnar **Konfigurera** kan du också ange:
 
 * **Avstånd**
 * **Textformat**
@@ -822,25 +821,25 @@ Den formaterade texten visas då på sidan; den faktiska designen beror på webb
 
 ![dc_text_use](assets/dc_text_use.png)
 
-Mer detaljerad information om komponenten Text och de funktioner som finns i RTF-redigeraren finns på sidan [RTF-redigerare](/help/sites-authoring/rich-text-editor.md).
+Mer information om komponenten Text och funktionerna i RTF-redigeraren finns i [RTF-redigerare](/help/sites-authoring/rich-text-editor.md) sida.
 
 #### Redigering på plats {#inplace-editing}
 
-Förutom det dialogrutebaserade redigeringsläget RTF innehåller AEM även [Inplace Editing](/help/sites-authoring/editing-content.md), som tillåter direktredigering av texten som den visas i sidlayouten.
+Förutom det dialogrutebaserade redigeringsläget RTF finns det i AEM [Redigering på plats](/help/sites-authoring/editing-content.md), som gör att texten kan redigeras direkt när den visas i sidlayouten.
 
 ### Text och bild {#text-image}
 
-Komponenten Text och bild lägger till ett textblock och en bild. Du kan också lägga till och redigera text och bilder separat. Mer information finns i [Text](#text) och [Image](#image)-komponenterna.
+Komponenten Text och bild lägger till ett textblock och en bild. Du kan också lägga till och redigera text och bilder separat. Se [Text](#text) och [Bild](#image) för mer information.
 
 ![chlimage_1-202](assets/chlimage_1-202.png)
 
 Du kan konfigurera:
 
-* **Komponentformat**  (**format**)
+* **Komponentformat** (**Stilar**)
 
    Här kan du justera bilden åt vänster eller höger. Standardvärdet är **Vänster** justerat, med bilden till vänster.
 
-* **Bildegenskaper**  (**avancerade bildegenskaper**)
+* **Bildegenskaper** (**Avancerade bildegenskaper**)
 
    Gör att du kan ange följande:
 
@@ -881,16 +880,16 @@ Titelkomponenten kan antingen:
 
 Du kan konfigurera:
 
-* ****
-TitelOm du vill använda ett annat namn än sidrubriken anger du det här.
+* **Titel**
+Om du vill använda ett annat namn än sidrubriken anger du det här.
 
-* ****
-LinkURI:n om titeln ska fungera som en länk.
+* **Länk**
+URI:n om titeln ska fungera som en länk.
 
-* **Typ/**
-storlekVälj Liten eller Stor i listrutan. Liten genereras som en bild. Stor genereras som text.
+* **Typ/storlek**
+Välj Liten eller Stor i listrutan. Liten genereras som en bild. Stor genereras som text.
 
-I följande exempel visas en **Title**-komponent; designen bestäms av den platsspecifika CSS:n.
+I följande exempel visas en **Titel** som visas, designen bestäms av den platsspecifika CSS:n.
 
 ![dc_title_use](assets/dc_title_use.png)
 
@@ -900,9 +899,9 @@ I följande exempel visas en **Title**-komponent; designen bestäms av den plats
 >
 >Den här komponenten förväntas inte längre fungera utan omfattande anpassning på projektnivå.
 
-Med komponenten **Video** kan du placera ett fördefinierat videoelement direkt på en sida.
+The **Video** kan du placera ett fördefinierat videoelement direkt på en sida.
 
-Se även [Konfigurera videokomponenten](/help/sites-administering/config-video.md) för användning med HTML5-element.
+Se även [Konfigurera komponenten Video](/help/sites-administering/config-video.md) för användning med HTML5-element.
 
 När du har placerat en instans av komponenten på sidan kan du konfigurera:
 
@@ -914,7 +913,7 @@ När du har placerat en instans av komponenten på sidan kan du konfigurera:
 
    * **Storlek**
 
-      Videons ursprungliga storlek (bredd x höjd i pixlar) visas i rutorna intill Storlek (se ovan). Ange bredd- och höjddimensioner manuellt här om du vill åsidosätta videons ursprungliga dimensioner. Klicka på **OK** för att stänga dialogrutan.
+      Videons ursprungliga storlek (bredd x höjd i pixlar) visas i rutorna intill Storlek (se ovan). Ange bredd- och höjddimensioner manuellt här om du vill åsidosätta videons ursprungliga dimensioner. Klicka **OK** för att stänga dialogrutan.
 
 
 >[!NOTE]
@@ -924,9 +923,7 @@ När du har placerat en instans av komponenten på sidan kan du konfigurera:
 >* `.mp4`
 >* `Ogg`
 >* `FLV` (Flash)
-
 >
-
 
 
 ## Kolumner {#columns}
@@ -961,7 +958,7 @@ Formulärkomponenter används för att skapa formulär som besökare kan skicka 
 
 >[!NOTE]
 >
->Mer information om AEM Forms finns i [AEM Forms Hjälp](/help/forms/home.md).
+>Se [Hjälp om AEM Forms](/help/forms/home.md) om du vill ha information om AEM Forms.
 
 Forms är uppbyggt av flera olika komponenter:
 
@@ -977,13 +974,13 @@ Forms är uppbyggt av flera olika komponenter:
 
    Profilkomponenter relaterar till besökarprofiler som används för socialt samarbete och andra områden där besökaranpassning krävs.
 
-I följande exempel visas ett exempelformulär. Den består av **Form**-komponenten (start och slut), med två **formulärtextfält** som används för indata, ett **fält av typen General Text** som används för inledande text och en **Skicka**-knapp.
+I följande exempel visas ett exempelformulär. Den består av **Formulär** -komponent (start och slut), med två **Formulärtext** fält som används för indata, **Allmän text** fält som används för inledande text och ett **Skicka** -knappen.
 
 ![dc_form](assets/dc_form.png)
 
 >[!NOTE]
 >
->Information om hur du utvecklar och anpassar formulär finns på [Utveckla Forms-sidan](/help/sites-developing/developing-forms.md). Detta inkluderar bland annat att lägga till åtgärder, begränsningar, förhandsladda fält och att använda skript för att anropa en tjänst för att utföra åtgärder.
+>Information om hur du utvecklar och anpassar formulär finns på [Developing Forms page](/help/sites-developing/developing-forms.md). Detta inkluderar bland annat att lägga till åtgärder, begränsningar, förhandsladda fält och att använda skript för att anropa en tjänst för att utföra åtgärder.
 
 ### Inställningar som är gemensamma för (många) formulärkomponenter {#settings-common-to-many-form-components}
 
@@ -1011,7 +1008,7 @@ När du konfigurerar någon av formulärkomponenterna är följande flikar tillg
 >
 >Fälten som visas varierar avsevärt beroende på den enskilda komponenten.
 
-Dessa flikar ger dig de parametrar som behövs. de kan vara beroende av den enskilda komponenttypen, men kan innehålla:
+Dessa flikar ger dig de parametrar som behövs. dessa kan bero på den enskilda komponenttypen, men kan omfatta:
 
 * **Titel och text**
 
@@ -1074,7 +1071,7 @@ Dessa flikar ger dig de parametrar som behövs. de kan vara beroende av den ensk
 
 ### Formulär (komponent) {#form-component}
 
-Formulärexponenten definierar både början och slutet av ett formulär med elementen **Formulärstart** och **Formulärslut**. Dessa är alltid kopplade för att säkerställa att formuläret är korrekt definierat.
+Form-komponenten definierar både början och slutet av ett formulär med **Formulärstart** och **Formulärslut** -element. Dessa är alltid kopplade för att säkerställa att formuläret är korrekt definierat.
 
 ![dc_form-1](assets/dc_form-1.png)
 
@@ -1082,7 +1079,7 @@ Mellan formulärets början och slut kan du lägga till formulärkomponenter som
 
 >[!NOTE]
 >
->Foundation-komponenterna har bara stöd för användning av andra grundkomponenter (knapp, text, dold etc.). Det går inte att använda [kärnkomponenter](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)-formulärkomponenter i ett grundkomponentformulär (och vice versa).
+>Foundation-komponenterna har bara stöd för användning av andra grundkomponenter (knapp, text, dold etc.). Använda [kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) formkomponenter i ett grundkomponentformulär (och vice versa) stöds inte.
 
 #### Formulärets början {#start-of-form}
 
@@ -1094,8 +1091,8 @@ Den här komponenten behövs för att definiera början på ett nytt formulär p
 
       Sidan som ska refereras till för att tacka besökarna för att de har lämnat sina synpunkter. Om formuläret lämnas tomt visas det igen när det har skickats.
 
-   * **Starta**
-arbetsflödeBestämmer vilket arbetsflöde som ska aktiveras när ett formulär skickas.
+   * **Starta arbetsflöde**
+Bestämmer vilket arbetsflöde som ska aktiveras när ett formulär skickas.
 
 * **Avancerat**
 
@@ -1138,11 +1135,11 @@ Ett formulär behöver en åtgärd. Åtgärden definierar den åtgärd som utlö
 
       Detta är ett valfritt fält som anger sökvägen till en nod i databasen. När den här noden har egenskaper som matchar fältnamnen förinläses motsvarande fält i formuläret med egenskapsvärdet. Om det inte finns någon matchning innehåller fältet standardvärdet.
 
-      Med **Läs in sökväg** kan du läsa in formuläret i förväg med värden i de obligatoriska fälten. Se [Förhandsladda formulärvärden](/help/sites-developing/developing-forms.md#preloading-form-values).
+      Använda **Läs in bana** kan du läsa in formuläret i förväg med värden i de obligatoriska fälten. Se [Förhandsladda formulärvärden](/help/sites-developing/developing-forms.md#preloading-form-values).
 
    * **Klientvalidering**
 
-      Anger om klientvalidering krävs för det här formuläret (servervalidering *alltid* inträffar.) Detta kan uppnås med komponenten **Forms Captcha**.
+      Anger om klientvalidering krävs för det här formuläret (servervalidering) *alltid* inträffar.). Detta kan uppnås i samband med **Forms Captcha** -komponenten.
 
    * **Typ av verifieringsresurs**
 
@@ -1157,7 +1154,7 @@ Ett formulär behöver en åtgärd. Åtgärden definierar den åtgärd som utlö
          `/apps/<myApp>/form/<myValidation>/formservervalidation.jsp`
    * **Åtgärdskonfiguration**
 
-      Vilka alternativ som är tillgängliga i **Åtgärdskonfiguration** är beroende av vilken **åtgärdstyp** som är vald:
+      Tillgängliga alternativ i **Åtgärdskonfiguration** är beroende av **Åtgärdstyp** markerat:
 
       * **Kontobegäran**
 
@@ -1168,7 +1165,7 @@ Ett formulär behöver en åtgärd. Åtgärden definierar den åtgärd som utlö
 
          * Innehållsbana
 
-            Innehållssökvägen för allt innehåll som formuläret dumpar. Ange en sökväg som slutar med ett snedstreck `/`. Snedstrecket innebär att för varje formulärport skapas en ny nod på den angivna platsen. till exempel:
+            Innehållssökvägen för allt innehåll som formuläret dumpar. Ange en bana som slutar med ett snedstreck `/`. Snedstrecket innebär att för varje formulärport skapas en ny nod på den angivna platsen. till exempel:
 
             `/forms/feedback/`
 
@@ -1210,7 +1207,7 @@ Ett formulär behöver en åtgärd. Åtgärden definierar den åtgärd som utlö
 
          * **Visa data...**
 
-            Klicka på den här knappen för att komma åt information om formulärresultat i gruppredigeraren. Härifrån kan du exportera informationen till en `.tsv`-fil (tabbavgränsad) (som exempelvis i ett Excel-kalkylblad).
+            Klicka på den här knappen för att komma åt information om formulärresultat i gruppredigeraren. Härifrån kan du exportera informationen till en `.tsv` (tabbseparerad) fil (används t.ex. i ett Excel-kalkylblad).
       * **E-post**
 
          * **Från**
@@ -1241,7 +1238,7 @@ Ett formulär behöver en åtgärd. Åtgärden definierar den åtgärd som utlö
 
          * **Innehållsbana**
 
-            Innehållssökvägen för allt innehåll som formuläret dumpar. Ange en sökväg som slutar med ett snedstreck `/`. Snedstrecket innebär att för varje formulärport skapas en ny nod på den angivna platsen. till exempel:
+            Innehållssökvägen för allt innehåll som formuläret dumpar. Ange en bana som slutar med ett snedstreck `/`. Snedstrecket innebär att för varje formulärport skapas en ny nod på den angivna platsen. till exempel:
 
             `/forms/feedback/`
 
@@ -1314,7 +1311,7 @@ Komponenten är konfigurerad för omedelbar användning, men du kan ändra konfi
 ### Captcha {#captcha}
 
 >[!CAUTION]
->Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [kärnkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) i stället.
+>Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
 
 >[!CAUTION]
 >
@@ -1336,14 +1333,14 @@ Du kan ange olika parametrar, inklusive rubrik, beskrivning och elementnamn. Med
 
 >[!NOTE]
 >
->Med **Objekt Läs in sökväg** kan du läsa in grupplistan med kryssrutor i förväg med värden.
+>Använda **Inläsningssökväg för objekt** Du kan läsa in grupplistan med kryssrutor i förväg med värden.
 >
 >Se [Förhandsladda formulärfält med flera värden](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values).
 
 ### Kreditkortsinformation {#credit-card-details}
 
 >[!CAUTION]
->Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [kärnkomponenterna](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) i stället.
+>Den här Foundation-komponenten har tagits bort. Adobe rekommenderar att du använder [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
 
 På så sätt kan du ange de fält som behövs för att ange kreditkortsinformation. Du kan konfigurera det för att ange vilka typer av kort som accepteras och vilken information som krävs (till exempel säkerhetskod).
 
@@ -1359,7 +1356,7 @@ Du kan ange en titel och vilka objekt som ska visas i listan. Med knapparna + oc
 
 >[!NOTE]
 >
->Med **Objekt Läs in sökväg** kan du läsa in listrutan med värden i förväg.
+>Använda **Inläsningssökväg för objekt** du kan ladda listrutan i förväg med värden.
 >
 >Se [Förhandsladda formulärfält med flera värden](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values).
 
@@ -1411,7 +1408,7 @@ Detta används för att tillåta användaren att ange sitt lösenord:
 
 ![dc_form_password](assets/dc_form_password.png)
 
-### Lösenordsåterställning {#password-reset}
+### Återställ lösenord {#password-reset}
 
 Den här komponenten ger användaren två fält för:
 
@@ -1422,7 +1419,7 @@ Med standardinställningarna visas komponenten som:
 
 ![dc_password_reset](assets/dc_password_reset.png)
 
-### Grupp för alternativknappar {#radio-group}
+### Grupp med alternativknappar {#radio-group}
 
 En alternativknappsgrupp ger dig en lista över en eller flera kryssrutor, där bara en av kryssrutorna kan markeras vid en viss tidpunkt.
 
@@ -1432,7 +1429,7 @@ Du kan ange elementnamnet tillsammans med en titel och en beskrivning Med knappa
 
 >[!NOTE]
 >
->Med **Objekt, Läs in sökväg** kan du förhandsladda alternativgruppen med värden.
+>Använda **Inläsningssökväg för objekt** du kan förhandsladda gruppen med värden.
 >
 >Se [Förhandsladda formulärfält med flera värden](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values).
 
@@ -1446,7 +1443,7 @@ Eller med egen text:
 
 ![dc_form_submit_button_use](assets/dc_form_submitbuttonuse.png)
 
-### Tagg Field {#tags-field}
+### Märkordsfält {#tags-field}
 
 I det här fältet kan du välja taggar:
 
@@ -1481,4 +1478,3 @@ Standardtextfältet kan konfigureras till den storlek du vill ha och med ditt eg
 På så sätt kan du skapa en Skicka-knapp som kan användas i ett arbetsflöde.
 
 ![chlimage_1-204](assets/chlimage_1-204.png)
-

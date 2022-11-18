@@ -2,10 +2,10 @@
 title: Adobe Content Package Maven Plugin
 description: Använd plugin-programmet Content Package Maven för att distribuera AEM
 exl-id: 106a677b-7c89-4fbc-bb96-eaa3dfa71b58
-source-git-commit: cda63b9ece88d8172fa4d9817e315c9cff88c224
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 5%
+source-wordcount: '157'
+ht-degree: 0%
 
 ---
 
@@ -19,8 +19,8 @@ Distributionen av de konstruerade paketen till AEM utförs av plugin-programmet 
 >
 >Mer information finns i:
 >
->* Plugin-programmet [Adobe Content Package Maven](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html#developer-tools) i den AEM as a Cloud Service dokumentationen för hur du distribuerar AEM program.
->* Artikeln [AEM Project Structure](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) i den AEM as a Cloud Service dokumentationen om hur du strukturerar moderna AEM projekt.
->* I [AEM Project Archetype](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)-dokumentationen beskrivs hur du startar ett nytt AEM med hjälp av arkivtypen.
+>* The [Adobe Content Package Maven Plugin](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html#developer-tools) i den AEM as a Cloud Service dokumentationen om hur du distribuerar AEM program.
+>* The [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) i den AEM as a Cloud Service dokumentationen om hur du strukturerar moderna AEM projekt.
+>* The [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) dokumentation som visar hur du startar ett nytt AEM med hjälp av arkitypen.
 >
 >Alla tre dokumenten gäller för AEM 6.4.

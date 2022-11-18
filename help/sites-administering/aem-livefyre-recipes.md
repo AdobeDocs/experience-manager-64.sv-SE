@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: fdea5ede-d44f-463e-af8a-111ee7469ede
 exl-id: 2e06d1c8-e7c0-41ce-8799-9e762663eded
-source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1452'
 ht-degree: 0%
 
 ---
@@ -40,15 +40,15 @@ Det finns tre sätt att implementera Livefyre i en anpassad AEM eller andra CMS-
 **Metod 1: App-implementering för Designer**
 
 * **Vad:** Det enklaste och snabbaste sättet att integrera en Livefyre-app. Du kan utforma, konfigurera och generera en anpassad JavaScript-inbäddningskod för att integrera en Media Wall App på en sida på några minuter.
-* **Hur:**  [Skapa, förhandsgranska, publicera och bädda in en medieväggsapp](https://docs.adobe.com/content/help/en/livefyre/using/apps/c-create-an-app.html)
+* **Hur:**  [Skapa, förhandsgranska, publicera och bädda in en medieväggsapp](https://experienceleague.adobe.com/docs/livefyre/using/apps/c-create-an-app.html)
 
 * **Exempel:** [https://codepen.io/dharafyre/pen/bvGrLo](https://codepen.io/dharafyre/pen/bvGrLo)
 
 **Metod 2: SDK-implementering**
 
-* **Vad:** [Livefyre.js](https://docs.adobe.com/content/help/en/livefyre/implementation/c-livefyre_js.html) är huvudbiblioteket som driver Apps och Auth på en webbplats. Den definierar den globala *window.Livefyre* objekt och en enda offentlig metod, *Livefyre.require*, som kan användas för att läsa in andra Livefyre JavaScript-bibliotek som kan användas för att bädda in Livefyre-appar och integrera med andra användarautentiseringssystem.
+* **Vad:** [Livefyre.js](https://experienceleague.adobe.com/docs/livefyre/implementation/c-livefyre_js.html) är huvudbiblioteket som driver Apps och Auth på en webbplats. Den definierar den globala *window.Livefyre* objekt och en enda offentlig metod, *Livefyre.require*, som kan användas för att läsa in andra Livefyre JavaScript-bibliotek som kan användas för att bädda in Livefyre-appar och integrera med andra användarautentiseringssystem.
 
-* **Hur**: [Använda Livefyre JavaScript SDK:s streamhub-wallpackage](https://docs.adobe.com/content/help/en/livefyre/implementation/app-integrations/c-media-wall-integration.html)
+* **Hur**: [Använda Livefyre JavaScript SDK:s streamhub-wallpackage](https://experienceleague.adobe.com/docs/livefyre/implementation/app-integrations/c-media-wall-integration.html)
 
 * **Exempel**: [https://codepen.io/dharafyre/pen/KZKBNv?editors=1010](https://codepen.io/dharafyre/pen/KZKBNv?editors=1010)
 
@@ -56,7 +56,7 @@ Avancerade anpassningar med SDK finns i [StreamHub SDKs](https://github.com/Live
 
 **Metod 3: API-implementering**
 
-* För att skapa anpassade upplevelser och datavisualiseringar kan Livefyre-appar skapas från grunden genom att använda Livefyre och sociala data med [Bootstrap och Stream API](https://docs.adobe.com/content/help/en/livefyre/implementation/advanced-topics/bootstrap-stream-api.html).
+* För att skapa anpassade upplevelser och datavisualiseringar kan Livefyre-appar skapas från grunden genom att använda Livefyre och sociala data med [Bootstrap och Stream API](https://experienceleague.adobe.com/docs/livefyre/implementation/advanced-topics/bootstrap-stream-api.html).
 
 Se till att du följer [Twitter](https://developer.twitter.com/en/developer-terms/display-requirements.html), [Facebook](https://en.facebookbrand.com/guidelines/brand)och [Instagram](https://en.instagram-brand.com/) visa riktlinjer när användargränssnittet för användargenererat innehåll skapas.
 
@@ -65,7 +65,7 @@ Se till att du följer [Twitter](https://developer.twitter.com/en/developer-term
 För medieväggsintegreringar som kräver verifiering, se:
 
 * [Anpassa enkel inloggning vid integrering](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) för AEM Identity Management
-* [Identitetsintegrering](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html) för autentiseringsplattformar från tredje part
+* [Identitetsintegrering](https://experienceleague.adobe.com/docs/livefyre/implementation/identity-integration/t-about-identity-integration.html) för autentiseringsplattformar från tredje part
 
 ### Använd skiftläge - översikt {#use-case-overview}
 
@@ -76,7 +76,7 @@ Steg som ska implementeras:
 1. [Komma igång](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html)
 1. [Konfigurera AEM att använda Livefyre](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html)
 1. [Dra och släpp AEM Media Wall-komponent på sidan](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#UseLivefyrewithAEMSites)
-1. [Konfigurera strömmar och lägg till regler för att strukturera UGC och visa på Media Wall-komponenten](https://docs.adobe.com/content/help/en/livefyre/using/streams/c-streams.html)
+1. [Konfigurera strömmar och lägg till regler för att strukturera UGC och visa på Media Wall-komponenten](https://experienceleague.adobe.com/docs/livefyre/using/streams/c-streams.html)
 
 Utbildningsvideor om UGC för direktuppspelning finns på [Skapa automatiska innehållsströmmar och söka i socialt innehåll i Adobe Experience Manager Livefyre](https://helpx.adobe.com/experience-manager/tutorials.html).
 
@@ -85,9 +85,9 @@ Utbildningsvideor om UGC för direktuppspelning finns på [Skapa automatiska inn
 * [CNN Media Wall](https://edition.cnn.com/specials/nepal-earthquake-media-wall)
 * [PGA Tour Media Wall](https://www.pgatour.com/social-hub.html)
 
-För att skapa anpassade upplevelser och datavisualiseringar kan Livefyre-appar skapas från grunden genom att använda Livefyre och sociala data med [Bootstrap och Stream API](https://docs.adobe.com/content/help/en/livefyre/implementation/advanced-topics/bootstrap-stream-api.html).
+För att skapa anpassade upplevelser och datavisualiseringar kan Livefyre-appar skapas från grunden genom att använda Livefyre och sociala data med [Bootstrap och Stream API](https://experienceleague.adobe.com/docs/livefyre/implementation/advanced-topics/bootstrap-stream-api.html).
 
-Information om vilka Livefyre-appar som kräver autentisering finns i [Identitetsintegrering](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html) för autentiseringsplattformar från tredje part.
+Information om vilka Livefyre-appar som kräver autentisering finns i [Identitetsintegrering](https://experienceleague.adobe.com/docs/livefyre/implementation/identity-integration/t-about-identity-integration.html) för autentiseringsplattformar från tredje part.
 
 * [PGA Tour Media Wall](https://www.pgatour.com/social-hub.html)
 * [TimeOut](https://www.timeout.com/london/restaurants/forest-bar-kitchen#tab_panel_3)
@@ -105,18 +105,18 @@ Det finns tre sätt att implementera Livefyre Comments-appen i en anpassad AEM e
 **Metod 1: App-implementering för Designer**
 
 * **Vad:** Det enklaste och snabbaste sättet att integrera en Livefyre-app. Du kan utforma, konfigurera och generera en anpassad JavaScript-inbäddningskod för att integrera en Media Wall App på en sida på några minuter.
-* **Hur:** [Skapa, förhandsgranska, publicera och bädda in en kommentarapp](https://docs.adobe.com/content/help/en/livefyre/using/apps/c-create-an-app.html)
+* **Hur:** [Skapa, förhandsgranska, publicera och bädda in en kommentarapp](https://experienceleague.adobe.com/docs/livefyre/using/apps/c-create-an-app.html)
 
 * **Exempel:** [https://codepen.io/dharafyre/pen/oYoJdP](https://codepen.io/dharafyre/pen/oYoJdP)
 
 **Metod 2: SDK-implementering**
 
-* **Vad:** [Livefyre.js](https://docs.adobe.com/content/help/en/livefyre/implementation/c-livefyre_js.html) är huvudbiblioteket som driver Apps och Auth på en webbplats. Den definierar den globala *window.Livefyre* objekt och en enda offentlig metod, *Livefyre.require*, som kan användas för att läsa in andra Livefyre JavaScript-bibliotek som kan användas för att bädda in Livefyre-appar och integrera med andra användarautentiseringssystem.
+* **Vad:** [Livefyre.js](https://experienceleague.adobe.com/docs/livefyre/implementation/c-livefyre_js.html) är huvudbiblioteket som driver Apps och Auth på en webbplats. Den definierar den globala *window.Livefyre* objekt och en enda offentlig metod, *Livefyre.require*, som kan användas för att läsa in andra Livefyre JavaScript-bibliotek som kan användas för att bädda in Livefyre-appar och integrera med andra användarautentiseringssystem.
 
 * **Hur:**
 
-   * Skapa en samling/app med [CollectionMeta-token](https://docs.adobe.com/content/help/en/livefyre/implementation/getting-started/implementation-process/c-collectionmeta-tokent.html).
-   * Integrera [Kommentarsapp](https://docs.adobe.com/content/help/en/livefyre/implementation/app-integrations/comments/c-comments-integration.html) till webbplatser med Livefyre.js bäddar in kodstrukturen.
+   * Skapa en samling/app med [CollectionMeta-token](https://experienceleague.adobe.com/docs/livefyre/implementation/getting-started/implementation-process/c-collectionmeta-tokent.html).
+   * Integrera [Kommentarsapp](https://experienceleague.adobe.com/docs/livefyre/implementation/app-integrations/comments/c-comments-integration.html) till webbplatser med Livefyre.js bäddar in kodstrukturen.
 
 * **Exempel:**  [https://codepen.io/dharafyre/pen/oYoJdP](https://codepen.io/dharafyre/pen/oYoJdP)
 
@@ -124,12 +124,12 @@ Mer information om avancerade anpassningar med SDK finns i [StreamHub SDKs](http
 
 **Metod 3: API-implementering**
 
-* För att skapa anpassade upplevelser och datavisualiseringar kan Livefyre-appar skapas från grunden genom att använda Livefyre och sociala data med [Bootstrap och Stream API](https://docs.adobe.com/content/help/en/livefyre/implementation/advanced-topics/bootstrap-stream-api.html).
+* För att skapa anpassade upplevelser och datavisualiseringar kan Livefyre-appar skapas från grunden genom att använda Livefyre och sociala data med [Bootstrap och Stream API](https://experienceleague.adobe.com/docs/livefyre/implementation/advanced-topics/bootstrap-stream-api.html).
 
 ### Kommentarer App Authentication Integration {#comments-app-authentication-integration}
 
 * [Anpassa enkel inloggning vid integrering](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) för AEM Identity Management
-* [Identitetsintegrering](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html) för autentiseringsplattformar från tredje part
+* [Identitetsintegrering](https://experienceleague.adobe.com/docs/livefyre/implementation/identity-integration/t-about-identity-integration.html) för autentiseringsplattformar från tredje part
 
 
 ## Använd integreringen med Livefyre AEM Assets för att importera UGC i AEM Assets {#use-livefyre-aem-assets-integration-to-import-ugc-in-aem-assets}
@@ -168,12 +168,12 @@ Det finns två sätt att implementera Livefyre Reviews App i en anpassad AEM ell
 
 **Metod 1: SDK-implementering**
 
-* **Vad:** [Livefyre.js](https://docs.adobe.com/content/help/en/livefyre/implementation/c-livefyre_js.html) är huvudbiblioteket som driver Apps och Auth på en webbplats. Den definierar den globala *window.Livefyre* objekt och en enda offentlig metod, *Livefyre.require*, som kan användas för att läsa in andra Livefyre JavaScript-bibliotek som kan användas för att bädda in Livefyre-appar och integrera med andra användarautentiseringssystem.
+* **Vad:** [Livefyre.js](https://experienceleague.adobe.com/docs/livefyre/implementation/c-livefyre_js.html) är huvudbiblioteket som driver Apps och Auth på en webbplats. Den definierar den globala *window.Livefyre* objekt och en enda offentlig metod, *Livefyre.require*, som kan användas för att läsa in andra Livefyre JavaScript-bibliotek som kan användas för att bädda in Livefyre-appar och integrera med andra användarautentiseringssystem.
 
 * **Hur:**
 
-   * Skapa recensioner [CollectionMeta-token](https://docs.adobe.com/content/help/en/livefyre/implementation/app-integrations/c-reviews-integration.html) om du vill ange metadata som ska lagras i granskningssamlingen.
-   * Integrera [Granskningsapp](https://docs.adobe.com/content/help/en/livefyre/implementation/app-integrations/c-reviews-integration.html) till webbplatser med *Livefyre.js* bädda in kodstruktur
+   * Skapa recensioner [CollectionMeta-token](https://experienceleague.adobe.com/docs/livefyre/implementation/app-integrations/c-reviews-integration.html) om du vill ange metadata som ska lagras i granskningssamlingen.
+   * Integrera [Granskningsapp](https://experienceleague.adobe.com/docs/livefyre/implementation/app-integrations/c-reviews-integration.html) till webbplatser med *Livefyre.js* bädda in kodstruktur
 
 * **Exempel:**  [https://codepen.io/dharafyre/pen/GXgvvd](https://codepen.io/dharafyre/pen/GXgvvd)
 
@@ -188,7 +188,7 @@ Ytterligare API:er för omdömen och recensioner finns [här](https://api.livefy
 ### Kommentarer App Authentication Integration {#comments-app-authentication-integration-1}
 
 * [Anpassa enkel inloggning vid integrering](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) för AEM Identity Management
-* [Identitetsintegrering](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html) för autentiseringsplattformar från tredje part
+* [Identitetsintegrering](https://experienceleague.adobe.com/docs/livefyre/implementation/identity-integration/t-about-identity-integration.html) för autentiseringsplattformar från tredje part
 
 ### Kundexempel {#customer-examples-2}
 

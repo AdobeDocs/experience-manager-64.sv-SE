@@ -1,22 +1,21 @@
 ---
 title: Visa sidanalysdata
-seo-title: Visa sidanalysdata
+seo-title: Seeing Page Analytics Data
 description: Använd data från sidanalys för att mäta hur effektivt deras sidinnehåll är
-seo-description: Använd data från sidanalys för att mäta hur effektivt deras sidinnehåll är
+seo-description: Use page analytics data to gauge the effectiveness of their page content
 uuid: 8dda89be-13e3-4a13-9a44-0213ca66ed9c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 42d2195a-1327-45c0-a14c-1cf5ca196cfc
-translation-type: tm+mt
-source-git-commit: e99e29425578005ed9d215946d63f67e7229e8d6
+exl-id: 6509c0ce-fc3a-4248-8dc7-db10602c30d6
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
-
 
 # Visa sidanalysdata{#seeing-page-analytics-data}
 
@@ -26,7 +25,7 @@ Använd sidanalysdata för att mäta hur effektivt sidinnehållet är.
 
 ![aa-10](assets/aa-10.png)
 
-Sidanalysdata visas i [listvyn](/help/sites-authoring/basic-handling.md#list-view) i webbplatskonsolen. När sidorna visas i listformat är följande kolumner tillgängliga som standard:
+Sidanalysdata visas i [Listvy](/help/sites-authoring/basic-handling.md#list-view) i Sites-konsolen. När sidorna visas i listformat är följande kolumner tillgängliga som standard:
 
 * Sidvyer
 * Unika besökare
@@ -36,12 +35,12 @@ Varje kolumn visar ett värde för den aktuella rapporteringsperioden och anger 
 
 >[!NOTE]
 >
->[Konfigurera importintervallet](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval) om du vill ändra uppdateringsperioden.
+>Om du vill ändra uppdateringsperioden [konfigurera importintervallet](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval).
 
-1. Öppna konsolen **Platser**; till exempel [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)
-1. Klicka på eller tryck på ikonen längst till höger i verktygsfältet för att välja **listvy** (den ikon som visas beror på den [aktuella vyn](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)).
+1. Öppna **Webbplatser** konsol, till exempel [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)
+1. Klicka eller tryck på ikonen längst till höger i verktygsfältet (övre högra hörnet) för att välja **Listvy** (ikonen som visas beror på [aktuell vy](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)).
 
-1. Återigen, längst till höger i verktygsfältet (övre högra hörnet), klicka eller tryck på ikonen och välj sedan **Visa inställningar**. Dialogrutan **Konfigurera kolumner** öppnas. Gör nödvändiga ändringar och bekräfta med **Uppdatera**.
+1. Återigen, längst till höger i verktygsfältet (övre högra hörnet), klicka eller tryck på ikonen och välj sedan **Visa inställningar**. The **Konfigurera kolumner** öppnas. Gör de ändringar som behövs och bekräfta med **Uppdatera**.
 
    ![aa-04](assets/aa-04.png)
 
@@ -62,9 +61,9 @@ Medlemmar i användargruppen analytics-administrators kan konfigurera konsolen S
 
 >[!NOTE]
 >
->När ett sidträd innehåller underordnade sidor som är kopplade till olika Adobe Analytics molnkonfigurationer, kan du inte konfigurera tillgängliga datakolumner för sidorna.
+>När ett sidträd innehåller underordnade objekt som är kopplade till olika Adobe Analytics molnkonfigurationer, kan du inte konfigurera tillgängliga datakolumner för sidorna.
 
-1. I listvyn använder du vyväljarna (höger om verktygsfältet), väljer **Visa inställningar** och sedan A **Lägg till anpassade analysdata**.
+1. I listvyn använder du vyväljarna (höger i verktygsfältet) och väljer **Visa inställningar** och sedan A **Lägg till anpassade analysdata**.
 
    ![aa-15](assets/aa-15.png)
 
@@ -74,9 +73,9 @@ Medlemmar i användargruppen analytics-administrators kan konfigurera konsolen S
 
    ![aa-16](assets/aa-16.png)
 
-### Öppnar innehållsinsikter från webbplatser {#opening-content-insights-from-sites}
+### Öppna innehållsinsikter från webbplatser {#opening-content-insights-from-sites}
 
-Öppna [Content Insight](/help/sites-authoring/content-insights.md) från Sites-konsolen för att utforska sidans effektivitet ytterligare.
+Öppna [Content Insight](/help/sites-authoring/content-insights.md) från Sites Console för att ytterligare undersöka hur sidan fungerar.
 
 1. I webbplatskonsolen väljer du den sida som du vill se innehållsinsikter för.
 1. Klicka på ikonen Analytics (Analyser) och Recommendations () i verktygsfältet.
@@ -89,4 +88,4 @@ Medlemmar i användargruppen analytics-administrators kan konfigurera konsolen S
 >
 >På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM.
 >
->Det [ActivityMap-plugin som tillhandahålls av Adobe Analytics](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) bör nu användas.
+>The [ActivityMap-plugin från Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) bör nu användas.

@@ -1,7 +1,7 @@
 ---
 title: Allmän versionsinformation för Adobe Experience Manager 6.4
 seo-title: Release Notes
-description: 'I Adobe Experience Manager 6.4 beskrivs versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor. '
+description: I Adobe Experience Manager 6.4 beskrivs versionsinformation, nyheter, hur man installerar och detaljerade ändringslistor.
 seo-description: Adobe Experience Manager 6.4 notes outlining the release information, what's new, how to install and detailed change lists.
 uuid: 5a220301-2727-4078-ba19-4a2dbf9657f4
 contentOwner: msm-service
@@ -10,9 +10,9 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 2be468e7-2b4e-4e04-881b-b9bdd1f55e57
 exl-id: ee034595-2d2a-4887-86c4-6bf0770da6a2
-source-git-commit: 722a82c1048105c18d59dfc35815548f9b7eace4
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '2751'
+source-wordcount: '2729'
 ht-degree: 1%
 
 ---
@@ -117,7 +117,7 @@ Införandet av flytande upplevelser i början av 2017, med stöd av innehållsfr
 
 **[Innehållsfragment](/help/assets/content-fragments.md)**
 
-Nytt i 6.4 är en visuell [innehållsmodell](/help/assets/content-fragments-models.md) redigerare och en ny [konfigurerbar komponent](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html) för att tillhandahålla flexibla HTML-utdata och JSON som ska ingå i Content Services.
+Nytt i 6.4 är en visuell [innehållsmodell](/help/assets/content-fragments-models.md) redigerare och en ny [konfigurerbar komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) för att tillhandahålla flexibla HTML-utdata och JSON som ska ingå i Content Services.
 
 **Experience Fragments**
 
@@ -131,13 +131,13 @@ Olika förbättringar av Sling Model Exporter och Core Components ingår för at
 
 AEM 6.4 slutför omvandlingen till nästa generations komponentmodell. Core Components-konceptet som introducerades i AEM 6.3, och nu förenas med Style System, är ett effektivt sätt att bygga nya och utöka befintliga webbplatser.
 
-Rekommenderad självstudiekurs för att lära dig hur du bäst utnyttjar den nya komponentmodellen: [Komma igång med AEM Sites - WKND självstudiekurs](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+Rekommenderad självstudiekurs för att lära dig hur du bäst utnyttjar den nya komponentmodellen: [Komma igång med AEM Sites - WKND självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 
 #### Tillägget Skärmar {#screens-add-on}
 
 AEM Screens står för att leverera ett enhetligt budskap i alla marknadsföringskanaler, inklusive digitala signaturer och kiosknätverk. AEM 6.4 har stöd för att köra signeringsspelaren på maskinvaran i Microsoft Windows och Google Chrome OS. Dessutom finns det förbättringar av enhetshantering och scheman (grupper av kanaler) på fjärrbasis.
 
-Mer information om skärmuppdateringar finns i [AEM Screens Användarhandbok](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html).
+Mer information om skärmuppdateringar finns i [AEM Screens Användarhandbok](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html).
 
 ### Experience Manager Communities {#experience-manager-communities}
 
@@ -195,9 +195,9 @@ Om du vill veta mer om den här funktionen, förutsättningarna och hur du får 
 
 **AEM**
 
-AEM har uppdaterats till version 1.8, som är kompatibel med AEM 6.4. Den fullständiga listan över ändringar för AEM program finns i en [Versionsinformation för AEM](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html) -dokument.
+AEM har uppdaterats till version 1.8, som är kompatibel med AEM 6.4. Den fullständiga listan över ändringar för AEM program finns i en [Versionsinformation för AEM](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html) -dokument.
 
-De förbättringar som har gjorts sedan AEM 6.3-versionen omfattar möjligheten att överföra hierarkiska mappar i bakgrunden, ett nytt användargränssnitt för att övervaka bakgrundsåtgärder för resurser, förbättrad cachelagring, nätverk och inloggning samt övergripande stabilitetsförbättringar. Dokumentationen innehåller även en [metodguide](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html).
+De förbättringar som har gjorts sedan AEM 6.3-versionen omfattar möjligheten att överföra hierarkiska mappar i bakgrunden, ett nytt användargränssnitt för att övervaka bakgrundsåtgärder för resurser, förbättrad cachelagring, nätverk och inloggning samt övergripande stabilitetsförbättringar. Dokumentationen innehåller även en [metodguide](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html).
 
 **Adobe Sensei Services**
 
@@ -219,7 +219,7 @@ Flera förbättringar som förbättrar surfning, sökning och administration fö
 
 **Brand Portal**
 
-Olika förbättringar inom områden som metadata, rapportering, digitala rättigheter, inloggningsupplevelser och publiceringsprestanda för mediedistribution. Mer information om de nya förbättringarna och funktionerna finns i [Nyheter i AEM Assets Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/introduction/whats-new.html).
+Olika förbättringar inom områden som metadata, rapportering, digitala rättigheter, inloggningsupplevelser och publiceringsprestanda för mediedistribution. Mer information om de nya förbättringarna och funktionerna finns i [Nyheter i AEM Assets Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html).
 
 #### Dynamic Media Add-on {#dynamic-media-add-on}
 
@@ -263,7 +263,7 @@ Mer information om [AEM Forms](forms.md) versionsinformation. Se även [Sammanfa
 
 Du kan integrera Livefyre med AEM 6.4-instansen. Information om hur du integrerar Livefyre med AEM finns här:
 
-* [Integrera Livefyre](https://docs.adobe.com/content/help/en/experience-manager-64/administering/integration/livefyre.html)
+* [Integrera Livefyre](https://experienceleague.adobe.com/docs/experience-manager-64/administering/integration/livefyre.html)
 
 ### Utnyttja kundfokuserad utveckling {#leverage-customer-focused-development}
 
@@ -279,7 +279,7 @@ Denna prioriteringsprocess har resulterat i över 500 kundfokuserade förändrin
 
 * Fristående QuickStart: cq-quickstart-6.4.0.jar
 * Snabbstart för programserver: cq-quickstart-6.4.0.war
-* Skicka 4.3.1 eller senare för olika webbservrar och plattformar. Se [ladda ned länk](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/getting-started/release-notes.html).
+* Skicka 4.3.1 eller senare för olika webbservrar och plattformar. Se [ladda ned länk](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html).
 * Plugin för Eclipse IDE. [Läs mer och ladda ned](/help/sites-developing/aem-eclipse.md).
 
 * Tillägg för Brackets Code Editor. [Läs mer och ladda ned](/help/sites-developing/aem-brackets.md).
@@ -302,7 +302,7 @@ Denna prioriteringsprocess har resulterat i över 500 kundfokuserade förändrin
 
 **Assets**
 
-* Adobe Experience Manager-datorprogram ([läs mer](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) och [ladda ned](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html))
+* Adobe Experience Manager-datorprogram ([läs mer](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) och [ladda ned](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html))
 
 * Paket för att lägga till utökad PDF rastrerare ([läs mer](/help/assets/aem-pdf-rasterizer.md) och [ladda ned](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg))
 
@@ -377,4 +377,4 @@ Dessa webbplatser är bara tillgängliga för kunder. Om du är kund och behöve
 
 * [Produktnedladdning på licensing.adobe.com](https://licensing.adobe.com/).
 * Produktuppdateringar, patchar och paket för ytterligare funktionalitet i [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
-* [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [Ny Adobe-upplevelse för kundsupport](https://docs.adobe.com/content/help/en/customer-one/using/home.html).
+* [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [Ny Adobe-upplevelse för kundsupport](https://experienceleague.adobe.com/docs/customer-one/using/home.html).
