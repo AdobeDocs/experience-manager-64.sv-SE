@@ -12,10 +12,10 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 exl-id: 895103c8-df58-40f0-85d6-e29637edce53
 feature: Image Profiles
 role: Admin,User
-source-git-commit: 77b2643c91092a9a08b67fb5ad06a96a79f4deea
+source-git-commit: 0abf095e352215cf6f83a409b34975bf8c5b0239
 workflow-type: tm+mt
-source-wordcount: '2649'
-ht-degree: 10%
+source-wordcount: '2813'
+ht-degree: 9%
 
 ---
 
@@ -36,9 +36,9 @@ När du överför bilder kan du beskära bilden automatiskt vid överföring gen
 
 När du implementerar Smart Crop på bilder rekommenderar Adobe följande bästa praxis och tillämpar följande gräns:
 
-| Begränsningstyp | Bästa praxis | Begränsning har införts | Ändring till begränsning den 31 december 2022 |
-| --- | --- | --- | --- |
-| Antal smarta beskärningar per bild | 5 | 100 | 20 |
+| Begränsningstyp | Bästa praxis | Begränsning har införts |
+| --- | --- | --- |
+| Antal smarta beskärningar per bild | 5 | 100 |
 
 Se även [Dynamic Media begränsningar](/help/assets/limitations.md).
 
@@ -48,7 +48,21 @@ Koordinaterna för smart beskärning är proportionella. Det vill säga, för de
 
 Tänk på att varje generering av SmartCrop som du skapar kräver extra bearbetning. Om du till exempel lägger till mer än fem proportioner för smart beskärning kan det leda till en långsam intag av resurser. Det kan också ge ökad belastning på systemen. Eftersom du kan använda SmartCrop på mappnivå rekommenderar Adobe att du använder det på mappar *endast* där det behövs.
 
-Du kan välja mellan två bildbeskärningsalternativ. Du kan också automatisera skapandet av färg- och bildfärgrutor.
+**Riktlinjer för att definiera smart beskärning i en bildprofil**
+För att behålla kontrollen över användningen av Smart Crop och för att optimera bearbetningstiden och lagringen av beskärningar rekommenderar Adobe följande riktlinjer och tips:
+
+* Undvik att skapa duplicerade smarta beskärningsprofiler med samma bredd- och höjdvärden.
+* Namnge smarta beskärningar baserat på beskärningsdimensioner, inte på slutanvändning. På så sätt kan du optimera för dubbletter där en enda dimension används på flera sidor.
+* Skapa sidvisa/resurstypsvisa bildprofiler för specifika mappar och undermappar i stället för en gemensam smart beskärningsprofil som tillämpas på alla mappar eller alla resurser.
+* En bildprofil som du använder för undermappar åsidosätter en bildprofil som används för mappen.
+* Helst bör du ha 10-15 smarta beskärningar per bild som optimerar för skärmproportioner och bearbetningstid.
+
+Du kan välja mellan två bildbeskärningsalternativ. Du kan också välja att automatisera skapandet av färg- och bildfärgrutor eller bevara beskärningsinnehållet i olika upplösningar.
+
+>[!IMPORTANT]
+>
+>・ Adobe rekommenderar att ni granskar alla genererade grödor och färgrutor för att säkerställa att de är lämpliga och relevanta för ert varumärke och era värden.
+・ CMYK-bildformatet stöds inte med smart beskärning.
 
 <table> 
  <tbody> 
@@ -86,11 +100,10 @@ Du kan välja mellan två bildbeskärningsalternativ. Du kan också automatisera
 
 ## Oskarp mask {#unsharp-mask}
 
-Du använder **Oskarp mask** om du vill finjustera en skärpefiltereffekt på den slutliga nedsamplade bilden. Du kan styra effektens intensitet, dess radie (mätt i pixlar) och ett tröskelvärde för kontrast som ska ignoreras. Effekten har samma alternativ som filtret Oskarp mask i Adobe Photoshop.
+Du använder **Oskarp mask** om du vill finjustera en skärpefiltereffekt på den slutliga nedsamplade bilden. Du kan styra effektens intensitet, dess radie (mätt i pixlar) och ett tröskelvärde för kontrast som ska ignoreras. Den här effekten använder samma alternativ som Adobe Photoshop Oskarp mask-filter.
 
 >[!NOTE]
->
->Oskarp mask används endast för nedskalade återgivningar i PTIFF (pyramidformade gånger) som nedsamplas till mer än 50 %. Det innebär att de största återgivningarna i PTIFF inte påverkas av oskarp mask, medan mindre återgivningar som miniatyrbilder ändras (och visar den oskarpa masken).
+Oskarp mask används endast för nedskalade återgivningar i PTIFF (pyramidformade gånger) som nedsamplas till mer än 50 %. Det innebär att de största återgivningarna i PTIFF inte påverkas av oskarp mask, medan mindre återgivningar som miniatyrbilder ändras (och visar den oskarpa masken).
 
 I **Oskarp mask** har du följande filtreringsalternativ:
 
@@ -200,8 +213,7 @@ Förutom att tillämpa en profil på en mapp kan du även tillämpa en profil gl
 ## Redigera den smarta beskärningen eller smarta färgrutan för en enskild bild {#editing-the-smart-crop-or-smart-swatch-of-a-single-image}
 
 >[!NOTE]
->
->Smart Crop är bara tillgängligt i Dynamic Media - Scene7-läge.
+Smart Crop är bara tillgängligt i Dynamic Media - Scene7-läge.
 
 Du kan justera eller ändra storlek på bildens smarta beskärningsfönster manuellt för att ytterligare förfina fokalpunkten.
 
