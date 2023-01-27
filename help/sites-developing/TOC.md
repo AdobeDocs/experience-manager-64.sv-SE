@@ -8,9 +8,9 @@ breadcrumb-title: Utvecklingshandbok
 user-guide-description: Den här guiden beskriver hur du skapar AEM.
 feature: Developing
 role: Developer
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: dbebe8ceaa629d04cee279e21a15594c54f0ba26
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '869'
 ht-degree: 4%
 
 ---
@@ -121,7 +121,6 @@ ht-degree: 4%
    + [HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-64/assets/extending/mac-api-assets.html)
    + [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-64/assets/fragments/content-fragments.html)
    + [Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/authoring/experience-fragments.html)
-   + [Förstå innehållsfragment och innehållstjänster i AEM](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-content-services-feature-video-understand.html)
 + Utvecklingsverktyg{#devtools}
    + [Utvecklingsverktyg](dev-tools.md)
    + [AEM Modernization Tools](modernization-tools.md)
@@ -222,3 +221,8 @@ ht-degree: 4%
    + [Responsiv design för webbsidor](responsive.md)
    + [Skapa platser för mobila enheter](mobile.md)
    + [Emulatorer](emulators.md)
+
+<!--
+Deleted link to broken helpx video:
+    + [Understanding Content Fragments and Content Services in AEM](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-content-services-feature-video-understand.html)
+-->
