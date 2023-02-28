@@ -3,18 +3,18 @@ cloud: Experience Cloud
 product: adobe experience manager
 solution: Experience Manager, Experience Manager Assets
 audience: end-user
-user-guide-title: Resurshandbok
-breadcrumb-title: Resurshandbok
+user-guide-title: Användarhandbok om resurser
+breadcrumb-title: Användarhandbok om resurser
 user-guide-description: Skapa, hantera, leverera och optimera digitala resurser.
 source-git-commit: 5d4d0c86a9d9e3eaaaca1e795260e8e49567ea73
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '649'
+ht-degree: 35%
 
 ---
 
 
-# Resurshandbok {#assets}
+# Användarhandbok om resurser {#assets}
 
 + [Användarhandbok för resurser](home.md)
 + [AEM 6.4 Versionsinformation om tillgångar](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/assets.html)

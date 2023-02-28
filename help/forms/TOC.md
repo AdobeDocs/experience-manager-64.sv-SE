@@ -4,19 +4,19 @@ product: adobe experience manager
 sub-product: forms
 solution: Experience Manager, Experience Manager Forms
 audience: end-user
-user-guide-title: Adobe Experience Manager 6.4 Forms Guide
-breadcrumb-title: Forms Guide
+user-guide-title: Användarhandbok om Adobe Experience Manager 6.4-formulär
+breadcrumb-title: Användarhandbok om formulär
 user-guide-description: Skapa, hantera, publicera och uppdatera digitala formulär.
 role: User
 source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
 source-wordcount: '3721'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
-# Adobe Experience Manager 6.4 Forms Guide {#forms}
+# Användarhandbok om Adobe Experience Manager 6.4-formulär {#forms}
 
 + [AEM 6.4 Forms Guide](home.md)
 + Versionsinformation {#release-notes-new-features}

@@ -3,20 +3,20 @@ cloud: Experience Cloud
 product: adobe experience manager
 solution: Experience Manager, Experience Manager Sites
 audience: end-user
-user-guide-title: AEM 6.4 Developing User Guide
-breadcrumb-title: Utvecklingshandbok
-user-guide-description: Den här guiden beskriver hur du skapar AEM.
+user-guide-title: Användarhandbok om AEM 6.4-utveckling
+breadcrumb-title: Användarhandbok om utveckling
+user-guide-description: Den här användarhandboken beskriver hur du skapar en AEM-instans.
 feature: Developing
 role: Developer
 source-git-commit: dbebe8ceaa629d04cee279e21a15594c54f0ba26
 workflow-type: tm+mt
 source-wordcount: '869'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
 
-# AEM 6.4 Developing User Guide {#developing}
+# Användarhandbok om AEM 6.4-utveckling {#developing}
 
 + [Utveckla användarhandboken - översikt](home.md)
 + Introduktion för utvecklare{#introduction}

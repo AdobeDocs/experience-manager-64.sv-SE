@@ -3,20 +3,20 @@ cloud: Experience Cloud
 product: adobe experience manager
 solution: Experience Manager, Experience Manager Sites
 audience: end-user
-user-guide-title: Användarhandbok för redigering av AEM 6.4
-breadcrumb-title: Redigeringshandbok
-user-guide-description: Lär dig grunderna för att skapa innehåll och redigering i AEM.
+user-guide-title: Användarhandbok om redigering i AEM 6.4
+breadcrumb-title: Användarhandbok om redigering
+user-guide-description: Lär dig grunderna för att skapa innehåll och redigera i AEM.
 feature: Authoring
 role: User
 source-git-commit: bbc13d64a33d9033e04fb4f37d60bcfe223be337
 workflow-type: tm+mt
 source-wordcount: '285'
-ht-degree: 39%
+ht-degree: 46%
 
 ---
 
 
-# Användarhandbok för redigering av AEM 6.4 {#authoring}
+# Användarhandbok om redigering i AEM 6.4 {#authoring}
 
 + [Översikt över användarhandboken för redigering](home.md)
 + Viktiga uppgifter, verktyg och begrepp för AEM {#essentials}
