@@ -8,9 +8,9 @@ breadcrumb-title: Användarhandbok om administration
 user-guide-description: Lär dig om hur du administrerar AEM.
 feature: Administering
 role: Admin
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: 9dcaf2538e5f968b25ce4f643ac307eff295d07d
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '633'
 ht-degree: 8%
 
 ---
@@ -116,7 +116,6 @@ ht-degree: 8%
    + [Integrera med tredjepartstjänster](third-party-services.md)
    + [Integrera med Salesforce](salesforce.md)
    + [Integrera med Adobe Target](target.md)
-   + [Integrera med Livefyre](livefyre.md)
    + [Integrera med Adobe Analytics](adobeanalytics.md)
    + [Ansluta till Adobe Analytics och skapa ramverk](adobeanalytics-connect.md)
    + [Konfigurera länkspårning för Adobe Analytics](adobeanalytics-link.md)
@@ -136,7 +135,6 @@ ht-degree: 8%
    + [Ingå i Adobe Analytics och Adobe Target](opt-in.md)
    + [AEM portaler och portlets](aem-as-portal.md)
    + [Integrera med Dynamic Media Classic](scene7.md)
-   + [AEM Livefyre-recept](aem-livefyre-recipes.md)
    + [Felsöka integreringsproblem](troubleshooting-integration-issues.md)
    + [Integrera med BrightEdge Content Optimizer](brightedge.md)
    + [Metodtips för e-postmallar](best-practices-for-email-templates.md)
