@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 exl-id: e2295f71-ea3a-483c-9d7b-29acd151845d
-source-git-commit: 904c7acc63dac5c92a5d1754380d075727e6a28a
+source-git-commit: 8220795bbf0c92ead3bb68dd6f8bbb48cc9ca2cd
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '862'
 ht-degree: 1%
 
 ---
@@ -100,11 +100,3 @@ Integreringen av Audience Manager har tagits bort i Adobe Experience Manager 6.3
 [Adobe Campaign](https://www.adobe.com/solutions/campaign-management.html) Med kan du hantera e-postinnehåll direkt i Adobe Experience Manager.
 
 Mer information om hur Adobe Experience Manager integreras med Adobe Campaign finns i [Integrera med Adobe Campaign](/help/sites-administering/campaignstandard.md).
-
-## Integrera med Livefyre {#integrating-with-livefyre}
-
-Läs om Adobe Experience Manager och Livefyre:
-
-* [Komma igång med Livefyre](https://experienceleague.adobe.com/docs/livefyre/implementation/getting-started/c-getting-started.html)
-
-* [Livefyre och Adobe Experience Manager](/help/sites-administering/livefyre.md)
