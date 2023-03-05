@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 6696c325-d188-41c8-a39f-c8ae7f339fe8
 exl-id: 9a779cde-dfdf-4d70-a452-5e7d12bf3f28
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: 79ff6834acd2bc1105bbea798d946cd7354474d5
 workflow-type: tm+mt
 source-wordcount: '1819'
 ht-degree: 1%
@@ -116,7 +116,7 @@ AEM Managed Services är en komplett lösning för hantering av digitala uppleve
 
 Med AEM Managed Services kan man dra nytta av följande fördelar:
 
-**Snabbare time to market:** Med flexibel molninfrastruktur i Adobe Managed Services kan organisationer snabbt planera, lansera och optimera framgångsrika digitala upplevelser. Adobe hanterar molnarkitekturen utan ytterligare kapital-, maskinvaru- eller programvarubehov och Adobe&#39;s Customer Success Engineers, hjälp med AEM arkitektur, provisionering, anpassning för att ansluta till serverprogram och bästa praxis för att publicera.
+**Snabbare time to market:** Med flexibel molninfrastruktur i Adobe Managed Services kan organisationer snabbt planera, lansera och optimera framgångsrika digitala upplevelser. Adobe hanterar molnarkitekturen utan ytterligare kapital-, maskinvaru- eller programvarubehov, och Adobe Customer Success Enginers, hjälp med AEM arkitektur, provisionering, anpassning för att ansluta till back-end-appar och publicera bästa praxis.
 
 **Högre prestanda:** Ger tillförlitliga digitala upplevelser för företaget med fyra alternativ för tillgänglighet: 99,5 %, 99,9 %, 99,95 % och 99,99 %. Dessutom kan man med programmet automatiskt säkerhetskopiera och återställa flera lägen för att säkerställa tillförlitlighet och beredskapshantering.
 
@@ -158,7 +158,7 @@ I följande avsnitt beskriver vi **fristående installation**. Mer information o
 
    Installationsplats för Windows: **`C:\Program Files\aem`**
 
-   Det är också vanligt att du installerar exempelinstanser i en mapp direkt på skrivbordet. I vilket fall som helst kommer vi att i allmänhet hänvisa till den här platsen som:
+   Det är också vanligt att du installerar exempelinstanser i en mapp direkt på skrivbordet. I vilket fall som helst ska vi i allmänhet hänvisa till den här platsen som:
 
    `<aem-install>`
 
