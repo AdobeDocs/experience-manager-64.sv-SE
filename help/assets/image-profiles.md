@@ -12,10 +12,10 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 exl-id: 895103c8-df58-40f0-85d6-e29637edce53
 feature: Image Profiles
 role: Admin,User
-source-git-commit: c413f31498cdccf8ceea4afc225c570a40ba1819
+source-git-commit: 1bda0ff04752dec663f251d28a4274599fd0e17d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2805'
+ht-degree: 6%
 
 ---
 
@@ -51,14 +51,14 @@ Varje generering av Smart Crop som du skapar kräver extra bearbetning. Om du ti
 **Riktlinjer för att definiera smart beskärning i en bildprofil**
 För att behålla kontrollen över användningen av Smart Crop och för att optimera bearbetningstiden och lagringen av beskärningar rekommenderar Adobe följande riktlinjer och tips:
 
-* Bildresurser som ska ha en smart beskärning måste vara minst 50 x 50 pixlar eller större. &lt;!— CQDOC-20087>
-* En bildprofil som innehåller duplicerade smarta beskärningsdimensioner tillåts inte. &lt;!— CQDOC-20087>
-* Det är inte tillåtet att duplicera namngivna bildprofiler med smarta beskärningsalternativ. &lt;!— CQDOC-20087>
+* Bildresurser som ska ha en smart beskärning måste vara minst 50 x 50 pixlar eller större. <!-- CQDOC-20087 -->
+* En bildprofil som innehåller duplicerade smarta beskärningsdimensioner tillåts inte. <!-- CQDOC-20087 -->
+* Det är inte tillåtet att duplicera namngivna bildprofiler med smarta beskärningsalternativ. <!-- CQDOC-20087 -->
 * Skapa sidvisa/resurstypsvisa bildprofiler för specifika mappar och undermappar i stället för en gemensam smart beskärningsprofil som tillämpas på alla mappar eller alla resurser.
 * En bildprofil som du tillämpar på undermappar åsidosätter en bildprofil som tillämpas på mappen.
 * Helst bör du ha 10-15 smarta beskärningar per bild som optimerar för skärmproportioner och bearbetningstid.
 <!-- * Avoid creating duplicate smart crop profiles that have the same width and height values. 
-* Name smart crops based on crop dimensions, not on end usage. Doing so helps to optimize for duplicates where a single dimension is used on multiple pages.-->
+* Name smart crops based on crop dimensions, not on end usage. Doing so helps to optimize for duplicates where a single dimension is used on multiple pages. -->
 
 Du kan välja mellan två bildbeskärningsalternativ. Du kan också välja att automatisera skapandet av färg- och bildfärgrutor eller bevara beskärningsinnehållet i olika upplösningar.
 
