@@ -12,9 +12,9 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 exl-id: 895103c8-df58-40f0-85d6-e29637edce53
 feature: Image Profiles
 role: Admin,User
-source-git-commit: 1bda0ff04752dec663f251d28a4274599fd0e17d
+source-git-commit: 56d711eb5aa87a2aa4c5476bae0627afccc579d1
 workflow-type: tm+mt
-source-wordcount: '2805'
+source-wordcount: '2844'
 ht-degree: 6%
 
 ---
@@ -51,12 +51,21 @@ Varje generering av Smart Crop som du skapar kräver extra bearbetning. Om du ti
 **Riktlinjer för att definiera smart beskärning i en bildprofil**
 För att behålla kontrollen över användningen av Smart Crop och för att optimera bearbetningstiden och lagringen av beskärningar rekommenderar Adobe följande riktlinjer och tips:
 
-* Bildresurser som ska ha en smart beskärning måste vara minst 50 x 50 pixlar eller större. <!-- CQDOC-20087 -->
-* En bildprofil som innehåller duplicerade smarta beskärningsdimensioner tillåts inte. <!-- CQDOC-20087 -->
-* Det är inte tillåtet att duplicera namngivna bildprofiler med smarta beskärningsalternativ. <!-- CQDOC-20087 -->
+* Undvik att skapa duplicerade smarta beskärningsprofiler med samma bredd- och höjdvärden.
+* Namnge smarta beskärningar baserat på beskärningsdimensioner, inte på slutanvändning. På så sätt kan du optimera för dubbletter där en enda dimension används på flera sidor.
+* Skapa sidvisa/resurstypsvisa bildprofiler för specifika mappar och undermappar i stället för en gemensam smart beskärningsprofil som tillämpas på alla mappar eller alla resurser.
+* En bildprofil som du använder för undermappar åsidosätter en bildprofil som används för mappen.
 * Skapa sidvisa/resurstypsvisa bildprofiler för specifika mappar och undermappar i stället för en gemensam smart beskärningsprofil som tillämpas på alla mappar eller alla resurser.
 * En bildprofil som du tillämpar på undermappar åsidosätter en bildprofil som tillämpas på mappen.
 * Helst bör du ha 10-15 smarta beskärningar per bild som optimerar för skärmproportioner och bearbetningstid.
+
+<!--
+* Image assets that are going to have a smart crop applied to them must be a minimum of 50 x 50 pixels or larger. CQDOC-20087
+* An Image Profile that contains duplicate smart crop dimensions is not permitted. CQDOC-20087
+* Duplicate named Image Profiles that have smart crop options set are not permitted. CQDOC-20087
+* Create page-wise/asset type-wise Image Profiles for specific folders and subfolders instead of a common smart crop profile that is applied to all folders or all assets.
+* An Image Profile that you apply to subfolders overrides an Image Profile that is applied to the folder.
+* Ideally, have 10-15 smart crops per image to optimize for screen ratios and processing time. -->
 <!-- * Avoid creating duplicate smart crop profiles that have the same width and height values. 
 * Name smart crops based on crop dimensions, not on end usage. Doing so helps to optimize for duplicates where a single dimension is used on multiple pages. -->
 
