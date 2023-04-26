@@ -5,11 +5,11 @@ audience: end-user
 user-guide-title: Versionsinformation om Adobe Experience Manager 6.4
 breadcrumb-title: Versionsinformation
 user-guide-description: Läs om de senaste nya funktionerna i AEM 6.4 i versionsinformationen.
-feature: Versionsinformation
+feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '89'
+source-wordcount: '87'
 ht-degree: 4%
 
 ---
@@ -31,5 +31,5 @@ ht-degree: 4%
 + [AEM Foundation and Repository](wcm-platform.md)
 + [Funktionsstatus för Touch UI](touch-ui-features-status.md)
 + [CRX2OAK-migreringsverktyg](crx2oak.md)
-+ [Versionsinformation för Smart Content Service](smart-content-service-release-notes.md)
++ [Versionsinformation för tjänsten Smart Content](smart-content-service-release-notes.md)
 + [Versionsinformation om Livefyre Feature Pack 2.0.6](livefyre-feature-pack-206.md)

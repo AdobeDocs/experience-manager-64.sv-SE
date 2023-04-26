@@ -1,8 +1,8 @@
 ---
 title: Rapportering
-seo-title: Rapportering
+seo-title: Reporting
 description: Lär dig hur du arbetar med rapportering i AEM.
-seo-description: Lär dig hur du arbetar med rapportering i AEM.
+seo-description: Learn how to work with Reporting in AEM.
 uuid: d6105d54-4d38-40a4-bd60-00057b84f7b8
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: e74ffe97-5de8-4e9c-94b4-d7d63939d40c
 exl-id: daff8e4e-40c7-4762-8e4f-d85d50b86e5d
 source-git-commit: 5dd282cc91721a3d53bdf29d5fbb978a52c3704e
 workflow-type: tm+mt
-source-wordcount: '2871'
+source-wordcount: '2862'
 ht-degree: 0%
 
 ---
@@ -32,11 +32,11 @@ För att hjälpa dig att övervaka och analysera instansens tillstånd finns AEM
 
 >[!NOTE]
 >
->Rapporterna är bara tillgängliga i det klassiska användargränssnittet. Systemövervakning och rapportering i det moderna användargränssnittet finns i [Operations Dashboard.](/help/sites-administering/operations-dashboard.md)
+>Rapporterna är bara tillgängliga i det klassiska användargränssnittet. Systemövervakning och rapportering i det moderna användargränssnittet finns i [Kontrollpanel för åtgärder.](/help/sites-administering/operations-dashboard.md)
 
-Alla rapporter kan nås från **Verktyg**-konsolen. Välj **Rapporter** i den vänstra rutan och dubbelklicka sedan på önskad rapport i den högra rutan för att öppna den för visning och/eller konfiguration.
+Alla rapporter finns på **verktyg** konsol. Välj **Rapporter** i den vänstra rutan dubbelklickar du på önskad rapport i den högra rutan för att öppna den för visning och/eller konfiguration.
 
-Nya instanser av en rapport kan också skapas från konsolen **Verktyg**. Välj **Rapporter** i den vänstra rutan och **Nytt...** från verktygsfältet. Definiera en **titel** och **Namn**, välj den rapporttyp som du behöver och klicka sedan på **Skapa**. Den nya rapportinstansen visas i listan. Dubbelklicka på det här för att öppna och dra sedan en komponent från sidosparken för att skapa den första kolumnen och starta rapportdefinitionen.
+Nya instanser av en rapport kan också skapas från **verktyg** konsol. Välj **Rapporter** i den vänstra rutan och **Nytt...** i verktygsfältet. Definiera en **Titel** och **Namn**, väljer den rapporttyp som du behöver och klickar sedan på **Skapa**. Den nya rapportinstansen visas i listan. Dubbelklicka på det här för att öppna och dra sedan en komponent från sidosparken för att skapa den första kolumnen och starta rapportdefinitionen.
 
 >[!NOTE]
 >
@@ -57,19 +57,17 @@ Det finns olika format för rapporter. I följande rapporter används kolumner s
 >Följande rapporter har sina egna format och anpassningar:
 >
 >
->* [Hälsokontroller ](#health-check) använder urvalsfält för att ange data som du vill rapportera om.
->* [Disk ](#disk-usage) Usageanvänder länkar för att gå igenom databasstrukturen.
->* [Arbetsflödesrapporter ](/help/sites-administering/reporting.md#workflow-report) ger en översikt över arbetsflödena som körs på instansen.
-
+>* [Hälsokontroll](#health-check) använder urvalsfält för att ange data som du vill rapportera om.
+>* [Diskanvändning](#disk-usage) använder länkar för att gå igenom databasstrukturen.
+>* [Arbetsflödesrapport](/help/sites-administering/reporting.md#workflow-report) ger en översikt över arbetsflödena som körs på instansen.
 >
->
-Följande procedurer för kolumnkonfiguration är därför inte lämpliga. Mer information finns i beskrivningarna av de enskilda rapporterna.
+>Följande procedurer för kolumnkonfiguration är därför inte lämpliga. Mer information finns i beskrivningarna av de enskilda rapporterna.
 
 ### Markera och placera datakolumner {#selecting-and-positioning-the-data-columns}
 
 Kolumner kan läggas till, flyttas på eller tas bort från alla rapporter, antingen som standard eller anpassade.
 
-Fliken **Komponenter** i sidosparken (som finns på rapportsidan) listar alla datakategorier som kan markeras som kolumner.
+The **Komponenter** -fliken (som är tillgänglig på rapportsidan) listar alla datakategorier som kan markeras som kolumner.
 
 Så här ändrar du datamarkeringen:
 
@@ -85,7 +83,7 @@ Så här ändrar du datamarkeringen:
 
 Varje kolumn i rapporten har en nedrullningsbar meny. Detta visas när muspekaren flyttas över kolumntitelcellen.
 
-En pilspets visas längst till höger i titelcellen (ska inte blandas ihop med pilhuvudet direkt till höger om den titeltext som anger [aktuell sorteringsmekanism](#sorting-the-data)).
+En pilspets visas längst till höger i rubrikcellen (ska inte blandas ihop med pilhuvudet direkt till höger om den titeltext som anger [aktuell sorteringsmekanism](#sorting-the-data)).
 
 ![reportcolumnsort](assets/reportcolumnsort.png)
 
@@ -96,13 +94,13 @@ Vilka alternativ som är tillgängliga på menyn beror på hur kolumnen är konf
 Data kan sorteras efter en viss kolumn genom att antingen:
 
 * klicka på lämplig kolumnrubrik, sorteringen växlar mellan stigande och fallande, vilket anges med en pilspets omedelbart intill titeltexten
-* Använd listrutan [för kolumnen](#column-drop-down-menu) för att välja antingen **Sortera stigande** eller **Sortera fallande**; detta markeras med en pilspets omedelbart intill rubriktexten
+* använder [kolumnens nedrullningsbara meny](#column-drop-down-menu) för att välja **Sortera stigande** eller **Sortera fallande**; detta markeras med en pilspets omedelbart intill rubriktexten
 
-### Grupper och det aktuella datatabellen {#groups-and-the-current-data-chart}
+### Grupper och det aktuella dataramarmet {#groups-and-the-current-data-chart}
 
-I lämpliga kolumner kan du välja **Gruppera efter den här kolumnen** i listrutan [för kolumnen](#column-drop-down-menu). Detta grupperar data efter varje distinkt värde i den kolumnen. Du kan markera mer än en kolumn som ska grupperas. Alternativet kommer att tonas ned när uppgifterna i kolumnen inte är lämpliga. Det vill säga att alla poster är distinkta och unika så att inga grupper kan formas, till exempel kolumnen Användar-ID i användarrapporten.
+I lämpliga kolumner kan du välja **Gruppera efter den här kolumnen** från [kolumnens nedrullningsbara meny](#column-drop-down-menu). Detta grupperar data efter varje distinkt värde i den kolumnen. Du kan markera mer än en kolumn som ska grupperas. Alternativet kommer att tonas ned när uppgifterna i kolumnen inte är lämpliga. Det vill säga att alla poster är distinkta och unika så att inga grupper kan formas, till exempel kolumnen Användar-ID i användarrapporten.
 
-När minst en kolumn har grupperats kommer ett cirkeldiagram av **Aktuella data** att genereras baserat på den här grupperingen. Om flera kolumner är grupperade, visas även detta i diagrammet.
+Efter att minst en kolumn har grupperats i ett cirkeldiagram över **Aktuella data** kommer att genereras baserat på den här grupperingen. Om flera kolumner är grupperade, visas även detta i diagrammet.
 
 ![reportuser](assets/reportuser.png)
 
@@ -110,7 +108,7 @@ Om du för markören över cirkeldiagrammet visas det sammanlagda värdet för d
 
 ### Filter och aggregat {#filters-and-aggregates}
 
-I lämpliga kolumner kan du även konfigurera **Filterinställningar** och/eller **Aggregat** i listrutan för [kolumnen](#column-drop-down-menu).
+I lämpliga kolumner kan du även konfigurera **Filterinställningar** och/eller **Aggregat** från [kolumnens nedrullningsbara meny](#column-drop-down-menu).
 
 #### Filter {#filters}
 
@@ -125,12 +123,12 @@ Så här anger du ett filter:
 
 1. Välj den operator som du vill använda i listrutan.
 1. Ange texten som ska filtreras.
-1. Klicka på **Använd**.
+1. Klicka **Använd**.
 
 Så här inaktiverar du filtret:
 
 1. Ta bort filtertexten.
-1. Klicka på **Använd**.
+1. Klicka **Använd**.
 
 #### Aggregat {#aggregates}
 
@@ -140,11 +138,11 @@ Du kan också välja en aggregeringsmetod (dessa kan variera beroende på vilken
 
 ### Kolumnegenskaper {#column-properties}
 
-Det här alternativet är endast tillgängligt när den allmänna [kolumnen](#generic-column) har använts i [användarrapporten](#user-report).
+Det här alternativet är bara tillgängligt när [Allmän kolumn](#generic-column) har använts i [Användarrapport](#user-report).
 
 ### Historiska data {#historic-data}
 
-Ett diagram över dataändringar över tid finns under **Historiska data**. Detta kommer från ögonblicksbilder som tagits med regelbundna intervall.
+En tabell över hur data ändras över tid finns nedan **Historiska data**. Detta kommer från ögonblicksbilder som tagits med regelbundna intervall.
 
 Data:
 
@@ -153,8 +151,8 @@ Data:
 
 Rapporten kan genereras:
 
-1. Ange **Gruppering** för den obligatoriska kolumnen.
-1. **Ändra** konfigurationen för att definiera hur ofta ögonblicksbilder ska tas. Varje timme eller dag.
+1. Ange **Gruppering** i den obligatoriska kolumnen.
+1. **Redigera** konfigurationen för att definiera hur ofta ögonblicksbilderna ska göras, Varje timme eller dag.
 1. **Slutför...** Definitionen som startar samlingen av ögonblicksbilder.
 
    Den röda/gröna reglageknappen längst upp till vänster anger när ögonblicksbilder samlas in.
@@ -175,33 +173,33 @@ När datainsamlingen har startat kan du välja:
 
    Om det t.ex. finns dagliga ögonblicksbilder för februari 2011:
 
-   * Om intervallet är inställt på `Day` visas varje fixering som ett värde i diagrammet.
-   * Om intervallet är inställt på `Month` sammanställs alla ögonblicksbilder för februari till ett enda värde (visas som en enda punkt i diagrammet).
+   * Om intervallet är inställt på `Day`visas varje fixering som ett värde i diagrammet.
+   * Om intervallet är inställt på `Month`, sammanställs alla ögonblicksbilder för februari till ett enda värde (visas som en enda punkt i diagrammet).
 
-Välj dina krav och klicka sedan på **Gå** för att tillämpa dem på rapporten. Om du vill uppdatera visningen när fler ögonblicksbilder har gjorts klickar du på **Gå** igen.
+Välj dina behov och klicka sedan på **Gå** för att tillämpa dem på rapporten. Om du vill uppdatera visningen när fler ögonblicksbilder har gjorts klickar du på **Gå** igen.
 
 ![chlimage_1-62](assets/chlimage_1-62.png)
 
 När ögonblicksbilder samlas in kan du:
 
-* Använd **Slutför..** igen för att initiera om samlingen.
+* Använd **Slutför...** igen för att initiera om samlingen.
 
-   **Slutför**  rapportens struktur (dvs. kolumnerna som tilldelats rapporten och som grupperas, sorteras, filtreras osv.) och börjar ta ögonblicksbilder.
+   **Slutför** &quot;fryser&quot; rapportens struktur (dvs. de kolumner som tilldelats rapporten och som grupperas, sorteras, filtreras osv.) och börjar ta ögonblicksbilder.
 
-* Öppna dialogrutan **Redigera** och välj **Inga datarappningar** för att avsluta samlingen tills det behövs.
+* Öppna **Redigera** dialogruta att välja **Inga ögonblicksbilder av data** för att avsluta insamlingen tills det krävs.
 
-   **Med** Redigeraren aktiveras eller inaktiveras tagningen av ögonblicksbilder. Om ögonblicksbilder aktiveras igen används rapportens tillstånd när den senast var klar för att ta ytterligare ögonblicksbilder.
+   **Redigera** aktiverar eller inaktiverar bara tagning av ögonblicksbilder. Om ögonblicksbilder aktiveras igen används rapportens tillstånd när den senast var klar för att ta ytterligare ögonblicksbilder.
 
 >[!NOTE]
 >
->Ögonblicksbilder lagras under `/var/reports/...`, där resten av sökvägen speglar sökvägen för respektive rapport och ID som skapades när rapporten slutfördes.
+>Fixeringar lagras under `/var/reports/...` där resten av sökvägen speglar sökvägen för respektive rapport och ID som skapades när rapporten var klar.
 >
 >
 >Gamla ögonblicksbilder kan rensas manuellt om du är helt säker på att du inte längre behöver dessa förekomster.
 
 >[!NOTE]
 >
->De förkonfigurerade rapporterna är inte prestandakrävande, men det rekommenderas ändå att du använder dagliga ögonblicksbilder i en produktionsmiljö. Om möjligt kan du köra dessa dagliga ögonblicksbilder vid en tidpunkt på dagen när det inte finns mycket aktivitet på din webbplats. detta kan definieras med parametern `Daily snapshots (repconf.hourofday)` för **Day CQ Reporting Configuration**; Mer information om hur du konfigurerar detta finns i [OSGI Configuration](/help/sites-deploying/configuring-osgi.md).
+>De förkonfigurerade rapporterna är inte prestandakrävande, men det rekommenderas ändå att du använder dagliga ögonblicksbilder i en produktionsmiljö. Om möjligt kan du köra dessa dagliga ögonblicksbilder vid en tidpunkt på dagen när det inte finns mycket aktivitet på din webbplats. detta kan definieras med `Daily snapshots (repconf.hourofday)` parameter för **Konfiguration av CQ-rapportering dag**; se [OSGI-konfiguration](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information om hur du konfigurerar det här.
 
 #### Visningsgränser {#display-limits}
 
@@ -215,7 +213,7 @@ För att hålla diagrammet rent under längre tidsperioder finns det begränsnin
 
 * vågrät serie - både standard- och systemmaximum är `9`
 
-* lodräta aggregerade ögonblicksbilder - standard är `35` (per vågrät serie)
+* lodräta aggregerade ögonblicksbilder - standard är `35` (per horisontella serier)
 
 Så när (lämpliga) gränser överskrids:
 
@@ -224,7 +222,7 @@ Så när (lämpliga) gränser överskrids:
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
-Anpassade rapporter kan även visa **Totalt**-värdet för alla serier. Detta visas som en serie (vågrät linje och post i teckenförklaringen).
+Anpassade rapporter kan även visa **Totalt** värde för alla serier. Detta visas som en serie (vågrät linje och post i teckenförklaringen).
 
 >[!NOTE]
 >
@@ -232,9 +230,9 @@ Anpassade rapporter kan även visa **Totalt**-värdet för alla serier. Detta vi
 
 ### Redigera (rapport) {#edit-report}
 
-Knappen **Redigera** öppnar dialogrutan **Redigera rapport**.
+The **Redigera** knappen öppnar **Redigera rapport** Dialogruta.
 
-Detta är en plats där perioden för insamling av ögonblicksbilder för [historiska data](#historic-data) har definierats, men olika andra inställningar kan också definieras:
+Detta är en plats där perioden för insamling av ögonblicksbilder för [Historiska data](#historic-data) är definierad, men olika andra inställningar kan också definieras:
 
 ![reportedit](assets/reportedit.png)
 
@@ -246,7 +244,7 @@ Detta är en plats där perioden för insamling av ögonblicksbilder för [histo
 
    Du kan definiera en egen beskrivning.
 
-* **Rotsökväg**  (*endast aktiv för vissa rapporter*)
+* **Rotsökväg** (*endast aktiv för vissa rapporter*)
 
    Använd det här om du vill begränsa rapporten till en (under) del av databasen.
 
@@ -262,18 +260,18 @@ Detta är en plats där perioden för insamling av ögonblicksbilder för [histo
 
       Om du väljer det här alternativet måste rapportdata uppdateras manuellt när någon aspekt av rapportkonfigurationen har ändrats. Det innebär också att så snart du ändrar någon aspekt av konfigurationen kommer rapporttabellen att tas bort.
 
-      När detta är markerat visas knappen **[Läs in data](#load-data)** (bredvid **Redigera** i rapporten). **Läs in** data läser in data och uppdaterar rapportdata som visas.
+      När det här alternativet är markerat visas **[Läs in data](#load-data)** knappen visas (bredvid **Redigera** på rapporten). **Läs in data** läser in data och uppdaterar rapportdata som visas.
 
-* **ÖgonblicksbilderDu kan definiera hur ofta ögonblicksbilder ska tas.**
- varje dag, timme eller inte alls.
+* **Fixeringar**
+Du kan definiera hur ofta ögonblicksbilder ska tas; varje dag, timme eller inte alls.
 
 ### Läs in data {#load-data}
 
-Knappen **Läs in data** visas bara när **uppdatera data manuellt** har valts i **[Redigera](#edit-report)**.
+The **Läs in data** knappen visas bara när **uppdatera data manuellt** har valts från **[Redigera](#edit-report)**.
 
 ![chlimage_1-65](assets/chlimage_1-65.png)
 
-Om du klickar på **Läs in data** läses data in igen och rapporten uppdateras.
+Klicka på **Läs in data** läser in data igen och uppdaterar rapporten som visas.
 
 Om du väljer att uppdatera data manuellt innebär det att:
 
@@ -285,11 +283,11 @@ Om du väljer att uppdatera data manuellt innebär det att:
 
 ### Slutför (rapport) {#finish-report}
 
-När du **slutför** rapporten:
+När du **Slutför** rapporten:
 
-* Rapportdefinitionen *från och med den tidpunkten* kommer att användas för att ta ögonblicksbilder (därefter kan du fortsätta arbeta med en rapportdefinition eftersom den sedan är åtskild från ögonblicksbilderna).
+* Rapportdefinitionen *vid den tidpunkten* används för att ta ögonblicksbilder (därefter kan du fortsätta arbeta med en rapportdefinition eftersom den sedan är åtskild från ögonblicksbilderna).
 * Alla befintliga ögonblicksbilder tas bort.
-* Nya ögonblicksbilder samlas in för [historiska data](#historic-data).
+* Nya ögonblicksbilder samlas in för [Historiska data](#historic-data).
 
 I den här dialogrutan kan du definiera, eller uppdatera, din egen titel och beskrivning för den resulterande rapporten.
 
@@ -301,13 +299,13 @@ I den här dialogrutan kan du definiera, eller uppdatera, din egen titel och bes
 
 Komponentrapporten innehåller information om hur din webbplats använder komponenterna.
 
-[Kolumner med ](#selecting-and-positioning-the-data-columns) information om:
+[Informationskolumner](#selecting-and-positioning-the-data-columns) om:
 
 * Författare
 * Komponentsökväg
 * Komponenttyp
 * Senast ändrad
-* Sidan
+* Sida
 
 Betydelse som du kan se, till exempel:
 
@@ -322,9 +320,9 @@ Betydelse som du kan se, till exempel:
 * Identifiera delar av sajten med frekventa/mindre frekventa ändringar.
 * Se hur sidinnehåll utvecklas över tid.
 
-Alla komponenter ingår, som är standard och projektspecifika. Med dialogrutan **Redigera** kan användaren även ange en **rotsökväg** som definierar rapportens startpunkt. Alla komponenter under den roten beaktas för rapporten.
+Alla komponenter ingår, som är standard och projektspecifika. Använda **Redigera** kan användaren också ange en **Rotsökväg** som definierar rapportens startpunkt - alla komponenter under den roten beaktas för rapporten.
 
-![](assets/reportcomponent.png) ![rapportkomponentrapportcompentall](assets/reportcompentall.png)
+![reportcomponent](assets/reportcomponent.png) ![reportcompentall](assets/reportcompentall.png)
 
 ### Diskanvändning {#disk-usage}
 
@@ -364,7 +362,7 @@ Så här skapar du rapporten:
 
    Maximalt antal begäranden som ska analyseras.
 
-   Standard: `-1` (alla)
+   Standard: `-1` (all)
 
 * **E-postadress**
 
@@ -384,10 +382,10 @@ Så här skapar du rapporten:
 
 Sidaktivitetsrapporten innehåller en lista över sidor och åtgärder som har utförts på dem.
 
-[Kolumner med ](#selecting-and-positioning-the-data-columns) information om:
+[Informationskolumner](#selecting-and-positioning-the-data-columns) om:
 
-* Sidan
-* Time
+* Sida
+* Tid
 * Typ
 * Användare
 
@@ -407,11 +405,11 @@ Sidaktivitetsrapporten hämtar all information från granskningsloggen. Som stan
 
 Denna rapport innehåller information om användargenererat innehåll; vara kommentarer, omdömen eller forum.
 
-[Kolumner med ](#selecting-and-positioning-the-data-columns) information om:
+[Informationskolumner](#selecting-and-positioning-the-data-columns) den:
 
-* Date
+* Datum
 * IP-adress
-* Sidan
+* Sida
 * Referent
 * Typ
 * Användar-ID
@@ -428,7 +426,7 @@ Tillåt dig att:
 
 Denna rapport innehåller information om alla användare som har registrerat ett konto och/eller en profil. detta kan omfatta både författare inom organisationen och externa besökare.
 
-[Informationskolumner](#selecting-and-positioning-the-data-columns)  (om sådana finns) om:
+[Informationskolumner](#selecting-and-positioning-the-data-columns) (om tillgängligt) om:
 
 * Ålder
 * Land
@@ -438,9 +436,9 @@ Denna rapport innehåller information om alla användare som har registrerat ett
 * Kön
 * [Allmän](#generic-column)
 * Förnamn
-* Information
+* Info
 * Ränta
-* Språk:
+* Språk
 * NTLM Hashcode
 * Användar-ID
 
@@ -453,7 +451,7 @@ Tillåt dig att:
 
 #### Allmän kolumn {#generic-column}
 
-Kolumnen **Allmän** är tillgänglig i användarrapporten så att du kan komma åt anpassad information, vanligtvis från [användarprofiler](/help/sites-administering/identity-management.md#profiles-and-user-accounts); t.ex. [Favoritfärg enligt beskrivningen under Lägg till fält i profildefinitionen](/help/sites-administering/identity-management.md#adding-fields-to-the-profile-definition).
+The **Allmän** -kolumnen är tillgänglig i användarrapporten så att du kan komma åt anpassad information, vanligtvis från [användarprofiler](/help/sites-administering/identity-management.md#profiles-and-user-accounts); till exempel [Favoritfärg enligt beskrivningen i Lägg till fält i profildefinitionen](/help/sites-administering/identity-management.md#adding-fields-to-the-profile-definition).
 
 Dialogrutan Allmän kolumn öppnas när du antingen:
 
@@ -462,7 +460,7 @@ Dialogrutan Allmän kolumn öppnas när du antingen:
 
 ![reportusrgenericcolm](assets/reportusrgenericcolm.png)
 
-På fliken **Definitioner** kan du definiera:
+Från **Definitioner** -flik som du kan definiera:
 
 * **Titel**
 
@@ -484,9 +482,9 @@ På fliken **Definitioner** kan du definiera:
 
    Detta definierar den mängd som används som standard om kolumnen delas upp i en rapport med minst en grupperad kolumn. Välj önskad mängd från `Count`, `Minimum`, `Average`, `Maximum`, `Sum`.
 
-   Exempel: *Antal* för ett `String`-fält betyder att antalet distinkta `String`-värden visas för kolumnen i aggregerat läge.
+   Till exempel: *Antal* för `String` fält betyder att antalet distinkta `String` värden visas för kolumnen i aggregerat läge.
 
-På fliken **Extended** kan du även definiera de aggregat och filter som är tillgängliga:
+I **Utökad** kan du även definiera de aggregat och filter som är tillgängliga:
 
 ![reportusrgenericcolmextented](assets/reportusrgenericcolmextented.png)
 
@@ -494,7 +492,7 @@ På fliken **Extended** kan du även definiera de aggregat och filter som är ti
 
 Detta ger en kortfattad översikt som ger information om de enskilda instanserna av arbetsflöden, både som körs och slutförda.
 
-[Kolumner med ](#selecting-and-positioning-the-data-columns) information om:
+[Informationskolumner](#selecting-and-positioning-the-data-columns) om:
 
 * Slutförd
 * Varaktighet
@@ -522,7 +520,7 @@ När du har konfigurerat rapporterna efter dina specifika krav kan du aktivera d
 
 >[!CAUTION]
 >
->Om du vill **historikdata** för publiceringsmiljön **slutför** rapporten om redigeringsmiljön innan du aktiverar sidan.
+>Om du vill **Historiska data** för publiceringsmiljön, och **Slutför** rapporten om författarmiljön innan sidan aktiveras.
 
 Den lämpliga rapporten finns sedan tillgänglig under
 
@@ -534,13 +532,13 @@ Rapporten User Generated Content finns under:
 
 Nu rapporteras data som samlats in från publiceringsmiljön.
 
-Eftersom ingen rapportkonfiguration tillåts i publiceringsmiljön är knapparna **Redigera** och **Slutför** inte tillgängliga. Du kan dock välja **Period** och **Intervall** för **Historiska data**-rapporter om ögonblicksbilder samlas in.
+Eftersom ingen rapportkonfiguration tillåts i publiceringsmiljön, **Redigera** och **Slutför** är inte tillgängliga. Du kan dock välja **Period** och **Intervall** för **Historiska data** rapporterar om ögonblicksbilder samlas in.
 
 ![rapportersucgpublish](assets/reportsucgpublish.png)
 
 >[!CAUTION]
 >
->Tillgång till dessa rapporter kan vara en säkerhetsfråga. Därför rekommenderar vi att du konfigurerar Dispatcher så att `/etc/reports` inte är tillgängligt för externa besökare. Se [Säkerhetschecklistan](security-checklist.md) för mer information.
+>Tillgång till dessa rapporter kan vara en säkerhetsfråga. Därför rekommenderar vi att du konfigurerar Dispatcher så att `/etc/reports` är inte tillgängligt för externa besökare. Se [Säkerhetschecklista](security-checklist.md) för mer information.
 
 ## Behörigheter krävs för att köra rapporter {#permissions-needed-for-running-reports}
 
@@ -571,4 +569,4 @@ I en AEM är följande behörigheter förinställda för rapporterna:
 
    `workflow-users` - läsa och skriva
 
-Alla medlemmar i `administrators`-gruppen har de rättigheter som krävs för att skapa nya rapporter.
+Alla medlemmar i `administrators` gruppen har de rättigheter som krävs för att skapa nya rapporter.
