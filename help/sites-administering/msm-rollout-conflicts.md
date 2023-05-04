@@ -1,8 +1,8 @@
 ---
 title: MSM-utrullningskonflikter
-seo-title: MSM-utrullningskonflikter
+seo-title: MSM Rollout Conflicts
 description: Lär dig hur du hanterar driftsättningskonflikter i Multi Site Manager.
-seo-description: Lär dig hur du hanterar driftsättningskonflikter i Multi Site Manager.
+seo-description: Learn how to deal with Multi Site Manager rollout conflicts.
 uuid: 7a640905-aae2-498e-b95c-2c73008fa1cd
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,16 +10,19 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 16db5334-604f-44e2-9993-10d683dee5bb
 feature: Multi Site Manager
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 636b28aa-0806-4250-ad3b-a72be704af1f
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '946'
 ht-degree: 0%
 
 ---
 
-
 # MSM-utrullningskonflikter{#msm-rollout-conflicts}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Konflikter kan uppstå om nya sidor med samma sidnamn skapas både i den blå grenen och i en beroende livekopiegren.
 
@@ -41,7 +44,7 @@ Förutom standardfunktionerna kan anpassade konflikthanterare läggas till för 
 
 ### Exempelscenario {#example-scenario}
 
-I följande avsnitt använder vi exemplet med en ny sida `b`, som skapats både i grenen för utkast och live-kopia (skapas manuellt), för att illustrera de olika lösningmetoderna:
+I följande avsnitt använder vi exemplet på en ny sida `b`, som har skapats både i utkast och live copy-förgreningen (skapas manuellt), för att illustrera olika metoder för konfliktlösning:
 
 * skiss: `/b`
 
@@ -51,7 +54,7 @@ I följande avsnitt använder vi exemplet med en ny sida `b`, som skapats både 
 
    En sida som har skapats manuellt i den aktiva kopiegrenen; med 1 underordnad sida, `lc-level-1`.
 
-   * Aktiveras vid publicering som `/b`, tillsammans med den underordnade sidan.
+   * Aktiverat vid publicering som `/b`tillsammans med den underordnade sidan.
 
 **Före utrullning**
 
@@ -70,7 +73,7 @@ I följande avsnitt använder vi exemplet med en ny sida `b`, som skapats både 
   <tr> 
    <td><code> /bp-level-1</code></td> 
    <td><code> /lc-level-1</code> <br /> (skapat manuellt i en förgrening för live-kopia)<br /> </td> 
-   <td><code> /lc-level-1</code> <br /> (innehåller innehållet på sidan<br /> underordnad nivå-1 som skapades manuellt i den aktiva kopiegrenen)</td> 
+   <td><code> /lc-level-1</code> <br /> (innehåller sidans innehåll<br /> underordnad nivå-1 som skapades manuellt i livekopiegrenen)</td> 
   </tr> 
  </tbody> 
 </table>
@@ -95,23 +98,23 @@ AEM använder konflikthanterare för att lösa eventuella sidkonflikter som upps
 
 AEM tillhandahåller:
 
-* [standardkonflikthanteraren](#default-conflict-handler):
+* The [standardkonflikthanterare](#default-conflict-handler):
 
    * `ResourceNameRolloutConflictHandler`
 
 * Möjligheten att implementera en [anpassad hanterare](#customized-handlers).
 * Den rangordningsmekanism som gör att du kan ange prioriteten för varje enskild hanterare. Tjänsten med högst rankning används.
 
-### Standardhanterare för konflikt {#default-conflict-handler}
+### Standardhanterare för konflikter {#default-conflict-handler}
 
 Standardkonflikthanteraren:
 
 * Anropas `ResourceNameRolloutConflictHandler`
 
 * Med den här hanteraren får plantryckssidan företräde.
-* Tjänstrankningen för hanteraren är låg (&quot;dvs. under standardvärdet för egenskapen `service.ranking` eftersom antagandet är att anpassade hanterare behöver en högre rankning. Rankningen är dock inte den absolut minsta nivån för att garantera flexibilitet vid behov.
+* Tjänstrankningen för hanteraren är låg (&quot;dvs. under standardvärdet för `service.ranking` egenskapen) eftersom antagandet är att anpassade hanterare behöver en högre rankning. Rankningen är dock inte den absolut minsta nivån för att garantera flexibilitet vid behov.
 
-Den här konflikthanteraren ger prioritet åt ritningen. Den aktiva kopieringssidan `/b` flyttas (inom den aktiva kopiegrenen) till `/b_msm_moved`.
+Den här konflikthanteraren ger prioritet åt ritningen. Live copy-sidan `/b` flyttas (inom den aktiva kopiegrenen) till `/b_msm_moved`.
 
 * live copy: `/b`
 
@@ -121,7 +124,7 @@ Den här konflikthanteraren ger prioritet åt ritningen. Den aktiva kopieringssi
 
 * skiss: `/b`
 
-   Går ut till live-kopieringssidan `/b`.
+   Är utrullad till live-kopieringssidan `/b`.
 
    * `bp-level-1` har rullats ut i livecopy.
 
@@ -161,23 +164,23 @@ Anpassade konflikthanterare kan:
 
 * Namnge efter behov. &quot;
 * utvecklas/konfigureras enligt dina krav, Du kan t.ex. utveckla en hanterare så att den aktiva kopieringssidan ges företräde.
-* Kan konfigureras med [OSGi-konfigurationen](/help/sites-deploying/configuring-osgi.md); särskilt
+* Kan konfigureras med [OSGi-konfiguration](/help/sites-deploying/configuring-osgi.md); särskilt
 
    * **Servicerangordning**:
 
-      Definierar ordningen som är relaterad till andra konflikthanterare ( `service.ranking`).
+      Definierar ordningen för andra konflikthanterare ( `service.ranking`).
 
       Standardvärdet är 0.
 
-### Beteende vid konflikthantering inaktiverat {#behavior-when-conflict-handling-deactivated}
+### Beteende vid inaktiverad konflikthantering {#behavior-when-conflict-handling-deactivated}
 
-Om du manuellt [inaktiverar konflikthantering](#rollout-manager-and-conflict-handling) utför AEM ingen åtgärd på sidor som står i konflikt (icke-motstridiga sidor rullas ut som förväntat).
+Om du manuellt [inaktivera konflikthantering](#rollout-manager-and-conflict-handling) AEM utför ingen åtgärd på sidor som är i konflikt (sidor som inte är i konflikt rullas ut som förväntat).
 
 >[!CAUTION]
 >
 >AEM ger ingen indikation på att konflikter ignoreras eftersom detta beteende måste konfigureras explicit, så det antas att det är det obligatoriska beteendet.
 
-I det här fallet har live-kopian företräde. Den blå sidan `/b` kopieras inte och den aktiva kopieringssidan `/b` lämnas orörd.
+I det här fallet har live-kopian företräde. Planeringssidan `/b` kopieras inte och live-kopieringssidan `/b` lämnas orörd.
 
 * skiss: `/b`
 
@@ -210,6 +213,6 @@ I det här fallet har live-kopian företräde. Den blå sidan `/b` kopieras inte
  </tbody> 
 </table>
 
-### Tjänstrankningar {#service-rankings}
+### Servicerangordning {#service-rankings}
 
-Tjänstrankningen [OSGi](https://www.osgi.org/) kan användas för att definiera prioriteten för enskilda konflikthanterare.
+The [OSGi](https://www.osgi.org/) rankning kan användas för att definiera prioriteten för enskilda konflikthanterare.

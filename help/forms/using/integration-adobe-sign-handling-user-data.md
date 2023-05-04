@@ -10,14 +10,18 @@ discoiquuid: e9e0d8fb-955e-4021-9e9a-9c95c6ffe88d
 feature: Acrobat Sign
 role: Admin
 exl-id: c2061de7-8627-4595-b96c-aa2d6abffddd
-source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
 
 # Integrering med Acrobat Sign | Hantera användardata {#integration-with-adobe-sign-handling-user-data}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 AEM Forms kan integreras med Acrobat Sign för att möjliggöra e-signaturarbetsflöden i anpassningsbara formulär för att bearbeta formulär eller avtal för arbetsflöden inom juridik, försäljning, lön och personaladministration. Det möjliggör signering för en eller flera användare, sekventiella och samtidiga signeringsarbetsflöden, signering av formulär som anonyma eller inloggade användare samt flera sätt att autentisera användare.
 

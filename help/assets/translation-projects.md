@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Translation
 role: Architect,Admin
 exl-id: 1b931fef-eed0-4758-993d-cdf8d478fb6f
-source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1807'
-ht-degree: 20%
+source-wordcount: '1843'
+ht-degree: 19%
 
 ---
 
 # Skapa översättningsprojekt {#creating-translation-projects}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Om du vill skapa en språkkopia aktiverar du ett av följande språkkopieringsarbetsflöden som finns under referenspunkterna i resursgränssnittet:
 
@@ -30,7 +34,7 @@ Du kör det här arbetsflödet för att översätta ytterligare en grupp resurse
 
 >[!NOTE]
 >
->Om du startar ett översättningsarbetsflöde för komplexa resurser, till exempel PDF-filer och InDesign-filer, skickas inte delresurserna eller återgivningarna (om sådana finns) för översättning.
+>Om du startar ett översättningsarbetsflöde för komplexa resurser, till exempel PDF och InDesign, skickas inte delresurserna eller återgivningarna (om det finns några) för översättning.
 
 ## Skapa och översätta arbetsflöde {#create-and-translate-workflow}
 
@@ -53,7 +57,7 @@ Använd alternativet **Skapa endast struktur** om du vill skapa en målmappshier
 
    ![chlimage_1-58](assets/chlimage_1-58.png)
 
-1. Välj det språk du vill skapa en mappstruktur för i listan **[!UICONTROL Target Languages]**.
+1. Från **[!UICONTROL Target Languages]** väljer du det språk som du vill skapa en mappstruktur för.
 
    ![chlimage_1-59](assets/chlimage_1-59.png)
 
@@ -86,7 +90,7 @@ Om du använder det här alternativet kopieras resurser som ska översättas til
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
-1. Välj **[!UICONTROL Create a new translation project]** i listan **[!UICONTROL Project]**.
+1. Från **[!UICONTROL Project]** lista, välj **[!UICONTROL Create a new translation project]**.
 
    ![chlimage_1-66](assets/chlimage_1-66.png)
 
@@ -114,7 +118,7 @@ Om du använder det här alternativet kopieras resurser som ska översättas til
 
    ![chlimage_1-72](assets/chlimage_1-72.png)
 
-1. Om du vill visa översättningsjobbets status klickar du på ellipsen längst ned i rutan **[!UICONTROL Translation Job]**.
+1. Om du vill visa översättningsjobbets status klickar du på ellipsen längst ned i **[!UICONTROL Translation Job]** platta.
 
    ![chlimage_1-73](assets/chlimage_1-73.png)
 
@@ -149,9 +153,9 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
 
    >[!NOTE]
    >
-   >Om du väljer alternativet **[!UICONTROL Add to existing translation project]** läggs ditt översättningsprojekt till i ett befintligt projekt endast om dina projektinställningar exakt matchar inställningarna för det befintliga projektet. Annars skapas ett nytt projekt.
+   >Om du väljer **[!UICONTROL Add to existing translation project]** kan du bara lägga till ditt översättningsprojekt i ett befintligt projekt om dina projektinställningar exakt matchar inställningarna för det befintliga projektet. Annars skapas ett nytt projekt.
 
-1. Välj ett projekt i listan **[!UICONTROL Existing translation project]** som du vill lägga till resursen för översättning.
+1. Från **[!UICONTROL Existing translation project]** väljer du ett projekt för att lägga till resursen för översättning.
 
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
@@ -164,7 +168,7 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
 
    ![chlimage_1-80](assets/chlimage_1-80.png)
 
-1. Klicka/tryck på ellipsen längst ned i rutan **Översättningsjobb** för att visa resurserna i översättningsarbetsflödet. I översättningsjobblistan visas även poster för metadata och taggar för resurser. Dessa poster anger att metadata och taggar för resurserna också översätts.
+1. Klicka/tryck på ellipsen längst ned i **Översättningsjobb** för att visa resurserna i översättningsarbetsflödet. I översättningsjobblistan visas även poster för metadata och taggar för resurser. Dessa poster anger att metadata och taggar för resurserna också översätts.
 
    >[!NOTE]
    >
@@ -178,7 +182,7 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
    >
    >Om den resurs som du lägger till i översättningsjobbet innehåller delresurser, markerar du delresurserna och tar bort dem för översättningen för att fortsätta utan några fel.
 
-1. Om du vill starta översättningen för resurserna klickar/trycker du på pilen på plattan **[!UICONTROL Translation Job]** och väljer **[!UICONTROL Start]** i listan.
+1. Klicka/tryck på pilen på knappen **[!UICONTROL Translation Job]** platta och markera **[!UICONTROL Start]** från listan.
 
    ![chlimage_1-81](assets/chlimage_1-81.png)
 
@@ -186,7 +190,7 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
 
    ![chlimage_1-82](assets/chlimage_1-82.png)
 
-1. Om du vill visa översättningsjobbets status klickar/trycker du på ellipsen längst ned i rutan **[!UICONTROL Translation Job]**.
+1. Om du vill visa översättningsjobbets status klickar/trycker du på ellipsen längst ned i **[!UICONTROL Translation Job]** platta.
 
    ![chlimage_1-83](assets/chlimage_1-83.png)
 
@@ -236,7 +240,7 @@ Om du använder det här alternativet skapas ett översättningsprojekt för den
 
    ![chlimage_1-90](assets/chlimage_1-90.png)
 
-1. Om du vill starta översättningen för resurserna klickar du på pilen på plattan **[!UICONTROL Translation Job]** och väljer **[!UICONTROL Start]** i listan.
+1. Klicka på pilen på knappen **[!UICONTROL Translation Job]** platta och markera **[!UICONTROL Start]** från listan.
 
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
@@ -244,7 +248,7 @@ Om du använder det här alternativet skapas ett översättningsprojekt för den
 
    ![chlimage_1-92](assets/chlimage_1-92.png)
 
-1. Om du vill visa översättningsjobbets status klickar/trycker du på ellipsen längst ned i rutan **[!UICONTROL Translation Job]**.
+1. Om du vill visa översättningsjobbets status klickar/trycker du på ellipsen längst ned i **[!UICONTROL Translation Job]** platta.
 
    ![chlimage_1-93](assets/chlimage_1-93.png)
 
@@ -273,7 +277,7 @@ Om du använder det här alternativet läggs resursuppsättningen till i ett bef
 
    ![chlimage_1-97](assets/chlimage_1-97.png)
 
-1. Välj ett projekt i listan **[!UICONTROL Existing translation project]** som du vill lägga till resursen för översättning.
+1. Från **[!UICONTROL Existing translation project]** väljer du ett projekt för att lägga till resursen för översättning.
 
    ![chlimage_1-98](assets/chlimage_1-98.png)
 
@@ -288,13 +292,13 @@ När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia m
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
-1. I resursgränssnittet markerar du en resurs som du redan har översatt och klickar/trycker på ikonen **[!UICONTROL Edit]** i verktygsfältet för att öppna resursen i redigeringsläge.
+1. I resursgränssnittet väljer du en resurs som du redan har översatt och klickar/trycker på **[!UICONTROL Edit]** i verktygsfältet för att öppna resursen i redigeringsläge.
 
    ![chlimage_1-100](assets/chlimage_1-100.png)
 
 1. Redigera resursen och spara sedan ändringarna.
-1. Utför steg 2-14 i [Lägg till i befintligt översättningsprojekt](#add-to-existing-translation-project)-proceduren för att uppdatera språkkopian.
-1. Klicka/tryck på ellipsen längst ned i **[!UICONTROL Translation Job]**-rutan. Från listan med resurser på sidan **[!UICONTROL Translation Job]** kan du tydligt visa den tillfälliga plats där den översatta versionen av resursen lagras.
+1. Utför steg 2-14 i [Lägg till i befintligt översättningsprojekt](#add-to-existing-translation-project) för att uppdatera språkkopian.
+1. Klicka/tryck på ellipsen längst ned i **[!UICONTROL Translation Job]** platta. Från listan över resurser i **[!UICONTROL Translation Job]** På sidan kan du tydligt visa den tillfälliga plats där den översatta versionen av resursen lagras.
 
    ![chlimage_1-101](assets/chlimage_1-101.png)
 
@@ -307,10 +311,10 @@ När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia m
    >
    >Om du vill att översättningsarbetsflödet ska kunna uppdatera målresurserna, godkänner du både resursen och metadata.
 
-   Klicka/tryck på **[!UICONTROL Reject Translation]** om du vill behålla den ursprungligen översatta versionen av resursen i målspråkets rot och ignorera den redigerade versionen.
+   Klicka/tryck **[!UICONTROL Reject Translation]** om du vill behålla den ursprungligen översatta versionen av resursen i målspråkets rot och avvisa den redigerade versionen.
 
    ![chlimage_1-103](assets/chlimage_1-103.png)
 
 1. Navigera till resurskonsolen och öppna sidan Egenskaper för var och en av de översatta resurserna för att visa översatta metadata.
 
-Tips om hur du översätter metadata för resurser effektivt finns på den här arkiverade sidan om [5 steg för att översätta metadata](https://web.archive.org/web/20181217033517/https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/).
+Tips om hur du översätter metadata för resurser på ett effektivt sätt finns på den här arkiverade sidan om [5 steg för att effektivt översätta metadata](https://web.archive.org/web/20181217033517/https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/).

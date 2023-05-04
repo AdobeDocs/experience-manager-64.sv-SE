@@ -10,14 +10,18 @@ topic-tags: components
 content-type: reference
 discoiquuid: 45efff93-2fe5-4313-83a0-0e23a540da93
 exl-id: 3444d7df-fc43-4383-87b0-0f00fef116bc
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
 
 # Komponenter - översikt{#components-overview}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 På den här sidan finns en översikt över Adobe Experience Manager (AEM) komponenter som [används för att skapa sidor](/help/sites-authoring/default-components-foundation.md).
 

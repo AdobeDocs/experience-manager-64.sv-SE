@@ -12,14 +12,18 @@ discoiquuid: 492741d5-8d2b-4a81-8f21-e621ef3ee685
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: 5f43de8d-9d26-456e-b695-3ffa71a4f3bf
-source-git-commit: 3101fab64f6b9fbe2fdeed5fe28d650b84bcdef5
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2657'
+source-wordcount: '2693'
 ht-degree: 0%
 
 ---
 
 # Fråga och indexering{#oak-queries-and-indexing}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
@@ -155,7 +159,7 @@ Om du vill definiera ett Lucene-egenskapsindex för frågan ovan kan du lägga t
 
 När noden har skapats lägger du till följande egenskaper:
 
-* **type:**
+* **typ:**
 
    ```
    lucene (of type String)

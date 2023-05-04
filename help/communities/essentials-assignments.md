@@ -1,26 +1,29 @@
 ---
 title: Grundläggande om uppdrag
-seo-title: Grundläggande om uppdrag
+seo-title: Assignments Essentials
 description: Översikt över uppdragsfunktionen för aktiveringscommunities
-seo-description: Översikt över uppdragsfunktionen för aktiveringscommunities
+seo-description: Assignments feature overview for enablement communities
 uuid: 8310decf-174d-4e93-8c92-4a9583077b7a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 796781e6-5cab-4ea1-b484-0945bc8febbf
-translation-type: tm+mt
-source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+exl-id: 310d9086-36b6-42ea-835f-c77d75e880cb
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
+# Grundläggande om uppdrag {#assignments-essentials}
 
-# Grundläggande om tilldelningar {#assignments-essentials}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-Den här sidan innehåller viktig information om hur du arbetar med tilldelningsfunktionen i [aktiveringscommunityn](overview.md#enablement-community) webbplatser.
+Den här sidan innehåller viktig information för att arbeta med uppdragsfunktionen i [användargrupper](overview.md#enablement-community) webbplatser.
 
 Tilldelningsfunktionen är möjligheten att tilldela aktiveringsresurser och utbildningsvägar till medlemmar i aktiveringscommunityn.
 
@@ -38,10 +41,10 @@ Tilldelningsfunktionen är möjligheten att tilldela aktiveringsresurser och utb
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>klientlibs</strong></a></td> 
-   <td>cq.social.enablement.hbs.breadcrumbs<br /> cq.social.enablement.hbs.mysigned<br /> cq.social.enablement.hbs.resource<br /> cq.social.enablement.hbs.learningpath</td> 
+   <td>cq.social.enablement.hbs.breadcrumbs<br /> cq.social.enablement.hbs.myassign<br /> cq.social.enablement.hbs.resource<br /> cq.social.enablement.hbs.learningpath</td> 
   </tr>
   <tr>
-   <td> <strong>templates</strong></td> 
+   <td> <strong>mallar</strong></td> 
    <td> /libs/social/enablement/components/hbs/myassigned/myassigned.hbs</td> 
   </tr>
   <tr>
@@ -85,7 +88,7 @@ De enda möjliga kombinationerna av slutförande och lyckad status är:
 
 ### Tilldelningsfunktion {#assignments-function}
 
-En community-platsstruktur som innehåller [uppdragsfunktionen](functions.md#assignments-function) innehåller en konfigurerad ` [assignments](assignments.md)`-komponent.
+En community-webbplatsstruktur som innehåller [Funktionen Uppdrag](functions.md#assignments-function), innehåller en konfigurerad ` [assignments](assignments.md)` -komponenten.
 
 ### Referens-API:er {#reference-apis}
 

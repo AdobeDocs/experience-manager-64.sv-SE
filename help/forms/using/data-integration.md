@@ -1,24 +1,27 @@
 ---
 title: AEM Forms dataintegrering
-seo-title: AEM Forms dataintegrering
+seo-title: AEM Forms Data Integration
 description: Med dataintegrering kan ni integrera AEM Forms med olika datakällor och skapa formulärdatamodell för att skapa och arbeta med adaptiva formulär och interaktiv kommunikation.
-seo-description: Med dataintegrering kan ni integrera AEM Forms med olika datakällor och skapa formulärdatamodell för att skapa och arbeta med adaptiva formulär och interaktiv kommunikation.
+seo-description: Data Integration lets you integrate AEM Forms with disparate data sources and create form data model to create and work with adaptive forms and interactive communications.
 uuid: 58f65ae0-cf54-4249-92c7-64b557e30491
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: integration
 discoiquuid: b6786321-6e8e-40e2-809b-d117991246c4
 feature: Form Data Model
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 8cbd3fb0-3c87-433e-bfd7-0f93216a5de7
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
 
+# Introduktion till AEM Forms dataintegrering {#aem-forms-data-integration}
 
-# Introduktion till AEM Forms-dataintegrering {#aem-forms-data-integration}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Med dataintegrering kan ni integrera AEM Forms med olika datakällor och skapa formulärdatamodell för att skapa och arbeta med adaptiva formulär och interaktiv kommunikation.
 
@@ -46,7 +49,7 @@ När du har skapat en formulärdatamodell kan du använda den i olika anpassning
 * Skapa anpassningsbara formulär och interaktiv kommunikation baserat på formulärdatamodell
 * Förifyll adaptiva formulär och interaktiv kommunikation från konfigurerade datakällor
 * Anropa datakälltjänster/åtgärder med hjälp av anpassningsbara formulärregler
-* Skriv anpassade formulärdata till datakällor
+* Skriv data från anpassningsbara formulär till datakällor
 
 ## Kom igång med dataintegrering {#get-started-with-data-integration}
 
@@ -60,4 +63,3 @@ Läs följande för att komma igång, förstå och implementera dataintegrering.
 * [Skapa formulärdatamodell](/help/forms/using/create-form-data-models.md)
 * [Arbeta med formulärdatamodell](/help/forms/using/work-with-form-data-model.md)
 * [Använd formulärdatamodell](/help/forms/using/using-form-data-model.md)
-

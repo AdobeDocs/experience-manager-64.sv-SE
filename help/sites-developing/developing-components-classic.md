@@ -4,14 +4,18 @@ seo-title: Developing AEM Components (Classic UI)
 description: I det klassiska användargränssnittet används ExtJS för att skapa widgetar som ger komponenternas utseende och känsla. HTML är inte det rekommenderade skriptspråket för AEM.
 seo-description: The classic UI uses ExtJS to create widgets that provide the look-and-feel of the components. HTL is not the recommended scripting language for AEM.
 exl-id: 725e4f82-7019-4365-9c01-b5d95ea2a8fa
-source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2391'
+source-wordcount: '2427'
 ht-degree: 0%
 
 ---
 
 # Utveckla AEM (Classic UI){#developing-aem-components-classic-ui}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 I det klassiska användargränssnittet används ExtJS för att skapa widgetar som ger komponenternas utseende och känsla. På grund av dessa widgetars karaktär finns det vissa skillnader mellan hur komponenterna interagerar med det klassiska användargränssnittet och [pekaktiverat användargränssnitt](/help/sites-developing/developing-components.md).
 

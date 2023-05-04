@@ -7,7 +7,8 @@ breadcrumb-title: Användarhandbok om Communities
 user-guide-description: Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner.
 feature: Communities
 role: User
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+hide: true
+source-git-commit: b61797a9096c0473658d6aabfb584a53e42095b7
 workflow-type: tm+mt
 source-wordcount: '506'
 ht-degree: 5%
@@ -16,6 +17,7 @@ ht-degree: 5%
 
 
 # Användarhandbok om AEM 6.4 Communities {#communities}
+
 
 + [AEM Communities - översikt](home.md)
 + Introduktion till AEM Communities {#introduction}

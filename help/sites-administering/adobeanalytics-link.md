@@ -10,14 +10,18 @@ topic-tags: integration
 content-type: reference
 discoiquuid: fe6ba6af-f500-4c0d-b984-fb617d4bf48a
 exl-id: d60d4fb1-7c8c-462d-a699-7aa62fa924a1
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1600'
+source-wordcount: '1636'
 ht-degree: 0%
 
 ---
 
 # Konfigurera länkspårning för Adobe Analytics{#configuring-link-tracking-for-adobe-analytics}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 När användare klickar på länkar på webbplatsens sidor kan du hämta relaterad information i Adobe Analytics. Använd till exempel länkspårning för att lära dig hur användare interagerar med webbplatsen, spåra filhämtningar och spåra avslutslänkar.
 

@@ -1,24 +1,27 @@
 ---
 title: Appmallar och komponenter
-seo-title: Appmallar och komponenter
+seo-title: App Templates and Components
 description: Följ den här sidan om du vill veta mer om appmallar och komponenter. Den innehåller detaljerad information om mallarnas struktur.
-seo-description: Följ den här sidan om du vill veta mer om appmallar och komponenter. Den innehåller detaljerad information om mallarnas struktur.
+seo-description: Follow this page to learn about App Templates and Components. It provides detailed information on the structure of templates.
 uuid: ba2fd91b-de5a-4f39-a976-5455f9983669
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: 7f31c6a7-92d5-4a87-a9f0-68a82b834d5a
-translation-type: tm+mt
-source-git-commit: 6c453c9497575a4be0172b86295186c74d0e50f5
+exl-id: 5480ac38-f651-4211-94f6-c588fb44ad55
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '441'
 ht-degree: 1%
 
 ---
 
-
 # Appmallar och komponenter{#app-templates-and-components}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
@@ -28,7 +31,7 @@ En mall används för att skapa en sida och definierar vilka komponenter som kan
 
 Varje mall visar ett urval av komponenter som är tillgängliga för användning.
 
-* Mallar består av [komponenter](/help/sites-developing/components.md);
+* Mallar är inbyggda i [Komponenter](/help/sites-developing/components.md);
 * Komponenterna använder och tillåter åtkomst till widgetar och dessa används för att återge innehållet.
 
 >[!NOTE]
@@ -37,11 +40,11 @@ Varje mall visar ett urval av komponenter som är tillgängliga för användning
 
 En mall är grunden för en sida.
 
-Om du vill skapa en sida måste mallen kopieras (node-tree **/apps/&lt;myapp>/templates/&lt;mytemplate>**) till motsvarande position i platsträdet: detta är vad som händer om en sida skapas med fliken **Webbplatser**.
+Om du vill skapa en sida måste mallen kopieras (nodträd) **/apps/&lt;myapp>/templates/&lt;mytemplate>**) till motsvarande position i platsträdet: det här är vad som händer om en sida skapas med **Webbplatser** -fliken.
 
 Den här kopieringsåtgärden ger även sidan dess ursprungliga innehåll (vanligtvis innehåll på översta nivån) och egenskapen sling:resourceType, sökvägen till sidkomponenten som används för att återge sidan (allt i den underordnade noden jcr:content).
 
-## Struktur för en mall {#structure-of-a-template}
+## Mallens struktur {#structure-of-a-template}
 
 Det finns två aspekter att tänka på:
 
@@ -52,10 +55,10 @@ En mall skapas under en nod av typen **cq:Template**.
 
 Du kan ange olika egenskaper, särskilt:
 
-* **jcr:title** - title for the template; visas i dialogrutan när du skapar en sida.
-* **jcr:description** - description for the template; visas i dialogrutan när du skapar en sida.
+* **jcr:title** - Mallens titel. visas i dialogrutan när du skapar en sida.
+* **jcr:description** - En beskrivning av mallen. visas i dialogrutan när du skapar en sida.
 
-Den här noden innehåller *en jcr:content (cq:PageContent)*-nod som används som bas för innehållsnoden för resulterande sidor. den här referensen, med *sling:resourceType*, den komponent som ska användas för återgivning av det faktiska innehållet på en ny sida.
+Den här noden innehåller *a jcr:content (cq:PageContent)* Nod som ska användas som grund för innehållsnoden för resulterande sidor. den här referensen, använda *sling:resourceType*, den komponent som ska användas för att återge det faktiska innehållet på en ny sida.
 
 >[!NOTE]
 >
@@ -63,9 +66,7 @@ Den här noden innehåller *en jcr:content (cq:PageContent)*-nod som används so
 >
 >* [Mallar](/help/sites-developing/templates.md)
 >* [Komponenter](/help/sites-developing/components.md)
-
 >
-
 
 
 När du har grundläggande kunskaper om mallar och komponenter kan du läsa följande resurser:
@@ -81,4 +82,3 @@ Länkarna nedan innehåller mer information om mobilappar:
 
 * [Mobil med innehållssynkronisering](/help/mobile/mobile-ondemand-contentsync.md)
 * [Testar mobilappar](/help/mobile/develop-mobile-apps-testing.md)
-

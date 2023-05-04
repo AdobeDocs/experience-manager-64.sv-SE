@@ -1,8 +1,8 @@
 ---
 title: Skapa en stängd användargrupp
-seo-title: Skapa en stängd användargrupp
+seo-title: Creating a Closed User Group
 description: Lär dig hur du skapar en stängd användargrupp.
-seo-description: Lär dig hur du skapar en stängd användargrupp.
+seo-description: Learn how to create a Closed User Group.
 uuid: 03d5fc69-6e4b-41c1-88c9-7454250c29ac
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,15 +10,18 @@ topic-tags: Security
 content-type: reference
 discoiquuid: ba73e267-598d-4c70-a1a8-71bcfcfbf9e5
 exl-id: 3a052270-b3ea-4d17-915c-be2b51cdc482
-translation-type: tm+mt
-source-git-commit: 3ee650d0810a03878b4b0a58708ea3600fa28ff2
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '831'
 ht-degree: 0%
 
 ---
 
 # Skapa en stängd användargrupp{#creating-a-closed-user-group}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Stängda användargrupper (CUG) används för att begränsa åtkomst till specifika sidor som finns på en publicerad webbplats. Sådana sidor kräver att de tilldelade medlemmarna loggar in och anger säkerhetsuppgifter.
 
@@ -26,10 +29,10 @@ Om du vill konfigurera ett sådant område på din webbplats:
 
 * [skapa den faktiska stängda användargruppen och tilldela medlemmar](#creating-the-user-group-to-be-used).
 
-* [tillämpa denna grupp på de önskade ](#applying-your-closed-user-group-to-content-pages) sidorna och välja (eller skapa) inloggningssidan som ska användas av medlemmarna i CUG, anges också när en CUG används på en innehållssida.
+* [använd den här gruppen på de obligatoriska sidorna](#applying-your-closed-user-group-to-content-pages) och välja (eller skapa) inloggningssidan som ska användas av medlemmarna i CUG-gruppen, anges också när en CUG används på en innehållssida.
 
-* [skapa en länk, av någon form, till minst en sida inom det skyddade området](#linking-to-the-realm), annars visas den inte.
-* [konfigurera ](#configure-dispatcher-for-cugs) Dispatcherif som används.
+* [skapa en länk, av någon form, till minst en sida inom det skyddade området](#linking-to-the-realm), annars syns den inte.
+* [konfigurera Dispatcher](#configure-dispatcher-for-cugs) om den används.
 
 >[!CAUTION]
 >
@@ -39,7 +42,7 @@ Om du vill konfigurera ett sådant område på din webbplats:
 >
 >Effekten av användargränssnitten bör alltid beaktas vid prestandatestning.
 
-## Skapar användargruppen som ska användas {#creating-the-user-group-to-be-used}
+## Skapa användargruppen som ska användas {#creating-the-user-group-to-be-used}
 
 Så här skapar du en sluten användargrupp:
 
@@ -47,38 +50,38 @@ Så här skapar du en sluten användargrupp:
 
    >[!NOTE]
    >
-   >Mer information om hur du skapar och konfigurerar användare och grupper finns i [Hantera användare och grupper](/help/sites-administering/security.md#managing-users-and-groups).
+   >Se [Hantera användare och grupper](/help/sites-administering/security.md#managing-users-and-groups) om du vill ha fullständig information om hur du skapar och konfigurerar användare och grupper.
 
-1. Välj kortet **Grupper** på nästa skärm.
+1. Välj **Grupper** från nästa skärm.
 
    ![screenshot_2018-10-30at145502](assets/screenshot_2018-10-30at145502.png)
 
-1. Tryck på knappen **Skapa** i det övre högra hörnet för att skapa en ny grupp.
+1. Tryck på **Skapa** i det övre högra hörnet för att skapa en ny grupp.
 1. Namnge din nya grupp; till exempel `cug_access`.
 
    ![screenshot_2018-10-30at151459](assets/screenshot_2018-10-30at151459.png)
 
-1. Gå till fliken **Medlemmar** och tilldela de användare som krävs till den här gruppen.
+1. Gå till **Medlemmar** och tilldela de användare som krävs till den här gruppen.
 
    ![screenshot_2018-10-30at151808](assets/screenshot_2018-10-30at151808.png)
 
-1. Aktivera användare som du har tilldelat din CUG; i det här fallet alla medlemmar i `cug_access`.
-1. Aktivera den slutna användargruppen så att den är tillgänglig i publiceringsmiljön. i det här exemplet är `cug_access`.
+1. Aktivera användare som du har tilldelat din CUG; i detta fall alla medlemmar i `cug_access`.
+1. Aktivera den slutna användargruppen så att den är tillgänglig i publiceringsmiljön. i det här exemplet `cug_access`.
 
 ## Använda din stängda användargrupp på innehållssidor {#applying-your-closed-user-group-to-content-pages}
 
 Så här använder du CUG-filen på en sida:
 
 1. Navigera till rotsidan för det begränsade avsnitt som du vill tilldela din CUG.
-1. Markera sidan genom att klicka på dess miniatyrbild och sedan på **Egenskaper** i den övre panelen.
+1. Markera sidan genom att klicka på dess miniatyrbild och sedan klicka på **Egenskaper** i den övre panelen.
 
    ![screenshot_2018-10-30at162632](assets/screenshot_2018-10-30at162632.png)
 
-1. I följande fönster går du till fliken **Avancerat**.
-1. Bläddra nedåt och aktivera kryssrutan i **Autentiseringskrav**-avsnittet.
+1. I följande fönster går du till **Avancerat** -fliken.
+1. Bläddra nedåt och aktivera kryssrutan i dialogrutan **Autentiseringskrav** -avsnitt.
 
 1. Lägg till konfigurationssökvägen nedan och tryck sedan på Save.
-1. Gå sedan till fliken **Behörigheter** och tryck på knappen **Redigera stängd användargrupp**.
+1. Gå till **Behörigheter** och trycker på **Redigera stängd användargrupp** -knappen.
 
    ![screenshot_2018-10-30at163003](assets/screenshot_2018-10-30at163003.png)
 
@@ -88,17 +91,17 @@ Så här använder du CUG-filen på en sida:
    >
    > Mer information finns i [den här sidan](closed-user-groups.md#aem-livecopy).
 
-1. Sök efter och lägg till din CUG i följande fönster - lägg i det här fallet till gruppen **cug_access**. Tryck slutligen på **Save**.
-1. Klicka på **Aktiverad** för att definiera att den här sidan (och alla underordnade sidor) tillhör en CUG.
-1. Ange **inloggningssidan** som medlemmar i gruppen ska använda; till exempel:
+1. Sök efter och lägg till CUG-filen i följande fönster - lägg i det här fallet till gruppen med namnet **cug_access**. Äntligen trycker du **Spara**.
+1. Klicka **Aktiverad** för att definiera att den här sidan (och eventuella underordnade sidor) ska tillhöra en CUG.
+1. Ange **Inloggningssida** att medlemmarna i gruppen kommer att använda sig av till exempel:
 
    `/content/geometrixx/en/toolbar/login.html`
 
    Detta är valfritt. Om det lämnas tomt används standardinloggningssidan.
 
 1. Lägg till **Tillåtna grupper**. Använd + för att lägga till grupper eller - för att ta bort. Endast medlemmar i dessa grupper tillåts logga in och få åtkomst till sidorna.
-1. Tilldela en **sfär** (ett namn för sidgrupperna) om det behövs. Lämna tomt om du vill använda sidrubriken.
-1. Klicka på **OK** för att spara specifikationen.
+1. Tilldela en **Sfär** (ett namn för sidgrupperna) om det behövs. Lämna tomt om du vill använda sidrubriken.
+1. Klicka **OK** för att spara specifikationen.
 
 Se [Identity Management](/help/sites-administering/identity-management.md) om du vill ha information om profiler i publiceringsmiljön och om hur du loggar in och ut.
 
@@ -116,9 +119,9 @@ Om du använder Dispatcher måste du definiera en Dispatcher-servergrupp med fö
 * \sessionshantering: se nedan.
 * [cache](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache): En cachekatalog som är dedikerad till de filer som CUG gäller för.
 
-### Konfigurerar Hantering av dispatcher-session för CUG:er {#configuring-dispatcher-session-management-for-cugs}
+### Konfigurera Dispatcher Session Management för CUG:er {#configuring-dispatcher-session-management-for-cugs}
 
-Konfigurera [sessionshantering i dispatchern.alla filer](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement) för CUG:n. Den autentiseringshanterare som används när åtkomst begärs för CUG-sidor avgör hur du konfigurerar sessionshanteringen.
+Konfigurera [sessionshantering i dispatcher.alla filer](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement) för CUG. Den autentiseringshanterare som används när åtkomst begärs för CUG-sidor avgör hur du konfigurerar sessionshanteringen.
 
 ```xml
 /sessionmanagement
@@ -132,7 +135,7 @@ Konfigurera [sessionshantering i dispatchern.alla filer](https://helpx.adobe.com
 >När en Dispatcher-servergrupp har sessionshantering aktiverat cachelagras inte alla sidor som servergruppen hanterar. Om du vill cachelagra sidor som ligger utanför CUG skapar du en andra grupp i dispatcher.any\
 >som hanterar icke-CUG-sidor.
 
-1. Konfigurera [/sessionmanagement](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement) genom att definiera `/directory`; till exempel:
+1. Konfigurera [/sessionmanagement](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement) efter definition `/directory`; till exempel:
 
    ```xml
    /sessionmanagement

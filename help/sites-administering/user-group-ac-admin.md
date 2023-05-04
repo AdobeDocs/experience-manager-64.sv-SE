@@ -1,5 +1,5 @@
 ---
-title: User, Group and Access Rights Administration
+title: Behörighetsadministration för användare, grupp och åtkomst
 seo-title: User, Group and Access Rights Administration
 description: Läs mer om administration av användare, grupper och åtkomsträttigheter i AEM.
 feature: Security
@@ -10,26 +10,30 @@ topic-tags: Security
 content-type: reference
 discoiquuid: cc0637ef-4a9e-454f-899d-655c9caebe2b
 exl-id: 9c14e57b-019e-45ae-9e96-40424fa609c2
-source-git-commit: 31d6111a82a3cbfef22970d05280b0d3fd1c0de7
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3120'
+source-wordcount: '3156'
 ht-degree: 0%
 
 ---
 
 # Behörighetsadministration för användare, grupp och åtkomst{#user-group-and-access-rights-administration}
 
-Enabling access to a CRX repository involves several topics:
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-* [Åtkomsträttigheter](#how-access-rights-are-evaluated)  - begrepp för hur de definieras och utvärderas
-* [User Administration](#user-administration) - managing the individual accounts used for access
-* [Gruppadministration](#group-administration)  - förenkla användarhantering genom att skapa grupper
+Att ge åtkomst till en CRX-databas omfattar flera ämnen:
 
-* [Hantering](#access-right-management)  av åtkomsträttigheter - definiera principer som styr hur dessa användare och grupper kan få åtkomst till resurser
+* [Åtkomsträttigheter](#how-access-rights-are-evaluated) - begreppen för hur de definieras och utvärderas
+* [Användaradministration](#user-administration) - hantera de enskilda konton som används för åtkomst
+* [Gruppadministration](#group-administration) - förenkla användarhanteringen genom att bilda grupper
+
+* [Behörighetshantering](#access-right-management) - definiera principer som styr hur dessa användare och grupper kan komma åt resurser
 
 De grundläggande elementen är:
 
-**AnvändarkontonCRX** autentiserar åtkomsten genom att identifiera och verifiera en användare (av en person eller ett annat program) enligt informationen på användarkontot.
+**Användarkonton** CRX autentiserar åtkomsten genom att identifiera och verifiera en användare (av en person eller ett annat program) enligt uppgifterna på användarkontot.
 
 I CRX är varje användarkonto en nod på arbetsytan. Ett CRX-användarkonto har följande egenskaper:
 
@@ -42,7 +46,7 @@ I CRX är varje användarkonto en nod på arbetsytan. Ett CRX-användarkonto har
 
    För att förenkla hanteringen rekommenderar vi dock att du (i de flesta fall) tilldelar åtkomsträttigheter till gruppkonton. Att tilldela åtkomsträttigheter för varje enskild användare blir snabbt mycket svårt att hantera (undantagen är vissa systemanvändare när det bara finns en eller två instanser).
 
-**GruppkontonGruppkonton är** samlingar av användare och/eller andra grupper. De används för att förenkla hanteringen eftersom en ändring av de åtkomsträttigheter som tilldelats en grupp automatiskt tillämpas på alla användare i gruppen. En användare behöver inte tillhöra någon grupp, men tillhör ofta flera.
+**Gruppkonton** Gruppkonton är samlingar av användare och/eller andra grupper. De används för att förenkla hanteringen eftersom en ändring av de åtkomsträttigheter som tilldelats en grupp automatiskt tillämpas på alla användare i gruppen. En användare behöver inte tillhöra någon grupp, men tillhör ofta flera.
 
 I CRX har en grupp följande egenskaper:
 
@@ -53,7 +57,7 @@ I CRX har en grupp följande egenskaper:
 
 * Du kan definiera åtkomsträttigheter för alla gruppmedlemmar.
 
-**Access** RightsCRX använder åtkomsträttigheter för att styra åtkomsten till specifika delar av databasen.
+**Åtkomsträttigheter** CRX använder åtkomsträttigheter för att styra åtkomsten till specifika delar av databasen.
 
 Detta görs genom att tilldela behörigheter för att antingen tillåta eller neka åtkomst till en resurs (nod eller sökväg) i databasen. Eftersom olika behörigheter kan tilldelas måste de utvärderas för att avgöra vilken kombination som är tillämplig för den aktuella begäran.
 
@@ -63,7 +67,7 @@ Med CRX kan du konfigurera åtkomsträttigheter för både användar- och gruppk
 
 >[!NOTE]
 >
->CRX implementerar [åtkomstkontroll enligt definitionen i JSR-283](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html).
+>CRX-implementeringar [åtkomstkontroll enligt definition i JSR-283](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html).
 >
 >En standardinstallation av en CRX-databas är konfigurerad att använda resursbaserade åtkomstkontrollistor. Detta är en möjlig implementering av åtkomstkontrollen JSR-283 och en av implementeringarna i Jackrabbit.
 
@@ -71,14 +75,14 @@ Med CRX kan du konfigurera åtkomsträttigheter för både användar- och gruppk
 
 CRX använder två viktiga begrepp vid utvärdering av åtkomsträttigheter:
 
-* Ett **huvudnamn** är en enhet som har åtkomsträttigheter. Huvudposter är:
+* A **huvudnamn** är en enhet som har nyttjanderätt. Huvudposter är:
 
    * Ett användarkonto.
    * Ett gruppkonto
 
       Om ett användarkonto tillhör en eller flera grupper är det även associerat med vart och ett av dessa gruppobjekt.
 
-* Ett **ämne** används för att representera källan för en begäran.
+* A **ämne** används för att representera källan för en begäran.
 
    Den används för att konsolidera de åtkomsträttigheter som är tillämpliga för den begäran. Dessa hämtas från:
 
@@ -108,9 +112,8 @@ Den förteckning över åtkomsträttigheter som är tillämpliga för föremåle
 >[!NOTE]
 >
 >* CRX tar ingen hänsyn till användarhierarkin när listan kompileras.
->* CRX uses a group hierarchy only when you include a group as a member of another group. There is no automatic inheritance of group permissions.
->* The order in which you specify the groups does not affect the access rights.
-
+>* CRX använder bara en grupphierarki när du tar med en grupp som medlem i en annan grupp. Det finns inget automatiskt arv av gruppbehörigheter.
+>* Den ordning som du anger grupperna i påverkar inte åtkomsträttigheterna.
 >
 
 
@@ -118,7 +121,7 @@ Den förteckning över åtkomsträttigheter som är tillämpliga för föremåle
 
 När CRX hanterar begäran jämför den åtkomstbegäran från ämnet med åtkomstkontrollistan på databasnoden:
 
-Så om Linda begär att få uppdatera noden `/features` i följande databasstruktur:
+Så om Linda begär att få uppdatera `/features` nod i följande databasstruktur:
 
 ![chlimage_1-308](assets/chlimage_1-308.png)
 
@@ -151,7 +154,7 @@ Ta två exempel där användaren `aUser` är medlem i gruppen `aGroup`:
 
 I ovanstående fall:
 
-* `aUser` saknar skrivbehörighet  `grandChildNode`.
+* `aUser` saknar skrivbehörighet för `grandChildNode`.
 
 ```xml
    + parentNode
@@ -166,9 +169,9 @@ I ovanstående fall:
 
 I detta fall:
 
-* `aUser` saknar skrivbehörighet  `grandChildNode`.
+* `aUser` saknar skrivbehörighet för `grandChildNode`.
 
-* Den andra ACE för `aUser` är redundant.
+* Den andra ACE för `aUser` är överflödigt.
 
 Åtkomsträttigheter från flera gruppobjekt utvärderas baserat på deras ordning, både i hierarkin och i en enda åtkomstkontrollista.
 
@@ -217,56 +220,56 @@ En standarddialogruta används för **Användaradministration**.
 
 Du måste vara inloggad på rätt arbetsyta och sedan kan du öppna dialogrutan från båda:
 
-* länken **Användaradministration** på huvudkonsolen för CRX
-* menyn **Säkerhet** i CRX Explorer
+* den **Användaradministration** på huvudkonsolen för CRX
+* den **Säkerhet** menyn i CRX Explorer
 
 ![chlimage_1-309](assets/chlimage_1-309.png)
 
 **Egenskaper**
 
-* ****
-UserIDShort-namn för kontot som används vid åtkomst till CRX.
+* **Användar-ID**
+Kortnamn för kontot som används vid åtkomst till CRX.
 
-* **Principal**
-NameEtt fullständigt textnamn för kontot.
+* **Huvudnamn**
+Ett fullständigt textnamn för kontot.
 
-* ****
-PasswordNeeded when accessing CRX with this account.
+* **Lösenord**
+Behövs vid åtkomst till CRX med det här kontot.
 
-* ****
-ntlmhashTilldelas automatiskt för varje nytt konto och uppdateras när lösenordet ändras.
+* **ntlmhash**
+Tilldelad automatiskt för varje nytt konto och uppdateras när lösenordet ändras.
 
 * Du kan lägga till nya egenskaper genom att definiera namn, typ och värde. Klicka på Spara (grön bocksymbol) för varje ny egenskap.
 
-**Gruppmedlemskap** Visar alla grupper som kontot tillhör. Den ärvda kolumnen anger medlemskap som har ärvts som ett resultat av medlemskap i en annan grupp.
+**Gruppmedlemskap** Detta visar alla grupper som kontot tillhör. Den ärvda kolumnen anger medlemskap som har ärvts som ett resultat av medlemskap i en annan grupp.
 
-Om du klickar på ett GroupID (om tillgängligt) öppnas [gruppadministration](#group-administration) för den gruppen.
+Om du klickar på ett GroupID (om tillgängligt) öppnas [Gruppadministration](#group-administration) för den gruppen.
 
-**** PersonifierareMed personifieringsfunktionen kan en användare arbeta för en annan användares räkning.
+**Personifierare** Med personifieringsfunktionen kan en användare arbeta för en annan användares räkning.
 
 Det innebär att ett användarkonto kan ange andra konton (användare eller grupp) som kan användas med deras konto. Med andra ord, om användare-B tillåts personifiera användare-A, kan användare-B vidta åtgärder med hjälp av den fullständiga kontoinformationen för användare-A (inklusive ID, namn och åtkomsträttigheter).
 
 Detta gör att persondatorkonton kan slutföra uppgifter som om de använde det konto de personifierar. t.ex. under frånvaro eller för att på kort sikt dela en för hög belastning.
 
-If an account impersonates another it is very difficult to see. Loggfilerna innehåller ingen information om att personifiering har skett för händelserna. Så om användare-B personifierar användare-A ser alla händelser ut som om de utförts av användare-A personligen.
+Om ett konto personifierar ett annat är det väldigt svårt att se. Loggfilerna innehåller ingen information om att personifiering har skett för händelserna. Så om användare-B personifierar användare-A ser alla händelser ut som om de utförts av användare-A personligen.
 
-### Creating a User Account {#creating-a-user-account}
+### Skapa ett användarkonto {#creating-a-user-account}
 
-1. Öppna dialogrutan **Användaradministration**.
-1. Klicka på **Skapa användare**.
-1. You can then enter the Properties:
+1. Öppna **Användaradministration** -dialogrutan.
+1. Klicka **Skapa användare**.
+1. Sedan kan du ange Egenskaper:
 
-   * **** Används som kontonamn.
-   * **** Lösenord krävs vid inloggning.
-   * **Principal Name** to provide a full textual name.
-   * **Mellanliggande** sökväg som kan användas för att skapa en trädstruktur.
+   * **Användar-ID** används som kontonamn.
+   * **Lösenord** behövs vid inloggning.
+   * **Huvudnamn** om du vill ange ett fullständigt textnamn.
+   * **Mellanliggande sökväg** som kan användas för att skapa en trädstruktur.
 
 1. Klicka på Spara (grön bocksymbol).
 1. Dialogrutan utökas så att du kan:
 
    1. Konfigurera **Egenskaper**.
    1. Se **Gruppmedlemskap**.
-   1. Definiera **personifierare**.
+   1. Definiera **Personifierare**.
 
 >[!NOTE]
 >
@@ -274,22 +277,21 @@ If an account impersonates another it is very difficult to see. Loggfilerna inne
 >
 >* användare
 >* grupper med många medlemmar
-
 >
 
 
 ### Uppdatera ett användarkonto {#updating-a-user-account}
 
-1. Med dialogrutan **Användaradministration** öppnar du listvyn för alla konton.
+1. Med **Användaradministration** öppnas listvyn för alla konton.
 
 1. Navigera genom trädstrukturen.
 1. Klicka på det konto du vill öppna för redigering.
 1. Gör en ändring och klicka sedan på Spara (grön bocksymbol) för den posten.
-1. Klicka på **Stäng** för att slutföra, eller **Lista...** om du vill återgå till listan över alla användarkonton.
+1. Klicka **Stäng** för att slutföra, eller **Lista...** för att återgå till listan över alla användarkonton.
 
 ### Ta bort ett användarkonto {#removing-a-user-account}
 
-1. Med dialogrutan **Användaradministration** öppnar du listvyn för alla konton.
+1. Med **Användaradministration** öppnas listvyn för alla konton.
 
 1. Navigera genom trädstrukturen.
 1. Välj önskat konto och klicka på **Ta bort användare**; kontot tas bort omedelbart.
@@ -302,12 +304,12 @@ If an account impersonates another it is very difficult to see. Loggfilerna inne
 
 ### Definiera egenskaper {#defining-properties}
 
-Du kan definiera **egenskaper** för antingen nya eller befintliga konton:
+Du kan definiera **Egenskaper** för nya eller befintliga konton:
 
-1. Öppna dialogrutan **Användaradministration** för det aktuella kontot.
-1. Definiera ett **egenskapsnamn**.
+1. Öppna **Användaradministration** för rätt konto.
+1. Definiera en **Egenskap** namn.
 1. Välj **Typ** i listrutan.
-1. Definiera **värdet**.
+1. Definiera **Värde**.
 1. Klicka på Spara (grön klicksymbol) för den nya egenskapen.
 
 Befintliga egenskaper kan tas bort med papperskorgssymbolen.
@@ -316,15 +318,15 @@ Med undantag för Lösenordet går det inte att redigera egenskaper, de måste t
 
 #### Ändra lösenordet {#changing-the-password}
 
-**Lösenordet** är en speciell egenskap som du kan ändra genom att klicka på länken **Ändra lösenord**.
+The **Lösenord** är en specialegenskap som du kan ändra genom att klicka på **Ändra lösenord** länk.
 
-Du kan också ändra lösenordet till ditt eget användarkonto på menyn **Säkerhet** i CRX Explorer.
+Du kan också ändra lösenordet till ditt eget användarkonto från **Säkerhet** i CRX Explorer.
 
 ### Definiera en personifierare {#defining-an-impersonator}
 
 Du kan definiera personifierare för antingen nya eller befintliga konton:
 
-1. Öppna dialogrutan **Användaradministration** för det aktuella kontot.
+1. Öppna **Användaradministration** för rätt konto.
 1. Ange vilket konto som ska få personifiera det kontot.
 
    Du kan använda Bläddra.. för att välja ett befintligt konto.
@@ -333,67 +335,67 @@ Du kan definiera personifierare för antingen nya eller befintliga konton:
 
 ## Gruppadministration {#group-administration}
 
-En standarddialogruta används för **gruppadministration**.
+En standarddialogruta används för **Gruppadministration**.
 
 Du måste vara inloggad på rätt arbetsyta och sedan kan du öppna dialogrutan från båda:
 
-* länken **Gruppadministration** på huvudkonsolen för CRX
-* menyn **Säkerhet** i CRX Explorer
+* den **Gruppadministration** på huvudkonsolen för CRX
+* den **Säkerhet** menyn i CRX Explorer
 
 ![chlimage_1-47](assets/chlimage_1-47.jpeg)
 
 **Egenskaper**
 
-* ****
-GroupIDShort name for the group account.
+* **GruppID**
+Kortnamn för gruppkontot.
 
-* **Principal**
-NameEtt fullständigt textnamn för gruppkontot.
+* **Huvudnamn**
+Ett fullständigt textnamn för gruppkontot.
 
 * Du kan lägga till nya egenskaper genom att definiera namn, typ och värde. Klicka på Spara (grön bocksymbol) för varje ny egenskap.
-* ****
-MedlemmarDu kan lägga till användare eller andra grupper som medlemmar i den här gruppen.
+* **Medlemmar**
+Du kan lägga till användare eller andra grupper som medlemmar i den här gruppen.
 
-**Gruppmedlemskap** Visar alla grupper som det aktuella gruppkontot tillhör. Den ärvda kolumnen anger medlemskap som har ärvts som ett resultat av medlemskap i en annan grupp.
+**Gruppmedlemskap** Detta visar alla grupper som det aktuella gruppkontot tillhör. Den ärvda kolumnen anger medlemskap som har ärvts som ett resultat av medlemskap i en annan grupp.
 
 Om du klickar på ett GroupID öppnas dialogrutan för den gruppen.
 
-**Members** Lists all accounts (users and/or groups) that are members of the current group.
+**Medlemmar** Visar alla konton (användare och/eller grupper) som är medlemmar i den aktuella gruppen.
 
-The **Inherited** column indicates membership that has been inherited as a result of membership of another group.
+The **Ärvd** kolumn anger medlemskap som har ärvts som ett resultat av medlemskap i en annan grupp.
 
 >[!NOTE]
 >
->When the Owner, Editor, or Viewer role is assigned to a user on any Asset folder, a new group gets created. Gruppnamnet har formatet `mac-default-<foldername>` för varje mapp som rollerna är definierade för.
+>När rollen Ägare, Redigerare eller Visningsprogram tilldelas till en användare i en resursmapp skapas en ny grupp. Gruppnamnet har formatet `mac-default-<foldername>` för varje mapp som rollerna är definierade för.
 
 ### Skapa ett gruppkonto {#creating-a-group-account}
 
-1. Öppna dialogrutan **Gruppadministration**.
-1. Klicka på **Skapa grupp**.
+1. Öppna **Gruppadministration** -dialogrutan.
+1. Klicka **Skapa grupp**.
 1. Sedan kan du ange Egenskaper:
 
-   * **Principal** Name för att ange ett fullständigt textnamn.
-   * **Mellanliggande** sökväg som kan användas för att skapa en trädstruktur.
+   * **Huvudnamn** om du vill ange ett fullständigt textnamn.
+   * **Mellanliggande sökväg** som kan användas för att skapa en trädstruktur.
 
 1. Klicka på Spara (grön bocksymbol).
 1. Dialogrutan utökas så att du kan:
 
    1. Konfigurera **Egenskaper**.
    1. Se **Gruppmedlemskap**.
-   1. Hantera **medlemmar**.
+   1. Hantera **Medlemmar**.
 
 ### Uppdatera ett gruppkonto {#updating-a-group-account}
 
-1. Med dialogrutan **Gruppadministration** öppnar du listvyn för alla konton.
+1. Med **Gruppadministration** öppnas listvyn för alla konton.
 
 1. Navigera genom trädstrukturen.
 1. Klicka på det konto du vill öppna för redigering.
 1. Gör en ändring och klicka sedan på Spara (grön bocksymbol) för den posten.
-1. Klicka på **Stäng** för att slutföra, eller **Lista...** om du vill återgå till listan över alla gruppkonton.
+1. Klicka **Stäng** för att slutföra, eller **Lista...** för att återgå till listan över alla gruppkonton.
 
 ### Ta bort ett gruppkonto {#removing-a-group-account}
 
-1. Med dialogrutan **Gruppadministration** öppnar du listvyn för alla konton.
+1. Med **Gruppadministration** öppnas listvyn för alla konton.
 
 1. Navigera genom trädstrukturen.
 1. Välj önskat konto och klicka på **Ta bort grupp**; kontot tas bort omedelbart.
@@ -408,10 +410,10 @@ The **Inherited** column indicates membership that has been inherited as a resul
 
 Du kan definiera egenskaper för nya eller befintliga konton:
 
-1. Öppna dialogrutan **Gruppadministration** för det aktuella kontot.
-1. Definiera ett **egenskapsnamn**.
+1. Öppna **Gruppadministration** för rätt konto.
+1. Definiera en **Egenskap** namn.
 1. Välj **Typ** i listrutan.
-1. Definiera **värdet**.
+1. Definiera **Värde**.
 1. Klicka på Spara (grön bocksymbol) för den nya egenskapen.
 
 Befintliga egenskaper kan tas bort med papperskorgssymbolen.
@@ -420,7 +422,7 @@ Befintliga egenskaper kan tas bort med papperskorgssymbolen.
 
 Du kan lägga till medlemmar i den aktuella gruppen:
 
-1. Öppna dialogrutan **Gruppadministration** för det aktuella kontot.
+1. Öppna **Gruppadministration** för rätt konto.
 1. Antingen:
 
    * Ange namnet på den obligatoriska medlemmen (användar- eller gruppkonto).
@@ -432,44 +434,44 @@ Eller ta bort en befintlig medlem med papperskorgssymbolen.
 
 ## Behörighetshantering {#access-right-management}
 
-Med fliken **Åtkomstkontroll** på CRXDE Lite kan du definiera åtkomstkontrollprinciper och tilldela de relaterade behörigheterna.
+Med **Åtkomstkontroll** -fliken i CRXDE Lite kan du definiera åtkomstkontrollprinciper och tilldela relaterade behörigheter.
 
-För **Aktuell sökväg** väljer du den resurs som krävs i den vänstra rutan, fliken Åtkomstkontroll i den nedre högra rutan:
+Till exempel **Aktuell bana** Välj önskad resurs i den vänstra rutan på fliken Åtkomstkontroll i den nedre högra rutan:
 
 ![crx_accescontrol_tab](assets/crx_accesscontrol_tab.png)
 
 Policyerna kategoriseras enligt:
 
-* **Tillämpliga**
-åtkomstkontrollprinciperDessa principer kan tillämpas.
+* **Tillämpliga åtkomstkontrollprinciper**
+Dessa profiler kan tillämpas.
 
    Dessa profiler är tillgängliga för att skapa en lokal profil. När du har valt och lagt till en tillämplig princip blir den en lokal princip.
 
-* **Lokala åtkomstkontrollprinciper**
+* **Principer för lokal åtkomstkontroll**
 Detta är åtkomstkontrollprinciper som du har tillämpat. Du kan sedan uppdatera, beställa eller ta bort dem.
 
    En lokal princip åsidosätter alla principer som ärvs från den överordnade principen.
 
-* **Effektiva**
-åtkomstkontrollprinciperDessa är de åtkomstkontrollprinciper som nu gäller för alla åtkomstbegäranden. De visar de aggregerade policyer som härletts från både lokala policyer och eventuella ärvda från det överordnade.
+* **Effektiva åtkomstkontrollprinciper**
+Detta är de åtkomstkontrollprinciper som nu gäller för alla åtkomstbegäranden. De visar de aggregerade policyer som härletts från både lokala policyer och eventuella ärvda från det överordnade.
 
 ### Välj profil {#policy-selection}
 
 Du kan välja profiler för:
 
-* **Aktuell**
-sökvägSom i exemplet ovan väljer du en resurs i databasen. Profiler för den här &quot;aktuella sökvägen&quot; visas.
+* **Aktuell bana**
+Som i exemplet ovan väljer du en resurs i databasen. Profiler för den här &quot;aktuella sökvägen&quot; visas.
 
-* ****
-DatabasVäljer åtkomstkontroll på databasnivå. När du till exempel anger 
-`jcr:namespaceManagement` privilege, which is only relevant for the repository, not a node.
+* **Databas**
+Väljer åtkomstkontroll på databasnivå. När du till exempel anger 
+`jcr:namespaceManagement` privilegium, som bara är relevant för databasen, inte en nod.
 
-* ****
-PrincipalEtt huvudkonto som är registrerat i databasen.
+* **kapitalbelopp**
+Ett huvudkonto som är registrerat i databasen.
 
-   You can either type in the **Principal** name or click the icon to the right of the field to open the **Select Principal** dialog.
+   Du kan antingen skriva i **kapitalbelopp** eller klicka på ikonen till höger om fältet för att öppna **Välj huvudkonto** -dialogrutan.
 
-   Detta gör att du kan **söka** efter en **användare** eller **grupp**. Välj önskat huvudkonto i listan och klicka sedan på **OK** för att överföra värdet tillbaka till föregående dialogruta.
+   På så sätt kan du **Sök** för **Användare** eller **Grupp**. Välj önskat huvudkonto i listan och klicka sedan på **OK** för att överföra värdet tillbaka till föregående dialogruta.
 
 ![crx_access_control_selectpal](assets/crx_accesscontrol_selectprincipal.png)
 
@@ -481,7 +483,7 @@ PrincipalEtt huvudkonto som är registrerat i databasen.
 
 ### Behörighet {#privileges}
 
-Följande behörigheter är tillgängliga när du lägger till en åtkomstkontrollpost (mer information finns i [API](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/security/Privilege.html)):
+Följande behörigheter är tillgängliga när du lägger till en åtkomstkontrollpost (se [Säkerhets-API](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/security/Privilege.html) för fullständig information):
 
 <table> 
  <tbody> 
@@ -495,7 +497,7 @@ Följande behörigheter är tillgängliga när du lägger till en åtkomstkontro
   </tr> 
   <tr> 
    <td><code>rep:write</code></td> 
-   <td>Detta är ett helkaninsspecifikt aggregeringsprivilegium för jcr:write och jcr:nodeTypeManagement.<br /> </td> 
+   <td>Detta är ett helkanin-specifikt aggregeringsprivilegium för jcr:write och jcr:nodeTypeManagement.<br /> </td> 
   </tr> 
   <tr> 
    <td><code>jcr:all</code></td> 
@@ -567,7 +569,7 @@ Följande behörigheter är tillgängliga när du lägger till en åtkomstkontro
   </tr> 
   <tr> 
    <td><code>jcr:write</code></td> 
-   <td>Detta är ett aggregeringsprivilegium som innehåller:<br /> - jcr:modifyProperties<br /> - jcr:addChildNodes<br /> - jcr:removeNode<br /> - jcr:removeChildNodes</td> 
+   <td>Detta är ett sammanställningsprivilegium som innehåller:<br /> - jcr:modifyProperties<br /> - jcr:addChildNodes<br /> - jcr:removeNode<br /> - jcr:removeChildNodes</td> 
   </tr> 
   <tr> 
    <td><code>rep:privilegeManagement</code></td> 
@@ -580,29 +582,29 @@ Följande behörigheter är tillgängliga när du lägger till en åtkomstkontro
 
 Du kan även registrera nya behörigheter:
 
-1. Välj **Verktyg** i verktygsfältet och **Behörigheter** för att visa de behörigheter som för närvarande är registrerade.
+1. Välj **verktyg** sedan **Behörighet** för att visa de behörigheter som för närvarande är registrerade.
 
    ![ac_privilegier](assets/ac_privileges.png)
 
-1. Använd ikonen **Registreringsbehörighet** (**+**) för att öppna dialogrutan och definiera ett nytt privilegium:
+1. Använd **Registreringsprivilegium** ikon (**+**) för att öppna dialogrutan och definiera ett nytt privilegium:
 
    ![ac_privilegieregister](assets/ac_privilegeregister.png)
 
-1. Klicka på **OK** för att spara. Privilegiet är nu tillgängligt för val.
+1. Klicka **OK** att spara. Privilegiet är nu tillgängligt för val.
 
 ### Lägga till en åtkomstkontrollpost {#adding-an-access-control-entry}
 
-1. Markera resursen och öppna fliken **Åtkomstkontroll**.
+1. Välj resursen och öppna **Åtkomstkontroll** -fliken.
 
-1. Om du vill lägga till en ny **Local Access Control Policies** klickar du på ikonen **+** till höger om listan **Tillämplig åtkomstkontrollprincip**:
+1. Lägga till en ny **Principer för lokal åtkomstkontroll** klickar du på **+** ikonen till höger om **Tillämplig åtkomstkontrollprincip** lista:
 
    ![crx_accescontrol_applicable](assets/crx_accesscontrol_applicable.png)
 
-1. En ny post visas under **Lokala åtkomstkontrollprinciper:**
+1. En ny post visas under **Principer för lokal åtkomstkontroll:**
 
    ![crx_accescontrol_newlocal](assets/crx_accesscontrol_newlocal.png)
 
-1. Klicka på ikonen **+** för att lägga till en ny post:
+1. Klicka på **+** om du vill lägga till en ny post:
 
    ![crx_accescontrol_addentry](assets/crx_accesscontrol_addentry.png)
 
@@ -612,10 +614,10 @@ Du kan även registrera nya behörigheter:
    >
    >Därför måste du använda &quot;&quot;.
 
-1. Definiera din åtkomstkontrollprincip och klicka på **OK** för att spara. Din nya policy kommer att:
+1. Definiera din åtkomstkontrollprincip och klicka **OK** att spara. Din nya policy kommer att:
 
-   * visas under **Princip för lokal åtkomstkontroll**
-   * ändringarna återspeglas i **Effektiva åtkomstkontrollprinciper**.
+   * anges under **Princip för lokal åtkomstkontroll**
+   * ändringarna kommer att återspeglas i **Effektiva åtkomstkontrollprinciper**.
 
 CRX validerar ditt val; för ett givet huvudkonto finns (högst) 1 neka och 1 tillåt post på en viss nod. Implementeringen rensar alltid bort redundanta poster och ser till att samma privilegium inte finns med i både Tillåt- och Neka-posterna.
 
@@ -623,24 +625,24 @@ CRX validerar ditt val; för ett givet huvudkonto finns (högst) 1 neka och 1 ti
 
 Ordningen i listan anger i vilken ordning profilerna tillämpas.
 
-1. I tabellen **Local Access Control Policies** markerar du den önskade posten och drar den till den nya positionen i tabellen.
+1. I tabellen **Principer för lokal åtkomstkontroll** markera den önskade posten och dra den till den nya positionen i tabellen.
 
    ![crx_accescontrol_reorder](assets/crx_accesscontrol_reorder.png)
 
-1. Ändringarna visas i båda tabellerna för **Local** och **Effektiva åtkomstkontrollprinciper**.
+1. Ändringarna visas i båda tabellerna för **Lokal** och **Effektiva åtkomstkontrollprinciper**.
 
 ### Ta bort en åtkomstkontrollprincip {#removing-an-access-control-policy}
 
-1. I tabellen **Local Access Control Policies** klickar du på den röda ikonen (-) till höger om posten.
+1. I tabellen **Principer för lokal åtkomstkontroll** klicka på den röda ikonen (-) till höger om inmatningen.
 
-1. Posten tas bort från båda tabellerna för **Local** och **Effektiva åtkomstkontrollprinciper**.
+1. Posten tas bort från båda tabellerna för **Lokal** och **Effektiva åtkomstkontrollprinciper**.
 
 ### Testa en åtkomstkontrollprincip {#testing-an-access-control-policy}
 
-1. I verktygsfältet CRXDE Lite väljer du **Verktyg** och sedan **Testa åtkomstkontroll..**.
+1. I verktygsfältet CRXDE Lite väljer du **verktyg** sedan **Testa åtkomstkontroll...**.
 
-1. En ny dialogruta öppnas i den övre högra rutan. Välj den **sökväg** och/eller **Principal** som du vill testa.
+1. En ny dialogruta öppnas i den övre högra rutan. Välj **Bana** och/eller **kapitalbelopp** som du vill testa.
 
-1. Klicka på **Testa** för att se resultatet av din markering:
+1. Klicka **Testa** för att se resultaten av markeringen:
 
    ![crx_accescontrol_test](assets/crx_accesscontrol_test.png)

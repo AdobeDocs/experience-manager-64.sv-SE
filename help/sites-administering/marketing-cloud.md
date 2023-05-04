@@ -6,14 +6,18 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 exl-id: e2295f71-ea3a-483c-9d7b-29acd151845d
-source-git-commit: 8220795bbf0c92ead3bb68dd6f8bbb48cc9ca2cd
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '898'
 ht-degree: 1%
 
 ---
 
 # Integrera med Adobe Marketing Cloud{#integrating-with-the-adobe-marketing-cloud}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 The [Adobe Marketing Cloud](https://www.adobe.com/solutions/digital-marketing.html), innehåller kraftfulla produkter för webbanalys och webbplatsoptimering som levererar användbara data och insikter i realtid för att driva framgångsrika onlineinitiativ. Det erbjuder en integrerad och öppen plattform för optimering av onlineverksamhet. Molnet består av integrerade program för att samla in och släppa loss kraften i kundinsikterna för att optimera kundvärvning, konvertering och lojalitet samt för att skapa och distribuera innehåll.
 

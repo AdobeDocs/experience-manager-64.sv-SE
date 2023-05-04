@@ -1,22 +1,26 @@
 ---
 title: Korrespondenshantering | Hantera användardata
-seo-title: Korrespondenshantering | Hantera användardata
+seo-title: Correspondence Management | Handling user data
 description: Med AEM Forms Correspondence Management kan ni skapa, hantera och effektivisera säkra och personaliserade kundkorrespondenser. Lär dig hur du konfigurerar lagring av data för utkast och skickade brev i AEM, får åtkomst till lagrade data och tar bort lagrade data.
-seo-description: Med AEM Forms Correspondence Management kan ni skapa, hantera och effektivisera säkra och personaliserade kundkorrespondenser. Lär dig hur du konfigurerar lagring av data för utkast och skickade brev i AEM, får åtkomst till lagrade data och tar bort lagrade data.
+seo-description: AEM Forms Correspondence Management enables you to create, manage, and streamline secure and personalized customer correspondences. Learn how to configure storing data for draft and submitted letters in AEM repository, access stored data, and delete stored data.
 uuid: d5bb190b-d668-4da3-95da-b7705ad302d9
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 764d8e0d-604d-4c7b-89cd-7686ce5f03ff
 role: Admin
 exl-id: 4a6b3403-2941-4098-bb30-769281adedc2
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '608'
 ht-degree: 0%
 
 ---
 
 # Korrespondenshantering | Hantera användardata {#correspondence-management-handling-user-data}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Med AEM Forms Correspondence Management kan ni skapa, hantera och effektivisera säkra och personaliserade kundkorrespondenser. Det ger ett intuitivt användargränssnitt där företagsanvändare kan skapa korrespondens med hjälp av godkända innehållsblock och mediaelement. Mer information om hur du skapar korrespondenser finns i [Skapa korrespondens](/help/forms/using/create-correspondence.md).
 
@@ -58,7 +62,7 @@ I ovanstående AEM:
 * `[node-id]` är det ID som tilldelats mappen som innehåller bokstaven
 * `[letter-instance-name]` är namnet som anges när du sparar eller skickar ett brev
 
-Under noden [letter-instance-name] skapas följande nodstruktur och data för varje bokstavsinstans lagras i AEM.
+Under [letter-instance-name] nod skapas följande nodstruktur och data för varje bokstavsinstans lagras i AEM.
 
 | Nod | Beskrivning |
 |---|---|
@@ -73,9 +77,9 @@ Du kan få åtkomst till utkast och skickade korrespondensdata i de konfigurerad
 
 ### Åtkomst till användardata {#access-user-data}
 
-Korrespondenshanteringen innehåller API:er som du kan använda för att hitta och komma åt utkast och skickade brev. Med API:erna kan du söka efter och öppna bokstavsinstanser med hjälp av bokstavsinstans-ID:t eller den användare som sparade eller skickade korrespondensen. Mer information finns i [API:er för att komma åt bokstavsinstanser](/help/forms/using/cm-apis-to-access-letter-instances.md).
+Korrespondenshanteringen innehåller API:er som du kan använda för att hitta och komma åt utkast och skickade brev. Med API:erna kan du söka efter och öppna bokstavsinstanser med hjälp av bokstavsinstans-ID:t eller den användare som sparade eller skickade korrespondensen. Mer information finns i [API:er för åtkomst till bokstavsinstanser](/help/forms/using/cm-apis-to-access-letter-instances.md).
 
-Du kan också navigera till bokstavsinstansen i AEM med CRX DELite. Se [Användardata och datalager](/help/forms/using/correspondence-management-handling-user-data.md#data) för information om lagrade data och databasplats.
+Du kan också navigera till bokstavsinstansen i AEM med CRX DELite. Se [Användardata och datalager](/help/forms/using/correspondence-management-handling-user-data.md#data) för information om lagrade data och lagringsplats.
 
 ### Ta bort användardata {#delete-user-data}
 

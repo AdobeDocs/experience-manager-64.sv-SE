@@ -1,23 +1,26 @@
 ---
 title: Webbkonsol
-seo-title: Webbkonsol
+seo-title: Web Console
 description: Lär dig hur du använder webbkonsolen i AEM.
-seo-description: Lär dig hur du använder webbkonsolen i AEM.
+seo-description: Learn how to use the web console in AEM.
 uuid: 047274ff-4d7d-4c7d-95be-06f363beae2e
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 discoiquuid: f934eb02-1f84-44f2-9f14-3f17250c9a90
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: e03d2075-1d65-4ab3-b1bb-0bae925824c6
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '755'
 ht-degree: 1%
 
 ---
 
-
 # Webbkonsol{#web-console}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Webbkonsolen i AEM baseras på [Apache Felix Web Management Console](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix är en community-satsning för att implementera OSGi R4 Service Platform, som innehåller OSGi-ramverket och standardtjänster.
 
@@ -41,13 +44,13 @@ Konsolen kan nås från `../system/console`; till exempel:
 
 ## Konfiguration {#configuration}
 
-Fliken **Konfiguration** används för att konfigurera OSGi-paket och är därför den underliggande mekanismen för att konfigurera AEM systemparametrar.
+The **Konfiguration** -fliken används för att konfigurera OSGi-paket och är därför den underliggande mekanismen för att konfigurera AEM systemparametrar.
 
 >[!NOTE]
 >
->Mer information finns i [OSGi Configuration with the Web Console](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console).
+>Se [OSGi-konfiguration med webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) för mer information.
 
-Fliken **Konfiguration** kan nås av antingen:
+The **Konfiguration** -fliken kan nås av antingen:
 
 * Listrutan:
 
@@ -106,7 +109,7 @@ Du kan sedan uppdatera parametrarna efter behov och:
 
 ## Paket {#bundles}
 
-Fliken **Paket** är den mekanism som används för att installera OSGi-paket som krävs för AEM. Du kommer åt fliken på något av följande sätt:
+The **Paket** är den mekanism som används för att installera OSGi-paket som krävs för AEM. Du kommer åt fliken på något av följande sätt:
 
 * Listrutan:
 
@@ -124,7 +127,7 @@ På den här fliken kan du:
 
 * **Installera eller uppdatera**
 
-   Du kan **Bläddra** för att hitta filen som innehåller ditt paket och ange om den ska **starta** omedelbart och vid vilken **startnivå**.
+   Du kan **Bläddra** för att hitta filen som innehåller ditt paket och ange om det ska **Starta** omedelbart och **Startnivå**.
 
 * **Läs in igen**
 
@@ -136,7 +139,7 @@ På den här fliken kan du:
 
    Efter en uppdatering kan till exempel både den gamla och den nya versionen fortfarande köras på grund av tidigare referenser. Med det här alternativet kontrolleras och flyttas alla referenser till den nya versionen så att den gamla versionen kan stoppas.
 
-* **Start**
+* **Starta**
 
    Startar ett paket enligt den angivna startnivån.
 
@@ -154,11 +157,11 @@ På den här fliken kan du:
 
 >[!NOTE]
 >
->Efter **Uppdatera** bör du utföra en **uppdatering av paket**.
+>Efter **Uppdatera** vi rekommenderar att du utför en **Uppdatera paket**.
 
 ## Komponenter {#components}
 
-På fliken **Komponenter** kan du aktivera och/eller inaktivera de olika komponenterna. Den kan nås av antingen:
+The **Komponenter** På -fliken kan du aktivera och/eller inaktivera de olika komponenterna. Den kan nås av antingen:
 
 * Listrutan:
 
@@ -181,4 +184,3 @@ Om du klickar på namnet på en viss komponent visas mer information om dess sta
 >Om du aktiverar, eller inaktiverar, en komponent gäller det bara tills AEM/CRX startas om.
 >
 >Startläget definieras i komponentbeskrivningen, som genereras under utveckling och lagras i paketet när paketet skapas.
-

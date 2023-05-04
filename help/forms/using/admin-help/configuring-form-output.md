@@ -1,33 +1,36 @@
 ---
 title: Konfigurera formulärutdata
-seo-title: Konfigurera formulärutdata
+seo-title: Configuring form output
 description: Lär dig hur du konfigurerar formulärutdata.
-seo-description: Lär dig hur du konfigurerar formulärutdata.
+seo-description: Learn how to configure form output.
 uuid: 70aad14e-c845-4ef3-a751-ad8860d5d505
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 17c9b69a-3c6f-47e3-a828-841bb90eba8b
-translation-type: tm+mt
-source-git-commit: a417e571d7c3b8da8f38f3d1ad814610636eabbc
+exl-id: b19cae88-a549-41ba-b4a6-4b065a995296
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 1%
+source-wordcount: '264'
+ht-degree: 0%
 
 ---
 
-
 # Konfigurera formulärutdata{#configuring-form-output}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Ange vilken typ av HTML-utdata som returneras till webbläsaren {#specify-the-type-of-html-output-returned-to-the-web-browser}
 
 1. Klicka på Tjänster > Formulär i administrationskonsolen.
 1. Välj något av följande alternativ i listan Utdatatyp under Formulärutdata:
 
-   **Fullständig HTML:** Återge formuläret med fullständiga HTML-taggar (en komplett HTML-sida). Det här värdet är standardvärdet.
+   **Full HTML:** Om du vill återge formuläret med fullständiga HTML-taggar (en hel HTML-sida). Det här värdet är standardvärdet.
 
-   **Formulärbrödtext:** Återge formuläret inom  `<BODY>` taggar (inte en fullständig HTML-sida).
+   **Formulärbrödtext:** Återge formuläret inom `<BODY>` taggar (inte en fullständig HTML-sida).
 
 1. Klicka på Spara.
 
@@ -39,7 +42,7 @@ ht-degree: 1%
 
    **Server:** Återge PDF forms på programservern.
 
-   **Auto:** Återge PDF-formuläret på den plats som anges av XDP-filens  `dynamicRender` konfigurationsvärde. Det här värdet är standardvärdet.
+   **Auto:** Återge formuläret PDF på den plats som anges av `dynamicRender` XDP-filens konfigurationsvärde. Det här värdet är standardvärdet.
 
 1. Klicka på Spara.
 
@@ -51,9 +54,8 @@ Gör så här för att aktivera funktionen:
 1. Gå till **Tjänster** > **formulär**.
 1. Ange utdatatypen som Formulärbrödtext.
 1. Spara inställningarna.
-1. Deklarera en JavaScript-variabel, __CUSTOM_SCRIPTS_VERSION, i HTML-kodens head-avsnitt och ställ in värdet på 1.
+1. Deklarera en JavaScript-variabel, __CUSTOM_SCRIPTS_VERSION, i huvudsektionen i HTML-koden och ställ in värdet på 1.
 
    >[!NOTE]
    >
    >*Om du vill inaktivera funktionen kan du ta bort JavaScript-variabeln eller ange värdet 0.*
-

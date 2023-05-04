@@ -1,24 +1,27 @@
 ---
 title: Arbeta med fasta operationer och grenar
-seo-title: Arbeta med fasta operationer och grenar
+seo-title: Working with stalled operations and branches
 description: Sidan Installerade åtgärder och sidan Installerade grenar visar de processer som har avstannat.
-seo-description: Sidan Installerade åtgärder och sidan Installerade grenar visar de processer som har avstannat.
+seo-description: The Stalled Operations page and the Stalled Branches page show the processes that have stalled.
 uuid: 5f6202b0-79c2-4c3c-847a-236c0366e60b
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 8c2567f3-7220-436a-b9f2-2824a98c1ccc
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 04a832d5-1ab5-4db3-b185-57fba21eb839
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
 
-
 # Arbeta med fasta operationer och grenar {#working-with-stalled-operations-and-branches}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Sidan Installerade åtgärder och sidan Installerade grenar visar de processer som har avstannat. En process kan hänga sig när ett fel inträffar under eller efter en åtgärd eller på grund av en avsiktlig avbrottsåtgärd i processen:
 
@@ -31,7 +34,7 @@ För varje objekt som inte är installerade visas följande information i listan
 
 **Åtgärdsnamn eller grennamn:** Namnet på åtgärden eller grenen.
 
-**Status:** Alltid STALLED för installerade objekt.
+**Status:** STALLERAD för fasta objekt.
 
 **Fel:** En kort beskrivning av problemet.
 
@@ -39,14 +42,14 @@ För varje objekt som inte är installerade visas följande information i listan
 
 **Processnamn - version:** Namnet på processen som tilldelats i Workbench.
 
-**Stängt datum:** Datum och tid då åtgärden eller grenen stoppades.
+**Stängt den:** Datum och tid då åtgärden eller grenen stoppades.
 
 Du kan göra följande på sidan Installerade åtgärder eller Stängda grenar:
 
 * Välj ett fel om du vill visa information om det. När du väljer ett fel visas sidan Felinformation.
 * Avsluta eller försök med fasta åtgärder eller försök med fasta grenar igen.
 
-## Avslutar eller försöker utföra fasta åtgärder eller grenar {#terminating-or-retrying-stalled-operations-or-branches}
+## Avsluta eller göra om fasta operationer eller förgreningar {#terminating-or-retrying-stalled-operations-or-branches}
 
 På sidan Installerade åtgärder kan du avsluta de processinstanser som visas.
 
@@ -74,7 +77,7 @@ Rutan längst ned på sidan innehåller felinformationen.
 
 Du kan också avsluta eller försöka utföra fasta åtgärder igen, och göra om fasta grenar, från sidan Felinformation.
 
-## Processen avstannar inte när eskaleringsanvändaren inte finns {#process-does-not-stall-when-escalation-user-does-not-exist}
+## Processen stoppas inte när eskaleringsanvändaren inte finns {#process-does-not-stall-when-escalation-user-does-not-exist}
 
 Fel uppstår när åtgärden Tilldela uppgift i AEM användartjänst är konfigurerad att eskalera uppgiften till en annan användare efter en viss tidsperiod, och eskaleringsanvändaren tas bort efter att åtgärden Tilldela uppgift körs men innan eskaleringen sker.
 

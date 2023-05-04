@@ -1,30 +1,33 @@
 ---
 title: Automatisera testning av anpassningsbara formulär
-seo-title: Automatisera testning av anpassningsbara formulär
+seo-title: Automate testing of adaptive forms
 description: Med Calvin kan du skapa testfall i CRXDE och köra gränssnittstester direkt i webbläsaren för att testa dina adaptiva formulär ordentligt.
-seo-description: Med Calvin kan du skapa testfall i CRXDE och köra gränssnittstester direkt i webbläsaren för att testa dina adaptiva formulär ordentligt.
+seo-description: Using Calvin you can create test cases in CRXDE and run UI tests directly in the web browser to thoroughly test your adaptive forms.
 uuid: 2a89d1c0-58f6-4bbf-a367-5fe659851c13
 contentOwner: gtalwar
 content-type: reference
 topic-tags: adaptive_forms, develop
 discoiquuid: 2daf95b6-bf72-4191-bdb7-e17e76b166f3
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: d7406206-d63a-48da-bb95-e62db0f2c8a5
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1259'
-ht-degree: 1%
+source-wordcount: '1264'
+ht-degree: 0%
 
 ---
 
+# Automatisera testning av anpassningsbara formulär {#automate-testing-of-adaptive-forms}
 
-# Automatisera testning av adaptiva formulär {#automate-testing-of-adaptive-forms}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Översikt {#overview}
 
 Anpassningsbara formulär är en väsentlig del av kundinteraktionen. Det är viktigt att testa dina anpassningsbara formulär med varje ändring du gör i dem, till exempel när du distribuerar ett nytt korrigeringspaket eller ändrar en regel i formuläret. Funktionstestning av adaptiva formulär och alla fält i dem kan dock vara långsamma.
 
-Med Calvin kan du automatisera testningen av dina anpassade formulär i webbläsaren. Calvin använder [Hobbes](/help/sites-developing/hobbes.md)-gränssnittet för att köra testerna och har följande verktyg:
+Med Calvin kan du automatisera testningen av dina anpassade formulär i webbläsaren. Calvin använder [Hobbes](/help/sites-developing/hobbes.md)Användargränssnittet för testkörning och innehåller följande verktyg:
 
 * Ett JavaScript-API för att skapa tester.
 * Ett användargränssnitt för att köra tester.
@@ -58,7 +61,7 @@ Med Calvin kan du skapa testfall i CRXDE och köra gränssnittstester direkt i w
    <td><p>Uttrycksregler</p> <p> </p> </td> 
    <td> 
     <ul> 
-     <li>Är uttrycken som är kopplade till formulärobjekt, t.ex. calculate, visible, köra skript efter att ett fält har avslutats, som körs efter att relevanta UI-åtgärder har utförts?<br /> </li> 
+     <li>Är uttrycken som är kopplade till formulärobjekt, t.ex. calculate, visible, köra skript efter att ett fält har avslutats, körts efter att de relevanta UI-åtgärderna har utförts?<br /> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -72,7 +75,7 @@ Med Calvin kan du skapa testfall i CRXDE och köra gränssnittstester direkt i w
    <td><p>Lazy Loading</p> <p> </p> </td> 
    <td> 
     <ul> 
-     <li>När du klickar på flikar (eller något navigeringsobjekt på en panel) hämtas HTML-koden från servern enligt konfigurationen för lazy loading?</li> 
+     <li>När du klickar på flikar (eller något navigeringsobjekt på en panel) hämtas HTML från servern enligt konfigurationen för lazy loading?</li> 
     </ul></td> 
   </tr> 
   <tr> 
@@ -98,7 +101,7 @@ Innan du använder den här artikeln för att skapa testfall måste du känna ti
 Följande exempel visar hur du skapar en testsvit för att testa flera adaptiva formulär. Du måste skapa ett separat testfall för varje formulär som du behöver testa. Genom att följa de här stegen och ändra JavaScript-koden i steg 11 kan du skapa en egen testsvit för att testa dina adaptiva formulär.
 
 1. Gå till CRXDE Lite i webbläsaren: `https://[server]:[port]/crx/de`.
-1. Högerklicka på undermappen /etc/clientlibs och klicka på **[!UICONTROL Create > Create Node]**. Ange ett namn (här afTestRegistration), ange nodtypen som cq:ClientLibraryFolder och klicka på **[!UICONTROL OK]**.
+1. Högerklicka på undermappen /etc/clientlibs och klicka på **[!UICONTROL Create > Create Node]**. Ange ett namn (här afTestRegistration), ange typen av nod som cq:ClientLibraryFolder och klicka på **[!UICONTROL OK]**.
 
    Mappen clientlibs innehåller registreringsaspekten för programmet (JS och Init). Vi rekommenderar att du registrerar alla Hobbes testsvitsobjekt som är specifika för ett formulär i mappen clientlibs.
 
@@ -130,7 +133,7 @@ Följande exempel visar hur du skapar en testsvit för att testa flera adaptiva 
 
 ![1_aftestregistration](assets/1_aftestregistration.png)
 
-1. Högerklicka på testnoden (här **afTestRegistration)** och klicka sedan på **[!UICONTROL Create > Create File]**. Ge filen namnet js.txt och klicka på **[!UICONTROL OK]**.
+1. Högerklicka på testnoden (här) **afTestRegistration)** och sedan klicka **[!UICONTROL Create > Create File]**. Namnge filen js.txt och klicka på **[!UICONTROL OK]**.
 1. Lägg till följande text i filen js.txt:
 
    ```
@@ -138,8 +141,8 @@ Följande exempel visar hur du skapar en testsvit för att testa flera adaptiva 
    js.txt
    ```
 
-1. Klicka på **[!UICONTROL Save All]** och stäng sedan filen js.txt.
-1. Högerklicka på testnoden (här **afTestRegistration)** och klicka på **[!UICONTROL Create > Create File]**. Ge filen namnet init.js och klicka på **[!UICONTROL OK]**.
+1. Klicka **[!UICONTROL Save All]** och stäng sedan filen js.txt.
+1. Högerklicka på testnoden (här) **afTestRegistration)** och klicka **[!UICONTROL Create > Create File]**. Ge filen namnet init.js och klicka på **[!UICONTROL OK]**.
 1. Kopiera följande kod till filen init.js och klicka på **[!UICONTROL Save All]**:
 
    ```
@@ -156,9 +159,9 @@ Följande exempel visar hur du skapar en testsvit för att testa flera adaptiva 
    }(window, window.hobs));
    ```
 
-   Ovanstående kod skapar en testsvit med namnet **Adaptiv form - Demotest**. Om du vill skapa en testsvit med ett annat namn ändrar du namnet.
+   Ovanstående kod skapar en testsvit med namnet **Adaptiv form - Demo-test**. Om du vill skapa en testsvit med ett annat namn ändrar du namnet.
 
-1. Klicka på **[!UICONTROL Create]** > **Skapa nod** för att skapa en nod under mappen clientlib för varje formulär som du vill testa. I det här exemplet används en nod med namnet **testForm** för att testa ett adaptivt formulär med namnet **testForm** `.`Ange följande egenskaper och klicka på **[!UICONTROL OK]**:
+1. Klicka **[!UICONTROL Create]** > **Skapa nod** för att skapa en nod under mappen clientlib för varje formulär som du vill testa. I det här exemplet används en nod med namnet **testForm** testa ett adaptivt formulär med namnet **testForm** `.`Ange följande egenskaper och klicka på **[!UICONTROL OK]**:
 
    * Namn: testForm (ditt formulärnamn)
    * Typ: cq:ClientLibraryFolder
@@ -178,7 +181,7 @@ Följande exempel visar hur du skapar en testsvit för att testa flera adaptiva 
 
 1. Högerklicka på mappen som du har skapat för testformuläret (här testformulär) och välj **[!UICONTROL Create > Create File]**. Namnge filen scriptingTest.js och lägg till följande kod i filen och klicka på **[!UICONTROL Save All.]**
 
-   Om du vill använda följande kod för att testa ett annat adaptivt formulär ändrar du formulärets sökväg och namn i **navigateTo** (raderna 11, 36 och 62) och respektive testfall. Mer information om API:er för att testa olika aspekter av formulär och formulärobjekt finns i [Calvin API:er](https://helpx.adobe.com/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html).
+   Om du vill använda följande kod för att testa ett annat adaptivt formulär ändrar du sökvägen och namnet på formuläret i **navigateTo** (raderna 11, 36 och 62) och respektive testfall. Mer information om API:er för att testa olika aspekter av formulär och formulärobjekt finns i [Calvin-API:er](https://helpx.adobe.com/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html).
 
    ```
    (function(window, hobs) {
@@ -272,7 +275,7 @@ Följande exempel visar hur du skapar en testsvit för att testa flera adaptiva 
     }(window, window.hobs));
    ```
 
-   Testfallet skapas. Fortsätt att köra testfallet för att testa adaptiva formulär via Hobbes. Anvisningar om hur du kör testfall finns i [Testa gränssnittet med automatiserade tester](/help/sites-developing/hobbes.md).
+   Testfallet skapas. Fortsätt att köra testfallet för att testa adaptiva formulär via Hobbes. Anvisningar om hur du kör testfall finns i [Testa användargränssnittet med automatiserade tester](/help/sites-developing/hobbes.md).
 
 Du kan också installera paketet i den bifogade filen SampleTestPackage.zip för att få samma resultat som i stegen som förklaras i exemplet: Skapa en testsvit för ett adaptivt formulär med Hobbes som testramverk.
 
@@ -337,4 +340,3 @@ Stegen för testning av AEM adaptiva formulär liknar stegen för testning av AE
   </tr> 
  </tbody> 
 </table>
-

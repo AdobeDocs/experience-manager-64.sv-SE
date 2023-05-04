@@ -1,31 +1,34 @@
 ---
 title: Skapa ditt första anpassningsbara formulär
-seo-title: Skapa ditt första anpassningsbara formulär
-description: 'Lär dig skapa interaktiva och responsiva blanketter i affärsklass. '
-seo-description: 'Lär dig skapa interaktiva och responsiva blanketter i affärsklass. '
+seo-title: Create your first adaptive form
+description: Lär dig skapa interaktiva och responsiva blanketter i affärsklass.
+seo-description: Learn to create business class, interactive, and responsive forms.
 page-status-flag: de-activated
 uuid: 62f5222c-c787-46be-95fa-a701aa0e6115
 topic-tags: introduction
 discoiquuid: 4e247e70-c50a-4571-8ac1-fbbb07100262
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: f634a73a-e720-4a38-a459-6ddbe4fdc565
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '986'
 ht-degree: 0%
 
 ---
 
+# Skapa ditt första anpassningsbara formulär {#do-not-publish-create-your-first-adaptive-form}
 
-# Skapa ditt första adaptiva formulär {#do-not-publish-create-your-first-adaptive-form}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ![01-create-first-adaptive-form-hero-image](assets/01-create-first-adaptive-form-hero-image.png)
 
 ## Introduktion {#introduction}
 
-Söker du en mobilvänlig **formulärupplevelse** som förenklar registrering, ökar engagemanget och minskar handläggningstiden, **adaptiva formulär** passar perfekt för dig. Adaptiva formulär ger en mobil, automatiserad och analysvänlig formulärupplevelse. Ni kan enkelt skapa formulär som är responsiva och interaktiva till sin natur, använda automatiserade processer för att minska administrativa och repetitiva uppgifter och använda dataanalys för att förbättra och personalisera den upplevelse kunderna har med era formulär.
+Söker du en mobilvänlig **formulärupplevelse** som förenklar registrering, ökar engagemanget och minskar handläggningstiden, **anpassningsbara formulär** passar dig perfekt. Adaptiva formulär ger en mobil, automatiserad och analysvänlig formulärupplevelse. Ni kan enkelt skapa formulär som är responsiva och interaktiva till sin natur, använda automatiserade processer för att minska administrativa och repetitiva uppgifter och använda dataanalys för att förbättra och personalisera den upplevelse kunderna har med era formulär.
 
-Den här självstudiekursen ger ett komplett ramverk för att skapa ett anpassningsbart formulär. Självstudiekursen är indelad i ett användningsfall och i flera guider. Varje guide hjälper dig att lära dig och lägga till nya funktioner i det adaptiva formulär som skapas i den här kursen. Du har ett fungerande anpassningsbart formulär efter varje guide. Guiden för att skapa ett anpassat formulär är tillgänglig. Efterföljande guider kommer snart att vara tillgängliga. I slutet av den här självstudiekursen kan du:
+Den här självstudiekursen ger ett komplett ramverk för att skapa ett anpassningsbart formulär. Självstudiekursen är indelad i ett användningsfall och flera guider. Varje guide hjälper dig att lära dig mer och lägga till nya funktioner i det adaptiva formulär som skapas i kursen. Du har ett fungerande anpassningsbart formulär efter varje guide. Guiden för att skapa ett anpassat formulär är tillgänglig. Efterföljande guider kommer snart att vara tillgängliga. I slutet av den här självstudiekursen kan du:
 
 * Skapa ett anpassningsbart formulär och en formulärdatamodell.
 * Formatera den anpassningsbara formen.
@@ -43,8 +46,8 @@ Webbplatsen körs på Adobe Experience Manager (AEM) och använder AEM Forms fö
 ### Förutsättning {#prerequisite}
 
 * Konfigurera en AEM författarinstans.
-* Installera [AEM Forms add-on](/help/forms/using/installing-configuring-aem-forms-osgi.md) på författarinstansen.
-* Hämta JDBC-databasdrivrutin (JAR-fil) från databasprovidern. Exemplen i självstudien är baserade på MySQL-databasen och använder Oraclets [JDBC-databasdrivrutin för MySQL](https://dev.mysql.com/downloads/connector/j/5.1.html).
+* Installera [AEM Forms-tillägg](/help/forms/using/installing-configuring-aem-forms-osgi.md) on author instance.
+* Hämta JDBC-databasdrivrutin (JAR-fil) från databasprovidern. Exemplen i självstudien är baserade på MySQL-databasen och använder Oraclets [MySQL JDBC-databasdrivrutin](https://dev.mysql.com/downloads/connector/j/5.1.html).
 
 * Konfigurera en databas som innehåller kunddata med fälten som visas nedan. En databas behövs inte för att skapa ett anpassningsbart formulär. I den här självstudien används en databas för att visa formulärdatamodell och beständighetsfunktioner i AEM Forms.
 
@@ -54,7 +57,7 @@ Webbplatsen körs på Adobe Experience Manager (AEM) och använder AEM Forms fö
 
 ![03-create-adaptive-form-main-image_small_new](assets/03-create-adaptive-form-main-image_small_new.png)
 
-Adaptiva former är ny generation, engagerande, responsiva, dynamiska och anpassningsbara till sin natur. Med hjälp av anpassningsbara formulär kan ni leverera personaliserade och målinriktade upplevelser. AEM Forms har en WYSIWYG-redigerare som du kan dra och släppa för att skapa anpassningsbara formulär. Mer information om adaptiva formulär finns i [Introduktion till utveckling av adaptiva formulär](/help/forms/using/introduction-forms-authoring.md).
+Adaptiva former är ny generation, engagerande, responsiva, dynamiska och anpassningsbara till sin natur. Med hjälp av anpassningsbara formulär kan ni leverera personaliserade och målinriktade upplevelser. AEM Forms har en WYSIWYG-redigerare som du kan dra och släppa för att skapa anpassningsbara formulär. Mer information om adaptiva formulär finns i [Introduktion till utveckling av anpassningsbara formulär](/help/forms/using/introduction-forms-authoring.md).
 
 Mål:
 
@@ -63,7 +66,7 @@ Mål:
 * Skapa en Skicka-åtgärd för att skicka ett e-postmeddelande med formulärinnehåll
 * Förhandsgranska och skicka ett anpassat formulär
 
-   [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](create-adaptive-form.md)
+[ ](create-adaptive-form.md)
 
 ## Steg 2: Skapa formulärdatamodell {#step-create-form-data-model}
 
@@ -79,9 +82,9 @@ Mål:
 * Konfigurera läs- och skrivtjänster för formulärdatamodellen
 * Testa formulärdatamodell och konfigurerade tjänster med testdata
 
-   [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](create-form-data-model.md)
+[ ](create-form-data-model.md)
 
-## Steg 3: Använd regler för anpassningsbara formulärfält {#step-apply-rules-to-adaptive-form-fields}
+## Steg 3: Tillämpa regler på anpassningsbara formulärfält {#step-apply-rules-to-adaptive-form-fields}
 
 ![07-apply-rules-to-adaptive-form_small](assets/07-apply-rules-to-adaptive-form_small.png)
 
@@ -92,11 +95,11 @@ Mål:
 * Skapa och tillämpa regler för anpassade formulärfält
 * Använd regler för att aktivera datamodelltjänster för formulär för att uppdatera data till databasen
 
-## Steg 4: Formatera ditt adaptiva formulär {#step-style-your-adaptive-form}
+## Steg 4: Formatera ditt anpassningsbara formulär {#step-style-your-adaptive-form}
 
 ![09-Style-your-adaptive-form_small](assets/09-Style-your-adaptive-form_small.png)
 
-Anpassade formulär innehåller teman och en [redigerare](/help/forms/using/themes.md) för att skapa teman för de adaptiva formulären. Ett tema innehåller formatinformation för komponenter och paneler, och du kan återanvända ett tema i olika former. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder temat i formuläret återspeglas det angivna formatet i motsvarande komponenter i formuläret. Anpassningsbara formulär har även stöd för infogad formatering för format som är specifika för ett formulär.
+Adaptiva formulär ger teman och en [redigerare](/help/forms/using/themes.md) för att skapa teman för de adaptiva formulären. Ett tema innehåller formatinformation för komponenter och paneler, och du kan återanvända ett tema i olika former. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder temat i formuläret återspeglas det angivna formatet i motsvarande komponenter i formuläret. Anpassningsbara formulär har även stöd för infogad formatering för format som är specifika för ett formulär.
 
 Mål:
 
@@ -104,7 +107,7 @@ Mål:
 * Skapa ett tema för anpassningsbara formulär med temaredigeraren
 * Använda webbteckensnitt i ett anpassat tema
 
-   [ ![see-the-guide-sm](assets/see-the-guide-sm.png)](style-your-adaptive-form.md)
+[ ](style-your-adaptive-form.md)
 
 ## Steg 5: Testa ditt adaptiva formulär {#step-test-your-adaptive-form}
 
@@ -123,9 +126,8 @@ Mer information om SDK finns i [Använda automatiska tester med AEM adaptiv form
 
 ![12-publish-your-adaptive-form-_small](assets/12-publish-your-adaptive-form-_small.png)
 
-Du kan publicera anpassningsbara formulär som ett fristående formulär (enkelsidigt program), inkludera AEM [webbplatssida](/help/forms/using/embed-adaptive-form-aem-sites.md) eller lista på en AEM webbplats med [Forms Portal](/help/forms/using/introduction-publishing-forms.md).
+Du kan publicera anpassningsbara formulär som ett fristående formulär (single page application), som kan inkluderas i AEM [webbplatssida](/help/forms/using/embed-adaptive-form-aem-sites.md), eller lista på en AEM webbplats med [Forms Portal](/help/forms/using/introduction-publishing-forms.md).
 
 Mål:
 
 * Publicera det adaptiva formuläret som ett program med en enda sida
-

@@ -1,24 +1,27 @@
 ---
 title: Extraherar strängar för översättning
-seo-title: Extraherar strängar för översättning
+seo-title: Extracting Strings for Translating
 description: Använd xgettext-maven-plugin för att extrahera strängar från källkoden som behöver översättas
-seo-description: Använd xgettext-maven-plugin för att extrahera strängar från källkoden som behöver översättas
+seo-description: Use xgettext-maven-plugin to extract strings from your source code that need translating
 uuid: 2c586ecb-8494-4f8f-b31a-1ed73644d611
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: components
 discoiquuid: 034f70f1-fbd2-4f6b-b07a-5758f0461a5b
-translation-type: tm+mt
-source-git-commit: a39d0c895a9e3c8ef418100a153d29b79dda6e6a
+exl-id: 50c2479b-72b6-42fa-8e48-45c8e9596161
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '512'
 ht-degree: 0%
 
 ---
 
-
 # Extraherar strängar för översättning{#extracting-strings-for-translating}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Använd xgettext-maven-plugin för att extrahera strängar från källkoden som behöver översättas. Plugin-programmet Maven extraherar strängar till en XLIFF-fil som du skickar för översättning. Strängar extraheras från följande platser:
 
@@ -69,9 +72,9 @@ Mönsterdelen av en regel används för att matcha namnen på de filer som ska i
 |---|---|
 | / | Anger en JCR-sökväg. Det innebär att det här prefixet matchar filer under katalogen jcr_root. |
 | &amp;ast; | Anger en vanlig fil i filsystemet. |
-| inga | Inget prefix, eller ett mönster som börjar med en mapp eller ett filnamn, visar att filen är en vanlig fil i filsystemet. |
+| ingen | Inget prefix, eller ett mönster som börjar med en mapp eller ett filnamn, anger att filen är en vanlig fil i filsystemet. |
 
-Vid användning inom ett mönster anger tecknet / en underkatalog och &amp;ast; tecken matchar alla. I följande tabell visas flera exempelregler.
+Vid användning i ett mönster anger tecknet / en underkatalog och det &amp;sista; tecken matchar alla. I följande tabell visas flera exempelregler.
 
 <table> 
  <tbody> 
@@ -100,7 +103,7 @@ Vid användning inom ett mönster anger tecknet / en underkatalog och &amp;ast; 
  </tbody> 
 </table>
 
-### Extraherar strängarna {#extracting-the-strings}
+### Extrahera strängarna  {#extracting-the-strings}
 
 ingen POM:
 
@@ -137,10 +140,9 @@ mvn xgettext:extract
 ### Utdatafiler {#output-files}
 
 * `raw.xliff`: extraherade strängar
-* `warn.log`: varningar (om sådana finns), om  `CQ.I18n.getMessage()` API används felaktigt. De behöver alltid en fix och sedan en omstart.
+* `warn.log`: varningar (om sådana finns), om `CQ.I18n.getMessage()` API används felaktigt. De behöver alltid en fix och sedan en omstart.
 
 * `parserwarn.log`: parservarningar (om sådana finns), t.ex. problem med js-parsern
 * `potentials.xliff`: &quot;potentiella&quot; kandidater som inte extraheras, men som kan vara läsbara strängar som behöver översättas (kan ignoreras, men ändå skapa en enorm mängd falskt positiva resultat)
 * `strings.xliff`: förenklad xliff-fil, som ska importeras till ALF
 * `backrefs.txt`: möjliggör snabb sökning av källkodsplatser för en given sträng
-

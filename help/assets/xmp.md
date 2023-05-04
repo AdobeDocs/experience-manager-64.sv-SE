@@ -1,30 +1,34 @@
 ---
 title: XMP metadata
-description: Läs mer om metadatastandarden för XMP (Extensible Metadata Platform) som används av [!DNL Experience Manager] Resurser för metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för en mängd olika program.
+description: Läs mer om metadatastandarden XMP (Extensible Metadata Platform) som används av [!DNL Experience Manager] Resurser för metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för en mängd olika program.
 contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: 32c4ca3d-2e9e-46a3-b4c7-70dcc50daaaa
-source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '810'
-ht-degree: 19%
+source-wordcount: '846'
+ht-degree: 18%
 
 ---
 
 # XMP-metadata {#xmp-metadata}
 
-XMP (Extensible Metadata Platform) är den metadatastandard som används av [!DNL Experience Manager] Assets för all metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för en mängd olika program.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-Förutom universell metadatakodning som kan bäddas in i alla filformat, innehåller XMP en omfattande [innehållsmodell](xmp.md#xmp-core-concepts) och [stöds av Adobe](xmp.md#advantages-of-xmp) och andra företag, så att användare av XMP i kombination med [!DNL Experience Manager] Assets har en kraftfull plattform att bygga vidare på.
+XMP (Extensible Metadata Platform) är den metadatastandard som används av [!DNL Experience Manager] Resurser för all metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för en mängd olika program.
 
-[XMP-specifikationen](https://www.adobe.com/devnet/xmp.html) är tillgänglig från Adobe.
+Förutom universell metadatakodning som kan bäddas in i alla filformat har XMP [innehållsmodell](xmp.md#xmp-core-concepts) och är [stöds av Adobe](xmp.md#advantages-of-xmp) och andra företag, så att användare av XMP i kombination med [!DNL Experience Manager] Resurserna har en kraftfull plattform att bygga vidare på.
+
+The [XMP](https://www.adobe.com/devnet/xmp.html) är tillgängligt från Adobe.
 
 ## Vad är XMP? {#what-is-xmp}
 
 [!DNL Experience Manager] Resurserna stöder XMP - Extensible Metadata Platform som leds av Adobe. XMP är en standard för bearbetning och lagring av standardiserade och egna metadata i digitala resurser. XMP är en standard som gör att flera program kan arbeta effektivt med metadata.
 
-Produktionsproffs kan t.ex. använda det inbyggda XMP-stödet i Adobe-program för att skicka information till flera filformat. Resurskatalogen [!DNL Experience Manager] extraherar XMP metadata och använder den för att hantera innehållets livscykel och ger möjlighet att skapa automatiserade arbetsflöden.
+Produktionsproffs kan t.ex. använda det inbyggda XMP-stödet i Adobe-program för att skicka information till flera filformat. The [!DNL Experience Manager] Resurslagringsplatsen extraherar XMP metadata och använder den för att hantera innehållets livscykel och erbjuder möjlighet att skapa automatiserade arbetsflöden.
 
 XMP standardiserar hur metadata definieras, skapas och bearbetas genom att tillhandahålla en datamodell, en lagringsmodell och scheman. Alla dessa begrepp beskrivs i detta avsnitt.
 
@@ -69,7 +73,7 @@ I följande avsnitt beskrivs de centrala begreppen för XMP, inklusive namnutrym
 Ett XMP är en uppsättning egenskapsnamn i ett vanligt XML-namnutrymme som innehåller\
 datatypen och beskrivande information. Ett XMP-schema identifieras av dess XML-namnområdes-URI. Om du använder namnutrymmen förhindras konflikter mellan egenskaper i olika scheman som har samma namn men en annan betydelse.
 
-Egenskapen **Creator** i två oberoende utformade scheman kan till exempel betyda den person som skapade resursen eller det program som skapade resursen (till exempel Adobe Photoshop).
+Till exempel **Skapare** i två oberoende utformade scheman kan betyda den person som skapade resursen eller det kan betyda programmet som skapade resursen (till exempel Adobe Photoshop).
 
 ### Egenskaper och värden {#properties-and-values}
 
@@ -84,4 +88,4 @@ En vanlig delmängd som används av många Adobe-program kan till exempel vara f
 
 ### Språkalternativ {#language-alternatives}
 
-XMP ger dig möjlighet att lägga till en **xml:lang**-egenskap i textegenskaper för att ange textens språk.
+XMP ger dig möjlighet att lägga till en **xml:lang** egenskapen till textegenskaper för att ange textens språk.

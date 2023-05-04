@@ -1,40 +1,43 @@
 ---
 title: Konfigurera kontomiljön
-seo-title: Konfigurera kontomiljön
+seo-title: Configuring your account environment
 description: AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön
-seo-description: AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön
+seo-description: AEM provides you with the capability to configure your account and certain aspects of the author environment
 uuid: 01e76771-9ac8-4919-9e50-0a63826177d1
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 6afbc889-c613-40e6-8a25-1570dff32d60
-translation-type: tm+mt
-source-git-commit: cfa09d2f1a78eac609cb6df7817234559c8d26dc
+exl-id: f620e85e-8c77-41a3-a238-9b93c819909d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 2%
+source-wordcount: '517'
+ht-degree: 1%
 
 ---
 
-
 # Konfigurera kontomiljön{#configuring-your-account-environment}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön.
 
-Med alternativet [Användare](/help/sites-authoring/user-properties.md#user-settings) i [huvudet](/help/sites-authoring/basic-handling.md#the-header) och den associerade dialogrutan [Mina inställningar](#my-preferences) kan du ändra dina användaralternativ.
+Använda [Användare](/help/sites-authoring/user-properties.md#user-settings) i [header](/help/sites-authoring/basic-handling.md#the-header) och associerade [Mina inställningar](#my-preferences) kan du ändra dina användaralternativ.
 
 ## Användarinställningar {#user-settings}
 
-Dialogrutan **Användare**-inställningar ger dig tillgång till:
+The **Användare** dialogrutan ger dig tillgång till:
 
 * Personifiera som
 
-   * Med funktionen [Personifiera som](/help/sites-administering/security.md#impersonating-another-user) kan en användare arbeta för en annan användares räkning.
+   * Med [Personifiera som](/help/sites-administering/security.md#impersonating-another-user) funktioner som en användare kan arbeta för en annan användares räkning.
 
 * Profil
 
-   * Ger en praktisk länk till dina [användarinställningar](/help/sites-administering/security.md))
+   * En praktisk länk till [användarinställningar](/help/sites-administering/security.md))
 
 * [Mina inställningar](/help/sites-authoring/user-properties.md#my-preferences)
 
@@ -44,13 +47,13 @@ Dialogrutan **Användare**-inställningar ger dig tillgång till:
 
 ## Mina inställningar {#my-preferences}
 
-Dialogrutan **Mina inställningar** är tillgänglig via alternativet [Användare](/help/sites-authoring/user-properties.md#user-settings) i sidhuvudet.
+The **Mina inställningar** öppnas via [Användare](/help/sites-authoring/user-properties.md#user-settings) i sidhuvudet.
 
 Varje användare kan ange vissa egenskaper för sig själv.
 
 ![screen_shot_2018-03-20at102118](assets/screen_shot_2018-03-20at102118.png)
 
-* **Språk:**
+* **Språk**
 
    Detta definierar vilket språk som ska användas för redigeringsmiljöns användargränssnitt. Välj önskat språk i listan.
 
@@ -60,7 +63,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
    Detta definierar beteendet för att öppna fönster. Välj något av följande:
 
-   * **Flera fönster**  (standard)
+   * **Flera fönster** (Standard)
 
       * Sidorna öppnas i ett nytt fönster.
    * **Ett fönster**
@@ -103,9 +106,8 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Använd klassisk redigeringsmiljö**
 
-   Det här alternativet aktiverar [klassisk sidredigering i användargränssnittet](/help/sites-classic-ui-authoring/home.md). Standardgränssnittet används som standard.
+   Det här alternativet aktiverar [klassiskt användargränssnitt](/help/sites-classic-ui-authoring/home.md)-baserad framtagning av sidor. Standardgränssnittet används som standard.
 
 * **Aktivera startsidan för resurser**
 
    Det här alternativet är endast tillgängligt om systemadministratören har aktiverat Assets Home Page Experience för hela organisationen.
-

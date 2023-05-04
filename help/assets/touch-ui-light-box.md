@@ -1,20 +1,24 @@
 ---
 title: Ljuslåda
-description: Lär dig mer om ljuslådan i [!DNL Experience Manager] Resurser.
+description: Läs mer om ljuslådan i [!DNL Experience Manager] Resurser.
 contentOwner: AG
 feature: Developer Tools,Renditions
 role: User,Admin
 exl-id: acb61924-9b71-474a-833d-e441c0b83cc7
-source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
 
 # Ljuslåda {#lightbox}
 
-Lär dig mer om ljuslådan i [!DNL Experience Manager] Assets.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+Läs mer om ljuslådan i [!DNL Experience Manager] Resurser.
 
 Ljuslådan är en särskild typ av samling som ger enkel åtkomst till resurser. Du kan snabbt komma åt Ljuslådan för att lägga till eller ta bort resurser. Det fungerar som ditt personliga bildgalleri.
 
@@ -23,13 +27,13 @@ Om du använder Adobe Experience Manager Assets skapas ljuslådan automatiskt n�
 ## Lägga till resurser i ljuslådan {#adding-assets-to-lightbox}
 
 1. I Assets-användargränssnittet väljer du de resurser som du vill lägga till i ljuslådan.
-1. Dra resurserna till zonen **[!UICONTROL Drop in Lightbox]**. Släpp när Dropzone blir aktivt och etiketten ändras till **[!UICONTROL Drop to Add]**.
+1. Dra resurserna till **[!UICONTROL Drop in Lightbox]** zon. Släpp när Dropzone blir aktiv och etiketten ändras till **[!UICONTROL Drop to Add]**.
 
    ![add_to_lightbox](assets/add_to_lightbox.png)
 
-1. Tryck/klicka på **[!UICONTROL Add]** i dialogrutan och stäng den sedan för att slutföra processen. De valda resurserna läggs till i ljuslådan.
+1. Tryck/klicka i dialogrutan **[!UICONTROL Add]** och stäng den för att slutföra processen. De valda resurserna läggs till i ljuslådan.
 1. Om du vill visa ljuslådan går du till konsolen Samlingar.
-1. Tryck/klicka på **[!UICONTROL Lightbox]** för att visa resurserna i den.
+1. Tryck/klicka **[!UICONTROL Lightbox]** för att visa resurserna i den.
 
    >[!NOTE]
    >
@@ -39,5 +43,5 @@ Om du använder Adobe Experience Manager Assets skapas ljuslådan automatiskt n�
 
 1. Gå till konsolen Samlingar, tryck/klicka på Ljus för att visa dess resurser.
 1. Markera de resurser som du vill ta bort.
-1. Tryck/klicka på **[!UICONTROL Remove]** i verktygsfältet.
-1. Tryck/klicka på **[!UICONTROL Remove]** i dialogrutan för att bekräfta borttagningsåtgärden. Resurserna tas bort från ljuslådan.
+1. Tryck/klicka i verktygsfältet **[!UICONTROL Remove]**.
+1. Tryck/klicka i dialogrutan **[!UICONTROL Remove]** för att bekräfta borttagningsåtgärden. Resurserna tas bort från ljuslådan.

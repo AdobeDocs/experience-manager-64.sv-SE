@@ -5,26 +5,30 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin,Leader
 exl-id: 3e22e8e4-3675-4d6d-94f4-fc1a4d4801e8
-source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '353'
-ht-degree: 7%
+source-wordcount: '389'
+ht-degree: 6%
 
 ---
 
 # Stöd för IPTC-metadata {#support-for-iptc-metadata}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 Läs om hur Adobe Experience Manager Assets stöder IPTC-metadata, kreativa betyg och nyckelord som läggs till i resurser via Adobe Bridge och andra Creative-program.
 
-Adobe Experience Manager Assets har stöd för IPTC-metadatastandarden som används ofta för att beskriva resurser. På så sätt kan [!DNL Experience Manager Assets] förbättra accepterandet av bilder från olika parter, bland annat fotografer, byråer, museer och så vidare.
+Adobe Experience Manager Assets har stöd för IPTC-metadatastandarden som används ofta för att beskriva resurser. Den här vägen [!DNL Experience Manager Assets] ger bättre acceptans för bilderna hos olika parter, inklusive fotografer, byråer, bibliotek, museer osv.
 
 Standardschemat för metadata för mediefiler innehåller nu metadatamodeller för IPTC Core och IPTC Extension för att definiera omfattande metadataegenskaper som gör att användare kan lägga till exakta och tillförlitliga data om personer, platser och produkter som visas i en bild. Det har även stöd för datum, namn och identifierare för att skapa bilden samt ett flexibelt sätt att uttrycka rättighetsinformation.
 
 Egenskapssidan för resurser innehåller nu separata flikar för att visa IPTC-kärnan och IPTC-tilläggsmetadata i redigerbara fält.
 
 1. Välj en bild i användargränssnittet Resurser.
-1. Klicka på eller tryck på ikonen **[!UICONTROL Properties]** i verktygsfältet.
-1. Klicka/tryck på fliken **[!UICONTROL IPTC]** på sidan Egenskaper för att visa IPTC-metadata för resursen.
+1. Klicka eller tryck på **[!UICONTROL Properties]** -ikonen i verktygsfältet.
+1. Klicka/tryck på knappen **[!UICONTROL IPTC]** om du vill visa IPTC-metadata för resursen.
 1. Redigera IPTC-metadataegenskaperna efter behov.
 
    ![iptc_tab](assets/iptc_tab.png)
@@ -45,6 +49,6 @@ Den här egenskapen är dock för närvarande inte indexerad för att undvika ko
 
 ## Stöd för nyckelord {#keyword-support}
 
-På fliken **[!UICONTROL IPTC]** på sidan Egenskaper visas även nyckelord som har lagts till i resurser via Adobe Bridge och andra Creative-program. Du kan också redigera dessa nyckelord och lägga till fler nyckelord från fliken **[!UICONTROL IPTC]**.
+The **[!UICONTROL IPTC]** på egenskapssidan visas även nyckelord som har lagts till i resurser via Adobe Bridge och andra Creative-program. Du kan även redigera dessa nyckelord och lägga till fler nyckelord från **[!UICONTROL IPTC]** -fliken.
 
-![keywords](assets/keywords.png)
+![nyckelord](assets/keywords.png)

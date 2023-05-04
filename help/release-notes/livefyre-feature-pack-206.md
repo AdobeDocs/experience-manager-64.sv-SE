@@ -8,14 +8,18 @@ products: SG_EXPERIENCEMANAGER/6.4
 contentOwner: alba
 discoiquuid: d445bcfb-7712-472f-bfb4-a8811c2bc4f1
 exl-id: e09d2d59-41f0-4cf2-bcf3-ec3dbc3b8474
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 1%
+source-wordcount: '679'
+ht-degree: 0%
 
 ---
 
 # Versionsinformation om Livefyre Feature Pack 2.0.6 {#livefyre-feature-pack-release-notes}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Versionsinformation {#release-information}
 
@@ -23,7 +27,7 @@ ht-degree: 1%
 |--- |--- |
 | Version | 2.0.6 |
 | Typ | Funktionsrelease |
-| Date | 31 augusti 2018 |
+| Datum | 31 augusti 2018 |
 | Hämta URL | Kontakta administratören |
 | Kompatibilitet (*) | AEM 6.4 SP1, 6.4, 6.3 GA och 6.2 SP1 |
 | Beskrivning | Med det här paketet kan du integrera Livefyres branschledande kurationsfunktioner med AEM, så att du kan publicera användaranpassat användargenererat innehåll (UGC) från sociala nätverk till webbplatsen på några minuter. |

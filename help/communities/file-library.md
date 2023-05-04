@@ -1,57 +1,60 @@
 ---
 title: Filbiblioteksfunktion
-seo-title: Filbiblioteksfunktion
+seo-title: File Library Feature
 description: Med funktionen Filbibliotek kan besökare på den inloggade webbplatsen överföra, hantera och hämta filer
-seo-description: Med funktionen Filbibliotek kan besökare på den inloggade webbplatsen överföra, hantera och hämta filer
+seo-description: The File Library feature lets signed-in site visitors upload, manage, and download files
 uuid: 7da94703-8334-4c02-ba2a-55b5cde22e6c
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 discoiquuid: cdcae09f-c3cb-471e-863f-b33130e9df0f
-translation-type: tm+mt
-source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+exl-id: c72b246d-442e-4841-810d-1045e83f60f9
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
-
 # Filbiblioteksfunktion {#file-library-feature}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Introduktion {#introduction}
 
-Filbiblioteksfunktionen är en plats där besökare på den inloggade webbplatsen (community-medlemmar) kan överföra, hantera och hämta filer inom communitywebbplatsen.
+Funktionen för filbibliotek är en plats där besökare på den inloggade webbplatsen (community-medlemmar) kan överföra, hantera och hämta filer inom communitywebbplatsen.
 
 Detta avsnitt i dokumentationen beskriver
 
 * Lägga till filbiblioteksfunktionen på en AEM
-* Konfigurationsinställningar för komponenten `File Library`
+* Konfigurationsinställningar för `File Library` komponent
 
 ## Lägga till ett filbibliotek på en sida {#adding-a-file-library-to-a-page}
 
-Om du vill lägga till en `File Library`-komponent på en sida i redigeringsläge letar du reda på komponenten
+Lägga till en `File Library` till en sida i redigeringsläge, leta reda på komponenten
 
 * `Communities / File Library`
 
 och dra den till rätt plats på en sida.
 
-Mer information finns på [Grunderna för communitykomponenter](basics.md).
+Nödvändig information finns på [Grunderna för communitykomponenter](basics.md).
 
-När de [nödvändiga klientbiblioteken](essentials-file-library.md#essentials-for-client-side) inkluderas visas `File Library`-komponenten så här:
+När [nödvändiga bibliotek på klientsidan](essentials-file-library.md#essentials-for-client-side) ingår så här `File Library` visas:
 
 ![chlimage_1-430](assets/chlimage_1-430.png)
 
 ## Konfigurerar filbibliotek {#configuring-file-library}
 
-Markera den monterade `File Library`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `File Library` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
 
 ![chlimage_1-431](assets/chlimage_1-431.png) ![chlimage_1-432](assets/chlimage_1-432.png)
 
 ### Fliken Kommentarer {#comments-tab}
 
-Under fliken **[!UICONTROL Comments]** anger du om och hur kommentarer för överförda filer ska visas:
+Under **[!UICONTROL Comments]** anger du om och hur kommentarer för överförda filer ska visas:
 
 * **[!UICONTROL Allow Comments on Files]**
 Om det här alternativet är markerat tillåts kommentarer för överförda filer. Standard är avmarkerat.
@@ -88,14 +91,14 @@ Om Tillåt taggning är markerat begränsas det antal föreslagna taggar som ska
 Om det här alternativet är markerat aktiveras möjligheten att rösta efter en fil. Standard är avmarkerat.
 
 * **[!UICONTROL Allow Following]**
-Om det här alternativet är markerat kan du inkludera följande funktion för bloggartiklar, som gör att medlemmar kan få  [](notifications.md) meddelanden om nya inlägg. Standard är avmarkerat.
+Om du markerar det här alternativet inkluderar du följande funktion för bloggartiklar, som gör att medlemmar kan [meddelad](notifications.md) av nya tjänster. Standard är avmarkerat.
 
 * **[!UICONTROL Allow Threaded Replies]**
 Om det här alternativet är markerat tillåts svar på publicerade kommentarer. Standard är avmarkerat.
 
 ### Fliken Användarmoderering {#user-moderation-tab}
 
-Konfigurera moderering av kommentarer under fliken **[!UICONTROL User Moderation]**, om kommentarer tillåts:
+Under **[!UICONTROL User Moderation]** -fliken, konfigurera moderering av kommentarer, om kommentarer tillåts:
 
 * **[!UICONTROL Pre-Moderation]**
 Om det här alternativet är markerat måste kommentarerna godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
@@ -128,8 +131,8 @@ Ange hur många gånger en kommentar måste flaggas innan den döljs för den of
 
 ## Ytterligare information {#additional-information}
 
-Mer information finns på sidan [File Library Essentials](essentials-file-library.md) för utvecklare.
+Mer information finns på [Grundläggande om filbibliotek](essentials-file-library.md) för utvecklare.
 
-moderering av publicerade ämnen och kommentarer finns i [Moderating User Generated Content](moderate-ugc.md).
+moderering av inlägg och kommentarer finns i [Modererar användargenererat innehåll](moderate-ugc.md).
 
 Information om hur du taggar publicerade ämnen och kommentarer finns i [Tagga användargenererat innehåll](tag-ugc.md).

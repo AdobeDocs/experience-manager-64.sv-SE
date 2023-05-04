@@ -1,23 +1,26 @@
 ---
 title: Formateringskonstruktioner för adaptiva formulär
-seo-title: Formateringskonstruktioner för adaptiva formulär
+seo-title: Styling constructs for adaptive forms
 description: Använd LESS-ramverket för att anpassa utseendet på adaptiva formulär.
-seo-description: Använd LESS-ramverket för att anpassa utseendet på adaptiva formulär.
+seo-description: Use LESS framework to customize appearance of adaptive forms.
 uuid: 45590fd5-6438-4bb3-8ef8-f0b8f9da3ae9
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: d28997b4-49d2-46da-bfa1-ed6876a65639
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 8d7d4a7a-8899-4ad5-9ca8-b961f3f15528
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2186'
-ht-degree: 2%
+source-wordcount: '2206'
+ht-degree: 0%
 
 ---
 
-
 # Formateringskonstruktioner för adaptiva formulär {#styling-constructs-for-adaptive-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Förutsättningar {#prerequisites}
 
@@ -25,7 +28,7 @@ Kunskap om CSS och LESS-ramverket.
 
 ## Vad kan anpassas {#what-can-be-customized}
 
-I artikeln listas allmänt tillgängliga CSS-klasser för adaptiva formulär. Du kan använda dessa klasser för att formatera olika komponenter i ett anpassat formulär. Formateringen av redigeringskomponenter, t.ex. dialogrutor och statusfält som visar varningar, ligger utanför artikelns omfång. Använd dessa formateringskonstruktioner om du bara vill skapa format (med CSS eller Less) när du inte kan formatera komponenter med [temaredigeraren](themes.md).
+I artikeln listas allmänt tillgängliga CSS-klasser för adaptiva formulär. Du kan använda dessa klasser för att formatera olika komponenter i ett anpassat formulär. Formateringen av redigeringskomponenter, t.ex. dialogrutor och statusfält som visar varningar, ligger utanför artikelns omfång. Använd bara dessa formateringskonstruktioner när du skapar format (med CSS eller Less) när du inte kan formatera komponenter med [temaredigerare](themes.md).
 
 ## Anpassa format i anpassningsbara formulär {#customizing-styles-in-adaptive-forms}
 
@@ -54,7 +57,7 @@ Baserat på Bootstrap definierar följande uppsättning CSS-egenskaper temat fö
 
 För närvarande definieras LESS-variabler bara för dessa egenskaper för de olika elementen i en adaptiv form.
 
-## Ändra komponentformat {#changing-component-style}
+## Ändra komponentstil {#changing-component-style}
 
 Du kan ändra elementens utseende, layout, placering och synlighet. För att utföra den här uppgiften skapar eller uppdaterar du dina anpassade css-filer så att de innehåller de formateringskonstruktioner som listas i den här artikeln.
 
@@ -140,7 +143,7 @@ Fälten innehåller etiketter, widgetar, hjälpbeskrivning (både lång och kort
 
 ## Etikettformat {#label-styling}
 
-HTML-elementet **label** som används för fältet innehåller klasserna **left** eller **top** beroende på om etiketten finns högst upp eller till vänster.
+Elementet HTML **label** som används för fältet innehåller klasserna **vänster** eller **top** beroende på om etiketten är högst upp eller till vänster.
 
 <table> 
  <tbody> 
@@ -180,11 +183,11 @@ HTML-elementet **label** som används för fältet innehåller klasserna **left*
  </tbody> 
 </table>
 
-CSS-reglerna för etiketten tillämpas med etiketten **guideFieldLabel**. Om du är författare åsidosätter du den här regeln för att göra dina anpassade ändringar synliga.
+CSS-reglerna för etiketten tillämpas med **guideFieldLabel** label. Om du är författare åsidosätter du den här regeln för att göra dina anpassade ändringar synliga.
 
-## Widgetar formaterar {#widgets-styling}
+## Widgets-format {#widgets-styling}
 
-Beroende på vilken typ de har innehåller widgetar även klasser. Vanligtvis innehåller widgetar klassen `guideFieldWidget`. De widgetar som levereras med HTML använder normalt HTML-elementets standardindata och -val. Formateringen görs därefter. Du kan inte formatera en anpassad widget genom att ändra variablerna.
+Beroende på vilken typ de har innehåller widgetar även klasser. Vanligtvis innehåller widgetarna `guideFieldWidget` klassen. De widgetar som levereras med HTML använder normalt elementindata och markering för standardelementet HTML. Formateringen görs därefter. Du kan inte formatera en anpassad widget genom att ändra variablerna.
 
 <table> 
  <tbody> 
@@ -331,7 +334,7 @@ En författare kan ange hjälpinnehåll i fälten med hjälp av komponenterna f�
 
 ## Villkor {#terms-and-conditions}
 
-Med widgeten Villkor (TnC `` ``) kan du ange villkor. Du kan anpassa widgeten med hjälp av de variabler som beskrivs i följande tabell.
+Villkor (TnC) `` ``) kan du ange villkor. Du kan anpassa widgeten med hjälp av de variabler som beskrivs i följande tabell.
 
 <table> 
  <tbody> 
@@ -355,7 +358,7 @@ Med widgeten Villkor (TnC `` ``) kan du ange villkor. Du kan anpassa widgeten me
 Knappar är också widgetar. Men deras format skiljer sig något från widgetarna. I anpassningsbara former utgör något av följande en knapp:
 
 * input[type = text]
-* button
+* knapp
 * element med klass .button
 
 HTML-kod för knapp:
@@ -508,7 +511,7 @@ För widgetarna visas ett questionMark när en författare lägger till en lång
  </tbody> 
 </table>
 
-## Table {#table}
+## Tabell {#table}
 
 Du kan ändra färgtemat för huvud- och innehållsrader i en tabell med hjälp av följande variabler.
 
@@ -570,7 +573,7 @@ Med widgeten Bifogad fil i adaptiva formulär kan du överföra filer. Du kan oc
  </tbody> 
 </table>
 
-## Navigeringsformat {#navigator-styles}
+## Överblick {#navigator-styles}
 
 Det finns fyra typer av navigeringsflikar. Det finns flikar till vänster, högst upp i guiden och dragspelet. Varje navigator har en egen klass.
 
@@ -641,7 +644,7 @@ Här följer HTML-koden för tabbnavigeringselementet (liknar bootstrap-flikarna
 
 `</div>`
 
-Du kan ändra navigatorns format med CSS-regler som markerar elementen med **underordnade**-väljare. Så här lägger du till ett textdekorationsformat till ankartaggen:
+Du kan ändra navigatorns format med CSS-regler som markerar elementen med **underordnad** väljare. Så här lägger du till ett textdekorationsformat till ankartaggen:
 
 Fliknavigator överst:
 
@@ -721,7 +724,7 @@ Klassen guideNavIcon innehåller en standardikon för tabbnavigering (både vän
 
 >[!NOTE]
 >
->Du kan ändra ikonen för en viss navigator genom att ange en CSS-klass på panelen vid redigeringen, till exempel &lt;CLASS_NAME>. Du lägger till **&lt;CLASS_NAME>_nav** som ikon för navigatorn.
+>Du kan ändra ikonen för en viss navigator genom att ange en CSS-klass på panelen vid redigering, formulärexempel &lt;class_name>. Du lägger till en **&lt;class_name>nav** för navigeringsikonen.
 
 <table> 
  <tbody> 
@@ -942,13 +945,13 @@ En panel innehåller ett valfritt verktygsfält och dess innehåll.
  </tbody> 
 </table>
 
-Panelnoden är uppdelad i navigatorer och innehåll. Det finns `` `` ingen separat formatkomponent för innehållet. Variablerna som beskrivs tillämpas både på navigatorn och på innehållet.
+Panelnoden är uppdelad i navigatorer och innehåll. Där `` `` är ingen separat formatkomponent för innehållet. Variablerna som beskrivs tillämpas både på navigatorn och på innehållet.
 
 &amp;ast;Den översta panelen (RootPanel) har inte den här klassen.
 
 ## Mobilformat {#mobile-styling}
 
-## Huvudfält {#header-bar}
+## Sidhuvudsfält {#header-bar}
 
 Dessa variabler påverkar den rubrikrad som är synlig på en mobil enhet eller små skärmar som innehåller panelrubriker och navigeringsknappar för nästa och bakre.
 
@@ -1073,4 +1076,3 @@ Variablerna i följande tabell påverkar den fasta verktygsfältslayouten för m
   </tr> 
  </tbody> 
 </table>
-

@@ -2,14 +2,19 @@
 title: Använd smart bildbehandling med enhetspixelproportioner på klientsidan
 description: Lär dig hur du använder pixelproportioner för enheter på klientsidan med Smart Imaging i Adobe Experience Manager as a Cloud Service med Dynamic Media.
 role: Admin,User
-source-git-commit: 675e98231e53bb9771446c33d9d8ec8968531014
+exl-id: 3c19a02f-9d97-4ed4-92ea-0b5861267219
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
 
 # Om Smart Imaging med enhetspixelproportioner på klientsidan (DPR) {#client-side-dpr}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Den aktuella lösningen för Smart Imaging använder användaragentsträngar för att avgöra vilken typ av enhet (dator, surfplatta, mobil och så vidare) som används.
 
@@ -69,3 +74,4 @@ Följande JavaScript-filer i nedladdningen finns endast som exempelreferens. Om 
 >[!MORELIKETHIS]
 >
 >* [Smart bildbehandling](/help/assets/imaging-faq.md)
+

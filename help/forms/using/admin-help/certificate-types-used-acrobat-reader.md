@@ -1,24 +1,27 @@
 ---
-title: 'Certifikattyper som används av Acrobat Reader DC-tillägg '
-seo-title: 'Certifikattyper som används av Acrobat Reader DC-tillägg '
+title: Certifikattyper som används av Acrobat Reader DC-tillägg
+seo-title: Certificate types used by Acrobat Reader DC extensions
 description: Lär dig mer om de certifikattyper som används av Acrobat Reader DC-tillägg.
-seo-description: Lär dig mer om de certifikattyper som används av Acrobat Reader DC-tillägg.
+seo-description: Learn about the certificate types used by Acrobat Reader DC extensions.
 uuid: 93c02abc-2d5a-44ed-b93c-981afbd0553d
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 331b9317-87b5-4a96-a1bc-429675ff90c5
-translation-type: tm+mt
-source-git-commit: f1558c7dec34649d00afcd04245ea552e8c6b978
+exl-id: 8a65d9cc-33d0-4176-97e1-70ad67cbb982
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 3%
+source-wordcount: '972'
+ht-degree: 1%
 
 ---
 
-
 # Certifikattyper som används av Acrobat Reader DC-tillägg {#certificate-types-used-by-acrobat-reader-dc-extensions}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Certifikatgranskaren ger följande information om certifikatet:
 
@@ -35,13 +38,13 @@ Det &quot;egna&quot; namnet för ett Acrobat Reader DC-tilläggscertifikat är e
 
 Strängen innehåller följande element:
 
-**Certifikattyp:** Beskriver de AEM formulärmodulerna som certifikatet aktiverar och aktiveringsnivån, till exempel ARE 2D-streckkod Full. En lista över tillgängliga certifikattyper finns i kolumnen Typ i tabellen i avsnittet Certifikatprofiler.
+**Certifikattyp:** Beskriver de AEM formulärmoduler som certifikatet aktiverar och aktiveringsnivån, till exempel ARE 2D-streckkod Full. En lista över tillgängliga certifikattyper finns i kolumnen Typ i tabellen i avsnittet Certifikatprofiler.
 
-**Distributionstyp:** Anger certifikatets avsedda användning, till exempel Produktion. Värdet kan vara Evaluation eller Production. En lista över distributionstyper som är associerade med varje certifikattyp finns i kolumnen Distributionstyp i tabellen i avsnittet Certifikatprofiler.
+**Distributionstyp:** Anger certifikatets avsedda användning, t.ex. produktion. Värdet kan vara Evaluation eller Production. En lista över distributionstyper som är associerade med varje certifikattyp finns i kolumnen Distributionstyp i tabellen i avsnittet Certifikatprofiler.
 
-**Användarrättighetsversion:** Beskriver vilken version av användarrättighetsalgoritmen som certifikatet kan användas för, till exempel V6.1. Den här versionen betecknar inte Acrobat- eller Acrobat Reader DC-tilläggen.
+**Användarrättigheter:** Beskriver vilken version av användarrättighetsalgoritmen som certifikatet kan användas för, till exempel V6.1. Den här versionen betecknar inte Acrobat- eller Acrobat Reader DC-tilläggen.
 
-**Profilkod:** Profilkoden är en kortfattad beskrivning av fullständiga certifikategenskaper, till exempel P8. En lista över profilkoder som är associerade med varje filtyp finns i kolumnen Profilkod i tabellen i avsnittet Certifikatprofiler.
+**Profilkod:** Profilkoden är en kort beskrivning av fullständiga certifikategenskaper, till exempel P8. En lista över profilkoder som är associerade med varje filtyp finns i kolumnen Profilkod i tabellen i avsnittet Certifikatprofiler.
 
 **Serienummer:** Varje certifikat som utfärdas av Adobe tilldelas ett serienummer, till exempel 0002054. Adobe Enterprise Support eller en Adobe Enterprise-kontorepresentant kan använda det här serienumret för att spåra certifikatet till en viss produktorder eller till en OEM-relation.
 
@@ -154,9 +157,9 @@ Certifikat för partnerintegrering utfärdas till Adobe affärspartners för att
 
 Adobe certifikat för intern användning används i Adobe för att stödja programutveckling, integrering, prototyper och demonstration. Dessa certifikat gäller i två år från och med utfärdandedagen.
 
-Produktionscertifikat utfärdas till kunder som köpt Acrobat Reader DC-tillägg. Dessa certifikat är giltiga för den maximala period som tillåts av certifikatutfärdaren (CA), som visas som *Max* i tabellen Certifikatprofiler.
+Produktionscertifikat utfärdas till kunder som köpt Acrobat Reader DC-tillägg. Dessa certifikat gäller under den maximala period som tillåts av certifikatutfärdaren (CA), vilket visas som *Max* i tabellen Certifikatprofiler.
 
-## Användningsrättigheter för Acrobat Reader DC-tillägg {#acrobat-reader-dc-extensions-usage-rights}
+## Användarrättigheter för Acrobat Reader DC-tillägg {#acrobat-reader-dc-extensions-usage-rights}
 
 När du granskar Acrobat Reader DC-tilläggscertifikatet i Certifikatgranskaren kan du välja användningsrättighetsobjektet på fliken Information (om den är konfigurerad) för att se en detaljerad lista över de användningsrättigheter för Adobe Reader som certifikatet kan aktivera. De användarrättigheter som är aktiverade för ett visst dokument kan vara en delmängd av de som är aktiverade av certifikatet.
 
@@ -168,7 +171,7 @@ Tillåtna användningsrättigheter för Acrobat Reader DC-tillägg består av et
  <thead> 
   <tr> 
    <th><p>Element för användningsrättigheter</p></th> 
-   <th><p>Funktion aktiverad i Adobe Reader när man visar ett rättighetsaktiverat PDF-dokument</p></th> 
+   <th><p>Funktionen är aktiverad i Adobe Reader när du visar ett rättighetsaktiverat PDF-dokument</p></th> 
   </tr> 
  </thead> 
  <tbody>
@@ -226,4 +229,3 @@ Tillåtna användningsrättigheter för Acrobat Reader DC-tillägg består av et
 >[!NOTE]
 >
 >Användarrättigheter för Acrobat Reader DC-tillägg kan endast licensieras från Adobe i vissa kombinationer som fungerar tillsammans. Det går inte att licensiera dessa funktioner separat. Om du vill ha information om vilka kombinationer av användarrättigheter som finns kontaktar du en AEM.
-

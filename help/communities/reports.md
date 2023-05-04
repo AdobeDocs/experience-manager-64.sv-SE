@@ -1,8 +1,8 @@
 ---
 title: Rapportkonsol
-seo-title: Rapportkonsol
+seo-title: Reports Console
 description: Lär dig hur du får åtkomst till rapporter
-seo-description: Lär dig hur du får åtkomst till rapporter
+seo-description: Learn how to access reports
 uuid: 580f5eb8-24b2-4404-90d4-81f7108d1ee6
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 0042893e-3d2c-469e-8759-404be16e7436
 role: Admin
 exl-id: 766711ea-f3d3-49ab-8346-4e4477c261bd
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '559'
 ht-degree: 1%
 
 ---
 
 # Rapportkonsol {#reports-console}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Översikt {#overview}
 
@@ -26,11 +30,11 @@ För AEM Communities finns det olika rapporter som du kan få åtkomst till på 
 
 De olika rapporterna är i allmänhet följande:
 
-* [Uppdragsrapport](#assignments-report)  - för en community [ för ](overview.md#enablement-community)aktivering ger en översikt över elevens framsteg i sina uppdrag, inklusive ett associerat poängvärde om SCORM-standarden implementeras
-* [Vyrapport](#views-report)  - visar en lista över vad communitymedlemmar och webbplatsbesökare kan se på en community-webbplats
-* [Inläggsrapport](#posts-report)  - innehåller en lista över olika typer av inlägg från communitymedlemmar på valfri communitywebbplats
+* [Uppdragsrapport](#assignments-report) - för [användargrupper](overview.md#enablement-community), ger en översikt över hur eleverna arbetar med sina uppdrag, inklusive ett poängresultat om SCORM-standarden implementeras
+* [Vyrapport](#views-report) - ger en översikt över vad communitymedlemmar och besökare på webbplatser av olika slag
+* [Inläggsrapport](#posts-report) - ger en översikt över olika typer av inlägg från communitymedlemmar på alla communitysajter
 
-När [Adobe Analytics är aktiverat](sites-console.md#analytics) innehåller rapporterna antalet vyer, uppspelningar, kommentarer och omdömen för varje aktiveringsresurs över tiden
+När [Adobe Analytics är aktiverat](sites-console.md#analytics), rapporter innehåller antalet visningar, uppspelningar, kommentarer och omdömen för varje aktiveringsresurs över tiden
 
 Tabellrapporter kan exporteras i CSV-format för efterföljande bearbetning.
 
@@ -52,9 +56,9 @@ Tabellrapporter kan exporteras i CSV-format för efterföljande bearbetning.
 
 * Från global navigering: **[!UICONTROL Navigation > Communities > Resources]**
 * Välj en befintlig webbplats för aktiveringscommunityn
-   * Välj ikonen **[!UICONTROL Report]** om du vill generera rapporter som täcker alla aktiveringsresurser
+   * Välj **[!UICONTROL Report]** för att generera rapporter som täcker alla aktiveringsresurser
    * Välj en utbildningsväg för aktivering
-   * Välj ikonen **[!UICONTROL Report]** om du vill generera rapporter för
+   * Välj **[!UICONTROL Report]** ikon för att generera rapporter för
       * De medföljande aktiveringsresurserna
       * De studerande som är tilldelade inlärningsbanan
 * Rapporterna innehåller följande:
@@ -65,7 +69,7 @@ Tabellrapporter kan exporteras i CSV-format för efterföljande bearbetning.
       * Antal kommentarer
       * Stjärngradering
 
-Mer information finns i [avsnittet Rapporter](resources.md#report) i Resurskonsolen.
+Mer information finns i [Avsnittet Rapporter](resources.md#report) i Resurskonsolen.
 
 ## Uppdragsrapport {#assignments-report}
 
@@ -81,8 +85,7 @@ Välj villkor för rapporten:
 Välj en community-webbplats för aktivering
 * **[!UICONTROL User or Group]**
    * Välj Användare om du vill generera en rapport för en elev
-   * Välj Grupp för att generera en rapport för en grupp av studerande
-Tunneltjänsten kommer att få åtkomst till medlemmar och medlemsgrupper från publiceringsmiljön
+   * Välj Grupp om du vill generera en rapport för en grupp deltagare Tunneltjänsten får åtkomst till medlemmar och medlemsgrupper från publiceringsmiljön
 * **[!UICONTROL Assignment]**
 Välj bland de aktiveringsresurser som tilldelats de valda eleverna
 
@@ -102,8 +105,7 @@ Välj villkor för rapporten:
 Välj en community-webbplats
 * **[!UICONTROL Content Type]**
 Välj allt innehåll eller någon av funktionerna på webbplatsen
-* Tidsram
-Välj något av följande:
+* Tidsram Välj något av:
    * De senaste 7 dagarna
    * De senaste 30 dagarna
    * De senaste 90 dagarna
@@ -125,8 +127,7 @@ Välj villkor för rapporten:
 Välj en community-webbplats
 * **[!UICONTROL Content Type]**
 Välj allt innehåll eller någon av funktionerna på webbplatsen
-* Tidsram
-Välj något av följande:
+* Tidsram Välj något av:
    * De senaste 7 dagarna
    * De senaste 30 dagarna
    * De senaste 90 dagarna

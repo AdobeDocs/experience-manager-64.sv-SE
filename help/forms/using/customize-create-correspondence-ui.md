@@ -1,24 +1,27 @@
 ---
 title: Anpassa gränssnitt för att skapa korrespondens
-seo-title: Anpassa gränssnitt för att skapa korrespondens
+seo-title: Customize create correspondence UI
 description: Lär dig hur du anpassar gränssnittet för att skapa korrespondens.
-seo-description: Lär dig hur du anpassar gränssnittet för att skapa korrespondens.
+seo-description: Learn how to customize create correspondence UI.
 uuid: 5b6eb8fd-0270-4638-bdf4-cb7015919d57
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 3efd8f5a-9f38-4d9b-88d6-d8fde6c9a644
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 63cd01d2-a0d5-4f85-b9d2-ec3007ce3fa9
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1108'
+source-wordcount: '1131'
 ht-degree: 0%
 
 ---
 
-
 # Anpassa gränssnitt för att skapa korrespondens {#customize-create-correspondence-ui}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Översikt {#overview}
 
@@ -26,20 +29,20 @@ Med Correspondence Management kan ni varumärka om sin lösningsmall för att f�
 
 Du kan ändra logotypen i användargränssnittet Create Correspondence med din organisations logotyp.
 
-![Den anpassade ikonen i ](assets/0_1_introscreenshot.png)
-**gränssnittet Skapa korrespondens:** *Den anpassade ikonen i gränssnittet Skapa korrespondens*
+![Den anpassade ikonen i gränssnittet Skapa korrespondens](assets/0_1_introscreenshot.png)
+**Bild:** *Den anpassade ikonen i gränssnittet Skapa korrespondens*
 
 ### Ändra logotypen i användargränssnittet för Create Correspondence {#changing-the-logo-in-the-create-correspondence-ui}
 
 Så här ställer du in en logobild:
 
 1. Skapa lämplig [mappstruktur i CRX](#creatingfolderstructure).
-1. [Ladda upp den nya ](#uploadlogo) logotypfilen i den mapp du har skapat i CRX.
+1. [Ladda upp den nya logotypfilen](#uploadlogo) i mappen som du har skapat i CRX.
 
-1. [Konfigurera ](#createcss) CSSon CRX så att den hänvisar till den nya logotypen.
-1. Rensa webbläsarhistoriken och [uppdatera användargränssnittet för Skapa korrespondens](#refreshccrui).
+1. [Konfigurera CSS](#createcss) på CRX för att hänvisa till den nya logotypen.
+1. Rensa webbläsarhistoriken och [uppdatera gränssnittet Skapa korrespondens](#refreshccrui).
 
-## Skapar den nödvändiga mappstrukturen {#creatingfolderstructure}
+## Skapar den mappstruktur som krävs {#creatingfolderstructure}
 
 Skapa mappstrukturen som beskrivs nedan för värdtjänster för den anpassade logotypbilden och formatmallen. Den nya mappstrukturen med rotmappen /apps liknar strukturen i mappen /libs.
 
@@ -54,11 +57,11 @@ Avdelningen /apps (mappstruktur):
 Följ de här stegen för att skapa den nödvändiga mappstrukturen i grenen /apps:
 
 1. Gå till `https://[server]:[port]/[ContextPath]/crx/de` och logga in som administratör.
-1. I mappen apps skapar du en mapp med namnet `css` med en sökväg/struktur som liknar css-mappen (som finns i ccrui-mappen).
+1. Skapa en mapp med namnet i appmappen `css` med en sökväg/struktur som liknar css-mappen (finns i ccrui-mappen).
 
    Steg för att skapa css-mappen:
 
-   1. Högerklicka på mappen **css** på följande sökväg och välj **Overlay Node**: `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css`
+   1. Högerklicka på **css** mapp på följande sökväg och välj **Överläggsnod**: `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css`
 
       ![Överläggsnod](assets/1_overlaynode_css.png)
 
@@ -66,9 +69,9 @@ Följ de här stegen för att skapa den nödvändiga mappstrukturen i grenen /ap
 
       **Sökväg:** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css
 
-      **Överläggsplats:** /appar/
+      **Plats för övertäckning:** /apps/
 
-      **Matcha nodtyper:** markerade
+      **Matcha nodtyper:** Markerad
 
       ![Sökväg till överläggsnod](assets/0_1_5ioverlaynodedialog.png)
 
@@ -81,30 +84,30 @@ Följ de här stegen för att skapa den nödvändiga mappstrukturen i grenen /ap
       >* Installera ett funktionspaket
 
 
-   1. Klicka på **OK**. CSS-mappen skapas i den angivna sökvägen.
+   1. Klicka **OK**. CSS-mappen skapas i den angivna sökvägen.
 
-1. I mappen apps skapar du en mapp med namnet `imgs` med en sökväg/struktur som liknar mappen imgs (som finns i mappen ccrui).
+1. Skapa en mapp med namnet i appmappen `imgs` med en sökväg/struktur som liknar mappen imgs (finns i ccrui-mappen).
 
-   1. Högerklicka på mappen **imgs** på följande sökväg och välj **Overlay Node**: `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
+   1. Högerklicka på **imgs** mapp på följande sökväg och välj **Överläggsnod**: `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
       **Sökväg:** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs
 
-      **Överläggsplats:** /appar/
+      **Plats för övertäckning:** /apps/
 
-      **Matcha nodtyper:** markerade
+      **Matcha nodtyper:** Markerad
 
-   1. Klicka på **OK**.
+   1. Klicka **OK**.
 
       >[!NOTE]
       >
       >Du kan också skapa mappstrukturen i mappen /apps manuellt.
 
-1. Klicka på **Spara alla** för att spara ändringarna på servern.
+1. Klicka **Spara alla** för att spara ändringarna på servern.
 
 ## Överför den nya logotypen till CRX {#uploadlogo}
 
-Överför din anpassade logotypfil till CRX. HTML-standardregler styr återgivningen av logotypen. De bildfilformat som stöds är beroende av vilken webbläsare du använder för att få åtkomst till AEM Forms. Alla webbläsare har stöd för JPEG, GIF och PNG. Mer information finns i den webbläsarspecifika dokumentationen om de bildformat som stöds.
+Överför din anpassade logotypfil till CRX. Standardreglerna för HTML styr återgivningen av logotypen. De bildfilformat som stöds är beroende av vilken webbläsare du använder för att få åtkomst till AEM Forms. Alla webbläsare har stöd för JPEG, GIF och PNG. Mer information finns i den webbläsarspecifika dokumentationen om de bildformat som stöds.
 
 * Standardmåtten för logotypbilden är 48 px&amp;ast; 48 px. Se till att bilden liknar den här storleken eller är större än 48 px &amp;ast; 48 px.
 * Om höjden på logotypbilden är större än 50 px, skalas bilden ned i användargränssnittet Create Correspondence till en maximal höjd på 50 px eftersom det är höjden på sidhuvudet. När du skalar ned bilden behåller användargränssnittet Skapa korrespondens bildens proportioner.
@@ -113,7 +116,7 @@ Följ de här stegen för att skapa den nödvändiga mappstrukturen i grenen /ap
 Följ de här stegen för att överföra den anpassade logotypfilen till CRX:
 
 1. Gå till `https://[server]:[port]/[contextpath]/crx/de`. Logga in som administratör om det behövs.
-1. I CRXDE högerklickar du på mappen **imgs** på följande sökväg och väljer **Skapa > Skapa fil**:
+1. I CRXDE högerklickar du på **imgs** mapp på följande sökväg och välj **Skapa > Skapa fil**:
 
    `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs/`
 
@@ -123,7 +126,7 @@ Följ de här stegen för att överföra den anpassade logotypfilen till CRX:
 
    ![CustomLogo.png som ny nod](assets/3_contentexplorernewnode_customlogo.png)
 
-1. Klicka på **Spara alla**.
+1. Klicka **Spara alla**.
 
    Under den nya filen som du har skapat (här CustomLogo.png) visas egenskapen jcr:content.
 
@@ -133,20 +136,20 @@ Följ de här stegen för att överföra den anpassade logotypfilen till CRX:
 
    ![jcrcontentproperties](assets/jcrcontentproperties.png)
 
-1. Dubbelklicka på egenskapen **jcr:data**.
+1. Dubbelklicka på **jcr:data** -egenskap.
 
    Dialogrutan Redigera jcr:data visas.
 
    Klicka nu på mappen newlogo.png, dubbelklicka på jcr:content (dim option) och ange type nt:resource. Om det inte finns någon egenskap skapar du en egenskap med namnet jcr:content.
 
-1. I dialogrutan Redigera jcr:data klickar du på **Bläddra** och väljer den bildfil som du vill använda som logotyp (här CustomLogo.png).
+1. I dialogrutan Redigera jcr:data klickar du på **Bläddra** och välj den bildfil som du vill använda som logotyp (här CustomLogo.png).
 
    De bildfilformat som stöds är beroende av vilken webbläsare du använder för att få åtkomst till AEM Forms. Alla webbläsare har stöd för JPEG, GIF och PNG. Mer information finns i den webbläsarspecifika dokumentationen om de bildformat som stöds.
 
    ![Exempel på anpassad logotypfil](assets/geometrixx-outdoors.png)
-   **Bild:** *Exempel - CustomLogo.png som ska användas som egen logotyp*
+   **Bild:** *Exempel - CustomLogo.png som ska användas som anpassad logotyp*
 
-1. Klicka på **Spara alla**.
+1. Klicka **Spara alla**.
 
 ## Skapa CSS för att integrera logotypen med användargränssnittet {#createcss}
 
@@ -161,8 +164,8 @@ Följ de här stegen för att konfigurera formatmallen för återgivning av logo
 
    Steg för att skapa filen customcss.css:
 
-   1. Högerklicka på mappen **css** och välj **Skapa > Skapa fil**.
-   1. I dialogrutan Ny fil anger du CSS-namnet som `customcss.css` (du kan inte använda ett annat filnamn) och klickar på **OK**.
+   1. Högerklicka på **css** mapp och markera **Skapa > Skapa fil**.
+   1. I dialogrutan Ny fil anger du CSS-namnet som `customcss.css`(du kan inte använda ett annat filnamn) och klicka på **OK**.
    1. Lägg till följande kod i den nyligen skapade CSS-filen. I content:url i koden anger du bildnamnet som du har överfört till imgs-mappen i CRXDE.
 
       ```css
@@ -171,12 +174,11 @@ Följ de här stegen för att konfigurera formatmallen för återgivning av logo
       }
       ```
 
-   1. Klicka på **Spara alla**.
+   1. Klicka **Spara alla**.
 
 ## Uppdatera användargränssnittet Create Correspondence för att se den anpassade logotypen {#refreshccrui}
 
 Rensa webbläsarcachen och öppna sedan instansen Create Correspondence UI i webbläsaren. Du bör se din egen logotyp.
 
-![Skapa korrespondensanvändargränssnitt med anpassad ](assets/0_1_introscreenshot-1.png)
-**logotypBild:** *Den anpassade ikonen i användargränssnittet Create Correspondence*
-
+![Skapa korrespondensgränssnitt med egen logotyp](assets/0_1_introscreenshot-1.png)
+**Bild:** *Den anpassade ikonen i gränssnittet Skapa korrespondens*

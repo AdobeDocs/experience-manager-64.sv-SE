@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 2dec23f7-6cca-4cc9-a78a-acd23ae7da5f
 exl-id: e03beca1-1a95-42c7-b20b-4a2d9eab4df9
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '832'
 ht-degree: 0%
 
 ---
 
 # Konfigurera Xcode-projektet och bygg iOS-appen {#set-up-the-xcode-project-and-build-the-ios-app}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 AEM Forms tillhandahåller den fullständiga källkoden för AEM Forms-appen. Källan innehåller alla komponenter för att skapa en anpassad AEM Forms-app. Källkodsarkivet `adobe-lc-mobileworkspace-src-<version>.zip` är en del av `adobe-aemfd-forms-app-src-pkg-<version>.zip` paket om programvarudistribution.
 

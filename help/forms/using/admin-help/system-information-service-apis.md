@@ -1,8 +1,8 @@
 ---
 title: API:er för systeminformationstjänst
-seo-title: API:er för systeminformationstjänst
+seo-title: System information Service APIs
 description: Det här dokumentet innehåller detaljerad information om de API:er som tillhandahålls av systeminformationstjänsten.
-seo-description: Det här dokumentet innehåller detaljerad information om de API:er som tillhandahålls av systeminformationstjänsten.
+seo-description: This document provides detailed information about the APIs provided by the system information service.
 uuid: 7f624216-56e6-4d49-b9a1-3c9af045dabe
 contentOwner: admin
 content-type: reference
@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/system_information_service
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 79fccce2-d090-4b50-9c58-3f2a00e651b2
 exl-id: 7eee8103-8d6c-4397-acaf-dd662cc09a56
-source-git-commit: dd996d0bb856b9140d420d03dec446a382d10acd
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
 
 # API:er för systeminformationstjänst {#system-information-service-apis}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Systeminformationstjänsten tillhandahåller en uppsättning REST API:er för att hämta information. Följande tabell innehåller detaljerad information om API:erna:
 
@@ -25,7 +29,7 @@ Systeminformationstjänsten tillhandahåller en uppsättning REST API:er för at
  <thead>
   <tr>
    <th><p>Namn</p></th> 
-   <th><p>Webbadress</p></th> 
+   <th><p>URL</p></th> 
    <th><p>Beskrivning</p></th> 
   </tr> 
  </thead> 
@@ -33,7 +37,7 @@ Systeminformationstjänsten tillhandahåller en uppsättning REST API:er för at
   <tr>
    <td><p>SystemInfo.properties</p></td> 
    <td><p>https://[server]:[port]/rest/services/SystemInfo.properties</p></td> 
-   <td><p>Detta API är en wrapper för Java API:t <a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a>. Den hämtar konfigurationen för den aktuella arbetsmiljön. </p></td> 
+   <td><p>Detta API är en wrapper för <a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a> Java API. Den hämtar konfigurationen för den aktuella arbetsmiljön. </p></td> 
   </tr> 
   <tr>
    <td><p>SystemInfo.envVar</p></td> 
@@ -106,7 +110,7 @@ Systeminformationstjänsten tillhandahåller en uppsättning REST API:er för at
   <tr>
    <td><p>SystemInfo.info</p></td> 
    <td><p>https://[server]:[port]/rest/services/ SystemInfo.info</p></td> 
-   <td><p>Denna API är en wrapper för alla API:er för systeminformationstjänsten. Internt körs alla API:er för systeminformation och information hämtas i zip-format. </p><p><i><strong>Obs</strong>! SystemInfo.info tillhandahåller inte räknings- och stackspårning för aktiva trådar. </i></p></td> 
+   <td><p>Denna API är en wrapper för alla API:er för systeminformationstjänsten. Internt körs alla API:er för systeminformation och information hämtas i zip-format. </p><p><i><strong>anteckning</strong>: SystemInfo.info tillhandahåller inte räknings- och stackspårning för aktiva trådar. </i></p></td> 
   </tr> 
  </tbody> 
 </table>

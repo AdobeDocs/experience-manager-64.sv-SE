@@ -1,21 +1,24 @@
 ---
 title: Använda anpassade e-postmallar i steget Tilldela uppgift
-seo-title: Använda anpassade e-postmallar i steget Tilldela uppgift
-description: 'Anpassade e-postmallar för e-postmeddelanden i formulärarbetsflödet '
-seo-description: 'Anpassade e-postmallar för e-postmeddelanden i formulärarbetsflödet '
+seo-title: Use custom email templates in an Assign Task step
+description: Anpassade e-postmallar för e-postmeddelanden i formulärarbetsflödet
+seo-description: Custom email templates for forms workflow email notifications
 uuid: bc2af94d-d4ad-417e-b3d2-bcfffc1b306d
 topic-tags: publish
 discoiquuid: c447fc39-c0f3-4932-ac6c-465d1fb83f8c
-translation-type: tm+mt
-source-git-commit: 8b5a3e1f6616c3a07da91e4347596961ac4a8e22
+exl-id: 5af73823-2c32-41b3-9ab8-a7ad9fd9532f
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
 
+# Använda anpassade e-postmallar i steget Tilldela uppgift {#use-custom-email-templates-in-an-assign-task-step}
 
-# Använd anpassade e-postmallar i steget Tilldela uppgift {#use-custom-email-templates-in-an-assign-task-step}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Anpassade e-postmallar för e-postmeddelanden i formulärarbetsflödet
 
@@ -25,7 +28,7 @@ Du kan använda steget Tilldela uppgift för att skapa och tilldela uppgifter ti
 
 Du kan anpassa utseendet och använda anpassade metadata i ett e-postmeddelande. AEM Forms tillhandahåller en färdig mall för e-postmeddelanden. Du kan anpassa mallen som inte finns i kartongen eller skapa en ny mall från början.
 
-Mallar för e-postmeddelanden baseras på [HTML-e-post](https://en.wikipedia.org/wiki/HTML_email). Dessa e-postmeddelanden anpassar sig efter olika e-postklienter och skärmstorlekar. Dessutom definieras formatet för e-postmeddelandet i mallen.
+Mallar för e-postmeddelanden baseras på [HTML email](https://en.wikipedia.org/wiki/HTML_email). Dessa e-postmeddelanden anpassar sig efter olika e-postklienter och skärmstorlekar. Dessutom definieras formatet för e-postmeddelandet i mallen.
 
 I följande bild visas ett anpassat e-postmeddelande:
 
@@ -43,7 +46,7 @@ När allt är klart tillhandahåller AEM Forms en mall för e-postmeddelanden. M
 
 1. Ersätt innehållet i filen htmlEmailTemplate.txt med anpassat innehåll.
 
-   En e-postmeddelandemall är en [HTML-e-postadress](https://en.wikipedia.org/wiki/HTML_email). Du kan ersätta den befintliga html-koden med din anpassade kod om du vill ändra mallens utseende.
+   En e-postmeddelandemall är en [HTML email](https://en.wikipedia.org/wiki/HTML_email). Du kan ersätta den befintliga HTML-koden med din egen kod om du vill ändra mallens utseende.
 
 1. Spara filen. Nu är den anpassade mallen klar att användas.
 
@@ -57,22 +60,22 @@ När allt är klart tillhandahåller AEM Forms en mall för e-postmeddelanden. M
 
 1. Skapa en TXT-fil. Exempel: EmailOnTaskAssign.txt.
 
-1. Lägg till anpassad HTML-kod i filen.
+1. Lägg till egen HTML-kod i filen.
 
-   En e-postmeddelandemall är en [HTML-e-postadress](https://en.wikipedia.org/wiki/HTML_email). Du kan lägga till anpassad HTML-kod i filen för att skapa en ny mall.
+   En e-postmeddelandemall är en [HTML email](https://en.wikipedia.org/wiki/HTML_email). Du kan lägga till egen HTML-kod i filen för att skapa en ny mall.
 
 1. Spara filen. Mallen är klar att användas i steget Tilldela uppgift.
 
-## Använd en e-postmall i steget Tilldela uppgift {#use-an-email-template-in-an-assign-task-step}
+## Använda en e-postmall i steget Tilldela uppgift {#use-an-email-template-in-an-assign-task-step}
 
 Utför åtgärden Tilldela är konfigurerad att använda standardmallen htmlEmailTemplate.txt. Du kan välja att använda en anpassad mall. Så här ändrar du mallen:
 
-1. Öppna steget **[!UICONTROL Assign Task]**.
+1. Öppna **[!UICONTROL Assign Task]** steg.
 
 1. Navigera till **[!UICONTROL Assignee > HTML Email Template]**.
 
-1. Välj den nya HTML-e-postmallen.
+1. Markera den nya e-postmallen för HTML.
 
 1. Klicka på **[!UICONTROL OK]**. Mallen ändras.
 
-I ett e-postmeddelande används även [metadata](/help/forms/using/use-metadata-in-email-notifications.md). Exempel: förfallodatum, prioritet, arbetsflödets namn med mera. Du kan också konfigurera mallen så att den använder [anpassade metadata](/help/forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification).
+Ett e-postmeddelande använder också [metadata](/help/forms/using/use-metadata-in-email-notifications.md). Exempel: förfallodatum, prioritet, arbetsflödets namn med mera. Du kan också konfigurera mallen så att den används [anpassade metadata](/help/forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification).

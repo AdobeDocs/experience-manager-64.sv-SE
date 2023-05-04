@@ -1,8 +1,8 @@
 ---
 title: Allmänna säkerhetsfrågor för AEM Forms i JEE
-seo-title: Allmänna säkerhetsfrågor för AEM Forms i JEE
+seo-title: General Security Considerations for AEM Forms on JEE
 description: Lär dig hur du förbereder dig för att härska din AEM Forms i JEE-miljö.
-seo-description: Lär dig hur du förbereder dig för att härska din AEM Forms i JEE-miljö.
+seo-description: Learn how to prepare for hardening your AEM Forms on JEE environment.
 uuid: c5f6ffc7-b987-4541-ab60-e97b4ff5b2a4
 content-type: reference
 topic-tags: Security
@@ -10,14 +10,18 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 38132225-ecae-4887-8f3d-0b3845059130
 role: Admin
 exl-id: cde40670-ce9d-4b96-92d3-9e56cb15bdce
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1127'
 ht-degree: 0%
 
 ---
 
 # Allmänna säkerhetsfrågor för AEM Forms i JEE {#general-security-considerations-for-aem-forms-on-jee}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Lär dig hur du förbereder dig för att härska din AEM Forms i JEE-miljö.
 
@@ -50,7 +54,7 @@ Säkerhetsinformation om operativsystem som stöds av AEM Forms på JEE finns i 
  <tbody>
   <tr> 
    <td><p>IBM® AIX® 7.2</p> </td> 
-   <td><p><a href="https://www.ibm.com/support/knowledgecenter/ssw_aix_72/com.ibm.aix.security/security-kickoff.htm" target="_blank">IBM AIX Security Benefits</a></p> </td> 
+   <td><p><a href="https://www.ibm.com/support/knowledgecenter/ssw_aix_72/com.ibm.aix.security/security-kickoff.htm" target="_blank">IBM AIX - säkerhetsfördelar</a></p> </td> 
   </tr> 
   <tr> 
    <td><p>Microsoft Windows Server® 2012 </p> </td> 
@@ -149,12 +153,12 @@ Säkerhetsinformation om databaser som stöds av AEM Forms på JEE finns i resur
   </tr> 
   <tr> 
    <td><p>Oracle® 12c</p> </td> 
-   <td><p>Se kapitlet om säkerhet i <a href="https://docs.oracle.com/database/121/TDPSG/GUID-6E2F4E53-5D87-4FCD-9C9C-6792217D7014.htm#TDPSG94426" target="_blank">Oraclets 12g-dokumentation</a></p> </td> 
+   <td><p>Se kapitlet Säkerhet i <a href="https://docs.oracle.com/database/121/TDPSG/GUID-6E2F4E53-5D87-4FCD-9C9C-6792217D7014.htm#TDPSG94426" target="_blank">Oraclets 12g-dokumentation</a></p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-I den här tabellen beskrivs de standardportar som krävs för att vara öppna under konfigurationsprocessen för AEM Forms on JEE. Om du ansluter via https kan du justera portinformationen och IP-adresserna därefter. Mer information om hur du konfigurerar portar finns i dokumentet *Installera och distribuera AEM Forms på JEE* för programservern.
+I den här tabellen beskrivs de standardportar som krävs för att vara öppna under konfigurationsprocessen för AEM Forms on JEE. Om du ansluter via https kan du justera portinformationen och IP-adresserna därefter. Mer information om hur du konfigurerar portar finns i *Installera och distribuera AEM Forms på JEE* -dokument för programservern.
 
 <table> 
  <thead> 
@@ -221,9 +225,9 @@ JBoss Application Server använder 8080 som standard-HTTP-port. JBoss har även 
 
    Klusterinstallationer: [JBoss-rot]/domain/configuration/domain.xml
 
-1. Ändra värdet för **port**-attributet i taggen **&lt;socket-binding>** till ett anpassat portnummer. I följande exempel används port 8090:
+1. Ändra värdet för **port** i **&lt;socket-binding>** -taggen till ett anpassat portnummer. I följande exempel används port 8090:
 
-   &lt;socket-binding name=&quot;http&quot; port=&quot;8090&quot; />
+   &lt;socket-binding name=&quot;http&quot; port=&quot;8090&quot;/>
 
 1. Spara och stäng filen.
 1. Starta om JBoss-programservern.
@@ -244,7 +248,7 @@ AEM Forms on JEE använder AEM Forms on JEE-databasen för att lagra känslig do
 
 Programservern som används för att köra AEM Forms på JEE kräver en egen konfiguration för åtkomst till databasen via en datakälla som är konfigurerad på programservern. Se till att programservern inte visar databaslösenordet i klartext i sin datakällkonfigurationsfil.
 
-Filen lc_[database].xml får inte innehålla lösenord i klartextformat. Kontakta programserverleverantören om hur du krypterar dessa lösenord för programservern.
+The lc_[databas]XML-filen får inte innehålla lösenord i klartextformat. Kontakta programserverleverantören om hur du krypterar dessa lösenord för programservern.
 
 >[!NOTE]
 >

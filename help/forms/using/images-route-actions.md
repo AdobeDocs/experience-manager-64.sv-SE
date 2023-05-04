@@ -1,25 +1,28 @@
 ---
 title: Anpassa bilder som används i flödesåtgärder
-seo-title: Anpassa bilder som används i flödesåtgärder
+seo-title: Customize images used in route actions
 description: Hur man anpassar bilderna som används i vägåtgärder på arbetsytan i LiveCycle AEM Forms.
-seo-description: Hur man anpassar bilderna som används i vägåtgärder på arbetsytan i LiveCycle AEM Forms.
+seo-description: How-to customize the images used in route actions in LiveCycle AEM Forms workspace.
 uuid: 42608376-587e-4b57-a9d5-8f9ebd981426
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 10158c13-47b4-43e3-ac47-690f3cbab158
-translation-type: tm+mt
-source-git-commit: 7c65752a969d9089ad61c29b0581327d32e022d1
+exl-id: 7b1f60e7-c8fa-43b6-bef4-88b42e7bbc36
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '344'
 ht-degree: 0%
 
 ---
 
+# Anpassa bilder som används i flödesåtgärder {#customize-images-used-in-route-actions}
 
-# Anpassa bilder som används i vägåtgärder {#customize-images-used-in-route-actions}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-Om du vill anpassa bilderna som används i flödesåtgärder följer du de steg som beskrivs i [Allmänna anpassningssteg](/help/forms/using/generic-steps-html-workspace-customization.md) och de steg som beskrivs i den här artikeln.
+Utför stegen som beskrivs i för att anpassa bilderna som används i flödesåtgärder [Allmänna anpassningssteg](/help/forms/using/generic-steps-html-workspace-customization.md) följt av de steg som beskrivs i den här artikeln.
 
 ## Bilder för vägåtgärder {#images-for-route-actions}
 
@@ -27,7 +30,7 @@ Om du vill anpassa bilderna som används i flödesåtgärder följer du de steg 
 
    `/apps/ws/css/newStyle.css`
 
-   Till exempel: Lägg till ett nytt format med namnet `myStyle1`som visas nedan och överför bildfilen `myStyleIcon1.png` till mappen `/apps/ws/image`s med en WebDAV-klient.
+   Till exempel: Lägga till ett nytt format med namnet `myStyle1`som visas nedan och överför bildfilen `myStyleIcon1.png` till `/apps/ws/image`som använder en WebDAV-klient.
 
    >[!NOTE]
    >
@@ -45,9 +48,9 @@ Om du vill anpassa bilderna som används i flödesåtgärder följer du de steg 
        }
    ```
 
-## Åtgärdsfönster för uppgiftslistans åtgärd {#task-list-task-action-popup}
+## Åtgärdspopup för uppgiftslisteåtgärd {#task-list-task-action-popup}
 
-1. Skapa ett åtgärdsfönster för uppgiftslistan, se [Skapa AEM Forms-arbetsytekod](introduction-customizing-html-workspace.md#building-html-workspace-code). Dev-paketet måste användas.
+1. Skapa en åtgärdspopup för uppgiftslista, se [Skapar AEM Forms arbetsytekod](introduction-customizing-html-workspace.md#building-html-workspace-code). Dev-paketet måste användas.
 
 1. Kopiera `/libs/ws/js/runtime/templates/task.html` till `/apps/ws/js/runtime/templates/task.html`.
 
@@ -81,7 +84,7 @@ Om du vill anpassa bilderna som används i flödesåtgärder följer du de steg 
                <%}%>
    ```
 
-1. Om namnet på CSS-formatet skiljer sig från namnet på vägåtgärden som kommer från servern ändrar du följande kod i `/apps/ws/js/runtime/templates/task.html`. Den lägger till en hög med serverletvillkoren `if-else` för att mappa formatet med vägåtgärdens namn.
+1. Om namnet på CSS-formatet skiljer sig från namnet på vägåtgärden som kommer från servern ändrar du följande kod i `/apps/ws/js/runtime/templates/task.html`. En hög med `if-else` serletvillkor för att mappa formatet med vägåtgärdens namn.
 
 ```
 <%if(routeList == null){%>
@@ -117,7 +120,7 @@ To
             <%}%>
 ```
 
-## Åtgärdsåtgärdspopup för aktivitetsinformation {#task-details-task-action-popup}
+## Åtgärdsfönster för aktivitetsåtgärd för aktivitetsinformation {#task-details-task-action-popup}
 
 1. Kopiera `/libs/ws/js/runtime/templates/taskdetails.html` till `/apps/ws/js/runtime/templates/taskdetails.html`.
 
@@ -141,7 +144,7 @@ To
                        <%}%>
    ```
 
-1. Om namnet på CSS-formatet skiljer sig från namnet på vägåtgärden som kommer från servern ändrar du följande kod i `/apps/ws/js/runtime/templates/taskdetails.html`. Den lägger till en hög med `if-else` serverletsvillkor för att mappa formatet med vägåtgärdens namn.
+1. Om namnet på CSS-formatet skiljer sig från namnet på vägåtgärden som kommer från servern ändrar du följande kod i `/apps/ws/js/runtime/templates/taskdetails.html`. Den lägger till en hög med `if-else` serletvillkor för att mappa formatet med vägåtgärdens namn.
 
    ```
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
@@ -169,9 +172,8 @@ To
                <%}%>
    ```
 
-1. Öppna `/apps/ws/js/registry.js` för att redigera och sök efter följande text:\
+1. Öppna `/apps/ws/js/registry.js` för redigering och sökning efter följande text:\
    `"text!/lc/libs/ws/js/runtime/templates/taskdetails.html"`
 
 1. Ersätt texten med följande:\
    `"text!/lc/apps/ws/js/runtime/templates/taskdetails.html"`
-

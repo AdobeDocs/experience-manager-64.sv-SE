@@ -1,8 +1,8 @@
 ---
 title: Java API-snabbstart för användarhanteraren (SOAP)
-seo-title: Java API-snabbstart för användarhanteraren (SOAP)
+seo-title: User Manager Java API Quick Start(SOAP)
 description: Använd API:t för användarhanteraren för att lägga till användare, ta bort användare, skapa grupper, hantera användare och grupper, hantera roller och behörigheter, synkronisera användare programmatiskt och hantera inställningsnoderna programmatiskt.
-seo-description: Använd API:t för användarhanteraren för att lägga till användare, ta bort användare, skapa grupper, hantera användare och grupper, hantera roller och behörigheter, synkronisera användare programmatiskt och hantera inställningsnoderna programmatiskt.
+seo-description: Use User Manager API to add users, delete users, create groups, manage users and groups, manage roles and permissions, synchronize users programmatically, and manage the Preferences Nodes programmatically.
 uuid: 0a2aa4ab-9329-485f-a30e-47bb471ce1b5
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: e0c20fd2-b084-4f61-936c-5282826a8d3d
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 130b5669-4533-4e88-9a64-bbbd7c68a5ca
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 0%
 
 ---
 
-
 # Snabbstart för Java API för användarhanteraren (SOAP) {#user-manager-java-api-quick-start-soap}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Java API Quick Start (SOAP) är tillgängligt för API:t för användarhanteraren.
 
@@ -527,7 +530,7 @@ I följande kodexempel tilldelas användarrollen Tjänster till ett huvudkonto, 
 
 ## Snabbstart (SOAP-läge): Synkronisera användare programmatiskt med Java API {#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api}
 
-I följande Java-kodexempel synkroniseras användare med hjälp av API:er för användarhantering. (Se [Programmatisk synkronisering av användare](/help/forms/developing/users.md#programmatically-synchronizing-users).)
+I följande Java-kodexempel synkroniseras användare med hjälp av API:er för användarhantering. (Se [Synkronisera användare programmatiskt](/help/forms/developing/users.md#programmatically-synchronizing-users).)
 
 ```as3
  /* 
@@ -906,7 +909,7 @@ I följande kodexempel skapas en grupp med namnet AdobeGroup till AEM Forms. (Se
 
 ## Snabbstart (SOAP-läge) Hantera inställningsnoder {#quick-start-soap-mode-managing-preferences-nodes}
 
-Följande Java-kodmodeller hanterar Preferences Nodes med API:erna för användarhantering. ( Se [Programmatisk hantering av inställningsnoder](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
+Följande Java-kodmodeller hanterar Preferences Nodes med API:erna för användarhantering. ( Se [Hantera inställningsnoderna programmatiskt](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
 
 ```as3
 /* 
@@ -1009,7 +1012,7 @@ public class ManagePreferences {
 
 ## Snabbstart (SOAP-läge): Hantera inställningsnoderna programmatiskt med Java API {#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api}
 
-Följande Java-kodmodeller hanterar inställningsnoder med API:erna för användarhantering ( Se [Programmatisk hantering av inställningsnoderna](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
+Följande Java-kodmodeller hanterar Preferences Nodes med API:er för användarhantering ( Se [Hantera inställningsnoderna programmatiskt](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
 
 ```as3
 /* 
@@ -1093,4 +1096,3 @@ public class ManagePreferences {
 } 
 }
 ```
-

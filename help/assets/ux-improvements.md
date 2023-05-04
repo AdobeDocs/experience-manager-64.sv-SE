@@ -1,18 +1,22 @@
 ---
 title: Förbättringar av användarupplevelsen i Assets
-description: I den här artikeln beskrivs förbättringar av användarupplevelsen i [!DNL Experience Manager] 6.4 Assets.
+description: I den här artikeln beskrivs förbättringar av användarupplevelsen i [!DNL Experience Manager] 6.4 Resurser.
 contentOwner: AG
 feature: Release Information
 role: Leader,User
 exl-id: 65029113-987e-46eb-86eb-8028233031f9
-source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
 
 # Förbättringar av användarupplevelsen i Assets {#user-experience-enhancements-in-assets}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 [!DNL Experience Manager] 6.4 Materialet innehåller flera förbättringar av användbarheten som ger en smidig användarupplevelse och ökar produktiviteten. Den snabba hastigheten med vilken ni kan skapa/hantera ert marknadsmaterial ökar företagets innehållshastighet.
 
@@ -22,7 +26,7 @@ Du kan anpassa de olika vyerna - kort-, lista- och kolumnvyer. Du kan till exemp
 
 ## Lazy loading {#lazy-loading}
 
-När du bläddrar bland/söker efter resurser i [!DNL Experience Manager] 6.4 Resurser visas upp till 200 resurser i taget. Du kan bläddra igenom resultaten snabbare, vilket är särskilt användbart när du bläddrar igenom en lång lista med resultat. Eftersom ett stort antal resurser läses in samtidigt blir webbläsarupplevelsen smidig.
+När du söker efter resurser i [!DNL Experience Manager] 6.4 Resurser, upp till 200 resurser visas i taget. Du kan bläddra igenom resultaten snabbare, vilket är särskilt användbart när du bläddrar igenom en lång lista med resultat. Eftersom ett stort antal resurser läses in samtidigt blir webbläsarupplevelsen smidig.
 
 Om du trycker/klickar på en resurs för att granska dess informationssida kan du gå tillbaka till resultatsidan genom att trycka/klicka på knappen Bakåt i verktygsfältet.
 
@@ -32,11 +36,11 @@ Beroende på vilken enhet du använder och hur detaljerad du behöver kan du än
 
 Så här ändrar du storlek på miniatyrbilder i kortvyn:
 
-1. Tryck/klicka på layoutikonen i verktygsfältet och välj sedan alternativet **[!UICONTROL View Settings]**.
+1. Tryck/klicka på layoutikonen i verktygsfältet och välj sedan **[!UICONTROL View Settings]** alternativ.
 
    ![view_settings](assets/view_settings.png)
 
-1. Välj önskad miniatyrstorlek i dialogrutan **[!UICONTROL View Settings]** och tryck/klicka sedan på **[!UICONTROL Update]**.
+1. Från **[!UICONTROL View Settings]** väljer du önskad miniatyrstorlek och trycker/klickar sedan på **[!UICONTROL Update]**.
 
    ![view_settings_dialog](assets/view_settings_dialog.png)
 
@@ -54,7 +58,7 @@ I listvyn visar den första kolumnen nu filnamnen på resurserna som standard. Y
 
 ![list_view](assets/list_view.png)
 
-Du kan välja att konfigurera hur mycket information du vill visa. Tryck/klicka på layoutikonen, välj alternativet **[!UICONTROL View Settings]** och ange de kolumner som du vill visa i dialogrutan **[!UICONTROL View Settings]**.
+Du kan välja att konfigurera hur mycket information du vill visa. Tryck/klicka på layoutikonen och välj **[!UICONTROL View Settings]** och ange de kolumner som du vill visa i **[!UICONTROL View Settings]** -dialogrutan.
 
 ![view_settings_dialoglistview](assets/view_settings_dialoglistview.png)
 
@@ -68,7 +72,7 @@ Förutom kort- och listvyer kan du nu navigera till informationssidan för en re
 
 [!DNL Experience Manager] 6.4 Resurser innehåller en trädvy där du bekvämt kan bläddra i resurshierarkin och navigera till önskad resurs eller mapp.
 
-Om du vill öppna trädvyn trycker/klickar du på ikonen GlobalNav i `Assets UI` och väljer **[!UICONTROL Content tree]** på menyn.
+Om du vill öppna trädvyn trycker du på/klickar på ikonen GlobalNav i dialogrutan `Assets UI`och väljer **[!UICONTROL Content tree]** på menyn.
 
 ![content_tree](assets/content_tree.png)
 
@@ -88,7 +92,7 @@ Beroende på den valda layouten kan du öppna informationssidan för en resurs p
 |---|---|
 | [!UICONTROL Card View] | Tryck/klicka på resurspanelen. |
 | [!UICONTROL List View] | Tryck/klicka på radposten för resursen i listan. |
-| [!UICONTROL Column View] | Tryck/klicka på knappen **[!UICONTROL More Details]** från ögonblicksbilden av resursen. |
+| [!UICONTROL Column View] | Tryck/klicka på **[!UICONTROL More Details]** från ögonblicksbilden av resursen. |
 
 Använd knapparna Föregående/Nästa för att gå fram och tillbaka mellan resurserna.
 

@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: introduction
 discoiquuid: 2feb4a9c-57ad-4c6b-a572-0047bc409bbb
 exl-id: 9c5d956c-06bc-4428-afcd-02b4f81b802f
-source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2741'
+source-wordcount: '2777'
 ht-degree: 0%
 
 ---
 
 # Konfigurera AEM Forms referenswebbplatser {#set-up-and-configure-aem-forms-reference-sites}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 AEM Forms tillhandahåller en referensimplementering av webbplatser som visar hur AEM Forms hjälper finanssektorn och myndigheter att omvandla sina komplexa transaktioner till enkla och engagerande digitala upplevelser var som helst, när som helst, på vilken enhet som helst.
 

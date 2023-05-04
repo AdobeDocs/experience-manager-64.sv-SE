@@ -5,24 +5,28 @@ contentOwner: VG
 feature: Brand Portal
 role: User
 exl-id: f41ab750-5780-42ae-a131-5bc748280215
-source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 31%
+source-wordcount: '511'
+ht-degree: 28%
 
 ---
 
 # Publicera mappar på varumärkesportalen {#publish-folders-to-brand-portal}
 
-Som Adobe Experience Manager Assets-administratör kan du publicera resurser och mappar till [!DNL Experience Manager Assets Brand Portal]-instansen (eller schemalägga publiceringsarbetsflödet till ett senare datum/tid) för din organisation. Du måste dock först integrera [!DNL Experience Manager Assets] med [!DNL Brand Portal]. Mer information finns i [Konfigurera [!DNL Experience Manager Assets] med Brand Portal](configure-aem-assets-with-brand-portal.md).
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+Som Adobe Experience Manager Assets-administratör kan du publicera resurser och mappar till [!DNL Experience Manager Assets Brand Portal] -instans (eller schemalägg publiceringsarbetsflödet till ett senare datum/tid) för din organisation. Du måste dock först integrera [!DNL Experience Manager Assets] med [!DNL Brand Portal]. Mer information finns i [Konfigurera [!DNL Experience Manager Assets] med Brand Portal](configure-aem-assets-with-brand-portal.md).
 
 När du har publicerat en resurs eller mapp är den tillgänglig för användare i Brand Portal.
 
-Om du gör senare ändringar i den ursprungliga resursen eller mappen i [!DNL Assets] återspeglas inte ändringarna i Brand Portal förrän du publicerar resursen eller mappen på nytt. Funktionen säkerställer att pågående ändringar inte finns i varumärkesportalen. Endast godkända ändringar som publiceras av en administratör finns i varumärkesportalen.
+Om du gör senare ändringar i den ursprungliga resursen eller mappen i [!DNL Assets]återspeglas inte ändringarna i Brand Portal förrän du publicerar om resursen eller mappen. Funktionen säkerställer att pågående ändringar inte finns i varumärkesportalen. Endast godkända ändringar som publiceras av en administratör finns i varumärkesportalen.
 
 ## Publicera mappar på varumärkesportalen {#publish-folders-to-brand-portal-1}
 
-1. I gränssnittet [!DNL Assets] håller du pekaren över den önskade mappen och väljer **[!UICONTROL Publish]**-alternativet bland snabbåtgärderna.
+1. Från [!DNL Assets] -gränssnitt, hovra över önskad mapp och välj **[!UICONTROL Publish]** från snabbåtgärderna.
 
    Du kan också markera önskad mapp och följa stegen nedan.
 
@@ -32,11 +36,11 @@ Om du gör senare ändringar i den ursprungliga resursen eller mappen i [!DNL As
 
    Gör något av följande för att publicera de markerade mapparna på varumärkesportalen:
 
-   * Välj **[!UICONTROL Quick Publish]** i verktygsfältet. Välj sedan **[!UICONTROL Publish to Brand Portal]** på menyn.
+   * Välj **[!UICONTROL Quick Publish]** i verktygsfältet. Välj sedan **[!UICONTROL Publish to Brand Portal]**.
    * Välj **[!UICONTROL Manage Publication]** i verktygsfältet.
 
-3. Välj sedan **[!UICONTROL Publish to Brand Portal]** från **[!UICONTROL Action]** och välj **[!UICONTROL Now]** från **[!UICONTROL Scheduling]**. Tryck på **[!UICONTROL Next].**
-4. Bekräfta ditt val i **[!UICONTROL Scope]** och tryck på **[!UICONTROL Publish to Brand Portal]**.
+3. Från **[!UICONTROL Action]** välj **[!UICONTROL Publish to Brand Portal]** och från **[!UICONTROL Scheduling]** välj **[!UICONTROL Now]**. Tryck på **[!UICONTROL Next].**
+4. Inom **[!UICONTROL Scope]**, bekräfta ditt val och tryck **[!UICONTROL Publish to Brand Portal]**.
 
    Ett meddelande visas som anger att mappen har placerats i kö för publicering på varumärkesportalen. Logga in i Brand Portal-gränssnittet för att se den publicerade mappen.
 
@@ -45,7 +49,7 @@ Om du gör senare ändringar i den ursprungliga resursen eller mappen i [!DNL As
    Så här schemalägger du publiceringen i Brand Portal-arbetsflödet för resursmappar till ett senare datum eller en senare tidpunkt:
 
    1. När du har valt resurser/mappar att publicera väljer du **[!UICONTROL Manage Publication]** i verktygsfältet högst upp.
-   2. På sidan **[!UICONTROL Manage Publication]** väljer du **[!UICONTROL Publish to Brand Portal]** från **[!UICONTROL Action]** och väljer **[!UICONTROL Later]** från **[!UICONTROL Scheduling]**.
+   2. På **[!UICONTROL Manage Publication]** sida, markera **[!UICONTROL Publish to Brand Portal]** från **[!UICONTROL Action]** och markera **[!UICONTROL Later]** från **[!UICONTROL Scheduling]**.
 
       ![publishlaterbp](assets/publishlaterbp.png)
 
@@ -57,23 +61,23 @@ Om du gör senare ändringar i den ursprungliga resursen eller mappen i [!DNL As
 
 ## Avpublicera mappar från varumärkesportalen {#unpublish-folders-from-brand-portal}
 
-Du kan ta bort en resursmapp som publicerats till Brand Portal genom att avpublicera den från författarinstansen [!DNL Experience Manager]. När du har avpublicerat originalmappen har varumärkesportalens användare har inte längre tillgång till kopian.
+Du kan ta bort en resursmapp som publicerats till Brand Portal genom att avpublicera den från [!DNL Experience Manager] Författarinstans. När du har avpublicerat originalmappen har varumärkesportalens användare har inte längre tillgång till kopian.
 
 Du kan avpublicera mappar från Brand Portal snabbt eller schemalägga dem för ett senare datum och en senare tidpunkt. Gör så här för att avpublicerar resursmappar från varumärkesportalen:
 
-1. I gränssnittet [!DNL Assets] i [!DNL Experience Manager] Author instance väljer du den mapp som du vill avpublicera.
+1. Från [!DNL Assets] gränssnitt i [!DNL Experience Manager]  Författarinstans: Välj den mapp som du vill avpublicera.
 
    ![publish2bp-1](assets/publish2bp-1.png)
 
-2. Tryck/klicka på **[!UICONTROL Manage Publication]** i verktygsfältet.
+2. Tryck/klicka i verktygsfältet **[!UICONTROL Manage Publication]**.
 
 3. **Avpublicera från Brand Portal nu**
 
    Så här avpublicerar du snabbt den önskade mappen från Brand Portal:
 
-   1. På sidan **[!UICONTROL Manage Publication]** väljer du **[!UICONTROL Action]** från **[!UICONTROL Unpublish from Brand Portal]** och från **[!UICONTROL Scheduling]** **[!UICONTROL Now]**.
+   1. På **[!UICONTROL Manage Publication]** sida, från **[!UICONTROL Action]** välj **[!UICONTROL Unpublish from Brand Portal]** och från **[!UICONTROL Scheduling]** välj **[!UICONTROL Now]**.
    2. Tryck/klicka på **[!UICONTROL Next].**
-   3. Bekräfta ditt val i **[!UICONTROL Scope]** och tryck på **[!UICONTROL Unpublish from Brand Portal]**.
+   3. Inom **[!UICONTROL Scope]**, bekräfta ditt val och tryck **[!UICONTROL Unpublish from Brand Portal]**.
 
    ![confirm-unpublish](assets/confirm-unpublish.png)
 
@@ -81,10 +85,10 @@ Du kan avpublicera mappar från Brand Portal snabbt eller schemalägga dem för 
 
    Så här schemalägger du publiceringen av en mapp från Brand Portal till ett senare datum och tid:
 
-   1. På **[!UICONTROL Manage Publication]**-sidan väljer du **[!UICONTROL Action]** från **[!UICONTROL Unpublish from Brand Portal]** och från **[!UICONTROL Scheduling]** välj **[!UICONTROL Later].**
+   1. På **[!UICONTROL Manage Publication]** sida, från **[!UICONTROL Action]** välj **[!UICONTROL Unpublish from Brand Portal]** och från **[!UICONTROL Scheduling]** välj **[!UICONTROL Later].**
    2. Markera ett **[!UICONTROL Activation date]** och ange tiden. Tryck på **[!UICONTROL Next]**.
-   3. Bekräfta ditt val i **[!UICONTROL Scope]** och tryck på **[!UICONTROL Next]**.
-   4. Ange **[!UICONTROL Workflow title]** under **[!UICONTROL Workflows]**. Tryck på **[!UICONTROL Unpublish Later].**
+   3. Inom **[!UICONTROL Scope]**, bekräfta ditt val och tryck **[!UICONTROL Next]**.
+   4. Ange en **[!UICONTROL Workflow title]** under **[!UICONTROL Workflows]**. Tryck på **[!UICONTROL Unpublish Later].**
 
       ![unpublishworkflows](assets/unpublishworkflows.png)
 

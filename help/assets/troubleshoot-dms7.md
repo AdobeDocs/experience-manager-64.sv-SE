@@ -9,14 +9,18 @@ exl-id: d8cc94b0-eacf-4e76-bd50-7934bbc28c92
 feature: Troubleshooting
 role: Admin,User
 mini-toc-levels: 3
-source-git-commit: 48e75239b9934ebe6c3c0d4f76b7990372646f23
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1413'
 ht-degree: 0%
 
 ---
 
 # Felsökning av Dynamic Media - Scene7-läge {#troubleshooting-dynamic-media-scene-mode}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 I följande dokument beskrivs felsökning för Dynamic Media som körs **dynamicmedia_scene7** körningsläge.
 

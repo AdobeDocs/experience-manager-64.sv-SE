@@ -12,14 +12,18 @@ content-strategy: max-2018
 discoiquuid: a8b1f7df-e36f-4d02-883a-72120fea7046
 role: Admin
 exl-id: 72ead30c-648d-43ad-9826-9c8945a8860d
-source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1829'
+source-wordcount: '1865'
 ht-degree: 0%
 
 ---
 
 # Migrera AEM Forms-resurser och -dokument {#migrate-aem-forms-assets-and-documents}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Migreringsverktyget konverterar [Adaptivt Forms-material](/help/forms/using/introduction-forms-authoring.md), [molnkonfigurationer](/help/sites-developing/extending-cloud-config.md)och [Korrespondenshanteringsresurser](/help/forms/using/cm-overview.md) från det format som användes i de tidigare versionerna till det format som användes i AEM 6.4 Forms. När du kör migreringsverktyget migreras följande:
 

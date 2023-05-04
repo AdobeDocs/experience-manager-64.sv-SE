@@ -1,8 +1,8 @@
 ---
 title: Bakåtkompatibilitet i AEM 6.4
-seo-title: Bakåtkompatibilitet i AEM 6.4
+seo-title: Backward Compatibility in AEM 6.4
 description: Lär dig hur du kan göra dina program och konfigurationer kompatibla med AEM 6.4
-seo-description: Lär dig hur du kan göra dina program och konfigurationer kompatibla med AEM 6.4
+seo-description: Learn how to keep your apps and configurations compatible with AEM 6.4
 uuid: 2fa8525e-7f3b-4096-ac85-01c2c76bc9ac
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,22 +10,25 @@ topic-tags: upgrading
 content-type: reference
 discoiquuid: 5e76fe09-4d37-4c8c-8baf-97e75689bd26
 feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 5798100a-e03a-43f8-9189-ae51c06e192b
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
 
-
 # Bakåtkompatibilitet i AEM 6.4{#backward-compatibility-in-aem}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Översikt {#overview}
 
 >[!NOTE]
 >
->En lista över innehåll- och konfigurationsändringar som inte omfattas av kompatibilitetspaketet finns i [Databasomstrukturering i AEM 6.4](/help/sites-deploying/repository-restructuring.md).
+>En lista över innehåll- och konfigurationsändringar som inte omfattas av kompatibilitetspaketet finns på [Omstrukturering av lager i AEM 6.4](/help/sites-deploying/repository-restructuring.md).
 
 I AEM 6.4 har alla funktioner utvecklats med bakåtkompatibilitet i åtanke.
 
@@ -63,7 +66,7 @@ Kompatibilitetsläget är avsett för kunder som har anpassat gränssnitt som in
 
 ## Konfigurera {#how-to-set-up}
 
-Kompatibilitetspaketet AEM 6.3 kan installeras som ett paket med hjälp av pakethanteraren. Du kan hämta [AEM 6.3-kompatibilitetspaketet från platsen Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/compatpack/aem-compat-cq64-to-cq63).
+Kompatibilitetspaketet AEM 6.3 kan installeras som ett paket med hjälp av pakethanteraren. Du kan ladda ned [AEM 6.3-kompatibilitetspaket från programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/compatpack/aem-compat-cq64-to-cq63) webbplats.
 
 När Kompatibilitetspaketet har installerats kan routningen aktiveras eller inaktiveras med en växel i OSGI-konfigurationen enligt nedan:
 

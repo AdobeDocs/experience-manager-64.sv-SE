@@ -1,24 +1,27 @@
 ---
 title: Skapa anpassningsbara formulär med XML-schema
-seo-title: Skapa anpassningsbara formulär med XML-schema
+seo-title: Creating adaptive forms using XML Schema
 description: Anpassningsbara formulär kan använda XML-schema som formulärmodell, vilket gör att du kan använda befintliga XSD-mallar för att skapa anpassningsbara formulär. Du kan dra och släppa schemaelement från XSD till ditt anpassningsbara formulär.
-seo-description: Anpassningsbara formulär kan använda XML-schema som formulärmodell, vilket gör att du kan använda befintliga XSD-mallar för att skapa anpassningsbara formulär. Du kan dra och släppa schemaelement från XSD till ditt anpassningsbara formulär.
+seo-description: Adaptive forms can use XML schema as form model, allowing you to leverage existing XSD templates to create adaptive forms. You can drag-and-drop schema elements from XSD onto your adaptive form.
 uuid: a5f5d423-9b83-47e8-b0fa-88210d0d18d9
 content-type: reference
 topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: a1070d9e-fb7c-4134-b6d5-ffa2d3e9718d
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 5f6d23b2-ab8b-48fd-b853-eea7d6c9d651
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 1%
+source-wordcount: '1080'
+ht-degree: 0%
 
 ---
 
-
 # Skapa anpassningsbara formulär med XML-schema {#creating-adaptive-forms-using-xml-schema}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Förutsättningar {#prerequisites}
 
@@ -29,7 +32,7 @@ Att skapa ett anpassat formulär med ett XML-schema som formulärmodell kräver 
 
 ## Använda ett XML-schema som formulärmodell {#using-an-xml-schema-as-form-model}
 
-AEM Forms har stöd för att skapa ett anpassat formulär genom att använda ett befintligt XML-schema som formulärmodell. Det här XML-schemat representerar strukturen i vilken data produceras eller förbrukas av det bakomliggande systemet i organisationen.
+AEM Forms har stöd för att skapa ett anpassat formulär genom att använda ett befintligt XML-schema som formulärmodell. Det här XML-schemat representerar strukturen i vilken data produceras eller används av det bakomliggande systemet i organisationen.
 
 De viktigaste funktionerna i ett XML-schema är:
 
@@ -82,7 +85,7 @@ Den här mappningen av XML-element med adaptiva formulärkomponenter är följan
  </tbody> 
 </table>
 
-## Exempel på XML-schema {#sample-xml-schema}
+## XML-schema - exempel {#sample-xml-schema}
 
 Här är ett exempel på ett XML-schema.
 
@@ -143,7 +146,7 @@ Du kan lägga till följande attribut i XML-schemaelement om du vill lägga till
   </tr> 
   <tr> 
    <td><code>use=required </code></td> 
-   <td>Markerar ett fält som obligatoriskt<br /> </td> 
+   <td>Markerar ett fält obligatoriskt<br /> </td> 
    <td>Attribut</td> 
   </tr> 
   <tr> 
@@ -171,10 +174,8 @@ Du kan lägga till följande attribut i XML-schemaelement om du vill lägga till
 >
 >* Inled det första tecknet i elementnamnet med versal
 >* Infoga tomt utrymme vid gränserna för Camera Case.
-
 >
->
-Om du till exempel lägger till schemaelementet `userFirstName` är bildtexten som skapas i det adaptiva formuläret `User First Name`.
+>Om du till exempel lägger till `userFirstName` schemaelement, den bildtext som genereras i det adaptiva formuläret är `User First Name`.
 
 ## Begränsa tillåtna värden för en adaptiv formulärkomponent {#limit-acceptable-values-for-an-adaptive-form-component}
 
@@ -205,7 +206,7 @@ Du kan lägga till följande begränsningar i XML-schemaelement för att begrän
    <td> 
     <ul> 
      <li>Numerisk ruta</li> 
-     <li>Numerisk nummerlista<br /> </li> 
+     <li>Numerisk stege<br /> </li> 
      <li>Datumväljaren</li> 
     </ul> </td> 
   </tr> 
@@ -222,7 +223,7 @@ Du kan lägga till följande begränsningar i XML-schemaelement för att begrän
   </tr> 
   <tr> 
    <td><p><code>exclusiveMaximum</code></p> </td> 
-   <td><p>Boolesk</p> </td> 
+   <td><p>Boolean</p> </td> 
    <td><p>Om true måste det numeriska värdet eller datumet som anges i formulärets komponent vara mindre än det numeriska värdet eller datumet som anges för egenskapen maximum.</p> <p>Om värdet är false måste det numeriska värdet eller datumet som anges i formulärets komponent vara mindre än eller lika med det numeriska värdet eller datumet som anges för egenskapen maximum.</p> </td> 
    <td> 
     <ul> 
@@ -233,7 +234,7 @@ Du kan lägga till följande begränsningar i XML-schemaelement för att begrän
   </tr> 
   <tr> 
    <td><p><code>exclusiveMinimum</code></p> </td> 
-   <td><p>Boolesk</p> </td> 
+   <td><p>Boolean</p> </td> 
    <td><p>Om true måste det numeriska värdet eller datumet som anges i formulärets komponent vara större än det numeriska värdet eller datumet som anges för egenskapen minimum.</p> <p>Om värdet är false måste det numeriska värdet eller datumet som anges i formulärets komponent vara större än eller lika med det numeriska värdet eller datumet som anges för egenskapen minimum.</p> </td> 
    <td> 
     <ul> 
@@ -294,15 +295,15 @@ Du kan lägga till följande begränsningar i XML-schemaelement för att begrän
 
 **Hur vet jag vilket element i trädet som är associerat med vilket XML-element?**
 
-När du dubbelklickar på ett element i Innehållssökning visas ett fältnamn och en egenskap med namnet `bindRef` på en popup-meny. Den här egenskapen mappar trädelementet till elementet eller attributet i schemat.
+När du dubbelklickar på ett element i Innehållssökning visas ett fältnamn och en egenskap med namnet `bindRef`. Den här egenskapen mappar trädelementet till elementet eller attributet i schemat.
 
 ![Ett bindref-fält för ett XML-schemaelement](assets/dblclick.png)
 
-Fältet bindRef</code> visar associationen mellan ett trädelement och ett element eller attribut i ett schema.
+BindRef</code> fältet visar associationen mellan ett trädelement och ett element eller attribut i ett schema.
 
 >[!NOTE]
 >
->Attribut har en `@`-symbol i `bindRef`värdet för att skilja dem från element. Till exempel, `/config/projectDetails/@duration`.
+>Attribut har en `@` symbolen i sina `bindRef`värde för att skilja dem från element. Till exempel, `/config/projectDetails/@duration`.
 
 **Varför kan jag inte dra enskilda element i ett delformulär (struktur som genereras från en komplex typ) för repeterbara delformulär (värdena minOcCours och maxOccurs är större än 1)?**
 
@@ -317,4 +318,4 @@ Du har två alternativ:
 
 **Vad är en bindRef?**
 
-En `bindRef` är anslutningen mellan en adaptiv formulärkomponent och ett schemaelement eller attribut. Det anger `XPath` där värdet som hämtas från den här komponenten eller det här fältet är tillgängligt i XML-utdata. Ett `bindRef`värde används också när ett fältvärde fylls i i förväg från förfylld (förifylld) XML.
+A `bindRef` är anslutningen mellan en adaptiv formulärkomponent och ett schemaelement eller attribut. Det avgör `XPath` där värdet som hämtas från den här komponenten eller det här fältet är tillgängligt i XML-utdata. A `bindRef`används också när ett fältvärde fylls i i förväg från förfylld (förifylld) XML.

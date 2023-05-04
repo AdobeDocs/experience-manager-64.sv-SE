@@ -1,23 +1,26 @@
 ---
 title: Förhandsgranska ett formulär
-seo-title: Förhandsgranska ett formulär
+seo-title: Previewing a form
 description: Du kan förhandsgranska formulären innan du publicerar eller aktiverar dem för att säkerställa att de motsvarar förväntningarna. Alternativen för förhandsgranskning kan variera mellan olika formulärtyper som stöds.
-seo-description: Du kan förhandsgranska formulären innan du publicerar eller aktiverar dem för att säkerställa att de motsvarar förväntningarna. Alternativen för förhandsgranskning kan variera mellan olika formulärtyper som stöds.
+seo-description: You can preview your forms before publishing or activating to ensure it meets the expectations. Preview options may vary across the supported form types.
 uuid: 9ec359ea-f518-441c-9c3d-e3c1ea07a532
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 377d804d-4a75-4c93-8125-d2660cf56418
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 130bdc9f-b19e-4b7d-a6ad-ef5097c9cf41
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '401'
 ht-degree: 0%
 
 ---
 
-
 # Förhandsgranska ett formulär {#previewing-a-form}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Översikt {#overview}
 
@@ -35,19 +38,19 @@ I följande tabell visas de förhandsvisningsalternativ som är tillgängliga f�
   </tr>
   <tr>
    <td>Dokument</td> 
-   <td>Förhandsgranska PDF</td> 
+   <td>PDF preview</td> 
   </tr>
   <tr>
-   <td>PDF-formulär</td> 
-   <td>Förhandsgranska PDF och förhandsgranska med data<br /> </td> 
+   <td>PDF Form</td> 
+   <td>Förhandsgranska och förhandsgranska PDF med data<br /> </td> 
   </tr>
   <tr>
    <td>adaptiv form</td> 
-   <td>HTML-förhandsgranskning och HTML-förhandsgranskning med data</td> 
+   <td>Förhandsgranska HTML och HTML med data</td> 
   </tr>
   <tr>
    <td>Formulärmall</td> 
-   <td>PDF-förhandsgranskning, PDF-förhandsgranskning med data, HTML-förhandsgranskning, HTML-förhandsgranskning med data<br /> </td> 
+   <td>förhandsgranskning av PDF, förhandsvisning av PDF med data, förhandsgranskning av HTML, förhandsvisning av HTML med data<br /> </td> 
   </tr>
  </tbody>
 </table>
@@ -58,7 +61,7 @@ I följande tabell visas de förhandsvisningsalternativ som är tillgängliga f�
 
    >[!NOTE]
    >
-   >Om du vill välja en resurs växlar du till listvyn från standardkortvyn. Klicka på ![aem6forms_viewlist](assets/aem6forms_viewlist.png) eller ![aem6forms_viewcard](assets/aem6forms_viewcard.png) för att växla vy.
+   >Om du vill välja en resurs växlar du till listvyn från standardkortvyn. Klicka ![aem6forms_viewlist](assets/aem6forms_viewlist.png) eller ![aem6forms_viewcard](assets/aem6forms_viewcard.png) för att växla vy.
 
 1. Om du klickar på Förhandsvisa visas en lista med möjliga förhandsvisningsalternativ för den valda resurstypen. Klicka på önskat alternativ för att återge den markerade resursen på en ny flik.
 
@@ -70,8 +73,7 @@ I följande tabell visas de förhandsvisningsalternativ som är tillgängliga f�
 
 ## Förhandsgranska med data {#preview-with-data}
 
-När du väljer **Förhandsgranska med data** kan du se hur formuläret ser ut med riktiga data som anges i det. Med alternativet Förhandsgranska med data kan du överföra en XML-fil som innehåller exempelanvändardata. Exempelinformationen används för att fylla i förhandsgranskningsformuläret i det format du väljer.
+När du väljer **Förhandsgranska med data** kan du se hur formuläret ser ut med verkliga data som anges i det. Med alternativet Förhandsgranska med data kan du överföra en XML-fil som innehåller exempelanvändardata. Exempelinformationen används för att fylla i förhandsgranskningsformuläret i det format du väljer.
 
-1. Välj en resurs, klicka på Förhandsgranska ![aem6forms_preview](assets/aem6forms_preview.png) och välj **Förhandsgranska med data**.
+1. Välj en resurs och klicka på Förhandsvisa ![aem6forms_preview](assets/aem6forms_preview.png)och markera **Förhandsgranska med data**.
 1. Ange FormData som en XML-fil i dialogrutan Förhandsgranska formulär. Klicka på Förhandsgranska om du vill återge formuläret med sammanfogade data från XML.
-

@@ -8,14 +8,18 @@ contentOwner: khsingh
 topic-tags: publish
 discoiquuid: 4c7ba430-25b2-4ba2-a5eb-4edaed0d599a
 exl-id: 6172d936-9348-4f3f-a437-6465dd156f3b
-source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '878'
-ht-degree: 17%
+source-wordcount: '914'
+ht-degree: 16%
 
 ---
 
 # Åtgärder och funktioner i formulärcentrerade AEM arbetsflöden i OSGi- och AEM Forms JEE-arbetsflöden  {#actions-and-capabilities-of-form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Arbetsytan AEM Inkorgen och HTML {#aem-inbox-and-html-workspace}
 
@@ -383,7 +387,7 @@ I följande tabell visas funktionerna i AEM Inbox och AEM Forms app:
    <td><p>Stöds ej</p> </td> 
   </tr>
   <tr>
-   <td><p>Infogning av kommentarer.</p> </td> 
+   <td><p>Lägga till kommentarer</p> </td> 
    <td><p>Stöds</p> </td> 
    <td><p>Stöds</p> </td> 
   </tr>

@@ -1,24 +1,27 @@
 ---
 title: Experience Fragments
-seo-title: Upplevelsefragment
-description: Upplevelsefragment
-seo-description: 'null'
+seo-title: Experience Fragments
+description: Experience Fragments
+seo-description: null
 uuid: be1aceef-eb6e-47e5-a920-be5cc6de6191
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 1fe58af0-3005-46fc-8717-5d32557947ed
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 8906b3ab-cb08-4b3e-8796-334e36b1e491
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1247'
-ht-degree: 4%
+source-wordcount: '1280'
+ht-degree: 3%
 
 ---
 
-
 # Experience Fragments{#experience-fragments}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Ett Experience Fragment är en grupp med en eller flera komponenter, inklusive innehåll och layout, som kan refereras till på sidor. De kan innehålla alla komponenter.
 
@@ -88,13 +91,13 @@ Om du skapar mappar kan du:
 
    >[!NOTE]
    >
-   >Du kan använda [mallredigeraren](/help/sites-authoring/templates.md) för att skapa en egen mall.
+   >Du kan använda [mallredigerare](/help/sites-authoring/templates.md) för att skapa en egen mall.
 
-I följande exempel visas Experience Fragments som är strukturerade enligt `Contributors`. Den struktur som används visar också hur andra funktioner, som Multi Site Management (inklusive språkkopior), kan användas.
+I följande exempel visas Experience Fragments som strukturerats enligt `Contributors`. Den struktur som används visar också hur andra funktioner, som Multi Site Management (inklusive språkkopior), kan användas.
 
 >[!CAUTION]
 >
->Följande skärmbild togs från WKND-webbplatsen med Adobe Experience Manager som Cloud Service.
+>Följande skärmbild togs från WKND-webbplatsen med Adobe Experience Manager as a Cloud Service.
 
 ![Mappar för Experience Fragments](assets/xf-folders.png)
 
@@ -108,19 +111,19 @@ Om du vill skapa och konfigurera en mapp för dina Experience Fragments bör du:
 
 >[!NOTE]
 >
->Det går också att konfigurera [tillåtna mallar för din instans](#configure-allowed-templates-instance), men den här metoden **rekommenderas inte** eftersom värdena kan skrivas över vid uppgradering.
+>Det går också att konfigurera [Tillåtna mallar för din instans](#configure-allowed-templates-instance), men den här metoden är **not** rekommenderas eftersom värdena kan skrivas över vid uppgradering.
 
 ### Konfigurera tillåtna mallar för mappen {#configure-allowed-templates-folder}
 
 >[!NOTE]
 >
->Detta är den rekommenderade metoden för att ange **[!UICONTROL Allowed Templates]** eftersom värdena inte skrivs över vid uppgradering.
+>Detta är den rekommenderade metoden för att ange **[!UICONTROL Allowed Templates]**, eftersom värdena inte skrivs över vid uppgraderingen.
 
-1. Navigera till den obligatoriska **[!UICONTROL Experience Fragments]**-mappen.
+1. Navigera till önskad **[!UICONTROL Experience Fragments]** mapp.
 
-1. Markera mappen och **[!UICONTROL Properties]**.
+1. Markera mappen och sedan **[!UICONTROL Properties]**.
 
-1. Ange det reguljära uttrycket för att hämta de nödvändiga mallarna i fältet **[!UICONTROL Allowed Templates]**.
+1. Ange det reguljära uttrycket för hämtning av de nödvändiga mallarna i **[!UICONTROL Allowed Templates]** fält.
 
    Till exempel:
    `/conf/(.*)/settings/wcm/templates/experience-fragment(.*)?`
@@ -133,42 +136,42 @@ Om du vill skapa och konfigurera en mapp för dina Experience Fragments bör du:
 
 >[!CAUTION]
 >
->Du bör inte ändra **[!UICONTROL Allowed Templates]** med den här metoden eftersom de angivna mallarna kan skrivas över vid uppgradering.
+>Vi rekommenderar inte att du ändrar **[!UICONTROL Allowed Templates]** den här metoden eftersom de angivna mallarna kan skrivas över vid uppgradering.
 >
 >Använd den här dialogrutan endast i informationssyfte.
 
-1. Navigera till den obligatoriska **[!UICONTROL Experience Fragments]**-konsolen.
+1. Navigera till önskad **[!UICONTROL Experience Fragments]** konsol.
 
 1. Välj **[!UICONTROL Configuration options]**:
 
    ![Knappen Konfiguration](assets/xf-folders-18.png)
 
-1. Ange de mallar som krävs i dialogrutan **[!UICONTROL Configure Experience Fragments]**:
+1. Ange de mallar som krävs i **[!UICONTROL Configure Experience Fragments]** dialog:
 
    ![Konfigurera Experience Fragments](assets/xf-folders-19.png)
 
 1. Välj **[!UICONTROL Save]**.
 
-## Skapa ett Experience Fragment {#creating-an-experience-fragment}
+## Skapa ett upplevelsefragment {#creating-an-experience-fragment}
 
 Så här skapar du ett Experience Fragment:
 
-1. Välj **[!UICONTROL Experience Fragments]** i Global Navigation.
+1. Välj **[!UICONTROL Experience Fragments]** från Global Navigation.
 
    ![screen_shot_2018-04-05at92221am1](assets/screen_shot_2018-04-05at92221am1.png)
 
-1. Navigera till önskad mapp och välj **[!UICONTROL Create]**.
+1. Navigera till önskad mapp och markera **[!UICONTROL Create]**.
 
-1. Välj **[!UICONTROL Experience Fragment]** för att öppna guiden **[!UICONTROL Create Experience Fragment]**.
+1. Välj **[!UICONTROL Experience Fragment]** för att öppna **[!UICONTROL Create Experience Fragment]** guide.
 
-   Välj önskad **[!UICONTROL Template]** och sedan **[!UICONTROL Next]**:
+   Välj önskat **[!UICONTROL Template]** sedan **[!UICONTROL Next]**:
 
    ![xf-authoring-02](assets/xf-authoring-02.png)
 
 
-1. Ange **[!UICONTROL Properties]** för din Experience Fragment.
+1. Ange **[!UICONTROL Properties]** för er Experience Fragment.
 
-   En **[!UICONTROL Title]** är obligatorisk. Om **[!UICONTROL Name]** lämnas tomt hämtas den från **[!UICONTROL Title]**.
+   A **[!UICONTROL Title]** är obligatoriskt. Om **[!UICONTROL Name]** är tom kommer den att härledas från **[!UICONTROL Title]**.
 
    ![xf-authoring-03](assets/xf-authoring-03.png)
 
@@ -181,29 +184,29 @@ Så här skapar du ett Experience Fragment:
 
 ## Redigera din upplevelsefragment {#editing-your-experience-fragment}
 
-Experience Fragment Editor har funktioner som liknar den vanliga sidredigeraren. Mer information om hur du använder sidinnehåll finns i [Redigera sidinnehåll](/help/sites-authoring/editing-content.md).
+Experience Fragment Editor har funktioner som liknar den vanliga sidredigeraren. Se [Redigera sidinnehåll](/help/sites-authoring/editing-content.md) om du vill ha mer information om hur du använder den.
 
 Följande exempelprocedur visar hur du skapar ett teaser för en produkt:
 
-1. Dra och släpp en **[!UICONTROL Category Teaser]** från [komponentwebbläsaren](/help/sites-authoring/author-environment-tools.md#components-browser).
+1. Dra och släpp en **[!UICONTROL Category Teaser]** från [Komponentbläddraren](/help/sites-authoring/author-environment-tools.md#components-browser).
 
    ![xf-authoring-04](assets/xf-authoring-04.png)
 
 1. Välj **[[!UICONTROL Configure]](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)** i komponentens verktygsfält.
 1. Lägg till **[!UICONTROL Asset]** och definiera **[!UICONTROL Properties]** efter behov.
-1. Bekräfta definitionerna med **[!UICONTROL Done]** (bock-ikon).
+1. Bekräfta definitionerna med **[!UICONTROL Done]** (bockikon).
 1. Lägg till fler komponenter efter behov.
 
 ## Skapa en upplevelsefragmentvariant {#creating-an-experience-fragment-variation}
 
 Ni kan skapa variationer av ert Experience Fragment, beroende på era behov:
 
-1. Öppna fragmentet för [redigering](/help/sites-authoring/experience-fragments.md#editing-your-experience-fragment).
-1. Öppna fliken **[!UICONTROL Variations]**.
+1. Öppna fragmentet för [redigera](/help/sites-authoring/experience-fragments.md#editing-your-experience-fragment).
+1. Öppna **[!UICONTROL Variations]** -fliken.
 
    ![xf-authoring-06](assets/xf-authoring-06.png)
 
-1. **Med** CreateCreatekan du skapa:
+1. **Skapa** kan du skapa:
 
    * **[!UICONTROL Variation]**
    * **[!UICONTROL Variation as live-copy]**.
@@ -218,7 +221,7 @@ Ni kan skapa variationer av ert Experience Fragment, beroende på era behov:
 
    ![xf-authoring-07](assets/xf-authoring-07.png)
 
-1. Om du bekräftar med **[!UICONTROL Done]** (bockikon) visas den nya varianten på panelen:
+1. Bekräfta med **[!UICONTROL Done]** (bock-ikon) visas den nya varianten på panelen:
 
    ![xf-authoring-08](assets/xf-authoring-08.png)
 
@@ -237,7 +240,7 @@ Nu kan du använda din Experience Fragment när du redigerar dina sidor:
 1. Lägg till den faktiska Experience Fragment-funktionen i komponentinstansen. antingen:
 
    * Dra det önskade fragmentet från Resursläsaren och släpp det på komponenten
-   * Välj **[!UICONTROL Configure]** i komponentverktygsfältet och ange vilket fragment som ska användas, bekräfta med **Klar** (tick)
+   * Välj **[!UICONTROL Configure]** från komponentverktygsfältet och ange vilket fragment som ska användas, bekräfta med **Klar** (tick)
 
    ![xf-authoring-10](assets/xf-authoring-10.png)
 
@@ -249,7 +252,7 @@ Nu kan du använda din Experience Fragment när du redigerar dina sidor:
 
 Du kan välja en eller flera komponenter för att skapa en byggsten för återvinning i fragmentet:
 
-### Skapar ett byggblock {#creating-a-building-block}
+### Skapa ett byggblock {#creating-a-building-block}
 
 Så här skapar du ett nytt byggblock:
 
@@ -257,7 +260,7 @@ Så här skapar du ett nytt byggblock:
 
    ![xf-authoring-12](assets/xf-authoring-12.png)
 
-1. Välj **[!UICONTROL Convert to building block]** i komponentverktygsfältet:
+1. Välj **[!UICONTROL Convert to building block]**:
 
    ![xf-authoring-13-icon](assets/xf-authoring-13-icon.png)
 
@@ -275,10 +278,10 @@ Så här skapar du ett nytt byggblock:
 
 ### Hantera ett byggblock {#managing-a-building-block}
 
-Byggblocket visas på fliken **[!UICONTROL Building Blocks]**. Följande åtgärder är tillgängliga för varje block:
+Byggblocket visas i **[!UICONTROL Building Blocks]** -fliken. Följande åtgärder är tillgängliga för varje block:
 
 * Gå till master: öppna mastervarianten på en ny flik
-* Byt namn på
+* Byt namn
 * Ta bort
 
 ![xf-authoring-16](assets/xf-authoring-16.png)
@@ -287,17 +290,17 @@ Byggblocket visas på fliken **[!UICONTROL Building Blocks]**. Följande åtgär
 
 Du kan dra byggblocket till styckesystemet för vilket fragment som helst, precis som med vilken komponent som helst.
 
-## Den vanliga HTML-återgivningen {#the-plain-html-rendition}
+## The Plain HTML Rendition {#the-plain-html-rendition}
 
-Om du använder `.plain.`-väljaren i URL:en kan du komma åt den vanliga HTML-återgivningen.
+Använda `.plain.` -väljaren i URL-adressen kan du komma åt den vanliga HTML-återgivningen.
 
 Det här är tillgängligt från webbläsaren, men det främsta syftet är att tillåta andra program (till exempel webbprogram från tredje part, anpassade mobilimplementeringar) att komma åt innehållet i Experience Fragment direkt, med enbart URL:en.
 
-Den rena HTML-återgivningen lägger till protokoll, värd och kontextsökväg till sökvägar som är:
+Den rena HTML-renderingen lägger till protokoll, värd och kontextsökväg till sökvägar som är:
 
-* av typen: `src`, `href` eller `action`
+* av typen: `src`, `href`, eller `action`
 
-* eller avsluta med: `-src` eller `-href`
+* eller avsluta med: `-src`, eller `-href`
 
 Till exempel:
 
@@ -309,9 +312,8 @@ Till exempel:
 
 ![xf-authoring-17](assets/xf-authoring-17.png)
 
-## Exporterar Experience Fragments {#exporting-experience-fragments}
+## Exportera Experience Fragments {#exporting-experience-fragments}
 
 Som standard levereras Experience Fragments i HTML-format. Detta kan användas av både AEM och tredjepartskanaler.
 
-HTML används vid export till Adobe Target. Mer information finns i [Målintegrering med Experience Fragments](/help/sites-administering/experience-fragments-target.md).
-
+HTML används för export till Adobe Target. Se [Målintegrering med upplevelsefragment](/help/sites-administering/experience-fragments-target.md) för fullständig information.

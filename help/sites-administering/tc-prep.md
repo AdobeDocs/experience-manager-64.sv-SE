@@ -1,8 +1,8 @@
 ---
 title: Förbereder innehåll för översättning
-seo-title: Förbereder innehåll för översättning
+seo-title: Preparing Content for Translation
 description: Lär dig hur du förbereder innehåll för översättning.
-seo-description: Lär dig hur du förbereder innehåll för översättning.
+seo-description: Learn how to prepare content for translation.
 uuid: 369630a8-2ed7-48db-973e-bd8213231d49
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,16 +10,19 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 8bd67d71-bcb7-4ca0-9751-3ff3ee054011
 feature: Language Copy
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 1a7fe230-093b-4d2b-95cb-f9479c0febe5
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '717'
 ht-degree: 0%
 
 ---
 
-
 # Förbereder innehåll för översättning{#preparing-content-for-translation}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Flerspråkiga webbplatser har i allmänhet en viss mängd innehåll på flera språk. Webbplatsen är skriven på ett språk och sedan översatt till andra språk. Vanligtvis består flerspråkiga webbplatser av sidgrenar, där varje gren innehåller webbplatsens sidor på ett annat språk.
 
@@ -37,7 +40,7 @@ Exempelversionen av Geometrixx Demo Site innehåller flera språkgrenar och har 
              |- zh
 ```
 
-Varje språkgren på en webbplats kallas för en språkkopia. Rotsidan för en språkkopia, som kallas språkroten, identifierar språket för innehållet i språkkopian. `/content/geometrixx/fr` är t.ex. språkroten för den franska språkkopian. Språkkopior måste använda en [korrekt konfigurerad språkrot](/help/sites-administering/tc-prep.md#creating-a-language-root) så att rätt språk används när översättningar av en källplats utförs.
+Varje språkgren på en webbplats kallas för en språkkopia. Rotsidan för en språkkopia, som kallas språkroten, identifierar språket för innehållet i språkkopian. Till exempel: `/content/geometrixx/fr` är språkroten för den franska språkkopian. Språkkopior måste använda [korrekt konfigurerad språkrot](/help/sites-administering/tc-prep.md#creating-a-language-root) så att rätt språk används när översättningar av en källplats utförs.
 
 Den språkkopia som du ursprungligen skapade webbplatsinnehållet för är överordnad. Överordnad språk är källan som översätts till andra språk.
 
@@ -49,17 +52,17 @@ Gör så här för att förbereda webbplatsen för översättning:
 
 När du har förberett innehållet för översättning kan du automatiskt skapa saknade sidor i dina språkkopior och tillhörande översättningsprojekt. (Se [Skapa ett översättningsprojekt](/help/sites-administering/tc-manage.md).) En översikt över innehållsöversättningsprocessen i AEM finns i [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md).
 
-## Skapar en språkrot {#creating-a-language-root}
+## Skapa en språkrot {#creating-a-language-root}
 
 Skapa en språkrot som rotsida för en språkkopia som identifierar språket i innehållet. När du har skapat språkroten kan du skapa översättningsprojekt som innehåller språkkopian.
 
 Om du vill skapa språkroten skapar du en sida och använder en ISO-språkkod som värde för egenskapen Namn. Språkkoden måste ha något av följande format:
 
-* `<language-code>`Den språkkod som stöds är en kod med två bokstäver som definieras av ISO-639-1, till exempel  `en`.
+* `<language-code>`Den språkkod som stöds är en kod med två bokstäver som definieras av ISO-639-1, till exempel `en`.
 
-* `<language-code>_<country-code>` eller  `<language-code>-<country-code>`Den landskod som stöds är en gemen- eller versal tvåbokstavskod enligt definitionen i ISO 3166, till exempel  `en_US`,  `en_us`,  `en_GB`,  `en-gb`.
+* `<language-code>_<country-code>` eller `<language-code>-<country-code>`Den landskod som stöds är en tvåbokstavskod med gemener eller versaler enligt ISO 3166, till exempel `en_US`, `en_us`, `en_GB`, `en-gb`.
 
-Du kan använda båda formaten enligt den struktur som du har valt för den globala platsen.  Rotsidan för den franska språkkopian av Geometrixx har till exempel `fr` som Name-egenskap. Observera att egenskapen Namn används som namn på sidnoden i databasen och därför bestämmer sökvägen till sidan. (http://localhost:4502/content/geometrixx/fr.html)
+Du kan använda båda formaten enligt den struktur som du har valt för den globala platsen.  Rotsidan för den franska språkkopian av Geometrixx har `fr` som egenskapen Name. Observera att egenskapen Namn används som namn på sidnoden i databasen och därför bestämmer sökvägen till sidan. (http://localhost:4502/content/geometrixx/fr.html)
 
 I följande procedur används det pekoptimerade användargränssnittet för att skapa en språkkopia av en webbplats. Instruktioner om hur du använder det klassiska användargränssnittet finns i [Skapa en språkrot med det klassiska användargränssnittet](/help/sites-administering/tc-lroot-classic.md).
 
@@ -77,9 +80,9 @@ I följande procedur används det pekoptimerade användargränssnittet för att 
 
    ![chlimage_1-22](assets/chlimage_1-22.png)
 
-1. Klicka eller tryck på Skapa. I bekräftelsedialogrutan klickar eller trycker du på **Done** för att gå tillbaka till Sites console eller **Open** för att öppna språkkopian.
+1. Klicka eller tryck på Skapa. I bekräftelsedialogrutan klickar du på eller trycker på **Klar** för att gå tillbaka till Sites-konsolen, eller **Öppna** för att öppna språkkopian.
 
-## Se språkrotens status {#seeing-the-status-of-language-roots}
+## Se status för språkrötter {#seeing-the-status-of-language-roots}
 
 Det pekoptimerade användargränssnittet innehåller en referenspanel som visar en lista med språkrötter som har skapats.
 
@@ -87,9 +90,8 @@ Det pekoptimerade användargränssnittet innehåller en referenspanel som visar 
 
 I följande procedur används det pekoptimerade användargränssnittet för att öppna referenspanelen för en sida.
 
-1. På webbplatskonsolen markerar du en sida på webbplatsen och klickar eller trycker på **References**.
+1. Välj en sida på platsen i konsolen Platser och klicka eller tryck sedan på **Referenser**.
 
    ![chlimage_1-24](assets/chlimage_1-24.png)
 
-1. Klicka eller tryck på **Språkkopior** på referenspanelen. På panelen Språkkopior visas språkkopiorna för webbplatsen.
-
+1. Klicka eller tryck på panelen Inställningar **Språkkopior**. På panelen Språkkopior visas språkkopiorna för webbplatsen.

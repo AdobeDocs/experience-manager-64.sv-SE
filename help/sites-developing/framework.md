@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 4b680d17-383b-4173-a444-0b7bdb24e6c8
 feature: Tagging
 exl-id: bae592db-dc36-409f-b841-0582c464c3f6
-source-git-commit: 381e760d1634dec6c6cdb933fd4da6b4652e6ff7
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1764'
+source-wordcount: '1800'
 ht-degree: 0%
 
 ---
 
 # AEM Taggningsramverk{#aem-tagging-framework}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Så här taggar du innehåll och använder den AEM taggningsinfrastrukturen:
 
@@ -92,8 +96,8 @@ I följande tabell visas några exempel `TagIDs`, deras element och hur `TagID` 
 |---|---|---|---|---|---|
 | `dam:fruit/apple/braeburn` | `dam` | `fruit/apple/braeburn` | `fruit`, `apple` | `braeburn` | `/content/cq:tags/dam/fruit/apple/braeburn` |
 | `color/red` | `default` | `color/red` | `color` | `red` | `/content/cq:tags/default/color/red` |
-| `sky` | `default` | `sky` | Inget | `sky` | `/content/cq:tags/default/sky` |
-| `dam:` | `dam` | Inget | Inget | Inget | `/content/cq:tags/dam` |
+| `sky` | `default` | `sky` | Ingen | `sky` | `/content/cq:tags/default/sky` |
+| `dam:` | `dam` | Ingen | Ingen | Ingen | `/content/cq:tags/dam` |
 | `/content/cq:tags/category/car` | `category` | `car` | `car` | `car` | `/content/cq:tags/category/car` |
 
 ### Lokalisering av taggtitel {#localization-of-tag-title}

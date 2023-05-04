@@ -1,24 +1,27 @@
 ---
 title: Registrera som användare
-seo-title: Registrera som användare
+seo-title: Registering as a User
 description: Lär dig hur du kan använda policyskyddade dokument som du får från en dokumentsäkerhetsanvändare, även om du inte är en användare i användarens organisation.
-seo-description: Lär dig hur du kan använda policyskyddade dokument som du får från en dokumentsäkerhetsanvändare, även om du inte är en användare i användarens organisation.
+seo-description: Learn how you can use policy-protected documents that you receive from an document security user, even if you are external to the user’s organization.
 uuid: 4648b358-f545-434f-a3b2-2937e961dc64
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 26e11ef4-9f8f-4b0b-b035-a498fd7d65ef
 feature: Document Security
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 24641bf5-7c1c-4c92-8c11-2134039085f7
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
 
+# Registrera som användare {#registering-as-a-user}
 
-# Registrerar som en användare {#registering-as-a-user}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Du kan använda policyskyddade dokument som du får från en dokumentsäkerhetsanvändare, även om du är extern i förhållande till användarens organisation. Om du vill använda ett profilskyddat dokument måste du registrera dig med dokumentskydd. Om du inte tidigare har bjudits in att registrera dig, initierar dokumentsäkerhet registreringsprocessen när dessa händelser inträffar:
 
@@ -70,4 +73,3 @@ Information om hur du kontaktar en dokumentsäkerhetsadministratör för att få
 1. Klicka på Alternativ i det övre högra hörnet på sidan. Sidan Externa användare visas.
 1. Välj Ändra lösenord och skriv det tillfälliga lösenordet i rutan Gammalt lösenord.
 1. Skriv ett nytt lösenord i rutan Nytt lösenord och skriv det sedan i rutan Bekräfta lösenord igen.
-

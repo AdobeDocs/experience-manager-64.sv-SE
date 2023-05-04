@@ -12,14 +12,18 @@ discoiquuid: 1cdb2dfc-623b-44cf-9a7b-98cfabbb1d0c
 exl-id: 15a5fdc9-2878-4f95-83ee-02a2899aeb43
 feature: Content Fragments
 role: User
-source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1708'
-ht-degree: 10%
+source-wordcount: '1744'
+ht-degree: 9%
 
 ---
 
 # Variationer – redigera innehållsfragment {#variations-authoring-fragment-content}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!CAUTION]
 >
@@ -101,19 +105,19 @@ Följande åtgärder är också tillgängliga (för alla [format](#formats)) nä
 
 Vilka alternativ du kan använda för att redigera text med flera rader beror på vilket format du har valt:
 
-* [RTF-text](#rich-text)
+* [RTF](#rich-text)
 * [Oformaterad text](#plain-text)
 * [Markdown](#markdown)
 
 Formatet kan väljas när helskärmsredigeraren används.
 
-### RTF-text {#rich-text}
+### RTF {#rich-text}
 
 Med textredigering kan du formatera:
 
 * Fet
 * Kursiv
-* Understrykning
+* Understruken
 * Justering: vänster, mitten, höger
 * Punktlista
 * Numrerad lista
@@ -140,7 +144,7 @@ Med oformaterad text kan du snabbt lägga in innehåll utan formaterings- eller 
 >
 >Om du väljer **Oformaterad text** kan du förlora formatering, markdown-kod och/eller resurser som du har infogat i **RTF** eller **Markdown-kod**.
 
-### Markering {#markdown}
+### Markdown {#markdown}
 
 >[!NOTE]
 >

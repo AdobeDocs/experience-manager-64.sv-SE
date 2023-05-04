@@ -1,25 +1,29 @@
 ---
 title: Referera till adaptiva formulärfragment
 seo-title: Reference adaptive form fragments
-description: 'AEM Forms har adaptiva formulärfragment som du kan använda som resurser för att snabbt skapa ett formulär. '
+description: AEM Forms har adaptiva formulärfragment som du kan använda som resurser för att snabbt skapa ett formulär.
 seo-description: AEM Forms provides adaptive form fragments that you can use as assets to create a form quickly.
 uuid: af3ab863-e895-4fac-84f4-0a77a66f5094
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 43dc10c2-8cfc-4ca3-8ccb-9b3f268663b7
 exl-id: cceea4d1-8fc2-4118-b22e-91f27e69c7e4
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '450'
 ht-degree: 0%
 
 ---
 
 # Referera till adaptiva formulärfragment {#reference-adaptive-form-fragments}
 
-[Anpassat ](/help/forms/using/adaptive-form-fragments.md) formulärfragment är en grupp fält eller en panel som innehåller en grupp fält som du kan använda när du skapar ett formulär. Du kan skapa ett formulär snabbt och enkelt. Du kan dra och släppa ett anpassat formulärfragment i ett formulär med hjälp av resursläsaren i sidofältet, och du kan redigera det i formulärredigeraren.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-För formulärförfattare med adaptiv formatering finns referensfragment i [AEM Forms-tilläggspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). Den innehåller följande fragment:
+[Adaptivt formulärfragment](/help/forms/using/adaptive-form-fragments.md) är en grupp med fält eller en panel som innehåller en grupp med fält som du kan använda när du skapar ett formulär. Du kan skapa ett formulär snabbt och enkelt. Du kan dra och släppa ett anpassat formulärfragment i ett formulär med hjälp av resursläsaren i sidofältet, och du kan redigera det i formulärredigeraren.
+
+För formulärförfattare med adaptiv form finns referensfragment i [AEM Forms tilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). Den innehåller följande fragment:
 
 * Adress
 * Kontaktinformation
@@ -32,7 +36,7 @@ För formulärförfattare med adaptiv formatering finns referensfragment i [AEM 
 * Villkor
 * Villkor med Klottra
 
-När du installerar paketet skapas en referensfragmentmapp med referensfragment under Forms &amp; Documents. Information om hur du installerar ett paket finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
+När du installerar paketet skapas en referensfragmentmapp med referensfragment under Forms &amp; Documents. Information om hur du installerar ett paket finns i [Så här arbetar du med paket](/help/sites-administering/package-manager.md).
 
 ![Alla fragment listas](assets/ootb-frags.png)
 

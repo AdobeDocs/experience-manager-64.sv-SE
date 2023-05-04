@@ -12,20 +12,24 @@ discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
 exl-id: bff564a8-e982-4e1a-a9b5-05e44e3e4d46
 feature: Components
 role: User
-source-git-commit: cc9b6d147a93688e5f96620d50f8fc8b002e2d0d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '358'
-ht-degree: 21%
+source-wordcount: '394'
+ht-degree: 19%
 
 ---
 
 # Bädda in Dynamic Media Video eller Image Viewer på en webbsida {#embedding-the-video-or-image-viewer-on-a-web-page}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 Använd funktionen **[!UICONTROL Embed Code]** när du vill spela upp videon eller visa en resurs som är inbäddad på en webbsida. Du kopierar inbäddningskoden till Urklipp så att du kan klistra in den på webbsidorna. Det är inte tillåtet att redigera koden i dialogrutan **[!UICONTROL Embed Code]**.
 
-Du bäddar bara in URL:er om du är _inte_ och använder [!DNL Experience Manager] som WCM. Om du använder [!DNL Experience Manager] som WCM-fil [lägger du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
+Du bäddar bara in URL:er om du är _not_ använda [!DNL Experience Manager] som din WCM. Om du använder [!DNL Experience Manager] som din WCM, [du lägger till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
 
-Se [Länka URL:er till ditt webbprogram.](linking-urls-to-yourwebapplication.md)
+Se [Länka URL:er till webbprogrammet.](linking-urls-to-yourwebapplication.md)
 
 Se [Leverera optimerade bilder för en responsiv webbplats.](responsive-site.md)
 
@@ -37,11 +41,11 @@ Se [Leverera optimerade bilder för en responsiv webbplats.](responsive-site.md)
 >
 >Se [Förinställningar för publiceringsvisningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
 >
->Se [Publicera bildförinställningar](managing-image-presets.md#publishing-image-presets).
+>Se [Förinställningar för publicering](managing-image-presets.md#publishing-image-presets).
 
-**Så här bäddar du in Dynamic Media Video eller Image Viewer på en webbsida**:
+**Bädda in Dynamic Media Video eller Image Viewer på en webbsida**:
 
-1. Navigera till den *publicerade* video- eller bildresurs vars inbäddningskod du vill kopiera.
+1. Navigera till *publicerad* video- eller bildresurs vars inbäddningskod du vill kopiera.
 
    Kom ihåg att inbäddningskoden endast går att kopiera *efter* att du har *publicerat* resurserna. Dessutom måste visningsförinställningen eller bildförinställningen också publiceras.
 
@@ -49,16 +53,16 @@ Se [Leverera optimerade bilder för en responsiv webbplats.](responsive-site.md)
 
    Se [Förinställningar för publiceringsvisningsprogram](managing-viewer-presets.md#publishing-viewer-presets).
 
-   Se [Publicera bildförinställningar](managing-image-presets.md#publishing-image-presets).
+   Se [Förinställningar för publicering](managing-image-presets.md#publishing-image-presets).
 
-1. I den vänstra listen väljer du listrutan och trycker på **[!UICONTROL Viewers]**.
+1. Markera listrutan i den vänstra listen och tryck på **[!UICONTROL Viewers]**.
 1. Tryck på ett namn på en visningsförinställning i den vänstra listen. Visningsförinställningen används på resursen.
 1. Tryck på **[!UICONTROL Embed]**.
-1. Kopiera hela koden till Urklipp i dialogrutan **[!UICONTROL Embed Code]** och tryck sedan på **[!UICONTROL Close]**.
+1. I **[!UICONTROL Embed Code]** kopierar du hela koden till Urklipp och trycker sedan på **[!UICONTROL Close]**.
 1. Klistra in inbäddningskoden på dina webbsidor.
 
 ## Använd HTTP/2 för att leverera Dynamic Media-material {#using-http-to-deliver-your-dynamic-media-assets}
 
 HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Dynamic Media-material kan nu levereras via HTTP/2 vilket ger bättre respons och laddningstider.
 
-Se [HTTP2 Delivery of Content](http2.md) för fullständig information om hur du kommer igång med HTTP/2 med ditt Dynamic Media-konto.
+Se [HTTP2-leverans av innehåll](http2.md) om du vill ha fullständig information om hur du kommer igång med HTTP/2 med ditt Dynamic Media-konto.

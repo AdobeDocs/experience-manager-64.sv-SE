@@ -1,40 +1,43 @@
 ---
 title: Arbeta med uppgifter
-seo-title: Arbeta med uppgifter
+seo-title: Working with Tasks
 description: Uppgifter representerar arbetsuppgifter som ska utföras på innehåll och används i projekt för att fastställa slutförandenivån för aktuella uppgifter
-seo-description: Uppgifter representerar arbetsuppgifter som ska utföras på innehåll och används i projekt för att fastställa slutförandenivån för aktuella uppgifter
+seo-description: Tasks represent items of work to be done on content and are used in projects to determine the level of completeness of current tasks
 uuid: df4efb3f-8298-4159-acfe-305ba6b46791
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: projects
 content-type: reference
 discoiquuid: 1b79d373-73f4-4228-b309-79e74d191f3e
-translation-type: tm+mt
-source-git-commit: 3addef2141ebb831f8677d011d68faf88e648dc2
+exl-id: 6480a0ba-ff65-42af-a14f-ce9fdbb7945f
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 13%
+source-wordcount: '605'
+ht-degree: 12%
 
 ---
 
-
 # Arbeta med uppgifter{#working-with-tasks}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Uppgifter representerar arbetsuppgifter som ska utföras på innehåll. När du tilldelas en uppgift visas den i Inkorgen för arbetsflöde. Uppgiftsobjekt har värdet för uppgiften i kolumnen Typ.
 
 Uppgifter används också i projekt för att avgöra hur fullständiga de aktuella uppgifterna är, inklusive arbetsflödesuppgifter.
 
-## Spårar projektförlopp {#tracking-project-progress}
+## Spåra projektförlopp {#tracking-project-progress}
 
-Du kan spåra projektförloppet genom att titta på de aktiva/slutförda aktiviteterna i ett projekt som representeras av **aktivitetspanelen**. Projektets förlopp kan avgöras av:
+Du kan spåra projektförloppet genom att titta på aktiva/slutförda uppgifter i ett projekt som representeras av **Uppgifter** platta. Projektets förlopp kan avgöras av:
 
 * **Uppgiftsruta:** Ett övergripande förlopp för projektet visas i uppgiftsrutan på sidan med projektinformation.
 
 * **Uppgiftsruta:** När du klickar på uppgiftsrutan visas en lista med uppgifter. Den här listan innehåller detaljerad information om alla uppgifter som rör projektet.
 
-Båda listar arbetsflödesuppgifter och uppgifter som du skapar direkt i rutan **Uppgifter**.
+Båda listar arbetsflödesuppgifter och uppgifter som du skapar direkt i **Uppgifter** platta.
 
-### Aktivitetsruta {#task-tile}
+### Åtgärdsfönster {#task-tile}
 
 Om ett projekt innehåller några relaterade uppgifter visas en åtgärdsruta i projektet. Åtgärdsrutan visar projektets aktuella status. Detta baseras på befintliga uppgifter i arbetsflödet och inkluderar inga uppgifter som kommer att genereras i framtiden allt eftersom arbetsflödet fortsätter. Följande information visas i åtgärdsrutan:
 
@@ -66,25 +69,25 @@ I Uppgiftsinformation kan du redigera eller lägga till kommentarer. Alla kommen
 
 ![chlimage_1-101](assets/chlimage_1-101.png)
 
-### Lägger till uppgifter {#adding-tasks}
+### Lägga till uppgifter {#adding-tasks}
 
 Du kan lägga till nya uppgifter i projekt. Dessa uppgifter visas sedan på aktivitetspanelen och är tillgängliga i inkorgen Meddelanden för att utföra åtgärder.
 
 Så här lägger du till en uppgift:
 
 1. Tryck/klicka på ikonen + i rutan **Uppgifter** i projektet. Fönstret **Lägg till uppgift** öppnas.
-1. Ange information om uppgiften. Titeln på uppgiften och vilken grupp den har tilldelats är obligatoriska. Ytterligare information som innehållssökväg, beskrivning, uppgiftsprioritet och förfallodatum är valfria. Du kan dessutom välja fliken **Avancerat** och ange namnet på uppgiften, som används för att namnge URL:en.
+1. Ange information om uppgiften. Titeln på uppgiften och vilken grupp den har tilldelats är obligatoriska. Ytterligare information som innehållssökväg, beskrivning, uppgiftsprioritet och förfallodatum är valfria. Dessutom kan du välja **Avancerat** för att ange namnet på uppgiften, som används för att namnge URL:en.
 
    ![chlimage_1-102](assets/chlimage_1-102.png)
 
-1. Tryck/klicka på **Skapa**.
+1. Tryck/klicka **Skapa**.
 
-## Arbeta med uppgifter i inkorgen {#working-with-tasks-in-the-inbox}
+## Arbeta med uppgifter i Inkorgen {#working-with-tasks-in-the-inbox}
 
 Ett annat sätt att komma åt uppgifter är via Inkorgen. I inkorgen kan du öppna innehållet för att implementera ändringarna. När du är klar anger du aktivitetsstatus till Slutförd. Uppgifter visas också i inkorgen när de tilldelas till en användargrupp som du tillhör. I det här fallet kan alla medlemmar i gruppen utföra arbetet och slutföra uppgiften.
 
 ![chlimage_1-103](assets/chlimage_1-103.png)
 
-Slutför en uppgift genom att markera uppgiften och klicka på **Fullständig**. Lägg till information för aktiviteten och klicka sedan på **Klar**. Mer information finns i [Inkorgen](/help/sites-authoring/inbox.md).
+Om du vill slutföra en uppgift markerar du uppgiften och klickar på **Slutförd**. Lägg till information till uppgiften och klicka sedan på **Klar**. Se [Din inkorg](/help/sites-authoring/inbox.md) för mer information.
 
 ![chlimage_1-104](assets/chlimage_1-104.png)

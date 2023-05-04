@@ -1,26 +1,29 @@
 ---
 title: Provar Responsiv layout i We.Retail
-seo-title: Provar Responsiv layout i We.Retail
+seo-title: Trying out Responsive Layout in We.Retail
 description: Provar Responsiv layout i We.Retail
-seo-description: 'null'
+seo-description: null
 uuid: d9613655-f54e-458f-9175-d07bb868f58b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 2d374e88-ea09-43d5-986c-5d77b0705b93
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: ccb792f7-e837-4790-818f-e2c446328e71
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '283'
 ht-degree: 1%
 
 ---
 
-
 # Provar Responsiv layout i We.Retail{#trying-out-responsive-layout-in-we-retail}
 
-Alla webbsidor använder komponenten Layoutbehållare för att implementera responsiv design. Layoutbehållaren har ett styckesystem som gör att du kan placera komponenter i ett responsivt rutnät. Rutnätet kan ändra layouten beroende på enhetens/fönstrets storlek och format. Komponenten används tillsammans med läget **Layout** i sidredigeraren, som gör att du kan skapa och redigera den responsiva layouten beroende på enhet.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+Alla webbsidor använder komponenten Layoutbehållare för att implementera responsiv design. Layoutbehållaren har ett styckesystem som gör att du kan placera komponenter i ett responsivt rutnät. Rutnätet kan ändra layouten beroende på enhetens/fönstrets storlek och format. Komponenten används tillsammans med **Layout** i sidredigeraren, där du kan skapa och redigera din responsiva layout beroende på enhet.
 
 ## Prova {#trying-it-out}
 
@@ -28,7 +31,7 @@ Alla webbsidor använder komponenten Layoutbehållare för att implementera resp
 
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html
 
-1. Växla till **Förhandsgranska** för att se sidan som den skulle återges för en besökare på webbplatsen. Bläddra ned till innehållet i artikeln *Aloha-sprit i Norge*.
+1. Växla till **Förhandsgranska** för att se sidan som den skulle återges för en besökare på webbplatsen. Bläddra nedåt till artikelns innehåll *Aloha-sprit i Norge*.
 
    ![chlimage_1-178](assets/chlimage_1-178.png)
 
@@ -48,4 +51,4 @@ Alla webbsidor använder komponenten Layoutbehållare för att implementera resp
 
 ## Ytterligare information {#further-information}
 
-Mer information finns i redigeringsdokumentet [Responsiv layout](/help/sites-authoring/responsive-layout.md) eller administratörsdokumentet [Configuring Layout Container and Layout Mode](/help/sites-administering/configuring-responsive-layout.md) för fullständig teknisk information.
+Mer information finns i redigeringsdokumentet [Responsiv layout](/help/sites-authoring/responsive-layout.md) eller administratörsdokumentet [Konfigurera layoutbehållare och layoutläge](/help/sites-administering/configuring-responsive-layout.md) för fullständig teknisk information.

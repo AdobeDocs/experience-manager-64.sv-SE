@@ -5,23 +5,26 @@ contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: operations
 content-type: reference
-translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+exl-id: 7566e1bc-8571-4b3c-b420-4324026bd4dd
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 7%
+source-wordcount: '911'
+ht-degree: 6%
 
 ---
 
-
 # Verktygskonsoler{#tools-consoles}
 
-Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som hjälper dig att administrera webbplatser, digitala resurser och andra aspekter av ditt innehållslager. Det finns för närvarande två varianter av **Tools**-konsolen som är beroende av det användargränssnitt du använder:
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som hjälper dig att administrera webbplatser, digitala resurser och andra aspekter av ditt innehållslager. Det finns för närvarande två varianter av **verktyg** beroende på vilket gränssnitt du använder:
 
 * [Verktyg - Klassiskt användargränssnitt](#tools-classic-ui)
 * [Verktyg - Touchoptimerat gränssnitt](#tools-touch-optimized-ui)
 
-## Verktyg - Klassiskt gränssnitt {#tools-classic-ui}
+## Verktyg - Klassiskt användargränssnitt {#tools-classic-ui}
 
 <table> 
  <tbody> 
@@ -36,14 +39,14 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
    <td>Centraliserad plats för hantering av flera webbplatser.</td> 
   </tr> 
   <tr> 
-   <td>Klientkonfigurationer<br /> </td> 
+   <td>Konfigurationer av klientkontext<br /> </td> 
    <td> </td> 
-   <td><a href="/help/sites-developing/client-context.md">Klientkontexten</a> representerar en dynamiskt sammansatt samling med användardata. Standardkonfigurationerna och marknadsföringskonfigurationerna för molnet finns här.<br /> </td> 
+   <td>The <a href="/help/sites-developing/client-context.md">Klientkontext</a> representerar en dynamiskt sammansatt samling med användardata. Standardkonfigurationerna och marknadsföringskonfigurationerna för molnet finns här.<br /> </td> 
   </tr> 
   <tr> 
    <td>Konfigurationer av Cloud Services<br /> </td> 
    <td> </td> 
-   <td>Innehåller konfigurationer relaterade till <a href="/help/sites-administering/marketing-cloud.md">Integrering med Adobe Marketing Cloud</a>.</td> 
+   <td>Innehåller konfigurationer relaterade till <a href="/help/sites-administering/marketing-cloud.md">Integrera med Adobe Marketing Cloud</a>.</td> 
   </tr> 
   <tr> 
    <td><a href="/help/sites-administering/ecommerce.md">Handel</a></td> 
@@ -58,10 +61,10 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   <tr> 
    <td>DAM - hälsokontroll<br /> </td> 
    <td> </td> 
-   <td>Jämför <code>/var/dam</code> och <code>/content/dam</code> och söker efter<br /> eventuella inkonsekvenser. Alla filer/mappar i listan kan sedan synkroniseras eller tas bort. Nodtyper för mappjämförelse kan konfigureras i webbkonsolen.</td> 
+   <td>Jämför <code>/var/dam</code> och <code>/content/dam</code> och kontrollerar<br /> eventuella inkonsekvenser. Alla filer/mappar i listan kan sedan synkroniseras eller tas bort. Nodtyper för mappjämförelse kan konfigureras i webbkonsolen.</td> 
   </tr> 
   <tr> 
-   <td>DAM - Adobe Indesign<br /> </td> 
+   <td>DAM - Adobe InDesign<br /> </td> 
    <td> </td> 
    <td>Skript för användning tillsammans med Adobe InDesign.</td> 
   </tr> 
@@ -91,7 +94,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
    <td>Innehåller en lista över inskickade formulär.</td> 
   </tr> 
   <tr> 
-   <td>Importörer - <a href="/help/sites-administering/bulk-editor.md">Massredigeraren</a></td> 
+   <td>Importörer - <a href="/help/sites-administering/bulk-editor.md">Massredigerare</a></td> 
    <td> </td> 
    <td>Gör att du kan söka efter objekt och redigera dem samtidigt. Du kan också exportera och importera innehåll (flera) till databasen.</td> 
   </tr>
@@ -126,7 +129,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
    <td>En alternativ länk till pakethanteraren som visar de paket som har lästs in för AEM WCM. Liknar informationen som visas i CRX Package Manager.</td> 
   </tr> 
   <tr> 
-   <td>Replikering - <a href="/help/sites-deploying/configuring.md#replication-reverse-replication-and-replication-agents">replikeringsagenter</a></td> 
+   <td>Replikering - <a href="/help/sites-deploying/configuring.md#replication-reverse-replication-and-replication-agents">Replikeringsagenter</a></td> 
    <td> </td> 
    <td>Används för att replikera data från författare till publicering vid publicering av sidor, eller med omvänd replikering för att returnera användarkommentarer från publiceringsmiljön till författaren.</td> 
   </tr> 
@@ -178,12 +181,12 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   <tr> 
    <td>Virtuella databaser</td> 
    <td> </td> 
-   <td>Du kan konfigurera en virtuell databas med monteringsfunktionen för arbetsytan för att ge JCR-aktiverade innehållsprogram förenklad åtkomst till JCR-innehållsinfrastruktur baserad på CRX och JCR-anslutningar.</td> 
+   <td>Du kan konfigurera en virtuell databas med monteringsfunktionen för arbetsytan för att ge JCR-aktiverade innehållsprogram enklare åtkomst till JCR-innehållsinfrastruktur baserat på CRX och JCR-anslutningar.</td> 
   </tr> 
   <tr> 
    <td>watchwords</td> 
    <td> </td> 
-   <td>Ersatta. Se <a href="/help/communities/moderate-ugc.md#watchwords">Moderera communityinnehåll</a></td> 
+   <td>Föråldrat. Se <a href="/help/communities/moderate-ugc.md#watchwords">Moderating Community Content</a></td> 
   </tr> 
   <tr> 
    <td><a href="/help/sites-administering/workflows.md">Arbetsflöde</a></td> 
@@ -239,7 +242,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   </tr> 
   <tr> 
    <td> </td> 
-   <td><a href="/help/sites-authoring/tags.md">Tagghantering</a></td> 
+   <td><a href="/help/sites-authoring/tags.md">Tag Management</a></td> 
    <td>Ordna dina taggar och deras namnutrymmen.</td> 
   </tr> 
   <tr> 
@@ -285,7 +288,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   <tr> 
    <td> </td> 
    <td><a href="/help/sites-administering/package-manager.md#package-share">Paketdelning</a></td> 
-   <td>Hämta program från Adobe och communityn.<br /> </td> 
+   <td>Ladda ned program från Adobe och communityn.<br /> </td> 
   </tr> 
   <tr> 
    <td> </td> 
@@ -330,7 +333,7 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
   <tr> 
    <td> </td> 
    <td>Dokumentation</td> 
-   <td>Visa dokumentationen för Web Experience Management.<br /> </td> 
+   <td>Läs dokumentationen om Web Experience Management.<br /> </td> 
   </tr> 
   <tr> 
    <td> </td> 
@@ -343,4 +346,3 @@ Med **verktygskonsolerna** får du tillgång till ett antal specialverktyg som h
 >[!NOTE]
 >
 >Vissa av alternativen ovan länkar faktiskt till det klassiska användargränssnittet.
-

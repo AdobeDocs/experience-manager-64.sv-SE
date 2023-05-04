@@ -1,8 +1,8 @@
 ---
 title: Stöd för RDBMS i AEM 6.4
-seo-title: Stöd för RDBMS i AEM 6.4
+seo-title: RDBMS Support in AEM 6.4
 description: Läs mer om stöd för relationsdatabasens beständighet i AEM 6.4 och de tillgängliga konfigurationsalternativen.
-seo-description: Läs mer om stöd för relationsdatabasens beständighet i AEM 6.4 och de tillgängliga konfigurationsalternativen.
+seo-description: Learn about the relational database persistence support in AEM 6.4 and the available configuration options.
 uuid: 599d3e61-99eb-4a1c-868b-52b20a615500
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,16 +10,19 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 56a984a5-4b7f-4a95-8a17-95d2d355bfed
 feature: Configuring
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 89523bb4-e4c4-469c-802b-6fe27c816a2e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
 
-
 # Stöd för RDBMS i AEM 6.4{#rdbms-support-in-aem}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Översikt {#overview}
 
@@ -27,23 +30,23 @@ Stöd för relationsdatabasbeständighet i AEM implementeras med Document Microk
 
 Det består av ett Java-API som baseras på Mongo Java API. En implementering av ett BlobStore API ingår också. Bloggar lagras som standard i databasen.
 
-Mer information om implementeringen finns i dokumentationen [RDBDocumentStore](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/oak/plugins/document/rdb/RDBDocumentStore.html) och [RDBBlobStore](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/oak/plugins/document/rdb/RDBBlobStore.html).
+Mer information om implementering finns i [RDBDocumentStore](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/oak/plugins/document/rdb/RDBDocumentStore.html) och [RDBBlobStore](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/oak/plugins/document/rdb/RDBBlobStore.html) dokumentation.
 
 >[!NOTE]
 >
->Stöd finns också för **PostgreSQL 9.4**, men endast för demoändamål. Den kommer inte att vara tillgänglig för produktionsmiljöer.
+>Stöd för **PostgreSQL 9.4** tillhandahålls också, men endast för demoändamål. Den kommer inte att vara tillgänglig för produktionsmiljöer.
 
 ## Databaser som stöds {#supported-databases}
 
-Mer information om nivån på Relational Database-stödet i AEM finns på [sidan Technical Requirements](/help/sites-deploying/technical-requirements.md).
+Mer information om nivån på Relational Database-stöd i AEM finns i [sidan Tekniska krav](/help/sites-deploying/technical-requirements.md).
 
 ## Konfigurationssteg {#configuration-steps}
 
-Databasen skapas genom att OSGi-tjänsten konfigureras. `DocumentNodeStoreService` Det har utökats med stöd för relationsdatabasbeständighet utöver MongoDB.
+Databasen skapas genom att `DocumentNodeStoreService` OSGi-tjänst. Det har utökats med stöd för relationsdatabasbeständighet utöver MongoDB.
 
-För att en datakälla ska fungera måste den konfigureras med AEM. Detta görs via filen `org.apache.sling.datasource.DataSourceFactory.config`. JDBC-drivrutinerna för respektive databas måste anges separat som OSGi-paket i den lokala konfigurationen.
+För att en datakälla ska fungera måste den konfigureras med AEM. Detta görs via `org.apache.sling.datasource.DataSourceFactory.config` -fil. JDBC-drivrutinerna för respektive databas måste anges separat som OSGi-paket i den lokala konfigurationen.
 
-Anvisningar om hur du skapar OSGi-paket för JDBC-drivrutiner finns i den här [dokumentationen](https://wiki.eclipse.org/Create_and_Export_MySQL_JDBC_driver_bundle) på webbplatsen Apache Sling.
+Anvisningar om hur du skapar OSGi-paket för JDBC-drivrutiner finns i detta [dokumentation](https://wiki.eclipse.org/Create_and_Export_MySQL_JDBC_driver_bundle) på webbplatsen Apache Sling.
 
 >[!NOTE]
 >
@@ -56,29 +59,29 @@ När paketen är på plats följer du stegen nedan för att konfigurera AEM med 
 1. Kontrollera att databasdaemon har startats och att du har en aktiv databas som kan användas med AEM.
 1. Kopiera AEM 6.3 burk till installationskatalogen.
 1. Skapa en mapp med namnet `crx-quickstart\install` i installationskatalogen.
-1. Konfigurera dokumentnodarkivet genom att skapa en konfigurationsfil med följande namn i katalogen `crx-quickstart\install`:
+1. Konfigurera dokumentnodarkivet genom att skapa en konfigurationsfil med följande namn i `crx-quickstart\install` katalog:
 
    * `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config`
 
-1. Konfigurera datakällan och JDBC-parametrarna genom att skapa en annan konfigurationsfil med följande namn i mappen `crx-quickstart\install`:
+1. Konfigurera datakällan och JDBC-parametrarna genom att skapa en annan konfigurationsfil med följande namn i `crx-quickstart\install` mapp:
 
    * `org.apache.sling.datasource.DataSourceFactory-oak.config`
    >[!NOTE]
    >
-   >Mer information om datakällans konfiguration för varje databas som stöds finns i [Konfigurationsalternativ för datakälla](/help/sites-deploying/rdbms-support-in-aem.md#data-source-configuration-options).
+   >Detaljerad information om datakällkonfigurationen för varje databas som stöds finns i [Konfigurationsalternativ för datakälla](/help/sites-deploying/rdbms-support-in-aem.md#data-source-configuration-options).
 
 1. Förbered sedan JDBC OSGi-paketen som ska användas med AEM:
 
    1. Hämta ZIP-arkivet från https://dev.mysql.com/downloads/connector/j/
       * version måste vara >= 5.1.38
-   1. Extrahera `mysql-connector-java-version-bin.jar` (paketet) från arkivet
+   1. Extrahera `mysql-connector-java-version-bin.jar` (paket) från arkivet
    1. Använd webbkonsolen för att installera och starta paketet:
       * Gå till *http://serveraddress:serverport/system/console/bundles*
-      * Välj **Installera/Uppdatera**
+      * Välj **Installera/uppdatera**
       * Bläddra till det valda paketet som extraherats från det hämtade ZIP-arkivet
       * Kontrollera att **Oracle Corporations JDBC-drivrutin för MySQLcom.mysql.jdbc** är aktiv och starta den.
 
-1. Börja slutligen AEM med körningslägena `crx3` och `crx3rdb`:
+1. Till sist AEM du med `crx3` och `crx3rdb` runmodes:
 
    ```java
    java -jar quickstart.jar -r crx3,crx3rdb
@@ -86,13 +89,13 @@ När paketen är på plats följer du stegen nedan för att konfigurera AEM med 
 
 ## Konfigurationsalternativ för datakälla {#data-source-configuration-options}
 
-OSGi-konfigurationen `org.apache.sling.datasource.DataSourceFactory-oak.config` används för att konfigurera de parametrar som behövs för kommunikation mellan AEM och databasens beständighetslager.
+The `org.apache.sling.datasource.DataSourceFactory-oak.config` OSGi-konfigurationen används för att konfigurera de parametrar som behövs för kommunikation mellan AEM och databasens beständighetslager.
 
 Följande konfigurationsalternativ är tillgängliga:
 
 * `datasource.name:` Datakällans namn. Standardvärdet är `oak`.
 
-* `url:` URL-strängen för den databas som ska användas med JDBC. Varje databastyp har ett eget URL-strängformat. Mer information finns i [URL-strängformat](/help/sites-deploying/rdbms-support-in-aem.md#url-string-formats) nedan.
+* `url:` URL-strängen för den databas som ska användas med JDBC. Varje databastyp har ett eget URL-strängformat. Mer information finns på [URL-strängformat](/help/sites-deploying/rdbms-support-in-aem.md#url-string-formats) nedan.
 
 * `driverClassName:` Klassnamnet för JDBC-drivrutinen. Detta varierar beroende på vilken databas du vill använda och därefter vilken drivrutin som behövs för att ansluta till den. Nedan visas klassnamnen för alla databaser som stöds av AEM:
 
@@ -123,4 +126,3 @@ Ett annat URL-strängformat används i datakällkonfigurationen beroende på vil
 Samtidigt bruk av flera AEM-instanser med en databas stöds av RDBMS-beständighet, men inte samtidiga installationer.
 
 För att undvika detta måste du först köra installationen med en enda medlem och lägga till de andra efter att den första installationen är klar.
-

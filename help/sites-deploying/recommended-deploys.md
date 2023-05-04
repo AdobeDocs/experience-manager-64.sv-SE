@@ -1,28 +1,31 @@
 ---
 title: Rekommenderade distributioner
-seo-title: Rekommenderade distributioner
+seo-title: Recommended Deployments
 description: I den här artikeln beskrivs de rekommenderade topologierna för AEM.
-seo-description: I den här artikeln beskrivs de rekommenderade topologierna för AEM.
+seo-description: This article describes the recommended topologies for AEM.
 uuid: 565117b1-4659-41e1-9f57-97dd048e306f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: deploying
 discoiquuid: 5e903df9-6591-46e8-9251-45170c78aa21
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: aa4ec854-e32b-4136-a6d4-a42deb2afb18
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1801'
+source-wordcount: '1827'
 ht-degree: 0%
 
 ---
 
-
 # Rekommenderade distributioner{#recommended-deployments}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
->Den här sidan hänvisar till rekommenderade topologier för AEM. Mer information om klusterfunktioner och hur du konfigurerar dem finns i [API-dokumentationen för Apache Sling Discovery](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html).
+>Den här sidan hänvisar till rekommenderade topologier för AEM. Mer information om klusterfunktioner och hur du konfigurerar dem finns i [API-dokumentation för Apache Sling Discovery](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html).
 
 MicroKernels fungerar som persistencehanterare i AEM 6.4. Vilken som passar dina behov beror på syftet med instansen och vilken distributionstyp du överväger.
 
@@ -40,7 +43,7 @@ I det här scenariot körs en enda tarMK-instans på en enda server.
 
 Fördelarna:
 
-* Enkla
+* Enkel
 * Smidigt underhåll
 * Bra prestanda
 
@@ -49,7 +52,7 @@ Nackdelar:
 * Kan inte skalas utanför serverkapacitetens gränser
 * Ingen failover-kapacitet
 
-### TjärMK Cold Standby {#tarmk-cold-standby}
+### StjärtMK i kallt vänteläge {#tarmk-cold-standby}
 
 En tarMK-instans fungerar som primär instans. Databasen från den primära databasen replikeras till ett standby-failover-system.
 
@@ -72,19 +75,19 @@ Nackdelar:
 
 >[!NOTE]
 >
->Mer information om hur du konfigurerar AEM med TjärMK Cold Standby finns i [den här](/help/sites-deploying/tarmk-cold-standby.md)-artikeln.
+>Mer information om hur du konfigurerar AEM med TARMK Cold Standby finns i [this](/help/sites-deploying/tarmk-cold-standby.md) artikel.
 
 >[!NOTE]
 >
->Distributionen av vänteläge i Cold Standby i det här exemplet kräver att både den primära instansen och standby-instansen licensieras separat, eftersom det finns en konstant replikering till redundansservern. Mer information om licenser finns i [Adobe General Licensing Terms](https://www.adobe.com/legal/terms/enterprise-licensing.html).
+>Distributionen av vänteläge i Cold Standby i det här exemplet kräver att både den primära instansen och standby-instansen licensieras separat, eftersom det finns en konstant replikering till redundansservern. Mer information om licenser finns i [Adobe allmänna licensvillkor](https://www.adobe.com/legal/terms/enterprise-licensing.html).
 
-### TARMK-servergrupp {#tarmk-farm}
+### TARMK Farm {#tarmk-farm}
 
 Flera Oak-instanser körs var och en med en tarMK-instans. TarmMK-databaserna är oberoende och måste synkroniseras.
 
 Att synkronisera databaserna tillhandahålls med det faktum att författarservern publicerar samma innehåll till varje gruppmedlem. Mer information finns i [Replikering](/help/sites-deploying/replication.md).
 
-För AEM Communities replikeras aldrig användargenererat innehåll (UGC). Information om stöd för UGC på en TjärMK-grupp finns i [överväganden för AEM Communities](#considerations-for-aem-communities).
+För AEM Communities replikeras aldrig användargenererat innehåll (UGC). Information om stöd för UGC på en tarMK-grupp finns i [överväganden för AEM Communities](#considerations-for-aem-communities).
 
 **Det här är standarddistributionen för publiceringsmiljöer.**
 
@@ -96,7 +99,7 @@ Fördelarna:
 * Skalbarhet för läsåtkomst
 * Redundans
 
-### Oak Cluster med MongoMK Failover för hög tillgänglighet i ett enda datacenter {#oak-cluster-with-mongomk-failover-for-high-availability-in-a-single-datacenter}
+### Oak Cluster med MongoMK Failover för hög tillgänglighet i ett och samma datacenter {#oak-cluster-with-mongomk-failover-for-high-availability-in-a-single-datacenter}
 
 Detta innebär att flera Oak-instanser får åtkomst till en MongoDB-replikuppsättning i ett enda datacenter, vilket skapar ett aktivt kluster för AEM. Replikuppsättningar i MongoDB används för hög tillgänglighet och redundans i händelse av maskinvaru- eller nätverksfel.
 
@@ -111,11 +114,11 @@ Nackdelar:
 
 * Prestanda kan vara lägre än med tarMK för vissa scenarier
 
-### Oak Cluster med MongoMK Failover över flera datacentraler {#oak-cluster-with-mongomk-failover-across-multiple-datacenters}
+### Oak Cluster med MongoMK Failover över flera datacenter {#oak-cluster-with-mongomk-failover-across-multiple-datacenters}
 
 Detta innebär att flera Oak-instanser använder en MongoDB-replikuppsättning över flera datacenter, vilket skapar ett aktivt kluster för AEM. Med flera datacenter ger MongoDB-replikering samma höga tillgänglighet och redundans, men nu även möjligheten att hantera ett datacenteravbrott.
 
-![oaklustermongofailover2datacenter](assets/oakclustermongofailover2datacenters.png)
+![oakclustermongofailover2datacenters](assets/oakclustermongofailover2datacenters.png)
 
 Fördelarna:
 
@@ -128,7 +131,7 @@ Fördelarna:
 
 >[!NOTE]
 >
->Mer information om arkitekturkoncepten för MongoDB som beskrivs i det här avsnittet finns i [MongoDB-replikering](https://docs.mongodb.org/manual/replication/).
+>Mer information om MongoDB-arkitektoniska begrepp som beskrivs i detta avsnitt finns i [MongoDB-replikering](https://docs.mongodb.org/manual/replication/).
 
 ## Mikrokärnor: som ska användas {#microkernels-which-one-to-use}
 
@@ -161,7 +164,7 @@ En minimidistribution med MongoDB omfattar vanligtvis följande topologi:
 
 Vi rekommenderar dessutom att du konfigurerar datalagret i ett delat filsystem eller i Amazon S3 så att resurserna eller binärfilerna inte lagras i MongoDB. Detta ger optimala prestanda i driftsättningen.
 
-En av de extra fördelarna med att distribuera en MongoDB-replikuppsättning med ett kluster med två eller flera författarinstanser är att ha ett automatiskt återställningsscenario med minimalt driftstopp om en författarinstans, en MongoDB-replik eller ett fullständigt datacenterfel uppstår. Valet av MongoMK framför tarMK bör dock inte enbart styras av återhämtningskravet, eftersom tarMK också kan tillhandahålla en minimalt låg driftstoppslösning med en kontrollerad failover-mekanism.
+En av de extra fördelarna med att distribuera en MongoDB-replikuppsättning med ett kluster med två eller flera författarinstanser är att ha ett automatiskt återställningsscenario med minimalt driftstopp om en författarinstans, MongoDB-replikering eller ett fullständigt datacenterfel uppstår. Valet av MongoMK framför tarMK bör dock inte enbart styras av återhämtningskravet, eftersom tarMK också kan tillhandahålla en minimalt låg driftstoppslösning med en kontrollerad failover-mekanism.
 
 Om ovanstående kriterier inte förväntas vara uppfyllda under de första 18 månaderna av driftsättningen bör du först distribuera AEM med hjälp av tarMK, sedan utvärdera konfigurationen vid ett senare tillfälle när ovanstående villkor är uppfyllda och slutligen avgöra om du ska stanna kvar på tarMK eller migrera till MongoMK.
 
@@ -169,7 +172,7 @@ Om ovanstående kriterier inte förväntas vara uppfyllda under de första 18 m�
 
 Vi rekommenderar inte att du distribuerar MongoMK för publiceringsinstanser. Distributionsskiktet distribueras nästan alltid som en grupp fullständigt oberoende publiceringsinstanser som kör tarMK, som synkroniseras genom att replikera innehåll från författarinstanserna. Denna&quot;delade ingenting&quot;-arkitektur, som är rätt för publiceringsinstanserna, gör att publiceringsnivån kan skalas vågrätt på ett linjärt sätt. Servergruppstopologin ger också fördelen att använda uppdateringar eller uppgraderingar för att publicera instanser rullande, så att inga ändringar i publiceringsnivån kräver några driftavbrott.
 
-Detta gäller inte AEM Communities som använder MongoMK-kluster på publiceringsnivån när det finns fler än en utgivare. Om du väljer JSRP (se [Community Content Storage](/help/communities/working-with-srp.md)) är ett MongoMK-kluster lämpligt, precis som alla publiceringssidkluster oavsett vald MK, till exempel MongoDB eller RDB.
+Detta gäller inte AEM Communities som använder MongoMK-kluster på publiceringsnivån när det finns fler än en utgivare. Om du väljer JSRP (se [Community-innehåll](/help/communities/working-with-srp.md)) skulle ett MongoMK-kluster vara lämpligt, precis som alla publiceringssidkluster, oavsett vilken MK som valts, till exempel MongoDB eller RDB.
 
 ### Förutsättningar och Recommendations när AEM distribueras med MongoMK {#prerequisites-and-recommendations-when-deploying-aem-with-mongomk}
 
@@ -191,13 +194,13 @@ En uppsättning förutsättningar och rekommendationer är tillgängliga om du �
 
 >[!NOTE]
 >
->Kontakta [Adobe kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) om du har frågor om dessa riktlinjer, förutsättningar och rekommendationer.
+>Kontakta [Adobe kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html).
 
-### Att tänka på för AEM Communities {#considerations-for-aem-communities}
+### Överväganden för AEM Communities {#considerations-for-aem-communities}
 
-För webbplatser som ska distribuera [AEM Communities](/help/communities/overview.md) rekommenderar vi att du [väljer en distribution](/help/communities/working-with-srp.md) som är optimerad för hantering av UGC som publicerats av communitymedlemmar från publiceringsmiljön.
+För platser som ska distribueras [AEM Communities](/help/communities/overview.md)rekommenderas att [välj en distribution](/help/communities/working-with-srp.md) optimerad för hantering av UGC som publicerats av communitymedlemmar från publiceringsmiljön.
 
-Genom att använda ett [gemensamt arkiv](/help/communities/working-with-srp.md) behöver inte UGC replikeras mellan författaren och andra publiceringsinstanser för att få en konsekvent vy över UGC.
+Genom att använda en [gemensam lagringsplats](/help/communities/working-with-srp.md)behöver inte UGC replikeras mellan författaren och andra publiceringsinstanser för att få en konsekvent vy över UGC.
 
 Nedan finns en uppsättning beslutsmatriser som kan hjälpa dig att välja den bästa typen av beständighet för din distribution:
 
@@ -211,7 +214,7 @@ Nedan finns en uppsättning beslutsmatriser som kan hjälpa dig att välja den b
 
 >[!NOTE]
 >
->MongoDB är en tredjepartsprogramvara och ingår inte i AEM licenspaket. Mer information finns på sidan [MongoDB-licenspolicy](https://www.mongodb.org/about/licensing/).
+>MongoDB är en tredjepartsprogramvara och ingår inte i AEM licenspaket. Mer information finns i [MongoDB-licenspolicy](https://www.mongodb.org/about/licensing/) sida.
 >
 >För att få ut så mycket som möjligt av er AEM rekommenderar Adobe licensiering av MongoDB Enterprise-versionen för att få tillgång till professionell support.
 >
@@ -219,5 +222,4 @@ Nedan finns en uppsättning beslutsmatriser som kan hjälpa dig att välja den b
 >
 >Om du vill köra både författaren och publicera på MongoDB måste du köpa två separata licenser.
 >
->Mer information finns på sidan [MongoDB för Adobe Experience Manager](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager).
-
+>Mer information finns i [MongoDB för Adobe Experience Manager](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager).

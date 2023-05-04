@@ -1,24 +1,27 @@
 ---
 title: Använda Maven for Communities
-seo-title: Använda Maven for Communities
+seo-title: Using Maven for Communities
 description: AEM Communities API jar och AEM Uber API jar
-seo-description: AEM Communities API jar och AEM Uber API jar
+seo-description: AEM Communities API jar and AEM Uber API jar
 uuid: ea37a89a-db6c-4018-8ab9-f5717e6c0421
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: a726c904-aadd-4678-be84-9e05808ab8be
-translation-type: tm+mt
-source-git-commit: 5affffac6f953bcf1d436d8492ad6dd2a041b3b4
+exl-id: d86411b9-6ed1-4091-bf5c-d46b4e518da4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '127'
+source-wordcount: '150'
 ht-degree: 0%
 
 ---
 
+# Använda Maven for Communities {#using-maven-for-communities}
 
-# Använda Maven för Communities {#using-maven-for-communities}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Översikt {#overview}
 
@@ -28,7 +31,7 @@ Detta avsnitt i AEM Communities-dokumentationen innehåller även:
 
 Det finns bara en&quot;uber&quot;-artefakt som ersätter enskilda artefakter:
 
-* AEM [Uber API jar](../../help/sites-developing/ht-projects-maven.md#what-is-the-uberjar)
+* AEM [Uber API-behållare](../../help/sites-developing/ht-projects-maven.md#what-is-the-uberjar)
 
 >[!NOTE]
 >
@@ -36,9 +39,9 @@ Det finns bara en&quot;uber&quot;-artefakt som ersätter enskilda artefakter:
 >
 >Vi rekommenderar att du håller dig uppdaterad med den senaste versionen av Communities.
 >
->I avsnittet [Senaste releaser](deploy-communities.md#latest-releases) kan du identifiera den senaste versionen.
+>Se [Senaste releaser](deploy-communities.md#latest-releases) för att identifiera den senaste versionen.
 
-## Maven Dependency Example {#maven-dependency-example}
+## Exempel på Maven Dependency {#maven-dependency-example}
 
 ```xml
 <dependency>
@@ -51,10 +54,14 @@ Det finns bara en&quot;uber&quot;-artefakt som ersätter enskilda artefakter:
 
 >[!NOTE]
 >
->Se [AEM Uber jar-databasen](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar) för att identifiera den senaste Uber jar-artefakten.
+>Se [AEM Uber jar-databas](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar) för att identifiera den senaste Uber jar-artefakten.
 
 <!--
 # Using Maven for Communities {#using-maven-for-communities}
+
+>[!CAUTION]
+>
+>AEM 6.4 has reached the end of extended support and this documentation is no longer updated. For further details, see our [technical support periods](https://helpx.adobe.com/support/programs/eol-matrix.html). Find the supported versions [here](https://experienceleague.adobe.com/docs/).
 
 ## Overview {#overview}
 

@@ -1,44 +1,47 @@
 ---
 title: Bygga en säker AEM Forms-app för iOS
-seo-title: Bygga en säker AEM Forms-app för iOS
+seo-title: Building a secure AEM Forms app for iOS
 description: Steg för att skapa en säker AEM Forms-app.
-seo-description: Steg för att skapa en säker AEM Forms-app.
+seo-description: Steps to build a secure AEM Forms app.
 uuid: 6c4b160f-4d0c-4976-9609-9196795b6c8e
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 90cd8ba5-4f47-4074-bc54-6a7bb8afe256
-translation-type: tm+mt
-source-git-commit: 5e764edb3d8ed98542c50b80cac40776c886ccf5
+exl-id: 7efc657e-b662-47db-8e70-62a37f3a3051
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
 
+# Bygga en säker AEM Forms-app för iOS {#building-a-secure-aem-forms-app-for-ios}
 
-# Skapa en säker AEM Forms-app för iOS {#building-a-secure-aem-forms-app-for-ios}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-Du måste arkivera Xcode-projektet för AEM Forms-programmet för att kunna skapa installationsprogrammet (en IPA-fil) och en egenskapslista (en PLIST-fil). Egenskapslistfilen innehåller konfigurationsinformation för det värdbaserade interna programmet, till exempel namnet och appens värdplats. Mer information om egenskapslistfilen finns i [Om informationsegenskapslistefiler](https://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html).
+Du måste arkivera Xcode-projektet för AEM Forms-programmet för att kunna skapa installationsprogrammet (en IPA-fil) och en egenskapslista (en PLIST-fil). Egenskapslistfilen innehåller konfigurationsinformation för det värdbaserade interna programmet, till exempel namnet och appens värdplats. Mer information om egenskapslistfilen finns i [Om egenskapslistfiler för information](https://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html).
 
 1. Logga in på följande webbplats:
 
    [https://developer.apple.com/account/ios/identifier/bundle](https://developer.apple.com/account/ios/identifier/bundle)
 
-1. Skapa ett program-ID. Mer information om hur du skapar ett program-ID finns i [Skapa och konfigurera program-ID](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).
-1. Klicka på **[!UICONTROL Configure App ID]** om du vill konfigurera paketidentifieraren för iOS-programmet för din app.
-1. Välj **[!UICONTROL Enable for Data Protection]** längst ned på webbsidan. Ange alternativ för dataskydd.
+1. Skapa ett program-ID. Detaljerade anvisningar om hur du skapar ett program-ID finns i [Skapa och konfigurera program-ID:n](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).
+1. Om du vill konfigurera källidentifieraren för iOS-programmet för din app klickar du på **[!UICONTROL Configure App ID]**.
+1. Längst ned på webbsidan väljer du **[!UICONTROL Enable for Data Protection]**. Ange alternativ för dataskydd.
 
    Klicka på **[!UICONTROL Done]**.
 
 1. Navigera till Provisioning->Distribution och skapa en ny profil med det program-ID som konfigurerats i steg 3.
 1. Hämta och lägg till provisioneringsprofilen i Xcode och iPad.
 1. Logga in på en Mac-dator som har Xcode och iOS SDK installerat och konfigurerat.
-1. Öppna `AEM Forms.xcodeproj`-projektet i Xcode.
-1. Klicka på **[!UICONTROL AEM Forms]**, under **[!UICONTROL TARGETS]**, välj **[!UICONTROL AEM Forms]**. Välj fliken **[!UICONTROL Build Settings]**, leta upp avsnittet **[!UICONTROL Code Signing Entitlement]** och välj alternativet **[!UICONTROL LC Enterprise]** i listrutan Entitlements.
-1. Leta reda på och öppna `LC Enterprise.entitlements`-filen i Xcode för redigering. **Lägg till samma nyckel/värde-par som i provisioneringsprofilen under **XCode-berättigandena.
-1. Klicka på **[!UICONTROL All]** på fliken **[!UICONTROL Build Settings]** och sedan på **[!UICONTROL Combined]**.
-1. Expandera **[!UICONTROL Code Signing]** från listan **[!UICONTROL Settings]**.
-1. Välj lämplig signatur för **[!UICONTROL Code Signing Identity]**. Se till att samma signatur är markerad för **[!UICONTROL Debug]**, **[!UICONTROL Release]** och **[!UICONTROL Any iOS SDK]**.
-1. Under **[!UICONTROL PROJECT]** väljer du **[!UICONTROL AEM Forms]** och kontrollerar att rätt signatur är markerad för **[!UICONTROL Code Signing Identity]**, **[!UICONTROL Debug]**, **[!UICONTROL Release]** och **[!UICONTROL Any iOS SDK]**.
-1. Bygg och distribuera appen AEM Forms. Detaljerade anvisningar om hur du skapar och distribuerar AEM Forms-program finns i [Bygg installationsprogrammet för AEM Forms-programmet](setup-xcode-project-build-installer.md#build-the-installer-for-the-mobile-workspace-app).
+1. Öppna `AEM Forms.xcodeproj` projekt i Xcode.
+1. Klicka **[!UICONTROL AEM Forms]**, under **[!UICONTROL TARGETS]**, markera **[!UICONTROL AEM Forms]**. Välj **[!UICONTROL Build Settings]** -fliken, leta upp **[!UICONTROL Code Signing Entitlement]** och i listrutan Entitlements väljer du **[!UICONTROL LC Enterprise]** alternativ.
+1. Leta reda på och öppna `LC Enterprise.entitlements` i Xcode för redigering. **Lägg till samma nyckel/värde-par som i provisioneringsprofilen under **XCode-berättigandena.
+1. I **[!UICONTROL Build Settings]** flik, klicka **[!UICONTROL All]** och sedan klicka **[!UICONTROL Combined]**.
+1. Från **[!UICONTROL Settings]** lista, expandera **[!UICONTROL Code Signing]**.
+1. För **[!UICONTROL Code Signing Identity]** väljer du lämplig signatur. Se till att samma signatur är vald för **[!UICONTROL Debug]**, **[!UICONTROL Release]** och **[!UICONTROL Any iOS SDK]**.
+1. Under **[!UICONTROL PROJECT]**, markera **[!UICONTROL AEM Forms]** och se till att rätt signatur väljs för **[!UICONTROL Code Signing Identity]**, **[!UICONTROL Debug]**, **[!UICONTROL Release]** och **[!UICONTROL Any iOS SDK]**.
+1. Bygg och distribuera appen AEM Forms. Detaljerade anvisningar om hur du bygger och distribuerar AEM Forms-program finns i [Bygg installationsprogrammet för AEM Forms-appen](setup-xcode-project-build-installer.md#build-the-installer-for-the-mobile-workspace-app).

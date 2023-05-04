@@ -1,24 +1,27 @@
 ---
 title: Lägg till anpassad åtgärd i resurslista-vyn
-seo-title: Lägg till anpassad åtgärd i resurslista-vyn
+seo-title: Add custom action to the Asset Listing view
 description: I den här artikeln lär du dig hur du lägger till anpassade åtgärder i vyn Resurslista
-seo-description: I den här artikeln lär du dig hur du lägger till anpassade åtgärder i vyn Resurslista
+seo-description: This article teaches how to add custom action to the Asset Listing view
 uuid: 72ce6c24-2758-4888-b797-1b134acc54d2
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: b35ea921-182f-4371-90f6-482d22694b42
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 00b3efc5-ef1c-4b9d-957d-2eda01c0b985
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1314'
-ht-degree: 1%
+source-wordcount: '1327'
+ht-degree: 0%
 
 ---
 
-
 # Lägg till anpassad åtgärd i resurslista-vyn {#add-custom-action-to-the-asset-listing-view}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Översikt {#overview}
 
@@ -29,7 +32,7 @@ Du kan lägga till en anpassad åtgärd i resurslista för:
 * En eller flera resurstyper eller bokstäver
 * Körning (åtgärd/kommando blir aktivt) vid val av enstaka, flera resurser/bokstäver, eller utan markering
 
-Anpassningen visas med scenariot som lägger till kommandot &quot;Hämta platt PDF&quot; i resurslista för brev. Med det här anpassningsscenariot kan dina användare hämta en enda PDF-fil av ett enda markerat brev.
+Den här anpassningen visas med scenariot som lägger till kommandot &quot;Ladda ned PDF&quot; i resurslista för brev. Med det här anpassningsscenariot kan dina användare ladda ned PDF till ett enda markerat brev.
 
 ### Förutsättningar {#prerequisites}
 
@@ -39,17 +42,17 @@ Om du vill slutföra följande scenario eller liknande behöver du känna till:
 * JavaScript
 * Java
 
-## Scenario: Lägg till ett kommando i användargränssnittet för bokstavslistan för att hämta en platt PDF-version av en bokstav {#addcommandtoletters}
+## Scenario: Lägg till ett kommando i användargränssnittet för bokstavslistan om du vill hämta en PDF-version av ett brev {#addcommandtoletters}
 
-Stegen nedan lägger till kommandot &quot;Hämta platt PDF&quot; i resurslista för brev och gör att dina användare kan hämta en platt PDF-fil av det valda brevet. Med dessa steg och rätt kod och parametrar kan du lägga till andra funktioner för en annan resurs, till exempel dataordlistor eller texter.
+Stegen nedan lägger till kommandot &quot;Ladda ned PDF&quot; i resurslisteringsvyn för brev och gör att dina användare kan ladda ned en plan PDF av det markerade brevet. Med dessa steg och rätt kod och parametrar kan du lägga till andra funktioner för en annan resurs, till exempel dataordlistor eller texter.
 
-Följ de här stegen för att anpassa Correspondence Management så att användarna kan hämta ett vanligt PDF-dokument med brev:
+Följ de här stegen för att anpassa Correspondence Management så att användarna kan hämta en PDF med bokstäver:
 
 1. Gå till `https://[server]:[port]/[ContextPath]/crx/de` och logga in som administratör.
 
 1. I mappen apps skapar du en mapp med namnet items med en sökväg/struktur som liknar mappen items i en urvalsmapp enligt följande:
 
-   1. Högerklicka på mappen **[!UICONTROL items]** på följande sökväg och välj **[!UICONTROL Overlay Node]**:
+   1. Högerklicka på **[!UICONTROL items]** mapp på följande sökväg och välj **[!UICONTROL Overlay Node]**:
 
       `/libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items`
 
@@ -78,9 +81,9 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
 1. Lägg till en nod för den anpassade knappen/åtgärden i en viss resurs under den nyligen skapade objektmappen (Exempel: downloadFlatPDF) med följande steg:
 
-   1. Högerklicka på mappen **[!UICONTROL items]** och välj **[!UICONTROL Create]** > **[!UICONTROL Create Node]**.
+   1. Högerklicka på **[!UICONTROL items]** mapp och markera **[!UICONTROL Create]** > **[!UICONTROL Create Node]**.
 
-   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **[!UICONTROL OK]**:
+   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **[!UICONTROL OK]**:
 
       **[!UICONTROL Name:]** downloadFlatPDF (eller det namn du vill ge den här egenskapen)
 
@@ -104,12 +107,12 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
     <tr> 
     <td>Foundation-collection-action</td> 
     <td>Sträng</td> 
-    <td><p>{"target": ".cq-management asset-admin-childpages", "activeSelectionCount": "single","type": "LETTER"}<br /> <br /> <br /> <strong>activeSelectionCount</strong> kan vara ett eller flera för att tillåta val av en eller flera resurser som den anpassade åtgärden utförs på.</p> <p><strong>kan </strong> vara en eller flera (kommaseparerade flera poster) av följande: BOKSTAV,TEXT,LISTA,VILLKOR,DATADICTIONÄR</p> </td> 
+    <td><p>{"target": ".cq-management asset-admin-childpages", "activeSelectionCount": "single","type": "LETTER"}<br /> <br /> <br /> <strong>activeSelectionCount</strong> kan vara en eller flera för att tillåta val av enskilda eller flera resurser som den anpassade åtgärden utförs på.</p> <p><strong>type</strong> kan vara en eller flera (kommaavgränsade flera poster) av följande: BOKSTAV,TEXT,LISTA,VILLKOR,DATADICTIONÄR</p> </td> 
     </tr> 
     <tr> 
     <td>icon</td> 
     <td>Sträng</td> 
-    <td>icon-download<br /> <br /> Den ikon som Correspondence Management visar till vänster om kommandot/menyn. Olika ikoner och inställningar finns i <a href="https://docs.adobe.com/docs/en/aem/6-3/develop/ref/coral-ui/coralui3/Coral.Icon.html" target="_blank">dokumentationen för CoralUI-ikoner</a>.<br /> </td> 
+    <td>icon-download<br /> <br /> Den ikon som Correspondence Management visar till vänster om kommandot/menyn. Information om olika ikoner och inställningar finns i <a href="https://docs.adobe.com/docs/en/aem/6-3/develop/ref/coral-ui/coralui3/Coral.Icon.html" target="_blank">Dokumentation för CoralUI-ikoner</a>.<br /> </td> 
     </tr> 
     <tr> 
     <td>jcr:primärType</td> 
@@ -129,19 +132,19 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
     <tr> 
     <td>text</td> 
     <td>Sträng</td> 
-    <td>Ladda ned platt PDF (eller någon annan etikett)<br /> <br /> Kommandot som visas i gränssnittet Resurslista</td> 
+    <td>Ladda ned PDF (eller någon annan etikett)<br /> <br /> Kommandot som visas i gränssnittet Resurslista</td> 
     </tr> 
     <tr> 
     <td>title</td> 
     <td>Sträng</td> 
-    <td>Ladda ned en platt PDF-fil av det markerade brevet (eller annan etikett/Alt-text)<br /> <br /> Titeln är den alt-text som Correspondence Management visar när användaren hovrar över det anpassade kommandot.</td> 
+    <td>Ladda ned en plan PDF till det markerade brevet (eller annan etikett/Alt-text)<br /> <br /> Titeln är den alt-text som Correspondence Management visar när användaren hovrar över det anpassade kommandot.</td> 
     </tr> 
     </tbody> 
     </table>
 
 1. I mappen apps skapar du en mapp med namnet js med en sökväg/struktur som liknar objektmappen i admin-mappen enligt följande steg:
 
-   1. Högerklicka på mappen **[!UICONTROL js]** på följande sökväg och välj **[!UICONTROL Overlay Node]**: &quot;
+   1. Högerklicka på **[!UICONTROL js]** mapp på följande sökväg och välj **[!UICONTROL Overlay Node]**: &quot;
 
       `/libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js`
 
@@ -157,7 +160,7 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
 1. I mappen js skapar du en fil med namnet formaction.js med koden för knappens åtgärder enligt följande steg:
 
-   1. Högerklicka på mappen **[!UICONTROL js]** på följande sökväg och välj **[!UICONTROL Create > Create File]**:
+   1. Högerklicka på **[!UICONTROL js]** mapp på följande sökväg och välj **[!UICONTROL Create > Create File]**:
 
       `/apps/fd/cm/ma/gui/components/admin/clientlibs/admin/js`
 
@@ -231,7 +234,7 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
 1. I mappen apps skapar du en mapp med namnet items med en sökväg/struktur som liknar mappen items i mappen actionhandlers med följande steg:
 
-   1. Högerklicka på mappen **[!UICONTROL items]** på följande sökväg och välj **[!UICONTROL Overlay Node]**:
+   1. Högerklicka på **[!UICONTROL items]** mapp på följande sökväg och välj **[!UICONTROL Overlay Node]**:
 
       `/libs/fd/cm/ma/gui/content/commons/actionhandlers/items/`
 
@@ -251,7 +254,7 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
    1. Högerklicka på objektmappen och välj **[!UICONTROL Create > Create Node]**.
 
-   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **[!UICONTROL OK]**:
+   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **[!UICONTROL OK]**:
 
       **[!UICONTROL Name:]** letterpdfdownloader (eller det namn du vill ge den här egenskapen) måste vara unikt. Om du använder ett annat namn här anger du samma namn i formaction.js-filens ACTION_URL-variabel.)
 
@@ -269,13 +272,13 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
 
    /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
-   1. Högerklicka på mappen **[!UICONTROL admin]** på följande sökväg och välj **[!UICONTROL Create > Create File]**:
+   1. Högerklicka på **[!UICONTROL admin]** mapp på följande sökväg och välj **[!UICONTROL Create > Create File]**:
 
       /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
       Ge filen namnet POST.jsp. (Filnamnet behöver bara vara POST.jsp.)
 
-   1. Dubbelklicka på **[!UICONTROL POST.jsp]**-filen för att öppna den i CRX.
+   1. Dubbelklicka på **[!UICONTROL POST.jsp]** för att öppna den i CRX.
    1. Lägg till följande kod i filen POST.jsp och klicka på **[!UICONTROL Save All]**:
 
       Den här koden är specifik för bokstavsåtergivningstjänsten. För andra resurser lägger du till resursens java-bibliotek i den här koden. Mer information om AEM Forms API:er finns i [AEM Forms API](https://adobe.com/go/learn_aemforms_javadocs_63_en).
@@ -347,27 +350,26 @@ Följ de här stegen för att anpassa Correspondence Management så att använda
       %>
       ```
 
-## Ladda ned en platt PDF-fil av ett brev med den anpassade funktionen {#download-flat-pdf-of-a-letter-using-the-custom-functionality}
+## Ladda ned PDF i ett brev med den anpassade funktionen {#download-flat-pdf-of-a-letter-using-the-custom-functionality}
 
-När du har lagt till en anpassad funktion för att ladda ned en platt PDF-fil av brev kan du göra så här för att ladda ned en platt PDF-version av det brev du väljer:
+När du har lagt till en anpassad funktion för att ladda ned en PDF i dina brev kan du använda följande steg för att ladda ned en PDF-version av det brev du har valt:
 
 1. Gå till `https://[server]:[port]/[ContextPath]/projects.html` och logga in.
 
 1. Välj **[!UICONTROL Forms > Letters]**. Correspondence Management listar bokstäverna som finns i systemet.
-1. Klicka på **[!UICONTROL Select]** och sedan på en bokstav för att markera den.
-1. Välj **[!UICONTROL More]** > &lt;Hämta platt PDF> (Den anpassade funktionaliteten som skapas med instruktionerna i den här artikeln). Dialogrutan Hämta brev som PDF visas.
+1. Klicka **[!UICONTROL Select]** och klicka sedan på en bokstav för att markera den.
+1. Välj **[!UICONTROL More]** > &lt;download flat=&quot;&quot; pdf=&quot;&quot;> (De anpassade funktionerna som skapas med instruktionerna i den här artikeln). Dialogrutan Hämta brev som PDF visas.
 
-   Menyalternativets namn, funktion och alt-text följer den anpassning som har skapats i [Scenario: Lägg till ett kommando i användargränssnittet för bokstavslistan om du vill hämta en platt PDF-version av ett brev.](#addcommandtoletters)
+   Menyalternativets namn, funktion och alt-text är beroende av den anpassning som har skapats i [Scenario: Lägg till ett kommando i användargränssnittet för bokstavslistan om du vill hämta en PDF-version av ett brev.](#addcommandtoletters)
 
-   ![Anpassade funktioner: Ladda ned platt PDF](assets/5_downloadflatpdf.png)
+   ![Anpassade funktioner: Ladda ned PDF](assets/5_downloadflatpdf.png)
 
-1. I dialogrutan Hämta brev som PDF väljer du den relevanta XML-koden som du vill fylla i data från i PDF-filen.
+1. I dialogrutan Hämta brev som PDF väljer du den XML som du vill fylla i data från i PDF.
 
    >[!NOTE]
    >
-   >Innan du laddar ned bokstaven som en platt PDF-fil kan du skapa XML-filen med informationen i brevet med alternativet **[!UICONTROL Create Report]**.
+   >Innan du laddar ned bokstaven som ett platt PDF kan du skapa XML-filen med informationen i brevet med hjälp av **[!UICONTROL Create Report]** alternativ.
 
-   ![Ladda ned brev som PDF](assets/6_downloadflatpdf.png)
+   ![Hämta brev som PDF](assets/6_downloadflatpdf.png)
 
-   Brevet laddas ned till datorn som en platt PDF-fil.
-
+   Brevet laddas ned till din dator som ett vanligt PDF.

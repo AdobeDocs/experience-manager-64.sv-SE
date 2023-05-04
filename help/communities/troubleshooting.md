@@ -1,8 +1,8 @@
 ---
 title: Felsökning
-seo-title: Felsökning
+seo-title: Troubleshooting
 description: Felsökning av användargrupper, inklusive kända fel
-seo-description: Felsökning av användargrupper, inklusive kända fel
+seo-description: Troubleshooting Community including Known Issues
 uuid: 99225430-fa2a-4393-ae5a-18b19541c358
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -10,14 +10,18 @@ topic-tags: developing
 content-type: reference
 discoiquuid: cdb2d80a-2fbf-4ee6-b89b-b5d74e6d3bfc
 exl-id: 1a1de20d-53f6-4787-92e3-e12f30d925d3
-source-git-commit: a70f874ad7fcae59ee4c6ec20e23ffb2e339590b
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '373'
-ht-degree: 1%
+source-wordcount: '403'
+ht-degree: 0%
 
 ---
 
 # Felsökning {#troubleshooting}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Detta avsnitt innehåller vanliga problem och kända problem.
 
@@ -54,7 +58,7 @@ All kod som använder API:t RelativeTimeFormat() måste därför ändras
 
 Felet skiljer sig åt när det gäller författare och publicering. Skribenten skriver att det inte går att skriva och att forumen helt enkelt inte visas. Vid publicering genereras ett fel på sidan.
 
-Mer information finns i [com.day.cq.commons.date.RelativeTimeFormat](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html)-API:t.
+Se [com.day.cq.commons.date.RelativeTimeFormat](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API för mer information.
 
 ## Vanliga problem {#common-concerns}
 
@@ -62,9 +66,9 @@ Mer information finns i [com.day.cq.commons.date.RelativeTimeFormat](https://hel
 
 Under start (inte under den första - men efter den) kan följande varning visas i loggarna:
 
-* 11.04.2014 08:38:07.223 **WARN** [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper &#39;i18n&#39; har ersatts av &#39;com.adobe.cq.social.handlebars.I18nHelper@15bac645&#39;
+* 11.04.2014 08:38:07.223 **VARNING** [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper &#39;i18n&#39; har ersatts med &#39;com.adobe.cq.social.handlebars.I18nHelper@15bac645&#39;
 
-Den här varningen kan ignoreras eftersom jknack.handlebars.Handlebars, som används av [SCF](scf.md#handlebarsjavascripttemplatinglanguage), har ett eget i18n-hjälpverktyg. Vid start ersätts den med en AEM specifik [i18n-hjälp](handlebars-helpers.md#i-n). Den här varningen genereras av tredjepartsbiblioteket för att bekräfta åsidosättningen av en befintlig hjälpreda.
+Den här varningen kan ignoreras som jknack.handlebars.Handlebars, som används av [SCF](scf.md#handlebarsjavascripttemplatinglanguage), har ett eget i18n-hjälpverktyg. Från början ersätts den med en AEM specifik [i18n - hjälp](handlebars-helpers.md#i-n). Den här varningen genereras av tredjepartsbiblioteket för att bekräfta åsidosättningen av en befintlig hjälpreda.
 
 ### Varning i loggar: OakResourceListener processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
 

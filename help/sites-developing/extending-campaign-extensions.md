@@ -1,24 +1,27 @@
 ---
 title: Skapa anpassade tillägg
-seo-title: Skapa anpassade tillägg
+seo-title: Creating Custom Extensions
 description: Du kan anropa din anpassade kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign
-seo-description: Du kan anropa din anpassade kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign
+seo-description: You can call your custom code in Adobe Campaign from AEM or from AEM to Adobe Campaign
 uuid: 8392aa0d-06cd-4b37-bb20-f67e6a0550b1
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: f536bcc1-7744-4f05-ac6a-4cec94a1ffb6
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 8a56b5a0-90da-4fd4-ba26-74bbc7b6b445
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
 
-
 # Skapa anpassade tillägg{#creating-custom-extensions}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 När du implementerar ett projekt har du vanligtvis anpassad kod i både AEM och Adobe Campaign. Med det befintliga API:t kan du anropa din anpassade kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign. I det här dokumentet beskrivs hur du gör det.
 
@@ -29,25 +32,25 @@ Du måste ha följande installerat:
 * Adobe Experience Manager
 * Adobe Campaign 6.1
 
-Mer information finns i [Integrera AEM med Adobe Campaign 6.1](/help/sites-administering/campaignonpremise.md).
+Se [Integrera AEM med Adobe Campaign 6.1](/help/sites-administering/campaignonpremise.md) för mer information.
 
 ## Exempel 1: AEM till Adobe Campaign {#example-aem-to-adobe-campaign}
 
-Standardintegrationen mellan AEM och Campaign baseras på JSON och JSSP (JavaScript Server Page). Dessa JSSP-filer finns i Campaign-konsolen och alla börjar med **amc** (Adobe Marketing Cloud).
+Standardintegrationen mellan AEM och Campaign baseras på JSON och JSSP (JavaScript Server Page). Dessa JSSP-filer finns i Campaign-konsolen och börjar med **amc** (Adobe Marketing Cloud).
 
 ![chlimage_1-15](assets/chlimage_1-15.png)
 
 >[!NOTE]
 >
->[Det här exemplet finns i Geometrixx](/help/sites-developing/we-retail.md), som är tillgänglig från Paketresurs.
+>[I det här exemplet finns Geometrixx](/help/sites-developing/we-retail.md), som är tillgängligt från Paketresurs.
 
 I det här exemplet skapar vi en ny anpassad JSSP-fil och anropar den från AEM sida för att hämta resultatet. Detta kan till exempel användas för att hämta data från Adobe Campaign eller för att spara data i Adobe Campaign.
 
-1. Om du vill skapa en ny JSSP-fil i Adobe Campaign klickar du på ikonen **Nytt**.
+1. Om du vill skapa en ny JSSP-fil i Adobe Campaign klickar du på **Nytt** ikon.
 
    ![](do-not-localize/chlimage_1-4.png)
 
-1. Ange namnet på den här JSSP-filen. I det här exemplet använder vi **cus:custom.jssp** (vilket betyder att det kommer att finnas i namnutrymmet **cus**).
+1. Ange namnet på den här JSSP-filen. I det här exemplet använder vi **cus:custom.jssp** (d.v.s. i **kus** namnutrymme).
 
    ![chlimage_1-16](assets/chlimage_1-16.png)
 
@@ -171,7 +174,7 @@ AEM erbjuder API:er som kan hämta objekt var som helst i platadminutforskarvyn.
 
 >[!NOTE]
 >
->[Det här exemplet finns i Geometrixx](/help/sites-developing/we-retail.md), som är tillgänglig från Paketresurs.
+>[I det här exemplet finns Geometrixx](/help/sites-developing/we-retail.md), som är tillgängligt från Paketresurs.
 
 För varje nod i Utforskaren finns det ett API som är länkat till det. Exempel:
 
@@ -181,13 +184,13 @@ API:t är:
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.1.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
-Slutet av URL:en **.1.json** kan ersättas med **.2.json**, **.3.json**, enligt antalet undernivåer som du vill hämta För att få alla nyckelordet **infinity** kan användas:
+Slutet av URL:en **.1.json** kan ersättas med **.2.json**, **.3.json**, enligt det antal undernivåer du är intresserad av att hämta För att få alla nyckelordet **oändlighet** kan användas:
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.infinity.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
 För att nu kunna använda API:t måste vi veta att AEM som standard använder grundläggande autentisering.
 
-Ett JS-bibliotek med namnet **amcIntegration.js** är tillgängligt i 6.1.1 (build 8624 och senare) som implementerar den logiken bland flera andra.
+Ett JS-bibliotek med namnet **amcIntegration.js** finns i 6.1.1 (build 8624 och senare) som implementerar den logiken bland flera andra.
 
 ### AEM API-anrop {#aem-api-call}
 
@@ -205,4 +208,3 @@ request.header["Content-Type"] = "application/json; charset=UTF-8";
 request.execute();
 var response = request.response;
 ```
-

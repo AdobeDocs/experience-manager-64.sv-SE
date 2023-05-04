@@ -1,24 +1,27 @@
 ---
 title: Publicera inte publicera innehåll
-seo-title: Publicera inte publicera innehåll
+seo-title: Publish UnPublish Content
 description: När du känner till innehållshanteringsåtgärder för artiklar, banners och samlingar kan du följa den här sidan för att lära dig mer om hur du kan publicera ditt innehåll. Du kan också avpublicera innehållet.
-seo-description: När du känner till innehållshanteringsåtgärder för artiklar, banners och samlingar kan du följa den här sidan för att lära dig mer om hur du kan publicera ditt innehåll. Du kan också avpublicera innehållet.
+seo-description: Once you are familiar with content management actions on articles, banners, and collections, follow this page to learn about how you can publish your content. Also you can unpublish your content.
 uuid: 75179aa8-022c-4876-9664-6dd2b826174c
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: 8c88a2ff-766f-481b-b6dc-0b3e2eed8596
-translation-type: tm+mt
-source-git-commit: 95499f59b2ce7d5d864d948d596f3efaae0b0d27
+exl-id: e9da73d6-7140-4fd6-b69c-2e76024d65e5
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '304'
 ht-degree: 0%
 
 ---
 
+# Publicera inte publicera innehåll{#publish-unpublish-content}
 
-# Publicera ej publicerat innehåll{#publish-unpublish-content}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >

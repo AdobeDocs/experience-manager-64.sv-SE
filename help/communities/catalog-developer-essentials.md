@@ -2,7 +2,7 @@
 title: Catalog Essentials
 seo-title: Catalog Essentials
 description: Katalogöversikt
-seo-description: Katalogöversikt
+seo-description: Catalog overview
 uuid: 788512bb-fa38-48fb-a769-1eaae6bb95a1
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -10,22 +10,26 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 542467ef-3793-4347-8424-c365c5a166f6
 exl-id: 1e0a7cab-39b9-4c90-810c-c93fb76c3869
-source-git-commit: 9178c3a01e7f450d3794f41605fb3788231c88c0
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '356'
-ht-degree: 3%
+source-wordcount: '388'
+ht-degree: 2%
 
 ---
 
 # Catalog Essentials {#catalog-essentials}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 Den här sidan innehåller viktig information om hur du arbetar med katalogfunktionen på webbplatser för aktivering.
 
 När katalogfunktionen ingår i en community-webbplats kan communitymedlemmar bläddra bland och välja aktiveringsresurser som finns listade i en katalog.
 
-Med [ `enablement catalog`-komponenten](catalog.md) kan communitymedlemmar komma åt en katalog med [aktiveringsresurser](resources.md). Användningen av AEM taggar är en viktig del av att hantera utseendet på aktiveringsresurser i en katalog.
+The [ `enablement catalog` komponent](catalog.md) ger communitymedlemmar åtkomst till en katalog med [aktiveringsresurser](resources.md). Användningen av AEM taggar är en viktig del av att hantera utseendet på aktiveringsresurser i en katalog.
 
-Se [Tagga aktiveringsresurser](tag-resources.md).
+Se [Aktiveringsresurser för taggning](tag-resources.md).
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 
@@ -44,7 +48,7 @@ Se [Tagga aktiveringsresurser](tag-resources.md).
    <td>cq.social.enablement.hbs.breadcrumbs<br /> cq.social.enablement.hbs.catalog<br /> cq.social.enablement.hbs.resource<br /> cq.social.enablement.hbs.learningpath</td> 
   </tr> 
   <tr> 
-   <td> <strong>templates</strong></td> 
+   <td> <strong>mallar</strong></td> 
    <td> /libs/social/enablement/components/hbs/catalog/catalog.hbs<br /> </td> 
   </tr> 
   <tr> 
@@ -62,18 +66,18 @@ Se [Tagga aktiveringsresurser](tag-resources.md).
 
 ### Katalogfunktion {#catalog-function}
 
-En community-platsstruktur som innehåller [katalogfunktionen](functions.md#catalog-function) innehåller en konfigurerad `enablement catalog`-komponent.
+En community-webbplatsstruktur som innehåller [Katalogfunktion](functions.md#catalog-function), innehåller en konfigurerad `enablement catalog` -komponenten.
 
 ### Förfilter {#pre-filters}
 
 När en katalogfunktion har lagts till på en communitywebbplats är det möjligt att begränsa aktiveringsresurser och utbildningssökvägar som visas i katalogen genom att ange ett förfilter. Detta görs genom att ange egenskaper för platsens katalogresurs.
 
-Använda exemplet med [självstudiekursen för aktivering](getting-started-enablement.md):
+Använda exemplet på [Självstudiekurs om aktivering](getting-started-enablement.md):
 
 * On author
 * Använda [CRXDE](../../help/sites-developing/developing-with-crxde-lite.md)
 
-   * Till exempel [https://&lt;server>:&lt;port>/crx/de](http://localhost:4502/crx/de)
+   * Som [https://&lt;server>:&lt;port>/crx/de](http://localhost:4502/crx/de)
 
 * Navigera till katalogresursen på katalogsidan
 
@@ -81,7 +85,7 @@ Använda exemplet med [självstudiekursen för aktivering](getting-started-enabl
 
 * Lägga till en underordnad filternod
 
-   * Markera noden `catalog`
+   * Välj `catalog`nod
    * Välj **[!UICONTROL Create Node]**
 
       * Namn: `filters`
@@ -89,18 +93,18 @@ Använda exemplet med [självstudiekursen för aktivering](getting-started-enabl
    * Välj **[!UICONTROL Save All]**
 
 
-* Lägg till egenskapen `se_resource-tags` i noden `filters`
+* Lägg till `se_resource-tags` egenskapen till `filters` nod
 
-   * Välj noden `filters`
+   * Välj `filters` nod
    * Lägg till en Multi-egenskap
 
       * Namn: `se_resource-tags`
       * Typ: Sträng
-      * Värde: *&lt;ange ett [Tagg-ID](#pre-filter-tagids)>*
+      * Värde: *&lt;enter a=&quot;&quot; span=&quot;&quot; id=&quot;1&quot; translate=&quot;no&quot; />TaggID](#pre-filter-tagids)>*[
       * Välj **[!UICONTROL Multi]**
       * Välj **[!UICONTROL Add]**
 
-         * I popup-dialogrutan väljer du `+` om du vill lägga till ytterligare förfiltertagg-ID:n
+         * I popup-dialogrutan väljer du `+` för att lägga till ytterligare förfiltertagg-ID:n
 
 * Publicera communitywebbplatsen igen
 
@@ -108,7 +112,7 @@ Använda exemplet med [självstudiekursen för aktivering](getting-started-enabl
 
 #### Förfiltrera tagg-ID:n {#pre-filter-tagids}
 
-Förfiltret [TaggID](../../help/sites-developing/framework.md#tagid) måste exakt matcha de taggar som används för aktiveringsresurserna. Dessa är synliga i mappen `resources` för platsen som värden för egenskapen `se_resource-tags`.
+Förfiltret [TaggID](../../help/sites-developing/framework.md#tagid) måste exakt matcha de taggar som används i aktiveringsresurserna. De här är synliga i `resources` platsens mapp som egenskapens värden `se_resource-tags`.
 
 ![chlimage_1-190](assets/chlimage_1-190.png)
 

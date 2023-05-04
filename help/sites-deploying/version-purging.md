@@ -1,8 +1,8 @@
 ---
 title: Rensning av version
-seo-title: Rensning av version
+seo-title: Version Purging
 description: I den här artikeln beskrivs de tillgängliga alternativen för att rensa versioner.
-seo-description: I den här artikeln beskrivs de tillgängliga alternativen för att rensa versioner.
+seo-description: This article describes the available options for version purging.
 uuid: 6140c87e-ae1c-409d-bdbb-71b397f0b738
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,16 +10,19 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 56f36dcf-8fbd-43f8-bf74-e88d5b686160
 feature: Configuring
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 357d5f23-3e75-44e3-905f-4efe960858bf
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
 
-
 # Rensning av version{#version-purging}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 I en standardinstallation AEM en ny version av en sida eller nod när du aktiverar en sida efter att innehållet har uppdaterats.
 
@@ -27,17 +30,17 @@ I en standardinstallation AEM en ny version av en sida eller nod när du aktiver
 >
 >Om inga innehållsändringar görs visas ett meddelande om att sidan har aktiverats, men ingen ny version skapas
 
-Du kan skapa ytterligare versioner på begäran med hjälp av fliken **Versioning** i sidosparken. Dessa versioner lagras i databasen och kan återställas om det behövs.
+Du kan skapa ytterligare versioner på begäran med **Versionshantering** sidosparkens flik. Dessa versioner lagras i databasen och kan återställas om det behövs.
 
 Dessa versioner rensas aldrig, så databasstorleken kommer att öka med tiden och måste därför hanteras.
 
 AEM levereras med olika mekanismer som hjälper dig att hantera din databas:
 
-* [Versionshanteraren](#version-manager)
+* den [Versionshanteraren](#version-manager)
 
    Detta kan konfigureras för att rensa gamla versioner när nya versioner skapas.
 
-* verktyget [Rensa versioner](/help/sites-deploying/monitoring-and-maintaining.md#version-purging)
+* den [Rensa versioner](/help/sites-deploying/monitoring-and-maintaining.md#version-purging) verktyg
 
    Detta används som en del av övervakningen och underhållet av din databas.
 
@@ -51,7 +54,7 @@ AEM levereras med olika mekanismer som hjälper dig att hantera din databas:
 
       När en versions ålder överskrider det här värdet rensas den från databasen.
 
-* [underhållsaktiviteten Rensa version](/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks). Du kan schemalägga underhållsaktiviteten Rensa version så att tidigare versioner tas bort automatiskt. Därför minimeras behovet av att manuellt använda verktygen för versionsrensning.
+* den [Underhållsaktivitet för versionsrensning](/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks). Du kan schemalägga underhållsaktiviteten Rensa version så att tidigare versioner tas bort automatiskt. Därför minimeras behovet av att manuellt använda verktygen för versionsrensning.
 
 >[!CAUTION]
 >
@@ -141,4 +144,4 @@ Om du till exempel definierar det högsta OCH lägsta antalet versioner som ska 
 
 ## Rensa versioner {#purge-versions-tool}
 
-Verktyget [Rensa versioner](/help/sites-deploying/monitoring-and-maintaining.md#purgeversionstool) är avsett för att rensa versioner av en nod eller en hierarki av noder i din databas. Dess främsta syfte är att hjälpa dig att minska storleken på databasen genom att ta bort tidigare versioner av dina noder.
+The [Rensa versioner](/help/sites-deploying/monitoring-and-maintaining.md#purgeversionstool) är avsett för att rensa versioner av en nod eller en hierarki av noder i din databas. Dess främsta syfte är att hjälpa dig att minska storleken på databasen genom att ta bort tidigare versioner av dina noder.

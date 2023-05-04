@@ -9,14 +9,18 @@ topic-tags: author
 discoiquuid: fea76f90-22d5-4836-9901-a35229401eb0
 feature: Adaptive Forms
 exl-id: 2a842bdc-6dcf-42cc-9a45-57ac15b79eb7
-source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1468'
+source-wordcount: '1504'
 ht-degree: 0%
 
 ---
 
 # Konfigurera åtgärden Skicka {#configuring-the-submit-action}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Introduktion till att skicka åtgärder {#introduction-to-submit-actions}
 
@@ -142,7 +146,7 @@ Med funktionen för omvalidering på serversidan kan du även köra de validerin
 
 Alla valideringar av ett anpassningsbart formulär som körs på servern är:
 
-* Krävs
+* Obligatoriskt
 * Valideringsbildsats
 * Valideringsuttryck
 

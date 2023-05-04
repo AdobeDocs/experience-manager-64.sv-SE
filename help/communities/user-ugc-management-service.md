@@ -11,14 +11,18 @@ topic-tags: administering
 discoiquuid: f564759f-fb56-4f70-a7b1-286a223755c6
 role: Admin
 exl-id: f4adc53d-6809-4d89-a3dd-5d783e938a63
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
 
 # Tjänsten för hantering av användare och användargenererat innehåll i AEM Communities {#user-and-ugc-management-service-in-aem-communities}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!IMPORTANT]
 >

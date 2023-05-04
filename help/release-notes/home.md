@@ -4,14 +4,18 @@ seo-title: AEM 6.4 Release Notes
 description: AEM-versionsinformationen innehåller viktig information om den senaste versionen av AEM, inklusive vad som är nytt, vilka plattformar som stöds, funktioner som fasas ut eller tas bort, samt kända fel.
 seo-description: The AEM Release Notes cover important information about the latest release of AEM, including what's new, supported platforms, deprecated and removed features, and known issues.
 exl-id: e6ebd0ba-674e-406f-a3ac-98ac9518226e
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '344'
-ht-degree: 31%
+source-wordcount: '380'
+ht-degree: 28%
 
 ---
 
 # Versionsinformation om Adobe Experience Manager 6.4
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 AEM-versionsinformationen innehåller viktig information om den senaste versionen av AEM, inklusive vad som är nytt, vilka plattformar som stöds, funktioner som fasas ut eller tas bort, samt kända fel.
 

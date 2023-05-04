@@ -1,28 +1,31 @@
 ---
 title: Funktionsstatus för Touch UI
-seo-title: Funktionsstatus för Touch UI
+seo-title: Touch UI Feature Status
 description: Versionsinformation om användargränssnittet i Adobe Experience Manager 6.3 Touch.
-seo-description: Versionsinformation om användargränssnittet i Adobe Experience Manager 6.3 Touch.
+seo-description: Release notes specific to Adobe Experience Manager 6.3 Touch UI.
 uuid: dc335334-6c50-4cee-8a2e-183958742686
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 content-type: reference
 discoiquuid: 482b5eb0-1b15-4f10-a9d8-3b72dd74acf8
-translation-type: tm+mt
-source-git-commit: db26dd05f6c0997eeda462f27971cbcfa6737527
+exl-id: e1422581-143b-4fce-976e-e5aa3360e2d0
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1073'
-ht-degree: 1%
+source-wordcount: '1096'
+ht-degree: 0%
 
 ---
 
-
-# Touch UI Feature Status {#touch-ui-feature-status}
+# Funktionsstatus för Touch UI {#touch-ui-feature-status}
 
 >[!CAUTION]
 >
->I version 6.4 av AEM är det klassiska användargränssnittet [föråldrat](/help/release-notes/deprecated-removed-features.md). Adobe planerar inte att göra ytterligare förbättringar av det klassiska användargränssnittet och användare uppmuntras att utnyttja de kraftfulla nya funktionerna som finns i det pekaktiverade användargränssnittet.
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+>[!CAUTION]
+>
+>Med version 6.4 av AEM [Klassiskt användargränssnitt är föråldrat](/help/release-notes/deprecated-removed-features.md). Adobe planerar inte att göra ytterligare förbättringar av det klassiska användargränssnittet och användare uppmuntras att utnyttja de kraftfulla nya funktionerna som finns i det pekaktiverade användargränssnittet.
 
 Från och med version 6.0 har AEM introducerat ett nytt användargränssnitt som kallas &quot;pekaktiverat användargränssnitt&quot; (kallas även&quot;pekgränssnitt&quot;) som är anpassat till Adobe Marketing Cloud och till de övergripande riktlinjerna för användargränssnittet i Adobe. Med nästan alla funktionspartitioner har detta blivit standardgränssnittet i AEM med det äldre skrivbordsorienterade gränssnittet som kallas &quot;klassiskt gränssnitt&quot;.
 
@@ -30,7 +33,7 @@ De flesta funktioner finns i det beröringskänsliga användargränssnittet, men
 
 Följande lista visar aktuell status för funktionerna som implementerats i AEM 6.4.
 
-Rekommendationer för kunder som uppgraderar till AEM 6.4 finns i [användargränssnittet Recommendations för kunder](/help/sites-deploying/ui-recommendations.md).
+Rekommendationer för kunder som uppgraderar till AEM 6.4 finns på [Användargränssnitt Recommendations för kunder](/help/sites-deploying/ui-recommendations.md) för mer information.
 
 >[!NOTE]
 >
@@ -44,7 +47,7 @@ Rekommendationer för kunder som uppgraderar till AEM 6.4 finns i [användargrä
 
 ## Förklaring {#legend}
 
-* **Fullständigt**: Funktionen är helt tillgänglig i det beröringskänsliga användargränssnittet
+* **Slutförd**: Funktionen är helt tillgänglig i det beröringskänsliga användargränssnittet
 * **Mest**: Funktionen är oftast tillgänglig i det beröringskänsliga användargränssnittet.
 * **Saknas**: Funktionen finns inte i det beröringsaktiverade användargränssnittet, det klassiska användargränssnittet måste användas för att utföra den här åtgärden.
 * **Ersatt**: Funktionen har ersatts med en ny implementering som fungerar annorlunda.
@@ -52,7 +55,7 @@ Rekommendationer för kunder som uppgraderar till AEM 6.4 finns i [användargrä
 
 ## Funktionsstatus: Webbplatsadministratör {#feature-status-sites-admin}
 
-Det här är en lista över funktioner som den klassiska gränssnittsadministratören ( `/siteadmin`) har och status i det beröringskänsliga användargränssnittet ( `/sites.html`).
+Det här är en lista över funktioner som den klassiska administratören för användargränssnittets webbplats ( `/siteadmin`) har och status i det beröringskänsliga användargränssnittet ( `/sites.html`).
 
 <table> 
  <tbody>
@@ -63,12 +66,12 @@ Det här är en lista över funktioner som den klassiska gränssnittsadministrat
   </tr>
   <tr>
    <td>Navigera i webbplatshierarkin</td> 
-   <td>Fullständig<br /> </td> 
-   <td>AEM 6.4 introducerade en <a href="/help/sites-authoring/basic-handling.md#content-tree">innehållsträdsvy</a>.</td> 
+   <td>Slutförd<br /> </td> 
+   <td>AEM 6.4 införde <a href="/help/sites-authoring/basic-handling.md#content-tree">vyn för innehållsträd</a>.</td> 
   </tr>
   <tr>
    <td>Starta arbetsflöde</td> 
-   <td>Fullständig<br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -88,7 +91,7 @@ Det här är en lista över funktioner som den klassiska gränssnittsadministrat
   </tr>
   <tr>
    <td>Skapa ny livecopy <br /> </td> 
-   <td>Fullständig<br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -103,7 +106,7 @@ Det här är en lista över funktioner som den klassiska gränssnittsadministrat
   </tr>
   <tr>
    <td>Sökning</td> 
-   <td>Fullständig<br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -148,7 +151,7 @@ Det här är en lista över funktioner som den klassiska gränssnittsadministrat
   </tr>
   <tr>
    <td>Avpublicera senare</td> 
-   <td>Fullständig<br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -178,17 +181,17 @@ Det här är en lista över funktioner som den klassiska gränssnittsadministrat
   </tr>
   <tr>
    <td>Återställ version</td> 
-   <td>Fullständig<br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>Återställ träd och återställa borttagna sidor</td> 
+   <td>Återställ träd och återställ borttagna sidor</td> 
    <td>Saknas</td> 
    <td>Använd klassiskt gränssnitt.</td> 
   </tr>
   <tr>
    <td>Visa skillnad mellan gammal och aktuell version<br /> </td> 
-   <td>Fullständig<br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -219,9 +222,9 @@ Det här är en lista över funktioner som den klassiska gränssnittsadministrat
  </tbody>
 </table>
 
-## Funktionsstatus: Sidredigeraren {#feature-status-page-editor}
+## Funktionsstatus: Page Editor {#feature-status-page-editor}
 
-Det här är en lista över funktioner som den klassiska sidredigeraren i användargränssnittet ( `/cf#`) har och status för den beröringsaktiverade ( `/editor.html`).
+Det här är en lista över funktioner i den klassiska sidredigeraren i användargränssnittet ( `/cf#`) har och status i beröringsaktiverad ( `/editor.html`).
 
 <table> 
  <tbody>
@@ -237,11 +240,11 @@ Det här är en lista över funktioner som den klassiska sidredigeraren i använ
   </tr>
   <tr>
    <td>Redigera mobilwebbsidor<br /> </td> 
-   <td>Fullständig<br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>Redigera innehåll som importerats via designimporteraren<br /> </td> 
+   <td>Redigera innehåll som importerats via Design Importer<br /> </td> 
    <td>Slutförd</td> 
    <td> </td> 
   </tr>
@@ -252,17 +255,17 @@ Det här är en lista över funktioner som den klassiska sidredigeraren i använ
   </tr>
   <tr>
    <td>Redigera mobilappar</td> 
-   <td>Fullständig<br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
    <td>Redigera Forms</td> 
-   <td>Fullständig<br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
    <td>Redigera erbjudanden</td> 
-   <td>Fullständig<br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -307,7 +310,7 @@ Det här är en lista över funktioner som den klassiska sidredigeraren i använ
   </tr>
   <tr>
    <td>Rullande sida</td> 
-   <td>Fullständig<br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -326,8 +329,8 @@ Det här är en lista över funktioner som den klassiska sidredigeraren i använ
    <td> </td> 
   </tr>
   <tr>
-   <td>Publicera sidan <br /> </td> 
-   <td>Fullständig<br /> </td> 
+   <td>Publicera sida <br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -353,12 +356,12 @@ Det här är en lista över funktioner som den klassiska sidredigeraren i använ
   <tr>
    <td>Visa referenser</td> 
    <td>Borttagen</td> 
-   <td>Använd Webbplatsadministratör för att <a href="/help/sites-authoring/author-environment-tools.md#references">se den detaljerade referenslistan</a>.<br /> </td> 
+   <td>Använd Webbplatsadministratör för att <a href="/help/sites-authoring/author-environment-tools.md#references">se detaljerad referenslista</a>.<br /> </td> 
   </tr>
   <tr>
    <td>Granskningslogg</td> 
    <td>Borttagen</td> 
-   <td>Använd Webbplatsadministratör och <a href="/help/sites-authoring/author-environment-tools.md#events-timeline">öppna aktivitetsfält</a>.<br /> </td> 
+   <td>Använd Webbplatsadministratör och <a href="/help/sites-authoring/author-environment-tools.md#events-timeline">öppen aktivitetsaxel</a>.<br /> </td> 
   </tr>
   <tr>
    <td>Skapa version</td> 
@@ -381,7 +384,7 @@ Det här är en lista över funktioner som den klassiska sidredigeraren i använ
    <td>Använd Webbplatsadministratör för att <a href="/help/sites-administering/tc-manage.md">lägga till sida i översättningsprojekt</a>.<br /> </td> 
   </tr>
   <tr>
-   <td>Timewarp (välj datum/tid och bläddra på webbplatsen som den såg ut)<br /> </td> 
+   <td>Timewarp (välj datum/tid och bläddra på webbplatsen efter utseendet)<br /> </td> 
    <td>Slutförd</td> 
    <td> </td> 
   </tr>
@@ -391,18 +394,18 @@ Det här är en lista över funktioner som den klassiska sidredigeraren i använ
    <td> </td> 
   </tr>
   <tr>
-   <td>Klientkontextgränssnitt<br /> </td> 
+   <td>Användargränssnitt för klientkontext<br /> </td> 
    <td>Ersatt</td> 
-   <td>Använd gränssnittet <a href="/help/sites-authoring/ch-previewing.md">ContextHub</a> som fortsätter framåt.</td> 
+   <td>Använd <a href="/help/sites-authoring/ch-previewing.md">ContextHub</a> Gränssnittet går framåt.</td> 
   </tr>
   <tr>
-   <td>Innehållssökning för de olika medietyperna<br /> </td> 
+   <td>Content Finder för de olika medietyperna<br /> </td> 
    <td>Slutförd</td> 
    <td> </td> 
   </tr>
   <tr>
    <td>Komponentlista</td> 
-   <td>Fullständig<br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -426,7 +429,7 @@ Det här är en lista över funktioner som den klassiska sidredigeraren i använ
    <td> </td> 
   </tr>
   <tr>
-   <td>Dra och släpp innehåll direkt i en parsys platshållare med automatisk komponentgenerering<br /> </td> 
+   <td>Dra-och-släpp material direkt i en platshållare med automatisk komponentframtagning<br /> </td> 
    <td>Slutförd</td> 
    <td> </td> 
   </tr>
@@ -451,12 +454,12 @@ Det här är en lista över funktioner som det klassiska användargränssnittet 
   </tr>
   <tr>
    <td>Aktivera/inaktivera RTE-plugin-program</td> 
-   <td>Fullständig<br /> </td> 
-   <td>Kan göras med <a href="/help/sites-authoring/templates.md">mallredigeraren</a>.</td> 
+   <td>Slutförd<br /> </td> 
+   <td>Kan göras med <a href="/help/sites-authoring/templates.md">Mallredigerare</a>.</td> 
   </tr>
   <tr>
    <td>Använd RTE för oformaterad text</td> 
-   <td>Fullständig<br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -486,7 +489,7 @@ Det här är en lista över funktioner som det klassiska användargränssnittet 
   </tr>
   <tr>
    <td>RTE-plugin: Textformat (fet, ...)</td> 
-   <td>Fullständig<br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -496,7 +499,7 @@ Det här är en lista över funktioner som det klassiska användargränssnittet 
   </tr>
   <tr>
    <td>RTE-plugin: Justera</td> 
-   <td>Fullständig<br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -506,7 +509,7 @@ Det här är en lista över funktioner som det klassiska användargränssnittet 
   </tr>
   <tr>
    <td>RTE-plugin: Styckeformat</td> 
-   <td>Fullständig<br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -515,9 +518,9 @@ Det här är en lista över funktioner som det klassiska användargränssnittet 
    <td> </td> 
   </tr>
   <tr>
-   <td>RTE-plugin: Källredigerare (Redigera HTML)<br /> </td> 
-   <td>Fullständig<br /> </td> 
-   <td>Endast tillgängligt i dialogruta och helskärm.<br /> </td> 
+   <td>RTE-plugin: Källredigeraren (Redigera HTML)<br /> </td> 
+   <td>Slutförd<br /> </td> 
+   <td>Endast tillgängligt i dialogruta och i helskärmsläge.<br /> </td> 
   </tr>
   <tr>
    <td>RTE-plugin: Stavningskontroll</td> 
@@ -542,7 +545,7 @@ Det här är en lista över funktioner som det klassiska användargränssnittet 
   <tr>
    <td>Tabellredigerare</td> 
    <td>Slutförd</td> 
-   <td>Kan användas på plats, i dialogruta och i helskärmsläge.<br /> </td> 
+   <td>Kan användas på plats, i dialogrutor och i helskärmsläge.<br /> </td> 
   </tr>
   <tr>
    <td>Dra och släpp bild i tabellcell<br /> </td> 
@@ -550,14 +553,14 @@ Det här är en lista över funktioner som det klassiska användargränssnittet 
    <td>Användbart online</td> 
   </tr>
   <tr>
-   <td>Bildredigerare<br /> </td> 
+   <td>Bildredigeraren<br /> </td> 
    <td>Slutförd</td> 
-   <td>Kan användas på plats, i dialogruta och i helskärmsläge.<br /> </td> 
+   <td>Kan användas på plats, i dialogrutor och i helskärmsläge.<br /> </td> 
   </tr>
   <tr>
    <td>Aktivera/inaktivera IPE-plugin-program</td> 
    <td>Slutförd</td> 
-   <td>Det finns nu ett användargränssnitt i <a href="/help/sites-authoring/templates.md">mallredigeraren</a>.</td> 
+   <td>Det finns nu ett användargränssnitt i <a href="/help/sites-authoring/templates.md">Mallredigerare</a>.</td> 
   </tr>
   <tr>
    <td>IPE-plugin: Beskär</td> 
@@ -566,12 +569,12 @@ Det här är en lista över funktioner som det klassiska användargränssnittet 
   </tr>
   <tr>
    <td>IPE-plugin: Vänd</td> 
-   <td>Fullständig<br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
    <td>IPE-plugin: Ångra/Gör om</td> 
-   <td>Fullständig<br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
@@ -586,13 +589,13 @@ Det här är en lista över funktioner som det klassiska användargränssnittet 
   </tr>
   <tr>
    <td>IPE-plugin: Zooma</td> 
-   <td>Fullständig<br /> </td> 
+   <td>Slutförd<br /> </td> 
    <td> </td> 
   </tr>
  </tbody>
 </table>
 
-## Funktionsstatus: Verktyg {#feature-status-tools}
+## Funktionsstatus: verktyg {#feature-status-tools}
 
 Det här är en lista över olika verktyg som det klassiska användargränssnittet har och status i det beröringsaktiverade användargränssnittet.
 
@@ -606,7 +609,7 @@ Det här är en lista över olika verktyg som det klassiska användargränssnitt
   <tr>
    <td>Aktivitetshantering</td> 
    <td>Ersatt</td> 
-   <td>6.0 introducerade <a href="/help/sites-authoring/projects.md">Projekt och uppgifter</a>.<br /> </td> 
+   <td>6.0 introducerades <a href="/help/sites-authoring/projects.md">Projekt och uppgifter</a>.<br /> </td> 
   </tr>
   <tr>
    <td>Inkorgen för arbetsflöde<br /> </td> 
@@ -639,9 +642,9 @@ Det här är en lista över olika verktyg som det klassiska användargränssnitt
    <td>Använd klassiskt gränssnitt.</td> 
   </tr>
   <tr>
-   <td>Användare, grupper och behörigheter, användargränssnitt<br /> </td> 
+   <td>Användargränssnitt för användare, grupper och behörigheter<br /> </td> 
    <td>Mest komplett<br /> </td> 
-   <td>Använd Classic UI för redigering av avancerade behörigheter.<br /> </td> 
+   <td>Använd Classic UI om du vill ha mer behörighet.<br /> </td> 
   </tr>
   <tr>
    <td>Rensa versioner (<code>/etc/versioning/purge.html</code>)</td> 
@@ -654,10 +657,9 @@ Det här är en lista över olika verktyg som det klassiska användargränssnitt
    <td>Använd klassiskt gränssnitt.<br /> </td> 
   </tr>
   <tr>
-   <td>Massredigerare (<code>/etc/importers/bulkeditor.html</code>)</td> 
+   <td>Massredigeraren (<code>/etc/importers/bulkeditor.html</code>)</td> 
    <td>Saknas<br /> </td> 
    <td>Använd klassiskt gränssnitt.</td> 
   </tr>
  </tbody>
 </table>
-

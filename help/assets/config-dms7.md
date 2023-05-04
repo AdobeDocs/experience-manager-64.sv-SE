@@ -8,14 +8,18 @@ content-type: reference
 exl-id: b0f0c6e4-77c8-40db-a9f4-699d1a633571
 feature: Configuration,Scene7 Mode
 role: Admin,User,Developer
-source-git-commit: a045c70f8cbfa03295c4fcbfbb2df1831c3f7292
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '5201'
+source-wordcount: '5237'
 ht-degree: 2%
 
 ---
 
 # Konfigurera Dynamic Media - Scene7-läge {#configuring-dynamic-media-scene-mode}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Om du använder Adobe Experience Manager för olika miljöer, som utveckling, testning och liveproduktion, måste du konfigurera Dynamic Media-Cloud Services för varje miljö.
 
@@ -105,7 +109,7 @@ Se [Installerar funktionspaket 18912 för migrering av gruppresurser](bulk-inges
    >
    >När en mediefil har aktiverats publiceras uppdateringar direkt till S7 Delivery.
 
-   ![dynamicmediaconfiguration2uppdaterad](assets/dynamicmediaconfiguration2updated.png)
+   ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
 1. Tryck på **[!UICONTROL Save]**.
 1. Om du vill förhandsgranska Dynamic Media-innehåll på ett säkert sätt innan det publiceras måste du&quot;tillåtslista&quot; Experience Manager Author-instansen för att ansluta till Dynamic Media:

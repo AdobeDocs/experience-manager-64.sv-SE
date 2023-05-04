@@ -1,37 +1,40 @@
 ---
 title: Analyserar sidprestanda
-seo-title: Analyserar sidprestanda
+seo-title: Analyzing Page Performance
 description: Använd sidan Content Insight för att analysera prestandan för sidan som du redigerar
-seo-description: Använd sidan Content Insight för att analysera prestandan för sidan som du redigerar
+seo-description: Use the Content Insight page to analyze the performance of the page that you are authoring
 uuid: 6b8a489d-f262-495d-adff-125c9a2c49b9
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: ead74e39-3b07-488e-aeb1-fcb4aa6ff200
-translation-type: tm+mt
-source-git-commit: 3addef2141ebb831f8677d011d68faf88e648dc2
+exl-id: dc24edaf-ca1d-4a6b-a2dc-86677267e18d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
 
-
 # Analyserar sidprestanda{#analyzing-page-performance}
 
-Öppna sidan [Content Insight](/help/sites-authoring/content-insights.md) för att analysera prestandan för sidan som du redigerar. Konfigurera rapporteringsperioden så att analysen fokuseras.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-## Öppnar Analytics och Recommendations för en sida {#opening-analytics-and-recommendations-for-a-page}
+Öppna [Content Insight](/help/sites-authoring/content-insights.md) för att analysera hur sidan du redigerar fungerar. Konfigurera rapporteringsperioden så att analysen fokuseras.
+
+## Öppna Analytics och Recommendations för en sida {#opening-analytics-and-recommendations-for-a-page}
 
 Använd följande procedur för att visa Analytics och Recommendations för en sida:
 
 1. Navigera till sidan som du vill analysera.
-1. Klicka eller tryck på **Analytics (Analyser) och Recommendations** i verktygsfältet.
+1. Klicka eller tryck i verktygsfältet **Analyser och Recommendations**.
 
    >[!NOTE]
    >
-   >Analyser och Recommendations för en sida visas bara om du har konfigurerat AEM till [integrering med Adobe Analytics](/help/sites-administering/adobeanalytics-connect.md).
+   >Analyser och Recommendations för en sida visas bara om du har konfigurerat AEM till [integrera med Adobe Analytics](/help/sites-administering/adobeanalytics-connect.md).
 
    ![screen_shot_2017-11-29at135651](assets/screen_shot_2017-11-29at135651.png)
 
@@ -62,7 +65,7 @@ Så här ändrar du rapporteringsperioden för en Content Insight-sida:
 
 1. Om du vill ändra slutdatumet för rapportperioden drar du cirkeln som visas till höger om det skuggade området till önskat slutdatum.
 
-### Ändra granulariteten för rapporteringsperioden {#changing-the-granularity-of-the-reporting-period}
+### Ändra rapportperiodens kornighet {#changing-the-granularity-of-the-reporting-period}
 
 Ändra den tid som varje datapunkt sträcker sig över i en rapport. Om du t.ex. markerar granulariteten för vecka, representerar varje datapunkt i rapporten Vyer antalet vyer under en vecka.
 

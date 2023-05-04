@@ -1,13 +1,13 @@
 ---
 title: Använd Media Library för grundläggande hantering av digitala resurser
-description: '"[!DNL Experience Manager Assets] och Media Library för filhantering."'
+description: "[!DNL Experience Manager Assets] och Media Library för filhantering."
 contentOwner: AG
 feature: Asset Management
 role: Architect,Leader
 exl-id: f0afdae4-5777-464c-9203-e9d19c6d62f6
-source-git-commit: d9cfb5376210234b3b05877509c273c52d9cecf3
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '570'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,10 @@ Define what is not included
 -->
 
 # Använd Media Library för grundläggande resurshantering {#manage-assets-using-media-library}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 [!DNL Adobe Experience Manager] -plattformen har olika funktioner för att hantera resurser. Med Media Library kan användarna överföra ett litet antal resurser till databasen, söka efter och använda dem på webbsidorna och utföra enkla resurshanteringsåtgärder på resurserna.
 
@@ -70,7 +74,7 @@ Om du vill använda Media Library-funktionen kan du använda standardfunktionen 
 * Anteckna resurser.
 * Lägg till resurser i [!DNL Sites] sidor via Content Finder.
 * Använd [!DNL Content Fragments].
-* Använd HTTP REST- och GraphQL-API:er för [!DNL Content Fragments] och refererade medieresurser, under Sites-licens.
+* Använd HTTP REST och GraphQL API:er för [!DNL Content Fragments] och refererade medieresurser, under Sites-licens.
 * Integrering med Marketing Cloud.
 * Anpassa och utöka gränssnittet för resurshantering.
 * Gå till Query Builder (API) för att utöka sökfunktionen.

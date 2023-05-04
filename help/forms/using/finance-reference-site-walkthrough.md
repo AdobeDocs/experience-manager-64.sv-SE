@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: introduction
 discoiquuid: 0c1b6ad7-9d25-41dc-b1fe-a4cb9366c259
 exl-id: 17e8c644-ee17-496c-a781-a295a4796cb9
-source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '9120'
+source-wordcount: '9156'
 ht-degree: 0%
 
 ---
 
 # Genomgång av referenswebbplatser för ekonomi {#we-finance-reference-site-walkthrough}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Krav {#pre-requisites}
 
@@ -795,7 +799,7 @@ Följande bild visar arbetsflödet för genomgången av förmögenhetsförvaltni
 
 Sarah Rose planerar att investera i en gemensam fond. Hon är en befintlig We.Finance-kund och besöker därför Web.Finance-portalen för att utforska tillgängliga gemensamma medel. Hon går till avdelningen för förmögenhetsförvaltning och öppnar sidan&quot;We.Finance Blue Chip Growth Fund&quot;. Sidan innehåller länkar till prospekt som innehåller detaljer om aktuella och historiska priser, månadsvisa resultat, sektorsvis diversifiering, utgifter, avgifter, skatt och mer information om fonderna.
 
-![bild1](assets/slide1.png)
+![slide1](assets/slide1.png)
 
 #### Så här fungerar det {#how-it-works-17}
 

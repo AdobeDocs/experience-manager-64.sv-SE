@@ -10,14 +10,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f5ab3f61-aa5a-49ae-a976-6ab7f0d11ea6
 exl-id: 8249fd48-38af-4bf7-8dcc-2f63db6750b6
-source-git-commit: beb6e3ccc5cbef044f8b91d327c0361c881ccd72
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 2%
+source-wordcount: '414'
+ht-degree: 0%
 
 ---
 
 # Kortkommandon för konsoler{#keyboard-shortcuts-for-consoles}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Olika kortkommandon finns i hela AEM. Vissa gäller användning av konsoler, andra för [sidredigering](/help/sites-authoring/page-authoring-keyboard-shortcuts.md).
 

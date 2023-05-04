@@ -1,23 +1,26 @@
 ---
 title: Anpassade rapporter i processrapportering
-seo-title: Anpassade rapporter i processrapportering
+seo-title: Custom Reports in Process Reporting
 description: Du kan skapa anpassade rapporter och lägga till de här rapporterna i användargränssnittet för JEE-processrapportering.
-seo-description: Du kan skapa anpassade rapporter och lägga till de här rapporterna i användargränssnittet för JEE-processrapportering.
+seo-description: You can create custom reports and add these reports to the AEM Forms on JEE Process Reporting UI.
 uuid: 8974ec2d-ac54-4b44-9758-b1cf44b732fa
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: process-reporting
 discoiquuid: c668bd53-f2d8-4f8c-83f2-be0afd65392a
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: 010d019b-a6ec-4a69-96c1-41b82a2a1839
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1055'
 ht-degree: 0%
 
 ---
 
-
 # Anpassade rapporter i processrapportering {#custom-reports-in-process-reporting}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Du kan använda REST-gränssnittet i QueryBuilder eller skapa en OSGi-tjänst med hjälp av QueryBuilder API för att skapa en anpassad rapport.
 
@@ -25,14 +28,14 @@ Du kan använda REST-gränssnittet i QueryBuilder eller skapa en OSGi-tjänst me
 
 Utför följande mallprocedur innan du lägger till en anpassad rapport:
 
-1. Data som används i anpassade rapporter måste vara tillgängliga i processrapportering. Om du vill vara säker på att data är tillgängliga schemalägger du ett cron-jobb eller använder alternativet **[Synkronisera](https://helpx.adobe.com/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)** i gränssnittet för processrapportering.
+1. Data som används i anpassade rapporter måste vara tillgängliga i processrapportering. För att säkerställa att data är tillgängliga schemalägger du ett cron-jobb eller användning **[Synkronisera](https://helpx.adobe.com/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)** i gränssnittet för processrapportering.
 1. URL-begäran (som kapslar in den önskade frågan) måste returnera ett lämpligt frågeresultatobjekt. Om du vill skapa en fråga kan du använda REST-gränssnittet i [QueryBuilder](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html) för att skapa en OSGi-tjänst med hjälp av QueryBuilder API. Du kan skapa dynamiska eller statiska frågor.
 
 1. Skapa ett anpassat användargränssnitt för att visa resultaten. Du kan skapa ett fristående användargränssnitt eller integrera resultatet med befintliga processrapporteringsgränssnitt.
 
 ## Använda REST-gränssnittet i QueryBuilder {#using-the-rest-interface-of-the-querybuilder}
 
-CRX QueryBuilder REST-gränssnittet exponerar funktionerna i Asset Share Query Builder via ett Java API och ett REST API. Läs om hur du använder [CRX QueryBuilder REST-gränssnittet](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html) innan du utför följande steg:
+CRX QueryBuilder REST-gränssnittet exponerar funktionerna i Asset Share Query Builder via ett Java API och ett REST API. Lär dig använda [CRX QueryBuilder REST-gränssnitt](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)innan du utför följande steg:
 
 1. Bläddra till URL:en `https://[server]:[port]/lc/bin/querybuilder.json`
 
@@ -50,7 +53,7 @@ CRX QueryBuilder REST-gränssnittet exponerar funktionerna i Asset Share Query B
 
 ## Skapa en tjänst med hjälp av Query Builder API  {#creating-a-service-using-query-builder-api-nbsp}
 
-Förutsättningen för att skapa en tjänst med hjälp av Query Builder API är [att skapa och distribuera CQ OSGI bundle](https://docs.adobe.com/docs/v5_2/html-resources/cq5_guide_developer/cq5_guide_developer.html) och [med hjälp av Query Builder API](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html).
+Förutsättningen för att skapa en tjänst med hjälp av Query Builder API är [skapa och distribuera CQ OSGI-paket](https://docs.adobe.com/docs/v5_2/html-resources/cq5_guide_developer/cq5_guide_developer.html) och [med Query Builder API](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html).
 
 1. Skapa en OSGi-tjänst med lämpliga anteckningar. Så här kommer du åt QueryBuilder:
 
@@ -66,7 +69,7 @@ Förutsättningen för att skapa en tjänst med hjälp av Query Builder API är 
     predicateGroup.setAllRequired(true);
    ```
 
-1. Lägg till predikat i den nyligen skapade prediateGroup. Ett fåtal användbara predikatkonstruktioner är [JcrBoolPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrBoolPropertyPredicateEvaluator.html), [JcrPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrPropertyPredicateEvaluator.html), [RangePropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RangePropertyPredicateEvaluator.html), [DateRangePredicateEvaluator a7/> och [TypePredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/TypePredicateEvaluator.html).](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RelativeDateRangePredicateEvaluator.html)
+1. Lägg till predikat i den nyligen skapade prediateGroup. Några praktiska predikatkonstruktioner är [JcrBoolPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrBoolPropertyPredicateEvaluator.html), [JcrPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/JcrPropertyPredicateEvaluator.html), [RangePropertyPredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RangePropertyPredicateEvaluator.html), [DateRangePredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/RelativeDateRangePredicateEvaluator.html)och [TypePredicateEvaluator](https://docs.adobe.com/docs/en/cq/5-3/javadoc/com/day/cq/search/eval/TypePredicateEvaluator.html).
 
    För statiska rapporter kan predikaten kodas, medan predikaten hämtas från begäran för dynamiska rapporter.
 
@@ -137,13 +140,13 @@ Förutsättningen för att skapa en tjänst med hjälp av Query Builder API är 
                        out.write(row.toString().getBytes());
    ```
 
-1. Använd `org.apache.felix maven-bundle-plugin` för att skapa ett OSGi-paket för serverleten.
+1. Använd `org.apache.felix maven-bundle-plugin` för att skapa ett OSGi-paket för servleten.
 
 1. Distribuera paketet på CRX-servern.
 
 ### Exempel på tjänst {#service-example}
 
-I följande tjänstexempel räknas instanser av en process som är i läget **KÖRNING** och **COMPLETE** vid slutet av varje månad, kvartal och år.
+I följande tjänstexempel räknas instanser av en process som finns i **KÖRS** och **SLUTFÖRD** vid slutet av varje månad, kvartal och år.
 
 ```java
 package custom.reporting.service;
@@ -341,7 +344,7 @@ public class PeriodicProcessVolume {
 }
 ```
 
-Exempelfilen `pom.xml`som ska skapas ovanför tjänsten är:
+Provet `pom.xml`filen som ska skapas ovanför tjänsten är:
 
 ```java
 <project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
@@ -425,10 +428,10 @@ Exempelfilen `pom.xml`som ska skapas ovanför tjänsten är:
 
 ## Skapa ett separat gränssnitt  {#creating-a-separate-ui-nbsp}
 
-Förutsättningarna för att skapa ett separat användargränssnitt för att visa resultat är [Sling Basics](https://docs.adobe.com/docs/en/cq/5-6-1/developing/the_basics.html), [Skapa en CRX-nod](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) och ger rätt [åtkomstbehörighet](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control).
+Förutsättningarna för att skapa ett separat användargränssnitt för att visa resultat är [Grundläggande om försäljning](https://docs.adobe.com/docs/en/cq/5-6-1/developing/the_basics.html), [Skapa en CRX-nod](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) och tillhandahålla lämpliga [behörighet](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control).
 
-1. Skapa en CRX-nod på `/apps`-noden och ge lämplig åtkomstbehörighet. (PERM_PROCESS_REPORTING_USER)
-1. Definiera renderaren vid noden `/content`.
+1. Skapa en CRX-nod på `/apps` nod och tilldela behörigheter. (PERM_PROCESS_REPORTING_USER)
+1. Definiera renderaren på `/content` nod.
 1. Lägg till JSP- eller HTML-filer i noden som skapades i steg 1. Du kan också lägga till CSS-filer.
 
    ![En exempelnod med JSP- och CSS-filer](assets/nodewithjspandcss.png)
@@ -633,18 +636,18 @@ response.setCharacterEncoding("utf-8");
 
 ## Integrera rapportgränssnitt i befintligt processrapporteringsgränssnitt  {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
 
-Förutsättningarna för att skapa ett separat användargränssnitt för att visa resultat är [Sling Basics](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html), [Skapa en CRX-nod](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) och ger rätt [åtkomstbehörighet](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control).
+Förutsättningarna för att skapa ett separat användargränssnitt för att visa resultat är [Grundläggande om försäljning](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html), [Skapa en CRX-nod](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node) och tillhandahålla lämpliga [behörighet](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control).
 
-1. Skapa ett separat användargränssnitt enligt beskrivningen i [Skapa ett separat användargränssnitt](#creating-a-separate-ui-nbsp)-avsnitt.
-1. Skapa en underordnad `nt:unstructured`-nod vid noden `/content/process-reporting-runtime/custom-reports` för varje anslutningsbar rapport.
+1. Skapa ett separat användargränssnitt enligt beskrivningen i [Skapa ett separat gränssnitt](#creating-a-separate-ui-nbsp) -avsnitt.
+1. Skapa ett underordnat objekt `nt:unstructured` noden vid `/content/process-reporting-runtime/custom-reports` nod för varje anslutningsbar rapport.
 
-   * **id** - Anger rapportens unika ID-nummer.
+   * **id**- Anger rapportens unika ID-nummer.
    * **name**- Anger rapportens namn. Namnet visas i användargränssnittet.
-   * **link** - Anger relativ länk till renderaren för det separata användargränssnittet. Länken skapas i steg 1.
-   * **description**- Anger rapportens enradsbeskrivning. Du kan lämna beskrivningsfältet tomt.
-   * **icon** - Anger bilden som ska representera rapporten i bilder. Du kan lämna ikonfältet tomt.
+   * **link**- Anger relativ länk till renderaren för det separata användargränssnittet. Länken skapas i steg 1.
+   * **description**- Anger rapportens radbeskrivning. Du kan lämna beskrivningsfältet tomt.
+   * **icon**- Anger bilden som ska representera rapporten i pictorial. Du kan lämna ikonfältet tomt.
 
-   ![Egenskaper för nod  ](assets/nodeproperties.png)
+   ![Egenskaper för nod ](assets/nodeproperties.png)
 
    Egenskaper för nod
 
@@ -660,7 +663,6 @@ Förutsättningarna för att skapa ett separat användargränssnitt för att vis
 
 ## Exempelpaket {#sample-package}
 
-Importera `sample-report-pkg-1.zip`-paketet om du vill integrera anpassade rapporter och användargränssnitt som beskrivs i artikeln med användargränssnittet för processhantering.
+Importera `sample-report-pkg-1.zip` paket för att integrera anpassade rapporter och användargränssnitt som diskuteras i artikeln med processhanteringsgränssnittet.
 
 [Hämta fil](assets/sample-report-pkg-1.zip)
-

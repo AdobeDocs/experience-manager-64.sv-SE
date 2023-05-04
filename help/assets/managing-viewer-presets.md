@@ -13,35 +13,39 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 exl-id: 53e53cb7-1854-44e9-9516-51bcc99378b4
 feature: Viewer Presets
 role: Admin,User
-source-git-commit: 877eade71c2ec57ff534ba2649275111c5326d75
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '4078'
-ht-degree: 9%
+source-wordcount: '4114'
+ht-degree: 8%
 
 ---
 
 # Hantera förinställningar för Dynamic Media-visningsprogram {#managing-viewer-presets}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 En förinställning för Dynamic Media-visningsprogram är en samling inställningar som bestämmer hur användare visar mediefiler på datorskärmar och mobila enheter. Om du är administratör kan du skapa visningsförinställningar. Inställningarna är tillgängliga för en array med visningskonfigurationsalternativ. Du kan till exempel ändra visningsprogrammets visningsstorlek eller zoombeteende.
 
-Instruktioner om hur du skapar och anpassar dina egna HTML5-visningsförinställningar finns i Adobe Dynamic Media *HTML5 Viewer SDK API-dokumentation*. SDK är tillgängligt på IS-publiceringsservern som är inbäddad i SDK:n. Varje biblioteksversion har en egen SDK-dokumentation.
+Instruktioner om hur du skapar och anpassar egna visningsförinställningar för HTML5 finns i Adobe Dynamic Media *API-dokumentation för HTML5 Viewer SDK*. SDK är tillgängligt på IS-publiceringsservern som är inbäddad i SDK:n. Varje biblioteksversion har en egen SDK-dokumentation.
 
 Sökväg: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.\
 Exempel: 3.10 SDK: [https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)
 
-Se även [Referenshandbok för Dynamic Media-visningsprogram för Adobe](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html).
+Se även [Referenshandbok för Adobe Dynamic Media-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html).
 
 I det här avsnittet beskrivs hur du skapar, redigerar och hanterar visningsprogramförinställningar. Du kan använda en visningsförinställning för en resurs när du vill förhandsgranska den. Se [Använda visningsförinställningar](viewer-presets.md).
 
 >[!NOTE]
 >
->Tänk på att redigering av *fördefinierade, körklara visningsförinställningar* inte stöds. Om du försöker redigera en förinställning för visningsprogrammet som inte är klar visas en uppmaning om att spara visningsförinställningen med ett nytt namn.
+>Tänk på att du kan redigera *fördefinierade färdiga förinställningar för visningsprogram* är inte ett scenario som stöds. Om du försöker redigera en visningsförinställning som inte är klar uppmanas du att spara visningsförinställningen med ett nytt namn.
 
 ## Tangentbordstillgänglighet för tittare {#keyboard-accessibility-for-viewers}
 
 Alla färdiga visningsprogram har stöd för tangentbordstillgänglighet.
 
-Se även [Tangentbordstillgänglighet och navigering](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html).
+Se även [Tangentbordstillgänglighet och -navigering](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html).
 
 ## Hantera förinställningar för Dynamic Media-visningsprogram {#managing-presets}
 
@@ -55,14 +59,14 @@ Du kan lägga till, redigera, ta bort, publicera, avpublicera och förhandsgrans
 
 ## Stöd för visningsprogram för responsiva webbsidor {#viewer-support-for-responsive-designed-web-pages}
 
-Olika webbsidor har olika behov. Ibland kanske du vill ha en webbsida som innehåller en länk som öppnar visningsprogrammet för HTML 5 i ett separat webbläsarfönster. I andra fall kan det vara nödvändigt att bädda in HTML5-visningsprogrammet direkt på värdsidan. I det senare fallet kan webbsidan ha en statisk layout. Det kan också vara *responsivt* och visas olika på olika enheter eller för olika webbläsarfönsterstorlekar. För att tillgodose dessa behov har alla fördefinierade, färdiga HTML5-visningsprogram som medföljer Dynamic Media stöd för både statiska webbsidor och responsiva webbsidor.
+Olika webbsidor har olika behov. Ibland kanske du vill ha en webbsida som innehåller en länk som öppnar visningsprogrammet för HTML 5 i ett separat webbläsarfönster. I andra fall kan det vara nödvändigt att bädda in HTML5-visningsprogrammet direkt på värdsidan. I det senare fallet kan webbsidan ha en statisk layout. Eller så är det *responsiv* och visas olika på olika enheter eller för olika webbläsarfönsterstorlekar. För att tillgodose dessa behov har alla fördefinierade, färdiga HTML5-visningsprogram som medföljer Dynamic Media stöd för både statiska webbsidor och responsiva webbsidor.
 
-Mer information om hur du bäddar in responsiva visningsprogram på dina webbsidor finns i [Responsive Image Library](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/responsive-static-image-library/c-about-responsive-static-image-library.html) i *API-hjälpen för Image Serving*.
+Se [Bibliotek för responsiv bild](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/responsive-static-image-library/c-about-responsive-static-image-library.html) i *Hjälp om Image Serving API* om du vill ha mer information om hur du bäddar in responsiva visningsprogram på dina webbsidor.
 
 >[!NOTE]
 >
 >Observera att du måste publicera alla användningsklara visningsprogram innan du använder dem första gången.\
->Se [Förinställningar för publiceringsvisningsprogram.](#publishing-viewer-presets)
+>Se [Förinställningar för visningsprogrammet publiceras.](#publishing-viewer-presets)
 
 ## Systemkompatibilitet för visningsförinställningar  {#viewer-preset-system-compatibility}
 
@@ -97,25 +101,25 @@ Administratörer kan lägga till och anpassa följande typer av multimedia när 
 | **Snurra uppsättning** | Ger flera vyer av en bild så att användare kan vrida objektet för att undersöka olika sidor och vinklar. |
 | **Video** | Spelar upp video med strömning med progressiv eller adaptiv bithastighet. Med adaptiv bithastighetsströmning utförs automatiskt enhets- och bandbreddsidentifiering för att leverera rätt kvalitetsvideo i rätt format. |
 | **Lodrät zoomning** | Med Lodrät zoomning kan du maximera visningen av produktbilder och ge användarna bästa möjliga återgivning av en produkt. Den lodräta placeringen av färgrutor gör följande: <ul><li>Ser till att färgrutorna är över vecket. Med vågräta färgrutor var färgrutorna inte synliga förrän användaren rullade nedåt på sidan, beroende på  skärmstorlek. Genom att placera färgrutorna lodrätt i visningsprogrammet ser du till att de visas oavsett användarens skärmstorlek.</li><li>Maximerar storleken på huvudbilden. Med vågräta färgrutor måste du reservera utrymme på sidan för att se till att de är synliga. Den här placeringen minskade storleken på huvudbilden. Om du har en lodrät färgrutelayout behöver du dock inte tilldela det här utrymmet. Därför kan du maximera huvudbildstorleken.</li></ul> |
-| **Zoomning** | Låter användarna zooma in i området genom att klicka på det. Användare kan klicka på kontroller för att zooma in, zooma ut och återställa bilden till standardstorleken. |
+| **Zooma** | Låter användarna zooma in i området genom att klicka på det. Användare kan klicka på kontroller för att zooma in, zooma ut och återställa bilden till standardstorleken. |
 
 ## Lista med färdiga visningsförinställningar {#list-of-out-of-the-box-viewer-presets}
 
 I följande tabell visas alla fördefinierade, färdiga visningsförinställningar som medföljer Dynamic Media.
 
-Se även [Livedemonstrationer](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html).
+Se även [Live Demos](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html).
 
 Information om vilka webbläsare och operativsystemversioner som stöds för visningsprogram finns i Viewer Release Notes.
 
-Se *Versionsinformation för visningsprogram* i innehållsförteckningen i [referenshandboken för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html).
+Se *Versionsinformation för visningsprogram* i innehållsförteckningen i [Referenshandbok för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html).
 
 >[!NOTE]
 >
 >Alla färdiga visningsförinställningar i Dynamic Media är redan aktiverade (aktiverade), men du måste publicera dem.\
 >Se [Förinställningar för publiceringsvisningsprogram](#publishing-viewer-presets).
 >
->Alla nya visningsprogramförinställningar som du skapar och lägger till måste vara aktiverade både *och* publicerade.\
->Se [Aktivera eller inaktivera visningsförinställningar](#activating-or-deactivating-viewer-presets) och [Publicera visningsförinställningar](#publishing-viewer-presets).
+>Alla nya förinställningar för visningsprogram som du skapar och lägger till måste båda aktiveras *och* publicerad.\
+>Se [Aktivera eller inaktivera visningsförinställningar](#activating-or-deactivating-viewer-presets) och [Förinställningar för publiceringsvisningsprogram](#publishing-viewer-presets).
 
 | Förinställningsrubrik för visningsprogram | Typ | CSS-filnamn |
 |:---|:---|:---|
@@ -132,7 +136,7 @@ Se *Versionsinformation för visningsprogram* i innehållsförteckningen i [refe
 | MixedMedia_dark | Mixed_Media | html5_mixedmediaviewer_dark.css |
 | MixedMedia_light | Mixed_Media | html5_mixedmediaviewer_light.css |
 | Panoramabild | Panorama_bild | html5_panoramicimage.css |
-| PanoramicImageVR | Panorama_bild | html5_panoramicimage.css |
+| PanoramabildVR | Panorama_bild | html5_panoramicimage.css |
 | Shoppable_Banner | Interactive_image | html5_interactiveImage.css |
 | Shoppable_Video_dark | Interactive_Video | html5_interactive_videoviewer_dark.css |
 | Shoppable_Video_light | Interactive_Video | html5_interactive_videovewer_light.css |
@@ -140,8 +144,8 @@ Se *Versionsinformation för visningsprogram* i innehållsförteckningen i [refe
 | SpinSet_light | Spin_mängd | html5_spinviewer_light.css |
 | Video (har stöd för undertexter) | Video | html5_videoviewer.css |
 | Video_social (inkluderar stöd för undertexter och sociala medier) | Video | html5_videoviewersocial.css |
-| Zoom_dark | Zoomning | html5_basiczoomviewer_dark.css |
-| Zoom_light | Zoomning | html5_basiczoomviewer_light.css |
+| Zoom_dark | Zooma | html5_basiczoomviewer_dark.css |
+| Zoom_light | Zooma | html5_basiczoomviewer_light.css |
 | ZoomVertical_dark | Lodrät_zoom | html5_zoomverticalviewer_dark.css |
 | ZoomVertical_light | Lodrät_zoom | html5_zoomverticalviewer_light.css |
 
@@ -149,7 +153,7 @@ Se *Versionsinformation för visningsprogram* i innehållsförteckningen i [refe
 
 Följande tabell visar vilka mobilvisningsgester som stöds på enheter med iOS, Android 2.x och Android 3.x.
 
-| Gesture | Utfällbar zoom | Zoomning | Snurra |
+| Gesture | Utfällbar zoom | Zooma | Snurra |
 |---|---|---|---|
 | **Dra** | Panoreringar | Panoreringar | Panoreringar |
 | **Tryck på** | Visar utfällbart fönster | Visar eller döljer användargränssnittet | Visar eller döljer användargränssnittet |
@@ -163,7 +167,7 @@ Följande tabell visar vilka mobilvisningsgester som stöds på enheter med iOS,
 
 AEM visar en mängd olika förinställningar för visningsprogram när du visar resurser från **[!UICONTROL Detail View > Viewers]**. Du kan öka eller minska antalet visningsprogram som visas.
 
-**Så här ökar du antalet förinställningar för Dynamic Media-visningsprogram som visas**:
+**Öka antalet förinställningar för Dynamic Media-visningsprogram som visas**:
 
 1. Navigera till **[!UICONTROL CRXDE Lite]** ([http://localhost:4502/crx/de](http://localhost:4502/crx/de)).
 1. Navigera till noden med visningsförinställningar på `/libs/dam/gui/coral/content/commons/sidepanels/viewerpresets/viewerpresetslist`
@@ -175,55 +179,55 @@ AEM visar en mängd olika förinställningar för visningsprogram när du visar 
 
    ![chlimage_1-222](assets/chlimage_1-222.png)
 
-1. I egenskapen **[!UICONTROL limit]** ändrar du talet till önskat tal, till exempel `{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
+1. I **[!UICONTROL limit]** -egenskap, ändra talet till önskat tal, till exempel `{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
 1. Tryck på **[!UICONTROL Save All]**.
 
 ## Skapa en ny förinställning för Dynamic Media Viewer {#creating-a-new-viewer-preset}
 
 Genom att skapa visningsförinställningar kan du använda olika inställningar för att visa och interagera med resurser. Du behöver dock inte skapa nya förinställningar för visningsprogrammet. Om du vill kan du använda de förinställda visningsprogrammen som redan finns i AEM Assets.
 
-Om du väljer att skapa en ny visningsförinställning aktiveras visningsprogrammets läge automatiskt (inställt på **On**) på sidan **[!UICONTROL Viewer Presets]** när du har sparat den. Det här läget innebär att det är synligt i **[!UICONTROL Dynamic Media]**-komponenten och **[!UICONTROL Interactive Media]**-komponenten och när du förhandsgranskar en bild eller video.
+Om du väljer att skapa en ny visningsförinställning aktiveras visningsprogrammets läge automatiskt när du har sparat den (inställt på **På**) i **[!UICONTROL Viewer Presets]** sida. Det här läget innebär att det är synligt i **[!UICONTROL Dynamic Media]** -komponenten och **[!UICONTROL Interactive Media]** och när du förhandsgranskar en bild eller video.
 
 Vissa visningsprogramförinställningar har exklusiva inställningar som kan påverka visningsprogrammets användning och allmänna beteende. Beroende på vilken visningsförinställning du skapar kan det vara bra att tänka på dessa speciella saker.
 
-Se [Specialöverväganden när du skapar en förinställning för Interactive Viewer](#special-considerations-for-creating-an-interactive-viewer-preset).
+Se [Specialöverväganden när du skapar en interaktiv visningsförinställning](#special-considerations-for-creating-an-interactive-viewer-preset).
 
-Se [Specialöverväganden när du skapar en visningsförinställning för Carousel Banner](#special-considerations-for-creating-a-carousel-banner-viewer-preset).
+Se [Specialöverväganden när du skapar en Carousel Banner Viewer-förinställning](#special-considerations-for-creating-a-carousel-banner-viewer-preset).
 
-**Så här skapar du en ny förinställning** för Dynamic Media-visningsprogram:
+**Skapa en ny förinställning för Dynamic Media-visningsprogram**:
 
-1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **[!UICONTROL Tools > Assets > Viewer Presets]** i den vänstra listen.
+1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **[!UICONTROL Tools > Assets > Viewer Presets]**.
 
    ![visningsförinställningar](assets/viewerpresets.png)
 
-1. Tryck på **[!UICONTROL Create]** på sidan **[!UICONTROL Viewer Presets]** i verktygsfältet.
-1. I dialogrutan **[!UICONTROL New Viewer Preset]** anger du namnet på den nya förinställningen i fältet **[!UICONTROL Preset Name]**. Välj ett namn noggrant - de kan inte redigeras när du trycker på **[!UICONTROL Create]**.
+1. På **[!UICONTROL Viewer Presets]** i verktygsfältet trycker du på **[!UICONTROL Create]**.
+1. I **[!UICONTROL New Viewer Preset]** i **[!UICONTROL Preset Name]** anger du namnet på den nya förinställningen. Välj ett namn noggrant - de går inte att redigera när du trycker **[!UICONTROL Create]**.
 
-   När du sparar förinställningen senare i de här stegen visas namnet på sidan Förinställningar för visningsprogram under kolumnrubriken **[!UICONTROL Preset Title]**.
+   När du sparar förinställningen senare i de här stegen visas namnet på sidan Förinställningar för visningsprogram under **[!UICONTROL Preset Title]** kolumnrubrik.
 
-1. Välj den typ av visningsförinställning som du vill skapa i listrutan **[!UICONTROL Rich Media Type]** och tryck sedan på **[!UICONTROL Create]** längst upp till höger på sidan.
+1. På **[!UICONTROL Rich Media Type]** väljer du vilken typ av visningsförinställning du vill skapa och trycker sedan på **[!UICONTROL Create]**.
 
    Se [Multimedietyper för visningsförinställningar](#rich-media-types-for-viewer-presets).
 
-1. Tryck på fliken **[!UICONTROL Appearance]** på sidan **Redigera visningsförinställning**.
+1. På **Redigera visningsförinställning** tryck på **[!UICONTROL Appearance]** -fliken.
 1. Gör något av följande:
 
-   * I listrutan **[!UICONTROL Selected Type]** väljer du en komponent vars visuella design du vill anpassa. Du kan också trycka på valfritt visuellt element i visningsprogrammet för att välja det för konfiguration.
+   * I **[!UICONTROL Selected Type]** väljer du en komponent vars visuella design du vill anpassa. Du kan också trycka på valfritt visuellt element i visningsprogrammet för att välja det för konfiguration.
 
       Med den visuella redigeraren kan du se vilken effekt en viss egenskap har på ett format. Du behöver bara ställa in eller justera en egenskap för att omedelbart se vilken effekt den har på visningsprogrammet med exemplet till vänster om redigeraren.
 
-      CSS-formategenskaperna för varje typ av visningsförinställningar beskrivs i hjälpavsnittet Anpassa *&lt;viewer_name>* Viewer i [referenshandboken för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html).
+      CSS-formategenskaperna för varje typ av visningsförinställning beskrivs i&quot;Anpassa *&lt;viewer_name>* Hjälpavsnittet för visningsprogrammet i [Referenshandbok för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html).
 
-      Om du till exempel skapar en visningsförinställning av typen `Mixed_Media` kan du läsa [Anpassa blandad mediavisare](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/mixed-media/customing-mixed-media/c-html5-mixedmedia-viewer-customizingviewer.html) för en lista och en beskrivning av varje egenskap.
+      Om du till exempel skapar en visningsförinställning av typen `Mixed_Media`, se [Anpassa blandad mediavisare](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/mixed-media/customing-mixed-media/c-html5-mixedmedia-viewer-customizingviewer.html) för en lista och en beskrivning av varje egenskap.
 
-   * Om du har definierat formatinställningar i en separat CSS-fil kan du överföra CSS-filen till AEM Assets. Tryck på **[!UICONTROL Import CSS]** under listrutan **[!UICONTROL Selected Type]** (du kan behöva rulla den visuella redigeraren uppåt för att se den) för att hitta den överförda CSS-filen och koppla den till visningsförinställningen.
+   * Om du har definierat formatinställningar i en separat CSS-fil kan du överföra CSS-filen till AEM Assets. Tryck **[!UICONTROL Import CSS]** nedanför **[!UICONTROL Selected Type]** nedrullningsbar meny (du kan behöva rulla den visuella redigeraren uppåt för att se den) för att hitta den överförda CSS-filen och koppla den till visningsförinställningen.
 
-      När du importerar en CSS-fil kontrollerar den visuella redigeraren om rätt visningsmarkörer används i CSS. Om du till exempel skapar ett Zoom-visningsprogram måste alla CSS-regler som du importerar definieras med hjälp av visningsprogrammets klassnamn `.s7mixedmediaviewer` som definieras för ett överordnat visningsprogramelement.
+      När du importerar en CSS-fil kontrollerar den visuella redigeraren om rätt visningsmarkörer används i CSS. Om du till exempel skapar ett zoomvisningsprogram måste alla CSS-regler som du importerar definieras med hjälp av visningsprogrammets klassnamn `.s7mixedmediaviewer` definieras för ett överordnat visningsprogramelement.
 
-      Du kan importera godtycklig, handgjord CSS så länge den definierar CSS-markörerna för ett visst visningsprogram. (CSS-markörer beskrivs i hjälpavsnittet Anpassa *&lt;visningsprogramnamn>* visningsprogram&quot; i [referenshandboken för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html). Om du till exempel vill läsa om CSS-markörer för Zoomvisningsprogrammet läser du [Anpassa zoomvisningsprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html).) Det är dock möjligt att den visuella redigeraren kanske inte förstår vissa CSS-värden. I sådana fall försöker den visuella redigeraren åsidosätta felen så att CSS fortfarande fungerar.
+      Du kan importera godtycklig, handgjord CSS så länge den definierar CSS-markörerna för ett visst visningsprogram. (CSS-markörer beskrivs i&quot;Anpassning&quot; *&lt;viewer name=&quot;&quot;>* Hjälpavsnittet för visningsprogrammet i [Referenshandbok för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html). Om du till exempel vill läsa om CSS-markörer för Zoomvisningsprogrammet läser du [Anpassa Zoom Viewer](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html).) Det är dock möjligt att den visuella redigeraren kanske inte förstår vissa CSS-värden. I sådana fall försöker den visuella redigeraren åsidosätta felen så att CSS fortfarande fungerar.
    >[!NOTE]
    >
-   >Om du föredrar att redigera CSS direkt i dess Raw-format trycker du på **[!UICONTROL Show/Hide CSS]** under listrutan **[!UICONTROL Selected Type]** (du kan behöva rulla den visuella redigeraren uppåt för att se den).
+   >Om du hellre vill redigera CSS direkt i dess Raw-format trycker du på **[!UICONTROL Show/Hide CSS]** nedanför **[!UICONTROL Selected Type]** nedrullningsbar meny (du kan behöva rulla den visuella redigeraren uppåt för att se den).
    >
    >Precis som den visuella redigeraren kan du omedelbart se vilken effekt den har på visningsprogramexemplet när du ändrar en egenskap direkt i CSS. Och samma egenskap uppdateras automatiskt samtidigt i den visuella redigeraren. Därför kan du använda CSS-redigeraren raw eller den visuella redigeraren, eller använda båda för båda.
 
@@ -231,21 +235,21 @@ Se [Specialöverväganden när du skapar en visningsförinställning för Carous
    >
    >För knappbilder väljer du 2x-bilden och överför högupplösta bilder. När du arbetar med interaktiva bilder och köpbara banners kan du även välja bland en mängd färdiga hotspot-knappar.
 
-1. (Valfritt) I närheten av den övre delen av sidan **[!UICONTROL Edit Viewer Preset]** trycker du på **[!UICONTROL Desktop]**, **[!UICONTROL Tablet]** eller **[!UICONTROL Phone]** för att unikt definiera visuella format för olika enheter och skärmtyper.
-1. Tryck på fliken **Beteende** på sidan **[!UICONTROL Edit Viewer Preset]**. Du kan också trycka eller klicka på ett visuellt element i visningsprogrammet för att välja det för konfiguration.
+1. (Valfritt) Långt upp i **[!UICONTROL Edit Viewer Preset]** sida, tryck **[!UICONTROL Desktop]**, **[!UICONTROL Tablet]**, eller **[!UICONTROL Phone]** för att unikt definiera visuella format för olika enhets- och skärmtyper.
+1. På **[!UICONTROL Edit Viewer Preset]** tryck på **Beteende** -fliken. Du kan också trycka eller klicka på ett visuellt element i visningsprogrammet för att välja det för konfiguration.
 1. Välj en komponent vars beteenden du vill ändra i listrutan **[!UICONTROL Selected Type]**.
 
    Många komponenter i den visuella redigeraren har en detaljerad beskrivning. Dessa beskrivningar visas i blå rutor när du expanderar en komponent för att visa dess associerade parametrar.
 
-   Vissa visningsprogramtyper har komponenter som gör att du kan ange bildserverkommandon i ett **IS Command**-textfält. En lista med kommandon som du kan använda finns i [API-referenshandboken för bildservrar](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-is-home.html).
+   Vissa visningsprogramtyper har komponenter som gör att du kan ange bildserverkommandon i en **IS-kommando** textfält. En lista med kommandon som du kan använda finns i [API-referenshandboken för bildservrar](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-is-home.html).
 
    >[!NOTE]
    >
    >**Om du använder en pekenhet, till exempel en telefon eller surfplatta...**
    >
-   >After you type a value in the text field, tap elsewhere in the user interface to submit the change and close the virtual keyboard. Om du trycker på **[!UICONTROL Enter]** utförs ingen åtgärd.
+   >När du har skrivit ett värde i textfältet trycker du någon annanstans i användargränssnittet för att skicka ändringen och stänga det virtuella tangentbordet. Om du trycker **[!UICONTROL Enter]**, utförs ingen åtgärd.
 
-1. Tryck på **[!UICONTROL Save]** i sidans övre högra hörn.
+1. I sidans övre högra hörn trycker du **[!UICONTROL Save]**.
 1. Publicera din nya visningsförinställning. Du måste publicera förinställningen innan du kan använda den på webbplatsen.
 
    Se [Förinställningar för publiceringsvisningsprogram](#publishing-viewer-presets).
@@ -254,19 +258,19 @@ Se [Specialöverväganden när du skapar en visningsförinställning för Carous
 
 **Visningslägen för miniatyrbilder på panelen**
 
-När du skapar eller redigerar en förinställning för Interactive Video Viewer kan du välja vilken **[!UICONTROL Display Mode]**-inställning som ska användas när du väljer `InteractiveSwatches` i listrutan **[!UICONTROL Selected Component]** på fliken **[!UICONTROL Behavior]**. Det visningsläge du väljer påverkar hur och när miniatyrbilder visas när videon spelas upp. Du kan välja antingen ett `segment`visningsläge (standard) eller ett `continuous`visningsläge.
+När du skapar eller redigerar en förinställning för Interactive Video Viewer kan du välja vilken **[!UICONTROL Display Mode]** inställning som ska användas när du väljer `InteractiveSwatches` från **[!UICONTROL Selected Component]** nedrullningsbar meny under **[!UICONTROL Behavior]** -fliken. Det visningsläge du väljer påverkar hur och när miniatyrbilder visas när videon spelas upp. Du kan välja en `segment`visningsläge (standard) eller en `continuous`visningsläge.
 
 | Visningsläge | Beskrivning |
 |---|---|
 | [!UICONTROL Segment] | [!UICONTROL Segment] är standardvisningsläget för förinställningarna Shoppable_Video_light och Shoppable_Video_dark och alla Interactive Video Viewer-förinställningar som du själv skapar. |
 |  | I det här läget, när det finns färre miniatyrbilder tilldelade till ett videosegment än antalet synliga fläckar på visningspanelen, hämtas inte miniatyrbilder från nästa eller föregående undersegment för att fylla tomma fläckar på panelen. Det innebär att det bevarar visningen av färgrutor som har tilldelats ett visst videosegment. |
-| [!UICONTROL Continuous] | Om antalet miniatyrbilder i ett segment är mindre än det antal som visas på panelen i [!UICONTROL Continuous] visas miniatyrbilderna automatiskt i visningsprogrammet i nästa segment, eller i föregående segment, om den sista miniatyrbilden visas. |
+| [!UICONTROL Continuous] | I [!UICONTROL Continuous] om antalet miniatyrbilder i ett segment är mindre än det antal som visas på panelen, visas automatiskt miniatyrbilder från nästa segment, eller från föregående segment, där den sista miniatyrbilden visas. |
 
 **Om automatisk rullning i det interaktiva visningsprogrammet**
 
 Funktionen för automatisk rullning för miniatyrbilder i det interaktiva visningsprogrammet fungerar oberoende av det visningsläge du väljer.
 
-När du skapar eller redigerar en förinställning för ett interaktivt visningsprogram för video kommer du åt **[!UICONTROL Auto Scroll]** från fliken **[!UICONTROL Behavior]**. På fliken Beteende i listrutan **[!UICONTROL Selected Components]** trycker du på **[!UICONTROL InteractiveSwatches]**. Kryssrutan **[!UICONTROL Auto Scroll]** visas under textfältet IS Command.
+När du skapar eller redigerar en förinställning för ett interaktivt visningsprogram får du tillgång till **[!UICONTROL Auto Scroll]** från **[!UICONTROL Behavior]** -fliken. På fliken Beteende i listrutan **[!UICONTROL Selected Components]** trycker du på **[!UICONTROL InteractiveSwatches]**. The **[!UICONTROL Auto Scroll]** visas under textfältet IS Command.
 
 Om du inaktiverar **[!UICONTROL Auto Scroll]** (avmarkerar kryssrutan) i visningsförinställningen visas bara den första miniatyrbilden för hela videolängden på panelen när användaren spelar upp videon. Användaren kan dock bläddra bland miniatyrbilderna manuellt med upp- och nedpilarna om så önskas.
 
@@ -288,7 +292,7 @@ Följande logik används för hur många miniatyrbilder som visas på panelen ba
 
    I exemplet i tabellen ovan används 9 miniatyrbilder/4 kortplatser = 2,25; visningsprogrammets logik omger den med upp till tre undersegment.
 
-* Antal miniatyrbilder = avrunda till nästa miniatyrbild (antal miniatyrbilder/antal undersegment till video).
+* Antal miniatyrbilder = avrunda upp till nästa miniatyrbild (antal miniatyrbilder/antal undersegment till video).
 
    Med hjälp av exemplet i tabellen ovan är det 9 miniatyrbilder/3 undersegment för video = 3 miniatyrbilder.
 
@@ -302,74 +306,74 @@ När du skapar visningsförinställningar för Carousel Banner kan du ändra for
 
 |  | **Beskrivning** | **Åtgärder** |
 |---|---|---|
-| **Ikon för aktiveringspunkt** | Ändra ikonen som används för hotspot-områden | Om du vill ändra hotspot-ikonbilden trycker du på **[!UICONTROL ImageMapEffect]** på fliken **[!UICONTROL Appearance]** i **[!UICONTROL Selected Component]**. Under **[!UICONTROL Icon]** markerar du **[!UICONTROL Background]** och i fältet **[!UICONTROL Image]** navigerar du till den bakgrundsbild du vill ha. |
+| **Ikon för aktiveringspunkt** | Ändra ikonen som används för hotspot-områden | Om du vill ändra hotspot-ikonens bild går du till **[!UICONTROL Appearance]** flik, in **[!UICONTROL Selected Component]**, trycka **[!UICONTROL ImageMapEffect]**. Under **[!UICONTROL Icon]** markerar du **[!UICONTROL Background]** och i fältet **[!UICONTROL Image]** navigerar du till den bakgrundsbild du vill ha. |
 
 ## Aktivera eller inaktivera förinställningar för Dynamic Media-visningsprogram {#activating-or-deactivating-viewer-presets}
 
-Vilka visningsprogramförinställningar som är tillgängliga i användargränssnittet beror på vilka som är aktiva i redigeringsläget. Som standard är en visningsförinställning *På* när du har skapat den. Om du inaktiverar förinställningen visas den inte i redigeringsläge. Om förinställningen publiceras. den kommer alltid att publiceras oavsett om den är på eller av. Du kanske vill inaktivera visningsförinställningarna om listan blir för oskarp eller om du inte vill att en visningsförinställning ska vara tillgänglig för användning.
+Vilka visningsprogramförinställningar som är tillgängliga i användargränssnittet beror på vilka som är aktiva i redigeringsläget. Som standard är en visningsförinställning *På* efter att du skapat den. Om du inaktiverar förinställningen visas den inte i redigeringsläge. Om förinställningen publiceras. den kommer alltid att publiceras oavsett om den är på eller av. Du kanske vill inaktivera visningsförinställningarna om listan blir för oskarp eller om du inte vill att en visningsförinställning ska vara tillgänglig för användning.
 
-**Så här aktiverar eller inaktiverar du förinställningar** för Dynamic Media-visningsprogram:
+**Aktivera eller inaktivera förinställningar för Dynamic Media-visningsprogram**:
 
-1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools > Assets > Viewer Presets]**.
-1. På sidan **[!UICONTROL Viewer Preset]**, under kolumnrubriken **[!UICONTROL State]**, trycker du på växlingsknappen för att aktivera eller inaktivera en visningsförinställning.
+1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **[!UICONTROL Tools > Assets > Viewer Presets]**.
+1. På **[!UICONTROL Viewer Preset]** sida, under **[!UICONTROL State]** om du vill aktivera eller inaktivera en visningsförinställning trycker du på växlingsknappen.
 
    De visningsprogramförinställningar som är aktiverade visas till höger, i en blå ruta. förinställningar för inaktiverat visningsprogram har växlingsknappen till vänster, i en ljusgrå ruta.
 
 ## Publicera förinställningar för Dynamic Media-visningsprogram {#publishing-viewer-presets}
 
-Om du aktiverar (eller aktiverar *På*) är läget för en visningsförinställning det som visas i Dynamic Media-komponenten, i Interactive Media-komponenten och när du visar en resurs.
+Aktivera (eller vända *På*) är läget för en visningsförinställning att den är synlig i Dynamic Media-komponenten, i Interactive Media-komponenten och när du visar en resurs.
 
-Om du vill leverera en resurs med en visningsförinställning måste visningsförinställningen också publiceras. Alla visningsförinställningar måste aktiveras *och* publicerade för att URL-adressen eller inbäddningskoden för en resurs ska kunna hämtas. Du måste aktivera och publicera alla färdiga visningsförinställningar som medföljer Dynamic Media. Anpassade visningsförinställningar som du skapar och lägger till aktiveras automatiskt, men de måste också publiceras.
+Om du vill leverera en resurs med en visningsförinställning måste visningsförinställningen också publiceras. Alla visningsförinställningar måste aktiveras *och* publiceras för att hämta URL eller inbäddningskod för en resurs. Du måste aktivera och publicera alla färdiga visningsförinställningar som medföljer Dynamic Media. Anpassade visningsförinställningar som du skapar och lägger till aktiveras automatiskt, men de måste också publiceras.
 
 Se [Aktivera eller inaktivera visningsförinställningar](#activating-or-deactivating-viewer-presets).
 
 Se även [Förhandsgranska resurser](previewing-assets.md).
 
-**Så här publicerar du förinställningar** för Dynamic Media-visningsprogram:
+**Så här publicerar du förinställningar för Dynamic Media-visningsprogram**:
 
-1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **[!UICONTROL Tools > Assets > Viewer Presets]** i den vänstra listen.
+1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **[!UICONTROL Tools > Assets > Viewer Presets]**.
 1. Välj en eller flera visningsförinställningar som du vill publicera.
-1. Tryck på ikonen **[!UICONTROL Publish]** i verktygsfältet.
+1. Tryck på **[!UICONTROL Publish]** ikon.
 
 ## Sortera förinställningar för Dynamic Media-visningsprogram {#sorting-viewer-presets}
 
-**Så här sorterar du förinställningar** för Dynamic Media-visningsprogram:
+**Så här sorterar du förinställningar för Dynamic Media-visningsprogram**:
 
-1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **Verktyg** (hammarikon) **[!UICONTROL > Assets > Viewer Presets]** i den vänstra listen.
+1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **verktyg** (hammarikon) **[!UICONTROL > Assets > Viewer Presets]**.
 1. Klicka på **[!UICONTROL Preset Title]**, **[!UICONTROL Type]**, **[!UICONTROL Published]** eller **[!UICONTROL State]** för att sortera efter den kolumnrubriken. Du kan till exempel klicka på **[!UICONTROL Type]** för att sortera de olika typerna av visningsförinställningar i alfabetisk eller omvänd alfabetisk ordning.
 
 ## Redigera förinställningar för Dynamic Media-visningsprogram {#editing-viewer-presets}
 
-Tänk på att redigering av *fördefinierade, körklara visningsförinställningar* inte stöds. Om du redigerar en förinställning för ett visningsprogram som inte är installerat uppmanas du att spara den med ett nytt namn.
+Tänk på att du kan redigera *fördefinierade färdiga förinställningar för visningsprogram* är inte ett scenario som stöds. Om du redigerar en förinställning för ett visningsprogram som inte är installerat uppmanas du att spara den med ett nytt namn.
 
-**Så här redigerar du förinställningar** för Dynamic Media-visningsprogram:
+**Så här redigerar du förinställningar för Dynamic Media-visningsprogram**:
 
-1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **[!UICONTROL Tools > Assets > Viewer Presets]** i den vänstra listen.
+1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **[!UICONTROL Tools > Assets > Viewer Presets]**.
 1. Markera en förinställning genom att markera rutan till vänster om visningsförinställningens titel.
-1. Tryck på **[!UICONTROL Edit]** i verktygsfältet.
-1. Gör de ändringar du vill i visningsförinställningen på sidan **[!UICONTROL Edit Viewer Preset]**.
+1. Tryck på i verktygsfältet **[!UICONTROL Edit]**.
+1. På **[!UICONTROL Edit Viewer Preset]** sidan gör de ändringar som du vill ha i visningsförinställningen.
 1. Gör något av följande:
 
-   * Tryck på **[!UICONTROL Save]** för att spara ändringarna och återgå till sidan **[!UICONTROL Viewer Preset]**.
-   * Tryck på **[!UICONTROL Cancel]** för att ångra ändringar du gjort och återgå till sidan **[!UICONTROL Viewer Preset]**.
+   * Tryck **[!UICONTROL Save]** för att spara ändringarna och gå tillbaka till **[!UICONTROL Viewer Preset]** sida.
+   * Tryck **[!UICONTROL Cancel]** för att ångra ändringar du gjort och återgå till **[!UICONTROL Viewer Preset]** sida.
 
 ## Ta bort anpassade förinställningar för Dynamic Media-visningsprogram {#deleting-custom-viewer-presets}
 
 Du kan ta bort visningsförinställningar som du har skapat och lagt till i Dynamic Media.
 
-**Så här tar du bort anpassade förinställningar** för Dynamic Media-visningsprogram:
+**Så här tar du bort anpassade förinställningar för Dynamic Media-visningsprogram**:
 
-1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **[!UICONTROL Tools > Assets > Viewer Presets]** i den vänstra listen.
-1. På sidan **[!UICONTROL Viewer Presets]** markerar du en **[!UICONTROL Preset Title]** och trycker sedan på ikonen **[!UICONTROL Trash]**.
+1. I det övre vänstra hörnet av AEM trycker du på AEM logotyp och sedan på **[!UICONTROL Tools > Assets > Viewer Presets]**.
+1. På **[!UICONTROL Viewer Presets]** sida, kontrollera en **[!UICONTROL Preset Title]** och sedan trycker du på **[!UICONTROL Trash]** ikon.
 1. Tryck på **[!UICONTROL Delete]**.
 
 ## Använda en förinställning för Dynamic Media-visningsprogram på en mediefil {#applying-a-viewer-preset-to-an-asset}
 
 Om du redan har publicerat både resursen och det valda visningsprogrammet visas knapparna **[!UICONTROL URL]** och **[!UICONTROL Embed]** när du har valt en visningsförinställning.
 
-**Så här använder du en förinställning för Dynamic Media-visningsprogram på en resurs**:
+**Använda en förinställning för Dynamic Media-visningsprogram på en resurs**:
 
-1. Öppna resursen och nära sidans övre vänstra hörn, tryck på den nedrullningsbara menyn och välj **[!UICONTROL Viewers]**.
+1. Öppna resursen och i sidans övre vänstra hörn, tryck på den nedrullningsbara menyn och välj **[!UICONTROL Viewers]**.
 
    >[!NOTE]
    >
@@ -377,10 +381,10 @@ Om du redan har publicerat både resursen och det valda visningsprogrammet visas
 
 1. Välj en visningsförinställning i den vänstra rutan för att använda den på resursen.
 
-   Du kan [kopiera URL:en för att dela](linking-urls-to-yourwebapplication.md) med andra användare.
+   Du kan [kopiera URL:en som ska delas](linking-urls-to-yourwebapplication.md) med andra användare.
 
 ## Leverera resurser med Dynamic Media förinställningar för visningsprogram {#delivering-assets-with-viewer-presets}
 
-Mer information om hur du hämtar URL:er för visningsförinställningar finns i [Länka URL:er till ditt webbprogram](linking-urls-to-yourwebapplication.md). Se även [Bädda in Video Viewer på en webbsida](embed-code.md).
+Information om hur du hämtar URL:er för visningsförinställningar finns i [Länka URL:er till webbprogrammet](linking-urls-to-yourwebapplication.md). Se även [Bädda in Video Viewer på en webbsida](embed-code.md).
 
 Om du använder AEM som WCM-fil kan du lägga till resurser med visningsförinställningarna direkt på sidan. Se [Lägga till Dynamic Media-resurser på sidor](adding-dynamic-media-assets-to-pages.md).

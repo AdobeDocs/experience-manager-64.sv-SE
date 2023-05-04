@@ -1,33 +1,36 @@
 ---
 title: Introduktion till gränssnittet för utveckling av interaktiv kommunikation
-seo-title: En introduktion till de olika elementen i användargränssnittet som du kan använda för att skapa interaktiv kommunikation
+seo-title: An introduction to the various user interface elements you can use to author Interactive Communication
 description: En introduktion till de olika elementen i användargränssnittet som du kan använda för att skapa interaktiv kommunikation
-seo-description: En introduktion till de olika elementen i användargränssnittet som du kan använda för att skapa interaktiv kommunikation
+seo-description: An introduction to the various user interface elements you can use to author Interactive Communication
 uuid: 4e301b9a-76a1-4beb-9d67-dbd0a3bdd2e4
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: interactive-communications
 discoiquuid: 565bfb42-6099-49f4-83ba-b1f0c129aab7
 feature: Interactive Communication
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 1537490b-71b3-4ab3-b8d1-d85eac88d857
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1321'
 ht-degree: 0%
 
 ---
 
-
 # Introduktion till gränssnittet för utveckling av interaktiv kommunikation {#introduction-to-interactive-communication-authoring-ui}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 En introduktion till de olika elementen i användargränssnittet som du kan använda för att skapa interaktiv kommunikation
 
-Användargränssnittet för att skapa [interaktiv kommunikation](/help/forms/using/interactive-communications-overview.md) är intuitivt och innehåller följande funktioner för att skapa trycksaker och webbkanaler i interaktiv kommunikation:
+Användargränssnittet för redigering [Interaktiv kommunikation](/help/forms/using/interactive-communications-overview.md) är intuitivt och innehåller följande för att skapa trycksaker och webbkanaler i Interactive Communication:
 
 * WYSIWYG-dokumentredigerare med dra-och-släpp
 * Integrerad databas för resurser - de resurser som överförs till och skapas på servern finns i resursläsaren i redigeringsgränssnittet för interaktiv kommunikation
 
-När du [skapar en ny eller redigerar en befintlig interaktiv kommunikation](/help/forms/using/create-interactive-communication.md) använder du följande element i användargränssnittet:
+När du [skapa en ny eller redigera en befintlig interaktiv kommunikation](/help/forms/using/create-interactive-communication.md)använder du följande element i användargränssnittet:
 
 * [Sidebar](#sidebar)
 * [Verktygsfältet Sida](#page-toolbar)
@@ -37,15 +40,15 @@ När du [skapar en ny eller redigerar en befintlig interaktiv kommunikation](/he
 
 ![gränssnitt för framtagning av interaktiv kommunikation](assets/form-editor.png)
 
-**A.** Sidofält  **B.** Verktygsfältet Sida  **C.** Innehåll
+**S.** Sidebar **B.** Verktygsfältet Sida **C.** Innehållsområde
 
-## Sidofält {#sidebar}
+## Sidebar {#sidebar}
 
 ![Sidebar](assets/sidebar-comps.png)
 
 [Klicka för att förstora](assets/sidebar-comps-1.png)
 
-**A.** Kanalwebbläsare  **B.** Innehållsläsaren  **C.** Properties,  **D.** Resursläsaren  **E.** Components, webbläsare  ****   **** F.¥DatamodellG.¥Datakällor, webbläsare - Överordnad innehåll
+**S.** Kanalwebbläsare **B.** Innehållsläsare **C.** Egenskapswebbläsaren **D.** Resursläsare **E.** Komponentwebbläsare **F.** Webbläsaren Datakällor - datamodell **G.** Webbläsaren Datakällor - Överordnad innehåll
 
 Sidlisten innehåller följande:
 
@@ -61,7 +64,7 @@ Sidlisten innehåller följande:
 
    Gör att du kan redigera egenskaperna för en komponent. Egenskaperna ändras beroende på komponenten. Om du till exempel vill se egenskaper för dokumentbehållaren:
 
-   Markera en komponent, tryck sedan på ![fältnivå](assets/field-level.png) > **Dokumentbehållare** och tryck sedan på ![cmpr](assets/cmppr.png).
+   Markera en komponent och tryck sedan på ![fältnivå](assets/field-level.png) > **Dokumentbehållare** och sedan trycka ![cmppr](assets/cmppr.png).
 
 * **Resursläsaren**
 
@@ -93,12 +96,12 @@ Sidlisten innehåller följande:
 
 De viktigaste punkterna när du arbetar med interaktiva kommunikationskomponenter är följande:
 
-* Varje komponent har tillhörande egenskaper som styr dess utseende och funktion. Om du vill konfigurera egenskaperna för en komponent trycker du på komponenten och trycker på ![cmpr](assets/cmppr.png) för att öppna komponentegenskaperna i egenskapsläsaren.
-* En komponent identifieras med sitt elementnamn. När du trycker på ![cmpr](assets/cmppr.png) kan du ändra komponentens namn genom att ändra elementnamnsfältets värde i egenskapsläsaren. Endast bokstäver, siffror, bindestreck (-) och understreck (_) godkänns i fältet Elementnamn. Andra specialtecken tillåts inte och elementnamnet måste börja med en bokstav.
+* Varje komponent har tillhörande egenskaper som styr dess utseende och funktion. Konfigurera egenskaperna för en komponent genom att trycka på komponenten och trycka på ![cmppr](assets/cmppr.png) om du vill öppna komponentegenskaperna i egenskapsgranskaren.
+* En komponent identifieras med sitt elementnamn. När du trycker ![cmppr](assets/cmppr.png)kan du ändra namnet på komponenten genom att ändra fältvärdet för elementnamn i egenskapsläsaren. Endast bokstäver, siffror, bindestreck (-) och understreck (_) godkänns i fältet Elementnamn. Andra specialtecken tillåts inte och elementnamnet måste börja med en bokstav.
 * Du kan ändra egenskapen Title för en interaktiv kommunikationskomponent infogad i redigeraren utan att öppna egenskapsläsaren så länge titeln visas i den interaktiva kommunikationen. Så här gör du:
 
    1. Tryck för att markera en komponent som har en Title-egenskap och vars Hide title-egenskap är inaktiverad.
-   1. Tryck på ![aem_6_3_edit](assets/aem_6_3_edit.png) för att göra titeln redigerbar.
+   1. Tryck ![aem_6_3_edit](assets/aem_6_3_edit.png) för att göra titeln redigerbar.
    1. Ändra titeln och tryck på Retur-tangenten eller var som helst utanför komponenten för att spara ändringarna. Tryck på Esc för att ignorera ändringarna.
 
 ## Komponentverktygsfältet {#component-toolbar}
@@ -107,7 +110,7 @@ De viktigaste punkterna när du arbetar med interaktiva kommunikationskomponente
 
 När du markerar en komponent visas ett verktygsfält där du kan arbeta med den. Du får alternativ för att klippa ut, klistra in, flytta och ange egenskaper för komponenterna. Dina alternativ är:
 
-S. **Konfigurera**: När du trycker på **Konfigurera** visas komponentegenskaperna i sidofältet.
+S. **Konfigurera**: När du trycker **Konfigurera** visas komponentegenskaperna i sidlisten.
 
 B. **Redigera regler**: När du trycker på Redigera regler visas Regelredigeraren där du kan redigera och skapa regler för den valda komponenten. I Regelredigeraren kan du även markera andra formulärobjekt (komponenter) och redigera/skapa regler för dessa formulärobjekt.
 
@@ -140,7 +143,7 @@ J. **Mer**: Innehåller fler alternativ för att arbeta med den markerade kompon
 Verktygsfältet Sida överst innehåller alternativ som gör att du kan förhandsgranska den interaktiva kommunikationen och ändra dess egenskaper. Du kan förhandsgranska den interaktiva kommunikationen när du redigerar den och göra ändringar i den. I verktygsfältet visas:
 
 * Växla sidopanel ![växlingspanel](assets/toggle-side-panel.png): Här kan du visa eller dölja sidofältet.
-* Sidinformation ![sidinformationsad](assets/pageinformationad.png): Här kan du visa sidegenskaper.
+* Sidinformation ![pageinformationad](assets/pageinformationad.png): Här kan du visa sidegenskaper.
 * Emulator ![linjal](assets/ruler.png): Gör att du kan emulera utseendet i din interaktiva kommunikation för olika visningsstorlekar, som surfplattor och telefoner.
 * Redigera: Här kan du välja andra lägen, till exempel: Redigera, Formatera, Utvecklare och Design.
 
@@ -154,4 +157,3 @@ Verktygsfältet Sida överst innehåller alternativ som gör att du kan förhand
 
 
 * Förhandsgranska: Här kan du förhandsgranska hur den interaktiva kommunikationen ser ut när du publicerar den.
-

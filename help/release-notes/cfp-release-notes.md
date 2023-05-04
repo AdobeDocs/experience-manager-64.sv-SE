@@ -4,14 +4,18 @@ description: Versionsinformation om Adobe Experience Manager 6.4 Cumulative Fix 
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: a63e77a3-da48-4072-bc75-c4c41a2f62a3
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '4596'
+source-wordcount: '4632'
 ht-degree: 0%
 
 ---
 
 # AEM 6.4 Cumulative Fix Pack Release Notes {#aem-cumulative-fix-pack-release-notes}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Versionsinformation {#release-information}
 
@@ -21,7 +25,7 @@ ht-degree: 0%
 |---|---|
 | Version | 6.4.8.4 |
 | Typ | Kumulativt korrigeringspaket |
-| Date | 25 februari 2021 |
+| Datum | 25 februari 2021 |
 | Förutsättning | [AEM 6.4 Service Pack 8 (6.4.8.0)](sp-release-notes.md) |
 | Hämta URL | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/cumulativefixpack/aem-6.4.8-cfp-4.0.zip) |
 
@@ -109,7 +113,7 @@ Mer information om bestruket finpapper och andra typer av releaser finns i [Defi
 
 Adobe Experience Manager 6.4.8.3 innehåller korrigeringar för följande problem.
 
-#### Webbplatser {#sites-6483}
+#### Sites {#sites-6483}
 
 * När du uppdaterar texten för en variant av ett innehållsfragment uppdateras innehållet i det överordnad innehållsfragmentet i stället för variationen (NPR-35080).
 
@@ -203,7 +207,7 @@ Mer information om bestruket finpapper och andra typer av releaser finns i [Defi
 
 Adobe Experience Manager 6.4.8.2 innehåller korrigeringar för följande problem.
 
-#### Webbplatser {#sites-6482}
+#### Sites {#sites-6482}
 
 * Om `RolloutConfigManagerFactoryImpl` kan inte läsa in en rollout-konfiguration, den försöker inte läsa in de saknade konfigurationerna. Den returnerar de cachelagrade konfigurationerna (NPR-34091).
 * I huvudkomponenten för Text, efter att du har använt redigeringsalternativet för HTML, klassen från `em` -taggen tas bort (NPR-34080).
@@ -349,7 +353,7 @@ Mer information om bestruket finpapper och andra typer av releaser finns i [Defi
 
 Adobe Experience Manager 6.4.8.1 innehåller korrigeringar av följande problem.
 
-#### Webbplatser {#sites-6481}
+#### Sites {#sites-6481}
 
 * Anonyma användare har tillgång till CRX DE Lite-funktioner (NPR-33522).
 * När namnet på en lokal komponent i en LiveCopy är identiskt med namnet på en komponent i utkastet och komponenten rullas ut från utkast, läggs termen _msm_move inte till i namnet på den lokala komponenten (NPR-33207).
@@ -367,7 +371,7 @@ Adobe Experience Manager 6.4.8.1 innehåller korrigeringar av följande problem.
 * Salesforce-integrering är sårbar för SSRF (NPR-32671).
 * Speglad XSS i PreferencesServlet (NPR-33439).
 
-#### Resurser {#assets-6481}
+#### Assets {#assets-6481}
 
 * Antalet resurser ändras inte enligt ändringen i urvalet i listvyn (NPR-33285).
 
@@ -562,7 +566,7 @@ I det här avsnittet visas funktioner som har tagits bort eller tagits bort frå
 
 | Yta | Funktion | Ersättning | Version |
 |---|---|---|---|
-| Resurser | Hantera taggåtgärd för underresurser | Ingen ersättning | AEM 6.4.2.0 |
+| Assets | Hantera taggåtgärd för underresurser | Ingen ersättning | AEM 6.4.2.0 |
 | Resurser och integrering med Adobe Creative Cloud | [AEM till Creative Cloud-mappdelning](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/aem-cc-folder-sharing-best-practices.html) introducerades i AEM 6.2 som ett sätt att ge kreativa användare tillgång till resurser från AEM. En ny funktion i Creative Cloud, Adobe Asset Link, ger en mycket bättre användarupplevelse och kraftfullare åtkomst till AEM direkt inifrån Photoshop, InDesign och Illustrator. Adobe kommer inte att förbättra mappdelningsfunktionen ytterligare. Funktionen ingår i AEM, men kunderna rekommenderas att använda ersättaren. | Adobe Asset Link eller datorprogram. Mer information finns på [Integrering med AEM Creative Cloud](/help/assets/aem-cc-integration-best-practices.md) artikel. | AEM 6.4.4.0 |
 
 ## Kända fel {#known-issues}

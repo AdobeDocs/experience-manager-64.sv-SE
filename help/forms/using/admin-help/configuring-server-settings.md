@@ -10,20 +10,24 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e047a95e-0acb-438a-8d27-f005c0adc508
 exl-id: 7933efeb-618a-4c38-8e5e-593be8ebb00c
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2625'
+source-wordcount: '2661'
 ht-degree: 0%
 
 ---
 
 # Konfigurerar serverinställningar {#configuring-server-settings}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 Sidan Serverinställningar ger åtkomst till olika inställningar för formulärarbetsflödet:
 
-* **E-** postinställningar som aktiverar utgående e-postmeddelanden, tillsammans med e-postserverinställningarna som används för dessa meddelanden. (Se [Konfigurera e-postinställningar](configuring-server-settings.md#configuring-email-settings).)
-* **Inställningar** för uppgiftsmeddelanden som aktiverar, inaktiverar eller ändrar meddelanden som skickas i e-postmeddelanden till slutanvändare och grupper om deras uppgifter. (Se [Konfigurera meddelanden för användare och grupper](configuring-server-settings.md#configuring-notifications-for-users-and-groups).)
-* **Meddelandeinställningar** för administratörer som aktiverar, inaktiverar eller ändrar meddelanden som skickas i e-postmeddelanden för administrativa uppgifter. (Se [Konfigurera meddelanden för administratörer](configuring-server-settings.md#configuring-notifications-for-administrators).)
+* **E-postinställningar** som aktiverar utgående e-postmeddelanden, tillsammans med e-postserverinställningarna som används för dessa meddelanden. (Se [Konfigurera e-postinställningar](configuring-server-settings.md#configuring-email-settings).)
+* **Inställningar för aktivitetsmeddelande** som aktiverar, inaktiverar eller ändrar meddelanden som skickas i e-postmeddelanden till slutanvändare och grupper om deras uppgifter. (Se [Konfigurera meddelanden för användare och grupper](configuring-server-settings.md#configuring-notifications-for-users-and-groups).)
+* **Inställningar för administratörsmeddelanden** som aktiverar, inaktiverar eller ändrar meddelanden som skickas i e-postmeddelanden för administrativa uppgifter. (Se [Konfigurera meddelanden för administratörer](configuring-server-settings.md#configuring-notifications-for-administrators).)
 
 ## Konfigurera e-postinställningar {#configuring-email-settings}
 
@@ -31,7 +35,7 @@ Du kan ange ett e-postkonto för formulärservern, som skickar e-postmeddelanden
 
 Om du vill aktivera sändning av e-postmeddelanden mellan AEM formulär och användare konfigurerar du inställningarna för utgående e-post på sidan E-postinställningar. Utgående e-post måste använda en SMTP-server.
 
-Om du vill att AEM formulär ska kunna ta emot och hantera inkommande e-postmeddelanden från användare skapar du en e-postslutpunkt för tjänsten Complete Task. (Se [Skapa en e-postslutpunkt för tjänsten Fullständig uppgift](/help/forms/using/admin-help/configuring-email-endpoints.md#create-an-email-endpoint-for-the-complete-task-service)).
+Om du vill att AEM formulär ska kunna ta emot och hantera inkommande e-postmeddelanden från användare skapar du en e-postslutpunkt för tjänsten Complete Task. (Se [Skapa en e-postslutpunkt för tjänsten Slutför uppgift](/help/forms/using/admin-help/configuring-email-endpoints.md#create-an-email-endpoint-for-the-complete-task-service)).
 
 Om processerna har utformats och implementerats utan att e-post krävs behöver du inte konfigurera något av alternativen på sidan E-postinställningar.
 
@@ -45,7 +49,7 @@ Om processerna har utformats och implementerats utan att e-post krävs behöver 
 
    >[!NOTE]
    >
-   >Om du använder Microsoft Exchange Server och e-postadressen är en ogiltig e-postadress kan Microsoft Exchange-servern inte skicka något e-postmeddelande till distributionslistor. Du löser problemet genom att välja alternativet **Aktivera extern kommunikation** separat för varje distributionslista på Microsoft Exchange-servern.
+   >Om du använder Microsoft Exchange Server och e-postadressen är en ogiltig e-postadress kan Microsoft Exchange-servern inte skicka något e-postmeddelande till distributionslistor. För att lösa problemet väljer du **Aktivera extern kommunikation** separat för varje distributionslista på Microsoft Exchange-servern.
 
 1. Klicka på Spara.
 
@@ -59,7 +63,7 @@ Om processerna har utformats och implementerats utan att e-post krävs behöver 
 >
 >Flex Workspace används inte AEM formulärreleasen.
 
-Som standard innehåller e-postmeddelanden som skickas AEM formulär länkar till (borttagna för AEM formulär i JEE) Flex Workspace. Du kan konfigurera AEM formulär att skicka ut e-postmeddelanden med länkar till AEM Forms Workspace. Mer information om fördelarna med AEM Forms Workspace i stället för (Borttaget för AEM formulär i JEE) Flex Workspace finns i [den här](/help/forms/using/features-html-workspace-available-flex.md)-artikeln.
+Som standard innehåller e-postmeddelanden som skickas AEM formulär länkar till (borttagna för AEM formulär i JEE) Flex Workspace. Du kan konfigurera AEM formulär att skicka ut e-postmeddelanden med länkar till AEM Forms Workspace. Mer information om fördelarna med AEM Forms Workspace i stället för (Borttaget för AEM formulär i JEE) Flex Workspace finns i [this](/help/forms/using/features-html-workspace-available-flex.md) artikel.
 
 1. I administrationskonsolen klickar du på Hem > Tjänster > Formulärarbetsflöde > Serverinställningar > Aktivitetsmeddelanden.
 1. Öppna mall för uppgiftstilldelning.
@@ -71,7 +75,7 @@ Som standard innehåller e-postmeddelanden som skickas AEM formulär länkar til
 
 ## Konfigurera meddelanden för användare och grupper {#configuring-notifications-for-users-and-groups}
 
-På sidan Aktivitetsmeddelande kan du konfigurera mallar som används i arbetsflödet för formulär för att generera e-postmeddelanden som skickas till användare och grupper. Du kan anpassa och formatera meddelandena med hjälp av formulärarbetsflödesvariabler.
+På sidan Aktivitetsmeddelande kan du konfigurera mallar som används i arbetsflödet för formulär för att generera e-postmeddelanden som skickas till användare och grupper. Du kan anpassa och formatera meddelandena med hjälp av arbetsflödesvariabler för formulär.
 
 Du konfigurerar följande typer av meddelanden för användare och grupper:
 
@@ -175,7 +179,7 @@ På sidorna Aktivitetsmeddelanden och Administratörsmeddelanden finns flera fun
 
 ### RTF-redigerare {#rich-text-editor}
 
-Området Meddelandemallar är en textredigerare som du kan använda för att generera HTML för e-postmeddelanden. Den innehåller alternativ för teckensnitt och styckeformatering, som finns under rutan Meddelandemall. Alternativen omfattar teckensnitt, storlek, format och färg samt styckejustering och punkter.
+Området Meddelandemall är en textredigerare som du kan använda för att skapa HTML för e-postmeddelanden. Den innehåller alternativ för teckensnitt och styckeformatering, som finns under rutan Meddelandemall. Alternativen omfattar teckensnitt, storlek, format och färg samt styckejustering och punkter.
 
 ### URL-generering {#url-generation}
 
@@ -193,9 +197,9 @@ Endast för aktivitetsmeddelanden innehåller Forms-arbetsflödet två fördefin
 >
 >Flex Workspace är föråldrat för AEM formulärreleaser.
 
-Om din lösning distribueras i en klustrad miljö ersätter du `@@notification-host@@` med klusteradressen.
+Om lösningen används i en klustermiljö ska du ersätta `@@notification-host@@` med klusteradressen.
 
-`<`*PORT* `>` är portnumret för HTTP-avlyssnaren för programservern. Standardporten för HTTP-avlyssnare för de programservrar som stöds är följande:
+`<`*PORT* `>` är portnumret för programserverns HTTP-avlyssnare. Standardporten för HTTP-avlyssnare för de programservrar som stöds är följande:
 
 **JBoss:** 8080
 
@@ -203,7 +207,7 @@ Om din lösning distribueras i en klustrad miljö ersätter du `@@notification-h
 
 **IBM WebSphere:** 9080
 
-Ersätt `<`*PORT* `>` med det portnummer som passar din miljö om du vill att de här URL-adresserna ska fungera korrekt.
+Om du vill att URL-adresserna ska fungera korrekt ersätter du `<`*PORT* `>` med det portnummer som passar din miljö.
 
 >[!NOTE]
 >
@@ -215,23 +219,23 @@ Variabelväljarlistan innehåller användbara variabler som du kan dra och släp
 
 För påminnelser, uppgiftstilldelningar och deadlines för användare och grupper kan du använda följande variabler i rutorna Ämne och Meddelandemall:
 
-**Beskrivning** Innehållet i egenskapen Beskrivning, enligt definitionen i användarsteget (startpunkt, åtgärden Tilldela uppgift eller åtgärden Tilldela flera uppgifter) för processen i Workbench.
+**description** Innehållet i egenskapen Beskrivning, enligt definitionen i användarsteget (åtgärden Tilldela uppgift eller Tilldela flera uppgifter) för processen i Workbench.
 
-**** instruktionerInnehållet i egenskapen Uppgiftsinstruktioner, enligt definition i användarsteget i processen i Workbench.
+**instruktioner** Innehållet i egenskapen Uppgiftsinstruktioner, enligt definition i användarsteget i processen i Workbench.
 
-**notification-** hostVärdnamnet för AEM formulärprogramserver.
+**meddelandevärd** Värdnamnet för AEM formulärprogramserver.
 
-**process-** name Processens namn.
+**process-name** Processens namn.
 
-**operation-** nameStegen heter.
+**operation-name** Stegets namn.
 
-**** aktivitetsidentifierareDen unika identifieraren för den aktuella aktiviteten.
+**taskid** Den unika identifieraren för den aktuella aktiviteten.
 
-**åtgärder** Skapar en numrerad lista över giltiga flöden (till exempel Godkänn, Avvisa) som mottagaren kan klicka på.
+**funktionsmakron** Ger en numrerad lista över giltiga flöden (till exempel Godkänn, Avvisa) som mottagaren kan klicka på.
 
 Dessutom kan du använda följande för grupppåminnelser, grupptilldelningar och gruppdeadlines:
 
-**group-** name Namnet på den grupp som har tilldelats arbetsuppgiften.
+**group-name** Namnet på gruppen som är tilldelad arbetsuppgiften.
 
 >[!NOTE]
 >
@@ -239,21 +243,21 @@ Dessutom kan du använda följande för grupppåminnelser, grupptilldelningar oc
 
 För fasta grenar kan du använda följande variabler i rutorna Ämne och Meddelandemall:
 
-**filial-** idFilidentifieraren.
+**branch-id** Filidentifieraren.
 
-**process-** idProcessinstansens identifierare.
+**process-id** Processinstansens identifierare.
 
-**notification-** hostVärdnamnet för AEM formulärprogramserver.
+**meddelandevärd** Värdnamnet för AEM formulärprogramserver.
 
 För fasta åtgärder kan du använda följande variabler i rutorna Ämne och Meddelandemall:
 
-**action-** idÅtgärds-ID.
+**action-id** Åtgärds-ID.
 
-**filial-** idFilidentifieraren.
+**branch-id** Filidentifieraren.
 
-**process-** idProcessinstansens identifierare.
+**process-id** Processinstansens identifierare.
 
-**notification-** hostVärdnamnet för AEM formulärprogramserver.
+**meddelandevärd** Värdnamnet för AEM formulärprogramserver.
 
 ### Använda en variabel i rutan Ämne {#using-a-variable-in-the-subject-box}
 
@@ -271,7 +275,7 @@ Om du skriver följande text i rutan Meddelandemall för meddelanden om installe
 
 `Branch @@branch-id@@ has stalled! You have received this notification from @@notification-host@@.`
 
-Administratören får ett e-postmeddelande som innehåller följande innehåll om filialnumret är 4868 och servernamnet är `ServerXYZ`:
+Administratören får ett e-postmeddelande med följande innehåll om filialnumret är 4868 och servernamnet är `ServerXYZ`:
 
 `Branch 4868 has stalled! You have received this notification from ServerXYZ.`
 

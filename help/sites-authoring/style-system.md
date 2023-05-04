@@ -9,14 +9,18 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: e3ccddb6-be5e-4e5f-a017-0eed263555ce
 exl-id: 8d7282dd-1e21-4862-af04-0daaea431e2c
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1348'
 ht-degree: 1%
 
 ---
 
 # Formatsystem{#style-system}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Med Style System kan mallskapare definiera formatklasser i en komponents innehållsprincip så att en innehållsförfattare kan markera dem när komponenten på en sida redigeras. Dessa format kan vara alternativa visuella varianter av en komponent, vilket gör komponenten mer flexibel.
 
@@ -61,7 +65,7 @@ Följande diagram visar arkitekturen i Style System.
 
 ![aem-style-system](assets/aem-style-system.png)
 
-## Användning {#use}
+## Använd {#use}
 
 För att demonstrera funktionen kommer vi att använda [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)implementering av kärnkomponentens [titelkomponent](https://www.adobe.com/go/aem_cmp_title_v2) som ett exempel.
 

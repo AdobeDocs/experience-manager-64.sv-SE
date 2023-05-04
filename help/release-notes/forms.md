@@ -2,23 +2,26 @@
 title: AEM Forms
 seo-title: AEM Forms
 description: Versionsinformation om Adobe Experience Manager 6.3 Forms.
-seo-description: Versionsinformation om Adobe Experience Manager 6.3 Forms.
+seo-description: Release notes specific to Adobe Experience Manager 6.3 Forms.
 uuid: 317770c9-bb59-4bdf-8a14-be265e8f5f81
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 content-type: reference
 discoiquuid: 3f592c5a-4e59-436e-b67b-3ed575c6afc3
-translation-type: tm+mt
-source-git-commit: 715cff841252d79504d702817f91db92df919bfc
+exl-id: 94989316-02df-4cfa-bb2e-c0d357dff728
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
 
-
 # AEM Forms {#aem-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 I det här avsnittet finns information om AEM 6.4 Forms-utgåvan. En detaljerad beskrivning av alla nya funktioner finns i [Sammanfattning av nya funktioner och förbättringar i AEM 6.4 Forms](/help/forms/using/whats-new.md).
 

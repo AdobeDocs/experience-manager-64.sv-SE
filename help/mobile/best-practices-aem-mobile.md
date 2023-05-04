@@ -1,24 +1,27 @@
 ---
 title: Bästa praxis
-seo-title: Bästa praxis
+seo-title: Best Practices
 description: Följ den här sidan om du vill lära dig bästa praxis och riktlinjer som hjälper erfarna utvecklare AEM webbplatser som vill skapa mallar och komponenter för mobilappar.
-seo-description: Följ den här sidan om du vill lära dig bästa praxis och riktlinjer som hjälper erfarna utvecklare AEM webbplatser som vill skapa mallar och komponenter för mobilappar.
+seo-description: Follow this page to  learn best practices and guidelines that will help experienced AEM developers for sites, who want to build mobile app templates and components.
 uuid: 7733c8b1-a88c-455c-8080-f7add4205b92
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: a0647696-72c3-409b-85ba-9275d8f99cff
-translation-type: tm+mt
-source-git-commit: 8078976ab79ccc0fefac5bfe6b000a008a917489
+exl-id: 042974ee-2c0a-411d-accf-6a17b8e95f90
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 1%
+source-wordcount: '631'
+ht-degree: 0%
 
 ---
 
-
 # Bästa praxis {#best-practices}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
@@ -34,14 +37,12 @@ Att skapa en AEM Mobile On-demand Services-app skiljer sig från att skapa en ap
 >
 >* [Använda Cordova-plugin-program i AEM Mobile](https://helpx.adobe.com/digital-publishing-solution/help/cordova-api.html)
 >* [Använda AEM Mobile-specifika Cordova-aktiverade plugin-program](https://helpx.adobe.com/digital-publishing-solution/help/app-runtime-api.html)
-
 >
-
 
 
 * Mallar som använder plugin-funktioner bör skrivas på ett sådant sätt att de fortfarande är redigerbara i webbläsaren, utan att plugin-bron finns.
 
-   * Se till att du väntar på funktionen *device* innan du försöker komma åt ett plugin-programs API.
+   * Se till att vänta på *avskild* innan du försöker komma åt ett plugin-programs API.
 
 ## Riktlinjer för AEM utvecklare {#guidelines-for-aem-developers}
 
@@ -51,8 +52,8 @@ Följande riktlinjer är till hjälp för erfarna utvecklare AEM webbplatser som
 
 * Föredra flera komponentskriptfiler framför en enda monolitisk fil
 
-   * Det finns ett antal tomma tilläggspunkter, t.ex. *customheaderlibs.html* och *customfooterlibs.html*, som gör att utvecklaren kan ändra sidmallen och duplicera så lite kärnkod som möjligt
-   * Mallar kan sedan utökas och anpassas via Sling-funktionen *sling:resourceSuperType*
+   * Ett antal tomma tilläggspunkter anges, till exempel *customheaderlibs.html* och *customfooterlibs.html* som gör att utvecklaren kan ändra sidmallen samtidigt som så lite kärnkod som möjligt dupliceras
+   * Mallar kan sedan utökas och anpassas via Sling *sling:resourceSuperType* mekanism
 
 * Föredra Sightly/HTL framför JSP som mallspråk
 
@@ -66,7 +67,7 @@ Följande riktlinjer är till hjälp för erfarna utvecklare AEM webbplatser som
 
 >[!NOTE]
 >
->Mer information om återgivningsblockerande externa skript [finns här](https://developers.google.com/speed/docs/insights/BlockingJS).
+>Du kan läsa mer i detalj om återgivningsblockerande externa skript [här](https://developers.google.com/speed/docs/insights/BlockingJS).
 
 **Föredra programspecifika JS- och CSS-bibliotek i klientsidan framför webbspecifika**
 
@@ -75,18 +76,18 @@ Följande riktlinjer är till hjälp för erfarna utvecklare AEM webbplatser som
 
 >[!NOTE]
 >
->Om du vill veta mer om jQuery Mobile klickar du [här](https://jquerymobile.com/browser-support/1.4/).
+>Om du vill veta mer om jQuery Mobile klickar du på [här](https://jquerymobile.com/browser-support/1.4/).
 
 **Föredra mikrobibliotek framför högar**
 
 * Den tid det tar att lägga in materialet i enhetens glas kommer att sänkas för varje bibliotek som artikeln/artiklarna är beroende av. Den här nedgången förvärras när en ny webbvy används för att återge varje artikel, så varje bibliotek måste initieras igen från början
-* Om artiklarna inte har skapats som SPA (appar med en sida) behöver du förmodligen inte inkludera ett fullständigt stackbibliotek som vinkelrät
-* Använd mindre bibliotek med ett enda syfte för att lägga till den interaktivitet som sidan kräver, till exempel [Fastclick](https://github.com/ftlabs/fastclick) eller [Velocity.js](https://velocityjs.org)
+* Om artiklarna inte har skapats som SPA (appar för en sida) behöver du förmodligen inte inkludera ett fullständigt stackbibliotek som Angular
+* Använd mindre bibliotek med ett enda syfte för att lägga till den interaktivitet sidan kräver, till exempel [Snabbklickning](https://github.com/ftlabs/fastclick) eller [Velocity.js](https://velocityjs.org)
 
 **Minimera artikelnyttolastens storlek**
 
 * Använd minsta möjliga resurser som effektivt kan täcka den största visningsruta ni stöder, med en rimlig upplösning
-* Använd ett verktyg som *ImageOptime* på dina bilder för att ta bort överflödiga metadata
+* Använd ett verktyg som *ImageOptime* på bilderna för att ta bort överflödiga metadata
 
 ## Komma framåt {#getting-ahead}
 

@@ -1,8 +1,7 @@
 ---
-source-git-commit: 787f33c60cbe2affdea0af732289d2663ad97bfb
+source-git-commit: 89ad0c9a050076678ce8a801d9f9af4ea508bd39
 workflow-type: tm+mt
-translation-type: tm+mt
-source-wordcount: '84'
+source-wordcount: '68'
 ht-degree: 0%
 
 ---
@@ -10,8 +9,4 @@ ht-degree: 0%
 
 Det här är arkivet för Adobe Experience Manager 6.4-dokumentation. Den här dokumentationen beskriver installation, administration, redigering och hur du anpassar AEM.
 
-Dina bidrag till dokumentationen är välkomna. Se följande resurser:
-
-* [contribute.](contributing.md) mdEn översikt över hur du kan bidra till dokumentationen.
-* [guidelines.](guidelines.md) mdEn översikt över vad som förväntas i bidragen och hur du komponerar dokumentationsbidragen.
-* [code-of-behavior.](code-of-conduct.md) mdFör en översikt över de beteendestandarder vi förväntar oss när du bidrar till detta dokumentationsprojekt.
+AEM 6.4 har nått slutet på den utökade supporten, och därför uppdateras inte den här dokumentationen längre och arkiveringen har arkiverats. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).

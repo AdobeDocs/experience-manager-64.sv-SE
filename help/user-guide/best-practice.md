@@ -6,14 +6,18 @@ seo-description: Resources for best practices, troubleshooting and training for 
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 exl-id: ba222869-1268-481d-b342-27ea12b15999
-source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
 
 # AEM 6.4 Bästa praxis {#aem-64-best-practices}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Var kan jag lära mig mer om utbildning och AEM? {#training}
 

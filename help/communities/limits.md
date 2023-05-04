@@ -1,8 +1,8 @@
 ---
 title: Gränser för medlemsbidrag
-seo-title: Gränser för medlemsbidrag
+seo-title: Member Contribution Limits
 description: Med funktionen för bidragsgränser kan du begränsa vilka bidrag som ska skyddas mot skräppost
-seo-description: Med funktionen för bidragsgränser kan du begränsa vilka bidrag som ska skyddas mot skräppost
+seo-description: Contribution limits feature lets you limit the contributions to protect against spam
 uuid: 99b2a855-3f0d-41a0-9572-517a7f29af9f
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: d855aac2-f34d-402f-9dc3-c7ad494b45f2
 role: Admin
 exl-id: fc7ce4d0-2051-4a67-a0d6-baf615e09ca4
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
 
 # Gränser för medlemsbidrag {#member-contribution-limits}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Översikt {#overview}
 
@@ -26,7 +30,7 @@ Funktionen för bidragsbegränsning ger möjlighet att begränsa bidrag från co
 
 När en medlem är begränsad kommer alla inlägg som överskrider det tillåtna antalet bidrag att resultera i en varning om att gränsen har överskridits och att inlägget avvisas. Community-medlemmen kan sedan gå till communitymeddelandecentret och kontakta en community-ansvarig som kan ta bort begränsningarna om det är lämpligt.
 
-Bidragsgränser kan aktiveras individuellt från [Medlemskonsolen](members.md) och/eller konfigureras att aktiveras automatiskt när besökarna blir nya medlemmar.
+Bidragsgränser kan aktiveras individuellt från [Medlemskonsol](members.md) och/eller konfigureras att aktiveras automatiskt när besökarna blir nya medlemmar.
 
 Med hjälp av medlemskonsolen kan bidragsgränser tas bort proaktivt för en medlem av en community-chef när som helst, eller tas bort reaktivt när en medlem skickar ett meddelande till en community-administratör som gör en sådan begäran.
 
@@ -42,18 +46,18 @@ Så här når du OSGi-konfigurationen:
 
 * På den primära utgivaren
 * Logga in med administratörsbehörighet
-* Åtkomst till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md)
+* Öppna [Webbkonsol](../../help/sites-deploying/configuring-osgi.md)
 
-   * Till exempel [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
+   * Till exempel: [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* Sök efter `AEM Communities User Generated Content Contribution Limits Configuration`
+* Sök `AEM Communities User Generated Content Contribution Limits Configuration`
 * Markera redigeringsikonen
 
 ![chlimage_1-127](assets/chlimage_1-127.png)
 
 * **[!UICONTROL Automatically Apply UGC Contribution Limits]**
 
-   Om det här alternativet är markerat anger automatiskt bidragsgränser för användare när de registrerar sig som community-medlemmar. Detta återspeglas i communitymedlemmens profil och kan aktiveras/inaktiveras från [medlemskonsolen](members.md). Nya medlemmar med en e-postadress från tillåtelselista i domäner begränsas aldrig.
+   Om det här alternativet är markerat anger automatiskt bidragsgränser för användare när de registrerar sig som community-medlemmar. Detta återspeglas i communitymedlemmens profil och kan aktiveras/inaktiveras från [medlemskonsol](members.md). Nya medlemmar med en e-postadress från tillåtelselista i domäner begränsas aldrig.
 
    Standard är avmarkerat.
 
@@ -73,7 +77,7 @@ Så här når du OSGi-konfigurationen:
 
    En lista med tillåtelselista i en eller flera e-postdomäner. Markera +-ikonen om du vill göra ytterligare inmatningar.
 
-   Användare med e-postadresser tillåtelselista i domäner påverkas inte när UGC-bidragsgränser tillämpas automatiskt. Om till exempel domänen `mycompany.com` läggs till i listan över domäner, begränsas aldrig en medlem med e-postadressen `me@mycompany.com` från publicering.
+   Användare med e-postadresser tillåtelselista i domäner påverkas inte när UGC-bidragsgränser tillämpas automatiskt. Exempel: om domän `mycompany.com` läggs till i listan över domäner och sedan en medlem med e-postadress `me@mycompany.com` begränsas aldrig från publicering.
 
    Standard är en tom tillåtelselista.
 

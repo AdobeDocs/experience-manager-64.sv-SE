@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-manager
 discoiquuid: 82e72ffb-2faa-45fe-8bb2-f485d8fa043e
 exl-id: 18b5c6e2-3b0c-4ec8-9e65-c4105b47be4e
-source-git-commit: eeaa70855980ca62574f89e280b46c02c0b65bdc
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1859'
+source-wordcount: '1895'
 ht-degree: 1%
 
 ---
 
 # Fakturerbara API:er för transaktionsrapporter {#transaction-reports-billable-apis}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Lista över alla API:er som räknas som transaktioner
 
@@ -304,7 +308,6 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
 >
 >* Anrop-API:t för sammansättartjänsten kan internt anropa ett fakturerbart API för en annan tjänst beroende på indata. Detta innebär att invoke-API:t kan redovisas som inga, enskilda eller flera transaktioner. Antalet transaktioner som räknas beror på indata och de interna API:erna som anropas.
 >* Ett enda PDF-dokument som skapats med en monteringsfunktion kan redovisas som inga, enstaka eller flera transaktioner. Antalet transaktioner som räknas beror på den angivna DDX-koden.
-
 >
 
 

@@ -1,23 +1,26 @@
 ---
 title: Introduktion till processrapportering
-seo-title: Introduktion till processrapportering
+seo-title: Introduction to Process Reporting
 description: Introduktion och viktiga funktioner i AEM Forms om JEE Process Reporting
-seo-description: Introduktion och viktiga funktioner i AEM Forms om JEE Process Reporting
+seo-description: Introduction and key capabilities of AEM Forms on JEE Process Reporting
 uuid: a33ea729-7e1f-4093-bdb6-b8dc3afd59a7
 content-type: reference
 topic-tags: process-reporting
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 0cfe62b8-839e-414b-95e5-1bfce6a9d16a
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: 279b2f89-5b91-4b8f-ab0f-8ade9b9f3932
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '330'
 ht-degree: 0%
 
 ---
 
-
 # Introduktion till processrapportering {#introduction-to-process-reporting}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ![processrapportering](assets/process-reporting.png)
 
@@ -27,7 +30,7 @@ Processrapportering innehåller en uppsättning användningsklara rapporter som 
 
 Ytterligare processrapportering är ett gränssnitt för att köra ad hoc-frågor och integrera anpassade rapportvyer i användargränssnittet för processrapportering.
 
-En lista över webbläsare som stöds finns i [AEM Forms Supported Platforms](/help/forms/using/aem-forms-jee-supported-platforms.md).
+En lista över webbläsare som stöds finns i [Plattformar som stöds av AEM Forms](/help/forms/using/aem-forms-jee-supported-platforms.md).
 
 Processrapportering bygger på moduler som:
 
@@ -41,11 +44,11 @@ Processrapportering bygger på moduler som:
 
 ![platshantering](assets/site-management.png)
 
-Visa en lista över processer som körs länge, tidsscheman för processer och kör anpassade frågor med filter.
+Visa listan över långvariga processer, processens tidsplaneringsdiagram och kör anpassade frågor med filter.
 
 Med Process Reporting kan du också exportera rapport- och frågedata i CSV-format.
 
-### Adhoc-rapporter {#adhoc-reports}
+### Ad hoc-rapporter {#adhoc-reports}
 
 ![print-&amp;-color](assets/print-&-colour.png)
 
@@ -70,5 +73,3 @@ AEM Forms-servrar kör flera processer parallellt. Dessa processer fortsätter a
 Processrapportering ger behörighetsbaserad åtkomst till användargränssnittet.
 
 Det innebär att bara användare med rapportbehörigheter har åtkomst till användargränssnittet för processrapportering.
-
-

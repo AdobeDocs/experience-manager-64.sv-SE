@@ -1,8 +1,8 @@
 ---
 title: Länka viktiga
-seo-title: Länka viktiga
+seo-title: Liking Essentials
 description: Länka komponentöversikt
-seo-description: Länka komponentöversikt
+seo-description: Liking component overview
 uuid: 89f16859-c901-4090-8e16-363b95c508de
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -10,20 +10,23 @@ topic-tags: developing
 content-type: reference
 discoiquuid: f176c42b-b16b-42c9-af22-4b6421de5a90
 pagetitle: Liking Essentials
-translation-type: tm+mt
-source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+exl-id: 509d1fb4-a88d-4438-a618-ba063adb6fb9
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
 
+# Länka viktiga {#liking-essentials}
 
-# Länka grundläggande {#liking-essentials}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-Den likartade komponenten, en [tally](tally.md)-underklass, är ett användbart verktyg som medlemmar kan använda för att uttrycka en positiv åsikt om ett visst innehåll genom att helt enkelt välja hjärtikonen.
+Den länkade komponenten, en [tally](tally.md) underklass, är ett användbart verktyg som gör att medlemmar kan uttrycka en positiv åsikt om en viss del av innehållet genom att helt enkelt välja hjärtikonen.
 
-Det är tillåtet att placera flera förekomster av en likartad komponent på samma sida. Varje instans måste konfigureras med en unik `tally name`-egenskap.
+Det är tillåtet att placera flera förekomster av en likartad komponent på samma sida. varje instans måste konfigureras med en unik `tally name` -egenskap.
 
 Anonym publicering av en gilla-markering stöds inte. Besökare på webbplatsen måste registrera sig och logga in för att kunna delta. Den inloggade besökaren (medlemmen) kan när som helst växla som på och av.
 
@@ -44,7 +47,7 @@ Anonym publicering av en gilla-markering stöds inte. Besökare på webbplatsen 
    <td> cq.social.hbs.liking</td> 
   </tr> 
   <tr> 
-   <td> <strong>templates</strong></td> 
+   <td> <strong>mallar</strong></td> 
    <td><p> /libs/social/tally/components/hbs/liking/liking.hbs<br /> /libs/social/tally/components/hbs/liking/activity-icon.hbs<br /> /libs/social/tally/components/hbs/liking/activity-title.hbs</p> </td> 
   </tr> 
   <tr> 
@@ -53,7 +56,7 @@ Anonym publicering av en gilla-markering stöds inte. Besökare på webbplatsen 
   </tr> 
   <tr> 
    <td><strong>egenskaper</strong></td> 
-   <td><p>Se <a href="liking.md">Använda länk</a></p> </td> 
+   <td><p>Se <a href="liking.md">Använda Länk</a></p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -71,16 +74,15 @@ Anonym publicering av en gilla-markering stöds inte. Besökare på webbplatsen 
 ### Åtkomst till bokförd röstning (UGC) {#accessing-posted-voting-ugc}
 
 UGC bör modereras med någon av standardmetoderna för moderering.\
-Se [Moderating User Generated Content](moderate-ugc.md).
+Se [Modererar användargenererat innehåll](moderate-ugc.md).
 
-Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities används [gemensam lagringsplats](working-with-srp.md) för UGC omfattar programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (till exempel ASRP, MSRP eller JSRP).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
 Se:
 
-* [Översikt över](srp.md)  lagringsresursprovidern - introduktion och databasanvändning - översikt
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
-* [Åtkomst till UGC med riktlinjer för SRP](accessing-ugc-with-srp.md) -kodning
-* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utgått verktygsmetoder till aktuella SRP-verktygsmetoder
-
+* [Översikt över lagringsresursprovider](srp.md) - introduktion och databasanvändning - översikt
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning
+* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av borttagna verktygsmetoder till aktuella SRP-verktygsmetoder

@@ -1,24 +1,27 @@
 ---
 title: Anpassade specialtecken i korrespondenshantering
-seo-title: Anpassade specialtecken i korrespondenshantering
+seo-title: Custom special characters in Correspondence Management
 description: Lär dig hur du lägger till anpassade specialtecken i Correspondence Management.
-seo-description: Lär dig hur du lägger till anpassade specialtecken i Correspondence Management.
+seo-description: Learn how to add custom special characters in Correspondence Management.
 uuid: ac4f1353-f1ef-43b7-8e80-aba56a155e3f
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 1b5e6746-3618-46fe-ba2d-ec76bb79de1d
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: a6206ae1-b71b-4066-b7a0-ce39a60d6dd0
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 1%
+source-wordcount: '672'
+ht-degree: 0%
 
 ---
 
-
 # Anpassade specialtecken i korrespondenshantering {#custom-special-characters-in-correspondence-management}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Översikt {#overview}
 
@@ -32,21 +35,21 @@ Du kan till exempel infoga följande specialtecken:
 
 Du kan infoga specialtecken med bokstäver:
 
-* I [textredigeraren](/help/forms/using/document-fragments.md#createtext)
-* I en [redigerbar, infogad modul i en korrespondens](/help/forms/using/create-correspondence.md#managecontent)
+* I [textredigerare](/help/forms/using/document-fragments.md#createtext)
+* I en [redigerbar, infogad modul i korrespondens](/help/forms/using/create-correspondence.md#managecontent)
 
 ![specialteckensinlinemodulen](assets/specialcharactersinlinemodule.png)
 
 Administratören kan lägga till stöd för fler/anpassade specialtecken genom anpassning. I den här artikeln finns instruktioner om hur du kan lägga till stöd för ytterligare anpassade specialtecken.
 
-## Lägg till eller ändra stöd för anpassade specialtecken i Correspondence Management {#creatingfolderstructure}
+## Lägga till eller ändra stöd för anpassade specialtecken i Correspondence Management {#creatingfolderstructure}
 
 Följ de här stegen för att lägga till stöd för anpassade specialtecken:
 
 1. Gå till `https://[server]:[port]/[ContextPath]/crx/de` och logga in som administratör.
-1. I mappen apps skapar du en mapp med namnet **[!UICONTROL specialcharacters]** med en sökväg/struktur som liknar specialteckenmappen (som finns i mappen textEditorConfig under libs):
+1. Skapa en mapp med namnet i appmappen **[!UICONTROL specialcharacters]** med en sökväg/struktur som liknar specialteckenmappen (finns i mappen textEditorConfig under libs):
 
-   1. Högerklicka på mappen **specialtecken** på följande sökväg och välj **Överläggsnod**:
+   1. Högerklicka på **specialtecken** mapp på följande sökväg och välj **Överläggsnod**:
 
       `/libs/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters`
 
@@ -54,9 +57,9 @@ Följ de här stegen för att lägga till stöd för anpassade specialtecken:
 
       **Sökväg:** /libs/fd/cm/ma/gui/configuration/textEditorConfig/specialtecken
 
-      **Överläggsplats:** /appar/
+      **Plats för övertäckning:** /apps/
 
-      **Matcha nodtyper:** markerade
+      **Matcha nodtyper:** Markerad
 
       >[!NOTE]
       >
@@ -67,23 +70,23 @@ Följ de här stegen för att lägga till stöd för anpassade specialtecken:
       >* Installera ett funktionspaket
 
 
-   1. Klicka på **OK** och sedan på **Spara alla**. Mappen med specialtecken skapas i den angivna sökvägen.
+   1. Klicka **OK** och sedan klicka **Spara alla**. Mappen med specialtecken skapas i den angivna sökvägen.
 
       Kontrollera nodstrukturtaggar när du har skapat övertäckningen. Varje nod som skapas i /apps med övertäckningen ska ha samma klass och egenskaper som definieras i /libs för den noden. Om någon egenskap eller tagg saknas i nodstrukturen under /apps-platsen synkroniserar du dess taggar med motsvarande nod i /libs.
 
-1. Kontrollera att noden **[!UICONTROL textEditorConfig]** har följande egenskaper och värden:
+1. Se till att **[!UICONTROL textEditorConfig]** noden har följande egenskaper och värden:
 
    | Namn | Typ | Värde |
    |---|---|---|
    | cmConfigurationType | Sträng | cmTextEditorConfiguration |
    | cssPath | Sträng | /libs/fd/cm/ma/gui/components/admin/createasset/textcontrol/clientlibs/textcontrol |
 
-1. Högerklicka på mappen **[!UICONTROL specialcharacters]** på följande sökväg och välj **Skapa > Underordnad nod** och klicka sedan på **Spara alla**:
+1. Högerklicka på **[!UICONTROL specialcharacters]** mapp på följande sökväg och välj **Skapa > Underordnad nod** och sedan klicka **Spara alla**:
 
-   /apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters/&lt;YourChildNode>
+   /apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters/&lt;yourchildnode>
 
 1. Uppdatera sidan för textredigeraren\Skapa korrespondensgränssnitt. Noden som du har lagt till är den sista i listan med specialtecken i användargränssnittet.
-1. Klicka på **Spara alla**.
+1. Klicka **Spara alla**.
 1. Gör önskade ändringar av specialtecknen:
 
 <table> 
@@ -144,4 +147,3 @@ Följ de här stegen för att lägga till stöd för anpassade specialtecken:
   </tr> 
  </tbody> 
 </table>
-

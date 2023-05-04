@@ -1,24 +1,27 @@
 ---
 title: Integrera med BrightEdge Content Optimizer
-seo-title: Integrera med BrightEdge Content Optimizer
+seo-title: Integrating with BrightEdge Content Optimizer
 description: Läs om hur du integrerar AEM med BrightEdge Content Optimizer.
-seo-description: Läs om hur du integrerar AEM med BrightEdge Content Optimizer.
+seo-description: Learn about integrating AEM with BrightEdge Content Optimizer.
 uuid: 7075dd3c-2fd6-4050-af1c-9b16ad4366ec
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: cf25c9a8-0555-4c67-8aa5-55984fd8d301
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 46d0513c-04b2-41ed-bb56-e0778fa5fd10
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
 
-
 # Integrera med BrightEdge Content Optimizer{#integrating-with-brightedge-content-optimizer}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Skapa en BrightEdge-molnkonfiguration så att AEM kan ansluta med autentiseringsuppgifterna för ditt BrightEdge-konto. Du kan skapa flera konfigurationer om du använder flera konton.
 
@@ -60,7 +63,7 @@ Associera sidor med en BrightEdge-konfiguration för att skicka siddata till Bri
 
    ![chlimage_1-6](assets/chlimage_1-6.png)
 
-## Aktivera en BrightStor-konfiguration {#activating-a-brightedge-configuration}
+## Aktivera en BrightEdge-konfiguration {#activating-a-brightedge-configuration}
 
 Aktivera en BrightEdge-konfiguration för att replikera den på publiceringsinstansen och aktivera publicerade sidor för interaktion med BrightEdge-tjänsten.
 
@@ -72,4 +75,3 @@ Aktivera en BrightEdge-konfiguration för att replikera den på publiceringsinst
 1. Kontrollera att din BrightEdge-konfiguration är markerad i listan över konfigurationer som visas och klicka sedan på Publicera.
 
    ![chlimage_1-8](assets/chlimage_1-8.png)
-

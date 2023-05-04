@@ -5,16 +5,19 @@ contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: best-practices
-translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+exl-id: 8c41dba4-bedc-4747-b67d-fd89d71c8b2c
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '573'
 ht-degree: 2%
 
 ---
 
-
 # Bästa praxis{#best-practices}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Bästa tillvägagångssätt beskriver hur du utvecklar, administrerar eller använder AEM på det mest effektiva och effektiva sättet. Den här växande listan med ämnen innehåller en mängd olika områden i AEM.
 
@@ -33,7 +36,7 @@ Specifika dokument beskrivs och länkas till i de tabeller som följer.
 
 ## Assets {#assets}
 
-De effektivaste strategierna kring Assets, inklusive Dynamic Media-funktionen och Dynamic Media Classic-integrering, beskrivs i följande avsnitt:
+De effektivaste strategierna kring Assets, inklusive Dynamic Media och Dynamic Media Classic-integrering, beskrivs i följande avsnitt:
 
 <table> 
  <tbody>
@@ -54,8 +57,8 @@ De effektivaste strategierna kring Assets, inklusive Dynamic Media-funktionen oc
   </tr>
   <tr>
    <td>Alternativ för bildförinställningar</td> 
-   <td>Om <a href="/help/assets/managing-image-presets.md#understanding-image-presets">bildförinställningar</a> och <a href="/help/assets/managing-image-presets.md#image-preset-options">god praxis för bildförinställningar</a></td> 
-   <td>I dokumentationen om <a href="/help/assets/managing-image-presets.md">Hantera bildförinställningar</a> beskrivs vilka bildförinställningar som är och de bästa sätten att välja bildförinställningar.</td> 
+   <td>Förstå <a href="/help/assets/managing-image-presets.md#understanding-image-presets">bildförinställningar</a> och <a href="/help/assets/managing-image-presets.md#image-preset-options">god praxis för bildförinställningar</a></td> 
+   <td>Som en del av dokumentationen om <a href="/help/assets/managing-image-presets.md">Hantera bildförinställningar</a>beskriver de här avsnitten vilka bildförinställningar som är och de bästa sätten att välja alternativ för bildförinställningar.</td> 
   </tr>
   <tr>
    <td>Dynamic Media jämfört med direktintegrering med Dynamic Media Classic</td> 
@@ -103,4 +106,3 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
   </tr>
  </tbody>
 </table>
-

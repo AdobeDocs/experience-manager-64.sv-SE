@@ -1,8 +1,8 @@
 ---
 title: Java API QuickStart(SOAP) för slutpunktsregister
-seo-title: Java API QuickStart(SOAP) för slutpunktsregister
+seo-title: Endpoint Registry Java API QuickStart(SOAP)
 description: Använd Java API för Endpoint Registry för att lägga till en EJB-slutpunkt, lägga till en SOAP-slutpunkt, lägga till en bevakad mappslutpunkt, lägga till en e-postslutpunkt, lägga till en fjärrslutpunkt, lägga till en TaskManager-slutpunkt, ändra en slutpunkt, ta bort en slutpunkt och hämta information om slutpunktsanslutning.
-seo-description: Använd Java API för Endpoint Registry för att lägga till en EJB-slutpunkt, lägga till en SOAP-slutpunkt, lägga till en bevakad mappslutpunkt, lägga till en e-postslutpunkt, lägga till en fjärrslutpunkt, lägga till en TaskManager-slutpunkt, ändra en slutpunkt, ta bort en slutpunkt och hämta information om slutpunktsanslutning.
+seo-description: Use the Endpoint Registry Java API to add an EJB endpoint, add a SOAP endpoint, add a Watched folder endpoint, add an Email endpoint, add a remoting endpoint, add a TaskManager endpoint, modify an endpoint, remove an endpoint, and retrieve endpoint connector information.
 uuid: 986c55d0-e199-46f8-a3cc-a6baf5cce316
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: e5989859-e58d-4049-9e0d-c4c848d597af
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 70816a79-a200-4afa-8602-bf3c414665ea
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
 
-
 # SOAP (Endpoint Registry Java API Quick Start) {#endpoint-registry-java-api-quickstart-soap}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Java API Quick Start (SOAP) är tillgängligt för slutpunktsregistret.
 
@@ -256,7 +259,7 @@ I följande Java-kodexempel läggs en bevakad mappslutpunkt till i en tjänst me
 
 >[!NOTE]
 >
->Du måste inkludera filen WatchedFolderEndpointConfigConstants.java i ditt projekt för att kompilera och köra följande snabbstart. (Se [Konstanta filer för övervakade mappkonfigurationsvärden](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file).)
+>Du måste inkludera filen WatchedFolderEndpointConfigConstants.java i ditt projekt för att kompilera och köra följande snabbstart. (Se [Konstanta filer för mappkonfigurationsvärden som bevakas](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file).)
 
 ```as3
  /* 
@@ -391,7 +394,7 @@ I följande Java-kodexempel läggs en e-postslutpunkt till i en tjänst med namn
 
 >[!NOTE]
 >
->Du måste inkludera filen EmailEndpointConfigConstants.java i ditt projekt för att kompilera och köra följande snabbstart. (Se [E-postkonfigurationsvärdenas konstantfil](/help/forms/developing/programmatically-endpoints.md#email-configuration-values-constant-file).)
+>Du måste inkludera filen EmailEndpointConfigConstants.java i ditt projekt för att kompilera och köra följande snabbstart. (Se [Konstantfil för e-postkonfigurationsvärden](/help/forms/developing/programmatically-endpoints.md#email-configuration-values-constant-file).)
 
 ```as3
  /* 
@@ -635,7 +638,7 @@ I följande Java-kodexempel läggs en fjärrslutpunkt till i en tjänst med namn
 
 ## QuickStart: Lägga till en TaskManager-slutpunkt med Java API {#quickstart-adding-a-taskmanager-endpoint-using-the-java-api}
 
-I följande Java-kodexempel läggs en TaskManager-slutpunkt till i en tjänst med namnet *MyApplication/EncryptDocument*. Observera att kategorins namn är *EncryptProcess*. (Se [Lägga till slutpunkter för TaskManager](/help/forms/developing/programmatically-endpoints.md#adding-taskmanager-endpoints).)
+I följande Java-kodexempel läggs en TaskManager-slutpunkt till i en tjänst med namnet *MyApplication/EncryptDocument*. Observera att namnet på kategorin är *EncryptProcess*. (Se [Lägger till TaskManager-slutpunkter](/help/forms/developing/programmatically-endpoints.md#adding-taskmanager-endpoints).)
 
 ```as3
  /* 
@@ -744,7 +747,7 @@ I följande Java-kodexempel läggs en TaskManager-slutpunkt till i en tjänst me
 
 ## QuickStart: Ändra en slutpunkt med Java API {#quickstart-modifying-an-endpoint-using-the-java-api}
 
-I följande Java-kodexempel ändras en bevakad mappslutpunkt. Slutpunkten är för processen *MyApplication/EncryptDocument*. Den bevakade mappen ändras till `C:\NewWatchedFolder`. (Se [Ändra slutpunkter](/help/forms/developing/programmatically-endpoints.md#modifying-endpoints).)
+I följande Java-kodexempel ändras en bevakad mappslutpunkt. Slutpunkten är för *MyApplication/EncryptDocument* -processen. Den bevakade mappen ändras till `C:\NewWatchedFolder`. (Se [Ändra slutpunkter](/help/forms/developing/programmatically-endpoints.md#modifying-endpoints).)
 
 ```as3
  /* 
@@ -894,7 +897,7 @@ I följande Java-kodexempel ändras en bevakad mappslutpunkt. Slutpunkten är f�
 
 ## QuickStart: Ta bort en slutpunkt med Java API {#quickstart-removing-an-endpoint-using-the-java-api}
 
-Följande Java-kod tar bort en EJB-slutpunkt från en tjänst med namnet *MyApplication/EncryptDocument*. (Se [Ta bort slutpunkter](/help/forms/developing/programmatically-endpoints.md#removing-endpoints).)
+Följande Java-kod tar bort en EJB-slutpunkt från en tjänst med namnet *MyApplication/EncryptDocument*. (Se [Tar bort slutpunkter](/help/forms/developing/programmatically-endpoints.md#removing-endpoints).)
 
 ```as3
  /* 
@@ -1011,9 +1014,9 @@ Följande Java-kod tar bort en EJB-slutpunkt från en tjänst med namnet *MyAppl
  
 ```
 
-## QuickStart: Hämtar slutpunktsanslutningsinformation med Java API {#quickstart-retrieving-endpoint-connector-information-using-the-java-api}
+## QuickStart: Hämta slutpunktsanslutningsinformation med Java API {#quickstart-retrieving-endpoint-connector-information-using-the-java-api}
 
-Följande Java-kod hämtar information om en bevakad mappslutpunkt. Information om varje konfigurationsvärde hämtas och visas. Den här kodlistan anger om varje konfigurationsvärde är obligatoriskt eller valfritt. Dessutom visas namn och värde för varje konfigurationsvärde. (Se [Hämta information om slutpunktskoppling](/help/forms/developing/programmatically-endpoints.md#retrieving-endpoint-connector-information).)
+Följande Java-kod hämtar information om en bevakad mappslutpunkt. Information om varje konfigurationsvärde hämtas och visas. Den här kodlistan anger om varje konfigurationsvärde är obligatoriskt eller valfritt. Dessutom visas namn och värde för varje konfigurationsvärde. (Se [Hämtar information om slutpunktsanslutning](/help/forms/developing/programmatically-endpoints.md#retrieving-endpoint-connector-information).)
 
 ```as3
  /* 
@@ -1117,4 +1120,3 @@ Följande Java-kod hämtar information om en bevakad mappslutpunkt. Information 
  } 
  
 ```
-

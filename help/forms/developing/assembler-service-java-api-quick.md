@@ -1,8 +1,8 @@
 ---
 title: Java API QuickStart(SOAP) för Assembler Service
-seo-title: Java API QuickStart(SOAP) för Assembler Service
-description: Använd Assembler-tjänsten för att sammanställa ett PDF-dokument, demontera ett PDF-dokument, sammanställa ett krypterat PDF-dokument, sammanställa ett PDF-dokument med bates-numrering, sammanställa ett icke-interaktivt PDF-dokument, avgöra om ett dokument är PDF/A-kompatibelt, validera DX-dokument, sammanställa PDF-dokument med bokmärken, skapa ett DX-dokument dynamiskt, sammanställa PDF-portfolior och sammanställa flera XDP-fragment.
-seo-description: Använd Assembler-tjänsten för att sammanställa ett PDF-dokument, demontera ett PDF-dokument, sammanställa ett krypterat PDF-dokument, sammanställa ett PDF-dokument med bates-numrering, sammanställa ett icke-interaktivt PDF-dokument, avgöra om ett dokument är PDF/A-kompatibelt, validera DX-dokument, sammanställa PDF-dokument med bokmärken, skapa ett DX-dokument dynamiskt, sammanställa PDF-portfolior och sammanställa flera XDP-fragment.
+seo-title: Assembler Service Java API QuickStart(SOAP)
+description: Använd Assembler-tjänsten för att sätta ihop ett PDF-dokument, demontera ett PDF-dokument, sätta ihop ett krypterat PDF-dokument, sammanställa ett PDF-dokument med bates-numrering, sammanställa ett icke-interaktivt PDF-dokument, avgöra om ett dokument är PDF/A-kompatibelt, validera DDX-dokument, sammanställa PDF-dokument med bokmärken, skapa ett DDX-dokument dynamiskt, sammanställa PDF-portfolior och sammanställa flera Xers DP-fragment.
+seo-description: Use the Assembler service to assemble a PDF document, disassemble a PDF document, assemble an encrypted PDF document, assemble a PDF document with bates numbering, assemble a non-interactive PDF document, determine whether a document is PDF/A compliant, validate DDX documents, assemble PDF documents with bookmarks, create a DDX document dynamically, assemble PDF portfolios, and assemble multiple XDP fragments.
 uuid: 33ad5f7a-4f4c-4e72-937d-85891498a80e
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: b7b17cf8-def5-4a77-a872-c1f286814881
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 2efc0a84-4808-47dd-a859-76caf98b1872
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1123'
+source-wordcount: '1093'
 ht-degree: 0%
 
 ---
 
+# Java API QuickStart(SOAP) för Assembler Service {#assembler-service-java-api-quickstart-soap}
 
-# Java API QuickStart(SOAP) {#assembler-service-java-api-quickstart-soap} för Assembler-tjänsten
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Java API Quick Start (SOAP) är tillgängligt för Assembler-tjänsten
 
@@ -33,7 +36,7 @@ Java API Quick Start (SOAP) är tillgängligt för Assembler-tjänsten
 
 [Snabbstart (SOAP-läge): Sammanställa ett icke-interaktivt PDF-dokument med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Avgöra om ett dokument är PDF/A-kompatibelt med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api)
+[Snabbstart (SOAP-läge): Kontrollera om ett dokument är PDF/A-kompatibelt med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api)
 
 [Snabbstart (SOAP-läge): Validera DDX-dokument med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api)
 
@@ -41,7 +44,7 @@ Java API Quick Start (SOAP) är tillgängligt för Assembler-tjänsten
 
 [Snabbstart (SOAP-läge): Skapa ett DDX-dokument dynamiskt med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Sammanställa PDF-Portfolio med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
+[Snabbstart (SOAP-läge): Samla ihop PDF Portfolio med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
 
 [Snabbstart (SOAP-läge): Sammanställa flera XDP-fragment med Java API](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
 
@@ -49,11 +52,11 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 >[!NOTE]
 >
->Snabbstart i Programmering med AEM Forms baseras på den Forms-server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart i Programmering med AEM Forms baseras på den Forms-server som distribueras på JBoss Application Server och Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Sammanställa ett PDF-dokument med Java API {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}
 
-I följande Java-kodexempel sammanfogas två PDF-källdokument med namnen* map.pdf* och *directions.pdf* till ett enda PDF-dokument. Namnet på det enskilda PDF-dokumentet är *AssemblerResultPDF.pdf*. DDX-dokumentets namn är *shell.xml*. (Se [Programmatisk sammansättning av PDF-dokument](/help/forms/developing/assembling-pdf-documents.md#programmatically-assembling-pdf-documents).)
+I följande Java-kodexempel sammanfogas två källdokument i PDF med namnet* map.pdf* och *vägbeskrivning.pdf* till ett enda dokument i PDF. Det enda PDF-dokumentet heter *AssemblerResultPDF.pdf*. DDX-dokumentets namn är *shell.xml*. (Se [Programmisk sammanställning av PDF-dokument](/help/forms/developing/assembling-pdf-documents.md#programmatically-assembling-pdf-documents).)
 
 ```as3
  /* 
@@ -195,9 +198,9 @@ I följande Java-kodexempel sammanfogas två PDF-källdokument med namnen* map.p
  }
 ```
 
-## Snabbstart (SOAP-läge): Disassemblera ett PDF-dokument med Java API {#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api}
+## Snabbstart (SOAP-läge): Dela upp ett PDF-dokument med Java API {#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api}
 
-I följande Java-kodexempel demonteras ett PDF-dokument med namnet *AssemblerResultPDF.pdf*. Observera att namnet på DDX-dokumentet är *shell_disassemble.xml*. Varje upplöst PDF-dokument har namnet *ResultPDF[Number].pdf*. Det vill säga, det första upplösta PDF-dokumentet heter *ResultPDF1.pdf.* Mer information om  *shell_disassemble.* xmlDDX-dokumentet som används i det här kodexemplet finns i  [Dela upp PDF-dokument](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents) programmatiskt.
+I följande Java-kodexempel demonteras ett PDF-dokument med namnet *AssemblerResultPDF.pdf*. Observera att namnet på DDX-dokumentet är *shell_disassemble.xml*. Varje upplöst PDF-dokument namnges *ResultPDF[Nummer].pdf*. Det vill säga, det första uppdelade PDF-dokumentet namnges *ResultPDF1.pdf.* Mer information om *shell_disassemble.xml* DDX-dokument som används i det här kodexemplet finns i [Dela upp PDF-dokument programmatiskt](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents).
 
 ```as3
  /* 
@@ -336,7 +339,7 @@ I följande Java-kodexempel demonteras ett PDF-dokument med namnet *AssemblerRes
 
 ## Snabbstart (SOAP-läge): Sammanställa ett krypterat PDF-dokument med Java API {#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api}
 
-I följande Java-kodexempel sätts ett lösenordskrypterat PDF-dokument samman. Det oskyddade PDF-dokumentet heter *Loan.pdf*. Observera att namnet på DDX-dokumentet är *shell_Encrypt.xml*. Det krypterade PDF-dokumentet heter *AssemblerEncryptedPDF.pdf*. (Se [Sammanställa krypterade PDF-dokument](/help/forms/developing/assembling-pdf-documents.md#assembling-encrypted-pdf-documents).)
+I följande Java-kodexempel sätts ett lösenordskrypterat PDF-dokument samman. Det oskyddade PDF-dokumentet namnges *Loan.pdf*. Observera att namnet på DDX-dokumentet är *shell_Encrypt.xml*. Det krypterade PDF-dokumentet har ett namn *AssemblerEncryptedPDF.pdf*. (Se [Sammanställa krypterade PDF-dokument](/help/forms/developing/assembling-pdf-documents.md#assembling-encrypted-pdf-documents).)
 
 ```as3
  /* 
@@ -459,7 +462,7 @@ I följande Java-kodexempel sätts ett lösenordskrypterat PDF-dokument samman. 
 
 ## Snabbstart (SOAP-läge): Sammanställa ett PDF-dokument med Bates-numrering med Java API {#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api}
 
-Följande Java-kodexempel sätter ihop ett PDF-dokument med unika sididentifierare (bates-numrering). Observera att namnet på DDX-dokumentet är *shell_Bates.xml*. PDF-dokumentet som returneras från Assembler-tjänsten sparas som en PDF-fil med namnet *AssemblerResultBatesPDF.pdf*. (Se [Sammanställa dokument med Bates-numrering](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering).)
+Följande Java-kodexempel sätter ihop ett PDF-dokument med unika sididentifierare (bates-numrering). Observera att namnet på DDX-dokumentet är *shell_Bates.xml*. PDF-dokumentet som returneras från Assembler-tjänsten sparas som en PDF-fil med namnet *AssemblerResultBatesPDF.pdf*. (Se [Sammanställa dokument med hjälp av Bates-numrering](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering).)
 
 ```as3
  /* 
@@ -617,7 +620,7 @@ Följande Java-kodexempel sätter ihop ett PDF-dokument med unika sididentifiera
 
 ## Snabbstart (SOAP-läge): Sammanställa ett icke-interaktivt PDF-dokument med Java API {#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api}
 
-I följande Java-kodexempel sätts ett icke-interaktivt PDF-dokument samman. Det interaktiva PDF-dokumentet som skickas till Assembler-tjänsten heter *Loan.pdf*. Observera att namnet på DDX-dokumentet är *shell_XFA.xml*. Det icke-interaktiva PDF-dokumentet sparas som en PDF-fil med namnet *AssembleNonInteractivePDF.pdf*. (Se [Sammanställa icke-interaktiva PDF-dokument](/help/forms/developing/assembling-pdf-documents.md#assembling-non-interactive-pdf-documents).)
+I följande Java-kodexempel sätts ett icke-interaktivt PDF-dokument samman. Det interaktiva PDF-dokumentet som skickas till Assembler-tjänsten har ett namn *Loan.pdf*. Observera att namnet på DDX-dokumentet är *shell_XFA.xml*. Det icke-interaktiva PDF-dokumentet sparas som en PDF-fil med namnet *SammanställNonInteractivePDF.pdf*. (Se [Sammanställa icke-interaktiva PDF-dokument](/help/forms/developing/assembling-pdf-documents.md#assembling-non-interactive-pdf-documents).)
 
 ```as3
  /* 
@@ -739,9 +742,9 @@ I följande Java-kodexempel sätts ett icke-interaktivt PDF-dokument samman. Det
  
 ```
 
-## Snabbstart (SOAP-läge): Avgöra om ett dokument är PDF/A-kompatibelt med Java API {#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api}
+## Snabbstart (SOAP-läge): Kontrollera om ett dokument är PDF/A-kompatibelt med Java API {#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api}
 
-I följande Java-kodexempel avgörs om PDF-indatadokumentet är PDF/A-kompatibelt. PDF-indatadokumentet som skickas till Assembler-tjänsten heter *Loan.pdf*. DDX-dokumentets namn är shell_PDFA.xml. Det XML-dokument som returneras från Assembler-tjänsten och anger om PDF-indatadokumentet är PDF/A-kompatibelt sparas som en XML-fil med namnet result.xml. Mer information om det *shell_PDFA.xml* DDX-dokument som används i det här kodexemplet finns i [Ta reda på om dokument är PDF/A- kompatibla](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant).
+I följande Java-kodexempel avgörs om indatadokumentet PDF är PDF/A-kompatibelt. Indatadokumentet i PDF som skickas till Assembler-tjänsten har ett namn *Loan.pdf*. DDX-dokumentets namn är shell_PDFA.xml. Det XML-dokument som returneras från Assembler-tjänsten och anger om det inmatade PDF-dokumentet är PDF/A-kompatibelt sparas som en XML-fil med namnet result.xml. Mer information om *shell_PDFA.xml* DDX-dokument som används i det här kodexemplet finns i [Avgöra om dokument är PDF/A-kompatibla](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant).
 
 ```as3
  /* 
@@ -887,7 +890,7 @@ I följande Java-kodexempel avgörs om PDF-indatadokumentet är PDF/A-kompatibel
 
 ## Snabbstart (SOAP-läge): Validera DDX-dokument med Java API {#quick-start-soap-mode-validating-ddx-documents-using-the-java-api}
 
-I följande Java-kodexempel valideras ett DX-dokument baserat på en fil med namnet *bookmarkDDX.xml*. (Se [Validera DDX-dokument](/help/forms/developing/assembling-pdf-documents.md#validating-ddx-documents).)
+I följande Java-kodexempel valideras ett DX-dokument baserat på en fil med namnet *bookmarkDDX.xml*. (Se [Validerar DDX-dokument](/help/forms/developing/assembling-pdf-documents.md#validating-ddx-documents).)
 
 ```as3
  /* 
@@ -1018,7 +1021,7 @@ I följande Java-kodexempel valideras ett DX-dokument baserat på en fil med nam
 
 ## Snabbstart (SOAP-läge): Sammanställa PDF-dokument med bokmärken med Java API {#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api}
 
-I följande Java-kodexempel sammanställs ett PDF-dokument som innehåller bokmärken. DDX-dokumentets namn är *bookmarkDDX.xml*. Namnet på det XML-dokument för bokmärken som beskriver de bokmärken som ska läggas till i PDF-dokumentet är bookmarks.xml. Det resulterande PDF-dokumentet sparas som en PDF-fil med namnet AssemblerResultBookmarks.pdf. (Se [Sammanställa PDF-dokument med bokmärken](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-documents-with-bookmarks).)
+I följande Java-kodexempel sätts ett PDF-dokument som innehåller bokmärken samman. DDX-dokumentets namn är *bookmarkDDX.xml*. Namnet på det XML-dokument för bokmärken som beskriver de bokmärken som ska läggas till i PDF-dokumentet är bookmarks.xml. Det resulterande PDF-dokumentet sparas som en PDF-fil med namnet AssemblerResultBookmarks.pdf. (Se [Sammanställa PDF-dokument med bokmärken](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-documents-with-bookmarks).)
 
 ```as3
  /* 
@@ -1188,13 +1191,12 @@ I följande Java-kodexempel sammanställs ett PDF-dokument som innehåller bokm�
 
 ## Snabbstart (SOAP-läge): Skapa ett DDX-dokument dynamiskt med Java API {#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api}
 
-I följande Java-kodexempel skapas ett DDX-dokument dynamiskt som demonterar ett PDF-dokument. Ett nytt PDF-dokument skapas för varje nivå 1-bokmärke i PDF-indatadokumentet. Det här kodexemplet innehåller två användardefinierade metoder:
+I följande Java-kodexempel skapas ett DDX-dokument dynamiskt som demonterar ett PDF-dokument. Ett nytt PDF-dokument skapas för varje nivå 1-bokmärke i indatadokumentet för PDF. Det här kodexemplet innehåller två användardefinierade metoder:
 
-* `createDDX`: Skapar ett  `org.w3c.dom.Document` objekt som representerar det DDX-dokument som skickas till Assembler-tjänsten. Den här användardefinierade metoden returnerar `org.w3c.dom.Document`-objektet.
-* `convertDDX`: Konverterar ett  `org.w3c.dom.Document` objekt till ett  `com.adobe.idp.Document` objekt. Den här metoden accepterar ett `org.w3c.dom.Document`-objekt som en indataparameter och returnerar ett `com.adobe.idp.Document`-objekt.
+* `createDDX`: Skapar en `org.w3c.dom.Document` som representerar det DX-dokument som skickas till Assembler-tjänsten. Den här användardefinierade metoden returnerar `org.w3c.dom.Document` -objekt.
+* `convertDDX`: Konverterar en `org.w3c.dom.Document` objekt till `com.adobe.idp.Document` -objekt. Den här metoden accepterar `org.w3c.dom.Document` objekt som indataparameter och returnerar ett `com.adobe.idp.Document` -objekt.
 
-   Båda dessa metoder anropas i den här snabbstarten. (Se [Skapa DDX-dokument dynamiskt](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents).)
-&quot;
+   Båda dessa metoder anropas i den här snabbstarten. (Se [Skapa DDX-dokument dynamiskt](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents).) &quot;
 
 ```java
 /*
@@ -1383,9 +1385,9 @@ public class AssemblePDFWithDynamicDDXSOAP {
 }
 ```
 
-## Snabbstart (SOAP-läge): Sammanställa PDF-Portfolio med Java API {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}
+## Snabbstart (SOAP-läge): Samla ihop PDF Portfolio med Java API {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}
 
-I följande Java-kodexempel skapas en PDF-portfölj. PDF-portföljen sparas som en PDF-fil med namnet *AssemblerResultPortfolio.pdf*. (Se [Sammanställa PDF-Portfolio](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios).)
+I följande Java-kodexempel skapas en PDF-portfölj. PDF-portföljen sparas som en PDF-fil med namnet *AssemblerResultPortfolio.pdf*. (Se [Samla PDF Portfolio](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios).)
 
 ```as3
  /* 
@@ -1689,11 +1691,11 @@ I följande Java-kodexempel sätts XDP-fragment samman som är baserade på föl
 
 ## Snabbstart (SOAP-läge): Redigera bort ett PDF-dokument med Java API {#quick-start-soap-mode-redacting-a-pdf-document-using-the-java-api}
 
-I följande kodexempel tas ett PDF-dokument bort med `PDFUtility`.
+Följande kodexempel tar bort ett PDF-dokument med `PDFUtility`.
 
 >[!NOTE]
 >
->`PDFUtility` kan bara redigera bort PDF-filer som har markerats för bortredigering med Acrobat.
+>`PDFUtility` kan bara redigera bort PDF som har markerats för bortredigering med Acrobat.
 
 ```as3
 /* 
@@ -1780,4 +1782,3 @@ public class RedactPDF
     } 
 }
 ```
-

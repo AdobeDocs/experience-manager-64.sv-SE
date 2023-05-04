@@ -1,24 +1,27 @@
 ---
 title: Innehållsarkitektur
-seo-title: Innehållsarkitektur
+seo-title: Content Architecture
 description: Tips för att skapa ditt innehåll (tips - allt är innehåll)
-seo-description: Tips för att skapa innehåll i Adobe Experience Manager (AEM). (tips - allt är innehåll)
+seo-description: Tips for architecting your content in Adobe Experience Manager (AEM). (hint - everything is content)
 uuid: fef2bf0f-70ec-4621-8479-a62b7e1fbc07
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: ca46b74c-6114-458b-98c0-2a93abffcdc3
-translation-type: tm+mt
-source-git-commit: 14daff213297d2435765dd46039f346ce3868ac5
+exl-id: 9fff10fb-4b65-459a-a7a7-6ee9c0c26bf5
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
 
-
 # Innehållsarkitektur{#content-architecture}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Följ David modell {#follow-david-s-model}
 
@@ -26,7 +29,7 @@ David’s Model skrevs av David Nuescheler för flera år sedan, men dagens idé
 
 * Data kommer först, strukturen senare. Kanske.
 * Driv fram innehållshierarkin, låt den inte ske.
-* Arbetsytor är för `clone()`, `merge()` och `update()`.
+* Arbetsytor är till för `clone()`, `merge()`och `update()`.
 * Se upp för samma namn som syskon.
 * Referenser anses vara skadliga.
 * Filer är filer.
@@ -50,7 +53,7 @@ Servlets bör definieras baserat på resourceTypes i stället för sökvägar. D
 
 Nodtyper fungerar på en låg nivå i infrastrukturlagret och de flesta krav kan uppfyllas med hjälp av en sling:resourceType som tilldelats nodtypen int:unStructed, oak:Unstructed, sling:Folder eller cq:Page. Nodtyper motsvarar schemat i databasen och det kan vara väldigt dyrt att ändra nodtyperna längs vägen.
 
-### Följ namngivningskonventionerna i JCR {#adhere-to-naming-conventions-in-the-jcr}
+### Anta namnkonventioner i den gemensamma CR-rapporten {#adhere-to-naming-conventions-in-the-jcr}
 
 Om du följer namngivningskonventioner blir kodbasen mer konsekvent, vilket minskar förekomsten av defekter och ökar hastigheten för utvecklare som arbetar i systemet. Adobe använder följande konventioner för att utveckla AEM:
 
@@ -67,4 +70,3 @@ Om du följer namngivningskonventioner blir kodbasen mer konsekvent, vilket mins
 
    * Alla gemener
    * Ordseparation med bindestreck
-

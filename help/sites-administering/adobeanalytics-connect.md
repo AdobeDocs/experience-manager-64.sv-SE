@@ -10,14 +10,18 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 88dbfd34-1f8d-47a2-893d-20faf1a80f95
 exl-id: 654387e3-d837-4bde-a9e4-962862ad69e9
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1534'
+source-wordcount: '1570'
 ht-degree: 0%
 
 ---
 
 # Ansluta till Adobe Analytics och skapa ramverk{#connecting-to-adobe-analytics-and-creating-frameworks}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Om du vill spåra webbdata från dina AEM sidor i Adobe Analytics skapar du en Adobe Analytics Cloud Services-konfiguration och ett Adobe Analytics-ramverk:
 
@@ -53,7 +57,7 @@ Innan du fortsätter bör du kontrollera att du kan logga in på Adobe Analytics
 
 Adobe Analytics [datacenter](https://developer.omniture.com/en_US/content_page/concepts-terminology/c-how-is-data-stored) samla in, bearbeta och lagra data som är kopplade till Adobe Analytics rapporteringsprogram. Du måste konfigurera AEM att använda det datacenter som är värd för din Adobe Analytics rapporteringsprogramsvit. I följande tabell visas tillgängliga datacenter och deras URL.
 
-| Datacenter | Webbadress |
+| Datacenter | URL |
 |---|---|
 | San Jose | https://api.omniture.com/admin/1.4/rest/ |
 | Dallas | https://api2.omniture.com/admin/1.4/rest/ |

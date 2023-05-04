@@ -1,8 +1,8 @@
 ---
 title: Skapa en språkrot med det klassiska användargränssnittet
-seo-title: Skapa en språkrot med det klassiska användargränssnittet
+seo-title: Creating a Language Root Using the Classic UI
 description: Lär dig hur du skapar en språkrot med det klassiska användargränssnittet.
-seo-description: Lär dig hur du skapar en språkrot med det klassiska användargränssnittet.
+seo-description: Learn how to create a language root using the Classic UI.
 uuid: d44a51a0-1507-4838-851c-cacff48ad825
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,16 +10,19 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 237b8cc6-158e-4c51-970d-4c9cc74f6496
 feature: Language Copy
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 316903a8-22cf-45e6-a9f3-ac1d75beddec
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '352'
 ht-degree: 0%
 
 ---
 
-
 # Skapa en språkrot med det klassiska användargränssnittet{#creating-a-language-root-using-the-classic-ui}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 I följande procedur används det klassiska användargränssnittet för att skapa en språkrot för en plats. Mer information finns i [Skapa en språkrot](/help/sites-administering/tc-prep.md#creating-a-language-root).
 
@@ -52,11 +55,10 @@ I följande procedur används det klassiska användargränssnittet för att skap
 
    | Typ av språkkopia | Beskrivning |
    |---|---|
-   | autom. | Använder beteendet från överordnade sidor |
+   | auto | Använder beteendet från överordnade sidor |
    | ignorera | Skapar inte en kopia av den här sidan och dess underordnade sidor |
    | `<language>+` (t.ex. franska+) | Kopierar sidan och alla underordnade sidor från det språket |
    | `<language>` (t.ex. franska) | Kopierar endast sidan från det språket |
 
 1. Stäng dialogrutan genom att klicka på OK.
 1. Klicka på Ja i nästa dialogruta för att bekräfta kopian.
-

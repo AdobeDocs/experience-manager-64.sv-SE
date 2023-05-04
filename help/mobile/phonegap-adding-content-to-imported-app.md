@@ -1,8 +1,8 @@
 ---
 title: Är din hybridapp redo för AEM Mobile?
-seo-title: Är din hybridapp redo för AEM Mobile?
+seo-title: Is your hybrid app ready for AEM Mobile?
 description: Följ den här sidan om du vill veta mer om hrybridappar. En app i AEM delas vanligtvis in i två delar. "shell" och "content" och den här sidan ger mer information om dessa ämnen.
-seo-description: Följ den här sidan om du vill veta mer om hrybridappar. En app i AEM delas vanligtvis in i två delar. "shell" och "content" och den här sidan ger mer information om dessa ämnen.
+seo-description: Follow this page to learn about hrybrid apps. An app in AEM is commonly divided into two parts. The 'shell' and 'content' and this page provides more insight on these topics.
 uuid: cbcce3fa-9100-46ea-9f24-931b42666709
 contentOwner: User
 content-type: reference
@@ -10,16 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: b7fd7954-f2a5-402d-b259-e18b5a618be9
 pagetitle: Is your hybrid app ready for AEM Mobile?
-translation-type: tm+mt
-source-git-commit: 8078976ab79ccc0fefac5bfe6b000a008a917489
+exl-id: 79eafdb5-8b83-466a-8d06-da1a655a0619
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '777'
 ht-degree: 0%
 
 ---
 
+# Är din hybridapp redo för AEM Mobile?{#is-your-hybrid-app-ready-for-aem-mobile}
 
-# Är hybridappen klar för AEM Mobile?{#is-your-hybrid-app-ready-for-aem-mobile}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >

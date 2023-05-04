@@ -1,8 +1,8 @@
 ---
 title: Hantera inbjudna och lokala användarkonton
-seo-title: Hantera inbjudna och lokala användarkonton
+seo-title: Managing invited and local user accounts
 description: Med dokumentsäkerhet kan du söka efter, visa, redigera, låsa, låsa upp och ta bort inbjudna och lokala användarkonton.
-seo-description: Med dokumentsäkerhet kan du söka efter, visa, redigera, låsa, låsa upp och ta bort inbjudna och lokala användarkonton.
+seo-description: Using document security, you can search for, view, edit, lock, unlock, and delete invited and local user accounts.
 uuid: 0d0c717a-6e6e-4e42-96eb-3a7166e215ab
 contentOwner: admin
 content-type: reference
@@ -10,21 +10,24 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 65720eed-ab06-463f-9567-2fdc468b6219
 feature: Document Security
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: b83e1059-aada-4b89-b587-288d525ab0c2
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1232'
 ht-degree: 0%
 
 ---
 
-
 # Hantera inbjudna och lokala användarkonton {#managing-invited-and-local-user-accounts}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Använd sidan Inbjudna och lokala användare för att hantera inbjudna och lokala användare. Den här sidan visas bara om följande krav uppfylls:
 
 * Du är en administratör som har tilldelats rollen Hantera inbjudna och lokala användare och användarrollen för administrationskonsolen. (Se [Skapa och konfigurera roller](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).)
-* Inbjuden användarregistrering är aktiverat. (Se [Konfigurera registrering av inbjudna användare](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
+* Inbjuden användarregistrering är aktiverat. (Se [Konfigurerar inbjuden användarregistrering](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
 
 Sidan Inbjudna och lokala användare innehåller två flikar som du kan använda för att söka efter, visa, redigera, låsa, låsa upp och ta bort inbjude och lokala användarkonton.
 
@@ -36,12 +39,12 @@ Du kan även skicka registrerings-e-postmeddelanden manuellt till dina inbjudna 
 
 ## Lägg till en inbjuden användare {#add-an-invited-user}
 
-Du kan lägga till ett eller flera inbjudna användarkonton i dokumentskyddet samtidigt. Om du vill lägga till ett inbjudet användarkonto behöver du användarens e-postadress. När du lägger till en användare skickas ett registrerings-e-postmeddelande med en inbjudan till användaren att registrera sig.
+Du kan lägga till ett eller flera inbjudna användarkonton i dokumentskyddet samtidigt. Om du vill lägga till ett inbjudet användarkonto behöver du användarens e-postadress. När du lägger till en användare skickar dokumentsäkerheten ett registrerings-e-postmeddelande med en inbjudan till användaren att registrera sig.
 
 1. I administrationskonsolen klickar du på Tjänster > Dokumentsäkerhet > Inbjudna och lokala användare och sedan på Bjud in ny användare.
 1. Skriv e-postadresserna till de användare som du vill bjuda in. Ange flera adresser på en rad, avgränsade med kommatecken.
 
-   Meddelandet som du skapade när du aktiverade registrering för inbjudna användare skickas till användarna. (Se [Konfigurera registrering av inbjudna användare](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
+   Meddelandet som du skapade när du aktiverade registrering för inbjudna användare skickas till användarna. (Se [Konfigurerar inbjuden användarregistrering](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
 
 1. Klicka på OK.
 
@@ -66,7 +69,7 @@ När du lägger till en inbjuden användare skickar dokumentsäkerheten automati
 
 Du kan återställa lösenord för aktiverade inbjudna användare som har registrerat sig med dokumentsäkerhet men har glömt sitt lösenord. När du återställer ett lösenord skapas ett e-postmeddelande som innehåller ett nytt, tillfälligt lösenord för användaren.
 
-När du aktiverade den inbjudna användarregistreringsprocessen skapade du ett e-postmeddelande som kommer att skickas till användarna som ber dem att återställa sina lösenord. (Se [Konfigurera registrering av inbjudna användare](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
+När du aktiverade den inbjudna användarregistreringsprocessen skapade du ett e-postmeddelande som kommer att skickas till användarna som ber dem att återställa sina lösenord. (Se [Konfigurerar inbjuden användarregistrering](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
 
 1. I administrationskonsolen klickar du på Tjänster > Dokumentsäkerhet > Inbjudna och lokala användare och sedan på fliken Lokala användare.
 1. Välj lämplig användare i användarlistan.
@@ -134,4 +137,3 @@ Du kan lättare hitta användare genom att sortera användarlistan efter kolumnr
    1. I administrationskonsolen klickar du på Tjänster > Dokumentsäkerhet > Inbjudna och lokala användare.
    1. Om du vill sortera inbjudna användare klickar du på fliken Inbjudna användare och sedan på lämplig kolumnrubrik.
    1. Om du vill sortera lokala användare klickar du på fliken Lokala användare och sedan på lämplig kolumnrubrik.
-

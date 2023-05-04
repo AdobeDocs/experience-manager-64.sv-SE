@@ -2,7 +2,7 @@
 title: AEM Forms on OSGi Groups and Privileges
 seo-title: AEM Forms on OSGi Groups and Privileges
 description: Tilldela användare till grupperna för att hantera AEM Forms på OSGi
-seo-description: Tilldela användare till grupperna för att hantera AEM Forms på OSGi
+seo-description: Assign users to the groups to manage AEM Forms on OSGi
 uuid: 9ebb3a4e-4c0e-4105-921f-58077fc45281
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,20 +11,24 @@ topic-tags: Configuration
 discoiquuid: 71412f5d-ff34-415f-baf8-d300756b93a9
 role: Admin
 exl-id: a79e863e-c316-422e-a565-b0ffdeffcc00
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
 
 # AEM Forms on OSGi Groups and Privileges {#aem-forms-on-osgi-groups-and-privileges}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 Tilldela användare till grupperna för att hantera AEM Forms på OSGi
 
 Du kan [skapa grupper](/help/sites-administering/user-group-ac-admin.md#group-administration) och tilldela profiler och [användare](/help/sites-administering/user-group-ac-admin.md#user-administration) till grupperna i AEM. Dessa profiler styr behörigheter för de användare som är en del av gruppen.
 
-När du har installerat [AEM Forms-tilläggspaket](/help/forms/using/installing-configuring-aem-forms-osgi.md) blir de grupper som nämns i den här artikeln automatiskt tillgängliga för tilldelning, till exempel formuläranvändare och formuläranvändare. I följande tabell visas de uppgifter som en användare kan utföra för AEM Forms på OSGi baserat på grupptilldelningarna:
+När du har installerat [AEM Forms tilläggspaket](/help/forms/using/installing-configuring-aem-forms-osgi.md), är de grupper som nämns i den här artikeln, t.ex. användare av blanketter och användare av blanketter, automatiskt tillgängliga för tilldelning. I följande tabell visas de uppgifter som en användare kan utföra för AEM Forms på OSGi baserat på grupptilldelningarna:
 
 <table> 
  <tbody>
@@ -33,7 +37,7 @@ När du har installerat [AEM Forms-tilläggspaket](/help/forms/using/installing-
    <td>Uppgifter</td> 
   </tr>
   <tr>
-   <td>forms-user <sup>[1]</sup></td> 
+   <td>formuläranvändare <sup>[1]</sup></td> 
    <td>
     <ul> 
      <li>Skapa, förhandsgranska, publicera och skicka adaptiva formulär</li> 
@@ -63,7 +67,7 @@ När du har installerat [AEM Forms-tilläggspaket](/help/forms/using/installing-
     </ul> </td> 
   </tr>
   <tr>
-   <td>template-authors <sup>[2]</sup></td> 
+   <td>mallskapare <sup>[2]</sup></td> 
    <td>
     <ul> 
      <li>Skapa och förhandsgranska anpassningsbara formulär eller mallar för interaktiv kommunikation</li> 

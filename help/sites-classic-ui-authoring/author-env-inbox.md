@@ -1,37 +1,40 @@
 ---
 title: Din inkorg
-seo-title: Din inkorg
+seo-title: Your Inbox
 description: Du kan få meddelanden från olika AEM, till exempel meddelanden om arbetsobjekt eller uppgifter som representerar åtgärder som du måste utföra på sidinnehållet.
-seo-description: Du kan få meddelanden från olika AEM, till exempel meddelanden om arbetsobjekt eller uppgifter som representerar åtgärder som du måste utföra på sidinnehållet.
+seo-description: You can receive notifications from various areas of AEM such as notification about work items or tasks that represent actions that you need to perform on page content.
 uuid: 90a3b4db-add9-47d4-a95d-fcc3863d6255
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 71f16254-336f-41bf-bf75-f69ba1051d59
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: e7111c21-1f38-4d0d-ac4b-c83133c0d8d6
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '611'
-ht-degree: 1%
+source-wordcount: '617'
+ht-degree: 0%
 
 ---
 
-
 # Din inkorg{#your-inbox}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Du kan få meddelanden från olika AEM, till exempel meddelanden om arbetsobjekt eller uppgifter som representerar åtgärder som du måste utföra på sidinnehållet.
 
 Du får dessa meddelanden i två inkorgar, som avgränsas med typen av meddelanden:
 
-* En inkorg där du kan se de meddelanden du får som ett resultat av prenumerationer beskrivs i följande avsnitt.
-* En särskild inkorg för arbetsflödesobjekt beskrivs i dokumentet [Delta i arbetsflöden](/help/sites-classic-ui-authoring/classic-workflows-participating.md).
+* En inkorg där du kan se meddelanden som du får som ett resultat av prenumerationer beskrivs i följande avsnitt.
+* En särskild inkorg för arbetsflödesobjekt beskrivs i [Delta i arbetsflöden](/help/sites-classic-ui-authoring/classic-workflows-participating.md) -dokument.
 
-## Visa dina meddelanden {#viewing-your-notifications}
+## Visa meddelanden {#viewing-your-notifications}
 
 Så här visar du dina meddelanden:
 
-1. Öppna meddelandeinkorgen: i konsolen **Webbplatser** klickar du på användarknappen i det övre högra hörnet och väljer **Aviseringsinkorg**.
+1. Öppna meddelandeinkorgen: i **Webbplatser** klickar du på användarknappen i det övre högra hörnet och väljer **Inkorgen för meddelanden**.
 
    ![screen_shot_2012-02-08at105226am](assets/screen_shot_2012-02-08at105226am.png)
 
@@ -52,7 +55,7 @@ Så här visar du dina meddelanden:
 
 Så här prenumererar du på meddelanden:
 
-1. Öppna meddelandeinkorgen: i konsolen **Webbplatser** klickar du på användarknappen i det övre högra hörnet och väljer **Aviseringsinkorg**.
+1. Öppna meddelandeinkorgen: i **Webbplatser** klickar du på användarknappen i det övre högra hörnet och väljer **Inkorgen för meddelanden**.
 
    ![screen_shot_2012-02-08at105226am-1](assets/screen_shot_2012-02-08at105226am-1.png)
 
@@ -62,7 +65,7 @@ Så här prenumererar du på meddelanden:
    >
    >`https://<host>:<port>/libs/wcm/core/content/inbox.html`
 
-1. Klicka på **Konfigurera..** i det övre vänstra hörnet för att öppna konfigurationsdialogrutan.
+1. Klicka **Konfigurera...** i det övre vänstra hörnet för att öppna konfigurationsdialogrutan.
 
    ![screen_shot_2012-02-08at11056am](assets/screen_shot_2012-02-08at111056am.png)
 
@@ -73,7 +76,7 @@ Så här prenumererar du på meddelanden:
 
    >[!NOTE]
    >
-   >Ett par inställningar måste konfigureras för att kunna meddelas via e-post. Det går också att anpassa e-postmallen eller lägga till en e-postmall för ett nytt språk. Se [Konfigurera e-postmeddelanden](/help/sites-administering/notification.md#configuringemailnotification) för att konfigurera e-postmeddelanden i AEM.
+   >Ett par inställningar måste konfigureras för att kunna meddelas via e-post. Det går också att anpassa e-postmallen eller lägga till en e-postmall för ett nytt språk. Se [Konfigurerar e-postmeddelande](/help/sites-administering/notification.md#configuringemailnotification) för att konfigurera e-postmeddelanden i AEM.
 
 1. Välj de sidåtgärder som ska meddelas:
 
@@ -85,30 +88,29 @@ Så här prenumererar du på meddelanden:
 
    * Ändrad: när en sida har ändrats.
    * Skapad: när en sida har skapats.
-   * Borttagen: när en sida har tagits bort via sidborttagningsåtgärden.
+   * Borttagen: när en sida har tagits bort genom sidborttagningsåtgärden.
    * Utrullad: när en sida har rullats ut.
 
 1. Definiera sökvägarna för sidorna som du ska meddelas om:
 
-   * Klicka på **Lägg till** för att lägga till en ny rad i tabellen.
-   * Klicka på tabellcellen **Path** och ange sökvägen, t.ex. `/content/docs`.
-   * Vill du få ett meddelande för alla sidor som tillhör underträdet, anger du **Exakt?** till  **Nej**.
+   * Klicka **Lägg till** om du vill lägga till en ny rad i tabellen.
+   * Klicka på **Bana** tabellcell och ange sökvägen, t.ex. `/content/docs`.
+   * Ska meddelas för alla sidor som tillhör underträdet, ange **Exakt?** till **Nej**.
 
-      Vill du bara få meddelanden om åtgärder på sidan som definieras av sökvägen anger du **Exakt?** till  **Ja**.
+      Om du bara vill få meddelanden om åtgärder på sidan som definieras av sökvägen anger du **Exakt?** till **Ja**.
 
-   * Om du vill tillåta regeln anger du **Regel** till **Tillåt**. Om **Neka** anges nekas regeln men tas inte bort och kan tillåtas senare.
+   * Om du vill tillåta regeln anger du **Regel** till **Tillåt**. Om inställt på **Neka**, nekas regeln men tas inte bort och kan tillåtas senare.
 
    Om du vill ta bort en definition markerar du raden genom att klicka på en tabellcell och klickar på **Ta bort**.
 
-1. Klicka på **OK** för att spara konfigurationen.
+1. Klicka **OK** för att spara konfigurationen.
 
 ## Bearbetar dina meddelanden {#processing-your-notifications}
 
-Om du har valt att ta emot meddelanden i din AEM inkorg kommer din inkorg att fyllas i med meddelanden. Du kan [visa dina meddelanden](#viewing-your-notifications) och sedan välja de meddelanden som krävs för att:
+Om du har valt att ta emot meddelanden i din AEM inkorg kommer din inkorg att fyllas i med meddelanden. Du kan [visa meddelanden](#viewing-your-notifications) välj sedan de meddelanden som krävs för att:
 
-* Godkänn den genom att klicka på **Godkänn**: värdet i kolumnen **Read** är **true**.
+* Godkänn den genom att klicka **Godkänn**: värdet i **Läs** kolumnen är inställd på **true**.
 
-* Ta bort den genom att klicka på **Ta bort**.
+* Ta bort den genom att klicka **Ta bort**.
 
 ![chlimage_1-9](assets/chlimage_1-9.jpeg)
-

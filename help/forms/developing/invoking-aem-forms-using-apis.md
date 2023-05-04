@@ -1,8 +1,8 @@
 ---
 title: Anropa AEM Forms med API:er
-seo-title: Anropa AEM Forms med API:er
-description: 'Adobe Experience Manager Forms är en J2EE-baserad företagsprogramvara som består av tjänster som fungerar i en delad infrastruktur. Lär dig hur du använder klientprogram för att anropa AEM Forms programmatiskt med ett Java API, webbtjänster, Remoting och REST API. '
-seo-description: Adobe Experience Manager Forms är en J2EE-baserad företagsprogramvara som består av tjänster som fungerar i en delad infrastruktur. Lär dig hur du använder klientprogram för att anropa AEM Forms programmatiskt med ett Java API, webbtjänster, Remoting och REST API.
+seo-title: Invoking AEM Forms using APIs
+description: Adobe Experience Manager Forms är en J2EE-baserad företagsprogramvara som består av tjänster som fungerar i en delad infrastruktur. Lär dig hur du använder klientprogram för att anropa AEM Forms programmatiskt med ett Java API, webbtjänster, Remoting och REST API.
+seo-description: Adobe Experience Manager Forms is J2EE-based enterprise software that consists of services that operate within a shared infrastructure. Learn how to use client applications to invoke AEM Forms programmatically using a Java API, web services, Remoting, and REST API.
 uuid: d100e106-e508-4d3c-ba8c-b5fe13c9e2d6
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: development-tools, coding
 discoiquuid: 1825e12c-0306-4e0a-9643-47ce1ce82132
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 6b60209f-aced-4698-97f1-b1a7782eef46
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
 
-
 # Anropa AEM Forms med API:er {#invoking-aem-forms-using-apis}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Adobe Experience Manager Forms är en J2EE-baserad företagsprogramvara som består av tjänster som fungerar i en delad infrastruktur. Serviceåtgärder brukar förbruka eller producera dokument. Med AEM Forms kan man kombinera arbetsflöden för blanketter med elektroniska blanketter, dokumentsäkerhet och dokumentgenerering i en integrerad och sammanhängande uppsättning tjänster. Dessa tjänster kan nås inifrån och utanför brandväggen.
 
@@ -32,4 +35,3 @@ Tjänsterna kräver en tjänstbehållare för att köras, ungefär som Enterpris
 >[!NOTE]
 >
 >Programmering med AEM innehåller ingen information om hur du anropar AEM Forms med Bevakade mappar eller e-post.
-

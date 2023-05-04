@@ -1,28 +1,31 @@
 ---
 title: AEM Forms-kortkommandon
-seo-title: AEM Forms-kortkommandon
+seo-title: AEM Forms Keyboard Shortcuts
 description: I den här artikeln listas de kortkommandon som kan användas med Adaptiv formulärredigerare, Theme Editor, Content Browser och Correspondence Management för Windows och Macintosh.
-seo-description: I den här artikeln listas de kortkommandon som kan användas med Adaptiv formulärredigerare, Theme Editor, Content Browser och Correspondence Management.
+seo-description: This article lists the keyboard shortcuts that can be used with Adaptive Form Editor, Theme Editor, Content Browser, and Correspondence Management.
 uuid: 1a16c2e6-c0f1-42e0-9ab4-692f3e58eeaf
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 content-type: reference
 topic-tags: author, correspondence-management
 discoiquuid: 010e3639-b1a9-40fb-8615-7d18c4784b73
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 08cf95bc-3417-48d4-9df2-5bd56797bc5d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1174'
-ht-degree: 10%
+source-wordcount: '1183'
+ht-degree: 0%
 
 ---
 
-
 # AEM Forms-kortkommandon {#aem-forms-keyboard-shortcuts}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 I den här artikeln listas de kortkommandon som kan användas med Adaptiv formulärredigerare, Theme Editor, Content Browser och Correspondence Management för Windows och Macintosh.
 
-## Anpassad formulärredigerare {#adaptiveformeditor}
+## Adaptiv formulärredigerare {#adaptiveformeditor}
 
 | **Åtgärd** | **Kortkommando i Windows** | **Kortkommando i Mac OS** |
 |---|---|---|
@@ -34,14 +37,14 @@ I den här artikeln listas de kortkommandon som kan användas med Adaptiv formul
 | Ångra senaste ändring | Ctrl+Z | Ctrl+Z&amp;ast; |
 | Gör om senaste ändring | Ctrl+Y | Ctrl+Y&amp;ast; |
 | Markera flera komponenter | Skift+klicka | Skift+klicka |
-| Kopiera markerad komponent | Ctrl-C | Ctrl-C&amp;ast; |
+| Kopiera markerad komponent | Ctrl-C | Ctrl&amp;ast; |
 | Klipp ut markerade komponenter. Klippkomponenten försvinner inte förrän den klistras in på den nya platsen. | Ctrl-X | Ctrl-X&amp;ast; |
 | Klistra in komponent(er) | Ctrl+V | Ctrl+V |
 | Ta bort markerade komponenter | Ctrl+Del | Ctrl+Del&amp;ast; |
 | Ta bort markerade komponenter | Ctrl+Backsteg | Ctrl+Backsteg&amp;ast; |
 | Gör text fet när komponenten RTF-redigerare används i förhandsgranskningsläget | Ctrl+B | Ctrl+B&amp;ast; |
-| Kursivera text när komponenten RTF-redigerare används i förhandsgranskningsläget | Ctrl+I | Ctrl+I&amp;ämpel;ast; |
-| Gör text fet när komponenten RTF-redigerare används i förhandsgranskningsläget | Ctrl+U | Ctrl+U&amp;ppna;ast; |
+| Kursivera text när komponenten RTF-redigerare används i förhandsgranskningsläget | Ctrl+I | Ctrl+I&amp;ast; |
+| Gör text fet när komponenten RTF-redigerare används i förhandsgranskningsläget | Ctrl+U | Ctrl+U&amp;ast; |
 
 >[!NOTE]
 >
@@ -52,13 +55,11 @@ I den här artikeln listas de kortkommandon som kan användas med Adaptiv formul
 >Flera val på en stationär enhet:
 >
 >* Windows: Ctrl-klicka på nödvändiga komponenter.
->* MAC OS: Kommando-klicka på nödvändiga komponenter.
-
+>* Mac OS: Kommando-klicka på nödvändiga komponenter.
 >
 
 
-
-## Theme Editor {#themeeditor}
+## Theme Editor  {#themeeditor}
 
 | **Åtgärd** | **Kortkommando i Windows** | **Kortkommando i Mac OS** |
 |---|---|---|
@@ -72,7 +73,7 @@ I den här artikeln listas de kortkommandon som kan användas med Adaptiv formul
 >
 >Kortkommandon som är markerade med &#39;&amp;ast;&#39; fungerar både med Ctrl- och Kommando-tangenterna i Mac OS.
 
-## Content Browser {#contentbrowser}
+## Content Browser  {#contentbrowser}
 
 | **Åtgärd** | **Kortkommando i Windows** | **Kortkommando i Mac OS** |
 |---|---|---|
@@ -90,10 +91,10 @@ I den här artikeln listas de kortkommandon som kan användas med Adaptiv formul
 
 I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel som du kan använda i textredigeraren för Correspondence Management. Du kan använda följande kortkommandon medan du är:
 
-* Skapa eller redigera en [Text](document-fragments.md)-resurs
-* Redigera en textmodul när användaren har tryckt på den relevanta redigeringsikonen ( ![edittextmodule](assets/edittextmodule.png)) när [du skapar en korrespondens](/help/forms/using/create-correspondence.md).
+* Skapa eller redigera en [Text](document-fragments.md) resurs
+* Redigera en textmodul när användaren har tryckt på redigeringsikonen ( ![edittextmodule](assets/edittextmodule.png)) när [skapa korrespondens](/help/forms/using/create-correspondence.md).
 
-### Textmarkering och flytta markören runt {#text-selection-and-moving-the-cursor-around}
+### Textmarkering och flytta runt markören {#text-selection-and-moving-the-cursor-around}
 
 <table> 
  <tbody>
@@ -104,7 +105,7 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
   </tr>
   <tr>
    <td><p>Markera aktuellt ord</p> </td> 
-   <td><p>Ctrl+Skift+Högerpil</p> </td> 
+   <td><p>Ctrl+Skift+högerpil</p> </td> 
    <td>Kommando+Skift+högerpil</td> 
   </tr>
   <tr>
@@ -114,7 +115,7 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
   </tr>
   <tr>
    <td><p>Utöka en markering till början av ett stycke</p> </td> 
-   <td><p>Ctrl+Skift+Uppil</p> </td> 
+   <td><p>Ctrl+Skift+Uppåtpil</p> </td> 
    <td>Kommando+Skift+Uppåtpil</td> 
   </tr>
   <tr>
@@ -129,7 +130,7 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
   </tr>
   <tr>
    <td><p>Flytta markören till början av nästa ord</p> </td> 
-   <td><p>Ctrl+Högerpil</p> </td> 
+   <td><p>Ctrl+högerpil</p> </td> 
    <td>Alt+högerpil <em><sup>[1]</sup></em></td> 
   </tr>
   <tr>
@@ -144,7 +145,7 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
   </tr>
   <tr>
    <td><p>Flytta markören till föregående stycke.</p> </td> 
-   <td><p>Ctrl+Uppil</p> </td> 
+   <td><p>Ctrl+Uppåtpil</p> </td> 
    <td>Alt+Uppåtpil</td> 
   </tr>
   <tr>
@@ -154,8 +155,8 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
   </tr>
   <tr>
    <td><p>Markera text ett i taget ett tecken framåt</p> </td> 
-   <td><p>Skift+Högerpil</p> </td> 
-   <td>Skift+Högerpil</td> 
+   <td><p>Skift+högerpil</p> </td> 
+   <td>Skift+högerpil</td> 
   </tr>
   <tr>
    <td><p>Markera text ett i taget ett stycke bakåt</p> </td> 
@@ -190,7 +191,7 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
   <tr>
    <td><p>Markera text från aktuell position till slutet (i modulen)</p> </td> 
    <td><p>Skift+Ctrl+End</p> </td> 
-   <td>Kommando+Skift+Nedåtpil<br /> </td> 
+   <td>Kommando+Skift+Nedpil<br /> </td> 
   </tr>
   <tr>
    <td><p>Markera text från aktuell position till början (i modulen)</p> </td> 
@@ -287,7 +288,7 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
  </tbody>
 </table>
 
-### Tar bort ett ord {#deleting-a-word}
+### Ta bort ett ord {#deleting-a-word}
 
 <table> 
  <tbody>
@@ -303,8 +304,8 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
   </tr>
   <tr>
    <td><p>Ta bort ord till höger om markören</p> </td> 
-   <td><p>Ctrl+Del</p> </td> 
-   <td>Ctrl+Del</td> 
+   <td><p>Ctrl+Delete</p> </td> 
+   <td>Ctrl+Delete</td> 
   </tr>
  </tbody>
 </table>
@@ -362,4 +363,3 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
   </tr>
  </tbody>
 </table>
-

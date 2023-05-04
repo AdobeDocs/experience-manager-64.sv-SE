@@ -4,15 +4,19 @@ description: Konfigurera Experience Manager Assets för användning med tillägg
 contentOwner: Vishabh Gupta
 role: Admin
 feature: Asset Management
-source-git-commit: 227b929c7eecb4fa65f5c50fffc5d9ed802411e1
+exl-id: 6d9a954f-433d-41ec-9bb9-45e857890aba
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2927'
+source-wordcount: '2963'
 ht-degree: 0%
 
 ---
 
-
 # Konfigurera Experience Manager Assets för Adobe Asset Link {#adobe-asset-link}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 [Adobe Asset Link (AAL)](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html) effektiviserar samarbetet mellan kreatörer och marknadsförare när det gäller att skapa innehåll. Den kopplar samman Adobe Experience Manager Assets med Creative Cloud datorprogram Adobe InDesign, Adobe Photoshop och Adobe Illustrator. På Adobe Asset Link-panelen kan kreativa användare komma åt och ändra innehåll som lagras i AEM Assets utan att lämna de kreativa program de är mest bekanta med.
 
@@ -192,7 +196,7 @@ För varje Experience Manager-grupp som synkroniseras med en Adobe IMS-grupp (so
 
 1. Se till att gruppen har en medlem som kan användas för en första anslutning från Adobe Asset Link.
 1. Använd den användaren för att logga in på Adobe Asset Link och ansluta till Experience Manager. Den här anslutningen förväntas misslyckas.
-1. I Experience Manager letar du reda på gruppen som motsvarar gruppen i Adobe IMS och ger den den åtkomstkontroll som du behöver. Den nya gruppen blir till exempel medlem i gruppen dam-users.
+1. I Experience Manager letar du reda på den grupp som motsvarar gruppen i Adobe IMS och ger den den åtkomstkontroll som du behöver. Den nya gruppen blir till exempel medlem i gruppen dam-users.
 1. Stäng Adobe Asset Link och starta om Creative Cloud.
 1. Om du vill verifiera att användaren har rätt åtkomst öppnar du Adobe Asset Link igen.
 
@@ -292,11 +296,6 @@ Om du får problem när du konfigurerar eller använder Adobe Asset Link kan du 
 >[!MORELIKETHIS]
 >
 >* [Om Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
->* [Använd Asset Link i Creative Cloud-datorprogrammet och hantera resurser](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)
+>* [Använd Asset Link i Creative Cloud-datorprogrammet och hantera resurser](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html)
 >* [Konfigurera Adobe Experience Manager Assets as a Cloud Service](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html).
-
-
-
-
-
 

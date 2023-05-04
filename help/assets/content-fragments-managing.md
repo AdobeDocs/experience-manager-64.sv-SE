@@ -12,14 +12,18 @@ discoiquuid: da8f968b-91cc-45a8-ae4b-757b4f840b8e
 exl-id: b21ba7a1-6e6f-4b95-9336-b49f7e932af5
 feature: Content Fragments
 role: User
-source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1404'
+source-wordcount: '1440'
 ht-degree: 2%
 
 ---
 
 # Hantera innehållsfragment {#managing-content-fragments}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!CAUTION]
 >
@@ -67,7 +71,7 @@ Metoden för att skapa ett innehållsfragment är (i princip) densamma för båd
 
          Fragmenttiteln.
 
-         Obligatorisk.
+         Obligatoriskt.
 
       * **[!UICONTROL Description]**
       * **[!UICONTROL Tags]**

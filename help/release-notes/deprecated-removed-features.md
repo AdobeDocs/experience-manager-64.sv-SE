@@ -2,14 +2,18 @@
 title: Föråldrade och borttagna funktioner
 description: Versionsinformation om borttagna funktioner i Adobe Experience Manager 6.4.
 exl-id: 2fe0dad7-fc78-4aac-afa3-79a278008453
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1344'
 ht-degree: 2%
 
 ---
 
 # Föråldrade och borttagna funktioner {#deprecated-and-removed-features}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Adobe utvärderar ständigt produktfunktioner för att så småningom förnya eller ersätta äldre funktioner med modernare alternativ för att förbättra det totala kundvärdet, alltid med noggrant övervägande av bakåtkompatibilitet.
 

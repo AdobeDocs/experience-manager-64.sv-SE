@@ -1,8 +1,8 @@
 ---
 title: Enkel inloggning
-seo-title: Enkel inloggning
+seo-title: Single Sign On
 description: Lär dig hur du konfigurerar enkel inloggning (SSO) för en AEM.
-seo-description: Lär dig hur du konfigurerar enkel inloggning (SSO) för en AEM.
+seo-description: Learn how to configure Single Sign On (SSO) for an AEM instance.
 uuid: b8dcb28e-4604-4da5-b8dd-4e1e2cbdda18
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,16 +10,19 @@ content-type: reference
 topic-tags: Security, configuring
 discoiquuid: 86e8dc12-608d-4aff-ba7a-5524f6b4eb0d
 feature: Configuring
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: ae7e8ce6-7bdd-462b-8939-361c122317b3
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
 
-
 # Enkel inloggning {#single-sign-on}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Med enkel inloggning (SSO) kan en användare få åtkomst till flera system efter att ha angett inloggningsuppgifter (till exempel användarnamn och lösenord) en gång. Ett separat system (som kallas betrodd autentiserare) utför autentiseringen och ger Experience Manager inloggningsuppgifterna. Experience Manager kontrollerar och verkställer användarens åtkomstbehörigheter (d.v.s. avgör vilka resurser användaren har åtkomst till).
 
@@ -36,30 +39,30 @@ Konfigurera följande två tjänster för att identifiera namnet på attributet 
 * Inloggningsmodulen.
 * Tjänsten för SSO-autentisering.
 
-Du måste ange samma attributnamn för båda tjänsterna. Attributet ingår i `SimpleCredentials` som anges för `Repository.login`. Attributets värde är irrelevant och ignoreras, och bara dess närvaro är viktig och verifierad.
+Du måste ange samma attributnamn för båda tjänsterna. Attributet ingår i `SimpleCredentials` som tillhandahålls `Repository.login`. Attributets värde är irrelevant och ignoreras, och bara dess närvaro är viktig och verifierad.
 
 ## Konfigurerar enkel inloggning {#configuring-sso}
 
-Om du vill konfigurera enkel inloggning för en AEM instans måste du konfigurera [autentiseringshanteraren för enkel inloggning](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler):
+Om du vill konfigurera enkel inloggning för en AEM instans måste du konfigurera [Hanterare för SSO-autentisering](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler):
 
-1. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information och rekommenderade metoder finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md).
+1. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
    För NTLM:
 
-   * **sökväg:** efter behov; till exempel  `/`
-   * **Rubriknamn**:  `LOGON_USER`
-   * **ID-format**:  `^<DOMAIN>\\(.+)$`
+   * **Sökväg:** vid behov, till exempel `/`
+   * **Rubriknamn**: `LOGON_USER`
+   * **ID-format**: `^<DOMAIN>\\(.+)$`
 
-      Där `<*DOMAIN*>` ersätts av ditt eget domännamn.
+      Plats `<*DOMAIN*>` ersätts med ditt eget domännamn.
    För CoSign:
 
-   * **sökväg:** efter behov; till exempel  `/`
+   * **Sökväg:** vid behov, till exempel `/`
    * **Rubriknamn**: remote_user
    * **ID-format:** asIs
 
    För SiteMinder:
 
-   * **sökväg:** efter behov; till exempel  `/`
+   * **Sökväg:** vid behov, till exempel `/`
    * **Rubriknamn:** SM_USER
    * **ID-format**: asIs
 
@@ -77,7 +80,6 @@ Om du vill konfigurera enkel inloggning för en AEM instans måste du konfigurer
 >
 >Kontrollera också att du bara konfigurerar den som krävs för SSO-konfigurationen för rubriker, cookies och begär parameternamn.
 
-
 >[!NOTE]
 >
 >Enkel inloggning används ofta tillsammans med [LDAP](/help/sites-administering/ldap-config.md).
@@ -88,33 +90,26 @@ Om du vill konfigurera enkel inloggning för en AEM instans måste du konfigurer
 >
 >* `disp_iis.ini`
 >* IIS
-
 >
->
-I `disp_iis.ini`-uppsättningen:\
->(Mer information finns i [installera Dispatcher med Microsoft Internet Information Server](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html#microsoft-internet-information-server))
+>I `disp_iis.ini` set:\
+>(se [installera Dispatcher med Microsoft Internet Information Server](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html#microsoft-internet-information-server) för fullständig information)
 >
 >* `servervariables=1` (vidarebefordrar IIS-servervariabler som begäranrubriker till fjärrinstansen)
 >* `replaceauthorization=1` (ersätter en rubrik med namnet&quot;Authorization&quot;, som inte är&quot;Basic&quot;, med motsvarande&quot;Basic&quot;)
-
 >
+>I IIS:
 >
-I IIS:
+>* disable **Anonym åtkomst**
 >
->* inaktivera **anonym åtkomst**
-   >
-   >
-* aktivera **Integrerad Windows-autentisering**
-
+>* enable **Integrerad Windows-autentisering**
 >
 
 
-
-Du kan se vilken autentiseringshanterare som används i valfri del av innehållsträdet med alternativet **Authenticator** i Felix Console; till exempel:
+Du kan se vilken autentiseringshanterare som används i vilken del av innehållsträdet som helst genom att använda **Autentiserare** Valmöjlighet i Felix Console. till exempel:
 
 `http://localhost:4502/system/console/slingauth`
 
-Hanteraren som bäst matchar banan efterfrågas först. Om du till exempel konfigurerar handler-A för sökvägen `/` och handler-B för sökvägen `/content` kommer en begäran till `/content/mypage.html` att fråga handler-B först.
+Hanteraren som bäst matchar banan efterfrågas först. Om du till exempel konfigurerar handler-A för sökvägen `/` och handler-B för banan `/content`och därefter en begäran om att `/content/mypage.html` frågar hanteraren-B först.
 
 ![screen_shot_2012-02-15at21006pm](assets/screen_shot_2012-02-15at21006pm.png)
 
@@ -130,15 +125,15 @@ Cookie: TestCookie=admin
 
 Använda följande konfiguration:
 
-* **Sökväg**:  `/`
+* **Bana**: `/`
 
-* **Rubriknamn**:  `TestHeader`
+* **Rubriknamn**: `TestHeader`
 
-* **Cookie-namn**:  `TestCookie`
+* **Cookie-namn**: `TestCookie`
 
-* **Parameternamn**:  `TestParameter`
+* **Parameternamn**: `TestParameter`
 
-* **ID-format**:  `AsIs`
+* **ID-format**: `AsIs`
 
 Svaret skulle vara:
 
@@ -161,27 +156,27 @@ Transfer-Encoding: chunked
 Detta fungerar även om du begär:\
 `http://localhost:4502/libs/cq/core/content/welcome.html?TestParameter=admin`
 
-Du kan också använda följande curl-kommando för att skicka `TestHeader`-huvudet till `admin:`\
+Du kan också använda följande bock-kommando för att skicka `TestHeader` sidhuvud till `admin:`\
 `curl -D - -H "TestHeader: admin" http://localhost:4502/libs/cq/core/content/welcome.html`
 
 >[!NOTE]
 >
->När du använder parametern request i en webbläsare visas bara en del av HTML - utan CSS. Detta beror på att alla begäranden från HTML görs utan parametern request.
+>När du använder parametern request i en webbläsare visas bara en del av HTML - utan CSS. Detta beror på att alla förfrågningar från HTML görs utan parametern request.
 
-## Tar bort AEM utloggningslänkar {#removing-aem-sign-out-links}
+## Ta bort AEM utloggningslänkar {#removing-aem-sign-out-links}
 
 När du använder enkel inloggning hanteras inloggning och utloggning externt, så att AEM egna utloggningslänkar inte längre kan användas och bör tas bort.
 
 Utloggningslänken på välkomstskärmen kan tas bort med följande steg.
 
-1. Överlägg `/libs/cq/core/components/welcome/welcome.jsp` till `/apps/cq/core/components/welcome/welcome.jsp`
+1. Övertäckning `/libs/cq/core/components/welcome/welcome.jsp` till `/apps/cq/core/components/welcome/welcome.jsp`
 1. ta bort följande del från jsp.
 
    `<a href="#" onclick="signout('<%= request.getContextPath() %>');" class="signout"><%= i18n.get("sign out", "welcome screen") %>`
 
 Så här tar du bort den utloggningslänk som är tillgänglig på användarens personliga meny i det övre högra hörnet:
 
-1. Överlägg `/libs/cq/ui/widgets/source/widgets/UserInfo.js` till `/apps/cq/ui/widgets/source/widgets/UserInfo.js`
+1. Övertäckning `/libs/cq/ui/widgets/source/widgets/UserInfo.js` till `/apps/cq/ui/widgets/source/widgets/UserInfo.js`
 
 1. Ta bort följande del från filen:
 
@@ -193,4 +188,3 @@ Så här tar du bort den utloggningslänk som är tillgänglig på användarens 
    });
    menu.addSeparator();
    ```
-

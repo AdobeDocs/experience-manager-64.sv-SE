@@ -1,24 +1,27 @@
 ---
 title: Grundläggande kommentarer
-seo-title: Grundläggande kommentarer
+seo-title: Comments Essentials
 description: Översikt över komponenten Kommentarer
-seo-description: Översikt över komponenten Kommentarer
+seo-description: Comments component overview
 uuid: 58b7bb58-f598-4bcb-93ae-b7795cab51cd
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 18f54a1c-52aa-414d-b494-1f19b5c10345
-translation-type: tm+mt
-source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+exl-id: 3d5396b5-10e5-49bc-aa11-5a3df93d70c3
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
 
-
 # Grundläggande kommentarer {#comments-essentials}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 På den här sidan finns information om hur du arbetar med kommentarsystemet (kommentarkomponenten) och alternativ för att hantera användargenererat innehåll (UGC) som genereras när medlemmar skickar kommentarer eller svar.
 
@@ -38,10 +41,10 @@ Kommentarskomponenten skapar ett kommentarsystem så att varje inlägg represent
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>Clientlibs</strong></a></td> 
-   <td>cq.ckeditor<br /> cq.social.hbs.comments<br /> cq.social.hbs.voice</td> 
+   <td>cq.ckeditor<br /> cq.social.hbs.comments<br /> cq.social.hbs.röstning</td> 
   </tr>
   <tr>
-   <td> <strong>templates</strong></td> 
+   <td> <strong>mallar</strong></td> 
    <td> /libs/social/commons/components/hbs/comments/comments.hbs<br /> </td> 
   </tr>
   <tr>
@@ -89,16 +92,15 @@ Detta gäller alla komponenter som utökar ett kommentarsystem.
 ### Åtkomst till bokförda kommentarer (UGC) {#accessing-posted-comments-ugc}
 
 UGC bör modereras med någon av standardmetoderna för moderering.\
-Se [Moderating User Generated Content](moderate-ugc.md).
+Se [Modererar användargenererat innehåll](moderate-ugc.md).
 
-Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities används [gemensam lagringsplats](working-with-srp.md) för UGC omfattar programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (till exempel ASRP, MSRP eller JSRP).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
 Se:
 
-* [Översikt över](srp.md)  lagringsresursprovidern - Introduktion och databasanvändning - översikt
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md)  - riktlinjer för kodning
-* [Omfaktorisering för SocialUtils](socialutils.md)  - Mappa borttagna verktygsmetoder till aktuella SRP-verktygsmetoder
-
+* [Översikt över lagringsresursprovider](srp.md) - Översikt över användning av introduktion och databas
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - Riktlinjer för kodning
+* [Omfaktorisering för SocialUtils](socialutils.md) - Mappar borttagna verktygsmetoder till aktuella SRP-verktygsmetoder

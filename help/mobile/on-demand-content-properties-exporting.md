@@ -1,36 +1,39 @@
 ---
 title: Exportera innehåll med hjälp av innehållsegenskaper
-seo-title: Exportera innehåll med hjälp av innehållsegenskaper
+seo-title: Using Content Properties to Export Content
 description: På följande sida visas Appegenskaper och -noder.
-seo-description: På följande sida visas Appegenskaper och -noder.
+seo-description: The following page shows App Properties and Nodes.
 uuid: 73f1832f-e457-47d0-a0e1-80af90897d31
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: a3006835-b1d2-47d6-959a-cdb692e34e1e
-translation-type: tm+mt
-source-git-commit: e13927738ed34bc62c174a5be02f0f1d707e3012
+exl-id: 27aa405d-2388-4f91-85d0-1a8709e0d5d0
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '344'
-ht-degree: 1%
+source-wordcount: '366'
+ht-degree: 0%
 
 ---
 
+# Exportera innehåll med hjälp av innehållsegenskaper{#using-content-properties-to-export-content}
 
-# Exportera innehåll{#using-content-properties-to-export-content} med innehållsegenskaper
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (t.ex. Reagera). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Appar representeras som *cq:Pages* i AEM.
+Apparna representeras som *cq:Sidor* AEM.
 
-De delar samma gemensamma egenskaper som finns i alla *cq:Page* utöver de andra som visas nedan och som representerar integrationsegenskaper som stöds.
+De delar samma gemensamma egenskaper som finns i *cq:Page* utöver de andra som visas nedan och som representerar egenskaper som stöder integrering.
 
-## Programegenskaper {#app-properties}
+## Appegenskaper {#app-properties}
 
-I följande tabell visas **Programegenskaper och noder**.
+Följande tabell visar **Programegenskaper och noder**.
 
 <table>
  <tbody>
@@ -66,7 +69,7 @@ I följande tabell visas **Programegenskaper och noder**.
   </tr>
   <tr>
    <td>dps-sharedHTMLResources-lastUploaded</td>
-   <td>Date</td>
+   <td>Datum</td>
    <td>Datum för senaste överföring av delade resurser från AEM till AEM Mobile.</td>
   </tr>
   <tr>

@@ -1,8 +1,8 @@
 ---
 title: Webbplatsmallar
-seo-title: Webbplatsmallar
+seo-title: Site Templates
 description: Åtkomst till konsolen Platsmallar
-seo-description: Åtkomst till konsolen Platsmallar
+seo-description: How to access the Site Templates console
 uuid: d2f7556e-7e43-424e-82f1-41790aeb2d98
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -11,20 +11,24 @@ content-type: reference
 discoiquuid: 202d7dba-2b34-431d-b10f-87775632807f
 role: Admin
 exl-id: 5049c5df-c874-4c34-a96b-7944cd0353d5
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '476'
 ht-degree: 1%
 
 ---
 
 # Webbplatsmallar {#site-templates}
 
-Konsolen Webbplatsmallar påminner mycket om konsolen [Gruppmallar](tools-groups.md), som är inriktad på funktioner som är av intresse för communitygrupper.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+Konsolen Platsmallar liknar [Gruppmallar](tools-groups.md) konsolen, som fokuserar på funktioner av intresse för gemenskapsgrupper.
 
 >[!NOTE]
 >
->Konsolerna för att skapa [communitywebbplatser](sites-console.md), [mallar för communitywebbplatser](sites.md), [mallar för communitygrupper](tools-groups.md) och [communityfunktioner](functions.md) får endast användas i författarmiljön.
+>Konsolerna för att skapa [communitysajter](sites-console.md), [mallar för communitysajter](sites.md), [communitygruppsmallar](tools-groups.md) och [communityfunktioner](functions.md) används endast i författarmiljön.
 
 ## Konsol för webbplatsmallar {#site-templates-console}
 
@@ -32,7 +36,7 @@ För att nå webbcommunitywebbplatskonsolen i redigeringsmiljön
 
 * Från global navigering: **[!UICONTROL Tools > Communities > Site Templates]**
 
-Den här konsolen visar de mallar från vilka en [community-plats](sites-console.md) kan skapas och tillåter att nya webbplatsmallar skapas.
+Den här konsolen visar mallarna från vilka en [communitywebbplats](sites-console.md) kan skapas och tillåter att nya webbplatsmallar skapas.
 
 ![chlimage_1-18](assets/chlimage_1-18.png)
 
@@ -69,7 +73,7 @@ En växlingsväxling som styr om mallen kan refereras
 
 Om du vill lägga till communityfunktioner drar du från höger sida till vänster i den ordning som länkarna på webbplatsmenyn ska visas. Format används på mallen när webbplatsen skapas.
 
-Om du till exempel vill ha en hemsida drar du funktionen Sida från biblioteket och släpper under mallbyggaren. Detta resulterar i att dialogrutan för sidkonfiguration öppnas. Mer information om konfigurationsdialogrutorna finns i [funktionskonsolen](functions.md).
+Om du till exempel vill ha en hemsida drar du funktionen Sida från biblioteket och släpper under mallbyggaren. Detta resulterar i att dialogrutan för sidkonfiguration öppnas. Se [function console](functions.md) om du vill ha information om konfigurationsdialogrutorna.
 
 Fortsätt att dra och släppa andra communityfunktioner som du vill ha för en community-webbplats som baseras på den här mallen.
 
@@ -77,9 +81,9 @@ Sidfunktionen ger en tom sida. Med gruppfunktionen kan du skapa en gruppwebbplat
 
 >[!CAUTION]
 >
->Gruppfunktionen får *inte* vara *först eller den enda*-funktionen i platsstrukturen.
+>Funktionen groups måste *not* vara *först eller bara* i platsstrukturen.
 >
->Alla andra funktioner, till exempel [sidfunktionen](functions.md#page-function), måste inkluderas och visas först.
+>Alla andra funktioner, till exempel [sidfunktion](functions.md#page-function), måste inkluderas och listas först.
 
 ![chlimage_1-22](assets/chlimage_1-22.png)
 
@@ -89,7 +93,7 @@ När du inkluderar en gruppfunktion i platsmallen, kräver konfigurationen att d
 
 >[!CAUTION]
 >
->Funktionen Groups får *inte* vara *först eller den enda funktionen* i platsstrukturen.
+>Funktionen Grupper måste *not* vara *först eller bara* i platsstrukturen.
 
 ![chlimage_1-23](assets/chlimage_1-23.png)
 
@@ -99,6 +103,6 @@ Genom att välja två eller flera mallar för communitygrupper får gruppadminis
 
 ## Redigera webbplatsmall {#edit-site-template}
 
-När du visar platsmallar i huvudkonsolen [Platsmallar](#site-templates-console) går det att välja en befintlig platsmall för redigering.
+När du visar webbplatsmallar i huvudmappen [Konsol för webbplatsmallar](#site-templates-console)kan du välja en befintlig platsmall för redigering.
 
-Den här processen ger samma paneler som [när du skapar en platsmall](#create-site-template).
+Den här processen ger samma paneler som [skapa en webbplatsmall](#create-site-template).

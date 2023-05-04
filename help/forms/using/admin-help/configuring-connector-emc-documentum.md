@@ -1,26 +1,29 @@
 ---
 title: Konfigurera Connector for EMC Documentum
-seo-title: Konfigurera Connector for EMC Documentum
+seo-title: Configuring Connector for EMC Documentum
 description: Lär dig hur du konfigurerar anslutningsprogrammet för EMC Documentum för att möjliggöra kommunikation mellan AEM och EMC Documentum.
-seo-description: Lär dig hur du konfigurerar anslutningsprogrammet för EMC Documentum för att möjliggöra kommunikation mellan AEM och EMC Documentum.
+seo-description: Learn how to configure the Connector for EMC Documentum to enable communication between AEM forms and EMC Documentum.
 uuid: fc96900a-ec8a-4efd-ad8e-25e9967e649b
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e62370a7-9d9e-43a3-8014-8e53800c870d
-translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+exl-id: 86cc01f0-b6c0-4beb-a203-96dc1989d8f0
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1047'
-ht-degree: 1%
+source-wordcount: '1060'
+ht-degree: 0%
 
 ---
 
+# Konfigurera Connector for EMC Documentum {#configuring-connector-for-emc-documentum}
 
-# Konfigurerar koppling för EMC Documentum {#configuring-connector-for-emc-documentum}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-Koppling för EMC Documentum möjliggör kommunikation mellan AEM och EMC Documentum. Mer bakgrundsinformation finns i &quot;Connectors for ECM&quot; i [Services Reference](https://www.adobe.com/go/learn_aemforms_services_63).
+Koppling för EMC Documentum möjliggör kommunikation mellan AEM och EMC Documentum. Mer bakgrundsinformation finns i &quot;Connectors for ECM&quot; i [Tjänstreferens](https://www.adobe.com/go/learn_aemforms_services_63).
 
 När du konfigurerar Connector för EMC Documentum måste du konfigurera serveranslutningen och databasautentiseringsuppgifterna.
 
@@ -28,7 +31,7 @@ När du konfigurerar Connector för EMC Documentum måste du konfigurera servera
 >
 >I tidigare versioner kunde resurserna lagras i en ECM-databas. I den aktuella versionen lagras resurser i AEM för inbyggda formulär och databasleverantörstjänsterna har tagits bort. Överföring av resurser från en ECM-databas till databasen med AEM formulär sker när du uppgraderar till AEM formulär. Mer information finns i uppgraderingsguiden för AEM formulär för programservern.
 
-## Konfigurerar serveranslutningen {#configuring-the-server-connection}
+## Konfigurera serveranslutningen {#configuring-the-server-connection}
 
 I det här avsnittet beskrivs de uppgifter för Connector for EMC Documentum som du kan utföra på sidan Konfigurationsinställningar.
 
@@ -58,15 +61,15 @@ Om du anger fel användarnamn eller lösenord får du följande resultat, beroen
 1. Om inget explicit databasnamn anges vid inloggning anger du det databasnamn som autentiseringsuppgifterna är kopplade till.
 1. Klicka på Spara.
 
-### Ändra databastjänstprovidern {#change-the-repository-service-provider}
+### Ändra databasens tjänstleverantör {#change-the-repository-service-provider}
 
 Du kan konfigurera vilken databastjänstleverantör som ska användas med Documentum. Databastjänstanrop delegeras till providern som du konfigurerar. Följande alternativ är tillgängliga:
 
 **Aktuellt namn på databastjänstleverantör:** Namnet på den aktuella databastjänstprovidern
 
-**ECM Documentum-databasprovider:** gör Documentum-databasprovidern till databasprovidern. Det här alternativet har tagits bort
+**ECM Documentum-databasleverantör:** Gör Documentum-databasprovidern till databasprovidern. Det här alternativet har tagits bort
 
-**databasprovider:** gör den inbyggda databasprovidern till databasprovidern
+**databasprovider:** Gör den inbyggda databasprovidern till databasprovidern
 
 >[!NOTE]
 >
@@ -76,14 +79,14 @@ Du kan konfigurera vilken databastjänstleverantör som ska användas med Docume
 1. Välj den alternativa databastjänstleverantören i informationsfältet för databastjänstleverantör.
 1. Klicka på Spara.
 
-## Konfigurerar databasinloggningsuppgifter {#configuring-repository-credentials}
+## Konfigurerar databasreferenser {#configuring-repository-credentials}
 
 Documentum-inloggningsinformationen används i systemkontexten för AEM formulär. Databasens autentiseringsuppgifter är specifika för vissa databaser i Documentum. Du kan ange autentiseringsuppgifter för valfritt antal databaser; Du kan dock bara ange en uppsättning uppgifter per databas.
 
 ### Lägg till en databasautentiseringsuppgift {#add-a-repository-credential}
 
 1. I administrationskonsolen klickar du på Tjänster > Koppling för EMC Documentum > Inställningar för databasautentiseringsuppgifter.
-1. Klicka på Lägg till Sidan Documentum System Credentials Information visas.
+1. Klicka på Lägg till. Sidan Documentum System Credentials Information visas.
 1. Ange ett namn för databasen.
 1. Ange ett användarnamn och lösenord.
 1. Klicka på Spara.
@@ -117,4 +120,3 @@ Vissa manuella steg krävs för att se till att funktionen för begäran om deln
 1. I variabelvyn öppnar du egenskaperna för variabeln&quot;theForm&quot; och ändrar URI:n så att den matchar sökvägen där du placerade filen QueueSharing.swf i steg 5.
 1. Spara processen.
 1. Migrera processen till produktionsmiljön enligt organisationens policy.
-

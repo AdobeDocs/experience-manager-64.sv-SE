@@ -1,24 +1,27 @@
 ---
 title: Köra AEM formulär i underhållsläge
-seo-title: Köra AEM formulär i underhållsläge
+seo-title: Running AEM forms in maintenance mode
 description: Underhållsläget är användbart när du utför uppgifter som att korrigera en DSC-fil, uppgradera AEM formulär eller använda ett Service Pack-paket. Läs mer om hur du kör AEM formulär i underhållsläge.
-seo-description: Underhållsläget är användbart när du utför uppgifter som att korrigera en DSC-fil, uppgradera AEM formulär eller använda ett Service Pack-paket. Läs mer om hur du kör AEM formulär i underhållsläge.
+seo-description: Maintenance mode is useful when performing tasks such as patching a DSC, upgrading AEM forms, or applying a service pack. Learn more about running AEM forms in maintenance mode.
 uuid: 9aa3be20-f17e-4384-b4ce-daaee2898c96
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 94047c12-ba3d-457a-954f-e035c7cc3ecd
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 2f56bbc7-5e23-4c84-ac0a-03f0b01150b3
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '310'
 ht-degree: 0%
 
 ---
 
-
 # Köra AEM formulär i underhållsläge {#running-aem-forms-in-maintenance-mode}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Underhållsläget är användbart när du utför uppgifter som att korrigera en DSC-fil, uppgradera AEM formulär eller använda ett Service Pack-paket.
 
@@ -31,7 +34,7 @@ Undvik att anropa processer när servern är i underhållsläge. Detta är vad s
 
 1. I en webbläsare anger du:
 
-   `https://`*[]*`:`*[]* `/dsc/servlet/DSCStartupServlet?maintenanceMode=pause&user=`*[värdnamnportadministratör ]*`&password=`*[användarnamn lösenord]*
+   `https://`*[värdnamn ]*`:`*[port]* `/dsc/servlet/DSCStartupServlet?maintenanceMode=pause&user=`*[administratörsanvändarnamn ]*`&password=`*[lösenord]*
 
    Ett&quot;nu pausat&quot;-meddelande visas i webbläsarfönstret.
 
@@ -43,7 +46,7 @@ Undvik att anropa processer när servern är i underhållsläge. Detta är vad s
 
 1. I en webbläsare anger du:
 
-   `https://`*[värdnamn]:[]*`/dsc/servlet/DSCStartupServlet?maintenanceMode=isPaused&user=`*[portadministratör]* `&password=`*[användarnamnLösenord ]*
+   `https://`*[värdnamn]:[port ]*`/dsc/servlet/DSCStartupServlet?maintenanceMode=isPaused&user=`*[administratörsanvändarnamn]* `&password=`*[lösenord ]*
 
    Statusen visas i webbläsarfönstret. Statusen &quot;true&quot; anger att servern körs i underhållsläge och &quot;false&quot; anger att servern inte är i underhållsläge.
 
@@ -51,7 +54,6 @@ Undvik att anropa processer när servern är i underhållsläge. Detta är vad s
 
 1. I en webbläsare anger du:
 
-   `https://`*[värdnamn]:[]*`/dsc/servlet/DSCStartupServlet?maintenanceMode=resume&user=`*[portadministratör]* `&password=`*[användarnamnLösenord ]*
+   `https://`*[värdnamn]:[port ]*`/dsc/servlet/DSCStartupServlet?maintenanceMode=resume&user=`*[administratörsanvändarnamn]* `&password=`*[lösenord ]*
 
    Ett meddelande som&quot;nu körs&quot; visas i webbläsarfönstret.
-

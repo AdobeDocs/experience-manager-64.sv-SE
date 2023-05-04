@@ -1,24 +1,27 @@
 ---
 title: Forumfunktion
-seo-title: Forumfunktion
+seo-title: Forum Feature
 description: Lägga till och konfigurera forumfunktionen
-seo-description: Lägga till och konfigurera forumfunktionen
+seo-description: How to add and configure the forum feature
 uuid: ced860ef-6f8a-4df2-acc8-6a48140fca83
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 discoiquuid: 3495f983-d71e-4704-be4e-8a42a63f72db
-translation-type: tm+mt
-source-git-commit: 28948f1f8678512f8fc970a4289cb01cde86c5c2
+exl-id: fa6f28b4-3217-4b6a-b223-506da0ecca9e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '984'
 ht-degree: 0%
 
 ---
 
-
 # Forumfunktion {#forum-feature}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Introduktion {#introduction}
 
@@ -34,31 +37,31 @@ Forumfunktionen tillhandahåller ett område där besökare (community-medlemmar
 Detta avsnitt i dokumentationen beskriver
 
 * Lägga till forumfunktionen på en AEM webbplats
-* Konfigurationsinställningar för `Forum`komponenten
+* Konfigurationsinställningar för `Forum`komponent
 
 ## Lägga till ett forum på en sida {#adding-a-forum-to-a-page}
 
-Om du vill lägga till en `Forum`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på
+Lägga till en `Forum` -komponent till en sida i redigeringsläge använder du komponentwebbläsaren för att leta upp
 
 * `Communities / Forum`
 
 Och dra den till rätt plats på en sida där forumet ska visas.
 
-Mer information finns på [Grunderna för communitykomponenter](basics.md).
+Nödvändig information finns på [Grunderna för communitykomponenter](basics.md).
 
-När de [nödvändiga klientbiblioteken](essentials-forum.md#essentials-for-client-side) inkluderas visas `Forum`komponenten så här:
+När [nödvändiga bibliotek på klientsidan](essentials-forum.md#essentials-for-client-side) ingår så här `Forum`visas:
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
 ## Konfigurera ett forum {#configuring-a-forum}
 
-Markera den monterade `Forum`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `Forum` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
 
 ![chlimage_1-61](assets/chlimage_1-61.png) ![chlimage_1-62](assets/chlimage_1-62.png)
 
 ### Fliken Inställningar {#settings-tab}
 
-Ange inställningar för ämnen och svar på fliken **[!UICONTROL Settings]**:
+Under **[!UICONTROL Settings]** -fliken, ange inställningar för ämnen och svar:
 
 * **[!UICONTROL Topics Per Page]**
 Definierar antalet ämnen/inlägg som visas per sida. Standardvärdet är 10.
@@ -73,22 +76,22 @@ Om det här alternativet är markerat stängs forumet för nya ämnen och kommen
 Om det här alternativet är markerat kan du skriva in ämnen och kommentarer med markeringar. Standard är avmarkerat.
 
 * **[!UICONTROL Allow Tagging]**
-Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se  **[!UICONTROL Tag field]** flik). Standard är avmarkerat.
+Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se **[!UICONTROL Tag field]** -fliken). Standard är avmarkerat.
 
 * **[!UICONTROL Allow File Uploads]**
 Om du markerar det här alternativet kan du tillåta att bifogade filer läggs till i ämnet eller kommentaren. Standard är avmarkerat.
 
 * **[!UICONTROL Allow Following]**
-Om det här alternativet är markerat kan du inkludera följande funktion för foruminlägg, som gör att medlemmar kan  [](notifications.md) meddelas om nya inlägg. Standard är avmarkerat.
+Om du markerar det här alternativet inkluderas följande funktion för foruminlägg, som gör att medlemmar kan [meddelad](notifications.md) av nya tjänster. Standard är avmarkerat.
 
 * **[!UICONTROL Allow Pinning]**
 Om det här alternativet är markerat kan forumämnen fästas överst i ämneslistan. Standard är avmarkerat.
 
 * **[!UICONTROL Allow Featured Content]**
-om du markerar det här alternativet kan idén identifieras som  [aktuellt innehåll](featured.md). Standard är avmarkerat.
+om det är markerat kan idén identifieras som [innehåll](featured.md). Standard är avmarkerat.
 
 * **[!UICONTROL Allow Email Subscriptions]**
-Om det här alternativet är markerat kan medlemmar meddelas om nya inlägg via e-post ([prenumeration](subscriptions.md)). Kräver att `Allow Following` kontrolleras och [e-post konfigureras](email.md). Standard är avmarkerat.
+Om det här alternativet är markerat, tillåt medlemmar att meddelas om nya inlägg via e-post ([prenumeration](subscriptions.md)). Kräver `Allow Following` ska kontrolleras och [e-post konfigurerad](email.md). Standard är avmarkerat.
 
 * **[!UICONTROL Max File Size]**
 Endast relevant om 
@@ -114,15 +117,15 @@ Inkludera röstfunktionen med ett ämne om det är markerat. Standard är avmark
 Om du markerar det här alternativet visas navigeringsbeskrivningar på ämnessidor. Standard är markerat.
 
 * **[!UICONTROL Display Badges]**
-Om det här alternativet är markerat visas intjänade och tilldelade  [](implementing-scoring.md) märken med en medlems blogginlägg. Standard är avmarkerat.
+Om det här alternativet är markerat visas intjänad och tilldelad [emblem](implementing-scoring.md) med en medlems blogginlägg. Standard är avmarkerat.
 
 >[!NOTE]
 >
->Du kan behöva kontrollera både `AllowThreaded Replies` och `Allow users to Delete Comments and Topics` för att kunna aktivera kommentarer om ett ämne.
+>Det kan vara nödvändigt att kontrollera båda `AllowThreaded Replies` och `Allow users to Delete Comments and Topics` för att aktivera kommentarer om ett ämne.
 
 ### Fliken Användarmoderering {#user-moderation-tab}
 
-På fliken **[!UICONTROL User Moderation]** anger du hur publicerade ämnen och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Moderating User Generated Content](moderate-ugc.md).
+Under **[!UICONTROL User Moderation]** anger du hur publicerade ämnen och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Modererar användargenererat innehåll](moderate-ugc.md).
 
 * **[!UICONTROL Deny Posts]**
 Om det här alternativet är markerat kan pålitliga medlemsmoderatorer neka inlägg och förhindra att posten visas på det offentliga forumet. Standard är avmarkerat.
@@ -148,31 +151,31 @@ Ange hur många gånger ett ämne eller en kommentar måste flaggas av medlemmar
 * **[!UICONTROL Flagging Limit]**
 Ange hur många gånger ett ämne eller en kommentar måste flaggas innan det döljs för den offentliga vyn. Om värdet är -1 döljs aldrig det flaggade ämnet eller kommentaren från den offentliga vyn. Annars måste talet vara större än eller lika med modereringströskeln. Standardvärdet är 5.
 
-### Tagg field tab {#tag-field-tab}
+### Fliken Taggfält {#tag-field-tab}
 
-Under fliken **[!UICONTROL Tag field]** är de taggar som kan användas, om de tillåts under fliken **[!UICONTROL Settings]**, begränsade enligt de namnutrymmen som valts.
+Under **[!UICONTROL Tag field]** -fliken, de taggar som kan användas, om de tillåts under **[!UICONTROL Settings]** är begränsade enligt de namnutrymmen som har valts.
 
 * **[!UICONTROL Allowed Namespaces]**
-Relevant om  `Allow Tagging` är markerat under  **[!UICONTROL Settings]** fliken. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+Relevant om `Allow Tagging` kontrolleras under **[!UICONTROL Settings]** -fliken. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
 * **[!UICONTROL Suggestion Limit]**
 Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Standard är 
 **-** 1 (inga gränser).
 
-### Översättningsflik {#translation-tab}
+### Fliken Översättning {#translation-tab}
 
-Om översättning är aktiverat för communitywebbplatsen på fliken **[!UICONTROL Translation]** kan översättning ställas in för att översätta hela ämnet eller valda inlägg.
+Under **[!UICONTROL Translation]** om översättning är aktiverat för communitywebbplatsen kan översättning ställas in för att översätta hela ämnet eller valda inlägg.
 
 * **[!UICONTROL Translate All]**
 Om det här alternativet är markerat översätts forumtråden till användarens önskade språk. Standard är avmarkerat.
 
 ### Fliken Sorteringsinställningar {#sort-settings-tab}
 
-Under fliken **[!UICONTROL Sort Settings]** anger du hur de bokförda kommentarerna ska sorteras när de visas.
+Under **[!UICONTROL Sort Settings]** anger du hur de bokförda kommentarerna ska sorteras när de visas.
 
 * **[!UICONTROL Sort By]**
 Markera alla tillåtna sorteringsval: 
-`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. Standardvärdet är `Newest, Oldest, Last Updated`.
+`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. Standard är `Newest, Oldest, Last Updated`.
 
 * **[!UICONTROL Set as Default]**
 Dra nedåt om du vill välja något av de markerade sorteringsalternativen som ska visas som standard. Standard är 
@@ -180,14 +183,14 @@ Dra nedåt om du vill välja något av de markerade sorteringsalternativen som s
 
 * **[!UICONTROL Select Time Options for Analytics Sorting]**
 Dra ned för att välja något av 
-`All, Last 24 Hours, Last 7 Days, Last 30 Days`. Standardvärdet är `All`.
+`All, Last 24 Hours, Last 7 Days, Last 30 Days`. Standard är `All`.
 
 ## Ytterligare information {#additional-information}
 
-Mer information finns på sidan [Forum Essentials](essentials-forum.md) för utvecklare.
+Mer information finns på [Grundläggande om forum](essentials-forum.md) för utvecklare.
 
-moderering av publicerade ämnen och kommentarer finns i [Moderating User Generated Content](moderate-ugc.md).
+moderering av inlägg och kommentarer finns i [Modererar användargenererat innehåll](moderate-ugc.md).
 
 Information om hur du taggar publicerade ämnen och kommentarer finns i [Tagga användargenererat innehåll](tag-ugc.md).
 
-Översättning av publicerade ämnen och kommentarer finns i [Översätta användargenererat innehåll](translate-ugc.md).
+För översättning av publicerade ämnen och kommentarer, se [Översätter användargenererat innehåll](translate-ugc.md).

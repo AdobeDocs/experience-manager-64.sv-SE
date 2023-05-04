@@ -10,14 +10,18 @@ topic-tags: repo_restructuring
 discoiquuid: 3eccb2d5-c325-43a6-9c03-5f93f7e30712
 feature: Upgrading
 exl-id: d0cdb15d-196a-44e3-bd98-91588b6979ab
-source-git-commit: bbc13d64a33d9033e04fb4f37d60bcfe223be337
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1459'
+source-wordcount: '1495'
 ht-degree: 0%
 
 ---
 
 # Omstrukturering av anläggningar Repository i AEM 6.4{#sites-repository-restructuring-in-aem}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/sites-deploying/repository-restructuring.md) ska kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM Sites-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
 

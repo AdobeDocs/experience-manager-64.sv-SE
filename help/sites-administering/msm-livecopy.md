@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 161b591b-5871-4b5f-9c63-823b6e67b1fd
 feature: Multi Site Manager
 exl-id: 13d044bd-fa61-4e24-ac1d-69a6f10847a4
-source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '4006'
-ht-degree: 1%
+source-wordcount: '4042'
+ht-degree: 0%
 
 ---
 
 # Skapa och synkronisera Live-kopior{#creating-and-synchronizing-live-copies}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Du kan skapa en live-kopia från en sida eller en plantryckskonfiguration och sedan hantera arv och synkronisering.
 
@@ -189,7 +193,7 @@ Egenskaperna för en live-kopia visar följande information om live-kopian:
 
    * Anger om sidan fortfarande omfattas av live-kopiarv.
    * Anger om konfigurationen ärvs från den överordnade sidan.
-   * Alla utrullningskonfigurationer som används för live-kopian.
+   * Alla utrullningskonfigurationer som används av live-kopian.
 
 Så här visar du egenskaperna:
 

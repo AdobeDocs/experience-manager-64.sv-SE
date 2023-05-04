@@ -1,24 +1,27 @@
 ---
 title: Söker efter processinstanser
-seo-title: Söker efter processinstanser
+seo-title: Searching for process instances
 description: Använd sidan Processsökning för att ange sökvillkor för att hitta en processinstans.
-seo-description: Använd sidan Processsökning för att ange sökvillkor för att hitta en processinstans.
+seo-description: Use the Process Search page to enter search criteria for finding a process instance.
 uuid: 4a9c5b05-add5-4278-9c6f-d1928b6860d2
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 88b634bb-8f6c-4830-ad01-821668609615
-translation-type: tm+mt
-source-git-commit: ccf4f4232d6a7af0781480106526c4c6fcb7c40e
+exl-id: 25a01630-47ec-4823-ad11-9a636697f3dc
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
 
-
 # Söker efter processinstanser{#searching-for-process-instances}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Använd sidan Processsökning för att ange sökvillkor för att hitta en processinstans. Du kommer åt sidan Processsökning från sidan för formulärarbetsflöde eller genom att klicka på Sök på sidan Processinstans.
 
@@ -36,7 +39,7 @@ Ange grundläggande villkor för att utföra en allmän sökning. Om du anger fl
    * **Process-ID:** Det positiva heltal som identifierar varje unik processinstans.
    * **Processstatus:** Välj en status i listan.
    * **Program:** Välj ett program i listan. Endast distribuerade program visas.
-   * **Processnamn - Version:** Välj ett processnamn på menyn. Endast distribuerade processer visas.
+   * **Processnamn - version:** Välj ett processnamn på menyn. Endast distribuerade processer visas.
 
 1. Klicka på Sök. Sidan Processinstans visas med en lista över de hittade instanserna.
 

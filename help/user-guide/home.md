@@ -2,19 +2,22 @@
 title: AEM 6.4 User Guide Hub
 seo-title: AEM 6.4 User Guide Hub
 description: Översikt över alla nödvändiga resurser för att förstå, installera, hantera och använda AEM 6.4
-seo-description: Översikt över alla nödvändiga resurser för att förstå, installera, hantera och använda AEM 6.4
+seo-description: An overview of all of the essential resources for understanding, installing, managing, and using AEM 6.4
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
-translation-type: tm+mt
-source-git-commit: 7cb8fbc2577b9feafbcbddbd078ab06e1a341c73
+exl-id: dbeb093b-489b-46c3-b136-e33a430793e0
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '250'
 ht-degree: 1%
 
 ---
 
-
 # AEM 6.4 User Guide Hub {#aem-64-user-guide}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Introduktion {#introduction}
 
@@ -45,7 +48,7 @@ Supportrepresentant kan få assisterad support via:
 
 >[!NOTE]
 >
->Är du inte säker på om du är **supportrepresentant**? Ta reda på om denna [användartyp gäller dig](https://helpx.adobe.com/experience-cloud/supported-users.html) och läs mer om våra [företagssupportvillkor](https://helpx.adobe.com/support/programs/enterprise-support-terms.html).
+>Är du osäker på om du är **supportrepresentant**? Ta reda på om detta [användartypen gäller dig](https://helpx.adobe.com/experience-cloud/supported-users.html) och få veta mer om våra [Enterprise Support-villkor](https://helpx.adobe.com/support/programs/enterprise-support-terms.html).
 
 ## Community {#community}
 

@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Asset Management
 role: User
 exl-id: 0c79ed42-0acd-426e-8e14-412bb4117585
-source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '421'
 ht-degree: 6%
 
 ---
 
 # Checka in och checka ut filer i Resurser {#check-in-and-check-out-files-in-assets}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Med Adobe Experience Manager Assets kan du checka ut resurser för redigering och checka in dem igen när du är klar med ändringarna. När du har checkat ut en resurs kan bara du redigera, kommentera, publicera, flytta eller ta bort resursen. När du checkar ut en resurs låses den. Andra användare kan inte utföra någon av dessa åtgärder på resursen förrän du checkar in resursen igen på [!DNL Experience Manager] Resurser. De kan dock fortfarande ändra metadata för den låsta resursen.
 
@@ -26,11 +30,11 @@ Den här funktionen förhindrar att andra användare åsidosätter ändringar so
 
    ![chlimage_1-468](assets/chlimage_1-468.png)
 
-1. Klicka/tryck på ikonen **[!UICONTROL Checkout]** i verktygsfältet.
+1. Klicka/tryck på knappen **[!UICONTROL Checkout]** ikon.
 
    ![chlimage_1-469](assets/chlimage_1-469.png)
 
-   Observera att ikonen **[!UICONTROL Checkout]** växlar till ikonen **[!UICONTROL Checkin]** när låset är öppet.
+   Observera att **[!UICONTROL Checkout]** ikonen växlar till **[!UICONTROL Checkin]** med låset öppet.
 
    ![chlimage_1-470](assets/chlimage_1-470.png)
 
@@ -42,7 +46,7 @@ Den här funktionen förhindrar att andra användare åsidosätter ändringar so
 
    ![chlimage_1-472](assets/chlimage_1-472.png)
 
-   Du kan emellertid klicka/trycka på ikonen **[!UICONTROL View Properties]** för att redigera metadata för den låsta resursen.
+   Du kan dock klicka/trycka på **[!UICONTROL View Properties]** om du vill redigera metadata för den låsta resursen.
 
 1. Klicka på/tryck på ikonen Redigera för att öppna resursen i redigeringsläge.
 
@@ -69,6 +73,6 @@ Administratörer kan checka in resurser som är utcheckade av andra användare.
 
    ![chlimage_1-476](assets/chlimage_1-476.png)
 
-1. Klicka/tryck på ikonen **[!UICONTROL Release Lock]** i verktygsfältet. Resursen checkas in igen och är tillgänglig för redigering för andra användare.
+1. Klicka/tryck på knappen **[!UICONTROL Release Lock]** ikon. Resursen checkas in igen och är tillgänglig för redigering för andra användare.
 
    ![chlimage_1-477](assets/chlimage_1-477.png)

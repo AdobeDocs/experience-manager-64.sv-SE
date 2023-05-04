@@ -1,23 +1,26 @@
 ---
 title: Innehållstjänster
-seo-title: Innehållstjänster
+seo-title: Content Services
 description: Innehållstjänster
-seo-description: 'null'
+seo-description: null
 uuid: 7bd09c91-3931-400b-bdfc-b064b9ca9668
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 discoiquuid: 6a7e5472-cb57-4c78-b183-7c6dcac11a4e
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: e900d93e-f7cd-4a0d-a866-7fc6c7882797
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
 
-
 # Innehållstjänster{#content-services}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
@@ -35,7 +38,7 @@ Content Services introducerar flera nya AEM som gör att en utvecklare kan komma
 
 Dessa konstruktioner är nödvändiga för att bibehålla flexibiliteten och möjliggöra framtida expansion genom att tillhandahålla ett abstraktionslager mellan det AEM hanterade innehållet och de mobilappar som konsumerar innehållet. Detta gör att AEM Content Services kan fungera som ett abstraktionslager mellan det inbyggda programmets innehållskrav och AEM innehållsdatabas.
 
-Content Services kan leverera innehållet som resurser, paketerad HTML (HTML/CSS/JS) eller som kanaloberoende innehåll.
+Content Services kan leverera innehållet som resurser, paketerat HTML (HTML/CSS/JS) eller som kanaloberoende innehåll.
 
 >[!CAUTION]
 >
@@ -43,9 +46,9 @@ Content Services kan leverera innehållet som resurser, paketerad HTML (HTML/CSS
 >
 >Innan du börjar använda Content Services måste du aktivera flaggan Content Services. Om du vill kunna skapa och hantera modeller i din app måste du aktivera datamodeller i Configuration Browser.
 >
->Mer information finns i **[Administrera innehållstjänster](/help/mobile/developing-content-services.md)**.
+>Se **[Administrera innehållstjänster](/help/mobile/developing-content-services.md)** för mer information.
 >
->Mer information finns i [Configuration Browser-dokumentationen](/help/sites-administering/configurations.md).
+>Se [Configuration Browser-dokumentation](/help/sites-administering/configurations.md) för mer information.
 
 ![chlimage_1-143](assets/chlimage_1-143.png)
 
@@ -53,4 +56,3 @@ När du har angett flagga för innehållstjänster och aktiverat datamodeller i 
 
 * Modeller i databas
 * Återgivning och leverans
-

@@ -1,8 +1,8 @@
 ---
 title: Aktivera loggning för HTML5-formulär
-seo-title: Aktivera loggning för HTML5-formulär
+seo-title: Enable logging for HTML5 forms
 description: Med loggningsverktyget kan du logga ett formulär och felsöka formulärrelaterade problem.
-seo-description: Med loggningsverktyget kan du logga ett formulär och felsöka formulärrelaterade problem.
+seo-description: The logger utility enables logging for a form and helps you debug form-related issues.
 uuid: d6279092-57f3-4fc6-b41b-9caf65459d4d
 contentOwner: robhagat
 content-type: reference
@@ -10,16 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 23bc7cd2-7d06-4ef8-977a-778e290daef9
 feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: c7953d1b-a332-4138-b744-516f3881cd4d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 4%
+source-wordcount: '663'
+ht-degree: 3%
 
 ---
 
-
 # Aktivera loggning för HTML5-formulär {#enable-logging-for-html-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Du kan konfigurera loggningsverktyget så att loggar för HTML5-formulär skapas. Loggverktyget har olika nivåer, du kan ange en nivå efter dina krav. HTML5-formulär har server- och klientkomponenter. Du kan konfigurera loggar för båda komponenterna.
 
@@ -27,32 +30,32 @@ Du kan konfigurera loggningsverktyget så att loggar för HTML5-formulär skapas
 
 Utför följande steg för att konfigurera serversidesloggar:
 
-1. Gå till `https://[server]:[port]/system/console/configMgr`. Leta reda på och öppna alternativet *Loggningslogg för Appace Sling*. En dialogruta visas:
+1. Gå till `https://[server]:[port]/system/console/configMgr`. Leta reda på och öppna *Loggningskonfiguration för Apace Sling* alternativ. En dialogruta visas:
 
    ![ Dialogrutan Konfiguration av loggningslogg för Apace Sling](assets/logconfig.png)
 
    Konfigurationsalternativet Loggningslogg för Apace Sling
 
-1. Ändra **loggnivån** till **Felsök**.
+1. Ändra **Loggnivå** till **Felsök**.
 
-1. Ange namn och sökväg för **loggfilen**.
+1. Ange namn och sökväg för **Loggfil**.
 
    >[!NOTE]
    >
-   >Om du vill generera loggar i loggkatalogen för HTML5-formulär lägger du till ../logs/ före filnamnet.
+   >Om du vill generera loggar i HTML5-formulärens loggkatalog lägger du till ../logs/ före filnamnet.
 
-1. Ändra **Logger** till **HTMLFormsPerfLogger.****Klicka på Spara**.
+1. Ändra **Logger** till **HTMLFormsPerfLogger.** Klicka **Spara**.
 
 ## Konfigurerar klientloggning {#configuring-client-logging}
 
-Du kan använda följande metoder för att aktivera klientloggning i HTML5-formulär:
+Du kan använda följande metoder för att aktivera inloggning på HTML5-formulär på klientsidan:
 
 * Använda parametern request med namnet `log`
 * Använda CQ Configuration Manager
 
-### Aktivera loggning med parametern {#enabling-logging-using-request-parameter} för begäran
+### Aktivera loggning med parametern request {#enabling-logging-using-request-parameter}
 
-Med den här metoden kan du generera loggar för en viss begäran. Namnet på parametern request är **log**. Loggens URL är följande:
+Med den här metoden kan du generera loggar för en viss begäran. Namnet på parametern request är **logg**. Loggens URL är följande:
 
 `https://<server>:<port>/content/xfaforms/profiles/test.html?contentRoot=<path of the folder containing form xdp>&template=<name of the xdp>&log=<log configuration>.`
 
@@ -94,7 +97,7 @@ Loggkonfigurationen består av loggnivån och loggkategorin.
    <td>AV<br type="_moz" /> </td> 
   </tr> 
   <tr> 
-   <td>3</td> 
+   <td>1</td> 
    <td>FATAL<br type="_moz" /> </td> 
   </tr> 
   <tr> 
@@ -103,7 +106,7 @@ Loggkonfigurationen består av loggnivån och loggkategorin.
   </tr> 
   <tr> 
    <td>3</td> 
-   <td>VARNA<br type="_moz" /> </td> 
+   <td>VARNING<br type="_moz" /> </td> 
   </tr> 
   <tr> 
    <td>4</td> 
@@ -119,7 +122,7 @@ Loggkonfigurationen består av loggnivån och loggkategorin.
   </tr> 
   <tr> 
    <td>7</td> 
-   <td>ALL<br type="_moz" /> </td> 
+   <td>ALLA<br type="_moz" /> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -133,7 +136,7 @@ Loggkonfigurationen består av loggnivån och loggkategorin.
    <th>Beskrivning</th> 
   </tr> 
   <tr> 
-   <td>en</td> 
+   <td>a</td> 
    <td>xfa (skriptmotorrelaterade loggar)</td> 
   </tr> 
   <tr> 
@@ -163,7 +166,7 @@ Till exempel:
   </tr> 
   <tr> 
    <td>2-a4-b5-c6<br type="_moz" /> </td> 
-   <td>Mål: Server<br /> xfa-nivå: INFO<br /> xfaView level: DEBUG<br /> xfaPerf-nivå: TRACE</td> 
+   <td>Mål: Server<br /> xfa-nivå: INFORMATION<br /> xfaView-nivå: FELSÖKNING<br /> xfaPerf-nivå: TRACE</td> 
   </tr> 
  </tbody> 
 </table>
@@ -181,7 +184,7 @@ Om du använder Configuration Manager för att aktivera loggning genereras logga
 
 1. Logga in på CQ Configuration Manager på `https://[server]:[port]/system/console/configMgr` och logga in med administratörsuppgifter.
 1. Sök efter och klicka på **Mobile Forms Configurations**.
-1. I textrutan Felsökningsalternativ anger du de loggkonfigurationer som beskrivs i föregående avsnitt, till exempel **2-a4-b5-c6**
+1. I textrutan Felsökningsalternativ anger du loggkonfigurationerna enligt beskrivningen i föregående avsnitt, till exempel: **2-a4-b5-c6**
 
    ![Forms Configuration](assets/forms_configuration.png)
 
@@ -189,24 +192,23 @@ Om du använder Configuration Manager för att aktivera loggning genereras logga
 
 ## Överför loggar {#uploading-logs}
 
-Om målet är 1 dirigeras alla klientskriptloggmeddelanden till konsolen. Om en administratör kräver dessa loggar tillsammans med serverloggar anger du målnivån till 2. På den här nivån samlas alla loggar in i ett JS-objekt på klientsidan. Om formuläret återges med standardprofil visas en **Skicka loggar**-knapp till vänster om **Markera befintliga fält**-knapp i verktygsfältet. När användaren klickar på länken registreras alla insamlade loggar på servern och loggas i den konfigurerade felloggfilen på servern.
+Om målet är 1 dirigeras alla klientskriptloggmeddelanden till konsolen. Om en administratör kräver dessa loggar tillsammans med serverloggar anger du målnivån till 2. På den här nivån samlas alla loggar in i ett JS-objekt på klientsidan och om formuläret återges med standardprofilen är det en **Skicka loggar** visas till vänster om **Markera befintliga fält** i verktygsfältet. När användaren klickar på länken registreras alla insamlade loggar på servern och loggas i den konfigurerade felloggfilen på servern.
 
 Som standard läggs all information till i filen error.log i katalogen /crx-database/logs/.
 
 Så här ändrar du plats och namn på loggfilen:
 
 1. Logga in på Configuration Manager som administratör. Konfigurationshanterarens standardwebbadress är `https://[*Server*]:[*Port*]/system/console/configMgr`.
-1. Klicka på **Konfiguration för Apache Sling Logging Logger.**. En dialogruta visas.
+1. Klicka **Konfiguration av loggningsloggare för Apache Sling**. En dialogruta visas.
 
    ![logconfig-1](assets/logconfig-1.png)
 
-1. Ändra **loggnivån** till Felsök.
+1. Ändra **Loggnivå** för att felsöka.
 
-1. Ange sökväg och namn för **loggfilen**.
+1. Ange sökväg och namn för **Loggfil**.
 
    >[!NOTE]
    >
-   >Om du vill skapa loggar i samma katalog som andra loggfiler finns i anger du ../logs/&lt;filnamn> i egenskapen Loggfiler.
+   >Om du vill skapa loggar i samma katalog som andra loggfiler finns i anger du ../logs/&lt;filename> i egenskapen Loggfiler.
 
-1. Ändra **loggboken** till **HTMLFormsPerfLogger** och klicka på **Spara**.
-
+1. Ändra **Logger** till **HTMLFormsPerfLogger** och klicka **Spara**.

@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: ea6187e8-075d-4666-afc5-01c97deccc11
-source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '966'
 ht-degree: 10%
 
 ---
 
 # Överlappande metadata {#cascading-metadata}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 I den här artikeln beskrivs hur du definierar överlappande metadata för resurser.
 
@@ -33,7 +37,7 @@ Här följer några exempel där du kan definiera överlappande metadata:
 * Ändra alternativen som visas för ett visst fält baserat på värdet som anges i ett annat fält.
 * Ange standardvärdet för metadata i ett visst fält baserat på det värde som anges i ett annat fält.
 
-## Konfigurera överlappande metadata i [!DNL Experience Manager] {#configure-cascading-metadata-in-aem}
+## Konfigurera metadata i [!DNL Experience Manager] {#configure-cascading-metadata-in-aem}
 
 Tänk dig ett scenario där du vill visa överlappande metadata baserat på den typ av resurs som är markerad. Några exempel
 
@@ -42,25 +46,25 @@ Tänk dig ett scenario där du vill visa överlappande metadata baserat på den 
 
 Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligatoriskt fält.
 
-1. Tryck/klicka på logotypen [!DNL Experience Manager] och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**.
+1. Tryck/klicka på [!DNL Experience Manager] logotyp och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**.
 1. Markera ett schemaformulär på sidan **[!UICONTROL Schema Forms]** och redigera sedan schemat genom att trycka/klicka på **[!UICONTROL Edit]** i verktygsfältet.
 
    ![select_form](assets/select_form.png)
 
-1. (Valfritt) Skapa ett nytt fält som ska villkoraliseras i metadataramedigeraren. Ange ett namn och en egenskapssökväg på fliken **[!UICONTROL Settings]**.
+1. (Valfritt) Skapa ett nytt fält som ska villkoraliseras i metadataramedigeraren. Ange ett namn och en egenskapssökväg i dialogrutan **[!UICONTROL Settings]** -fliken.
 
-   Om du vill skapa en ny flik trycker/klickar du på **[!UICONTROL +]** för att lägga till en flik och lägger sedan till ett metadatafält.
+   Skapa en ny flik genom att trycka/klicka **[!UICONTROL +]** för att lägga till en flik och sedan lägga till ett metadatafält.
 
    ![add_tab](assets/add_tab.png)
 
-1. Lägg till ett listrutefält för resurstypen. Ange ett namn och en egenskapssökväg på fliken **[!UICONTROL Settings]**. Lägg till en valfri beskrivning.
+1. Lägg till ett listrutefält för resurstypen. Ange ett namn och en egenskapssökväg i dialogrutan **[!UICONTROL Settings]** -fliken. Lägg till en valfri beskrivning.
 
    ![asset_type_field](assets/asset_type_field.png)
 
 1. Nyckelvärdepar är de alternativ som ges till en formuläranvändare. Du kan ange nyckelvärdepar antingen manuellt eller från en JSON-fil.
 
-   * Om du vill ange värdena manuellt väljer du **[!UICONTROL Add Manually]** och trycker/klickar på **[!UICONTROL Add Choice]** och anger alternativtexten och värdet. Ange till exempel resurstyperna Video, PDF, Word och Bild.
-   * Om du vill hämta värden från en JSON-fil dynamiskt väljer du **[!UICONTROL Add Through JSON Path]** och anger sökvägen till JSON-filen. [!DNL Experience Manager] hämtar nyckelvärdepar i realtid när formuläret presenteras för användaren.
+   * Om du vill ange värden manuellt väljer du **[!UICONTROL Add Manually]** och trycka/klicka **[!UICONTROL Add Choice]** och ange alternativets text och värde. Ange till exempel resurstyperna Video, PDF, Word och Bild.
+   * Om du vill hämta värden från en JSON-fil dynamiskt väljer du **[!UICONTROL Add Through JSON Path]** och ange sökvägen till JSON-filen. [!DNL Experience Manager] hämtar nyckelvärdepar i realtid när formuläret presenteras för användaren.
 
    Båda alternativen utesluter varandra. Du kan inte importera alternativen från en JSON-fil och redigera manuellt.
 
@@ -76,11 +80,11 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
 
 1. (Valfritt) Lägg till de andra obligatoriska fälten. Exempel: format, kodek och längd för resurstypen video.
 
-   Lägg på samma sätt till beroende fält för andra resurstyper. Du kan till exempel lägga till fältantal och författare för dokumentresurser som PDF- och Word-filer.
+   Lägg på samma sätt till beroende fält för andra resurstyper. Du kan till exempel lägga till fältantal och författare för dokumentresurser som PDF och Word.
 
    ![video_independent_fields](assets/video_dependent_fields.png)
 
-1. Om du vill skapa ett beroende mellan fältet för resurstyp och andra fält väljer du det beroende fältet och öppnar fliken **[!UICONTROL Rules]**.
+1. Om du vill skapa ett beroende mellan fältet för resurstyp och andra fält väljer du det beroende fältet och öppnar **[!UICONTROL Rules]** -fliken.
 
    ![select_beroentfield](assets/select_dependentfield.png)
 
@@ -108,7 +112,7 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
    >Du kan använda villkoren **[!UICONTROL Requirement]** och **[!UICONTROL Visibility]** oberoende av varandra.
 
 1. Du kan också skapa ett beroende mellan värdet Video i fältet Resurstyp och andra fält, som Kodek och Varaktighet.
-1. Upprepa stegen för att skapa beroende mellan dokumentresurser (PDF och Word) i fältet **[!UICONTROL Asset Type]** och fält som Antal sidor och Författare.
+1. Upprepa stegen för att skapa beroende mellan dokumentresurser (PDF och Word) i dialogrutan **[!UICONTROL Asset Type]** fält och fält som Antal sidor och Författare.
 1. Klicka på **[!UICONTROL Save]**. Använd metadataschemat i en mapp.
 
 1. Navigera till mappen som du tillämpade metadatamodeller på och öppna egenskapssidan för en resurs. Beroende på vad du väljer i fältet Resurstyp visas relevanta överlappande metadatafält.

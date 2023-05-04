@@ -1,24 +1,27 @@
 ---
 title: Synkroniserar appen
-seo-title: Synkroniserar appen
+seo-title: Synchronizing the app
 description: Synkronisera AEM Forms-appen på din mobila enhet med AEM Forms-servern.
-seo-description: Synkronisera AEM Forms-appen på din mobila enhet med AEM Forms-servern.
+seo-description: Synchronize the AEM Forms app on your mobile device with the AEM Forms server.
 uuid: 7e1526e1-13bd-498a-a265-cd4f2d05ccdd
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: dae1ce32-702e-4cf0-b3c6-976551208d09
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: b5681fe5-69ba-4fc0-95e3-6ffdcdd95382
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
 
-
 # Synkroniserar appen {#synchronizing-the-app}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Synkroniserar appen {#synchronizing-the-app-1}
 
@@ -48,4 +51,3 @@ Tryck på knappen Synkronisera ![sync-app](assets/sync-app.png) längst ned till
 * I .js-filen skickar anropet till funktionen processOfflineSubmitSavedTasks(...) de sparade/skickade uppgifterna till servern. Den hanterar även fel och konflikter i synkroniseringsprocessen. Om överföringen av en uppgift misslyckas markeras aktiviteten i programmet som misslyckad. Dessutom finns uppgiften kvar i Utkorgen.
 * Funktionerna syncSubowedTask() och syncSavedTask() utför åtgärder på enskilda uppgifter.
 * Anropet till funktionen processOfflineSubmitSavedTasks() initieras av uppgiftslistkomponenten efter att en användare har valt att synkronisera offlineläget med servern eller en automatisk synkronisering av bakgrundstråden.
-

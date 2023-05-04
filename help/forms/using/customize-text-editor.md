@@ -1,24 +1,27 @@
 ---
 title: Anpassa textredigeraren
-seo-title: Anpassa textredigeraren
+seo-title: Customize text editor
 description: Lär dig hur du anpassar textredigeraren.
-seo-description: Lär dig hur du anpassar textredigeraren.
+seo-description: Learn how to customize text editor.
 uuid: 28963da7-607f-41ed-8f72-8b19779f41d0
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: a80254a2-245c-48fa-b460-958eeda085af
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 5e9f8e0f-209e-4613-b230-2b826b46ba6b
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '641'
 ht-degree: 0%
 
 ---
 
-
 # Anpassa textredigeraren {#customize-text-editor}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Översikt {#overview}
 
@@ -53,15 +56,15 @@ Så här anpassar du teckensnitt genom att redigera filen tbxeditor-config.xml:
 
       **Sökväg:** /libs/fd/cm/config
 
-      **Plats:** /appar/
+      **Plats:** /apps/
 
-      **Matcha nodtyper:** markerade
+      **Matcha nodtyper:** Markerad
 
       ![Överläggsnod](assets/2-2.png)
 
-   1. Klicka på **OK**. Mappstrukturen skapas i programmappen.
+   1. Klicka **OK**. Mappstrukturen skapas i programmappen.
 
-   1. Klicka på **Spara alla**.
+   1. Klicka **Spara alla**.
 
 1. Skapa en kopia av filen tbxeditor-config.xml i den nya konfigurationsmappen genom att följa stegen nedan:
 
@@ -70,7 +73,7 @@ Så här anpassar du teckensnitt genom att redigera filen tbxeditor-config.xml:
 
       `apps/fd/cm/config`
 
-   1. Som standard är namnet på den inklistrade filen `copy of tbxeditor-config.xml.` Byt namn på filen till `tbxeditor-config.xml` och klicka på **Spara alla**.
+   1. Namnet på den inklistrade filen är som standard `copy of tbxeditor-config.xml.` Byt namn på filen till `tbxeditor-config.xml` och klicka **Spara alla**.
 
 1. Öppna filen tbxeditor-config.xml i apps/fd/cm/config och gör sedan nödvändiga ändringar.
 
@@ -172,27 +175,26 @@ Så här anpassar du teckensnitt genom att redigera filen tbxeditor-config.xml:
 
       Du kan också ändra standardinställningarna för olika delar av texten och ta bort teckensnitten från textredigeraren genom att ta bort posterna.
 
-   1. Klicka på **Spara alla**.
+   1. Klicka **Spara alla**.
 
 
-## Lägg till anpassade teckensnitt på klientdatorn {#addcustomfonts}
+## Lägga till anpassade teckensnitt på klientdatorn {#addcustomfonts}
 
 När du öppnar ett teckensnitt i textredigeraren för Correspondence Management måste det finnas på klientdatorn som du använder för att få åtkomst till Correspondence Management. Om du vill kunna använda ett anpassat teckensnitt i textredigeraren måste du först installera det på klientdatorn.
 
 Mer information om hur du installerar teckensnitt finns i:
 
 * [Installera eller avinstallera teckensnitt i Windows](https://windows.microsoft.com/en-us/windows-vista/install-or-uninstall-fonts)
-* [Grundläggande om Mac: Teckensnittsbok](https://support.apple.com/en-us/HT201749)
+* [Mac Basics: Teckensnittsbok](https://support.apple.com/en-us/HT201749)
 
-## Få åtkomst till teckensnittsanpassningar {#access-font-customizations}
+## Få tillgång till teckensnittsanpassningar {#access-font-customizations}
 
 När du har ändrat teckensnitten i filen tbxeditor-config.xml i CRX och installerat teckensnitten på klientdatorn som används för att få åtkomst till AEM Forms, visas ändringarna i textredigeraren.
 
-Teckensnittet Sazanami Mincho Medium som lagts till i [Anpassa teckensnitt genom att redigera filen tbxeditor-config.xml i CRX](#customizefonts)-proceduren visas i textredigerarens användargränssnitt enligt följande:
+Teckensnittet Sazanami Mincho Medium har till exempel lagts till i [Anpassa teckensnitt genom att redigera filen tbxeditor-config.xml i CRX](#customizefonts) proceduren visas i textredigerarens användargränssnitt enligt följande:
 
 ![sazanamiminchointext](assets/sazanamiminchointext.png)
 
 >[!NOTE]
 >
 >Om du vill visa text på japanska måste du först ange texten med japanska tecken. När du använder ett anpassat japanskt teckensnitt formateras texten endast på ett visst sätt. Användning av ett anpassat japanskt teckensnitt ändrar inte engelska eller andra tecken till japanska tecken.
-

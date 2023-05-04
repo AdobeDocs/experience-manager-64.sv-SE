@@ -1,24 +1,27 @@
 ---
 title: Bloggfunktion
-seo-title: Bloggfunktion
+seo-title: Blog Feature
 description: Community-information i ett journalformat
-seo-description: Community-information i ett journalformat
+seo-description: Community information in a journaling format
 uuid: 01f1a547-d22b-4da6-a69c-ab420e5a9e19
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 discoiquuid: d5519211-8a04-4699-97bc-e162ec0f3781
-translation-type: tm+mt
-source-git-commit: 13d890d08a032fe4eef1dac793dcf2a3e682a52c
+exl-id: 12ae8b4c-73c5-4ec9-beea-b682b55ebdfd
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1510'
 ht-degree: 0%
 
 ---
 
-
 # Bloggfunktion {#blog-feature}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Introduktion {#introduction}
 
@@ -31,11 +34,11 @@ Bloggfunktionen innehåller:
 * Publicera och skapa bloggartiklar och kommentarer
 * RTF-redigering
 * Textbundna bilder (med stöd för dra och släpp)
-* Inbäddat innehåll i sociala nätverk ([Inkluderingsstöd](blog-developer-basics.md#allowing-rich-media))
+* Inbäddat innehåll i sociala nätverk ([Stöd för inbäddning](blog-developer-basics.md#allowing-rich-media))
 * Snabbläge
 * Schemalagd publicering
-* Disponera för (en [privilegierad medlem](users.md#privileged-members-group) kan skapa innehåll för en annan community-medlems räkning)
-* [Sammanhangsbaserad och bulkmoderering ](moderate-ugc.md) av bloggartiklar och kommentarer
+* Skapa för räkning (en [behörig medlem](users.md#privileged-members-group) kan skapa innehåll för en annan community-medlems räkning)
+* [Kontext- och gruppmoderering](moderate-ugc.md) bloggartiklar och kommentarer
 
 Detta avsnitt i dokumentationen beskriver
 
@@ -44,7 +47,7 @@ Detta avsnitt i dokumentationen beskriver
 
 >[!NOTE]
 >
->Komponenterna `Journal`och `Journal Sidebar` heter `Blog` och `Blog Sidebar`.
+>Komponenterna `Journal`och `Journal Sidebar` är namngivna `Blog` och `Blog Sidebar`.
 >
 >Bloggfunktionen i AEM 6.0 och tidigare versioner har nu tagits bort. Det baserades på en mall och tilläts endast författare att skapa innehåll i författarmiljön.
 
@@ -57,9 +60,9 @@ Om du vill lägga till en blogg på en sida i redigeringsläge använder du komp
 
 Dra dem till en plats på en sida där bloggen ska visas.
 
-Mer information finns på [Grunderna för communitykomponenter](basics.md).
+Nödvändig information finns på [Grunderna för communitykomponenter](basics.md).
 
-När de [nödvändiga klientbiblioteken](blog-developer-basics.md#essentials-for-client-side) inkluderas visas `Blog`komponenten så här:
+När [nödvändiga bibliotek på klientsidan](blog-developer-basics.md#essentials-for-client-side) ingår så här `Blog`visas:
 
 ![chlimage_1-147](assets/chlimage_1-147.png)
 
@@ -69,13 +72,13 @@ Och hur `Blog Sidebar` visas:
 
 ### Konfigurerar blogg {#configuring-blog}
 
-Markera den monterade `Blog`-komponenten som ska öppnas och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
+Markera den monterade `Blog` -komponenten som ska få åtkomst till och markera `Configure` som öppnar redigeringsdialogrutan.
 
-![konfigurera ](assets/chlimage_1-149.png) ![iconBlog-inställningar](assets/Blog-configure.png)
+![konfigurera ikon](assets/chlimage_1-149.png) ![Blogginställningar](assets/Blog-configure.png)
 
 #### Fliken Inställningar {#settings-tab}
 
-Ange bloggens grundläggande funktioner på fliken **[!UICONTROL Settings]**:
+Under **[!UICONTROL Settings]** anger du bloggens grundläggande funktioner:
 
 * **[!UICONTROL Allow Attachment Thumbnail]**
 Om du markerar det här alternativet skapas en miniatyrbild av den bifogade bilden.
@@ -124,7 +127,7 @@ Bloggbeskrivningen.
 
 * **[!UICONTROL Allow Tagging]**
 
-   Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se fliken **[!UICONTROL Tag field]**). Standard är avmarkerat.
+   Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se **[!UICONTROL Tag field]** -fliken). Standard är avmarkerat.
 
 * **[!UICONTROL Allow File Uploads]**
 
@@ -132,11 +135,11 @@ Bloggbeskrivningen.
 
 * **[!UICONTROL Max File Size]**
 
-   Endast relevant om `Allow File Uploads` är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
+   Endast relevant om `Allow File Uploads` är markerad. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
 
 * **[!UICONTROL Allowed File Types]**
 
-   Endast relevant om `Allow File Uploads` är markerat. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
+   Endast relevant om `Allow File Uploads` är markerad. En kommaavgränsad lista med filtillägg med&quot;punktavgränsaren&quot;. Till exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de som inte har angetts inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
 
 * **[!UICONTROL Max Attach Image File Size]**
 
@@ -152,11 +155,11 @@ Bloggbeskrivningen.
 
 * **[!UICONTROL Allow Following]**
 
-   Om du markerar det här alternativet inkluderar du följande funktion för bloggartiklar, som gör att medlemmar kan [meddelas](notifications.md) om nya inlägg. Standard är avmarkerat.
+   Om du markerar det här alternativet inkluderar du följande funktion för bloggartiklar, som gör att medlemmar kan [meddelad](notifications.md) av nya tjänster. Standard är avmarkerat.
 
 * **[!UICONTROL Allow Email Subscriptions]**
 
-   Om det här alternativet är markerat kan medlemmar meddelas om nya inlägg via e-post ([prenumeration](subscriptions.md)). Kräver att `Allow Following` kontrolleras och [e-post konfigureras](email.md). Standard är avmarkerat.
+   Om det här alternativet är markerat, tillåt medlemmar att meddelas om nya inlägg via e-post ([prenumeration](subscriptions.md)). Kräver `Allow Following` ska kontrolleras och [e-post konfigurerad](email.md). Standard är avmarkerat.
 
 * **[!UICONTROL Allow Voting]**
 
@@ -164,15 +167,15 @@ Bloggbeskrivningen.
 
 * **[!UICONTROL Display Badges]**
 
-   Om det här alternativet är markerat visas intjänade och tilldelade [märken](implementing-scoring.md) med en medlems blogginlägg. Standard är avmarkerat.
+   Om det här alternativet är markerat visas intjänad och tilldelad [emblem](implementing-scoring.md) med en medlems blogginlägg. Standard är avmarkerat.
 
 * **[!UICONTROL Allow Featured Content]**
 
-   Om det här alternativet är markerat kan idén identifieras som [aktuellt innehåll](featured.md). Standard är avmarkerat.
+   om det är markerat kan idén identifieras som [innehåll](featured.md). Standard är avmarkerat.
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
-Under fliken **[!UICONTROL User Moderation]** anger du modereringsinställningarna:
+Under **[!UICONTROL User Moderation]** anger du modereringsinställningar:
 
 * **[!UICONTROL Deny Posts]**
 
@@ -202,23 +205,23 @@ Under fliken **[!UICONTROL User Moderation]** anger du modereringsinställningar
 
    Ange hur många gånger ett ämne eller en kommentar måste flaggas innan det döljs för den offentliga vyn. Om värdet är -1 döljs aldrig det flaggade ämnet eller kommentaren från den offentliga vyn. Annars måste talet vara större än eller lika med modereringströskeln. Standardvärdet är 5.
 
-#### Tagg field tab {#tag-field-tab}
+#### Fliken Taggfält {#tag-field-tab}
 
-Under fliken **[!UICONTROL Tag field]** anger du vilka taggar som kan användas om **[!UICONTROL Allow Tagging]** är markerad på fliken **[!UICONTROL Settings]**:
+Under **[!UICONTROL Tag field]** anger du vilka taggar som ska användas om **[!UICONTROL Allow Tagging]** kontrolleras på **[!UICONTROL Settings]** tab:
 
 * **[!UICONTROL Allowed Namespaces]**
 
-   Relevant om `Allow Tagging` är markerat under fliken **[!UICONTROL Settings]**. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+   Relevant om `Allow Tagging` kontrolleras under **[!UICONTROL Settings]** -fliken. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller &quot;Standardtaggar&quot; (standardnamnutrymmet) och &quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
 * **[!UICONTROL Suggestion Limit]**
 
    Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Värdet -1 betyder inga gränser. Standardvärdet är 0.
 
-### Konfigurerar bloggsidofältet {#configuring-blog-sidebar}
+### Konfigurerar bloggmarginallist {#configuring-blog-sidebar}
 
-När du dubbelklickar på `Blog Sidebar`-komponenten öppnas en redigeringsdialogruta.
+När du dubbelklickar på `Blog Sidebar` öppnas en redigeringsdialogruta.
 
-Under fliken **[!UICONTROL Journal Sidebar Settings]** anger du datumformatet för arkiv och vilken typ av poster som ska visas i sidofältet:
+Under **[!UICONTROL Journal Sidebar Settings]** anger du datumformatet för arkiv och vilken typ av poster som ska visas i sidofältet:
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
@@ -272,15 +275,15 @@ När du skapar en ny bloggartikel kan du välja att
 
 Bloggartiklarna visas under lämplig flik (Publicerad, Utkast eller Schemalagd) för medlemmar som kan skriva vid publicering.
 
-#### Moderatorer och administratörer {#moderators-and-administrators}
+#### Styrelsemedlemmar och administratörer {#moderators-and-administrators}
 
-När den inloggade användaren har moderator- eller administratörsbehörighet kan han/hon utföra [modereringsåtgärder](moderate-ugc.md) (enligt komponentens konfiguration) på alla bloggartiklar och kommentarer som publicerats på en blogg.
+När den inloggade användaren har behörighet som moderator eller administratör kan de utföra [modereringsuppgifter](moderate-ugc.md) (enligt komponentens konfiguration) på alla bloggartiklar och kommentarer som har skickats till en blogg.
 
 ![chlimage_1-152](assets/chlimage_1-152.png)
 
 ### Medlemmar {#members}
 
-När den inloggade användaren är en community-medlem eller [privilegierad medlem](users.md#privileged-members-group) (beroende på konfiguration) kan användaren välja `New Article` för att skapa och publicera en ny bloggartikel.
+När den inloggade användaren är en community-medlem eller [behörig medlem](users.md#privileged-members-group) (beroende på konfiguration) kan de välja `New Article` för att skapa och publicera en ny bloggartikel.
 
 De får särskilt
 
@@ -301,10 +304,10 @@ Besökare som inte är inloggade kan endast läsa inlagda bloggartiklar och komm
 
 ## Ytterligare information {#additional-information}
 
-Mer information finns på sidan [Blog Essentials](blog-developer-basics.md) för utvecklare.
+Mer information finns på [Blog Essentials](blog-developer-basics.md) för utvecklare.
 
-moderering av blogginlägg och kommentarer finns i [Moderating User Generated Content](moderate-ugc.md).
+Mer information om moderering av blogginlägg och kommentarer finns i [Modererar användargenererat innehåll](moderate-ugc.md).
 
 Information om hur du taggar blogginlägg och kommentarer finns i [Tagga användargenererat innehåll](tag-ugc.md).
 
-Information om översättning av blogginlägg och kommentarer finns i [Översätta användargenererat innehåll](translate-ugc.md).
+Information om översättning av blogginlägg och kommentarer finns i [Översätter användargenererat innehåll](translate-ugc.md).

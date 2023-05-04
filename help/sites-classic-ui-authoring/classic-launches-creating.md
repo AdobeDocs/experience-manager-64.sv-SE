@@ -1,8 +1,8 @@
 ---
 title: Skapa Launches
-seo-title: Skapa Launches
+seo-title: Creating Launches
 description: Skapa en startsida för att möjliggöra uppdatering av en ny version av befintliga webbsidor för framtida aktivering. När du skapar en Launch anger du en titel och källsidan.
-seo-description: Skapa en startsida för att möjliggöra uppdatering av en ny version av befintliga webbsidor för framtida aktivering. När du skapar en Launch anger du en titel och källsidan.
+seo-description: Create a launch to enable the updating of a new version of existing web pages for future activation. When you create a Launch, you specify a title and the source page.
 uuid: e67608a9-e6c9-42f3-bd1d-63a5fa87ae18
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,53 +10,55 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 48826f03-6731-49c5-a6c5-6e2fb718f912
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 2f5c022e-bd98-4912-9409-d08137a1caf1
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 14%
+source-wordcount: '406'
+ht-degree: 13%
 
 ---
 
-
 # Skapa Launches{#creating-launches}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Skapa en startsida för att möjliggöra uppdatering av en ny version av befintliga webbsidor för framtida aktivering. När du skapar en Launch anger du en titel och källsidan:
 
-* Titeln visas i **Sidekick**, där författare kan komma åt dem för att arbeta med dem.
+* Titeln visas i **Sidekick**, där författarna kan arbeta med dem.
 * Källsidans underordnade sidor inkluderas som standard i starten. Du kan bara använda källsidan om du vill.
-* Som standard uppdaterar [Live Copy](/help/sites-administering/msm.md) startsidorna automatiskt när källsidorna ändras. Du kan ange att en statisk kopia ska skapas för att förhindra automatiska ändringar.
+* Som standard [Live Copy](/help/sites-administering/msm.md) uppdaterar startsidorna automatiskt när källsidorna ändras. Du kan ange att en statisk kopia ska skapas för att förhindra automatiska ändringar.
 
 Du kan också ange **startdatum** (och starttid) för att definiera när startsidorna ska befordras och aktiveras. **Startdatumet** fungerar dock endast i kombination med flaggan **Produktionsklar** (se [Redigera en startkonfiguration](/help/sites-classic-ui-authoring/classic-launches-editing.md#editing-a-launch-configuration)). För att åtgärderna ska köras automatiskt måste båda anges.
 
-## Skapa en startsida {#creating-a-launch}
+## Skapa en Launch {#creating-a-launch}
 
 Följande procedur skapar en start.
 
-1. Öppna sidan Webbplatsadministration ([http://localhost:4502/siteadmin](http://localhost:4502/siteadmin)).
-1. Klicka på **Nytt...** och sedan **Ny start..**.
-1. I dialogrutan **Create Launch** anger du värden för följande egenskaper:
+1. Öppna administrationssidan för webbplatsen ([http://localhost:4502/siteadmin](http://localhost:4502/siteadmin)).
+1. Klicka **Nytt...** sedan **Ny start...**.
+1. I **Skapa start** anger du värden för följande egenskaper:
 
-   * **Starttitel**: Namnet på Launch. Namnet ska vara meningsfullt för författare.
+   * **Starta titel**: Namnet på Launch. Namnet ska vara meningsfullt för författare.
    * **Källsida**: Sökvägen till sidan som starten ska skapas för. Som standard inkluderas alla underordnade sidor.
-   * **Exkludera undersidor**: Välj det här alternativet om du bara vill skapa startsidan för källsidan och inte för de underordnade sidorna. Som standard är det här alternativet inte markerat.
-   * **Synkronisera**: Välj det här alternativet om du automatiskt vill uppdatera innehållet på startsidor när källsidorna ändras. Detta uppnås genom att starta en [live-kopia](/help/sites-administering/msm.md).
-   * **Startdatum**: Datum och tid då startkopian ska aktiveras (beroende på flaggan  **Production** Readyflag). se  [Startar - Händelsens](/help/sites-authoring/launches.md#launches-the-order-of-events) ordning).
+   * **Uteslut undersidor**: Välj det här alternativet om du bara vill skapa startsidan för källsidan och inte för de underordnade sidorna. Som standard är det här alternativet inte markerat.
+   * **Synkronisera**: Välj det här alternativet om du automatiskt vill uppdatera innehållet på startsidor när källsidorna ändras. Detta uppnås genom att man gör lanseringen till [live copy](/help/sites-administering/msm.md).
+   * **Startdatum**: Datum och tid då startkopian ska aktiveras (beroende på **Produktionsklar** Flagga. se [Startar - ordningen för händelser](/help/sites-authoring/launches.md#launches-the-order-of-events)).
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
-1. Klicka på **Skapa**.
+1. Klicka **Skapa**.
 
 ## Ta bort en start {#deleting-a-launch}
 
 Du kan även ta bort en programstart.
 
-1. Välj önskad start i [startkonsolen](/help/sites-classic-ui-authoring/classic-launches.md).
-1. Klicka på **Ta bort** - bekräftelse krävs:
+1. I [startar konsolen](/help/sites-classic-ui-authoring/classic-launches.md)väljer du önskad start.
+1. Klicka **Ta bort** - bekräftelse krävs:
 
    ![chlimage_1-100](assets/chlimage_1-100.png)
 
    >[!CAUTION]
    >
    >När du tar bort kapslade starter bör du ta bort de lägre nivåerna först.
-

@@ -1,46 +1,48 @@
 ---
 title: Funktioner i AEM Forms arbetsyta som inte finns på Flex arbetsyta
-seo-title: Funktioner i AEM Forms arbetsyta som inte finns på Flex arbetsyta
+seo-title: Features of AEM Forms workspace not available in Flex workspace
 description: AEM Forms arbetsyta är något nytt än Flex-baserade Workspace. Läs om skillnaderna i funktioner.
-seo-description: AEM Forms arbetsyta är något nytt än Flex-baserade Workspace. Läs om skillnaderna i funktioner.
+seo-description: AEM Forms workspace innovates beyond Flex-based Workspace. Read about differences in features and capabilities.
 uuid: 2c22ce35-8383-4258-b6e3-3d823a453b27
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 66c3cdc4-0e4c-4597-a107-f457dd0cc166
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: 109adc91-2291-4a10-af7b-e93ae8947258
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '417'
 ht-degree: 0%
 
 ---
 
+# Funktioner i AEM Forms arbetsyta som inte finns på Flex arbetsyta {#features-of-aem-forms-workspace-not-available-in-flex-workspace}
 
-# Funktioner i AEM Forms-arbetsytan är inte tillgängliga i Flex {#features-of-aem-forms-workspace-not-available-in-flex-workspace}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 AEM Forms arbetsyta är ett innovativt sätt än Flex-baserade arbetsytor och innehåller funktioner som förbättrar företagsintegrering och användarproduktivitet.
 
 Här följer en kort översikt över dessa funktioner. Mer information finns i de artiklar som hör till i slutet av den här artikeln.
 
-## Stöd för en sammanfattningsruta för aktiviteter {#support-for-a-summary-pane-for-tasks}
+## Stöd för en sammanfattningsruta för uppgifter {#support-for-a-summary-pane-for-tasks}
 
 När du öppnar en uppgift, innan formuläret öppnas, kan du i en ruta visa information om uppgiften med en extern URL. Om du använder åtgärdssammanfattningsfönstret kan ytterligare och relevant information för en uppgift visas för att lägga till mer värde för slutanvändaren av arbetsytan i AEM Forms. Se [Visa sammanfattningssida](/help/forms/using/displaying-information-task-summary-pane.md) för implementeringsinformation.
 
 ## Stöd för hanterarvyn {#support-for-manager-view}
 
-Med den här funktionen kan chefer komma åt eller agera på uppgifter i sina rapporter. Chefer kan även i organisationshierarkin fördjupa sig i uppgifter i sina indirekta rapporter. Mer information finns i [Hantera uppgifter i en organisationshierarki med vyn Manager](/help/forms/using/tasks-organizational-hierarchy-using-manager.md).
+Med den här funktionen kan chefer komma åt eller agera på uppgifter i sina rapporter. Chefer kan även i organisationshierarkin fördjupa sig i uppgifter i sina indirekta rapporter. Se [Hantera uppgifter i en organisationshierarki med hjälp av hanterarvyn](/help/forms/using/tasks-organizational-hierarchy-using-manager.md) för mer information.
 
 ## Stöd för användaravatarer {#support-for-user-avatars}
 
-Bilder, eller avatarer, för inloggade användare kan nu visas i det övre högra hörnet av arbetsytan i AEM Forms. I hanterarvyn kan användaravatarerna visas för att visa chefernas bilder och deras rapporter. Mer information finns i [Visa användarens avatar](/help/forms/using/displaying-user-avatar.md).
+Bilder, eller avatarer, för inloggade användare kan nu visas i det övre högra hörnet av arbetsytan i AEM Forms. I hanterarvyn kan användaravatarerna visas för att visa chefernas bilder och deras rapporter. Se [Visa användarens avatar](/help/forms/using/displaying-user-avatar.md) för mer information.
 
 ## Stöd för integrering av tredjepartsprogram {#support-for-integrating-third-party-applications}
 
-Funktionen för integrering med tredjepartsprogram kan användas för att helt överföra dina arbetsflöden till AEM Forms arbetsyta. Du kan till exempel återge brevmallar för hantering av korrespondenshantering som uppgifter i AEM Forms-arbetsytefönstret. Därför kan du slutföra uppgiften utan att lämna arbetsytan i AEM Forms. Mer information finns i [Integrera korrespondenshantering i AEM Forms-arbetsytan](/help/forms/using/integrating-correspondence-management-html-workspace.md).
+Funktionen för integrering med tredjepartsprogram kan användas för att helt överföra dina arbetsflöden till AEM Forms arbetsyta. Du kan till exempel återge brevmallar för hantering av korrespondenshantering som uppgifter i AEM Forms-arbetsytefönstret. Därför kan du slutföra uppgiften utan att lämna arbetsytan i AEM Forms. Se [Integrera korrespondenshantering i AEM Forms arbetsyta](/help/forms/using/integrating-correspondence-management-html-workspace.md) för detaljerade anvisningar.
 
 ## Stöd för anpassad aktivitetsåtergivning baserat på slutanvändarens enhet {#support-for-custom-task-rendering-based-on-end-user-s-device}
 
-AEM Forms arbetsyta har stöd för HTML-återgivning av XDP-formulär. Detta stöd gör att användare kan visa ett XDP-formulär som HTML på mobila enheter och som PDF på en dator när det används i en renderingsprocess som dirigerar till olika renderingar av XDP baserat på enheten eller användarens agent. Detta bidrar till att ge användare som arbetar i olika miljöer på olika enheter en smidig täckning av processhanteringen.
-
+AEM Forms arbetsyta har stöd för HTML-återgivning av XDP-formulär. Detta stöd gör att användare kan visa ett XDP-formulär som HTML på mobila enheter och som PDF på en dator när det används i en återgivningsprocess som dirigerar till olika återgivningar av XDP baserat på enheten eller användaragenten. Detta bidrar till att ge användare som arbetar i olika miljöer på olika enheter en smidig täckning av processhanteringen.

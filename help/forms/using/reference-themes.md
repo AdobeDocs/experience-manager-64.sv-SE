@@ -1,23 +1,27 @@
 ---
 title: Referensteman
 seo-title: Reference Themes
-description: 'AEM Forms tillhandahåller adaptiva formulärteman som du kan hämta från Software Distribution och använda för att utforma ett formulär. '
+description: AEM Forms tillhandahåller adaptiva formulärteman som du kan hämta från Software Distribution och använda för att utforma ett formulär.
 seo-description: AEM Forms provides adaptive forms themes that you can get from Software Distribution and use to style a form.
 uuid: a39bc3da-0bb8-4f11-b0d5-9403cfc6e384
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 78d7d4b6-95dd-429b-870b-30aba5a3fea3
 exl-id: 6a298571-d6ff-473f-af58-a45a0c7e6175
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '588'
 ht-degree: 0%
 
 ---
 
 # Referensteman {#reference-themes}
 
-[Med ](/help/forms/using/themes.md) teman kan du formatera formulär utan djupa kunskaper om CSS. Förutom standardtemat kan du hämta följande teman genom att installera [AEM Forms-tilläggspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html):
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+[Teman](/help/forms/using/themes.md) gör att du kan formatera formulär utan djupare kunskaper om CSS. Förutom standardtemat kan du hämta följande teman genom att installera[AEM Forms tilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html):
 
 * Beryl
 * Kör
@@ -34,13 +38,13 @@ Varje tema innehåller en unik och elegant stil som du kan använda för att ska
 
 Teman som ingår i det här paketet är responsiva, och stilen i dessa teman definieras för mobila och stationära skärmar. De flesta moderna webbläsare på en mängd olika enheter kan återge formulär som används med något av dessa teman utan krångel.
 
-Mer information om hur du installerar paketet finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
+Mer information om hur du installerar paketet finns i [Så här arbetar du med paket](/help/sites-administering/package-manager.md).
 
 ## Beryl {#beryl}
 
-Beryltemat används av [We.Gov adaptive form](/help/forms/using/gov-reference-site-walkthrough.md) och betonar användningen av bakgrundsbild, genomskinlighet och stora, platta ikoner. På skärmbilden nedan ser du hur Beryl-temat ser ut och hur det kan förbättra formateringen av ditt formulär.
-![Beryl-](assets/beryl.png)
-[temaKlicka för att förstora](assets/beryl-1.png)
+Beryltemat används av [Adaptiv form](/help/forms/using/gov-reference-site-walkthrough.md)och betonar användningen av bakgrundsbilder, genomskinlighet och stora, platta ikoner. På skärmbilden nedan ser du hur Beryl-temat ser ut och hur det kan förbättra formateringen av ditt formulär.
+![Beryltema](assets/beryl.png)
+[Klicka för att förstora](assets/beryl-1.png)
 
 ## Kör {#exec}
 
@@ -77,7 +81,7 @@ Ultramarintemat använder djupa blå skuggor för att framhäva komponenter som 
 
 ## Urbane {#urbane}
 
-Urbane-temat framhäver ett minimalistiskt och funktionellt utseende på ditt formulär. När du använder Urbane-temat i ditt formulär ser du att komponenterna är platta. Panelerna får tunna konturer för att skapa ett modernt utseende.
+Urbane-temat betonar ett minimalistiskt och funktionellt utseende på ditt formulär. När du använder Urbane-temat i ditt formulär ser du att komponenterna är platta. Panelerna får tunna konturer för att skapa ett modernt utseende.
 ![Urbantema](assets/urbane.png)
 
 [Klicka för att förstora](assets/urbane-1.png)

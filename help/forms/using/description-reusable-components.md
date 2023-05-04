@@ -1,28 +1,31 @@
 ---
 title: Beskrivning av återanvändbara komponenter
-seo-title: Beskrivning av återanvändbara komponenter
+seo-title: Description of reusable components
 description: En fullständig lista över återanvändbara komponenter med filnamn och beroenden som hjälper dig att integrera arbetsytekomponenten i AEM Forms i dina webbprogram.
-seo-description: En fullständig lista över återanvändbara komponenter med filnamn och beroenden som hjälper dig att integrera arbetsytekomponenten i AEM Forms i dina webbprogram.
+seo-description: A complete list of reusable components with filenames and dependencies, to help you integrate AEM Forms workspace component in your web applications.
 uuid: 8e6accc7-0935-4d7b-b838-d23676df5cda
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: d3facd17-ceb0-4799-8cd9-ff9e81e09793
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: 2790a2d3-444a-4c13-99b0-ea31923fc547
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1257'
-ht-degree: 6%
+source-wordcount: '1267'
+ht-degree: 0%
 
 ---
 
-
 # Beskrivning av återanvändbara komponenter {#description-of-reusable-components}
 
-AEM Forms arbetsyta består av [återanvändbara](/help/forms/using/integrating-html-ws-components-web.md)-komponenter som är ordnade i en viss [mappstruktur](/help/forms/using/folder-structure.md) i CRX™. Varje komponent har modell-, vy- och mallfil på den plats som anges i mappstrukturen, JavaScript™-beroenden på andra komponentfiler, händelser som avlyssnas av komponenten och JavaScript-objekt som utlöser dessa händelser på arbetsytan i AEM Forms. En fullständig lista över återanvändbara komponenter med komponentens filnamn och beroenden anges här.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-## Aktivitetslista {#tasklist}
+AEM Forms arbetsyta består av [återanvändbar](/help/forms/using/integrating-html-ws-components-web.md) komponenter som är organiserade i ett specifikt [mappstruktur](/help/forms/using/folder-structure.md) i CRX™. Varje komponent har modell-, vy- och mallfil på den plats som anges i mappstrukturen, JavaScript™-beroenden på andra komponentfiler, händelser som avlyssnas av komponenten och JavaScript-objekt som utlöser dessa händelser på arbetsytan i AEM Forms. En fullständig lista över återanvändbara komponenter med komponentens filnamn och beroenden anges här.
+
+## AktivitetLista {#tasklist}
 
 <table> 
  <tbody> 
@@ -114,7 +117,7 @@ AEM Forms arbetsyta består av [återanvändbara](/help/forms/using/integrating-
 >
 >Arbetsytan anropar funktionen fetchTasks i TaskList-modellen för att skapa aktivitetsmodeller för den här komponenten.
 
-## Filterlista {#filterlist}
+## FilterList {#filterlist}
 
 <table> 
  <tbody> 
@@ -266,7 +269,7 @@ AEM Forms arbetsyta består av [återanvändbara](/help/forms/using/integrating-
 >
 >TeamFilter hämtar händelsen som anger vilken aktivitet som har valts från TaskList-komponenten. Även om dessa komponenter delar modellklassen finns det inget annat beroende.
 
-## Aktivitetsinformation {#taskdetails}
+## AktivitetDetaljer {#taskdetails}
 
 <table> 
  <tbody> 

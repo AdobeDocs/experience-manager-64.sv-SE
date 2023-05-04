@@ -1,28 +1,31 @@
 ---
 title: Bästa praxis för hantering av SEO och URL
-seo-title: Bästa praxis för hantering av SEO och URL
+seo-title: SEO and URL Management Best Practices
 description: Läs mer om SEO:s bästa praxis och rekommendationer för att uppnå dessa i en AEM implementering.
-seo-description: Läs mer om SEO:s bästa praxis och rekommendationer för att uppnå dessa i en AEM implementering.
+seo-description: Learn about SEO best practices and recommendations for achieving these on an AEM implementation.
 uuid: 7fffbe30-7cf8-44ce-b275-e128732577dd
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/MANAGING
 topic-tags: managing
 content-type: reference
 discoiquuid: 150b43e3-9fb3-4c1c-b1cd-ccfd162974ad
-translation-type: tm+mt
-source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
+exl-id: d45fe856-4709-437b-b193-e8243a695d2c
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3115'
+source-wordcount: '3131'
 ht-degree: 95%
 
 ---
 
-
 # Bästa praxis för hantering av SEO och URL{#seo-and-url-management-best-practices}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Sökmotoroptimering (SEO) har blivit en viktig fråga för många marknadsförare. Därför måste SEO:s problem hanteras i många AEM projekt.
 
-I det här dokumentet beskrivs först några [SEO-metodtips](#seo-best-practices) och rekommendationer för att uppnå dessa vid en AEM implementering. Sedan får du en närmare titt på några av de mer [komplexa implementeringsstegen](#aem-configurations) som togs upp i det första avsnittet.
+Det här dokumentet beskriver först några [Bästa praxis för SEO](#seo-best-practices) och rekommendationer för att uppnå dessa när det gäller AEM implementering. Sedan får du en närmare titt på några av de mer [komplexa implementeringsstegen](#aem-configurations) som togs upp i det första avsnittet.
 
 ## SEO-metodtips {#seo-best-practices}
 
@@ -182,7 +185,7 @@ I det här avsnittet beskrivs alternativen i AEM som används för att hantera U
 
 #### Alternativa URL:er {#vanity-urls}
 
-Om en författare vill att en sida ska vara tillgänglig från en andra plats i marknadsföringssyfte, kan det vara användbart att definiera alternativa URL:er, sida för sida, för AEM. Om du vill lägga till en huvud-URL för en sida går du till den i **[!UICONTROL Sites]**-konsolen och redigerar sidegenskaperna. Längst ned på fliken **[!UICONTROL Basic]** visas ett avsnitt där det går att lägga till mål-URL:er. Tänk på att sidans SEO-värde fragmenteras om sidan är tillgänglig via mer än en URL. Du kan dock undvika det här problemet genom att lägga till en kanonisk URL-tagg på sidan.
+Om en författare vill att en sida ska vara tillgänglig från en andra plats i marknadsföringssyfte, kan det vara användbart att definiera alternativa URL:er, sida för sida, för AEM. Om du vill lägga till en ogiltig URL-adress för en sida går du till den i **[!UICONTROL Sites]** konsol och redigera sidegenskaperna. Längst ned på **[!UICONTROL Basic]** visas ett avsnitt där det går att lägga till mål-URL:er. Tänk på att sidans SEO-värde fragmenteras om sidan är tillgänglig via mer än en URL. Du kan dock undvika det här problemet genom att lägga till en kanonisk URL-tagg på sidan.
 
 #### Lokaliserade sidnamn {#localized-page-names}
 

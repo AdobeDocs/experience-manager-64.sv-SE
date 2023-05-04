@@ -1,28 +1,31 @@
 ---
 title: Grundläggande röstning
-seo-title: Grundläggande röstning
+seo-title: Voting Essentials
 description: Översikt över röstkomponenten
-seo-description: Översikt över röstkomponenten
+seo-description: Voting component overview
 uuid: ed0a771d-1c14-4fbf-ab6a-a028e5ee2e2a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 1a947a06-6a5c-4be9-b2fa-e5fa809ff3b8
-translation-type: tm+mt
-source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+exl-id: f2ecd59c-a311-4e4a-b1a8-2bc3afe0599d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
 
-
 # Grundläggande röstning {#voting-essentials}
 
-Röstkomponenten, en [tally](tally.md)-underklass, är ett användbart verktyg som gör att medlemmar kan betygsätta en viss del av innehållet genom att bara markera upp- eller nedpilar för att ange sin åsikt.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-Det är tillåtet att placera flera instanser av en röstkomponent på samma sida. Varje instans måste konfigureras med en unik `tally name`-egenskap.
+Röstkomponenten, en [tally](tally.md) underklass, är ett användbart verktyg som gör att medlemmar kan betygsätta en viss del av innehållet genom att bara markera upp- eller nedpilarna för att ange sin åsikt.
+
+Det är tillåtet att placera flera instanser av en röstkomponent på samma sida. varje instans måste konfigureras med en unik `tally name` -egenskap.
 
 Anonym publicering av en röst stöds inte. Besökare på platsen måste registrera sig och logga in för att endast delta i omröstningen en gång. Den inloggade besökaren (medlemmen) kan när som helst ändra sin röst.
 
@@ -43,7 +46,7 @@ Anonym publicering av en röst stöds inte. Besökare på platsen måste registr
    <td> cq.social.hbs.voting</td> 
   </tr> 
   <tr> 
-   <td> <strong>templates</strong></td> 
+   <td> <strong>mallar</strong></td> 
    <td><p> /libs/social/tally/components/hbs/voting/voting.hbs<br /> /libs/social/tally/components/hbs/voting/activity-title.hbs</p> </td> 
   </tr> 
   <tr> 
@@ -70,16 +73,15 @@ Anonym publicering av en röst stöds inte. Besökare på platsen måste registr
 ### Åtkomst till bokförd röstning (UGC) {#accessing-posted-voting-ugc}
 
 UGC bör modereras med någon av standardmetoderna för moderering.\
-Se [Moderating User Generated Content](moderate-ugc.md).
+Se [Modererar användargenererat innehåll](moderate-ugc.md).
 
-Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities används [gemensam lagringsplats](working-with-srp.md) för UGC omfattar programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (till exempel ASRP, MSRP eller JSRP).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
 Se:
 
-* [Översikt över](srp.md)  lagringsresursprovidern - introduktion och databasanvändning - översikt
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
-* [Åtkomst till UGC med riktlinjer för SRP](accessing-ugc-with-srp.md) -kodning
-* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utgått verktygsmetoder till aktuella SRP-verktygsmetoder
-
+* [Översikt över lagringsresursprovider](srp.md) - introduktion och databasanvändning - översikt
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning
+* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av borttagna verktygsmetoder till aktuella SRP-verktygsmetoder

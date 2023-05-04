@@ -1,20 +1,23 @@
 ---
 title: Resurser för nya AEM
-seo-title: Resurser för nya AEM
+seo-title: Resources for New AEM Users
 description: Frågor, svar och resurser för användare som inte är AEM
-seo-description: Frågor, svar och resurser för användare som inte är AEM
+seo-description: Questions, answers, and resources for users new to AEM
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
-translation-type: tm+mt
-source-git-commit: 4c1b1210503dc535585ae8912a7b94b88d1604cf
+exl-id: 654c2576-93c0-4095-ba66-9c6ffb41c953
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '396'
 ht-degree: 5%
 
 ---
 
+# Resurser för nya AEM {#resources-for-new-aem-users}
 
-# Resurser för nya AEM användare {#resources-for-new-aem-users}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Vad är Adobe Experience Manager (AEM) och var finns dokumentation? {#what-is-aem}
 
@@ -25,15 +28,15 @@ Adobe Experience Manager (AEM) är ett webbaserat klient-serversystem för att b
 
 ## Var hämtar jag AEM program? {#download}
 
-Kunder med giltigt underhålls- och supportavtal bör ha fått ett e-postmeddelande med en kod och kunna hämta AEM från [Adobe licenswebbplats](http://licensing.adobe.com/).
+Kunder med giltigt underhålls- och supportavtal ska ha fått ett e-postmeddelande med en kod och kunna hämta AEM från [Adobe licenswebbplats](http://licensing.adobe.com/).
 
 [Mer information om hur du distribuerar AEM.](/help/sites-deploying/home.md)
 
-Besök vår [AEM Sustenance Hub](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) för information om AEM releaser.
+Besök vår [AEM](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) för information om AEM.
 
 ## Hur får jag officiell support för AEM? {#official-support}
 
-Som licensierad kund kan du få support för AEM från vårt [kundtjänstteam](https://helpx.adobe.com/marketing-cloud/contact-support.html). Du kan även ställa frågor i [AEM Community](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager) eller i [@AdobeExpCare](https://twitter.com/adobeexpcare) Twitter-handtaget.
+Som licensierad kund kan du få support för AEM från [Kundtjänstteam](https://helpx.adobe.com/marketing-cloud/contact-support.html). Du kan även ställa frågor i [AEM](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager) eller på [@AdobeExpCare](https://twitter.com/adobeexpcare) Twitter handtag.
 
 ## Var finns dokumentation för andra versioner av AEM? {#versions}
 
@@ -62,4 +65,4 @@ Här finns alla versionsinformation AEM:
 * [AEM 6.4 Versionsinformation](/help/release-notes/home.md)
 * [Lista över borttagna och borttagna funktioner i AEM 6.4](/help/release-notes/deprecated-removed-features.md)
 
-Om du har frågor kan du kontakta vårt [AEM Community-team](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html) eller fråga oss på Twitter [@AdobeExpCare](https://twitter.com/adobeexpcare).
+Om du har frågor kan du kontakta oss [AEM](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html) eller fråga oss om Twitter [@AdobeExpCare](https://twitter.com/adobeexpcare).

@@ -11,22 +11,26 @@ topic-tags: configuring
 discoiquuid: 80118cd1-73e1-4675-bbdf-85d66d150abc
 feature: Configuring
 exl-id: 06b197de-f97b-451f-8037-931c8cd754b6
-source-git-commit: 608c0fbd7eb0fc06fccf8cbcaebf874bff36d5e0
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '6649'
+source-wordcount: '6685'
 ht-degree: 1%
 
 ---
 
 # Prestandaoptimering {#performance-optimization}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 >[!NOTE]
 >
->Allmänna riktlinjer för prestanda finns på sidan [Prestanda Guidelines](/help/sites-deploying/performance-guidelines.md).
+>Allmänna riktlinjer för prestanda finns i [Riktlinjer för prestanda](/help/sites-deploying/performance-guidelines.md) sida.
 >
->Mer information om felsökning och korrigering av prestandaproblem finns i [Prestandaträdet](/help/sites-deploying/performance-tree.md).
+>Mer information om felsökning och korrigering av prestandaproblem finns även i [Prestandaträd](/help/sites-deploying/performance-tree.md).
 >
->Du kan även läsa en artikel i kunskapsbasen om [tips för prestandajustering.](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)
+>Dessutom kan du läsa en kunskapsbasartikel på [Tips för prestandajustering.](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)
 
 Ett viktigt problem är den tid det tar för er webbplats att svara på besökarnas förfrågningar. Även om det här värdet varierar för varje begäran kan ett genomsnittligt målvärde definieras. När det här värdet har visat sig vara både genomförbart och underhållbart kan det användas för att övervaka webbplatsens prestanda och indikera utvecklingen av potentiella problem.
 
@@ -42,8 +46,8 @@ Den här miljön innehåller innehåll som du gör tillgängligt för användarn
 
 >[!NOTE]
 >
->* När du har konfigurerat för prestandaoptimering följer du procedurerna i [Tough Day](/help/sites-developing/tough-day.md) för att testa miljön under tung belastning.
->* Se även [Tips för prestandajustering.](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)
+>* När du har konfigurerat för prestandaoptimering följer du anvisningarna i [Tålig dag](/help/sites-developing/tough-day.md) för att testa miljön under tung belastning.
+>* Se även [Prestandajusteringstips.](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)
 
 
 ## Prestandaoptimeringsmetod {#performance-optimization-methodology}
@@ -129,7 +133,7 @@ Det sätt på vilket en innehållsdatabas är strukturerad kan även påverka pr
 
 Dina bästa vänner under en vanlig prestandaoptimeringsövning är:
 
-* `request.log`
+* den `request.log`
 * komponentbaserad timing
 * sist men inte minst en java-profilerare.
 
@@ -174,7 +178,7 @@ Prestanda är också en balans mellan volym och kapacitet:
 
 **Volym** Den mängd utdata som bearbetas och levereras av systemet.
 
-**** KapacitetSystemets förmåga att leverera volymen.
+**Kapacitet** Systemets förmåga att leverera volymen.
 
 Detta kan illustreras på olika platser i hela webbkedjan.
 
@@ -195,7 +199,7 @@ Vissa regler bör beaktas vid prestandaoptimering:
 * Prestanda är bara så bra som den svagaste länken.
 * Tänk alltid på kapacitet kontra volym.
 * Optimera viktiga saker först.
-* Optimera aldrig utan *realistiska* mål.
+* Optimera aldrig utan *realistisk* mål.
 
 >[!NOTE]
 >
@@ -207,7 +211,7 @@ Vissa aspekter av AEM (och/eller den underliggande databasen) kan konfigureras f
 
 >[!NOTE]
 >
->Mer information finns i [KB-artikeln](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html).
+>Mer information finns i [KB-artikel](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html).
 
 ### Sökindexering {#search-indexing}
 
@@ -231,17 +235,17 @@ Arbetsflödesmotorn använder Apache Sling-jobbköer för hantering och schemal�
 
 Konfigurera de här tjänsterna för att begränsa antalet arbetsflödesprocesser som körs samtidigt.
 
-**Obs!Om du** konfigurerar dessa jobbköer påverkas alla arbetsflöden såvida du inte har skapat en jobbkö för en viss arbetsflödesmodell (se  [Konfigurera kön för en viss ](/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow) arbetsflödesmodell nedan).
+**Obs!** Om du konfigurerar dessa jobbköer påverkas alla arbetsflöden såvida du inte har skapat en jobbkö för en viss arbetsflödesmodell (se [Konfigurera kön för en viss arbetsflödesmodell](/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow) nedan).
 
 #### Konfiguration i databasen {#configuration-in-the-repo}
 
-Om du konfigurerar tjänsterna [med en sling:OsgiConfig-nod](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository) måste du hitta PID:t för de befintliga tjänsterna, till exempel: org.apache.sling.event.job.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705. Du kan identifiera ditt PID med webbkonsolen.
+Om du konfigurerar tjänsterna [använda en sling:OsgiConfig-nod](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)måste du hitta PID:t för de befintliga tjänsterna, till exempel: org.apache.sling.event.job.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705. Du kan identifiera ditt PID med webbkonsolen.
 
-Du måste konfigurera egenskapen `queue.maxparallel`.
+Du måste konfigurera egenskapen med namnet `queue.maxparallel`.
 
 #### Konfiguration i webbkonsolen {#configuration-in-the-web-console}
 
-Om du vill konfigurera de här tjänsterna [med webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) letar du reda på de befintliga konfigurationsobjekten under konfigurationsfabriken för Apache Sling-jobbkön.
+Så här konfigurerar du dessa tjänster [med webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)Leta reda på de befintliga konfigurationsobjekten under konfigurationsfabriken för Apache Sling-jobbkön.
 
 Du måste konfigurera egenskapen Maximum Parallel Jobs.
 
@@ -272,13 +276,13 @@ Följande procedur skapar en jobbkö för ett arbetsflöde med arbetsflödet DAM
 
 1. Skapa en jobbkö för vart och ett av dessa ämnen. Om du vill skapa en jobbkö skapar du en fabrikskonfiguration för fabrikstjänsten för Apache Sling Job Queue.
 
-   Fabrikskonfigurationerna liknar den Beviljade arbetsflödeskö som beskrivs i [Samtidig arbetsflödesbearbetning](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing), förutom att egenskapen Ämnen matchar ämnet för dina arbetsflödesjobb.
+   Fabrikskonfigurationerna liknar den Granite-arbetsflödeskö som beskrivs i [Samtidig bearbetning av arbetsflöden](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing), förutom att egenskapen Ämnen matchar ämnet för dina arbetsflödesjobb.
 
 ### Tjänsten AEM DAM Asset Synchronization {#cq-dam-asset-synchronization-service}
 
-`AssetSynchronizationService` används för att synkronisera resurser från monterade databaser (inklusive LiveLink, Documentum, bland annat). Som standard utförs en vanlig kontroll var 300:e sekund (5 minuter), så om du inte använder monterade databaser kan du inaktivera den här tjänsten.
+The `AssetSynchronizationService` används för att synkronisera resurser från monterade databaser (inklusive LiveLink, Documentum, bland annat). Som standard utförs en vanlig kontroll var 300:e sekund (5 minuter), så om du inte använder monterade databaser kan du inaktivera den här tjänsten.
 
-Detta görs genom att [konfigurera OSGi-tjänsten](/help/sites-deploying/configuring-osgi.md) **CQ DAM Asset Synchronization Service** för att ställa in **synkroniseringsperioden** ( `scheduler.period`) till (minst 1 år (definieras i sekunder).
+Detta görs av [konfigurera OSGi-tjänsten](/help/sites-deploying/configuring-osgi.md) **CQ DAM Asset Synchronization Service** för att ange **Synkroniseringsperiod** ( `scheduler.period`) till (minst) 1 år (anges i sekunder).
 
 ### Flera DAM-instanser {#multiple-dam-instances}
 
@@ -296,9 +300,9 @@ Ytterligare överväganden är:
 
 Prestanda är av stor betydelse för er publiceringsmiljö. Därför måste du planera och analysera prestandatesterna noga för publiceringsmiljön när du implementerar projektet.
 
-Det här avsnittet syftar till att ge en standardiserad översikt över problemen med att definiera ett testkoncept specifikt för prestandatester i din *publicerings*-miljö. Detta är främst av intresse för kvalitetstekniker, projektledare och systemadministratörer.
+Det här avsnittet syftar till att ge en standardiserad översikt över problemen med att definiera ett testkoncept specifikt för prestandatester på *publicera* miljö. Detta är främst av intresse för kvalitetstekniker, projektledare och systemadministratörer.
 
-Nedan beskrivs en standardiserad metod för prestandatester för ett AEM program i *publiceringsmiljön*. Detta omfattar följande fem faser:
+Följande omfattar en standardiserad metod för prestandatester för en AEM på *Publicera* miljö. Detta omfattar följande fem faser:
 
 * [Kunskapsverifiering](#verification-of-knowledge)
 * [Definition av tillämpningsområde](#scope-definition)
@@ -354,7 +358,7 @@ Det här konceptet har fyra scenarier som används för att definiera och testa 
 
 * Enkomponentstester
 * Kombinerade komponenttester
-* *Going* Livescenario
+* *Kommer live* scenario
 * Felscenarier
 
 Baserat på följande principer.
@@ -387,10 +391,10 @@ I båda fallen kan du definiera det förväntade antalet transaktioner per sekun
 
 | Komponent | Testtyp | Nej. Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
-| Startsida - en användare | Medel | 1 | 3 |  |  |
-|  | Toppvärde | 3 | 3 |  |  |
-| Startsida 100 användare | Medel | 100 | 1 |  |  |
-|  | Toppvärde | 100 | 1 |  |
+| Startsida - en användare | Genomsnittlig | 1 | 1 |  |  |
+|  | Toppvärde | 1 | 3 |  |  |
+| Startsida 100 användare | Genomsnittlig | 100 | 3 |  |  |
+|  | Toppvärde | 100 | 3 |  |
 
 #### Komponenttester {#combined-component-tests}
 
@@ -398,11 +402,11 @@ Genom att testa komponenterna i kombination får du en närmare bild av hur prog
 
 | Scenario | Komponent | Nej. Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
-| Blandat genomsnitt | Hemsida | 10 | 3 |  |  |
+| Blandat genomsnitt | Hemsida | 10 | 1 |  |  |
 |  | Sökning | 10 | 1 |  |  |
 |  | Nyheter | 10 | 2 |  |  |
-|  | Händelser | 10 | 3 |  |  |
-|  | Aktiveringar | 10 | 1 |  | Simulering av författarbeteende. |
+|  | Händelser | 10 | 1 |  |  |
+|  | Aktiveringar | 10 | 3 |  | Simulering av författarbeteende. |
 | Blandad topp | Hemsida | 100 | 5 |  |  |
 |  | Sökning | 50 | 5 |  |  |
 |  | Nyheter | 100 | 10 |  |  |
@@ -432,7 +436,7 @@ När man utformar dessa tester bör man komma ihåg att inte alla scenarier komm
 
 | Felscenario | Feltyp | Nej. Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
-| Överlagring av sökkomponent | Sök på globalt jokertecken (asterisk) | 10 | 1 |  | Endast &amp;stämpel;ast;&amp;ast;&amp;ast; söks igenom. |
+| Överlagring av sökkomponent | Sök på globalt jokertecken (asterisk) | 10 | 1 |  | Endast &amp;senaste;&amp;senaste; söks igenom. |
 |  | Stoppord | 20 | 2 |  | Söker efter ett stoppord. |
 |  | Tom sträng | 10 | 1 |  | Söker efter en tom sträng. |
 |  | Specialtecken | 10 | 1 |  | Söker efter specialtecken. |
@@ -443,11 +447,11 @@ Vissa problem kommer inte att uppstå förrän systemet har körts under en kont
 
 | Scenario | Testtyp | Nej. Användare | Tx/sek (förväntas) | Tx/sek (testad) | Beskrivning |
 |---|---|---|---|---|---|
-| Varaktighetsprovning (72 timmar) | Hemsida | 10 | 3 |  |  |
+| Varaktighetsprovning (72 timmar) | Hemsida | 10 | 1 |  |  |
 |  | Sökning | 10 | 1 |  |  |
 |  | Nyheter | 20 | 2 |  |  |
-|  | Händelser | 10 | 3 |  |  |
-|  | Aktiveringar | 3 | 1 |  | Simulering av författarbeteende. |
+|  | Händelser | 10 | 1 |  |  |
+|  | Aktiveringar | 1 | 3 |  | Simulering av författarbeteende. |
 
 ### Optimering {#optimization}
 
@@ -462,7 +466,7 @@ Det finns ett urval verktyg som kan hjälpa dig med lastgenerering, prestandaöv
 
 * [JMeter](https://jakarta.apache.org/jmeter/)
 * [Load Runner](https://www.microfocus.com/en-us/products/loadrunner-load-testing/overview)
-* [](https://www.determyne.com/) DetermineInsideApps
+* [Determiner](https://www.determyne.com/) InsideApps
 * [InfraRED](https://www.infraredsoftware.com/)
 * [Java Interactive Profile](https://jiprof.sourceforge.net/)
 * många fler...
@@ -482,7 +486,7 @@ När alla tester är klara vill du rapportera om:
 
 ## Optimera prestanda när du använder Dispatcher {#optimizing-performance-when-using-the-dispatcher}
 
-[Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) är Adobe-cachning och/eller belastningsutjämningsverktyg. När du använder Dispatcher bör du överväga att optimera webbplatsen för cacheprestanda.
+The [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) är Adobe och/eller belastningsutjämningsverktyg. När du använder Dispatcher bör du överväga att optimera webbplatsen för cacheprestanda.
 
 >[!NOTE]
 >
@@ -498,7 +502,6 @@ Dispatcher har ett antal inbyggda funktioner som du kan använda för att optime
 >
 >* Kan cachelagra allt som du kan lagra som en sida och begära med en URL
 >* Det går inte att lagra andra saker, som cookies, sessionsdata och formulärdata.
-
 >
 >I allmänhet handlar många cachelagringsstrategier om att välja bra URL:er och inte förlita sig på dessa ytterligare data.
 >
@@ -508,13 +511,13 @@ Dispatcher har ett antal inbyggda funktioner som du kan använda för att optime
 
 Cachekvotsformeln uppskattar procentandelen begäranden som hanteras av cachen av det totala antalet begäranden som kommer in i systemet. För att beräkna cachekvoten behöver du följande:
 
-* Totalt antal begäranden. Den här informationen finns i Apache `access.log`. Mer information finns i [den officiella Apache-dokumentationen](https://httpd.apache.org/docs/2.4/logs.html#accesslog).
+* Totalt antal begäranden. Den här informationen är tillgänglig i Apache `access.log`. Mer information finns i [officiell Apache-dokumentation](https://httpd.apache.org/docs/2.4/logs.html#accesslog).
 
-* Antalet begäranden som den publicerade instansen betjänade. Den här informationen är tillgänglig i `request.log` för instansen. Mer information finns i [Tolka request.log](/help/sites-deploying/monitoring-and-maintaining.md#interpreting-the-request-log) och [Söka efter loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#finding-the-log-files).
+* Antalet begäranden som den publicerade instansen betjänade. Den här informationen finns i `request.log` för instansen. Mer information finns i [Tolka request.log](/help/sites-deploying/monitoring-and-maintaining.md#interpreting-the-request-log) och [Söka efter loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#finding-the-log-files).
 
 Formeln för beräkning av cacheförhållandet är:
 
-* (Det totala antalet begäranden **minus** antalet begäranden vid publicering) **delat** med det totala antalet begäranden.
+* (Totalt antal begäranden **minus** antalet begäranden vid publicering) **delad** efter det totala antalet begäranden.
 
 Om det totala antalet begäranden till exempel är 129491 och antalet begäranden som hanteras av Publish-instansen är 58959 är cachekvoten: **(129491 - 58959)/129491= 54,5 %**.
 
@@ -529,7 +532,7 @@ Om du inte har en till en utgivare/utgivare måste du lägga ihop förfrågninga
 Med Dispatcher version 4.1.11 kan du cachelagra svarshuvuden. Om du inte cachelagrar svarshuvuden i Dispatcher kan problem uppstå om du lagrar sidkodningsinformation i sidhuvudet. I det här fallet används webbserverns standardkodning för sidan när Dispatcher visar en sida från cachen. Det finns två sätt att undvika det här problemet:
 
 * Om du bara använder en kodning kontrollerar du att den kodning som används på webbservern är densamma som standardkodningen för den AEM webbplatsen.
-* Använd en `<META>`-tagg i avsnittet HTML `head` för att ställa in kodningen, som i följande exempel:
+* Använd en `<META>` -taggen i HTML `head` -sektion för att ställa in kodningen, som i följande exempel:
 
 ```xml
         <META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
@@ -537,7 +540,7 @@ Med Dispatcher version 4.1.11 kan du cachelagra svarshuvuden. Om du inte cachela
 
 #### Undvik URL-parametrar {#avoid-url-parameters}
 
-Undvik om möjligt URL-parametrar för sidor som du vill cachelagra. Om du till exempel har ett bildgalleri cachelagras aldrig följande URL (såvida inte Dispatcher är [konfigurerad därefter](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)):
+Undvik om möjligt URL-parametrar för sidor som du vill cachelagra. Om du till exempel har ett bildgalleri cachelagras aldrig följande URL (såvida inte Dispatcher är [konfigurerad](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)):
 
 ```xml
 www.myCompany.com/pictures/gallery.html?event=christmas&amp;page=1
@@ -567,7 +570,7 @@ www.myCompany.com/news/main.large.html
 
 >[!NOTE]
 >
->I de flesta layoutaspekter går det även att använda formatmallar och/eller skript på klientsidan. Dessa fungerar vanligtvis mycket bra med cachning.
+>I de flesta layoutaspekter går det även att använda formatmallar och/eller skript på klientsidan. De fungerar vanligtvis mycket bra med cachning.
 >
 >Detta är också användbart för en utskriftsversion där du kan använda en URL-adress som:
 >
@@ -584,7 +587,7 @@ Om du återger sidrubriker, eller annan text, som bilder bör du lagra filerna s
 
    `<page file name>.<image file name>`
 
-Du kan till exempel lagra rubriken för sidan myPage.html i filen `myPage.title.gif`. Den här filen tas automatiskt bort om sidan uppdateras, så alla ändringar av sidans titel återspeglas automatiskt i cachen.
+Du kan till exempel lagra titeln för sidan myPage.html i filen `myPage.title.gif`. Den här filen tas automatiskt bort om sidan uppdateras, så alla ändringar av sidans titel återspeglas automatiskt i cachen.
 
 >[!NOTE]
 >
@@ -611,23 +614,23 @@ Vi rekommenderar att du begränsar personaliseringen till där det är nödvänd
 
 >[!TIP]
 >
->Mer information om hur du konfigurerar Dispatcher-cachen finns i [AEM Dispatcher Cache Tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html) och dess avsnitt om [Caching Protected Content.](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/chapter-1.html#dispatcher-tips-and-tricks)
+>Mer information om hur du konfigurerar Dispatcher-cachen finns i [AEM Dispatcher Cache - självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html) och dess avsnitt [Cachelagra skyddat innehåll.](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/chapter-1.html#dispatcher-tips-and-tricks)
 
 Om du anpassar varje sida (till exempel genom att placera användarens namn i namnlisten) kan det påverka prestanda.
 
 >[!TIP]
 >
->Mer information om cachelagring av skyddat innehåll finns i [Cachelagra skyddat innehåll](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html) i Dispatcher-guiden.
+>Information om cachelagring av skyddat innehåll finns i [Cachelagra skyddat innehåll](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html) i Dispatcher-guiden.
 
 När det gäller att blanda begränsat och offentligt innehåll på en sida kanske du vill överväga en strategi som utnyttjar SSI (server side includes) i Dispatcher, eller klientsidan inkluderar via Ajax i webbläsaren.
 
 >[!TIP]
 >
->Information om hur du hanterar blandat offentligt och begränsat innehåll finns i [Konfigurera dynamisk SSLING-infogning.](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-sling-dynamic-include.html)
+>Information om hur du hanterar blandat offentligt och begränsat innehåll finns i [Konfigurera dynamisk SSLING-inkludering.](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-sling-dynamic-include.html)
 
 #### Fästiga anslutningar {#sticky-connections}
 
-[Anteckningar ](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#the-benefits-of-load-balancing) gör att dokumenten för en användare kan sammanställas på samma server. Om en användare lämnar den här mappen och senare återgår till den, stannar anslutningen fortfarande kvar. Definiera en mapp för alla dokument som kräver klisterlappar för webbplatsen. Försök att inte ha med andra dokument i den. Detta påverkar belastningsutjämningen om du använder personaliserade sidor och sessionsdata.
+[Fästanslutningar](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#the-benefits-of-load-balancing) se till att dokumenten för en användare är sammansatta på samma server. Om en användare lämnar den här mappen och senare återgår till den, stannar anslutningen fortfarande kvar. Definiera en mapp för alla dokument som kräver klisterlappar för webbplatsen. Försök att inte ha med andra dokument i den. Detta påverkar belastningsutjämningen om du använder personaliserade sidor och sessionsdata.
 
 #### MIME-typer {#mime-types}
 
@@ -648,7 +651,7 @@ Med Dispatcher version 4.1.11 kan du cachelagra svarshuvuden. Om du inte cachela
 Följ dessa riktlinjer för att vara säker på att filerna cachelagras korrekt:
 
 * Kontrollera att filerna alltid har rätt filtillägg.
-* Undvik generiska filserverskript med URL-adresser som t.ex. `download.jsp?file=2214`. Skriv om skriptet så att URL:er som innehåller filspecifikationen används. I det föregående exemplet skulle det vara `download.2214.pdf`.
+* Undvik generiska filserverskript med URL-adresser som `download.jsp?file=2214`. Skriv om skriptet så att URL:er som innehåller filspecifikationen används. I föregående exempel är det här `download.2214.pdf`.
 
 ## Säkerhetskopieringsprestanda {#backup-performance}
 
@@ -687,17 +690,17 @@ Prestandatestvärdet för säkerhetskopiering upprepas med ytterligare innehåll
 
 Referensvärdena för säkerhetskopiering omfattar två huvudscenarier: säkerhetskopierar när systemet är under en betydande programbelastning och säkerhetskopierar när systemet är inaktivt. Även om den allmänna rekommendationen är att säkerhetskopieringar ska utföras när AEM är så inaktiv som möjligt, finns det situationer då det är nödvändigt att säkerhetskopieringen måste köras när systemet är under laddning.
 
-* **Inaktiv** StateBackups utförs utan någon annan aktivitet på AEM.
-* **Under** LoadBackups utförs medan systemet är mindre än 80 % inläst från onlineprocesser. Fördröjningen för säkerhetskopiering varierade för att se effekten på inläsningen.
+* **Inaktivitetsläge** Säkerhetskopieringar utförs utan någon annan aktivitet på AEM.
+* **Under inläsning** Säkerhetskopieringar utförs medan systemet är under 80 % inläst från onlineprocesser. Fördröjningen för säkerhetskopiering varierade för att se effekten på inläsningen.
 
 Tidpunkter och storlek för säkerhetskopieringen hämtas från AEM. Det rekommenderas normalt att säkerhetskopieringar schemaläggs i fel tider när AEM är ledig, till exempel mitt i natten. Detta scenario är representativt för den rekommenderade metoden.
 
 Inläsningen består av sidor som skapar/tar bort, bläddrar och frågor där större delen av inläsningen kommer från sidbläddringar och frågor. Om du lägger till och tar bort för många sidor ökar arbetsytans storlek kontinuerligt och förhindrar att säkerhetskopiorna slutförs. Distributionen av den last som skriptet ska använda är 75 % sidöverföringar, 24 % frågor och 1 % sidskapande (en nivå utan kapslade undersidor). Maximalt medelvärde för transaktioner per sekund i ett system som är inaktivt uppnås med fyra samtidiga trådar, vilket är vad som kommer att användas vid testning av säkerhetskopior under inläsning.
 
-Inläsningens inverkan på säkerhetskopieringsprestanda kan uppskattas av skillnaden mellan prestanda med och utan den här programinläsningen. Effekten av säkerhetskopieringen på programmets dataflöde hittas genom att man jämför scenariogenomströmningen i transaktioner per timme med och utan en pågående säkerhetskopiering, och med säkerhetskopieringar som körs med olika inställningar för fördröjning av säkerhetskopiering.
+Inläsningens inverkan på säkerhetskopieringsprestanda kan uppskattas av skillnaden mellan prestanda med och utan den här programinläsningen. Effekten av säkerhetskopieringen på programmets dataflöde hittas genom att man jämför scenariogenomströmningen i transaktioner per timme med och utan en pågående samtidig säkerhetskopiering och med säkerhetskopieringar som körs med olika inställningar för fördröjning av säkerhetskopiering.
 
-* **Fördröjningsinställning** För flera scenarier varierade vi även fördröjningsinställningen för säkerhetskopiering med värden på 10 ms (standard), 1 ms och 0 ms, för att undersöka hur den här inställningen påverkade säkerhetskopieringens prestanda.
-* **Säkerhetskopieringstyp** Alla säkerhetskopior var externa säkerhetskopior av databasen som gjorts till en säkerhetskopieringskatalog utan att skapa en zip, förutom i ett fall där tjärkommandot användes direkt. Eftersom det inte går att skapa stegvisa säkerhetskopieringar till en zip-fil, eller när den tidigare fullständiga säkerhetskopieringen är en zip-fil, är säkerhetskopieringskatalogmetoden den metod som oftast används i produktionssituationer.
+* **Fördröjningsinställning** För flera av scenarierna har vi också varierat inställningen för fördröjning av säkerhetskopiering med värden på 10 ms (standard), 1 ms och 0 ms, för att undersöka hur den här inställningen påverkar säkerhetskopieringens prestanda.
+* **Typ av säkerhetskopiering** Alla säkerhetskopior var externa säkerhetskopior av databasen som gjorts till en säkerhetskopieringskatalog utan att skapa en zip, utom i ett fall för jämförelse där tjärkommandot användes direkt. Eftersom det inte går att skapa stegvisa säkerhetskopieringar till en zip-fil, eller när den tidigare fullständiga säkerhetskopieringen är en zip-fil, är säkerhetskopieringskatalogmetoden den metod som oftast används i produktionssituationer.
 
 ### Sammanfattning av resultat {#summary-of-results}
 

@@ -12,14 +12,18 @@ discoiquuid: 3619ded2-a67c-4b96-b634-4c0d68f5284a
 legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/editmode
 pagetitle: Foundation Components
 exl-id: c85e442a-eb24-4eda-a49b-089e5988150d
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '6642'
-ht-degree: 1%
+source-wordcount: '6678'
+ht-degree: 0%
 
 ---
 
 # Foundation Components{#foundation-components}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
@@ -205,7 +209,7 @@ Ange en bana manuellt eller med väljaren. Lämna tomt om du vill använda den a
       * **Alternativ för fast lista**
 
          * **Sidor**
-Välj en lista med sidor. Användning 
+Välj en lista med sidor. Använd 
 `+` om du vill lägga till fler poster och upp-/nedknapparna för att justera ordningen.
       * **Alternativ för sökning**
 
@@ -293,7 +297,7 @@ Komponenten Download skapar en länk på den valda webbsidan för att hämta en 
 
       En kort beskrivning med nedladdningslänken.
 
-   * **Arkiv**
+   * **Fil**
 
       Filen är tillgänglig för hämtning på den slutliga webbsidan. Dra en resurs från innehållssökaren eller klicka på området för att överföra filen som ska vara tillgänglig för hämtning.
 
@@ -424,7 +428,7 @@ När en bild har lästs in kan du konfigurera följande:
 
    Om du vill rotera en bild väljer du Rotera. Använd detta upprepade gånger tills bilden roteras som du vill ha den.
 
-* **Radera**
+* **Rensa**
 
    Ta bort den aktuella bilden.
 
@@ -1041,7 +1045,7 @@ Dessa flikar ger dig de parametrar som behövs. dessa kan bero på den enskilda 
 
 * **Begränsningar**
 
-   * **Krävs**
+   * **Obligatoriskt**
 
       Detta beror på formulärkomponenttypen, men tillhandahåller en eller flera kryssrutor som anger att det här fältet, eller vissa delar av det här fältet, är/är obligatoriska.
 
@@ -1197,7 +1201,7 @@ Ett formulär behöver en åtgärd. Åtgärden definierar den åtgärd som utlö
 
             Grupp att tilldela ny användare till.
 
-         * **Home**
+         * **Startsida**
 
             Sida som ska visas efter slutförd inloggning.
 

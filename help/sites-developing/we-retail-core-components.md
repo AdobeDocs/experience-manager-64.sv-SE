@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: af3cd818-61cf-4da1-bfb5-87540911ddd5
 exl-id: b77d0e6b-3005-4dba-8e88-70b4d04b1eba
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '535'
-ht-degree: 2%
+source-wordcount: '571'
+ht-degree: 1%
 
 ---
 
 # Provar kärnkomponenter i We.Retail{#trying-out-core-components-in-we-retail}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 De centrala komponenterna är moderna, flexibla komponenter som är enkla att utöka och som gör det enkelt att integrera i projekten. Kärnkomponenterna har byggts kring flera viktiga designprinciper, som HTML, användbarhet, färdig installation, konfigurerbarhet, versionshantering och utbyggbarhet. Vi.Retail har byggts på kärnkomponenter.
 
@@ -32,7 +36,7 @@ De centrala komponenterna är moderna, flexibla komponenter som är enkla att ut
    * `.core-wcm`: Standardkärnkomponenterna
    * `.core-wcm-form`: Baskomponenter för att skicka in formulär
 
-   Choose `.core-wcm`.
+   Välj `.core-wcm`.
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 

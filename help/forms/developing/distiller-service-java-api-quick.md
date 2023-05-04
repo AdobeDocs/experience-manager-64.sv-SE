@@ -2,7 +2,7 @@
 title: Distiller Service Java API QuickStart(SOAP)
 seo-title: Distiller Service Java API QuickStart(SOAP)
 description: Använd Java-API:t för Distiller Service för att konvertera en PostScript-fil till ett PDF-dokument.
-seo-description: Använd Java-API:t för Distiller Service för att konvertera en PostScript-fil till ett PDF-dokument.
+seo-description: Use the Distiller Service Java API to convert a PostScript file to a PDF document.
 uuid: 7781f074-cea4-4109-892b-118cfad4ec36
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 59dd61d1-c6b1-4bea-b666-4aa7897384a1
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 0d7cdb60-e892-4644-8a72-a8068ca2e224
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
 
+# Distiller Service Java API Quick Start (SOAP) {#distiller-service-java-api-quickstart-soap}
 
-# Snabbstart för Distiller Java API (SOAP) {#distiller-service-java-api-quickstart-soap}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Java API Quick Start (SOAP) finns för tjänsten Distiller®:
 
@@ -29,7 +32,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 >[!NOTE]
 >
->Snabbstarter som finns i Programmering med AEM baseras på den Forms-server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstarter som finns i Programmering med AEM baseras på den Forms-server som distribueras på JBoss Application Server och Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Konvertera en PostScript-fil till ett PDF-dokument med Java API {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
 
@@ -144,4 +147,3 @@ I följande kodexempel konverteras en PostScript-fil med namnet *Loan.ps *till e
      } 
  }
 ```
-

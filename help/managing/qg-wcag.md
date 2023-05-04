@@ -1,28 +1,31 @@
 ---
 title: Snabbguide till WCAG 2.0
-seo-title: Snabbguide till WCAG 2.0
+seo-title: Quick Guide to WCAG 2.0
 description: Läs en kort översikt över riktlinjerna för tillgänglighet i WCAG 2.0.
-seo-description: Läs en kort översikt över riktlinjerna för tillgänglighet i WCAG 2.0.
+seo-description: Read a quick overview of the WCAG 2.0 accessibility guidelines.
 uuid: a5cf463e-89e9-4cc0-9c91-69a1fd3d8ea2
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/MANAGING
 topic-tags: managing-accessibility
 content-type: reference
 discoiquuid: 3cac0e34-7514-48ce-a93b-592bbdbcd252
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 80edcd53-bc3c-4f61-8dfb-c592e7e51f60
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1685'
-ht-degree: 82%
+source-wordcount: '1708'
+ht-degree: 81%
 
 ---
 
-
 # Snabbguide till WCAG 2.0{#quick-guide-to-wcag}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 AEM har utvecklats för att maximera efterlevnaden av riktlinjerna för tillgänglighet för webbinnehåll:
 
-[Riktlinjerna för tillgänglighet för webbinnehåll, version 2.0 (WCAG2)](https://www.w3.org/TR/WCAG/) är en uppsättning internationellt erkända riktlinjer som utvecklats av [World Wide Web Consortium (W3C)](https://www.w3.org/) under deras [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/).
+The [Riktlinjer för tillgängligt webbinnehåll, version 2.0 (WCAG2)](https://www.w3.org/TR/WCAG/) är en uppsättning internationellt erkända riktlinjer som utarbetats av [World Wide Web Consortium (W3C)](https://www.w3.org/) enligt [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/).
 
 WCAG 2.0 består av en uppsättning teknikoberoende riktlinjer och framgångskriterier för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder. De ger råd till webbinnehållsförfattare, designers och utvecklare som ser till att de resurser de producerar är så tillgängliga som möjligt för så många människor som möjligt, oavsett vilka funktionshinder de har, t.ex. synnedsättning, hörselnedsättning, inlärningssvårigheter, åldersrelaterade begränsningar med mera.
 
@@ -36,11 +39,11 @@ Därför är det viktigt att förstå syftet med WCAG 2.0 och hur riktlinjerna �
 
 Syftet med WCAG 2.0 är att tillhandahålla riktlinjer som:
 
-* **Teknikagnostiker:**
+* är **teknikagnostiker:**
 
    Riktlinjer som kan tillämpas på en rad olika webbinnehållsformat, inte bara HTML. WCAG 2.0 kan alltså omfatta innehåll som genereras som eller tillhandahålls i PDF, Flash, JavaScript och andra befintliga och framtida webbtekniker. Detta syftar till att åtgärda en svaghet i WCAG 1.0, eftersom det fokuserades på HTML på bekostnad av andra webbinnehållsformat.
 
-* Är **testbara:**
+* är **testbar:**
 
    Varje riktlinje är skriven på ett sådant sätt att den kan testas objektivt för att säkerställa att en grupp experter på tillgänglighet i allmänhet håller med om att riktlinjen har följts. En av utmaningarna med riktlinjerna för tillgänglighet är att vissa kan testas tekniskt medan andra kräver en mänsklig bedömning för att avgöra om riktlinjerna har följts eller inte. WCAG 2.0 har skrivits i syfte att minska den subjektivitet som fanns i vissa av WCAG 1.0-riktlinjerna och kontrollpunkterna.
 
@@ -91,8 +94,8 @@ WCAG 2.0 är ett stabilt dokument och kommer inte att ändras, men de flesta av 
 
 ### WCAG 2.0-resurser {#wcag-resources}
 
-* [En översikt över alla WCAG 2.0-relaterade dokument](https://www.w3.org/WAI/intro/wcag.php).
-* [Förklaring av hur olika komponenter relaterar till varandra](https://www.w3.org/WAI/intro/wcag20).
+* [En översikt över alla WCAG 2.0-relaterade dokument](https://www.w3.org/WAI/intro/wcag.php);
+* [Förklaring av hur olika komponenter relaterar till varandra](https://www.w3.org/WAI/intro/wcag20);
 * [WCAG 2.0 Frequently Asked Questions](https://www.w3.org/WAI/WCAG20/wcag2faq.html);
 
 ### Techniques for WCAG 2.0 {#techniques-for-wcag}

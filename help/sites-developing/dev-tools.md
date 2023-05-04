@@ -1,24 +1,27 @@
 ---
 title: Utvecklingsverktyg
-seo-title: Utvecklingsverktyg
+seo-title: Development Tools
 description: Det finns ett antal tillgängliga verktygsuppsättningar för att utveckla dina JCR-, Apache Sling- eller AEM-program
-seo-description: Det finns ett antal tillgängliga verktygsuppsättningar för att utveckla dina JCR-, Apache Sling- eller AEM-program
+seo-description: To develop your JCR, Apache Sling or AEM applications, a number of tool sets are available
 uuid: 1bee3a52-5d76-4b0c-a222-a02e12ff3a43
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: development-tools
 content-type: reference
 discoiquuid: 76c570e5-46ed-46be-9864-4fe4a83f0caf
-translation-type: tm+mt
-source-git-commit: 5b00783e4471a6b142ab17a7bc4a647ab04aec5f
+exl-id: 3c18feab-97a6-49f2-96be-7e7458199f5d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '428'
 ht-degree: 0%
 
 ---
 
-
 # Utvecklingsverktyg{#development-tools}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Följande verktygsuppsättningar är tillgängliga för att utveckla dina JCR-, Apache Sling- eller AEM-program:
 
@@ -36,7 +39,7 @@ Adobe har släppt följande tillägg:
 
 * [AEM Eclipse-tillägg](/help/sites-developing/aem-eclipse.md)
 * [AEM Brackets Extension](/help/sites-developing/aem-brackets.md)
-* [AEM IntelliJ Extension](https://github.com/headwirecom/aem-ide-tooling-4-intellij/blob/master/documenation/AEM%20Tooling%20Plugin%20for%20IntelliJ%20IDEA.pdf)  (från Headwire)
+* [AEM IntelliJ Extension](https://github.com/headwirecom/aem-ide-tooling-4-intellij/blob/master/documenation/AEM%20Tooling%20Plugin%20for%20IntelliJ%20IDEA.pdf) (från Headwire)
 
 ### Andra verktyg {#other-tools}
 

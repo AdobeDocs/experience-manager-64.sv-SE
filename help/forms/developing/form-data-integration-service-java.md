@@ -1,8 +1,8 @@
 ---
 title: JavaAPI snabbstart (SOAP) för integreringstjänsten för formulärdata
-seo-title: JavaAPI snabbstart (SOAP) för integreringstjänsten för formulärdata
+seo-title: Form Data Integration Service JavaAPI Quick Start(SOAP)
 description: Använd tjänsten för integrering av formulärdata för att importera data till ett PDF-formulär och exportera data från ett PDF-formulär med Java API.
-seo-description: Använd tjänsten för integrering av formulärdata för att importera data till ett PDF-formulär och exportera data från ett PDF-formulär med Java API.
+seo-description: Use the Form Data Integration service to import data into a PDF form and export data from a PDF form using the Java API.
 uuid: bde8e83d-56d3-4331-a025-82b327c219b7
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 91b738ec-aa00-4f05-bf42-2574ced8d993
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: c60ef25a-26a0-4421-b635-ced54baa324d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
 
+# Java API snabbstart (SOAP) för integreringstjänsten för formulärdata {#form-data-integration-service-javaapi-quick-start-soap}
 
-# Java API snabbstart (SOAP) {#form-data-integration-service-javaapi-quick-start-soap} för integreringstjänsten för formulärdata
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Följande snabbstarter är tillgängliga för integreringstjänsten för formulärdata.
 
@@ -31,11 +34,11 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 >[!NOTE]
 >
->Snabbstart som finns i Programmering med AEM baseras på den Forms-server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstart som finns i Programmering med AEM baseras på den Forms-server som distribueras på JBoss Application Server och Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Importera formulärdata med Java API {#quick-start-soap-mode-importing-form-data-using-the-java-api}
 
-I följande Java-kodexempel importeras data till ett PDF-formulär. Data finns i en XML-fil med namnet *Loan_data.xml* och PDF-formuläret sparas som en PDF-fil med namnet *ResultLoanForm.pdf*. (Se [Importera formulärdata](/help/forms/developing/importing-exporting-data.md#importing-form-data).)
+I följande Java-kodexempel importeras data till ett PDF-formulär. Data finns i en XML-fil med namnet *Loan_data.xml* och formuläret PDF sparas som en PDF-fil med namnet *ResultLoanForm.pdf*. (Se [Importera formulärdata](/help/forms/developing/importing-exporting-data.md#importing-form-data).)
 
 ```as3
  /* 
@@ -137,7 +140,7 @@ I följande Java-kodexempel importeras data till ett PDF-formulär. Data finns i
 
 ## Snabbstart (SOAP-läge): Exportera formulärdata med Java API {#quick-start-soap-mode-exporting-form-data-using-the-java-api}
 
-I följande Java-kodexempel exporteras data från ett PDF-formulär. Formulärdata sparas som en XML-fil med namnet *Loan_data.xml*. (Se [Exportera formulärdata](/help/forms/developing/importing-exporting-data.md#exporting-form-data).)
+I följande Java-kodexempel exporteras data från ett PDF-formulär. Formulärdata sparas som en XML-fil med namnet *Loan_data.xml*. (Se [Exporterar formulärdata](/help/forms/developing/importing-exporting-data.md#exporting-form-data).)
 
 ```as3
  /* 
@@ -231,4 +234,3 @@ I följande Java-kodexempel exporteras data från ett PDF-formulär. Formulärda
      } 
  }
 ```
-

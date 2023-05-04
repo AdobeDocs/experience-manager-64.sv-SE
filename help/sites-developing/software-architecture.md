@@ -1,8 +1,8 @@
 ---
 title: Programvaruarkitektur
-seo-title: Programvaruarkitektur
+seo-title: Software Architecture
 description: Bästa tillvägagångssätt för att skapa programvara
-seo-description: Bästa tillvägagångssätt för att skapa programvara
+seo-description: Best practices for architecting your software
 uuid: a557f6ca-c3f1-486e-a45e-6e1f986fab41
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,21 +10,24 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 92971747-1c74-4917-b5a0-7b79b3ae1e68
 exl-id: 4c5896a4-d3f4-4278-9af3-538ab10cd210
-translation-type: tm+mt
-source-git-commit: b7d1a2435e33d4fdd1d030d81ff1ca1b65700fa6
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '650'
 ht-degree: 0%
 
 ---
 
 # Programvaruarkitektur{#software-architecture}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 ## Design för uppgraderingar {#design-for-upgrades}
 
 När du utökar OTB-beteenden är det viktigt att tänka på uppgraderingarna. Använd alltid anpassningar i katalogen /apps och lägg antingen över motsvarande noder i katalogen /libs eller använd sling:resourceSuperType för att utöka beteendet utanför rutan. Vissa ändringar kan behövas för att stödja en ny AEM, men den nya versionen bör inte skriva över dina anpassningar om den här metoden följs.
 
-### Återanvänd mall och komponenter när det är möjligt {#reuse-template-and-components-when-possible}
+### Återanvänd mallar och komponenter när det är möjligt {#reuse-template-and-components-when-possible}
 
 På så sätt kan webbplatsen få ett mer konsekvent utseende och känsla och förenkla kodunderhållet. När en ny mall behövs måste du se till att utöka från en delad basmall så att globala krav som klientlib-inkludering kan kodas på ett ställe. När en ny komponent behövs letar du efter möjligheter att utöka från en befintlig komponent.
 
@@ -36,11 +39,11 @@ Genom att definiera vilka komponenter som kan inkluderas i varje parsys på sida
 
 SOLID är en förkortning som beskriver fem arkitektoniska principer som bör följas:
 
-* **Principen om** ett enda ansvar - varje modul, klass, metod osv. bör endast ha ett ansvar.
-* ****&#x200B;Öppen/stängd princip - modulerna bör vara öppna för utökning och stängda för ändring.
-* **Liskov** Substitution Principle - Typerna ska kunna ersättas av sina undertyper.
-* **Princip för** gränssnittssegmentering - ingen klient ska tvingas att vara beroende av metoder som den inte använder.
-* **Princip för** beroendekonvertering - moduler på hög nivå bör inte vara beroende av moduler på låg nivå. Båda bör vara beroende av abstraktioner. Abstraktioner bör inte vara beroende av detaljer. Detaljer bör vara beroende av abstraktioner.
+* **S** En enda ansvarsprincip - varje modul, klass, metod osv. ska endast ha ett ansvar.
+* **O** pen/Closed Principle - Modulerna ska vara öppna för utökning och stängda för ändring.
+* **L** iskov Substitution Principle - Typerna ska kunna ersättas av sina undertyper.
+* **I** Gränssnittssegmenteringsprincip - ingen klient ska tvingas att vara beroende av metoder som den inte använder.
+* **D** Inverteringsprincip för beroende - moduler på hög nivå bör inte vara beroende av moduler på låg nivå. Båda bör vara beroende av abstraktioner. Abstraktioner bör inte vara beroende av detaljer. Detaljer bör vara beroende av abstraktioner.
 
 Att sträva efter att följa dessa fem principer bör leda till ett system som är strikt åtskilt från oron.
 
@@ -50,7 +53,7 @@ Att sträva efter att följa dessa fem principer bör leda till ett system som �
 >
 >Detta är bara en kort sammanfattning som presenteras för att vara medveten om detta och du uppmuntras att bekanta dig med dessa koncept på ett mer djupgående sätt.
 
-### Följ principen {#follow-the-robustness-principle}
+### Följ tillförlitlighetsprincipen {#follow-the-robustness-principle}
 
 Robusitetsprincipen säger att vi bör vara konservativa i det vi skickar, men vara liberala i det vi accepterar. Med andra ord, när vi skickar meddelanden till en tredje part bör vi helt och hållet följa specifikationerna, men när vi tar emot meddelanden från en tredje part bör vi acceptera meddelanden som inte överensstämmer så länge som meddelandets innebörd är tydlig.
 
@@ -58,7 +61,7 @@ Robusitetsprincipen säger att vi bör vara konservativa i det vi skickar, men v
 
 Taggar och testkod är en integrerad del av alla Agile-programimplementeringar, men vi vill försäkra oss om att de inte kommer in i vår produktionskodbas utan lämplig nivå av övervakning. Därför rekommenderar vi att du skapar toppar i en egen modul.
 
-### Implementera datamigreringsskript i sin egen modul {#implement-data-migration-scripts-in-their-own-module}
+### Implementera skript för datamigrering i sin egen modul {#implement-data-migration-scripts-in-their-own-module}
 
 Skript för datamigrering körs vanligtvis bara en gång när en webbplats startas första gången. Så fort sajten är publicerad blir den därför död. För att säkerställa att vi inte bygger implementeringskod som är beroende av migreringsskripten, bör de implementeras i sin egen modul. Detta gör även att vi kan ta bort och kassera den här koden direkt efter start, vilket eliminerar den döda koden från systemet.
 

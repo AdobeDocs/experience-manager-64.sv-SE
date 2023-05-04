@@ -1,24 +1,27 @@
 ---
 title: Bästa praxis
-seo-title: Bästa praxis
+seo-title: Best Practices
 description: Så här använder du AEM på ett så effektivt och effektivt sätt som möjligt
-seo-description: Så här använder du AEM på ett så effektivt och effektivt sätt som möjligt
+seo-description: How to use AEM in the most efficient and most effective way possible
 uuid: b3044cdf-8ca4-4012-b290-11f73c0cb1bf
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: d15ded18-7417-47e2-9783-b23fa05a0cda
-translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+exl-id: 84db73b0-1bc3-4c39-9bc2-0840e24832b0
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 4%
+source-wordcount: '321'
+ht-degree: 3%
 
 ---
 
-
 # Bästa praxis{#best-practices}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 De effektivaste sätten att skapa beskriver hur du använder AEM på det mest effektiva och mest effektiva sättet. Den här växande listan med ämnen innehåller en mängd olika områden i AEM.
 
@@ -79,4 +82,4 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
 |  |  |  |
 |---|---|---|
 | Anpassningsbara formulär | [Bästa tillvägagångssätt för arbete med anpassningsbara formulär](/help/forms/using/adaptive-forms-best-practices.md) | Beskriver de bästa sätten att skapa, redigera och anpassa anpassade formulär. |
-| HTML5-formulär | [Bästa tillvägagångssätt för att utforma HTML5-formulär](/help/forms/using/best-practices-for-html5-forms.md) | Beskriver de bästa sätten att arbeta med layout och design av HTML5-formulär. |
+| HTML5-formulär | [Bästa praxis för utformning av HTML5-formulär](/help/forms/using/best-practices-for-html5-forms.md) | Beskriver de bästa sätten att arbeta med layout och design av HTML5-formulär. |

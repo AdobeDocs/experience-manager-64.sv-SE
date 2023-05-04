@@ -1,28 +1,31 @@
 ---
 title: Konfigurera bevakade mappslutpunkter
-seo-title: Konfigurera bevakade mappslutpunkter
+seo-title: Configuring watched folder endpoints
 description: Lär dig hur du konfigurerar bevakade mappslutpunkter.
-seo-description: Lär dig hur du konfigurerar bevakade mappslutpunkter.
+seo-description: Learn how to configure watched folder endpoints.
 uuid: 01fb5ff8-2071-44bd-9241-7d5d41a5b26e
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 761e7909-43ba-4642-bcfc-8d76f139b9a3
-translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+exl-id: bce7eee6-17c6-4eaf-b679-b47e611bed87
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '7174'
+source-wordcount: '7199'
 ht-degree: 0%
 
 ---
 
-
 # Konfigurera bevakade mappslutpunkter {#configuring-watched-folder-endpoints}
 
-En administratör kan konfigurera en nätverksmapp, en så kallad *bevakad mapp*, så att en konfigurerad tjänståtgärd anropas och filen ändras när en användare placerar en fil (till exempel en PDF-fil) i den bevakade mappen. När tjänsten har utfört den angivna åtgärden sparas den ändrade filen i en angiven utdatamapp.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-## Konfigurerar tjänsten Bevakade mappar {#configuring-the-watched-folder-service}
+En administratör kan konfigurera en nätverksmapp som kallas *bevakad mapp* så att en konfigurerad tjänståtgärd anropas och filen ändras när en användare placerar en fil (till exempel en PDF-fil) i den bevakade mappen. När tjänsten har utfört den angivna åtgärden sparas den ändrade filen i en angiven utdatamapp.
+
+## Konfigurera tjänsten Bevakade mappar {#configuring-the-watched-folder-service}
 
 Konfigurera tjänsten Bevakade mappar innan du konfigurerar en bevakad mappslutpunkt. Konfigurationsparametrarna för tjänsten Bevakade mappar har två syften:
 
@@ -44,12 +47,12 @@ I en klustermiljö måste mappen som ska användas som en bevakad mapp vara till
 
 Om programservern körs som en tjänst i Windows måste den startas med lämplig åtkomst till den delade mappen på något av följande sätt:
 
-* Konfigurera programservertjänsten Logga in som **parameter** för att starta som en specifik användare med lämplig åtkomst till den delade bevakade mappen.
+* Konfigurera programservertjänstens inloggning som **parameter** för att starta som en specifik användare med lämplig åtkomst till den delade bevakade mappen.
 * Konfigurera programservertjänsten Start som lokalt system så att tjänsten kan interagera med skrivbordet. Det här alternativet kräver att den delade bevakade mappen är tillgänglig och skrivbar för alla.
 
 ## Sammanfoga bevakade mappar {#chaining-together-watched-folders}
 
-Bevakade mappar kan sammanfogas så att ett resultatdokument för en bevakad mapp är indatadokumentet för nästa bevakade mapp. Varje bevakad mapp kan anropa en annan tjänst. Genom att konfigurera bevakade mappar på det här sättet kan flera tjänster anropas. En bevakad mapp kan till exempel konvertera PDF-filer till Adobe PostScript® och en andra bevakad mapp kan konvertera PostScript-filerna till PDF/A-format. Det gör du genom att ställa in mappen *result* för den bevakade mappen som definieras av din första slutpunkt så att den pekar på mappen *input* för den bevakade mappen som definieras av din andra slutpunkt.
+Bevakade mappar kan sammanfogas så att ett resultatdokument för en bevakad mapp är indatadokumentet för nästa bevakade mapp. Varje bevakad mapp kan anropa en annan tjänst. Genom att konfigurera bevakade mappar på det här sättet kan flera tjänster anropas. En bevakad mapp kan till exempel konvertera PDF-filer till Adobe PostScript® och en andra bevakad mapp kan konvertera PostScript-filerna till PDF/A-format. Om du vill göra det ställer du bara in *resultat* mapp för bevakad mapp som definieras av din första slutpunkt så att den pekar på *input* mapp för den bevakade mappen som definieras av din andra slutpunkt.
 
 Utdata från den första konverteringen går till \path\result. Indata för den andra konverteringen är \path\result, och utdata från den andra konverteringen går till \path\result\result (eller den katalog som du definierar i rutan Resultatmapp för den andra konverteringen).
 
@@ -97,7 +100,7 @@ Så här anropar du en tjänst med bevakade mappar:
 1. När jobbsökningsintervallet inträffar anropar tjänsten Scheduler provider.file_scan_service för att bearbeta filerna eller mapparna i indatamappen.
 1. provider.file_scan_service utför följande uppgifter:
 
-   * Söker igenom indatamappen efter filer eller mappar som matchar inkluderingsfilmönstret och utesluter filer eller mappar för det angivna uteslutningsfilmönstret. De äldsta filerna eller mapparna hämtas först. Filer och mappar som är äldre än väntetiden hämtas också. I en sökning baseras antalet filer eller mappar som bearbetas på gruppstorleken. Mer information om filmönster finns i [Om filmönster](configuring-watched-folder-endpoints.md#about-file-patterns). Mer information om hur du anger gruppstorlek finns i [Inställningar för tjänsten Bevakade mappar](/help/forms/using/admin-help/configure-service-settings.md#watched-folder-service-settings).
+   * Söker igenom indatamappen efter filer eller mappar som matchar inkluderingsfilmönstret och utesluter filer eller mappar för det angivna uteslutningsfilmönstret. De äldsta filerna eller mapparna hämtas först. Filer och mappar som är äldre än väntetiden hämtas också. I en sökning baseras antalet filer eller mappar som bearbetas på gruppstorleken. Mer information om filmönster finns i [Om filmönster](configuring-watched-folder-endpoints.md#about-file-patterns). Mer information om hur du ställer in batchstorleken finns i [Inställningar för tjänsten Bevakade mappar](/help/forms/using/admin-help/configure-service-settings.md#watched-folder-service-settings).
    * Hämtar filer eller mappar för bearbetning. Om filerna eller mapparna inte hämtas helt hämtas de vid nästa sökning. För att vara säker på att mapparna laddas ned fullständigt bör administratörer skapa en mapp med ett namn genom att använda filmönstret exclude. När mappen har alla filer måste namnet ändras till det mönster som anges i inkluderingsfilmönstret. Detta steg säkerställer att mappen har alla filer som behövs för att anropa tjänsten. Mer information om hur du ser till att mapparna är fullständigt nedladdade finns i [Tips och tricks för bevakade mappar](configuring-watched-folder-endpoints.md#tips-and-tricks-for-watched-folders).
    * Flyttar filerna eller mapparna till scenmappen efter att de har markerats för bearbetning.
    * Konverterar filerna eller mapparna i scenmappen till lämplig indata baserat på mappningar av indataparametrar för slutpunkter. Exempel på mappningar av indataparametrar finns i [Tips och tricks för bevakade mappar](configuring-watched-folder-endpoints.md#tips-and-tricks-for-watched-folders).
@@ -111,29 +114,29 @@ Så här anropar du en tjänst med bevakade mappar:
 
    När anropet av måltjänsten resulterar i ett fel loggar provider.file_write_results_service orsaken till felet i en error.log-fil och placerar filen i felmappen. Felmappen skapas baserat på de konfigurationsparametrar som angetts för slutpunkten. När administratören anger alternativet Bevara vid fel för slutpunktskonfigurationen kopierar även provider.file_write_results_service källfilerna till felmappen. Information om hur du återställer filer från felmappen finns i [Felpunkter och återställning](configuring-watched-folder-endpoints.md#failure-points-and-recovery).
 
-## Inställningar för bevakad mappslutpunkt {#watched-folder-endpoint-settings}
+## Slutpunktsinställningar för bevakad mapp {#watched-folder-endpoint-settings}
 
 Använd följande inställningar för att konfigurera en bevakad mappslutpunkt.
 
-**Namn:** (obligatoriskt) Anger slutpunkten. Ta inte med ett &lt;-tecken eftersom det kortar av namnet som visas i arbetsytan. Om du anger en URL som namn på slutpunkten kontrollerar du att den överensstämmer med de syntaxregler som anges i RFC1738.
+**Namn:** (Obligatoriskt) Identifierar slutpunkten. Ta inte med ett &lt;-tecken eftersom det kortar av namnet som visas i arbetsytan. Om du anger en URL som namn på slutpunkten kontrollerar du att den överensstämmer med de syntaxregler som anges i RFC1738.
 
 **Beskrivning:** En beskrivning av slutpunkten. Ta inte med ett &lt;-tecken eftersom det kortar av beskrivningen som visas i Arbetsyta.
 
-**Sökväg:** (obligatoriskt) Anger den bevakade mappens plats. I en klustrad miljö måste den här inställningen peka på en delad nätverksmapp som är tillgänglig från alla datorer i klustret.
+**Sökväg:** (Obligatoriskt) Anger platsen för bevakad mapp. I en klustrad miljö måste den här inställningen peka på en delad nätverksmapp som är tillgänglig från alla datorer i klustret.
 
 **Asynkron:** Identifierar anropstypen som asynkron eller synkron. Standardvärdet är asynkront. Asynkron rekommenderas för långvariga processer, medan synkron rekommenderas för tillfälliga eller kortvariga processer.
 
 **Cron-uttryck:** Ange ett cron-uttryck om den bevakade mappen måste schemaläggas med ett cron-uttryck. När den här inställningen är konfigurerad ignoreras upprepningsintervall.
 
-**Intervall för upprepning:** Intervallet i sekunder för skanning av den bevakade mappen för indata. Om inte inställningen Gräns är aktiverad ska intervallet för upprepning vara längre än tiden för att bearbeta ett genomsnittligt jobb. annars kan systemet bli överbelastat. Standardvärdet är 5. Mer information finns i beskrivningen för Batchstorlek.
+**Upprepa intervall:** Intervallet i sekunder för inläsning av bevakad mapp. Om inte inställningen Gräns är aktiverad ska intervallet för upprepning vara längre än tiden för att bearbeta ett genomsnittligt jobb. annars kan systemet bli överbelastat. Standardvärdet är 5. Mer information finns i beskrivningen för Batchstorlek.
 
-**Antal upprepningar:** Antal gånger den bevakade mappen genomsöker mappen eller katalogen. Värdet -1 anger obestämd skanning. Standardvärdet är -1.
+**Antal upprepningar:** Antal gånger som den bevakade mappen genomsöker mappen eller katalogen. Värdet -1 anger obestämd skanning. Standardvärdet är -1.
 
 **Begränsning:** När det här alternativet är markerat begränsas antalet bevakade mappjobb som AEM formulärprocesser vid en given tidpunkt. Det maximala antalet jobb bestäms av värdet för Batchstorlek. (Se Om begränsning.)
 
-**Användarnamn:** (obligatoriskt) Det användarnamn som används när en måltjänst anropas från den bevakade mappen. Standardvärdet är SuperAdmin.
+**Användarnamn:** (Obligatoriskt) Det användarnamn som används när en måltjänst anropas från den bevakade mappen. Standardvärdet är SuperAdmin.
 
-**Domännamn:** (obligatoriskt) Användarens domän. Standardvärdet är DefaultDom.
+**Domännamn:** (Obligatoriskt) Användarens domän. Standardvärdet är DefaultDom.
 
 **Batchstorlek:** Antalet filer eller mappar som ska hämtas per skanning. Används för att förhindra överbelastning av systemet. Om du läser in för många filer samtidigt kan det orsaka en krasch. Standardvärdet är 2.
 
@@ -143,39 +146,39 @@ Om det finns en stor mängd filer som tas bort gör du gruppstorleken stor. Om t
 
 När filer släpps i den bevakade mappen visas filerna i indata, vilket kan försämra prestanda om skanningen sker varje sekund. Om du ökar skanningsintervallet kan prestandan förbättras. Om volymen för de filer som tas bort är liten justerar du batchstorleken och upprepningsintervallet därefter. Om till exempel 10 filer tas bort varje sekund, kan du försöka med att ange intervallet för upprepning till 1 sekund och gruppstorleken till 10.
 
-**Vänta** i millisekunder innan du skannar en mapp eller fil efter att den har skapats. Om väntetiden till exempel är 3 600 000 millisekunder (en timme) och filen skapades för en minut sedan, kommer filen att hämtas efter 59 eller fler minuter. Standardvärdet är 0.
+**Väntetid:** Tiden i millisekunder som du vill vänta innan du skannar en mapp eller fil efter att den har skapats. Om väntetiden till exempel är 3 600 000 millisekunder (en timme) och filen skapades för en minut sedan, kommer filen att hämtas efter 59 eller fler minuter. Standardvärdet är 0.
 
-Den här inställningen är användbar för att säkerställa att en fil eller mapp kopieras helt till indatamappen. Om du till exempel har en stor fil att bearbeta och det tar tio minuter att hämta filen, ställer du in väntetiden på 10&amp;ast;60 &amp;ast;1000 millisekunder. Detta förhindrar att den bevakade mappen skannar filen om den inte är tio minuter gammal.
+Den här inställningen är användbar för att säkerställa att en fil eller mapp kopieras helt till indatamappen. Om du till exempel har en stor fil att bearbeta och det tar tio minuter att hämta filen, ställer du in väntetiden på 10&amp;ast;60 &amp;ast;1 000 millisekunder. Detta förhindrar att den bevakade mappen skannar filen om den inte är tio minuter gammal.
 
-**Uteslut filmönster:** Ett semikolon  **;** avgränsad lista med mönster som en bevakad mapp använder för att avgöra vilka filer och mappar som ska skannas och plockas upp. Filer och mappar med det här mönstret skannas inte för bearbetning.
+**Uteslut filmönster:** Ett semikolon **;** avgränsad lista över mönster som används i en bevakad mapp för att avgöra vilka filer och mappar som ska sökas igenom och hämtas. Filer och mappar med det här mönstret skannas inte för bearbetning.
 
 Den här inställningen är användbar när indata är en mapp med flera filer. Innehållet i mappen kan kopieras till en mapp med ett namn som hämtas av den bevakade mappen. Detta förhindrar att den bevakade mappen hämtar en mapp för bearbetning innan mappen kopieras till indatamappen.
 
 Du kan använda filmönster för att exkludera:
 
 * Filer med specifika filnamnstillägg; t.ex. &amp;ast;.dat, &amp;ast;.xml, &amp;ast;.pdf.
-* Filer med särskilda namn; till exempel data.&amp;ast; utelämnar filer och mappar med namnen *data1*, *data2* och så vidare.
+* Filer med särskilda namn; till exempel data.&amp;ast; utelämnar filer och mappar namngivna *data1*, *data2* och så vidare.
 * Filer med sammansatta uttryck i namnet och tillägget, som i följande exempel:
 
    * Data[0-9][0-9][0-9].[dD][aA][tT]
-   * &amp;ast;..[dD][Aa][Tt]
-   * &amp;ast;..[xx][mm][Ll]
+   * &amp;ast;.[dD][Aa][Tt]
+   * &amp;ast;.[Xx][mm][Ll]
 
 Mer information om filmönster finns i [Om filmönster](configuring-watched-folder-endpoints.md#about-file-patterns).
 
-**Inkludera filmönster:**  (obligatoriskt) Ett semikolon  **;** avgränsad lista med mönster som den bevakade mappen använder för att avgöra vilka mappar och filer som ska sökas igenom och hämtas. Om till exempel Inkludera filmönster är indata&amp;ast;, alla filer och mappar som matchar indata&amp;ast; plockas upp. Detta inkluderar filer och mappar med namnen input1, input2 och så vidare.
+**Inkludera filmönster:** (Obligatoriskt) Ett semikolon **;** avgränsad lista med mönster som den bevakade mappen använder för att avgöra vilka mappar och filer som ska sökas igenom och hämtas. Om till exempel Inkludera filmönster är indata&amp;ast;, alla filer och mappar som matchar indata&amp;ast; plockas upp. Detta inkluderar filer och mappar med namnen input1, input2 och så vidare.
 
 Standardvärdet är &amp;ast; och anger alla filer och mappar.
 
 Du kan använda filmönster för att inkludera:
 
 * Filer med specifika filnamnstillägg; t.ex. &amp;ast;.dat, &amp;ast;.xml, &amp;ast;.pdf.
-* Filer med särskilda namn; till exempel data.&amp;ast; skulle innehålla filer och mappar med namnet *data1*, *data2* och så vidare.
+* Filer med särskilda namn; till exempel data.&amp;ast; innehåller filer och mappar med namn *data1*, *data2* och så vidare.
 * Filer med sammansatta uttryck i namnet och tillägget, som i följande exempel:
 
    * Data[0-9][0-9][0-9].[dD][aA][tT]
-   * &amp;ast;..[dD][Aa][Tt]
-   * &amp;ast;..[xx][mm][Ll]
+   * &amp;ast;.[dD][Aa][Tt]
+   * &amp;ast;.[Xx][mm][Ll]
 
 Mer information om filmönster finns i [Om filmönster](configuring-watched-folder-endpoints.md#about-file-patterns).
 
@@ -196,13 +199,13 @@ Mer information om filmönster finns i [Om filmönster](configuring-watched-fold
 * %R = slumptal (mellan 0 och 9)
 * %P = process- eller jobb-ID
 
-Om det till exempel är 2009-08-17 och du anger `C:/Test/WF0/failure/%Y/%M/%D/%H/` blir resultatmappen `C:/Test/WF0/failure/2009/07/17/20`.
+Om det till exempel är 2009-08-17 och du anger `C:/Test/WF0/failure/%Y/%M/%D/%H/`, blir resultatmappen `C:/Test/WF0/failure/2009/07/17/20`.
 
 Om sökvägen inte är absolut men relativ skapas mappen i den bevakade mappen. Standardvärdet är result/%Y/%M/%D/, som är resultatmappen i den bevakade mappen. Mer information om filmönster finns i [Om filmönster](configuring-watched-folder-endpoints.md#about-file-patterns).
 
 >[!NOTE]
 >
->Ju mindre resultatmapparna är, desto bättre prestanda blir Bevakade mappar. Om den beräknade inläsningen för den bevakade mappen till exempel är 1 000 filer varje timme kan du prova ett mönster som `result/%Y%M%D%H` så att en ny undermapp skapas varje timme. Om inläsningen är mindre (till exempel 1 000 filer per dag) kan du använda ett mönster som `result/%Y%M%D`.
+>Ju mindre resultatmapparna är, desto bättre prestanda blir Bevakade mappar. Om den beräknade belastningen för den bevakade mappen till exempel är 1 000 filer varje timme kan du prova ett mönster som `result/%Y%M%D%H` så att en ny undermapp skapas varje timme. Om inläsningen är mindre (till exempel 1 000 filer per dag) kan du använda ett mönster som `result/%Y%M%D`.
 
 **Bevara mapp:** Den plats där filerna lagras efter att sökningen och hämtningen har slutförts. Sökvägen kan vara en absolut, relativ eller null-katalogsökväg. Du kan använda filmönster enligt beskrivningen för resultatmappen. Standardvärdet är preserve/%Y/%M/%D/.
 
@@ -212,21 +215,21 @@ Skrivskyddade filer bearbetas inte och sparas i felmappen.
 
 Standardvärdet är fel/%Y/%M/%D/.
 
-**Bevara vid fel:** Bevara indatafiler om åtgärden inte kan utföras på en tjänst. Standardvärdet är true.
+**Bevara vid fel:** Bevara indatafiler om det inte går att utföra åtgärden på en tjänst. Standardvärdet är true.
 
-**Skriv över duplicerade filnamn:** När värdet är True skrivs filerna i resultatmappen och bevara mapp över. Om värdet är Falskt används filer och mappar med ett numeriskt indexsuffix för namnet. Standardvärdet är Falskt.
+**Skriv över duplicerade filnamn:** När värdet är True skrivs filerna i resultatmappen och i den bevarade mappen över. Om värdet är Falskt används filer och mappar med ett numeriskt indexsuffix för namnet. Standardvärdet är Falskt.
 
 **Töm varaktighet:** (Obligatoriskt) Filer och mappar i resultatmappen tas bort när de är äldre än det här värdet. Detta värde mäts i dagar. Den här inställningen är användbar för att säkerställa att resultatmappen inte blir full.
 
 Värdet -1 dagar anger att resultatmappen aldrig ska tas bort. Standardvärdet är -1.
 
-**Åtgärdsnamn:**  (obligatoriskt) En lista över åtgärder som kan tilldelas till den bevakade mappens slutpunkt.
+**Åtgärdsnamn:** (Obligatoriskt) En lista över åtgärder som kan tilldelas till den bevakade mappens slutpunkt.
 
 **Mappningar av indataparameter:** Används för att konfigurera de indata som krävs för att bearbeta tjänsten och åtgärden. Vilka inställningar som är tillgängliga beror på vilken tjänst som använder den bevakade mappens slutpunkt. Här är två typer av indata:
 
-**Litteral:** I den bevakade mappen används det värde som anges i fältet när det visas. Alla grundläggande Java-typer stöds. Om ett API till exempel använder indata som String, long, int och Boolean, konverteras strängen till rätt typ och tjänsten anropas.
+**Literal:** Den bevakade mappen använder det värde som anges i fältet när det visas. Alla grundläggande Java-typer stöds. Om ett API till exempel använder indata som String, long, int och Boolean, konverteras strängen till rätt typ och tjänsten anropas.
 
-**Variabel:** Det angivna värdet är ett filmönster som den bevakade mappen använder för att välja indata. När det till exempel gäller tjänsten för krypterat lösenord, där indatadokumentet måste vara en PDF-fil, kan användaren använda &amp;ast;.pdf som filmönster. Den bevakade mappen hämtar alla filer i den bevakade mappen som matchar mönstret och anropar tjänsten för varje fil. När en variabel används konverteras alla indatafiler till dokument. Endast API:er som använder Document som indatatyp stöds.
+**Variabel:** Det angivna värdet är ett filmönster som används av den bevakade mappen för att välja indata. När det till exempel gäller tjänsten för kryptering av lösenord, där indatadokumentet måste vara en PDF-fil, kan användaren använda &amp;ast;.pdf som filmönster. Den bevakade mappen hämtar alla filer i den bevakade mappen som matchar mönstret och anropar tjänsten för varje fil. När en variabel används konverteras alla indatafiler till dokument. Endast API:er som använder Document som indatatyp stöds.
 
 **Mappningar av utdataparameter:** Används för att konfigurera utdata för tjänsten och åtgärden. Vilka inställningar som är tillgängliga beror på vilken tjänst som använder den bevakade mappens slutpunkt.
 
@@ -234,19 +237,19 @@ Bevakade mapputdata kan vara ett enstaka dokument, en lista med dokument eller e
 
 >[!NOTE]
 >
->Om du anger namn som ger unika utdatafilnamn förbättras prestandan. Tänk dig till exempel det fall där tjänsten returnerar ett utdatadokument och Output Parameter Mapping mappar det till `%F.%E` (indatafilens filnamn och filtillägg). Om användare i det här fallet släpper filer med samma namn varje minut och resultatmappen är konfigurerad till `result/%Y/%M/%D` och inställningen Skriv över duplicerat filnamn är inaktiverad, försöker Bevakad mapp att matcha de duplicerade filnamnen. Prestandan kan påverkas av att duplicerade filnamn tolkas. I det här fallet kan prestandan förbättras om du ändrar Mappning av utdataparameter till `%F_%h_%m_%s_%l` för att lägga till timmar, minuter, sekunder och millisekunder i namnet, eller om du ser till att borttagna filer har unika namn.
+>Om du anger namn som ger unika utdatafilnamn förbättras prestandan. Tänk dig till exempel det fall där tjänsten returnerar ett utdatadokument och utdataparameter mappar det till `%F.%E` (indatafilens filnamn och filnamnstillägg). Om användare i det här fallet släpper filer med samma namn varje minut och resultatmappen är konfigurerad till `result/%Y/%M/%D`och inställningen Skriv över duplicerat filnamn är inaktiverad kommer Bevakad mapp att försöka matcha de duplicerade filnamnen. Prestandan kan påverkas av att duplicerade filnamn tolkas. I det här fallet ändrar du parametermappningen för utdata till `%F_%h_%m_%s_%l` om du vill lägga till timmar, minuter, sekunder och millisekunder i namnet eller se till att borttagna filer har unika namn kan förbättra prestandan.
 
 ## Om filmönster {#about-file-patterns}
 
 Administratörer kan ange vilken typ av fil som kan anropa en tjänst. Du kan skapa flera filmönster för varje bevakad mapp. Ett filmönster kan vara någon av följande filegenskaper:
 
-* Filer med filnamnstillägg; &amp;ast;.dat, &amp;ast;.xml, &amp;ast;.pdf,;
+* Filer med filnamnstillägg; t.ex. &amp;ast;.dat, &amp;ast;.xml, &amp;ast;.pdf,;
 * Filer med särskilda namn; till exempel data.&amp;ast;
 * Filer med sammansatta uttryck i namnet och tillägget, som i följande exempel:
 
    * Data[0-9][0-9][0-9].[dD][aA][tT]
-   * &amp;ast;..[dD][Aa][Tt]
-   * &amp;ast;..[xx][mm][Ll]
+   * &amp;ast;.[dD][Aa][Tt]
+   * &amp;ast;.[Xx][mm][Ll]
 
 Administratören kan definiera filmönstret för utdatamappen där resultaten ska lagras. För utdatamappar (resultat, bevarande och fel) kan administratören ange något av följande filmönster:
 
@@ -268,7 +271,7 @@ Mappningar av utdataparametrar kan även ange ytterligare mönster, som:
 * %F = Källfilens namn
 * %E = Filnamnstillägg för källa
 
-Om mappningsmönstret för utdataparametrar avslutas med &quot;File.separator&quot; (som är sökvägsavgränsaren) skapas en mapp och innehållet kopieras till den mappen. Om mönstret inte avslutas med &quot;File.separator&quot; skapas innehållet (resultatfilen eller mappen) med det namnet. Mer information om mappningar av utdataparametrar finns i [Tips och tricks för bevakade mappar](configuring-watched-folder-endpoints.md#tips-and-tricks-for-watched-folders).
+Om mappningsmönstret för utdataparametrar slutar med &quot;File.separator&quot; (som är sökvägsavgränsaren) skapas en mapp och innehållet kopieras till den mappen. Om mönstret inte avslutas med &quot;File.separator&quot; skapas innehållet (resultatfilen eller mappen) med det namnet. Mer information om mappning av utdataparametrar finns i [Tips och tricks för bevakade mappar](configuring-watched-folder-endpoints.md#tips-and-tricks-for-watched-folders).
 
 ## Om begränsning {#about-throttling}
 
@@ -278,7 +281,7 @@ När du har aktiverat begränsning för en bevakad mappslutpunkt begränsas anta
 >
 >Begränsningen skalas inte med ett kluster. När du har aktiverat begränsning kommer klustret som helhet inte att bearbeta mer än det antal jobb som har angetts i gruppstorleken vid en given tidpunkt. Den här gränsen är klusterbred och gäller inte för alla noder i klustret. Om du till exempel har en gruppstorlek på 2 kan begränsningen nås med en enda nod som bearbetar två jobb, och inga andra noder kommer att anropa indatakatalogen tills ett av jobben är klart.
 
-### Så här fungerar begränsningen {#how-throttling-works}
+### Så här fungerar strypning {#how-throttling-works}
 
 Bevakad mapp skannar indatamappen vid varje upprepningsintervall, hämtar det antal filer som anges i gruppstorleken och anropar måltjänsten för var och en av dessa filer. Om till exempel gruppstorleken är fyra hämtar Bevakad mapp fyra filer vid varje skanning, skapar fyra anropsbegäranden och anropar måltjänsten. Om Bevakade mappar anropas startas fyra jobb igen innan dessa begäranden har slutförts, oavsett om de föregående fyra jobben har slutförts eller inte.
 
@@ -298,7 +301,7 @@ Bevakad mapp beror på schemaläggningstjänsten för schemaläggning, avschemal
 
 ## Bevakade mappar i ett kluster {#watched-folders-in-a-cluster}
 
-I ett kluster beror Bevakade mappar på Quartz-schemaläggaren och jobbhanterartjänsten för belastningsutjämning och failover. Mer information om klusterbeteendet i Quartz finns i [Quartz Documentation](https://www.quartz-scheduler.org/documentation).
+I ett kluster beror Bevakade mappar på Quartz-schemaläggaren och jobbhanterartjänsten för belastningsutjämning och failover. Mer information om klusterbeteendet i Quartz finns i [Quartz-dokumentation](https://www.quartz-scheduler.org/documentation).
 
 Bevakad mapp utför följande tre huvuduppgifter vid varje omröstning:
 
@@ -337,7 +340,7 @@ När filer har flyttats till scenmappen skapas en anropsbegäran för varje fil 
 
 **Asynkron:** I det här fallet är den bevakade mappen beroende av tjänsten Jobbhanteraren. Om tjänsten Jobbhanteraren anropar den bevakade mappen, flyttas filerna i scenmappen till mappen för bevarande eller fel baserat på resultatet av anropet. Om tjänsten Jobbhanteraren inte anropar den bevakade mappen kommer filerna inte att bearbetas i scenmappen. Detta inträffar när den bevakade mappen inte körs när jobbhanteraren anropar tillbaka.
 
-### Återställer obearbetade källfiler i scenmappen {#recovering-unprocessed-source-files-in-the-stage-folder}
+### Återställa obearbetade källfiler i scenmappen {#recovering-unprocessed-source-files-in-the-stage-folder}
 
 Om den bevakade mappen inte kan bearbeta källfilerna i scenmappen kan du återställa de obearbetade filerna.
 
@@ -346,7 +349,6 @@ Om den bevakade mappen inte kan bearbeta källfilerna i scenmappen kan du åters
 
    * I Program och tjänster ändrar du parametern Inkludera filmönster för den bevakade mappens slutpunkt till något som inte matchar någon av de nya indatafilerna (ange till exempel `NOMATCH`).
    * Skjut upp processen som skapar nya indatafiler.
-
    Vänta tills AEM återställer och bearbetar alla filer. De flesta filerna bör återställas och alla nya indatafiler bearbetas korrekt. Hur lång tid du väntar på att Bevakade mappar ska återställas och bearbetas beror på hur lång åtgärden ska vara och hur många filer som ska återställas.
 
 1. Avgör vilka filer som inte kan bearbetas. Om du väntade en viss tid och slutförde det föregående steget och det fortfarande finns obearbetade filer kvar i scenmappen går du till nästa steg.
@@ -369,22 +371,22 @@ Här följer några tips och råd när du konfigurerar slutpunkten för bevakad 
 * Om du har en bevakad mapp i Windows som bearbetar bildfiler anger du värden för alternativet Inkludera filmönster eller Uteslut filmönster för att förhindra att den automatiskt genererade Windows-filen Thumbs.db avsöks av den bevakade mappen.
 * Om ett cron-uttryck anges ignoreras det upprepade intervallet. Användningen av cron-uttryck baseras på Quartz-systemet för jobbschemaläggning med öppen källkod, version 1.4.0.
 * Batchstorleken är antalet filer eller mappar som hämtas vid varje sökning i den bevakade mappen. Om gruppstorleken är inställd på två och tio filer eller mappar släpps i den bevakade mappens indatamapp, hämtas endast två vid varje sökning. I nästa sökning, som sker efter den tidpunkt som anges i upprepningsintervallet, hämtas de två följande filerna.
-* För filmönster kan administratörer ange reguljära uttryck med stöd för jokerteckenmönster för att ange filmönster. Bevakad mapp ändrar det reguljära uttrycket så att det stöder mönster för jokertecken som &amp;ast;.&amp;ast; eller &amp;ast;.pdf. Dessa mönster med jokertecken stöds inte av reguljära uttryck.
+* För filmönster kan administratörer ange reguljära uttryck med stöd för jokerteckenmönster för att ange filmönster. Bevakad mapp ändrar det reguljära uttrycket så att det stöder mönster för jokertecken som t.ex. &amp;ast;.&amp;ast; eller &amp;ast;.pdf. Dessa mönster med jokertecken stöds inte av reguljära uttryck.
 * Bevakad mapp söker igenom indatamappen efter indatamappen och vet inte om källfilen eller -mappen kopieras fullständigt till indatamappen innan den börjar bearbeta filen eller mappen. Så här ser du till att källfilen eller källmappen kopieras till indatamappen i den bevakade mappen innan filen eller mappen hämtas:
 
    * Använd väntetid, vilket är den tid i millisekunder som den bevakade mappen väntar från den senaste ändringstiden. Använd den här funktionen om du har stora filer att bearbeta. Om det t.ex. tar 10 minuter att hämta en fil anger du väntetiden som 10&amp;ast;60 &amp;ast;1 000 millisekunder. Detta förhindrar att övervakad mapp kan hämta filen om den inte är lika gammal som tio minuter.
-   * Använd exkludera filmönster och inkludera filmönster. Om det uteslutna filmönstret till exempel är `ex*` och inkluderingsfilmönstret är `in*`, kommer Bevakad mapp att hämta de filer som börjar med &quot;in&quot; och inte hämta de filer som börjar med &quot;ex&quot;. Om du vill kopiera stora filer eller mappar måste du först byta namn på filen eller mappen så att namnet börjar med &quot;ex&quot;. När filen eller mappen med namnet &quot;ex&quot; har kopierats helt till den bevakade mappen byter du namn på den till &quot;in&amp;ast;&quot;.
+   * Använd exkludera filmönster och inkludera filmönster. Om filmönstret exclude till exempel är `ex*` och inkluderingsfilmönstret är `in*`, Bevakade mappar hämtar filerna som börjar med &quot;in&quot; och inte hämtar filerna som börjar med &quot;ex&quot;. Om du vill kopiera stora filer eller mappar måste du först byta namn på filen eller mappen så att namnet börjar med &quot;ex&quot;. När filen eller mappen med namnet &quot;ex&quot; har kopierats helt till den bevakade mappen byter du namn på den till &quot;in&amp;ast;&quot;.
 
 * Använd Töm varaktighet om du vill att resultatmappen ska vara ren. Bevakad mapp rensar alla filer som är äldre än den varaktighet som anges i rensningstiden. Längden är i dagar.
 * När du lägger till en bevakad mappslutpunkt fylls indataparametermappningen i när du har valt åtgärdsnamnet. För varje indata i åtgärden genereras ett mappningsfält för indataparametrar. Här är exempel på indataparametermappningar:
 
-   * För `com.adobe.idp.Document`-indata: Om tjänståtgärden har indata av typen `Document` kan administratören ange mappningstypen som `Variable`. Bevakad mapp hämtar indata från den bevakade mappens indatamapp baserat på det filmönster som angetts för indataparametern. Om administratören anger `*.pdf` som parameter hämtas varje fil som har filnamnstillägget .pdf, konverteras till `com.adobe.idp.Document` och tjänsten anropas.
-   * För `java.util.Map`-indata: Om tjänståtgärden har indata av typen `Map` kan administratören ange mappningstypen som `Variable` och ange ett mappningsvärde med ett mönster som `*.pdf`. En tjänst behöver till exempel en karta över två `com.adobe.idp.Document`-objekt som representerar två filer i indatamappen, till exempel 1.pdf och 2.pdf. Bevakad mapp skapar en karta med nyckeln som filnamn och värdet som `com.adobe.idp.Document`.
-   * För `java.util.List`-indata: Om tjänståtgärden har indata av typen List kan administratören ange mappningstypen som `Variable` och ange ett mappningsvärde med ett mönster som `*.pdf`. När PDF-filer släpps i indatamappen skapar Bevakad mapp en lista över `com.adobe.idp.Document`-objekten som representerar dessa filer och anropar måltjänsten.
-   * För `java.lang.String`: Administratören har två alternativ. Först kan administratören ange mappningstypen som `Literal` och ange ett mappningsvärde som en sträng, t.ex. `hello.` Bevakade mappar anropar tjänsten med strängen `hello`. Därefter kan administratören ange mappningstypen som `Variable` och ange ett mappningsvärde med ett mönster som `*.txt`. I det senare fallet läses filer med tillägget .txt som ett dokument som tvingas som en sträng för att anropa tjänsten.
+   * För `com.adobe.idp.Document` indata: Om tjänståtgärden har en indatatyp `Document`kan administratören ange mappningstypen som `Variable`. Bevakad mapp hämtar indata från den bevakade mappens indatamapp baserat på det filmönster som angetts för indataparametern. Om administratören anger `*.pdf` som parameter hämtas alla filer som har filnamnstillägget .pdf och konverteras till `com.adobe.idp.Document`och tjänsten anropades.
+   * För `java.util.Map` indata: Om tjänståtgärden har en indatatyp `Map`kan administratören ange mappningstypen som `Variable` och ange ett mappningsvärde med ett mönster som `*.pdf`. En tjänst behöver till exempel en karta med två `com.adobe.idp.Document` objekt som representerar två filer i indatamappen, till exempel 1.pdf och 2.pdf. Bevakad mapp skapar en karta med nyckeln som filnamn och värde som `com.adobe.idp.Document`.
+   * För `java.util.List` indata: Om tjänståtgärden har indata av typen List kan administratören ange mappningstypen som `Variable` och ange ett mappningsvärde med ett mönster som `*.pdf`. När PDF-filer släpps i indatamappen skapas en lista med de `com.adobe.idp.Document` objekt som representerar dessa filer och anropar måltjänsten.
+   * För `java.lang.String`: Administratören har två alternativ. Först kan administratören ange mappningstypen som `Literal` och ange ett mappningsvärde som en sträng, till exempel `hello.` Bevakad mapp anropar tjänsten med strängen `hello`. Därefter kan administratören ange mappningstypen som `Variable` och ange ett mappningsvärde med ett mönster som `*.txt`. I det senare fallet läses filer med tillägget .txt som ett dokument som tvingas som en sträng för att anropa tjänsten.
    * Java primitive type: Administratören kan ange mappningstypen som `Literal` och ange värdet. Bevakad mapp anropar tjänsten med det angivna värdet.
 
-* Bevakad mapp fungerar med dokument. Utdata som stöds är `com.adobe.idp.Document`, `org.w3c.Document`, `org.w3c.Node`, samt en lista och karta över dessa typer. Alla andra typer resulterar i felutdata i felmappen.
+* Bevakad mapp fungerar med dokument. Utdata som stöds är `com.adobe.idp.Document`, `org.w3c.Document`, `org.w3c.Node`samt en lista och karta över dessa typer. Alla andra typer resulterar i felutdata i felmappen.
 * Om resultaten inte finns i resultatmappen kontrollerar du om ett fel har inträffat i felmappen.
 * Bevakade mappar fungerar bäst om de används i asynkront läge. I det här läget placerar Bevakad mapp anropsbegäran i kön och anropar igen. Kön bearbetas sedan asynkront. När alternativet Asynkron inte har angetts anropas måltjänsten synkront av Bevakade mappar och processmotorn väntar tills tjänsten har slutförts med begäran och resultaten har skapats. Om måltjänsten tar lång tid att behandla begäran kan timeoutfel uppstå i den bevakade mappen.
 * Om du skapar bevakade mappar för import- och exportåtgärder tillåts inte abstraktion av filnamnstillägg. När du anropar tjänsten för integrering av formulärdata med bevakade mappar kanske inte filnamnstilläggstypen för utdatafilen matchar det avsedda utdataformatet för dokumentobjekttypen. Om indatafilen till en bevakad mapp som anropar exportåtgärden till exempel är ett XFA-formulär som innehåller data, bör utdata vara en XDP-datafil. Om du vill få en utdatafil med rätt filnamnstillägg kan du ange den i mappningen av utdataparametrar. I det här exemplet kan du använda %F.xdp för att mappa utdataparametrar.
@@ -392,7 +394,7 @@ Här följer några tips och råd när du konfigurerar slutpunkten för bevakad 
 
    * Tillfällig lösning 1
 
-      1. Ange ett mönster för Uteslut filmönster, t.ex. tillfällig&amp;ämpel;ast;.ps.
+      1. Ange ett mönster för Uteslut filmönster, t.ex. temporär;.ps.
       1. Kopiera filer som börjar med temporärt (till exempel temp1.ps) till den bevakade mappen.
       1. När filen har kopierats till den bevakade mappen byter du namn på filen så att den matchar mönstret som har angetts för Inkludera filmönster. Bevakad mapp flyttar sedan den färdiga filen till scenen.
    * Tillfällig lösning 2
@@ -404,27 +406,26 @@ Här följer några tips och råd när du konfigurerar slutpunkten för bevakad 
 
 * Om attributet Bevara mappnamnets slutpunkt för Bevakad mapp är inställt på en null-katalogsökväg, rensas inte mellanlagringskatalogen som den ska vara. Katalogen innehåller fortfarande den bearbetade filen och den tillfälliga mappen.
 
-## Tjänstspecifika rekommendationer för bevakade mappar {#service-specific-recommendations-for-watched-folders}
+## Servicespecifika rekommendationer för bevakade mappar {#service-specific-recommendations-for-watched-folders}
 
 För alla tjänster bör du justera gruppstorleken och upprepningsintervallet för den bevakade mappen så att hastigheten med vilken bevakade mappar hämtar nya filer och mappar för bearbetning inte överstiger hastigheten för de jobb som kan bearbetas av AEM formulärserver. De faktiska parametrarna som ska användas kan variera beroende på hur många bevakade mappar som har konfigurerats, vilka tjänster som använder bevakade mappar och hur intensiva jobben är för processorn.
 
-### Generera rekommendationer för PDF-tjänster {#generate-pdf-service-recommendations}
+### Generera servicerekommendationer för PDF {#generate-pdf-service-recommendations}
 
-* Tjänsten Generera PDF kan bara konvertera en fil i taget för följande filtyper: Microsoft Word, Microsoft Excel, Microsoft PowerPoint, Microsoft Project, AutoCAD, Adobe Photoshop®, Adobe FrameMaker® och Adobe PageMaker®. Det rör sig om långa jobb. Se därför till att du håller gruppstorleken på en låg inställning. Öka också upprepningsintervallet om det finns fler noder i klustret.
-* För filtyperna PostScript (PS), Encapsulated PostScript (EPS) och image kan tjänsten Generate PDF bearbeta flera filer parallellt. Du bör noggrant justera storleken på sessionsböna (som styr antalet konverteringar som ska göras parallellt) beroende på serverns kapacitet och antalet noder i klustret. Öka sedan gruppstorleken till ett tal som är lika med poolstorleken för den sessionsböna för de filtyper som du försöker konvertera. Avsökningsfrekvensen ska bestämmas av antalet noder i klustret. Men eftersom Generate PDF-tjänsten bearbetar den här typen av jobb ganska snabbt, kan du konfigurera upprepningsintervallet till ett lågt värde som 5 eller 10.
-* Även om tjänsten Generate PDF bara kan konvertera en OpenOffice-fil i taget går konverteringen mycket snabbt. Ovanstående logik för PS-, EPS- och bildkonverteringar gäller även för OpenOffice-konverteringar.
+* Tjänsten Generera PDF kan bara konvertera en fil åt gången för följande filtyper: Microsoft Word, Microsoft Excel, Microsoft PowerPoint, Microsoft Project, AutoCAD, Adobe Photoshop®, Adobe FrameMaker® och Adobe PageMaker®. Det rör sig om långa jobb. Se därför till att du håller gruppstorleken på en låg inställning. Öka också upprepningsintervallet om det finns fler noder i klustret.
+* För filtyperna PostScript (PS), Encapsulated PostScript (EPS) och image kan tjänsten Generate PDF bearbeta flera filer parallellt. Du bör noggrant justera storleken på sessionsböna (som styr antalet konverteringar som ska göras parallellt) beroende på serverns kapacitet och antalet noder i klustret. Öka sedan gruppstorleken till ett tal som är lika med poolstorleken för den sessionsböna för de filtyper som du försöker konvertera. Avsökningsfrekvensen ska bestämmas av antalet noder i klustret. Men eftersom tjänsten Generate PDF bearbetar den här typen av jobb ganska snabbt, kan du konfigurera upprepningsintervallet till ett lågt värde som 5 eller 10.
+* Även om tjänsten Generate PDF bara kan konvertera en OpenOffice-fil i taget går konverteringen mycket snabbt. Ovanstående logik för PS-, EPS- och bildkonverteringar gäller även OpenOffice-konverteringar.
 * Om du vill aktivera enhetlig belastningsfördelning i klustret ska du hålla batchstorleken nere och öka repeteringsintervallet.
 
-### streckkodsrekommendationer för formulärtjänster {#barcoded-forms-service-recommendations}
+### rekommendationer för streckkodsblanketttjänst {#barcoded-forms-service-recommendations}
 
-* För bästa prestanda vid bearbetning av streckkodsformulär (små filer) anger du `10` för Gruppstorlek och `2` för Repeat Interval.
-* När många filer placeras i indatamappen kan fel med dolda filer som kallas *thumbs.db* uppstå. Vi rekommenderar därför att du anger Inkludera filmönster för inkluderingsfilerna till samma värde som anges för indatavariabeln (till exempel `*.tiff`). Detta förhindrar att övervakad mapp bearbetar DB-filerna.
-* Värdet `5` för batchstorlek och intervallet för upprepning på `2` är vanligtvis tillräckligt eftersom tjänsten Barcoded Forms vanligtvis tar cirka 0,5 sekunder att bearbeta en streckkod.
-* Bevakad mapp väntar inte på att processmotorn ska slutföra jobbet innan nya filer eller mappar hämtas. Det fortsätter att skanna den bevakade mappen och anropa måltjänsten. Det här beteendet kan överbelasta motorn och ge upphov till resursproblem och tidsgränser. Kontrollera att du använder upprepningsintervall och gruppstorlek för att begränsa indata för bevakad mapp. Du kan öka upprepningsintervallet och minska gruppstorleken om det finns fler bevakade mappar eller aktivera strypning på slutpunkten. Mer information om strypning finns i [Om strypning](configuring-watched-folder-endpoints.md#about-throttling).
+* För bästa prestanda vid bearbetning av streckkodsformulär (små filer) anger du `10` för batchstorlek och `2` för upprepningsintervall.
+* När många filer placeras i indatamappen anropas fel med dolda filer *thumbs.db* kan inträffa. Vi rekommenderar därför att du anger Inkludera filmönster för inkluderingsfilerna till samma värde som anges för indatavariabeln (till exempel `*.tiff`). Detta förhindrar att övervakad mapp bearbetar DB-filerna.
+* Ett batchstorleksvärde på `5` och Repeat Interval of `2` är vanligtvis tillräckligt eftersom Barcoded Forms-tjänsten normalt tar cirka 1,5 sekunder att bearbeta en streckkod.
+* Bevakad mapp väntar inte på att processmotorn ska slutföra jobbet innan nya filer eller mappar hämtas. Det fortsätter att skanna den bevakade mappen och anropa måltjänsten. Det här beteendet kan överbelasta motorn och ge upphov till resursproblem och tidsgränser. Kontrollera att du använder upprepningsintervall och gruppstorlek för att begränsa indata för bevakad mapp. Du kan öka upprepningsintervallet och minska gruppstorleken om det finns fler bevakade mappar eller aktivera strypning på slutpunkten. Mer information om strypning finns i [Om begränsning](configuring-watched-folder-endpoints.md#about-throttling).
 * Bevakad mapp personifierar användaren som anges i användarnamnet och domännamnet. Bevakad mapp anropar tjänsten som den här användaren om den anropas direkt eller om processen är kort. För en långvarig process anropas processen med systemkontexten. Administratörer kan ange operativsystemprinciper för bevakad mapp för att avgöra vilken användare som ska tillåta eller neka åtkomst till.
 * Använd filmönster för att ordna resultat, fel och bevara mappar. (Se [Om filmönster](configuring-watched-folder-endpoints.md#about-file-patterns).)
 * Bevakad mapp använder Quartz-schemaläggaren för att skanna de bevakade mapparna. Quartz-schemaläggaren har en trådpool för att skanna dem. Om upprepningsintervallet för den bevakade mappen är mycket lågt (&lt; 5 sekunder) och gruppstorleken är hög (> 2) kan ett konkurrenstillstånd uppstå. När detta inträffar hämtas en fil av två Quartz-trådar:
 
    * En av trådarna hittar filen och anropar måltjänsten med filen.
    * Den andra tråden ser filen men misslyckas när den försöker ta reda på om filen är giltig (läs- eller skrivfil), vilket orsakar falska fel som anger att filen inte kan bearbetas eftersom den är skrivskyddad. Detta inträffar endast med ett lågt upprepningsintervall och en hög batchstorlek.
-

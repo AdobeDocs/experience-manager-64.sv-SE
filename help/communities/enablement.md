@@ -1,8 +1,8 @@
 ---
 title: Konfigurera aktiveringsfunktioner
-seo-title: Konfigurera aktiveringsfunktioner
+seo-title: Configuring Enablement Features
 description: Konfigurera aktiveringsfunktioner i Communities
-seo-description: Konfigurera aktiveringsfunktioner i Communities
+seo-description: Configure enablement features in Communities
 uuid: 27be3128-1a7d-412e-99a9-6e3b3b0aec1c
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -11,18 +11,22 @@ content-type: reference
 discoiquuid: 765a3d9b-4552-403e-872c-fdf684ac271d
 role: Admin
 exl-id: 01cfc774-8ae1-48c0-a7e3-5836c4b39bff
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
 
 # Konfigurera aktiveringsfunktioner {#configuring-enablement-features}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 ## Översikt {#overview}
 
-Med aktiveringsfunktionerna kan du skapa [aktiveringsgrupper](overview.md#enablement-community).
+Med aktiveringsfunktionerna kan du skapa [aktiveringscommunityn](overview.md#enablement-community).
 
 * Den här funktionen kräver ytterligare licensiering för användning i en produktionsmiljö.
 
@@ -30,25 +34,25 @@ Användning av aktiveringsfunktionerna kräver följande:
 
 Installation av:
 
-* **SCORM (**
-Sharable Content Object Reference Model) är en samling standarder och specifikationer för e-learning. SCORM definierar också hur innehåll kan paketeras i en överförbar ZIP-fil.
+* **SCORM**
+SCORM (Sharable Content Object Reference Model) är en samling standarder och specifikationer för e-learning. SCORM definierar också hur innehåll kan paketeras i en överförbar ZIP-fil.
 
-* ****
-MySQLMySQL är en relationsdatabas som primärt används för SCORM-spårning och rapportdata för Enablement, samt för tabeller för att spåra videoförloppet. SCORM för aktiveringsfunktionspaketet kräver JDBC-drivrutinen MySQL.
+* **MySQL**
+MySQL är en relationsdatabas som i första hand används för SCORM-spårning och rapportdata för aktivering, samt för tabeller för att spåra videoförloppet. SCORM för aktiveringsfunktionspaketet kräver JDBC-drivrutinen MySQL.
 
-* ****
-FFmpegFFmpeg är en lösning för konvertering och direktuppspelning av ljud och video och används, när den är installerad, för korrekt omkodning av  [videomaterial](../../help/sites-authoring/default-components-foundation.md#video). För aktiveringscommunityn används den i redigeringsmiljön för att hämta metadata för överförda resurser och generera en miniatyrbild som visas när resursen listas.
+* **FFmpeg**
+FFmpeg är en lösning för konvertering och direktuppspelning av ljud och video och används, när den är installerad, för korrekt transkodning av [Videoresurser](../../help/sites-authoring/default-components-foundation.md#video). För aktiveringscommunityn används den i redigeringsmiljön för att hämta metadata för överförda resurser och generera en miniatyrbild som visas när resursen listas.
 
 Inställningar för:
 
-* **Community**
-ManagersFör aktiveringscommunityer, endast medlemmar i 
-`Community Enablement Managers` användargruppen kan tilldelas rollen som  `*Community Site* Enablement Manager`, vars behörigheter kan omfatta innehållsskapande, uppdrag och medlemshantering i publiceringsmiljön.
+* **Community Managers**
+Endast medlemmar i 
+`Community Enablement Managers` användargruppen kan tilldelas rollen som `*Community Site* Enablement Manager`, vars behörigheter kan omfatta innehållsskapande, uppdrag och medlemshantering i publiceringsmiljön.
 
 Valfri konfiguration av:
 
-* **Adobe**
-AnalyticsIntegrering med Adobe Analytics ger omfattande rapporteringsfunktioner och stöder tillägget Video Heartbeat i Analytics.
+* **Adobe Analytics**
+Integrationen med Adobe Analytics ger omfattande rapportfunktioner och stöder tillägget Video Heartbeat i Analytics.
 
 * **Dispatcher**
 
@@ -60,20 +64,20 @@ Varje steg länkar till dokumentation med nödvändig information.
 
 **På alla författar-/publiceringsinstanser:**
 
-1. **[installera JDBC-drivrutin för](deploy-communities.md#jdbc-driver-for-mysql)**
-MySQLUse Web Console (paket): Installera  *http://localhost:4502/system/console/*
-bundlesInstallera  ** innan du installerar SCORM-paketet
+1. **[installera JDBC-drivrutin för MySQL](deploy-communities.md#jdbc-driver-for-mysql)**
+Använd webbkonsol (paket): Installera *http://localhost:4502/system/console/bundles*
+Installera *före* installera SCORM-paket
 
-1. **[installera SCORM-](deploy-communities.md#scorm-package)**
-paketAnvänd Package Manager: 
+1. **[installera SCORM-paket](deploy-communities.md#scorm-package)**
+Använd pakethanteraren: 
 *http://localhost:4502/crx/packmgr/*
 
 **På alla servrar:**
 
 1. **[installera MySQL, MySQL Workbench](mysql.md)**
 
-1. **[installera MySQL-](mysql.md#database-setup)**
-databaserKör SQL-skript som hämtats från författarinstansen
+1. **[installera MySQL-databaser](mysql.md#database-setup)**
+Kör SQL-skript som hämtats från författarinstansen
 \
    Använd MySQL Workbench
 
@@ -83,33 +87,33 @@ databaserKör SQL-skript som hämtats från författarinstansen
 
 **På alla författar-/publiceringsinstanser:**
 
-1. **[konfigurera JDBC Connections](mysql.md#configure-jdbc-connections)**
-poolAnvänd webbkonsol (configMgr): 
-*http://localhost:4502/system/console/configMgr*
-
-1. **[konfigurera SCORM-motortjänsten](mysql.md#aem-communities-scormengine-service)**
+1. **[konfigurera JDBC-anslutningspool](mysql.md#configure-jdbc-connections)**
 Använd webbkonsol (configMgr): 
 *http://localhost:4502/system/console/configMgr*
 
-1. **[konfigurera CSRF-](mysql.md#adobe-granite-csrf-filter)**
-filterAnvänd webbkonsol (configMgr): 
+1. **[konfigurera SCORM-motortjänst](mysql.md#aem-communities-scormengine-service)**
+Använd webbkonsol (configMgr): 
+*http://localhost:4502/system/console/configMgr*
+
+1. **[konfigurera CSRF-filter](mysql.md#adobe-granite-csrf-filter)**
+Använd webbkonsol (configMgr): 
 *http://localhost:4502/system/console/configMgr*
 
 **On author instance:**
 
-1. (*optional*) **[konfigurera tjänsten Analytics](analytics.md)**
+1. (*valfri*) **[konfigurera tjänsten Analytics](analytics.md)**
 Använd verktygs-, distributions- och Cloud Services-konsolen: 
 *http://localhost:4502/etc/cloudservices/sitecatalyst.html*
 
-1. **[konfigurera konsolen](ffmpeg.md#configure-ffmpeg-transcoding-service)**
-FFmpegUse Workflow/Models
+1. **[konfigurera FFmpeg](ffmpeg.md#configure-ffmpeg-transcoding-service)**
+Använd konsolen Arbetsflöde/Modeller
 
-1. **[aktivera Tunnel](deploy-communities.md#tunnel-service-on-author)**
-ServiceUse Web Console (configMgr): 
+1. **[aktivera tunneltjänst](deploy-communities.md#tunnel-service-on-author)**
+Använd webbkonsol (configMgr): 
 *http://localhost:4502/system/console/configMgr*
 
-1. **[skapa Community-](users.md#creating-community-members)** administratörerI författarmiljön använder du Classic-UI Security console:  *http://localhost:4502/*
-useradminskapa användare med sökväg = /home/users/community
+1. **[skapa community-administratörer](users.md#creating-community-members)** I författarmiljön använder du Classic-UI Security console: *http://localhost:4502/useradmin*
+skapa användare med sökväg = /home/users/community
 
    * Lägg till medlemmar i följande grupper:
 
@@ -118,4 +122,4 @@ useradminskapa användare med sökväg = /home/users/community
 
 ## Dispatcher {#dispatcher}
 
-När distributionen innehåller [AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) måste avsnitten `clientheader`och `filter`ändras för att aktiveringsfunktionerna ska fungera korrekt. Se [Konfigurera Dispatcher för Communities](dispatcher.md#enablement).
+När distributionen inkluderar [AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)för att aktiveringsfunktionerna ska fungera på rätt sätt `clientheader`och `filter`-avsnitt behöver ändras. Se [Konfigurera Dispatcher för Communities](dispatcher.md#enablement).

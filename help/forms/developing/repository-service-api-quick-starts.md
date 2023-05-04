@@ -11,14 +11,18 @@ topic-tags: develop
 discoiquuid: 2fd1a21a-0f90-49d8-9f62-383b268d540d
 role: Developer
 exl-id: 859a2b57-df90-4030-9061-c454d07cb753
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
 
 # Snabbstart för databastjänst-API {#repository-service-api-quick-starts}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Följande snabbstarter är tillgängliga för tjänsten AEM Forms Repository.
 
@@ -46,9 +50,9 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 **Program/FormsApplication**
 
-De flesta AEM Forms-databastjänster startar interaktionen med ett program med namnet `Applications/FormsApplication,`, vilket visas på följande bild.
+De flesta AEM Forms-databastjänster startar snabbt och interagerar med ett program som heter `Applications/FormsApplication,` som på följande bild.
 
-Mappen FormsFolder är en plats i AEM Forms-databasen. Du kan till exempel lägga till den här mappen i `Applications/FormsApplication`. (Se [Snabbstart (SOAP-läge): Skapa en mapp med Java API](repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api).)
+Mappen FormsFolder är en plats i AEM Forms-databasen. Du kan till exempel lägga till den här mappen programmatiskt i `Applications/FormsApplication`. (Se [Snabbstart (SOAP-läge): Skapa en mapp med Java API](repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api).)
 
 Sökvägen till en resurs i AEM Forms-databasen är:
 
@@ -64,7 +68,7 @@ Sökvägen till en resurs i AEM Forms-databasen är:
 
 ## Snabbstart (SOAP-läge): Skapa en mapp med Java API {#quick-start-soap-mode-creating-a-folder-using-the-java-api}
 
-I följande Java-kodexempel skapas en mapp med namnet *FormsFolder* på följande plats `/Applications/FormsApplication/1.0/`. (Se [Skapa mappar](/help/forms/developing/aem-forms-repository.md#creating-folders).)
+I följande Java-kodexempel skapas en mapp med namnet *FormsFolder* på följande plats `/Applications/FormsApplication/1.0/`. (Se [Skapar mappar](/help/forms/developing/aem-forms-repository.md#creating-folders).)
 
 ```as3
  /* 
@@ -170,7 +174,7 @@ I följande Java-kodexempel skapas en mapp med namnet *FormsFolder* på följand
 
 ## Snabbstart (SOAP-läge): Skriva en resurs med Java API {#quick-start-soap-mode-writing-a-resource-using-the-java-api}
 
-I följande Java-kodexempel skrivs en resurs med namnet *lån.xdp* i databasen. Resursen läggs till på platsen `/Applications/FormsApplication/1.0/FormsFolder`. (Se [Skriva resurser](/help/forms/developing/aem-forms-repository.md#writing-resources).)
+I följande Java-kodexempel skrivs en resurs med namnet *lån.xdp* i databasen. Resursen läggs till i `/Applications/FormsApplication/1.0/FormsFolder` plats. (Se [Skriver resurser](/help/forms/developing/aem-forms-repository.md#writing-resources).)
 
 ```as3
  /* 
@@ -298,7 +302,7 @@ I följande Java-kodexempel skrivs en resurs med namnet *lån.xdp* i databasen. 
 
 ## Snabbstart (SOAP-läge): Visa resurser med Java API {#quick-start-soap-mode-listing-resources-using-the-java-api}
 
-I följande Java-kodexempel visas resurser som finns i `Applications/FormsApplication/1.0/FormsFolder`. (Se [Visa resurser](/help/forms/developing/aem-forms-repository.md#listing-resources).)
+I följande Java-kodexempel visas resurser som finns i `Applications/FormsApplication/1.0/FormsFolder`. (Se [Resurser listas](/help/forms/developing/aem-forms-repository.md#listing-resources).)
 
 ```as3
  /* 
@@ -397,7 +401,7 @@ I följande Java-kodexempel visas resurser som finns i `Applications/FormsApplic
 
 ## Snabbstart (SOAP-läge): Läsa en resurs med Java API {#quick-start-soap-mode-reading-a-resource-using-the-java-api}
 
-Följande Java-kodexempel läser en resurs med namnet *Loan.xdp* från databasen. XDP-filen finns i `/Applications/FormsApplication/1.0/FormsFolder/`. (Se [Läser resurser](/help/forms/developing/aem-forms-repository.md#reading-resources).)
+I följande Java-kodexempel läses en resurs som kallas *Loan.xdp* från databasen. XDP-filen finns i `/Applications/FormsApplication/1.0/FormsFolder/`. (Se [Läser resurser](/help/forms/developing/aem-forms-repository.md#reading-resources).)
 
 ```as3
  /* 
@@ -498,7 +502,7 @@ Följande Java-kodexempel läser en resurs med namnet *Loan.xdp* från databasen
 
 ## Snabbstart (SOAP-läge): Uppdatera en resurs med Java API {#quick-start-soap-mode-updating-a-resource-using-the-java-api}
 
-I följande Java-kodexempel uppdateras `/Applications/FormsApplication/1.0/FormsFolder` genom att beskrivningen ändras. (Se [Uppdatera resurser](/help/forms/developing/aem-forms-repository.md#updating-resources).)
+Följande Java-kodexempel uppdateras `/Applications/FormsApplication/1.0/FormsFolder` genom att ändra dess beskrivning. (Se [Uppdaterar resurser](/help/forms/developing/aem-forms-repository.md#updating-resources).)
 
 ```as3
  /* 
@@ -610,7 +614,7 @@ I följande Java-kodexempel uppdateras `/Applications/FormsApplication/1.0/Forms
 
 ## Snabbstart (SOAP-läge): Söka efter resurser med Java API {#quick-start-soap-mode-searching-for-resources-using-the-java-api}
 
-Följande Java-kodexempel söker efter Loan.xdp i `Applications/FormsApplication/1.0/FormsFolder`. (Se [Söka efter resurser](/help/forms/developing/aem-forms-repository.md#searching-for-resources).)
+Följande Java-kodexempel söker efter Loan.xdp i `Applications/FormsApplication/1.0/FormsFolder`. (Se [Söker efter resurser](/help/forms/developing/aem-forms-repository.md#searching-for-resources).)
 
 ```as3
  /* 
@@ -734,7 +738,7 @@ Följande Java-kodexempel söker efter Loan.xdp i `Applications/FormsApplication
 
 ## Snabbstart (SOAP-läge): Skapa relationer mellan resurser med Java API {#quick-start-soap-mode-creating-relationships-between-resources-using-the-java-api}
 
-I följande Java-kodexempel skapas en relation mellan två resurser i AEM Forms-databasen. (Se [Skapa resursrelationer](/help/forms/developing/aem-forms-repository.md#creating-resource-relationships).)
+I följande Java-kodexempel skapas en relation mellan två resurser i AEM Forms-databasen. (Se [Skapar resursrelationer](/help/forms/developing/aem-forms-repository.md#creating-resource-relationships).)
 
 ```as3
  /* 
@@ -875,7 +879,7 @@ I följande Java-kodexempel skapas en relation mellan två resurser i AEM Forms-
 
 ## Snabbstart (SOAP-läge): Låsa en resurs med Java API {#quick-start-soap-mode-locking-a-resource-using-the-java-api}
 
-I följande Java-kodexempel låses /Applications/FormsApplication/1.0/FormsFolder/Loan.xdp. (Se [Låsa resurser](/help/forms/developing/aem-forms-repository.md#locking-resources).)
+I följande Java-kodexempel låses /Applications/FormsApplication/1.0/FormsFolder/Loan.xdp. (Se [Låser resurser](/help/forms/developing/aem-forms-repository.md#locking-resources).)
 
 ```as3
  /* 
@@ -1101,7 +1105,7 @@ Följande Java-kodexempel läser och skapar åtkomstkontrollistor (ACL) i databa
 
 ## Snabbstart (SOAP-läge): Ta bort en resurs med Java API {#quick-start-soap-mode-deleting-a-resource-using-the-java-api}
 
-I följande Java-kodexempel tas Loan.xdp bort från `Applications/FormsApplication/1.0/FormsFolder`. Om XDP-filen inte finns i den här mappen genereras ett undantag. (Se [Ta bort resurser](/help/forms/developing/aem-forms-repository.md#deleting-resources).)
+I följande Java-kodexempel tas Loan.xdp bort från `Applications/FormsApplication/1.0/FormsFolder`. Om XDP-filen inte finns i den här mappen genereras ett undantag. (Se [Resurser tas bort](/help/forms/developing/aem-forms-repository.md#deleting-resources).)
 
 ```as3
  /* 

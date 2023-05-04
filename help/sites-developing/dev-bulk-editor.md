@@ -2,23 +2,26 @@
 title: Developing the Bulk Editor
 seo-title: Developing the Bulk Editor
 description: Taggar gör att innehållet kan kategoriseras och struktureras
-seo-description: Taggar gör att innehållet kan kategoriseras och struktureras
+seo-description: Tagging allows content to be categorized and organized
 uuid: 3cd04c52-5bdb-47f6-9fa3-d7a4937e8e20
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: e9a1ff95-e88e-41f0-9731-9a59159b4653
-translation-type: tm+mt
-source-git-commit: d6c10927d437cfc9371e4baeff5a91ed9a0503c8
+exl-id: a0094d45-70f9-4616-ab61-1087a2b2ea15
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1849'
-ht-degree: 1%
+source-wordcount: '1873'
+ht-degree: 0%
 
 ---
 
+# Developing the Bulk Editor{#developing-the-bulk-editor}
 
-# Utveckla gruppredigeraren{#developing-the-bulk-editor}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 I det här avsnittet beskrivs hur du utvecklar ett gruppredigeringsverktyg och hur du utökar produktlistekomponenten, som baseras på gruppredigeraren.
 
@@ -30,13 +33,13 @@ Om du till exempel skriver in följande i webbläsarens URL:
 
 `https://<servername><port_number>/etc/importers/bulkeditor.html?rootPath=/content/geometrixx/en&queryParams=geometrixx&initialSearch=true&hrp=true`
 
-massredigeraren visas utan fältet **Rotsökväg** eftersom hrp=true döljer fältet. Med parametern hrp=false visas fältet (standardvärdet).
+massredigeraren visas utan **Rotsökväg** fältet as hrp=true döljs. Med parametern hrp=false visas fältet (standardvärdet).
 
 Här följer en lista med frågeparametrar för massredigering:
 
 >[!NOTE]
 >
->Varje parameter kan ha ett långt och ett kort namn. Det långa namnet på sökrotsökvägen är till exempel `rootPath`, det korta är `rp`. Om det långa namnet inte är definierat läses det korta av begäran.
+>Varje parameter kan ha ett långt och ett kort namn. Det långa namnet på sökrotsökvägen är till exempel `rootPath`, den korta är `rp`. Om det långa namnet inte är definierat läses det korta av begäran.
 
 <table> 
  <tbody> 
@@ -62,7 +65,7 @@ Här följer en lista med frågeparametrar för massredigering:
   </tr> 
   <tr> 
    <td> contentMode / cm<br /> </td> 
-   <td> Boolesk</td> 
+   <td> Boolean</td> 
    <td> när true är innehållsläget aktiverat<br /> </td> 
   </tr> 
   <tr> 
@@ -77,87 +80,87 @@ Här följer en lista med frågeparametrar för massredigering:
   </tr> 
   <tr> 
    <td> initialSearch / is<br /> </td> 
-   <td> Boolesk</td> 
+   <td> Boolean</td> 
    <td> om true utförs frågan vid sidinläsning<br /> </td> 
   </tr> 
   <tr> 
-   <td> colSelection / cs<br /> </td> 
+   <td> minutesSelection / cs<br /> </td> 
    <td> Sträng[]</td> 
    <td> sökbar egenskapsmarkering (visas som kryssrutor)</td> 
   </tr> 
   <tr> 
    <td> showGridOnly / go<br /> </td> 
-   <td> Boolesk</td> 
+   <td> Boolean</td> 
    <td> om true visas endast stödrastret och inte sökpanelen <br /> </td> 
   </tr> 
   <tr> 
    <td> searchPanelCollapsed/spc</td> 
-   <td> Boolesk</td> 
+   <td> Boolean</td> 
    <td> när true är sökpanelen komprimerad vid inläsning</td> 
   </tr> 
   <tr> 
    <td> hideRootPath / hrp</td> 
-   <td> Boolesk</td> 
+   <td> Boolean</td> 
    <td> om true döljs rotsökvägsfältet</td> 
   </tr> 
   <tr> 
    <td> hideQueryParams / hqp</td> 
-   <td> Boolesk</td> 
+   <td> Boolean</td> 
    <td> om true döljs frågefältet</td> 
   </tr> 
   <tr> 
    <td> hideContentMode / hcm</td> 
-   <td> Boolesk</td> 
+   <td> Boolean</td> 
    <td> när true döljs fältet för innehållsläge</td> 
   </tr> 
   <tr> 
    <td> hideColsSelection / hcs</td> 
-   <td> Boolesk</td> 
+   <td> Boolean</td> 
    <td> om true döljs kolumnmarkeringsfältet</td> 
   </tr> 
   <tr> 
    <td> hideExtraCols / hec</td> 
-   <td> Boolesk</td> 
+   <td> Boolean</td> 
    <td> om true döljs fältet för extra kolumner</td> 
   </tr> 
   <tr> 
    <td> hideSearchButton</td> 
-   <td> Boolesk</td> 
+   <td> Boolean</td> 
    <td> om true döljs sökknappen</td> 
   </tr> 
   <tr> 
    <td> hideSaveButton / hsavep</td> 
-   <td> Boolesk</td> 
+   <td> Boolean</td> 
    <td> om true döljs knappen Spara</td> 
   </tr> 
   <tr> 
    <td> hideExportButton / hexpb</td> 
-   <td> Boolesk</td> 
+   <td> Boolean</td> 
    <td> när true döljs exportknappen</td> 
   </tr> 
   <tr> 
    <td> hideImportButton / hib</td> 
-   <td> Boolesk</td> 
+   <td> Boolean</td> 
    <td> om true döljs importknappen</td> 
   </tr> 
   <tr> 
    <td> hideResultNumber / hrn</td> 
-   <td> Boolesk</td> 
+   <td> Boolean</td> 
    <td> om true döljs texten för stödrastrets sökresultatnummer</td> 
   </tr> 
   <tr> 
    <td> hideInsertButton / hinsertb</td> 
-   <td> Boolesk</td> 
+   <td> Boolean</td> 
    <td> om true döljs infogningsknappen för stödrastret</td> 
   </tr> 
   <tr> 
    <td> hideDeleteButton / hdelb</td> 
-   <td> Boolesk</td> 
+   <td> Boolean</td> 
    <td> om true döljs knappen för att ta bort stödraster</td> 
   </tr> 
   <tr> 
    <td> hidePathCol / hpc</td> 
-   <td> Boolesk</td> 
+   <td> Boolean</td> 
    <td> om true döljs stödrastrets "sökvägskolumn"</td> 
   </tr> 
  </tbody> 
@@ -167,14 +170,14 @@ Här följer en lista med frågeparametrar för massredigering:
 
 I det här avsnittet finns en översikt över hur du använder gruppredigeraren och en beskrivning av den befintliga Geometrixx baserat på gruppredigeraren: komponenten Produktlista.
 
-Med komponenten Produktlista kan användare visa och redigera en datatabell. Du kan till exempel använda komponenten Produktlista för att representera produkter i en katalog. Informationen visas i en vanlig HTML-tabell och redigering utförs i dialogrutan **Redigera** som innehåller en BulkEditor-widget. (Den här gruppredigeraren är exakt densamma som den som finns på /etc/importers/bulkeditor.html eller via Verktyg-menyn). Produktlistkomponenten har konfigurerats för specifika, begränsade massredigeringsfunktioner. Alla delar av gruppredigeraren (eller komponenter som härletts från gruppredigeraren) kan konfigureras.
+Med komponenten Produktlista kan användare visa och redigera en datatabell. Du kan till exempel använda komponenten Produktlista för att representera produkter i en katalog. Informationen visas i en HTML-tabell och redigering utförs i **Redigera** som innehåller en BulkEditor-widget. (Den här gruppredigeraren är exakt densamma som den som finns på /etc/importers/bulkeditor.html eller via Verktyg-menyn). Produktlistkomponenten har konfigurerats för specifika, begränsade massredigeringsfunktioner. Alla delar av gruppredigeraren (eller komponenter som härletts från gruppredigeraren) kan konfigureras.
 
 Med gruppredigeraren kan du lägga till, ändra, ta bort, filtrera och exportera raderna, spara ändringar och importera en uppsättning rader. Varje rad lagras som en nod under själva produktlistkomponentinstansen. Varje cell är en egenskap för varje nod. Det här är ett designalternativ och kan enkelt ändras. Du kan till exempel lagra noder någon annanstans i databasen. Frågeserverns roll är att returnera listan över noder som ska visas. sökvägen definieras som en produktlistinstans.
 
 Källkoden för produktlistkomponenten finns i databasen i /apps/geometrixx/components/productlist och består av flera delar, som alla AEM:
 
-* HTML-återgivning: återgivningen görs i en JSP-fil (/apps/geometrixx/components/productlist/productlist.jsp). JSP läser delnoderna för den aktuella produktlistkomponenten och visar var och en av dem som en rad i en HTML-tabell.
-* Dialogrutan Redigera, där du definierar konfigurationen för gruppredigeraren. Konfigurera dialogrutan så att den matchar komponentens behov: tillgängliga kolumner och möjliga åtgärder som utförs i rutnätet eller i sökningen. Mer information om alla konfigurationsegenskaper finns i [konfigurationsegenskaper för masredigering](#bulk-editor-configuration-properties).
+* HTML: återgivningen görs i en JSP-fil (/apps/geometrixx/components/productlist/productlist.jsp). JSP läser delnoderna för den aktuella produktlistkomponenten och visar var och en av dem som en rad i en HTML-tabell.
+* Dialogrutan Redigera, där du definierar konfigurationen för gruppredigeraren. Konfigurera dialogrutan så att den matchar komponentens behov: tillgängliga kolumner och möjliga åtgärder som utförs i rutnätet eller i sökningen. Se [konfigurationsegenskaper för massredigering](#bulk-editor-configuration-properties) om du vill ha information om alla konfigurationsegenskaper.
 
 Här är en XML-representation av delnoderna i dialogrutan:
 
@@ -447,7 +450,7 @@ Alla delar av gruppredigeraren kan konfigureras. I följande tabell visas alla k
  </tbody> 
 </table>
 
-### Konfiguration av kolumnmetadata {#columns-metadata-configuration}
+### Metadatakonfiguration för kolumner {#columns-metadata-configuration}
 
 Du kan konfigurera för varje kolumn:
 
@@ -513,17 +516,17 @@ Följande exempel finns i produktlistekomponenten (/apps/geometrixx/components/p
 
 **Kryssruta**
 
-Om konfigurationsegenskapen för kryssrutan är true återges alla celler i kolumnen som kryssrutor. En kryssruta skickar **true** till servern Save, annars **false**. På rubrikmenyn kan du även **markera alla** eller **välj inga**. De här alternativen aktiveras om den valda rubriken är rubriken för en kryssrutekolumn.
+Om konfigurationsegenskapen för kryssrutan är true återges alla celler i kolumnen som kryssrutor. En kryssruta skickar **true** till serverns Spara-server, **false** i annat fall. På rubrikmenyn kan du även **markera alla** eller **välj ingen**. De här alternativen aktiveras om den valda rubriken är rubriken för en kryssrutekolumn.
 
 I det tidigare exemplet innehåller markeringskolumnen bara kryssrutor som checkbox=&quot;true&quot;.
 
 **Tvingad position**
 
-Med metadata för forcerad position i forcePosition kan du ange var kolumnen ska placeras i rutnätet: 0 är den första platsen och &lt;antal kolumner>-1 är den sista positionen. Alla andra värden ignoreras.
+Med metadata för forcerad position i forcePosition kan du ange var kolumnen ska placeras i rutnätet: 0 är första plats och &lt;number of=&quot;&quot; columns=&quot;&quot;>-1 är den sista positionen. Alla andra värden ignoreras.
 
 I det tidigare exemplet är markeringskolumnen den första kolumnen som forcerad position=&quot;0&quot;.
 
-### Frågereservlet {#query-servlet}
+### Frågeservlet {#query-servlet}
 
 Som standard finns frågeservern på `/libs/wcm/core/components/bulkeditor/json.java`. Du kan konfigurera en annan sökväg för att hämta data.
 
@@ -555,24 +558,24 @@ Varje träff motsvarar en nod och dess egenskaper, och visas som en rad i rutnä
 
 Du kan utöka frågeservern för att returnera en komplex arvsmodell eller returnera noder som lagras på en viss logisk plats. Frågeservern kan användas för alla typer av komplex beräkning. Rutnätet kan sedan visa rader som är en sammanställning av flera noder i databasen. Ändringen och sparandet av dessa rader måste i så fall hanteras av Spara server.
 
-### Spara servervlet {#save-servlet}
+### Spara server {#save-servlet}
 
-I standardkonfigurationen för gruppredigeraren är varje rad en nod och sökvägen för den här noden lagras i radposten. Massredigeraren behåller länken mellan raden och noden genom jcr-sökvägen. När en användare redigerar stödrastret skapas en lista över alla ändringar. När en användare klickar på **Spara** skickas en POST-fråga till varje sökväg med de uppdaterade egenskapsvärdena. Detta är grunden för Sling-konceptet och fungerar bra om varje cell är en nodegenskap. Men om frågeservern implementeras för arvsberäkning kan modellen inte fungera som en egenskap som returneras av frågeservern kan ärvas från en annan nod.
+I standardkonfigurationen för gruppredigeraren är varje rad en nod och sökvägen för den här noden lagras i radposten. Massredigeraren behåller länken mellan raden och noden genom jcr-sökvägen. När en användare redigerar stödrastret skapas en lista över alla ändringar. När en användare klickar **Spara** skickas en POST till varje sökväg med de uppdaterade egenskapsvärdena. Detta är grunden för Sling-konceptet och fungerar bra om varje cell är en nodegenskap. Men om frågeservern implementeras för arvsberäkning kan modellen inte fungera som en egenskap som returneras av frågeservern kan ärvas från en annan nod.
 
 Konceptet Spara serverlet är att ändringarna inte publiceras direkt till varje nod, utan att de bokförs på en server som utför sparandet. Detta ger den här servern möjlighet att analysera ändringarna och spara egenskaperna på rätt nod.
 
 Varje uppdaterad egenskap skickas till servern i följande format:
 
-* Parameternamn: &lt;jcr-sökväg>/
+* Parameternamn: &lt;jcr path=&quot;&quot;>/&lt;property name=&quot;&quot;>
 
    Exempel: /content/geometrixx/en/products/jcr:content/par/productlist/1258674859000/SellingSku
 
-* Värde: &lt;värde>
+* Värde: &lt;value>
 
    Exempel: 12123
 
 Servern behöver veta var egenskapen catalogCode lagras.
 
-En standardserverimplementering för Spara finns på /libs/wcm/bulkeditor/save/POST.jsp och används i produktlistkomponenten. Den tar alla parametrar från begäran (med formatet &lt;jcr path>/&lt;egenskapsnamn>) och skriver egenskaper på noder med JCR API. Noden skapas också om den inte finns (rutnätsinfogade rader).
+En standardserverimplementering för Spara finns på /libs/wcm/bulkeditor/save/POST.jsp och används i produktlistkomponenten. Den tar alla parametrar från begäran (med en &lt;jcr path=&quot;&quot;>/&lt;property name=&quot;&quot;> format) och skriver egenskaper på noder med JCR-API:t. Noden skapas också om den inte finns (rutnätsinfogade rader).
 
-Standardkoden ska inte användas som den är eftersom den återimplementerar det som servern gör (en POST på &lt;jcr path>/&lt;egenskapsnamn>) och är därför bara en bra utgångspunkt för att skapa en Spara-server som hanterar en egenskapsarvsmodell.
+Standardkoden ska inte användas som den är eftersom den återimplementerar det som servern gör internt (en POST på &lt;jcr path=&quot;&quot;>/&lt;property name=&quot;&quot;>) och är därför bara en bra utgångspunkt för att skapa en Spara-server som hanterar en egenskapsarvsmodell.

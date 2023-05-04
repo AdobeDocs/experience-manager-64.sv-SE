@@ -1,40 +1,42 @@
 ---
 title: Konfigurera Connector för IBM Content Manager
-seo-title: Konfigurera Connector för IBM Content Manager
-description: Konfigurera Connector for IBM Content Manager för att möjliggöra kommunikation mellan AEM och IBM Content Manager.
-seo-description: Konfigurera Connector for IBM Content Manager för att möjliggöra kommunikation mellan AEM och IBM Content Manager.
+seo-title: Configuring Connector for IBM Content Manager
+description: Konfigurera anslutningsprogrammet för IBM Content Manager för att aktivera kommunikation mellan AEM och IBM Content Manager.
+seo-description: Configure the Connector for IBM Content Manager to enable communication between AEM forms and IBM Content Manager.
 uuid: 3d55169d-93e3-4d4e-b18b-2a3394e1de3b
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 3094b178-3b1a-46b3-8fbd-c20388afa3a7
-translation-type: tm+mt
-source-git-commit: 6a2455cb377a68254a5c58c6627c59716d284144
+exl-id: 8c65531e-f4f0-4cc4-b328-eaefb5662cf1
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---
 
+# Konfigurera Connector för IBM Content Manager{#configuring-connector-for-ibm-content-manager}
 
-# Konfigurerar koppling för IBM Content Manager{#configuring-connector-for-ibm-content-manager}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-Koppling för IBM Content Manager möjliggör kommunikation mellan AEM och IBM Content Manager. Mer bakgrundsinformation finns i &quot;Connectors for ECM&quot; i [Services Reference](https://www.adobe.com/go/learn_aemforms_services_63).
+Koppling för IBM Content Manager möjliggör kommunikation mellan AEM och IBM Content Manager. Mer bakgrundsinformation finns i &quot;Connectors for ECM&quot; i [Tjänstreferens](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Konfigurera IBM Content Manager-anslutningen {#configure-the-ibm-content-manager-connection}
 
 1. I administrationskonsolen klickar du på Tjänster > Koppling för IBM Content Manager.
-1. Ange namnet på IBM Content Manager-datalagret som du vill ansluta till i rutan Datastornamn. Om databasen är lokal anger du databasens namn. Om databasen är fjärransluten anger du dess aliasnamn.
+1. Ange namnet på det IBM Content Manager-datalager som du vill ansluta till i rutan Datastornamn. Om databasen är lokal anger du databasens namn. Om databasen är fjärransluten anger du dess aliasnamn.
 1. I rutan Användarnamn anger du användar-ID för en användare som ska ansluta till IBM Content Manager-datalagret.
 1. Ange användarens lösenord i rutan Lösenord.
 1. (Valfritt) I rutan Aliasanslutningssträng anger du ytterligare anslutningsargument. I de flesta fall ska den här rutan vara tom. Mer information finns i dokumentationen för IBM.
 1. Klicka på Spara.
 
-## Verifiering av tjänstinställningar {#validation-of-service-settings}
+## Validering av tjänstinställningar {#validation-of-service-settings}
 
 Om du anger fel alias, användarnamn eller lösenord för dataStore får du följande resultat beroende på om tjänsten Content Repository Connector för IBM Content Manager körs för närvarande:
 
 * Om tjänsten stoppas visas inget fel när du sparar tjänstkonfigurationsinformationen. Nästa gång du startar tjänsten inträffar dock ett undantag och tjänsten kommer inte att starta.
 * Om tjänsten startas försöker tjänsten att validera inloggningsinformationen omedelbart när du sparar tjänstkonfigurationsinformationen. I det här fallet inträffar ett fel och konfigurationsinformationen sparas inte.
-

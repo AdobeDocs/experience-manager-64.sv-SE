@@ -1,38 +1,41 @@
 ---
 title: Åtkomst till UGC med SRP
-seo-title: Åtkomst till UGC med SRP
+seo-title: Accessing UGC with SRP
 description: När en plats är konfigurerad att använda ASRP eller MSRP lagras inte den faktiska UGC:n i AEM nodstore (JCR)
-seo-description: När en plats är konfigurerad att använda ASRP eller MSRP lagras inte den faktiska UGC:n i AEM nodstore (JCR)
+seo-description: When a site is configured to use ASRP or MSRP, the actual UGC is not be stored in AEM's node store (JCR)
 uuid: 5f9f8c9b-4c6a-45b0-96ff-14934380eba7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: ee786a5c-b985-4d78-9063-6c79ae5e13e6
-translation-type: tm+mt
-source-git-commit: 565604feff7fa365a1c6b52b62a0b0eb681bb192
+exl-id: 3a16a771-e1c5-4ae4-9fc6-17a47064db54
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
 
-
 # Åtkomst till UGC med SRP {#accessing-ugc-with-srp}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Om SRP {#about-srp}
 
-Alla AEM Communities-komponenter och -funktioner bygger på [ramverket för sociala komponenter (SCF)](scf.md), som anropar SocialResourceProvider API för att få åtkomst till allt användargenererat innehåll (UGC).
+Alla AEM Communities-komponenter och -funktioner bygger på [ramverk för sociala komponenter (SCF)](scf.md), som anropar SocialResourceProvider-API:t för att komma åt allt användargenererat innehåll (UGC).
 
-Innan en community-plats skapas måste [lagringsresursprovidern (SRP)](working-with-srp.md) konfigureras att välja en implementering som överensstämmer med den underliggande [topologin](topologies.md). SRP-implementeringarna baseras på tre lagringsalternativ:
+Innan en community-webbplats skapas [lagringsresursprovider](working-with-srp.md) måste konfigureras för att välja en implementering som är konsekvent med den underliggande [topologi](topologies.md). SRP-implementeringarna baseras på tre lagringsalternativ:
 
-1. [ASRP](asrp.md)  - on demand-lagring i Adobe
+1. [ASRP](asrp.md) - Adobe on demand-lagring
 2. [MSRP](msrp.md) - MongoDB
-3. [JSRP](jsrp.md)  - JCR
+3. [JSRP](jsrp.md) - JCR
 
 ## Om UGC-lagring {#about-ugc-storage}
 
-Det som är viktigt att veta om lagring av UGC är att när en plats har konfigurerats att använda ASRP eller MSRP lagras inte den faktiska UGC:n i AEM [nodstore](../../help/sites-deploying/data-store-config.md) (JCR).
+Det som är viktigt att veta om lagring av UGC är att när en plats har konfigurerats att använda ASRP eller MSRP lagras inte själva UGC i AEM [nodarkiv](../../help/sites-deploying/data-store-config.md) (JCR).
 
 Även om det kan finnas noder i JCR som skuggar UGC för att ge användbara metadata, ska dessa noder inte blandas ihop med själva UGC.
 
@@ -65,14 +68,14 @@ Metoder som ska undvikas:
 
 ### Använd söksamlingar {#use-search-collections}
 
-Olika SRP kan ha olika inbyggda frågespråk. Vi rekommenderar att du använder metoder från [com.adobe.cq.social.ugc.api](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html)-paketet för att anropa rätt frågespråk.
+Olika SRP kan ha olika inbyggda frågespråk. Vi rekommenderar att du använder metoder från [com.adobe.cq.social.ugc.api](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) för att anropa rätt frågespråk.
 
-Mer information finns i [Söka i Grundläggande](search-implementation.md).
+Mer information finns i [Sök i Grundläggande](search-implementation.md).
 
 ## Resurser {#resources}
 
-* [Community Content Storage](working-with-srp.md)  - diskuterar tillgängliga SRP-alternativ för en gemensam lagringsplats för användargenererat innehåll
-* [Översikt över](srp.md)  lagringsresursprovidern - introduktion och databasanvändning - översikt
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
-* [Search Essentials](search-implementation.md) - Essentials information for searching UGC
-* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utgått verktygsmetoder till aktuella SRP-verktygsmetoder
+* [Community-innehåll](working-with-srp.md) - diskuterar tillgängliga SRP-alternativ för en gemensam lagringsplats för användargenererat innehåll
+* [Översikt över lagringsresursprovider](srp.md) - introduktion och databasanvändning - översikt
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel
+* [Sök i Grundläggande](search-implementation.md) - viktig information för sökning i användargenererat innehåll
+* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av borttagna verktygsmetoder till aktuella SRP-verktygsmetoder

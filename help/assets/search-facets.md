@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Search
 role: Admin,Developer
 exl-id: ef1c0b57-68cc-460e-ae45-e16b079194c2
-source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2391'
-ht-degree: 17%
+source-wordcount: '2427'
+ht-degree: 16%
 
 ---
 
 # Söka efter fasetter {#search-facets}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Lär dig hur du skapar, ändrar och använder sökfaktorer i AEM.
 
@@ -28,10 +32,10 @@ Om du till exempel söker efter en bild kan du välja om du vill ha en bitmapp e
 
 De sökfaktorer som visas på panelen Filter definieras i det underliggande sökformuläret med hjälp av predikat. Om du vill visa fler eller olika aspekter lägger du till predikat i standardformuläret eller använder ett anpassat formulär som innehåller de egenskaper du vill använda.
 
-För textsökningar lägger du till predikatet Fulltext i formuläret. Använd predikatet Egenskap för att söka efter resurser som matchar en enskild egenskap som du anger. Använd predikatet Alternativ för att söka efter resurser som matchar ett eller flera värden för en viss egenskap. Lägg till predikatet för datumintervall för att söka efter resurser som skapats inom ett angivet datumintervall.
+Lägg till predikatet Fulltext i formuläret för fulltextsökningar. Använd predikatet Egenskap för att söka efter resurser som matchar en enskild egenskap som du anger. Använd predikatet Alternativ för att söka efter resurser som matchar ett eller flera värden för en viss egenskap. Lägg till predikatet för datumintervall för att söka efter resurser som skapats inom ett angivet datumintervall.
 
-1. Tryck/klicka på logotypen [!DNL Experience Manager] och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
-1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och trycker sedan på **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
+1. Tryck/klicka på [!DNL Experience Manager] logotyp och sedan gå till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
+1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och sedan trycka  **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
 
    ![Leta reda på och välj Resursadministratörens sökspår](assets/assets_admin_searchrail.png)
 
@@ -39,15 +43,15 @@ För textsökningar lägger du till predikatet Fulltext i formuläret. Använd p
 
    >[!NOTE]
    >
-   >Utför följande steg om du vill använda mappsökningsfunktionen från den förkonfigurerade **Resursadministratörssökvägen** från en tidigare [!DNL Experience Manager]-version:
+   >Så här använder du mappsökningsfunktionen från den förkonfigurerade **Resursadministratörssökväg** från en tidigare [!DNL Experience Manager] version, utför följande steg:
    > 
    >1. Navigera till */conf/global/settings/dam/search/facets/assets/jcr:content/items* i CRX-DE.
-   >1. Ta bort noden **type**.
+   >1. Ta bort **type** nod.
    >1. Från sökvägen */libs/settings/dam/search/facets/assets/jcr:content/items* kopierar du noderna **asset, directory, typeor, excludepaths** och **searchtype** till den sökväg som nämns i steg 1.
    >1. Spara ändringarna.
 
 
-1. På sidan Redigera sökning i Forms drar du ett predikat från fliken **[!UICONTROL Select Predicate]** till huvudrutan. Dra till exempel **[!UICONTROL Property Predicate]**.
+1. Dra ett predikat från sidan Redigera sökning i Forms **[!UICONTROL Select Predicate]** till huvudfönstret. Dra till exempel **[!UICONTROL Property Predicate]**.
 
    ![Anpassa sökfiltren genom att dra och släppa ett predikat](assets/drag_predicate.png)
 
@@ -69,15 +73,15 @@ För textsökningar lägger du till predikatet Fulltext i formuläret. Använd p
 
    Associera en metadataegenskap med ett predikat i fältet Egenskapsnamn
 
-1. Tryck/klicka på **[!UICONTROL Preview]** ![förhandsvisningen](assets/preview.png) för att generera en förhandsgranskning av panelen Filter så som den visas när du har lagt till predikatet.
+1. Tryck/klicka på **[!UICONTROL Preview]** ![förhandsgranska](assets/preview.png) om du vill generera en förhandsvisning av panelen Filter så som den ser ut när du har lagt till predikatet.
 1. Granska layouten för predikatet i förhandsgranskningsläget.
 
    ![Förhandsgranska sökformuläret innan ändringarna skickas](assets/preview-1.png)
 
    Förhandsgranska sökformuläret innan ändringarna skickas
 
-1. Om du vill stänga förhandsgranskningen trycker/klickar du på **[!UICONTROL Close]** ![close](assets/close.png) i det övre högra hörnet av förhandsvisningen.
-1. Tryck på **[!UICONTROL Done]** för att spara inställningarna.
+1. Stäng förhandsgranskningen genom att trycka/klicka på **[!UICONTROL Close]** ![stäng](assets/close.png) i förhandsvisningens övre högra hörn.
+1. Tryck **[!UICONTROL Done]** för att spara inställningarna.
 1. Navigera till sökpanelen i användargränssnittet Resurser. Egenskapspredikatet läggs till på panelen.
 1. Ange en beskrivning av resursen som ska genomsökas i textrutan. Ange t.ex. &quot;Adobe.&quot; När du gör en sökning visas resurser med en beskrivning som matchar&quot;Adobe&quot; i sökresultaten.
 
@@ -85,11 +89,11 @@ För textsökningar lägger du till predikatet Fulltext i formuläret. Använd p
 
 Med predikatet Alternativ kan du lägga till flera sökalternativ på panelen Filter. Du kan välja ett eller flera av dessa alternativ på panelen Filter om du vill söka efter resurser. Om du till exempel vill söka efter resurser baserat på filtyp konfigurerar du alternativ som Bilder, Multimedia, Dokument och Arkiv i sökformuläret. När du har konfigurerat de här alternativen utförs sökningen på resurser av typen GIF, JPEG, PNG och så vidare när du väljer alternativet Bilder på panelen Filter.
 
-Om du vill mappa alternativen till respektive egenskap skapar du en nodstruktur för alternativen och anger sökvägen till den överordnade noden i egenskapen Egenskapsnamn för predikatet Alternativ. Den överordnade noden ska vara av typen `sling`: `OrderedFolder`. Alternativen ska vara av typen `nt:unstructured`. Alternativnoderna ska ha egenskaperna `jcr:title` och `value` konfigurerade.
+Om du vill mappa alternativen till respektive egenskap skapar du en nodstruktur för alternativen och anger sökvägen till den överordnade noden i egenskapen Egenskapsnamn för predikatet Alternativ. Den överordnade noden ska vara av typen `sling`: `OrderedFolder`. Alternativen ska vara av typen `nt:unstructured`. Alternativnoderna ska ha egenskaperna `jcr:title` och `value` konfigurerad.
 
-Egenskapen `jcr:title` är ett användarvänligt namn för alternativet som visas på panelen Filter. Fältet `value` används i frågan för att matcha den angivna egenskapen.
+The `jcr:title` -egenskapen är ett användarvänligt namn på det alternativ som visas på panelen Filter. The `value` fältet används i frågan för att matcha den angivna egenskapen.
 
-När du väljer ett alternativ utförs sökningen baserat på egenskapen `value` för alternativnoden och dess eventuella underordnade noder. Hela trädet under alternativnoden gås igenom och egenskapen `value` för varje underordnad nod kombineras med en OR-åtgärd för att skapa sökfrågan.
+När du väljer ett alternativ utförs sökningen baserat på `value` egenskapen för alternativnoden och dess underordnade noder, om sådana finns. Hela trädet under alternativnoden gås igenom och `value` egenskapen för varje underordnad nod kombineras med en OR-åtgärd för att skapa sökfrågan.
 
 Om du till exempel väljer ”Bilder” för filtyper skapas sökfrågan för resurserna genom att egenskapen `value` kombineras med en OR-åtgärd. Sökfrågan efter bilder skapas till exempel genom att kombinera resultaten som matchar *image/jpeg*, *image/gif*, *image/png*, *image/pjpeg* och *image/tiff* för egenskapen `jcr:content/metadata/dc:format` med en OR-åtgärd.
 
@@ -117,14 +121,14 @@ Om du vill använda en befintlig nod anger du den i valdialogrutan.
 >
 >Alternativpredikatet är en anpassad wrapper som innehåller egenskapspredikat som demonstrerar det beskrivna beteendet. För närvarande finns det ingen tillgänglig REST-slutpunkt som stöder funktionen internt.
 
-1. Tryck på logotypen [!DNL Experience Manager] och gå sedan till **[!UICONTROL Tools > General > Search Forms]**.
+1. Tryck på [!DNL Experience Manager] logotyp och sedan gå till **[!UICONTROL Tools > General > Search Forms]**.
 1. På sidan **[!UICONTROL Search Forms]** väljer du **[!UICONTROL Assets Admin Search Rail]** och trycker sedan på ikonen Redigera.
 1. På sidan **[!UICONTROL Edit Search Form]** drar du **[!UICONTROL Options Predicate]** från fliken **[!UICONTROL Select Predicate]** till huvudrutan.
 1. Ange en etikett och ett namn för egenskapen på fliken **[!UICONTROL Settings]**. Om du till exempel vill söka efter resurser baserat på deras format anger du ett användarvänligt namn på etiketten, till exempel **[!UICONTROL File Type]**. Ange egenskapen som ska användas för sökningen i egenskapsfältet, till exempel `jcr:content/metadata/dc:format.`
 1. Gör något av följande:
 
-   * I fältet **[!UICONTROL Property Name]** anger du sökvägen till JSON-filen där du definierar noderna för alternativen och anger motsvarande nyckelvärdepar.
-   * Tryck på ![Lägg till ikon](assets/do-not-localize/aem_assets_add_icon.png) bredvid fältet Alternativ för att ange visningstext och värde för de alternativ du vill ange på panelen Filter. Om du vill lägga till ytterligare ett alternativ trycker/klickar du på ![Lägg till ikon](assets/do-not-localize/aem_assets_add_icon.png) och upprepar steget.
+   * I **[!UICONTROL Property Name]** anger du sökvägen till JSON-filen där du definierar noderna för alternativen och anger motsvarande nyckelvärdepar.
+   * Tryck ![Ikonen Lägg till](assets/do-not-localize/aem_assets_add_icon.png) bredvid fältet Alternativ för att ange visningstext och värde för de alternativ du vill ange på panelen Filter. Om du vill lägga till ytterligare ett alternativ trycker du/klickar ![Ikonen Lägg till](assets/do-not-localize/aem_assets_add_icon.png) och upprepa steget.
 
 1. Kontrollera att **[!UICONTROL Single Select]** är avmarkerat så att användaren kan välja flera alternativ för filtyper samtidigt (till exempel bilder, dokument, multimedia och arkiv). Om du väljer **[!UICONTROL Single Select]** kan användaren bara välja ett alternativ åt gången för olika filtyper.
 
@@ -132,30 +136,30 @@ Om du vill använda en befintlig nod anger du den i valdialogrutan.
 
    De tillgängliga fälten i Alternativpaletten
 
-1. I fältet **Beskrivning** anger du en valfri beskrivning och klickar sedan på **[!UICONTROL Done]**.
-1. Navigera till sökpanelen. Alternativpredikatet läggs till på panelen **Sök**. Alternativen för **[!UICONTROL File Type]** visas som kryssrutor.
+1. I **Beskrivning** ange en valfri beskrivning och klicka sedan på **[!UICONTROL Done]**.
+1. Navigera till sökpanelen. Alternativpredikatet läggs till i **Sök** -panelen. Alternativen för **[!UICONTROL File Type]** visas som kryssrutor.
 
 ## Lägga till ett egenskapspredikat för flera värden {#adding-a-multi-value-property-predicate}
 
-Med Multi Value Property-predikatet kan du söka efter resurser efter flera värden. Tänk dig ett scenario där du har bilder på flera produkter i [!DNL Experience Manager] Assets och metadata för varje bild innehåller ett SKU-nummer som är kopplat till produkten. Du kan använda det här predikatet för att söka efter produktbilder baserat på flera SKU-nummer.
+Med Multi Value Property-predikatet kan du söka efter resurser efter flera värden. Tänk dig ett scenario där du har bilder på flera produkter i [!DNL Experience Manager] Resurserna och metadata för varje bild innehåller ett SKU-nummer som är kopplat till produkten. Du kan använda det här predikatet för att söka efter produktbilder baserat på flera SKU-nummer.
 
-1. Klicka på logotypen [!DNL Experience Manager] och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
-1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och trycker på **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
+1. Klicka på [!DNL Experience Manager] logotyp och sedan gå till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
+1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]**, tryck **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
 1. På sidan Redigera sökformulär drar du **[!UICONTROL Multi Value Property Predicate]** från fliken **[!UICONTROL Select Predicate]** till huvudrutan.
-1. På fliken **[!UICONTROL Settings]** anger du en etikett och platshållartext för predikatet. Ange egenskapsnamnet som ska användas för sökningen i egenskapsfältet, till exempel `jcr:content/metadata/dc:value`. Du kan också använda valdialogrutan för att välja en nod.
+1. I **[!UICONTROL Settings]** anger du en etikett och platshållartext för predikatet. Ange egenskapsnamnet som ska användas för sökningen i egenskapsfältet, till exempel `jcr:content/metadata/dc:value`. Du kan också använda valdialogrutan för att välja en nod.
 1. Kontrollera att **[!UICONTROL Delimiter Support]** är markerat. I fältet **[!UICONTROL Input Delimiters]** anger du avgränsare för att separera enskilda värden. Som standard anges kommatecken som avgränsare. Du kan ange en annan avgränsare.
-1. I fältet **Beskrivning** anger du en valfri beskrivning och trycker sedan på **[!UICONTROL Done]**.
+1. I **Beskrivning** anger du en valfri beskrivning och trycker sedan **[!UICONTROL Done]**.
 1. Navigera till panelen Filter i Assets-gränssnittet. Predikatet **[!UICONTROL Multi Value Property]** läggs till på panelen.
 1. Ange flera värden i fältet Flervärde avgränsat med avgränsarna och utför sökningen. Predikatet hämtar en exakt textmatchning för de värden du anger.
 
 ## Lägga till ett taggpredikat {#adding-a-tags-predicate}
 
-Med taggpredikatet kan du utföra taggbaserade sökningar efter resurser. Som standard söker [!DNL Experience Manager] Resurser efter en eller flera taggar som matchar baserat på de taggar du anger. Med andra ord utför sökfrågan en ELLER-åtgärd med de angivna taggarna. Du kan dock använda alternativet Matcha alla taggar för att söka efter resurser som innehåller alla taggar som du anger.
+Med taggpredikatet kan du utföra taggbaserade sökningar efter resurser. Som standard [!DNL Experience Manager] Resurserna söker efter resurser efter en eller flera taggar som matchar baserat på de taggar du anger. Med andra ord utför sökfrågan en ELLER-åtgärd med de angivna taggarna. Du kan dock använda alternativet Matcha alla taggar för att söka efter resurser som innehåller alla taggar som du anger.
 
-1. Klicka på logotypen [!DNL Experience Manager] och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
-1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och trycker sedan på **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
-1. På sidan Redigera sökformulär drar du **[!UICONTROL Tags Predicate]** från fliken Välj predikat till huvudrutan.
-1. Ange en platshållartext för predikatet på fliken Inställningar. Ange egenskapsnamnet som ska användas för sökningen i egenskapsfältet, till exempel *jcr:content/metadata/cq:tags*. Du kan också välja en nod i CRXDE i urvalsdialogrutan.
+1. Klicka på [!DNL Experience Manager] logotyp och sedan gå till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
+1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och sedan trycka **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
+1. Dra på sidan Redigera sökformulär **[!UICONTROL Tags Predicate]** från fliken Välj predikat till huvudrutan.
+1. Ange en platshållartext för predikatet på fliken Inställningar. Ange egenskapsnamnet som ska användas för sökningen i egenskapsfältet, till exempel *jcr:content/metadata/cq:taggar*. Du kan också välja en nod i CRXDE i urvalsdialogrutan.
 1. Konfigurera sökvägsegenskapen för rottaggar för det här predikatet för att fylla i olika taggar i listan Taggar.
 1. Välj **[!UICONTROL Show match all tags option]** om du vill söka efter resurser som innehåller alla taggar du anger.
 
@@ -163,8 +167,8 @@ Med taggpredikatet kan du utföra taggbaserade sökningar efter resurser. Som st
 
    Vanliga inställningar för taggar-predikat
 
-1. Ange en valfri beskrivning i fältet **[!UICONTROL Description]** och klicka/tryck sedan på **[!UICONTROL Done]**.
-1. Navigera till sökpanelen. **[!UICONTROL Tags]**-predikatet läggs till i sökpanelen.
+1. I **[!UICONTROL Description]** ange en valfri beskrivning och sedan klicka/peka **[!UICONTROL Done]**.
+1. Navigera till sökpanelen. The **[!UICONTROL Tags]** predikatet läggs till på sökpanelen.
 1. Ange taggar baserat på vilka du vill söka efter resurser eller välj från listan med förslag.
 
    ![AEM förslag när taggens namn skrivs](assets/chlimage_1-419.png)
@@ -184,7 +188,7 @@ På samma sätt som du lägger till ett egenskapsprediat eller ett alternativpre
 | [!UICONTROL Path] | Använd den för att filtrera resultaten på plats. Du kan ange olika banor som alternativ. | <ul><li>Etikett</li><li>Bana</li><li>Beskrivning</li></ul> |
 | [!UICONTROL Publish Status] | Sök efter predikat för att söka efter resurser baserat på deras publiceringsstatus | <ul><li>Etikett</li><li>Egenskapsnamn</li><li>Beskrivning</li></ul> |
 | [!UICONTROL Relative Date] | Sökpredikatet för att söka efter resurser baserat på det relativa datumet då de skapades. Du kan till exempel konfigurera alternativ som för 2 månader sedan, för 3 veckor sedan och så vidare. | <ul><li>Etikett</li><li>Egenskapsnamn</li><li>Relativt datum</li></ul> |
-| [!UICONTROL Range] | Sök på predikatet för att söka efter resurser som ligger inom ett angivet intervall. På sökpanelen kan du ange lägsta och högsta värden för intervallet. | <ul><li>Etikett</li><li>Egenskapsnamn</li><li>Beskrivning</li></ul> |
+| [!UICONTROL Range] | Sök predikatet för att söka efter resurser som ligger inom ett angivet intervall. På sökpanelen kan du ange lägsta och högsta värden för intervallet. | <ul><li>Etikett</li><li>Egenskapsnamn</li><li>Beskrivning</li></ul> |
 | [!UICONTROL Date Range] | Sökpredikatet för att söka efter resurser som skapats inom ett angivet intervall efter en datumegenskap. På sökpanelen kan du ange start- och slutdatum med datumväljare. | <ul><li>Etikett</li><li>Platshållare</li><li>Egenskapsnamn</li><li>Intervalltext (från)</li><li>Intervalltext (till)</li><li>Beskrivning</li></ul> |
 | [!UICONTROL Date] | Sökpredikatet för en skjutreglagebaserad sökning efter resurser baserat på en date-egenskap. | <ul><li>Etikett</li><li>Egenskapsnamn</li><li>Beskrivning</li></ul> |
 | [!UICONTROL File Size] | Sök efter predikatorn för att söka efter resurser baserat på deras storlek. Det är ett sifferbaserat predikat där du väljer skjutreglagealternativ från en konfigurerbar nod. Standardalternativen finns i /libs/dam/options/preates/filesize i CRX-databasen. Filstorleken anges i byte. | <ul><li>Etikett</li><li>Egenskapsnamn</li><li>Bana</li><li>Beskrivning</li></ul> |
@@ -196,7 +200,7 @@ På samma sätt som du lägger till ett egenskapsprediat eller ett alternativpre
 
 ## Återställa standardsökfaktorer {#restoring-default-search-facets}
 
-Som standard visas en låsikon före **[!UICONTROL Assets Admin Search Rail]** på **[!UICONTROL Search Forms]**-sidan. Ikonen Lås försvinner om du lägger till sökfaktorer i formuläret, vilket anger att standardformuläret har ändrats.
+Som standard visas en låsikon före **[!UICONTROL Assets Admin Search Rail]** i **[!UICONTROL Search Forms]** sida. Ikonen Lås försvinner om du lägger till sökfaktorer i formuläret, vilket anger att standardformuläret har ändrats.
 
 ![Låsikonen mot ett alternativ på söksidan i Forms anger att standardinställningarna är intakta och inte anpassade.](assets/locked_admin_rail.png)
 
@@ -204,9 +208,9 @@ Låsikonen mot ett alternativ på söksidan i Forms anger att standardinställni
 
 Så här återställer du standardsökaspekten:
 
-1. Välj **[!UICONTROL Assets Admin Search Rail]** på sidan **[!UICONTROL Search Forms]**.
-1. Tryck på **[!UICONTROL Delete]** ![deleteOutline](assets/deleteoutline.png) i verktygsfältet.
-1. I bekräftelsedialogrutan trycker du på **[!UICONTROL Delete]** för att ta bort de anpassade ändringarna.
+1. Välj **[!UICONTROL Assets Admin Search Rail]** i **[!UICONTROL Search Forms]** sida.
+1. Tryck **[!UICONTROL Delete]** ![ta bort](assets/deleteoutline.png) i verktygsfältet.
+1. Tryck på **[!UICONTROL Delete]** för att ta bort de anpassade ändringarna.
 
    När du har tagit bort de anpassade ändringarna för sökfasetter visas låsikonen igen före **[!UICONTROL Assets Admin Search Rail]** på sidan **[!UICONTROL Search Forms]**.
 

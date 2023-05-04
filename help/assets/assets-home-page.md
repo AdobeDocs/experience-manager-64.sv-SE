@@ -1,18 +1,22 @@
 ---
-title: '"[!DNL Experience Manager Assets] Home Page Experience"'
+title: "[!DNL Experience Manager Assets] Home Page Experience"
 description: Anpassa startsidan för Assets för en rik välkomstskärm, inklusive en ögonblicksbild av nyligen gjorda aktiviteter kring resurser.
 contentOwner: AG
 feature: Developer Tools,Asset Management
 role: Admin,User
 exl-id: f47c6da7-aa21-4f49-9c66-2a8091e19561
-source-git-commit: d9cfb5376210234b3b05877509c273c52d9cecf3
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '566'
 ht-degree: 1%
 
 ---
 
 # [!DNL Adobe Experience Manager Assets] Home Page Experience {#aem-assets-home-page-experience}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Anpassa [!DNL Experience Manager Assets] Startsida för en rik välkomstskärm, inklusive en ögonblicksbild av nyligen gjorda aktiviteter kring resurser.
 

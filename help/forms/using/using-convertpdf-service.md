@@ -1,36 +1,39 @@
 ---
 title: ConvertPDF Service
 seo-title: ConvertPDF Service
-description: 'Använd tjänsten AEM Forms ConvertPDF för att konvertera PDF-dokument till PostScript- eller bildfiler. '
-seo-description: 'Använd tjänsten AEM Forms ConvertPDF för att konvertera PDF-dokument till PostScript- eller bildfiler. '
+description: Använd tjänsten AEM Forms ConvertPDF för att konvertera PDF-dokument till PostScript- eller bildfiler.
+seo-description: Use AEM Forms ConvertPDF service to convert PDF documents to PostScript or image files.
 uuid: 7fa94c8c-485b-4a77-bcd3-ed716e3cf316
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: document_services
 discoiquuid: 5ec4f0ec-a9fd-4571-9b9a-278f4622c028
-translation-type: tm+mt
-source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+exl-id: a6fe7794-3c31-4706-9e23-fe63a506b0bc
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
 
-
 # ConvertPDF Service {#convertpdf-service}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Översikt {#overview}
 
-Tjänsten Konvertera PDF konverterar PDF-dokument till PostScript- eller bildfiler (JPEG, JPEG 2000, PNG och TIFF). Att konvertera ett PDF-dokument till PostScript är användbart för oövervakad serverbaserad utskrift på en PostScript-skrivare. Att konvertera ett PDF-dokument till en flersidig TIFF-fil är praktiskt när man arkiverar dokument i content management-system som inte stöder PDF-dokument.
+Med tjänsten Konvertera PDF kan du konvertera PDF-dokument till PostScript- eller bildfiler (JPEG, JPEG 2000, PNG och TIFF). Att konvertera ett PDF-dokument till PostScript är användbart för oövervakad serverbaserad utskrift på en PostScript-skrivare. Det är praktiskt att konvertera ett PDF-dokument till en flersidig TIFF-fil när du arkiverar dokument i innehållshanteringssystem som inte stöder PDF.
 
-Du kan göra följande med tjänsten Konvertera PDF:
+Du kan göra följande med tjänsten Convert PDF:
 
-* Konvertera PDF-dokument till PostScript. När du konverterar till PostScript kan du använda konverteringsåtgärden för att ange källdokumentet och om det ska konverteras till PostScript-nivå 2 eller 3. PDF-dokumentet som du konverterar till en PostScript-fil måste vara icke-interaktivt.
+* Konvertera PDF-dokument till PostScript. När du konverterar till PostScript kan du använda konverteringsåtgärden för att ange källdokumentet och om det ska konverteras till PostScript-nivå 2 eller 3. Det PDF-dokument som du konverterar till en PostScript-fil måste vara icke-interaktivt.
 * Konvertera PDF-dokument till bildformaten JPEG, JPEG 2000, PNG och TIFF. När du konverterar till något av dessa bildformat kan du använda konverteringsåtgärden för att ange källdokumentet och en bildalternativsspecifikation. Specifikationen innehåller olika inställningar, till exempel bildkonverteringsformat, bildupplösning och färgkonvertering.
 
 ## Konfigurera egenskaper för tjänsten   {#properties}
 
-Du kan använda tjänsten **AEMFD ConvertPDF** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen för AEM är `https://[host]:[port]/system/console/configMgr`.
+Du kan använda **AEMFD ConvertPDF Service** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen AEM konsolen är `https://[host]:[port]/system/console/configMgr`.
 
 ## Använda tjänsten {#using-the-service}
 
@@ -40,7 +43,7 @@ ConvertPDF-tjänsten tillhandahåller följande två API:er:
 
 * **[toImage](https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage)**: Konverterar ett PDF-dokument till en bildfil. Bildformat som stöds är JPEG, JPEG2000, PNG och TIFF.
 
-### Använda toPS API med JSP eller Servlets {#using-tops-api-with-a-jsp-or-servlets}
+### Använda toPS API med en JSP eller Servlets {#using-tops-api-with-a-jsp-or-servlets}
 
 ```java
 <%@ page import="java.util.List, java.io.File,
@@ -193,4 +196,3 @@ var convertedPS = cpdfService.toPS(inputDocument, toPSOptions);
 // save converted PostScript file to disk
 convertedPS.copyToFile(new File("C:/temp/out.ps"));
 ```
-

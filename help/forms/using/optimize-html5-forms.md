@@ -1,24 +1,27 @@
 ---
 title: Optimera HTML5-formulär
-seo-title: Optimera HTML5-formulär
+seo-title: Optimizing HTML5 forms
 description: Du kan optimera utdatastorleken för HTML5-formulär.
-seo-description: Du kan optimera utdatastorleken för HTML5-formulär.
+seo-description: You can optimize the output size of the HTML5 forms.
 uuid: 959f0b6a-9e4d-478a-afa8-4c39011fdf7a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: bdb9edc2-6a37-4d3f-97d5-0fc5664316be
 feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 8d2b5294-9763-4348-b927-706ebac90b95
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
 
-
 # Optimera HTML5-formulär {#optimizing-html-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 HTML5-formulär återger formulär i HTML5-format. Resultatet kan bli stort beroende på faktorer som formulärstorleken och bilderna i formuläret. För att optimera dataöverföringen rekommenderar vi att du komprimerar HTML-svaret med webbservern som begäran skickas från. Detta minskar svarsstorleken, nätverkstrafiken och den tid som krävs för att strömma data mellan servern och klientdatorerna.
 
@@ -34,7 +37,7 @@ Skaffa webbserverprogrammet Apache som kan användas i ditt operativsystem:
 
 Apache kan kommunicera med JBoss med HTTP eller AJP-protokollet.
 
-1. Avkommentera följande modulkonfigurationer i filen *APACHE_HOME/conf/httpd.conf*.
+1. Avkommentera följande modulkonfigurationer i *APACHE_HOME/conf/httpd.conf* -fil.
 
    ```java
    LoadModule proxy_balancer_module modules/mod_proxy.so
@@ -48,7 +51,7 @@ Apache kan kommunicera med JBoss med HTTP eller AJP-protokollet.
 
 1. Konfigurera proxyn på port 8080 för JBoss.
 
-   Lägg till följande konfiguration i konfigurationsfilen *APACHE_HOME/conf/httpd.conf*.
+   Lägg till följande konfiguration i *APACHE_HOME/conf/httpd.conf* konfigurationsfil.
 
    ```java
    ProxyPass / https://<server_Name>:8080/
@@ -66,7 +69,7 @@ Apache kan kommunicera med JBoss med HTTP eller AJP-protokollet.
 
 1. Aktivera komprimering.
 
-   Lägg till följande konfiguration i konfigurationsfilen *APACHE_HOME/conf/httpd.conf*.
+   Lägg till följande konfiguration i *APACHE_HOME/conf/httpd.conf* konfigurationsfil.
 
    ```java
    <Location /content/xfaforms>
@@ -84,5 +87,4 @@ Apache kan kommunicera med JBoss med HTTP eller AJP-protokollet.
    </Location>
    ```
 
-1. Använd https://[Apache_server]:80 för att få åtkomst till AEM.
-
+1. Använd https:// för att få åtkomst till AEM server[Apache_server]:80.

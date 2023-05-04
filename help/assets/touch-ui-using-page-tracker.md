@@ -5,18 +5,22 @@ contentOwner: AG
 feature: Asset Reports
 role: Architect,Admin
 exl-id: b0154c9c-a671-43fb-8733-274a35307a34
-source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
 
 # Använda sidspåraren och bädda in kod på webbsidor {#using-page-tracker-and-embed-code-in-web-pages}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 Page Tracker är en del av JavaScript-kod som du inkluderar i koden för tredjepartswebbplatser så att Adobe Analytics kan samla in användningsdata om Adobe Experience Manager-resurser på dessa webbplatser.
 
-Om du vill fånga händelser, t.ex. klick, som är specifika för resurser, inkluderar du även koden för inbäddning i koden för tredjepartswebbplatser.
+Om du vill fånga händelser, t.ex. klick, som är specifika för resurser, inkluderar du även inbäddningskoden i koden för tredjepartswebbplatser.
 
 I följande exempelkod visas hur en webbsida som innehåller både sidspårningskod och inbäddningskod ser ut:
 

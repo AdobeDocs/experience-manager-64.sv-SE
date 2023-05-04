@@ -1,24 +1,27 @@
 ---
 title: Översikt över Forms arbetsflöde
-seo-title: Översikt över Forms arbetsflöde
+seo-title: Overview of Forms workflow
 description: Med Forms arbetsflöde kan man utforma, hantera och optimera humancentrerade processer. Med hjälp av arbetsflöden för blanketter kan man också hantera automatiserade affärsprocesslösningar som knyter samman system och människor.
-seo-description: Med Forms arbetsflöde kan man utforma, hantera och optimera humancentrerade processer. Med hjälp av arbetsflöden för blanketter kan man också hantera automatiserade affärsprocesslösningar som knyter samman system och människor.
+seo-description: Forms workflow lets users design, manage, and optimize human-centric processes. Using forms workflow, users can also manage automated business-process applications that connect systems and people.
 uuid: b28ada7c-de75-416a-b2c8-f6494be5330c
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 7d2a9de8-13d1-4981-9ba2-9654127556b8
-translation-type: tm+mt
-source-git-commit: 36d12ff07b1cdd1e6c6fee052a335d3f49eee3bb
+exl-id: df534e6d-ec34-4851-bbd2-5b9b06d1da10
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
 
-
 # Översikt över Forms arbetsflöde {#overview-of-forms-workflow}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Med Forms arbetsflöde kan man utforma, hantera och optimera humancentrerade processer. Med hjälp av arbetsflöden för blanketter kan man också hantera automatiserade affärsprocesslösningar som knyter samman system och människor.
 
@@ -27,7 +30,7 @@ På varje Forms-arbetsflödessida i administrationskonsolen kan du utföra olika
 <table>
  <thead>
   <tr>
-   <th><p>Sidan</p></th> 
+   <th><p>Sida</p></th> 
    <th><p>Uppgifter</p></th> 
    <th><p>Se</p></th> 
   </tr> 
@@ -114,4 +117,3 @@ På varje Forms-arbetsflödessida i administrationskonsolen kan du utföra olika
   </tr> 
  </tbody> 
 </table>
-

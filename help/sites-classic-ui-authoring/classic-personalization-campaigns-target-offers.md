@@ -1,24 +1,27 @@
 ---
 title: Målerbjudanden
-seo-title: Målerbjudanden
+seo-title: Target offers
 description: Skapa målerbjudanden
-seo-description: Skapa målerbjudanden
+seo-description: Create target offers
 uuid: 88206181-9708-454a-a22a-05e3fc0247c2
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: e26bf608-c57c-4346-88fb-32a82cfa82d2
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: ca9c6fd1-7f2e-4c99-ba6e-0a064274ac24
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 5%
+source-wordcount: '127'
+ht-degree: 3%
 
 ---
 
-
 # Målerbjudanden{#target-offers}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Skapa en test&amp;Target-erbjudandeupplevelse {#creating-a-test-target-offer-experience}
 
@@ -27,17 +30,17 @@ ht-degree: 5%
 
    ![](do-not-localize/chlimage_1-11.png)
 
-1. Klicka på **Nytt ...**
-1. Du kan ange **titel**, **namn** och vilken typ av upplevelse som ska skapas; i det här fallet Test&amp;Target-erbjudande.
+1. Klicka **Nytt ...**
+1. Du kan ange **Titel**, **Namn** och den typ av erfarenhet som ska skapas, i det här fallet Test&amp;Target-erbjudande.
 
    ![chlimage_1-139](assets/chlimage_1-139.png)
 
-1. Klicka på **Skapa**.
+1. Klicka **Skapa**.
 
    >[!NOTE]
    >
-   >Test&amp;Target-upplevelser är för närvarande inte listade i MCM. De kan nås via konsolen **Webbplatser** under Campaigns.
+   >Test&amp;Target-upplevelser är för närvarande inte listade i MCM. De kan nås via **Webbplatser** under Campaigns.
 
 ## Integrera med Adobe Target {#integrating-with-adobe-target}
 
-Mer information finns i [Integrera med Adobe](/help/sites-administering/target.md) [Mål](/help/sites-administering/target.md).
+Se [Integrera med Adobe](/help/sites-administering/target.md) [Mål](/help/sites-administering/target.md) för fullständig information.

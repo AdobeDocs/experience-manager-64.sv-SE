@@ -1,35 +1,38 @@
 ---
 title: Skicka en bekräftelse på att formulär har skickats via e-post
-seo-title: Skicka en bekräftelse på att formulär har skickats via e-post
+seo-title: Sending a form submission acknowledgement via email
 description: I AEM Forms kan du konfigurera e-poståtgärden som skickar en bekräftelse till en användare när formuläret skickas.
-seo-description: I AEM Forms kan du konfigurera e-poståtgärden som skickar en bekräftelse till en användare när formuläret skickas.
+seo-description: AEM Forms allows you to configure the email submit action that sends an acknowledgement to a user on submitting the form.
 uuid: 77b3c836-6011-48bd-831c-ebc214218efb
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: 7ffe6317-174b-4d80-9ac6-9bfb5eed7e29
-translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+exl-id: e850d2a5-cb5f-4bd4-81dd-57951923b6d3
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
 
-
 # Skicka en bekräftelse på att formulär har skickats via e-post {#sending-a-form-submission-acknowledgement-via-email}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Anpassad inlämning av formulärdata {#adaptive-form-data-submission}
 
-Med adaptiva formulär kan du skicka formulärdata till olika slutpunkter med hjälp av flera färdiga [skicka-åtgärder](/help/forms/using/configuring-submit-actions.md)-arbetsflöden.
+Adaptiva formulär har flera färdiga funktioner [skicka funktionsmakron](/help/forms/using/configuring-submit-actions.md) arbetsflöden för att skicka formulärdata till olika slutpunkter.
 
-Till exempel skickar åtgärden **E-post** ett e-postmeddelande när ett anpassat formulär har skickats. Den kan även konfigureras för att skicka formulärdata och PDF-filen i e-postmeddelandet.
+Till exempel **E-poståtgärd** skicka ett e-postmeddelande när ett anpassat formulär har skickats. Den kan även konfigureras för att skicka formulärdata och PDF i e-postmeddelandet.
 
 I den här artikeln beskrivs stegen för att aktivera e-poståtgärden för ett anpassat formulär och olika konfigurationer som tillhandahålls.
 
 >[!NOTE]
 >
->Du kan också använda åtgärden **E-posta PDF** för att skicka det ifyllda formuläret via e-post som en bifogad PDF-fil. Konfigurationsalternativen som är tillgängliga för den här åtgärden är samma som alternativen som är tillgängliga för åtgärden E-post. Åtgärden E-post-PDF är bara tillgänglig för XFA-baserade adaptiva formulär
+>Du kan också använda **E-poståtgärd PDF** för att skicka det ifyllda formuläret via e-post som en bifogad fil i PDF. Konfigurationsalternativen som är tillgängliga för den här åtgärden är samma som alternativen som är tillgängliga för åtgärden E-post. Åtgärden E-post PDF är bara tillgänglig för XFA-baserade adaptiva formulär
 
 ## E-poståtgärd {#email-action}
 
@@ -37,19 +40,19 @@ Med åtgärden E-post kan en författare automatiskt skicka e-post till en eller
 
 >[!NOTE]
 >
->Om du vill använda åtgärden E-post måste du konfigurera AEM e-posttjänst enligt beskrivningen i [Konfigurera e-posttjänsten](/help/sites-administering/notification.md#configuring-the-mail-service).
+>Om du vill använda åtgärden E-post måste du konfigurera tjänsten AEM e-post enligt beskrivningen i [Konfigurera e-posttjänsten](/help/sites-administering/notification.md#configuring-the-mail-service).
 
 ### Aktivera e-poståtgärd i ett anpassat formulär {#enabling-email-action-on-an-adaptive-form}
 
 1. Öppna ett anpassat formulär i redigeringsläge.
 
-1. Klicka på **Redigera** bredvid verktygsfältet **Start för ett adaptivt formulär**.
+1. Klicka **Redigera** bredvid **Början av ett adaptivt formulär** verktygsfält.
 
    Dialogrutan Redigera komponent öppnas.
 
    ![Redigera komponentdialogruta för ett anpassat formulär](assets/start_of_adp_form.png)
 
-1. Välj fliken **Skicka-åtgärder** och välj **E-poståtgärd** i listrutan Skicka-åtgärd.
+1. Välj **Skicka funktionsmakron** och välja **E-poståtgärd** i listrutan Skicka-åtgärd.
 
    Fliken visar alternativen för att konfigurera åtgärden E-post för det aktuella formuläret.
 
@@ -59,15 +62,15 @@ Med åtgärden E-post kan en författare automatiskt skicka e-post till en eller
 
    Ange ämne och e-postmeddelandets brödtext i fälten Ämne och E-postmall.
 
-   Du kan också ange variabelplatshållare i fälten. I så fall bearbetas fältvärdena när formuläret har skickats av en slutanvändare. Mer information finns i [Använda namn på adaptiva formulärfält för att dynamiskt skapa e-postinnehåll](/help/forms/using/form-submission-receipt-via-email.md#p-using-adaptive-form-field-names-to-dynamically-create-email-content-p).
+   Du kan också ange variabelplatshållare i fälten. I så fall bearbetas fältvärdena när formuläret har skickats av en slutanvändare. Mer information finns i [Använda adaptiva formulärfältsnamn för att dynamiskt skapa e-postinnehåll](/help/forms/using/form-submission-receipt-via-email.md#p-using-adaptive-form-field-names-to-dynamically-create-email-content-p).
 
    Markera Inkludera bifogade filer om formuläret innehåller bifogade filer och du vill bifoga dessa filer i e-postmeddelandet.
 
    >[!NOTE]
    >
-   >Om du väljer åtgärden **E-post-PDF** måste du markera alternativet Inkludera bifogade filer.
+   >Om du väljer **E-poståtgärd PDF** måste du markera alternativet Inkludera bifogade filer.
 
-1. Klicka på **OK** för att spara ändringarna.
+1. Klicka **OK** för att spara ändringarna.
 
 ### Använda adaptiva formulärfältsnamn för att dynamiskt skapa e-postinnehåll {#using-adaptive-form-field-names-to-dynamically-create-email-content}
 
@@ -77,17 +80,17 @@ På fliken E-poståtgärd kan du använda platshållare som bearbetas när åtg�
 
 Om du vill definiera en platshållare anger du `${<field name>}` i ett fält på fliken Skicka-åtgärder.
 
-Om formuläret till exempel innehåller fältet **E-postadress**, med namnet `email_addr`, för att hämta användarens e-post-ID, kan du ange följande i fälten Mailto, CC eller BCC.
+Om formuläret till exempel innehåller **E-postadress** fält, namngivna `email_addr`för att hämta användarens e-post-ID kan du ange följande i fälten Mailto, CC eller BCC.
 
 `${email_addr}`
 
-När en användare skickar formuläret skickas ett e-postmeddelande till det e-post-ID som anges i fältet `email_addr` i formuläret.
+När en användare skickar formuläret skickas ett e-postmeddelande till det e-post-ID som anges i `email_addr` formulärfält.
 
 >[!NOTE]
 >
->Du hittar namnet på ett fält i dialogrutan **Redigera** för fältet.
+>Du hittar namnet på ett fält i **Redigera** för fältet.
 
-Variabelplatshållare kan också användas i fälten **Ämne** och **E-postmall**.
+Variabelplatshållare kan också användas i **Ämne** och **E-postmall** fält.
 
 Till exempel:
 
@@ -102,4 +105,3 @@ Till exempel:
 >[!NOTE]
 >
 >Fält i upprepningsbara paneler kan inte användas som variabla platshållare.
-

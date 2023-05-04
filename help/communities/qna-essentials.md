@@ -2,23 +2,26 @@
 title: QnA Essentials
 seo-title: QnA Essentials
 description: Forumfunktionen Frågor och svar
-seo-description: Forumfunktionen Frågor och svar
+seo-description: Questions and answers forum feature
 uuid: c718a8e3-b3bd-4db9-8c0f-6dd973d40583
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: ceace3aa-78a5-485e-b519-630479e087d8
-translation-type: tm+mt
-source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+exl-id: 99f8afda-1771-471b-bd0c-99960a453bc9
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
 
-
 # QnA Essentials {#qna-essentials}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Den här sidan innehåller viktig information om hur du arbetar med forumfunktionen Frågor och svar (QnA).
 
@@ -36,10 +39,10 @@ Den här sidan innehåller viktig information om hur du arbetar med forumfunktio
   </tr>
   <tr>
    <td> <a href="clientlibs.md">klientlibs</a></td> 
-   <td>cq.ckeditor<br /> cq.social.hbs.voice<br /> cq.social.hbs.qna</td> 
+   <td>cq.ckeditor<br /> cq.social.hbs.röstning<br /> cq.social.hbs.qna</td> 
   </tr>
   <tr>
-   <td> templates</td> 
+   <td> mallar</td> 
    <td> /libs/social/qna/components/hbs/qnaforum/qnaforum.hbs<br /> /libs/social/qna/components/hbs/qnaforum/activity-title.hbs</td> 
   </tr>
   <tr>
@@ -48,7 +51,7 @@ Den här sidan innehåller viktig information om hur du arbetar med forumfunktio
   </tr>
   <tr>
    <td> egenskaper</td> 
-   <td>Se <a href="working-with-qna.md">QnA Forum Feature</a></td> 
+   <td>Se <a href="working-with-qna.md">QnA-forumfunktion</a></td> 
   </tr>
  </tbody>
 </table>
@@ -65,21 +68,20 @@ Den här sidan innehåller viktig information om hur du arbetar med forumfunktio
 
 ### QnA-funktion {#qna-function}
 
-En community-platsstruktur som innehåller [QnA-funktionen](functions.md#qna-function) har en konfigurerad `QnA`-komponent, samt inställningar som påverkar moderering och taggning. QnA-funktionen stöder identifiering av en [privilegierad medlemsgrupp](users.md#privileged-members-group).
+En community-webbplatsstruktur som innehåller [QnA-funktion](functions.md#qna-function) har en konfigurerad `QnA` -komponenten, samt inställningar som påverkar moderering och taggning. QnA-funktionen stöder identifiering av en [privilegierad medlemsanvändargrupp](users.md#privileged-members-group).
 
 ### Åtkomst till QnA-foruminlägg (UGC) {#accessing-qna-forum-posts-ugc}
 
 UGC bör modereras med någon av standardmetoderna för moderering.\
-Se [Moderating User Generated Content](moderate-ugc.md).
+Se [Modererar användargenererat innehåll](moderate-ugc.md).
 
-Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities används [gemensam lagringsplats](working-with-srp.md) för UGC omfattar programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (till exempel ASRP, MSRP eller JSRP).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
 Se:
 
-* [Översikt över](srp.md)  lagringsresursprovidern - introduktion och databasanvändning - översikt
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
-* [Åtkomst till UGC med riktlinjer för SRP](accessing-ugc-with-srp.md) -kodning
-* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utgått verktygsmetoder till aktuella SRP-verktygsmetoder
-
+* [Översikt över lagringsresursprovider](srp.md) - introduktion och databasanvändning - översikt
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning
+* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av borttagna verktygsmetoder till aktuella SRP-verktygsmetoder

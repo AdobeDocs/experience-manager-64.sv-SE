@@ -1,24 +1,27 @@
 ---
 title: Content Essentials
-seo-title: Content Essentials
+seo-title: Featured Content Essentials
 description: Arbeta med funktionsinnehåll
-seo-description: Arbeta med funktionsinnehåll
+seo-description: Working with feature content
 uuid: b376828a-1431-4d16-ad6b-b23a3ea62a75
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 781625f1-39a0-4e34-948c-d4eab35dd5c1
-translation-type: tm+mt
-source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+exl-id: 4805db0f-18d2-4bbc-a4d6-eaafa7a4c152
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '113'
-ht-degree: 2%
+source-wordcount: '142'
+ht-degree: 0%
 
 ---
 
-
 # Content Essentials {#featured-content-essentials}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Den här sidan innehåller viktig information för att arbeta med aktuellt innehåll.
 
@@ -41,7 +44,7 @@ I motsats till att fästa ett inlägg överst i ett forum kan den här funktione
    <td> <i>standard</i></td> 
   </tr>
   <tr>
-   <td> <strong>templates</strong></td> 
+   <td> <strong>mallar</strong></td> 
    <td> /libs/social/commons/components/hbs/featuredcontent/featuredcontent.hbs<br /> /libs/social/commons/components/hbs/featuredtopic/featuredtopic.hbs</td> 
   </tr>
   <tr>
@@ -50,7 +53,7 @@ I motsats till att fästa ett inlägg överst i ett forum kan den här funktione
   </tr>
   <tr>
    <td><strong> egenskaper</strong></td> 
-   <td>Se <a href="featured.md">Aktuellt innehåll</a></td> 
+   <td>Se <a href="featured.md">Innehåll</a></td> 
   </tr>
  </tbody>
 </table>
@@ -59,4 +62,4 @@ I motsats till att fästa ett inlägg överst i ett forum kan den här funktione
 
 ### Filbiblioteksfunktion {#file-library-function}
 
-En community-webbplatsstruktur som innehåller [funktionen för aktuellt innehåll](functions.md#featured-content-function) innehåller en konfigurerad `featured content`-komponent.
+En community-webbplatsstruktur som innehåller [Funktionen Innehåll](functions.md#featured-content-function), innehåller en konfigurerad `featured content` -komponenten.

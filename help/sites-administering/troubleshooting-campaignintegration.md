@@ -1,24 +1,27 @@
 ---
 title: Felsöka Adobe Campaign-integreringen
-seo-title: Felsöka Adobe Campaign-integreringen
+seo-title: Troubleshooting your Adobe Campaign Integration
 description: Lär dig hur du felsöker problem med Adobe Campaign Integration.
-seo-description: Lär dig hur du felsöker problem med Adobe Campaign Integration.
+seo-description: Learn how to troubleshoot issues with the Adobe Campaign Integration.
 uuid: 835ac2c3-ef2f-4963-9047-aeda3647b114
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: b1d45f01-78de-423c-8f6b-5cb7067c3a2f
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: f603b208-5f7b-4e5d-afa8-c3b249f67fb8
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '839'
 ht-degree: 0%
 
 ---
 
+# Felsöka Adobe Campaign-integreringen{#troubleshooting-your-adobe-campaign-integration}
 
-# Felsöka din Adobe Campaign-integrering{#troubleshooting-your-adobe-campaign-integration}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
@@ -31,18 +34,18 @@ Följande felsökningstips hjälper dig att lösa de vanligaste problemen du kan
 För båda integreringarna kan du kontrollera om HTTP-anrop skickas (AEM > Adobe Campaign, Adobe Campaign > AEM):
 
 * När integreringar misslyckas kontrollerar du att dessa samtal kommer till den andra änden (för att undvika brandväggs-/SSL-problem).
-* För AEM funktionalitet ser du att json-anrop begärs från AEM författargränssnitt. dessa bör inte resultera i ett HTTP-500-fel. Om du ser HTTP-500-fel bör du kontrollera `error.log` för mer information om detta.
+* För AEM funktionalitet ser du att json-anrop begärs från AEM författargränssnitt. dessa bör inte resultera i ett HTTP-500-fel. Om HTTP-500-fel visas kontrollerar du `error.log` om du vill ha mer information om detta.
 * Genom att höja felsökningsnivån för kampanjklasser i AEM kan du även felsöka problem.
 
 ## Om anslutningen misslyckas {#if-the-connection-fails}
 
-Kontrollera att du har konfigurerat **aemserver**-operatorn i Adobe Campaign.
+Kontrollera att du har konfigurerat **aemserver** i Adobe Campaign.
 
-## Om bilder inte visas i Adobe Campaign-konsolen {#if-images-do-not-appear-in-the-adobe-campaign-console}
+## Om bilderna inte visas i Adobe Campaign Console {#if-images-do-not-appear-in-the-adobe-campaign-console}
 
-Kontrollera HTML-källan och validera att du kan öppna URL:en från klientdatorn. Om URL:en innehåller localhost:4503 ändrar du konfigurationen för Day CQ Link Externalizer på författarinstansen så att den pekar på en publiceringsinstans som kan nås från Adobe Campaign konsoldator.
+Kontrollera HTML-källan och bekräfta att du kan öppna URL:en från klientdatorn. Om URL:en innehåller localhost:4503 ändrar du konfigurationen för Day CQ Link Externalizer på författarinstansen så att den pekar på en publiceringsinstans som kan nås från Adobe Campaign konsoldator.
 
-Se [Konfigurera externalisering.](/help/sites-administering/campaignstandard.md#configuring-the-externalizer)
+Se [Konfigurerar Externalizer.](/help/sites-administering/campaignstandard.md#configuring-the-externalizer)
 
 ## Om du inte kan ansluta från AEM till Adobe Campaign {#if-you-cannot-connect-from-aem-to-adobe-campaign}
 
@@ -64,9 +67,9 @@ Kontrollera att du inte har några avslutande snedstreck (/) efter portnumret i 
 
 ## Om du får en varning om ditt språkområde {#if-you-get-a-warning-about-your-setlocale}
 
-Om du startar Apache HTTPD-tjänsten och ser felet `"Warning: setlocale: LC_CTYPE cannot change locale"` kontrollerar du att du har installerat språket **en_CA.ISO-8859-15** på datorn.
+Om du startar Apache HTTPD-tjänsten och ser felet `"Warning: setlocale: LC_CTYPE cannot change locale"` se till att du har **sv_CA.ISO-8859-15 locale** installerade på datorn.
 
-Du kan kontrollera om den är installerad med `local -a`. Om den inte är installerad kan du korrigera **/usr/local/neolane/nl6/env.sh**-skriptet och ändra språkinställningen till en installerad.
+Du kan kontrollera om den är installerad med `local -a`. Om den inte är installerad kan du laga **/usr/local/neolane/nl6/env.sh** och ändra språkinställningen till en installerad.
 
 ## Om du får ett fel när skriptet &#39;get_nms_amcGetSeedMetaData_jssp&#39; kompileras {#if-you-get-an-error-while-compiling-script-get-nms-amcgetseedmetadata-jssp}
 
@@ -76,7 +79,7 @@ Om följande felmeddelande visas i AEM loggfil:
 
 Använd följande lösning:
 
-1. Öppna filen **$CAMPAIGN_HOME/datakit/nms/fra/js/amcIntegration.js**
+1. Öppna fil **$CAMPAIGN_HOME/datakit/nms/fra/js/amcIntegration.js**
 1. Ändra rad 467 i metoden amcGetSeedMetaData
 1. Ändra `label : [inclView.@label](mailto:inclView.@label)` till `label : String([inclView.@label](mailto:inclView.@label))`
 
@@ -85,23 +88,23 @@ Använd följande lösning:
 
 ## Om ett fel visas i Adobe Campaign när du klickar på knappen Synkronisera {#if-adobe-campaign-displays-an-error-when-clicking-the-synchronize-button}
 
-Följande fel visas om du klickar på knappen **Synkronisera** i Adobe Campaign Classic:
+Om när du klickar på **Synkronisera** i Adobe Campaign Classic visas följande fel:
 
 `Error while executing the method ‘aemListContent' of service [nms:delivery](https://nmsdelivery/)`
 
 Kontrollera att den AEM anslutnings-URL som är konfigurerad i det externa kontot kan nås från datorn för att åtgärda problemet.
 
-Ett byte från **localhost** till en IP-adress löste problemet.
+Byt från **localhost** till en IP-adress löste problemet.
 
-## Om du får felet &#39;Det går inte att tolka XTK Date+Time &#39;undefined&#39; {#if-you-get-a-cannot-parse-xtk-date-time-undefined-error}
+## Om du får ett &#39;Cannot parsing XTK Date+Time &#39;undefined&#39;-fel {#if-you-get-a-cannot-parse-xtk-date-time-undefined-error}
 
 När du har klickat på Synkronisera visas ett felmeddelande om att ett skript på sidorna har inträffat: Det går inte att parsa XTK-datum+tid &#39;undefined&#39;: inte ett giltigt XTK-värde.
 
 Det här inträffar om det fortfarande finns inaktuell Adobe Campaign-information för AEM. Lös problemet genom att ta bort alla kampanjintegreringskonfigurationer som finns AEM och återskapa dem. Skapa sedan en ny mall.
 
-## Om en anslutning till SSL visar ett fel när molntjänsten {#if-a-connection-to-ssl-displays-an-error-when-setting-up-the-cloud-service} konfigureras
+## Om en anslutning till SSL visar ett fel när molntjänsten konfigureras {#if-a-connection-to-ssl-displays-an-error-when-setting-up-the-cloud-service}
 
-I error.log för AEM, om följande visas:
+I error.log i AEM, om följande visas:
 
 ```xml
 javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name
@@ -128,12 +131,12 @@ När du försöker synkronisera innehåll i Adobe Campaign returnerar AEM en lis
 Så här löser du problemet:
 
 * Avsändaren eller den omvända proxyn måste konfigureras för att skicka det ursprungliga protokollet som en rubrik.
-* *Apache Felix Http Service SSL-filtret* i OSGi-konfigurationen ([https://&lt;värd>:&lt;port>/system/console/configMgr](http://localhost:4502/system/console/configMgr)) måste konfigureras till respektive rubrikinställningar. Se [https://felix.apache.org/documentation/subprojects/apache-felix-http-service.html#using-the-ssl-filter](https://felix.apache.org/documentation/subprojects/apache-felix-http-service.html#using-the-ssl-filter)
+* The *SSL-filter för Apache Felix HTTP-tjänst* i OSGi-konfigurationen ([https://&lt;host>:&lt;port>/system/console/configMgr](http://localhost:4502/system/console/configMgr)) måste konfigureras för respektive rubrikinställningar. Se [https://felix.apache.org/documentation/subprojects/apache-felix-http-service.html#using-the-ssl-filter](https://felix.apache.org/documentation/subprojects/apache-felix-http-service.html#using-the-ssl-filter)
 
-## Om den anpassade mall som jag skapade inte kan väljas i Sidegenskaper {#if-the-custom-template-i-created-cannot-be-selected-in-page-properties}
+## Om den anpassade mallen som jag skapade inte kan markeras i Sidegenskaper {#if-the-custom-template-i-created-cannot-be-selected-in-page-properties}
 
-När du skapar en e-postmall för Adobe Campaign måste du ta med egenskapen **acMapping** med värdet **mapRecipient** i **jcr:content**-noden för mallen, annars kan du inte välja Adobe Campaign-mallen i **Sidegenskaper** för AEM (fältet är inaktiverat).
+När du skapar en e-postmall för Adobe Campaign måste du ta med egenskapen **acMapping** med värdet **mapRecipient** i **jcr:innehåll** noden i mallen, eller så kan du inte välja Adobe Campaign-mallen i **Sidegenskaper** AEM (fältet är inaktiverat).
 
 ## Om du får felmeddelandet&quot;com.day.cq.mcm.campaign.servlets.util.ParameterMapper&quot; i dina loggar {#if-you-get-the-error-com-day-cq-mcm-campaign-servlets-util-parametermapper-in-your-logs}
 
-När du använder din anpassade mall visas felmeddelandet&quot;com.day.cq.mcm.campaign.servlets.util.ParameterMapper&quot; i loggarna. I så fall måste du installera Featurepack 6576 från [Paketresurs](/help/sites-administering/package-manager.md#package-share). Det här är ett problem där ett tomt värde skapas på Adobe Campaign Manager-sidan om egenskapen acMapping har ett annat värde än receive.firstName.
+När du använder din anpassade mall visas felmeddelandet&quot;com.day.cq.mcm.campaign.servlets.util.ParameterMapper&quot; i loggarna. Om detta inträffar måste du installera Featurepack 6576 från [Paketresurs](/help/sites-administering/package-manager.md#package-share). Det här är ett problem där ett tomt värde skapas på Adobe Campaign Manager-sidan om egenskapen acMapping har ett annat värde än receive.firstName.

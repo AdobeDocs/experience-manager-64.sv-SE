@@ -2,7 +2,7 @@
 title: SAP Commerce Cloud
 seo-title: SAP Commerce Cloud
 description: Lär er hur ni driftsätter e-handel med SAP Commerce Cloud.
-seo-description: Lär er hur ni driftsätter e-handel med SAP Commerce Cloud.
+seo-description: Learn how to deploy eCommerce with SAP Commerce Cloud.
 uuid: a16ae42b-9c33-4da8-a130-52b72a779ec7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,16 +11,19 @@ content-type: reference
 discoiquuid: 44dfa10f-497e-473f-95d4-8dccae7ebf8e
 pagetitle: Deploying eCommerce with SAP Commerce Cloud
 feature: Commerce Integration Framework
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 71d0a249-8ad1-416e-ad78-d651b413e5c3
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '734'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
 
-
 # SAP Commerce Cloud{#sap-commerce-cloud}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
@@ -34,29 +37,27 @@ ht-degree: 0%
 >
 >`Geometrixx Outdoors Site English (US)`
 
-Distribuering av de [nödvändiga e-handelspaketen](#packages-needed-for-ecommerce-with-hybris) ger eCommerce-ramverket full funktionalitet, tillsammans med en referensimplementering av eCommerce-funktionaliteten i enlighet med hybris-implementeringen (inklusive en demonstrationskatalog)
+Distribuera [nödvändiga e-handelspaket](#packages-needed-for-ecommerce-with-hybris) kommer att tillhandahålla e-handelsramverkets alla funktioner, tillsammans med en referensimplementering av e-handelsfunktionaliteten i enlighet med en hybris-implementering (inklusive en demonstrationskatalog),
 
-Det här är tillgängligt under den engelska (USA) grenen ( `/content/geometrixx-outdoors/en_US`) på Geometrixx Outdoors webbplats:
+Detta finns tillgängligt under den engelska (USA) grenen ( `/content/geometrixx-outdoors/en_US`) på Geometrixx Outdoors webbplats:
 
-* [Produktinformation](#productinformationwithcolorvariants)  (med färgvarianter när det är lämpligt)
+* [Produktinformation](#productinformationwithcolorvariants) (med färgvarianter när det är lämpligt)
 
 * [Innehållsöversikter för kundvagn](#shoppingcartcontentoverview)
-* [Customer Sign-](#customersignup) Upand  [Customer Sign-In](#customersignin)
+* [Kundregistrering](#customersignup) och [Kundinloggning](#customersignin)
 
 * [Tillgång till hybris Management Console](#accesstothehybrismanagementconsole)
 
 ### Tekniska krav - hybris Server {#technical-requirements-hybris-server}
 
-Utbyggnaden av hybris i eCommerce Integration Framework har uppdaterats för att stödja Hybris 5 (som standard), samtidigt som bakåtkompatibiliteten med [Hybris 4](/help/sites-developing/sap-commerce-cloud.md#developing-for-hybris) bibehålls.
+hybris-tillägget i eCommerce Integration Framework har uppdaterats för att stödja Hybris 5 (som standard), samtidigt som bakåtkompatibiliteten med [Hybris 4](/help/sites-developing/sap-commerce-cloud.md#developing-for-hybris).
 
 >[!NOTE]
 >
 >* Stöder upp till hybris 6.4 med OCC version 2.
->* Du behöver Java 7 för att köra [hybris 5-servern.](https://www.hybris.com/en/architecture-technology).
->* Tillägget hybris, [Telco Accelerator](https://www.hybris.com/en/products/telecommunication), stöds inte av AEM.
-
+>* Du behöver Java 7 för att köra [hybris 5-server.](https://www.hybris.com/en/architecture-technology)
+>* hybris-tillägget, [Telco Accelerator](https://www.hybris.com/en/products/telecommunication), stöds inte av AEM.
 >
-
 
 
 ### Paket som behövs för e-handel med hybris {#packages-needed-for-ecommerce-with-hybris}
@@ -77,7 +78,7 @@ Så här installerar du e-handelsfunktioner:
    * `cq-hybris-content-6.3.2`
    * hybrisspecifik API-implementering
    * `cq-geometrixx-hybris-content-6.3.2`
-   * en referensimplementering för att illustrera användningen av hybris ( `geometrixx-outdoors/en_US`),
+   * en referensimplementering för att illustrera användningen av hybris ( `geometrixx-outdoors/en_US`)
 
 ### Installation av e-handel med hybris {#installation-of-ecommerce-with-hybris}
 
@@ -88,17 +89,17 @@ Så här installerar du en fullständig konfiguration (med demonstrationskatalog
 
    1. ` [cq-geometrixx-all-pkg](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq60/product/cq-geometrixx-all-pkg)`
 
-1. Installera demonstrationsinnehållspaketen med [pakethanteraren](/help/sites-administering/package-manager.md):
+1. Installera demonstrationsinnehållspaketen med [pakethanterare](/help/sites-administering/package-manager.md):
 
    1. ` [cq-hybris-content-6.3.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/cq-hybris-content)`
    1. ` [cq-geometrixx-hybris-content-6.3.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/cq-geometrixx-hybris-content)`
 
-1. [Ladda ned och bygg en hybris Server](#download-and-build-your-hybris-server).
+1. [Ladda ned och bygg upp hybris Server](#download-and-build-your-hybris-server).
 1. Skapa din katalog i din e-handelsmotor:
 
-   1. [Ställ in Geometrixx Outdoor Store](#setup-the-geometrixx-outdoors-store).
+   1. [Ställ in Geometrixx utomhusbutik](#setup-the-geometrixx-outdoors-store).
 
-1. [Skapa ](/help/sites-authoring/qg-page-authoring.md) eventuella tilläggssidor som du behöver i AEM.
+1. [Upphovsman](/help/sites-authoring/qg-page-authoring.md) eventuella tilläggssidor som du behöver i AEM.
 
 >[!CAUTION]
 >
@@ -106,9 +107,9 @@ Så här installerar du en fullständig konfiguration (med demonstrationskatalog
 
 >[!NOTE]
 >
->Utvecklare [API-dokumentation](/help/sites-developing/ecommerce.md#api-documentation) kan också laddas ned.
+>För utvecklare [API-dokumentation](/help/sites-developing/ecommerce.md#api-documentation) finns också för nedladdning.
 
-### Ladda ned och bygg din hybris Server {#download-and-build-your-hybris-server}
+### Ladda ned och bygg en hybris-server {#download-and-build-your-hybris-server}
 
 Stegen i den här proceduren hämtar och bygger hybris-servern. Den kommer också att göra de initiala konfigurationer som krävs för kopplingarna mellan hybris och cq. Tillägget kan sedan användas med standardinställningarna.
 
@@ -118,9 +119,9 @@ Stegen i den här proceduren hämtar och bygger hybris-servern. Den kommer ocks�
 
 >[!NOTE]
 >
->Du måste ha [Groovy](https://groovy-lang.org/) installerat på datorn för att kunna slutföra detta.
+>Du måste [Groovy](https://groovy-lang.org/) installerade på datorn.
 
-1. Hämta distributionen **hybris Commerce Suite** från hybris nedladdningssajt.
+1. Ladda ned **hybris Commerce Suite** distribution från hybris nedladdningssajt.
 
    >[!CAUTION]
    >
@@ -142,7 +143,7 @@ Stegen i den här proceduren hämtar och bygger hybris-servern. Den kommer ocks�
    >
    >`ant clean all`
    >
-   >Tryck på `Return` vid behov.
+   >Tryck `Return` vid behov.
 
 1. Ladda ned följande filer till rotmappen för din extraherade hybris-distribution,
 
@@ -151,7 +152,7 @@ Stegen i den här proceduren hämtar och bygger hybris-servern. Den kommer ocks�
    ```
 
 
-   [Hämta fil](assets/setup.groovy)
+[Hämta fil](assets/setup.groovy)
 
    >[!NOTE]
    >
@@ -159,7 +160,7 @@ Stegen i den här proceduren hämtar och bygger hybris-servern. Den kommer ocks�
 
    5.6.0 och senare
 
-   [Hämta fil](assets/setup-1.groovy)
+[Hämta fil](assets/setup-1.groovy)
 
 1. Kör följande från kommandoraden till:
 
@@ -178,13 +179,13 @@ Stegen i den här proceduren hämtar och bygger hybris-servern. Den kommer ocks�
    >
    >Beroende på ditt system kan flera av dessa åtgärder ta flera minuter att slutföra.
 
-1. I webbläsaren går du till administrationskonsolen **för hybris** på:
+1. I webbläsaren går du till **Administrationskonsol för hybris** vid:
 
    [http://localhost:9002](http://localhost:9002)
 
-1. Klicka på **Initiera** och bekräfta sedan initieringsåtgärden (eftersom den kommer att ta bort befintliga data).
+1. Klicka **Initiera** och bekräfta sedan initieringsåtgärden (eftersom den tar bort befintliga data).
 
-   Förloppet visas på konsolen och `FINISHED` anger att åtgärden har slutförts.
+   Förloppet visas på konsolen med `FINISHED` som anger att åtgärden har slutförts.
 
    >[!NOTE]
    >
@@ -201,47 +202,46 @@ Den här proceduren överför och konfigurerar demonstrationsbutiken - Geometrix
    sh hybrisserver.sh
    ```
 
-1. I webbläsaren går du till **hybris management console** på:
+1. I webbläsaren går du till **Hanteringskonsol för hybris** vid:
 
    [http://localhost:9002/hmc/hybris](http://localhost:9002/hmc/hybris)
 
-1. I sidofältsnavigeringen kan du utforska **System** och **Verktyg**. Välj sedan **Importera** för att öppna **guiden: CSV-importfönstret**.
-1. På fliken **Konfiguration** **Överför** följande **Importera fil**:
+1. Från sidofältsnavigeringen kan du utforska **System** och **verktyg**. Välj sedan **Importera** för att öppna **Guide: CSV-import** -fönstret.
+1. I **Konfiguration** tab, **Överför** följande **Importera fil**:
 
-   [Hämta fil](assets/geometrixx-outdoors-export.csv)
+[Hämta fil](assets/geometrixx-outdoors-export.csv)
 
-1. Ange **språkinställningen** till:
+1. Ange **Språkinställning** till:
 
    `en_US - English (United States)`
 
-1. Öppna fliken **Resurser**.
-1. **Ladda** upp följande  **media-zip**:
+1. Öppna **Resurser** -fliken.
+1. **Överför** följande **Media-Zip**:
 
-   [Hämta fil](assets/geometrixx-outdoors-images.zip)
+[Hämta fil](assets/geometrixx-outdoors-images.zip)
 
-1. Klicka på **Start** för att importera de angivna filerna. Fliken **Resultat** visar alla loggposter.
+1. Klicka **Starta** om du vill importera de angivna filerna. The **Resultat** kommer att visa loggposter.
 
-1. Klicka på **Klar** för att stänga importfönstret.
+1. Klicka **Klar** för att stänga importfönstret.
 
-1. I sidofältet väljer du **System**, sedan **Verktyg** och sedan **Importera**.
+1. Välj **System** sedan **verktyg** sedan **Importera**.
 
-1. **** Överför följande  **importfil**:
+1. **Överför** följande **Importera fil**:
 
-   [Hämta fil](assets/base-store.csv)
+[Hämta fil](assets/base-store.csv)
 
    För hybris 5.7, använd följande:
 
-   [Hämta fil](assets/base-store-5_7.csv)
+[Hämta fil](assets/base-store-5_7.csv)
 
-1. Ange **språkinställningen** till:
+1. Ange **Språkinställning** till:
 
    `en_US - English (United States)`
 
-1. Klicka på **Start** för att importera de angivna filerna. Fliken **Resultat** visar alla loggposter.
+1. Klicka **Starta** om du vill importera de angivna filerna. The **Resultat** kommer att visa loggposter.
 
-1. Klicka på **Klar** för att stänga importfönstret.
+1. Klicka **Klar** för att stänga importfönstret.
 
 1. Nu kan du använda produktcockpit för att visa de importerade katalogerna och produkterna:
 
    [http://localhost:9002/productcockpit](http://localhost:9002/productcockpit)
-

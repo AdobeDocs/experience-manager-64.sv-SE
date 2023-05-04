@@ -1,24 +1,27 @@
 ---
 title: Integrera tredjepartsprogram i AEM Forms arbetsyta
-seo-title: Integrera tredjepartsprogram i AEM Forms arbetsyta
+seo-title: Integrating third-party applications in AEM Forms workspace
 description: Hur man integrerar tredjepartsappar som Correspondence Management i AEM Forms arbetsyta.
-seo-description: Hur man integrerar tredjepartsappar som Correspondence Management i AEM Forms arbetsyta.
+seo-description: How-to integrate third-party apps like Correspondence Management in AEM Forms workspace.
 uuid: 9649157c-fe28-43bf-a7d3-52ed55a0bf4f
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: f2bde2e8-da95-48ac-a652-85ead87f2cd3
-translation-type: tm+mt
-source-git-commit: 3c67867637cb3fdcdce77a5d494b9b150f128a20
+exl-id: 4df9a16c-0853-4bbf-81bb-1856ab55c5ee
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
 
-
 # Integrera tredjepartsprogram i AEM Forms arbetsyta {#integrating-third-party-applications-in-aem-forms-workspace}
 
-AEM Forms arbetsyta hanterar uppgifter och slutprocesser för blanketter och dokument. Dessa formulär och dokument kan vara XDP Forms, Flex® eller stödlinjer (borttagna) som har återgetts i XDP-, PDF-, HTML- eller Flex-format.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+AEM Forms arbetsyta hanterar uppgifter och slutprocesser för blanketter och dokument. Dessa formulär och dokument kan vara XDP Forms, Flex®-formulär eller stödlinjer (borttagna) som har återgetts i formaten XDP, PDF, HTML eller Flex.
 
 Dessa funktioner har förbättrats ytterligare. AEM Forms har nu stöd för samarbete med tredjepartsprogram som stöder funktioner som liknar AEM Forms arbetsyta. En vanlig del av den här funktionen är arbetsflödet för tilldelning och efterföljande godkännande av en uppgift. AEM Forms ger en enhetlig upplevelse för AEM Forms Enterprise-användare så att alla sådana tilldelningar eller godkännanden av de program som stöds kan hanteras via AEM Forms arbetsyta.
 
@@ -30,9 +33,9 @@ Börja med att skapa en Correspondence Management-exempelmall som renderas i AEM
 
 Gå till Correspondence Management-mallen på dess URL för att kontrollera om Correspondence Management-mallen kan återges korrekt. URL:en har ett mönster som liknar `https://[server]:[port]/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
 
-där `encodedLetterId` är det URL-kodade brev-ID:t. Ange samma bokstav-ID när du definierar återgivningsprocessen för arbetsyteaktiviteten i Workbench.
+där `encodedLetterId` är URL-kodat brev-ID. Ange samma bokstav-ID när du definierar återgivningsprocessen för arbetsyteaktiviteten i Workbench.
 
-## Skapa en aktivitet som återger och skickar ett brev AEM arbetsytan {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}
+## Skapa en uppgift för att återge och skicka ett brev AEM arbetsytan {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}
 
 Innan du utför dessa steg måste du kontrollera att du är medlem i följande grupper:
 
@@ -44,8 +47,8 @@ Mer information finns i [Lägga till och konfigurera användare](/help/forms/usi
 Följ de här stegen för att skapa en uppgift som återger och skickar ett brev AEM arbetsytan:
 
 1. Starta Workbench. Logga in på localhost som administratör.
-1. Klicka på Arkiv > Nytt > Program. Ange `CMDemoSample` i fältet Programnamn och klicka sedan på Slutför.
-1. Välj `CMDemoSample/1.0` och högerklicka på `NewProcess`. Ange `CMRenderer` i namnfältet och klicka sedan på Slutför.
+1. Klicka på Arkiv > Nytt > Program. I fältet Programnamn anger du `CMDemoSample` och klicka sedan på Slutför.
+1. Välj `CMDemoSample/1.0` och högerklicka `NewProcess`. I namnfältet anger du `CMRenderer` och klicka sedan på Slutför.
 1. Dra aktivitetsväljaren för startpunkten och konfigurera den:
 
    1. I Presentationsdata väljer du Använd en CRX-resurs.
@@ -101,13 +104,13 @@ Följ de här stegen för att skapa en uppgift som återger och skickar ett brev
    }
    ```
 
-   [Hämta ](assets/dscsample.zip)
-filHämta DSC: Ett exempel på DSC finns i den  `DSCSample.zip` fil som bifogas ovan. Hämta och zippa upp filen `DSCSample.zip`. Innan du använder DSC-tjänsten måste du konfigurera den. Mer information finns i [Konfigurera DSC-tjänsten](/help/forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
+   [Hämta fil](assets/dscsample.zip)
+Hämta DSC: Ett exempel på DSC finns i `DSCSample.zip` bifogad fil ovan. Ladda ned och zippa upp `DSCSample.zip` -fil. Innan du använder DSC-tjänsten måste du konfigurera den. Mer information finns i [Konfigurera DSC-tjänsten](/help/forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
 
    I dialogrutan Definiera aktivitet väljer du lämplig aktivitet, till exempel getLetterInstanceInfo, och klickar på **OK**.
 
 1. Distribuera programmet. Om du uppmanas att checka in och spara resurserna.
-1. Logga in på arbetsytan för AEM formulär på `https://[server]:[port]/lc/content/ws`.
+1. Logga in på arbetsytan AEM formulär på `https://[server]:[port]/lc/content/ws`.
 1. Öppna den uppgift du lagt till, CMRenderer. Correspondence Management-brevet visas.
 
    ![cminarbetsyta](assets/cminworkspace.png)
@@ -117,4 +120,3 @@ filHämta DSC: Ett exempel på DSC finns i den  `DSCSample.zip` fil som bifogas 
    >[!NOTE]
    >
    >Knappen Skicka är inte aktiverad förrän alla obligatoriska variabler i brevet har fyllts i.
-

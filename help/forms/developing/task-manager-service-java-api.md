@@ -1,8 +1,8 @@
 ---
 title: Java API QuickStart (SOAP) för tjänsten Task Manager
-seo-title: Java API QuickStart (SOAP) för tjänsten Task Manager
+seo-title: Task Manager Service Java API QuickStart(SOAP)
 description: Använd tjänsten Task Manager för att tilldela uppgifter, låsa uppgifter, hämta uppgifter som tilldelats användare, hämta formulärdata från uppgifter, ändra formulärdata, hämta bifogade filer och hämta uppgiftsinformation.
-seo-description: Använd tjänsten Task Manager för att tilldela uppgifter, låsa uppgifter, hämta uppgifter som tilldelats användare, hämta formulärdata från uppgifter, ändra formulärdata, hämta bifogade filer och hämta uppgiftsinformation.
+seo-description: Use the Task Manager service to assign tasks, lock tasks, retrieve tasks assigned to users, retrieve form data from tasks, modify form data, retrieve file attachments, and retrieve task information.
 uuid: fd6fceb1-865e-47a7-83fc-a63dcc2c21de
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 532e607d-5bc5-4ccc-92c6-30efe1081872
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 302b38e9-71fc-4e83-af01-856d7bd9af40
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
 
-
 # Java API-snabbstart (SOAP) för tjänsten Task Manager {#task-manager-service-java-api-quickstart-soap}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Följande snabbstarter är tillgängliga för tjänsten Task Manager.
 
@@ -41,7 +44,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 >[!NOTE]
 >
->Du kan inte söka efter uppgifter som tilldelats användare med hjälp av webbtjänstens API. Orsaken är att du inte kan anropa metoden `taskList`, som är ett nödvändigt metodanrop för att utföra den här åtgärden.
+>Du kan inte söka efter uppgifter som tilldelats användare med hjälp av webbtjänstens API. Orsaken är att du inte kan anropa `taskList` -metod, vilket är ett nödvändigt metodanrop för att utföra den här uppgiften.
 
 >[!NOTE]
 >
@@ -397,7 +400,7 @@ I följande Java-kodexempel hämtas alla uppgifter som tilldelats en användare 
 
 ## Snabbstart (SOAP-läge): Hämta formulärdata från uppgifter med Java API {#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api}
 
-I följande Java-kodexempel hämtas formulärdata från en uppgift med identifierarvärdet 304. Formulärdata skrivs till en XML-fil med namnet *FormData.xml* som finns på C:\Adobe.
+I följande Java-kodexempel hämtas formulärdata från en uppgift med identifierarvärdet 304. Formulärdata skrivs till en XML-fil med namnet *FormData.xml* på C:\Adobe.
 
 ```as3
  /* 
@@ -503,7 +506,7 @@ I följande Java-kodexempel hämtas formulärdata från en uppgift med identifie
 
 ## Snabbstart (SOAP-läge): Ändra formulärdata med Java API {#quick-start-soap-mode-modifying-form-data-using-the-java-api}
 
-I följande Java-kodexempel uppdateras ett formulär med data som finns i filen *FormData.xml*.
+I följande Java-kodexempel uppdateras ett formulär med data som finns i *FormData.xml* -fil.
 
 ```as3
  /* 
@@ -717,7 +720,7 @@ Följande Java-kodexempel hämtar bifogade filer. Varje bifogad fil sparas som e
 
 ## Snabbstart (SOAP-läge): Hämta aktivitetsinformation med Java API {#quick-start-soap-mode-retrieving-task-information-using-the-java-api}
 
-I följande Java-kodexempel hämtas alla uppgifter som är baserade på en process som heter *MortgageLoan - Prebuilt*. Statusen för varje returnerad uppgift kontrolleras för att säkerställa att den är en slutförd uppgift. Information som namnet på den användare som slutförde uppgiften och datumet då uppgiften slutfördes hämtas och visas.
+I följande Java-kodexempel hämtas alla uppgifter som är baserade på en process med namnet *Lån - fördefinierat*. Statusen för varje returnerad uppgift kontrolleras för att säkerställa att den är en slutförd uppgift. Information som namnet på den användare som slutförde uppgiften och datumet då uppgiften slutfördes hämtas och visas.
 
 ```as3
  /* 
@@ -869,4 +872,3 @@ I följande Java-kodexempel hämtas alla uppgifter som är baserade på en proce
      } 
  
 ```
-

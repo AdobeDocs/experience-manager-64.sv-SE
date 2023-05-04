@@ -1,30 +1,33 @@
 ---
 title: Konfigurera LDAP-lösenordet för bindning
-seo-title: Konfigurera LDAP-lösenordet för bindning
-description: 'Lär dig hur du konfigurerar fältet för bind-lösenord innan du importerar konfigurationsfilen till ett annat system. '
-seo-description: 'Lär dig hur du konfigurerar fältet för bind-lösenord innan du importerar konfigurationsfilen till ett annat system. '
+seo-title: Configure the LDAP bind password
+description: Lär dig hur du konfigurerar fältet för bind-lösenord innan du importerar konfigurationsfilen till ett annat system.
+seo-description: Learn how to configure the bind password field before you import the configuration file into another system.
 uuid: 1ab1907c-8b55-4b6f-bd5b-49f22d78b8a8
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 165b3950-b03f-4848-8361-ffb0a26d2658
-translation-type: tm+mt
-source-git-commit: a417e571d7c3b8da8f38f3d1ad814610636eabbc
+exl-id: eaa2c889-d116-4209-9063-0c0b32dd8849
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 3%
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
-
 # Konfigurera LDAP-lösenordet för bindning{#configure-the-ldap-bind-password}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 För att undvika säkerhetsrisker har fältet för bind-lösenord i den exporterade konfigurationsfilen (config.xml) inte konfigurerats. Innan du importerar konfigurationsfilen till ett annat system måste du konfigurera lösenordet. Det här lösenordet åsidosätter ett befintligt lösenord som lagras i databasen. Ett null-lösenord åsidosätter inte ett befintligt lösenord som inte är null.
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Importera och exportera konfigurationsfiler.
 1. Om du vill exportera den aktuella konfigurationsinställningen till en fil klickar du på Exportera och sparar konfigurationsfilen på en annan plats.
-1. Leta reda på noden `Domains` > *[Ditt domännamn]* > `DirectoryConfigs` > `LDAPGroupConfig` i filen. Här är ett exempel:
+1. Leta reda på `Domains` > *[Ditt domännamn]* > `DirectoryConfigs` > `LDAPGroupConfig` nod. Här är ett exempel:
 
    ```as3
     <node name="LDAPGroupConfig"> 
@@ -39,7 +42,7 @@ För att undvika säkerhetsrisker har fältet för bind-lösenord i den exporter
 
    Ange ett värde för `bindpassword` och spara ändringarna.
 
-1. Leta reda på noden `Domains` > *[Ditt domännamn]* > `DirectoryConfigs` > `LDAPGroupConfig` > `LDAPUserConfig` i filen. Här är ett exempel:
+1. Leta reda på `Domains` > *[Ditt domännamn]* > `DirectoryConfigs` > `LDAPGroupConfig` > `LDAPUserConfig` nod. Här är ett exempel:
 
    ```as3
     <node name="LDAPUserConfig"> 
@@ -56,4 +59,3 @@ För att undvika säkerhetsrisker har fältet för bind-lösenord i den exporter
 
 1. Om du vill importera den uppdaterade filen klickar du i Användarhantering på Konfiguration > Importera och exportera konfigurationsfiler.
 1. Klicka på Bläddra för att hitta filen, klicka på Importera och sedan på OK.
-

@@ -1,31 +1,34 @@
 ---
 title: Textbunden formatering av adaptiva formulärkomponenter
-seo-title: Inline CSS-egenskaper för adaptiva formulärkomponenter
+seo-title: Inline CSS properties for adaptive form components
 description: Du kan använda anpassade format på ett anpassat formulär, men du kan också använda infogade CSS-egenskaper på enskilda komponenter i ett anpassat formulär.
-seo-description: Du kan använda anpassade format på ett anpassat formulär, men du kan också använda infogade CSS-egenskaper på enskilda komponenter i ett anpassat formulär.
+seo-description: While you can apply custom styles on an adaptive form, you can also apply inline CSS properties on individual components of an adaptive form.
 uuid: ab948f02-3b41-4304-955b-6dd51d27088e
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 91a41bc1-3fa3-4467-b3f8-5570ba7757c0
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 8e7ba9d2-207f-419b-bcd5-74ba9b14ab92
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 1%
+source-wordcount: '562'
+ht-degree: 0%
 
 ---
 
-
 # Textbunden formatering av adaptiva formulärkomponenter {#inline-styling-of-adaptive-form-components}
 
-Du kan definiera det övergripande utseendet och formatet för ett anpassat formulär genom att ange format med [temaredigeraren](/help/forms/using/themes.md). Du kan också använda infogade CSS-format på enskilda adaptiva formulärkomponenter och förhandsgranska ändringarna direkt. Inline-format åsidosätter format som finns i temat.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-## Använd infogade CSS-egenskaper {#apply-inline-css-properties}
+Du kan definiera det övergripande utseendet och formatet för ett anpassat formulär genom att ange format med [temaredigerare](/help/forms/using/themes.md). Du kan också använda infogade CSS-format på enskilda adaptiva formulärkomponenter och förhandsgranska ändringarna direkt. Inline-format åsidosätter format som finns i temat.
+
+## Använda infogade CSS-egenskaper {#apply-inline-css-properties}
 
 Så här lägger du till infogade format i en komponent:
 
-1. Öppna formuläret i formulärredigeraren och ändra läget till formateringsläge. Om du vill ändra läge till formateringsläge trycker du på ![arbetsytelistrutan](assets/canvas-drop-down.png) > **Format** i sidverktygsfältet.
+1. Öppna formuläret i formulärredigeraren och ändra läget till formateringsläge. Om du vill ändra läge till formateringsläge trycker du på ![canvas-drop-down](assets/canvas-drop-down.png) > **Stil**.
 1. Markera en komponent på sidan och tryck på redigeringsknappen ![edit-button](assets/edit-button.png). Stilegenskaper öppnas i sidofältet.
 
    Du kan också välja komponenter från formulärhierarkiträdet i sidlisten. Formulärhierarkiträdet är tillgängligt som formulärobjekt i sidlisten.
@@ -44,7 +47,7 @@ Så här lägger du till infogade format i en komponent:
    * Avancerat (Gör att du kan skriva anpassad CSS för komponenten)
 
 1. På samma sätt kan du använda format för andra delar av en komponent, till exempel widget, bildtext och Hjälp.
-1. Tryck på **Klar** för att bekräfta ändringarna eller **Avbryt** för att ignorera ändringarna.
+1. Tryck **Klar** för att bekräfta ändringarna eller **Avbryt** för att ignorera ändringarna.
 
 ## Exempel: infogade format för en fältkomponent {#example-inline-styles-for-a-field-component}
 
@@ -91,18 +94,17 @@ Lägg märke till ändringen i textrutans format, så som visas i följande bild
   <tr> 
    <td><p>Lång beskrivning</p> </td> 
    <td><p>textjustering</p> </td> 
-   <td><p>mitten</p> </td> 
+   <td><p>centrera</p> </td> 
    <td><p>Justerar den långa beskrivningen för att få hjälp att centrera</p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-![Textruteformat efter att en textbunden formatering har ](assets/applied-style.png)
-**använtsBild:** *Textrutekomponent efter att du har använt egenskaper för textbundna format*
+![Textrutans format efter infogad formatering](assets/applied-style.png)
+**Bild:** *Textrutekomponent efter användning av egenskaper för infogat format*
 
 Följ stegen ovan för att markera och formatera andra komponenter, till exempel paneler, skicka-knappar och alternativknappar.
 
 >[!NOTE]
 >
 >Stilegenskaperna varierar beroende på vilken komponent du väljer.
-

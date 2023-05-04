@@ -6,14 +6,18 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 exl-id: 2da4c0b3-119e-436e-9f03-f794283e9a37
-source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '787'
 ht-degree: 1%
 
 ---
 
 # Vanliga frågor om leverans av innehåll med HTTP2{#http-delivery-of-content-faq}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Adobe är glada över att kunna meddela att HTTP/2-leverans av innehåll är tillgänglig. När du använder HTTP/2 kommer du att märka en generell prestandaökning.
 
@@ -44,26 +48,26 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
 
 * Använd säker HTTPS för multimedieförfrågningar.
 * Använd det Adobe-paketerade CDN (content delivery network) som en del av din Dynamic Media Classic-licens.
-* Använd en dedikerad domän (d.v.s. `images.company.com` eller `mycompany.scene7.com`), inte en generisk Dynamic Media Classic-domän (d.v.s. `s7d1.scene7.com`, `s7d2.scene7.com` eller `s7d13.scene7.com`).
+* Använd en dedikerad domän (d.v.s. `images.company.com` eller `mycompany.scene7.com`), inte en allmän Dynamic Media Classic-domän (det vill säga `s7d1.scene7.com`, `s7d2.scene7.com`, eller `s7d13.scene7.com`).
 
-   Om du vill hitta dina domäner loggar du in på ditt konto med [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app). Tryck sedan på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet **Publicerat servernamn**. Om du för närvarande använder en allmän Dynamic Media-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
+   Logga in på ditt konto via [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app). Tryck sedan **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet med etiketten **Namn på publicerad server**. Om du för närvarande använder en allmän Dynamic Media-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
 
 ## Hur aktiverar jag HTTP/2 för mitt Dynamic Media Classic-konto? {#what-is-the-process-for-enabling-http-for-my-scene-account}
 
-1. Du måste [använda Admin Console för att skapa ett supportärende](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) och en begäran om att växla över till HTTP/2; det görs inte automatiskt åt dig.
+1. Du måste [använd Admin Console för att skapa ett supportärende](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) och begära att få gå över till HTTP/2, det görs inte automatiskt åt dig.
 1. Ange följande information i ditt supportärende:
 
    * Primärt kontaktnamn, e-postadress och telefonnummer.
-   * Alla domäner som ska överföras till HTTP2. Det vill säga `images.company.com` eller `mycompany.scene7.com`.
+   * Alla domäner som ska överföras till HTTP2. Det vill säga, `images.company.com` eller `mycompany.scene7.com`.
 
-      Om du vill hitta dina domäner loggar du in på ditt konto med [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app). Tryck sedan på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet **[!UICONTROL Published Server Name.]**
-   Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet **[!UICONTROL Published Server Name]**.
+      Logga in på ditt konto via [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app). Tryck sedan **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet med etiketten **[!UICONTROL Published Server Name.]**
+   Klicka på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet med etiketten **[!UICONTROL Published Server Name]**.
 
    * Verifiera att du använder säkra HTTPS för multimedieförfrågningar.
    * Kontrollera att du använder CDN via Adobe och inte hanteras med en direkt relation.
-   * Kontrollera att du använder en dedikerad domän. Det vill säga `images.company.com` eller `mycompany.scene7.com` är inte en allmän Dynamic Media-domän som `s7d1.scene7.com`, `s7d2.scene7.com`, `s7d13.scene7.com`.
+   * Kontrollera att du använder en dedikerad domän. Det vill säga, `images.company.com` eller `mycompany.scene7.com`, inte en allmän Dynamic Media-domän som `s7d1.scene7.com`, `s7d2.scene7.com`, `s7d13.scene7.com`.
 
-      Om du vill hitta dina domäner loggar du in på ditt konto med [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app). Tryck sedan på **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet **[!UICONTROL Published Server Name.]** Om du använder en allmän Dynamic Media-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
+      Logga in på ditt konto via [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app). Tryck sedan **[!UICONTROL Setup > Application Setup > General Settings]**. Leta efter fältet med etiketten **[!UICONTROL Published Server Name.]** Om du för närvarande använder en allmän Dynamic Media-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
    1. Teknisk support lägger till dig i HTTP/2-väntelistan baserat på i vilken ordning förfrågningarna skickades.
    1. När Adobe är redo att hantera din begäran kontaktar supporten dig för att koordinera övergången och ange ett måldatum.
    1. Du får ett meddelande när du är klar och du kan verifiera en lyckad övergång till HTTP2.
@@ -86,4 +90,4 @@ Det icke-cachelagrade innehållet träffar direkt på Adobe-servrar tills cachen
 
 ## Hur kan du verifiera om en URL eller webbplats är aktiverad med HTTP/2? {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 
-Du måste ladda ned en extern version för att kunna använda den i webbläsaren. För Firefox och Chrome finns tillägget **[!UICONTROL HTTP/2 and SPDY Indicator]**. Webbläsare stöder bara säkert HTTP/2, så det är nödvändigt att anropa en URL med HTTPS för att verifiera. Om HTTP/2 stöds anges detta av tillägget i form av en blå Flash-symbol och rubriken&quot;X-Firefox-Spdy&quot;: &quot;h2&quot;.
+Du måste ladda ned en extern version för att kunna använda den i webbläsaren. För Firefox och Chrome finns ett tillägg som heter **[!UICONTROL HTTP/2 and SPDY Indicator]**. Webbläsare stöder bara säkert HTTP/2, så det är nödvändigt att anropa en URL med HTTPS för att verifiera. Om HTTP/2 stöds anges detta av tillägget i form av en blå Flash-symbol och rubriken&quot;X-Firefox-Spdy&quot;: &quot;h2&quot;.

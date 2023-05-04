@@ -10,14 +10,18 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 exl-id: 407db3cf-8add-486b-8cf5-daeecc18bf30
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2142'
+source-wordcount: '2178'
 ht-degree: 0%
 
 ---
 
 # Filer som ska säkerhetskopieras och återställas {#files-to-back-up-and-recover}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 De program- och datafiler som måste säkerhetskopieras beskrivs mer ingående i följande avsnitt.
 
@@ -29,7 +33,7 @@ Tänk på följande när det gäller säkerhetskopiering och återställning:
 
 ## Katalog för global dokumentlagring {#global-document-storage-directory}
 
-GDS är en katalog som används för att lagra långlivade filer som används i en process. Långvariga filer är avsedda att spänna över en eller flera starter av ett AEM och kan sträcka sig över flera dagar och till och med år. Dessa långa filer kan innehålla PDF-filer, profiler och formulärmallar. Långvariga filer är en viktig del av det övergripande tillståndet för många AEM. Om vissa eller alla långlivade dokument förloras eller skadas kan formulärservern bli instabil.
+GDS är en katalog som används för att lagra långlivade filer som används i en process. Långvariga filer är avsedda att spänna över en eller flera starter av ett AEM och kan sträcka sig över flera dagar och till och med år. Dessa långvariga filer kan innehålla PDF, policyer och formulärmallar. Långvariga filer är en viktig del av det övergripande tillståndet för många AEM. Om vissa eller alla långlivade dokument förloras eller skadas kan formulärservern bli instabil.
 
 Indatadokument för asynkrona jobbanrop lagras också i GDS och måste vara tillgängliga för bearbetning av begäranden. Därför är det viktigt att du ser tillförlitligheten i det filsystem som är värd för GDS och använder en redundant uppsättning av oberoende diskar (RAID) eller annan teknik som passar för dina krav på kvalitet och servicenivå.
 
@@ -50,7 +54,7 @@ Om du har ändrat GDS-platsen till en annan plats än standardplatsen kan du bes
 
 I en klustrad miljö pekar GDS vanligtvis på en katalog som delas i nätverket och som kan läsas/skrivas för varje klusternod.
 
-GDS-platserna kan ändras under en återställning om den ursprungliga platsen inte längre är tillgänglig. (Se [Ändra GDS-plats under återställning](/help/forms/using/admin-help/recovering-aem-forms-data.md#changing-the-gds-location-during-recovery).)
+GDS-platserna kan ändras under en återställning om den ursprungliga platsen inte längre är tillgänglig. (Se [Ändra GDS-platsen under återställning](/help/forms/using/admin-help/recovering-aem-forms-data.md#changing-the-gds-location-during-recovery).)
 
 ### Alternativ för säkerhetskopiering när databasen används för dokumentlagring {#backup-options-when-database-is-used-for-document-storage}
 
@@ -80,7 +84,7 @@ AEM Forms Workspace matchar funktionerna i (Borttaget för AEM på JEE) Flex Wor
 >
 >Flex Workspace är föråldrat för AEM formulärreleaser.
 
-Det möjliggör uppgiftshantering på klienter utan Flash Player och Adobe Reader. Det underlättar återgivning av HTML Forms, förutom PDF forms- och Flex-formulär.
+Det möjliggör uppgiftshantering på klienter utan Flash Player och Adobe Reader. Det underlättar återgivning av HTML Forms, förutom PDF forms och Flex-formulär.
 
 ## AEM {#aem-forms-database}
 
@@ -105,21 +109,21 @@ Konfigurera din DB2-databas så att den körs i arkivloggningsläge.
 IBM har en uppsättning verktyg och hjälpsystem som hjälper databasadministratörer att hantera säkerhetskopierings- och återställningsuppgifter:
 
 * IBM DB2 Archive Log Accelerator
-* IBM DB2 Data Archive Expert (See [IBM DB2 Data Archive Expert User&#39;s Guide and Reference](https://publib.boulder.ibm.com/infocenter/mptoolic/v1r0/topic/com.ibm.db2tools.aeu.doc.ug/ahxugb13.pdf?noframes=true).)
+* IBM DB2 Data Archive Expert (se [IBM DB2 Data Archive Expert User&#39;s Guide and Reference](https://publib.boulder.ibm.com/infocenter/mptoolic/v1r0/topic/com.ibm.db2tools.aeu.doc.ug/ahxugb13.pdf?noframes=true).)
 
 DB2 har inbyggda funktioner för att säkerhetskopiera en databas till Tivoli Storage Manager. Genom att använda Tivoli Storage Manager kan DB2-säkerhetskopior lagras på andra medier eller på den lokala hårddisken.
 
-Mer information om säkerhetskopiering och återställning av DB2-databaser finns i [Utveckla en säkerhetskopierings- och återställningsstrategi för DB2](https://publib.boulder.ibm.com/infocenter/db2luw/v9/index.jsp?topic=/com.ibm.db2.udb.admin.doc/doc/c0005945.htm).
+Mer information om säkerhetskopiering och återställning av DB2-databaser finns i [Utveckla en strategi för säkerhetskopiering och återställning för DB2](https://publib.boulder.ibm.com/infocenter/db2luw/v9/index.jsp?topic=/com.ibm.db2.udb.admin.doc/doc/c0005945.htm).
 
 ### Oracle {#oracle}
 
-Använd säkerhetskopiering av ögonblicksbilder eller konfigurera Oraclets databas så att den körs i arkivloggläge. (Se [Säkerhetskopiering av Oracle: En introduktion](https://www.databasedesign-resource.com/oracle-backup.md).) Mer information om hur du säkerhetskopierar och återställer Oraclet finns på följande platser:
+Använd säkerhetskopiering av ögonblicksbilder eller konfigurera Oraclets databas så att den körs i arkivloggläge. (Se [Säkerhetskopiering av oracle: En introduktion](https://www.databasedesign-resource.com/oracle-backup.md).) Mer information om hur du säkerhetskopierar och återställer Oraclet finns på följande platser:
 
-[Säkerhetskopiering och återställning av oracle: ](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html) Beskriver koncept för säkerhetskopiering och återställning och de vanligaste teknikerna för att använda Recovery Manager (RMAN) för säkerhetskopiering, återställning och rapportering mer i detalj, samt ger mer information om hur du planerar en strategi för säkerhetskopiering och återställning.
+[Säkerhetskopiering och återställning av oracle:](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html) Beskriver koncepten för säkerhetskopiering och återställning och de vanligaste teknikerna för användning av Recovery Manager (RMAN) för säkerhetskopiering, återställning och rapportering, samt ger mer information om hur du planerar en strategi för säkerhetskopiering och återställning.
 
-[Användarhandbok för säkerhetskopiering och återställning av Oracle-databas:](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10642.pdf) Innehåller detaljerad information om RMAN-arkitektur, koncept och mekanismer för säkerhetskopiering och återställning, avancerade återställningstekniker som återställning och flashback-funktioner vid tidpunkt samt prestandajustering för säkerhetskopiering och återställning. Det omfattar även användarhanterad säkerhetskopiering och återställning med användarens operativsystem istället för RMAN. Den här volymen är väsentlig för säkerhetskopiering och återställning av mer avancerade databasdistributioner och för avancerade återställningsscenarier.
+[Användarhandbok för säkerhetskopiering och återställning av Oracle-databas:](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10642.pdf) Innehåller detaljerad information om RMAN-arkitektur, koncept och mekanismer för säkerhetskopiering och återställning, avancerade återställningstekniker som återställning vid tidpunkt och funktioner för databasflashback samt prestandajustering för säkerhetskopiering och återställning. Det omfattar även användarhanterad säkerhetskopiering och återställning med användarens operativsystem istället för RMAN. Den här volymen är väsentlig för säkerhetskopiering och återställning av mer avancerade databasdistributioner och för avancerade återställningsscenarier.
 
-[Oraclena referens för säkerhetskopiering och återställning av databas:](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10643.pdf) Innehåller fullständig information om syntax och semantik för alla RMAN-kommandon och beskriver de databasvyer som är tillgängliga för rapportering av säkerhetskopierings- och återställningsaktiviteter.
+[Referens för säkerhetskopiering och återställning av Oracle-databas:](https://download.oracle.com/docs/cd/E11882_01/backup.112/e10643.pdf) Innehåller fullständig information om syntax och semantik för alla RMAN-kommandon och beskriver de databasvyer som är tillgängliga för rapportering av säkerhetskopierings- och återställningsaktiviteter.
 
 ### SQL Server {#sql-server}
 
@@ -130,7 +134,7 @@ SQL Server har även två verktyg för säkerhetskopiering och återställning:
 * SQL Server Management Studio (GUI)
 * T-SQL (kommandorad)
 
-Mer information finns i [Säkerhetskopiera och återställ](https://msdn.microsoft.com/en-us/library/ms187048(v=SQL.90).aspx).
+Mer information finns i [Säkerhetskopiering och återställning](https://msdn.microsoft.com/en-us/library/ms187048(v=SQL.90).aspx).
 
 ### MySQL {#mysql}
 
@@ -142,9 +146,9 @@ Använd MySQLAdmin eller ändra INI-filerna i Windows för att konfigurera MySQL
 >
 >`binlog_format=mixed log-bin=logname`
 
-Du kan använda verktyget mysqldump för att få en fullständig säkerhetskopiering av databasen. Fullständig säkerhetskopiering krävs, men är inte alltid lämplig. De producerar stora säkerhetskopior och tar tid att generera. Om du vill göra en stegvis säkerhetskopiering måste du starta servern med alternativet - `log-bin` enligt beskrivningen i föregående avsnitt. Varje gång MySQL-servern startas om slutar den skriva till den aktuella binära loggen, skapar en ny och från och med då blir den nya den aktuella. Du kan tvinga en växel manuellt med kommandot `FLUSH LOGS SQL`. Efter den första fullständiga säkerhetskopieringen utförs efterföljande stegvisa säkerhetskopieringar med hjälp av verktyget mysqladmin med kommandot `flush-logs`, som skapar nästa loggfil.
+Du kan använda verktyget mysqldump för att få en fullständig säkerhetskopiering av databasen. Fullständig säkerhetskopiering krävs, men är inte alltid lämplig. De producerar stora säkerhetskopior och tar tid att generera. Om du vill göra en stegvis säkerhetskopiering måste du starta servern med kommandot - `log-bin` enligt beskrivningen i föregående avsnitt. Varje gång MySQL-servern startas om slutar den skriva till den aktuella binära loggen, skapar en ny och från och med då blir den nya den aktuella. Du kan tvinga en brytare manuellt med `FLUSH LOGS SQL` -kommando. Efter den första fullständiga säkerhetskopieringen utförs efterföljande stegvisa säkerhetskopieringar med verktyget mysqladmin med `flush-logs` som skapar nästa loggfil.
 
-Se [Sammanfattning av säkerhetskopieringsstrategi](https://dev.mysql.com/doc/refman/5.5/en/backup-strategy-summary.html).
+Se [Sammanfattning av säkerhetsstrategi](https://dev.mysql.com/doc/refman/5.5/en/backup-strategy-summary.html).
 
 ```as3
 binlog_format=mixed 
@@ -181,7 +185,7 @@ När du installerar innehållstjänster (borttagna) i en klustrad miljö delas r
 
 **Indexrotkatalog:** En katalog som skapas på varje nod i klustret och som alltid har samma sökväg och katalognamn
 
-Standardplatsen för rotkatalogen för innehållslagring är *[GDS-rot]*/lccs_data, där *[GDS-rot]* är den plats som beskrivs i [GDS-plats](files-back-recover.md#gds-location). Säkerhetskopiera följande kataloger i rotkatalogen för innehållslagring:
+Standardplatsen för rotkatalogen för innehållslagring är *[GDS-rot]*/lccs_data, där *[GDS-rot]* är platsen som beskrivs i [GDS-plats](files-back-recover.md#gds-location). Säkerhetskopiera följande kataloger i rotkatalogen för innehållslagring:
 
 /audit.contentstore
 
@@ -201,6 +205,6 @@ Om du har installerat ytterligare teckensnitt i din AEM formulärmiljö måste d
 
 >[!NOTE]
 >
->Som standard finns de Adobe-teckensnitt som installeras med AEM formulär i katalogen [aem-forms root]/fonts.
+>Som standard finns de Adobe-teckensnitt som installeras med AEM i [aem-forms root]/teckensnittskatalog.
 
 Om du initierar om operativsystemet på värddatorn och vill använda teckensnitt från det tidigare operativsystemet, bör innehållet i systemteckensnittskatalogen också säkerhetskopieras. (Mer information finns i dokumentationen för ditt operativsystem).

@@ -1,22 +1,25 @@
 ---
-title: Konfigurera Microsoft Dynamics 365 för arbetsflödet för bostadslån på referensplatsen Web.Finance
-seo-title: Konfigurera Microsoft Dynamics 365 för arbetsflödet för bostadslån på referensplatsen Web.Finance
+title: Konfigurera Microsoft Dynamics 365 för arbetsflödet för inteckning i hemmet på referenswebbplatsen för We.Finance
+seo-title: Configure Microsoft Dynamics 365 for the home mortgage workflow of the We.Finance reference site
 description: Lär dig hur du kan utnyttja Microsoft® Dynamics 365-tjänsterna med hjälp av adaptiva formulär för heminteckningsarbetsflödet på webbplatsen Web.Finance Reference
-seo-description: Lär dig hur du kan utnyttja Microsoft® Dynamics 365-tjänsterna med hjälp av adaptiva formulär för heminteckningsarbetsflödet på webbplatsen Web.Finance Reference
+seo-description: Learn how to leverage the Microsoft® Dynamics 365 services through adaptive forms for the home mortgage workflow of the We.Finance Reference site
 uuid: a0656d90-84c7-46d1-9a16-dadcc19ff9ef
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: develop, Configuration
 discoiquuid: 6b31397a-fb06-4043-9368-59fb4fce8afa
-translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+exl-id: 7e1f417e-6a6b-4ef2-a453-866331fe3e96
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
 
+# Konfigurera Microsoft Dynamics 365 för arbetsflödet för inteckning i hemmet på referenswebbplatsen för We.Finance {#configure-microsoft-dynamics-for-the-home-mortgage-workflow-of-the-we-finance-reference-site}
 
-# Konfigurera Microsoft Dynamics 365 för arbetsflödet för bostadslån på referensplatsen Web.Finance {#configure-microsoft-dynamics-for-the-home-mortgage-workflow-of-the-we-finance-reference-site}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Lär dig hur du kan utnyttja Microsoft® Dynamics 365-tjänsterna med hjälp av adaptiva formulär för heminteckningsarbetsflödet på webbplatsen Web.Finance Reference
 
@@ -24,7 +27,7 @@ Lär dig hur du kan utnyttja Microsoft® Dynamics 365-tjänsterna med hjälp av 
 
 Microsoft® Dynamics 365 är en CRM- och ERP-programvara (Customer Relationship Management) som innehåller företagslösningar för att skapa och hantera kundkonton, kontakter, leads, möjligheter och ärenden.
 
-AEM Forms tillhandahåller en molntjänst för integrering av Dynamics 365 med modulen [Forms Data Integration](/help/forms/using/data-integration.md). Scenariot [Home Mortgage som genomsöks med Microsoft® Dynamics](/help/forms/using/finance-reference-site-walkthrough.md#home-mortgage-application-walkthrough-with-microsoft-dynamics) visar hur en kund använder referensplatsen We.Finance för att ansöka om ett lån när webbplatsen använder Microsoft® Dynamics för Forms Data Integration. Innan du kan använda genomgången av Home Mortgage-programmet med Microsoft® Dynamics-scenariot måste du konfigurera Microsoft® Dynamics 365 så att det används med referenswebbplatsen We.Finance.
+AEM Forms tillhandahåller en molntjänst för integrering av Dynamics 365 med [Forms dataintegrering](/help/forms/using/data-integration.md) -modul. Scenariot [Programgenomgång av Home Mortgage med Microsoft® Dynamics](/help/forms/using/finance-reference-site-walkthrough.md#home-mortgage-application-walkthrough-with-microsoft-dynamics) visar hur en kund använder referenswebbplatsen We.Finance för att ansöka om ett lån när webbplatsen använder Microsoft® Dynamics för Forms dataintegrering. Innan du kan använda genomgången av Home Mortgage-programmet med Microsoft® Dynamics-scenariot måste du konfigurera Microsoft® Dynamics 365 så att det används med referenswebbplatsen We.Finance.
 
 ## Förutsättningar {#prerequisites}
 
@@ -37,7 +40,7 @@ Innan du börjar konfigurera och konfigurera Dynamics 365 måste du se till att 
 * Registrerat program för tjänsten Dynamics 365 med Microsoft® Azure Active Directory
 * Klient-ID och klienthemlighet för det registrerade programmet
 
-## Länka startberäkningen till webbplatsens startsida {#link-the-home-mortgage-calculator-with-your-site-home-page}
+## Länka inteckningsberäkningen till webbplatsens startsida {#link-the-home-mortgage-calculator-with-your-site-home-page}
 
 1. Gå till följande sida på författarinstansen:
 
@@ -48,13 +51,13 @@ Innan du börjar konfigurera och konfigurera Dynamics 365 måste du se till att 
 
    ![kalkylatorconfigurepanel](assets/calculatorconfigurepanel.png)
 
-1. I dialogrutan Redigera AEM Forms-behållare bläddrar du till resurssökvägen och väljer home-hypotekskalator på följande sökväg och trycker på **Bekräfta**:
+1. I dialogrutan Redigera AEM Forms-behållare bläddrar du till resurssökvägen och väljer en beräkning av bolån på följande väg och trycker **Bekräfta**:
 
    formsanddocuments/We.Finance/MS Dynamics/
 
    ![selectassetpath](assets/selectassetpath.png)
 
-1. Tryck på **Klar**.
+1. Tryck **Klar**.
 1. Publicera den redigerade sidan.
 
    >[!NOTE]
@@ -67,7 +70,7 @@ Innan du börjar konfigurera och konfigurera Dynamics 365 måste du se till att 
 
       `https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip`
 
-   1. Importera lösningspaketet till Microsoft® Dynamics-instansen. I din Microsoft® Dynamics-instans går du till **Inställningar** > **Lösningar** och trycker sedan på **Importera**.
+   1. Importera lösningspaketet till instansen av Microsoft® Dynamics. I din Microsoft® Dynamics-instans går du till **Inställningar** > **Lösningar** och sedan trycka **Importera**.
 
 1. Om du vill ställa in kontaktinformation för användare som används i refsite importerar du Sarah Rose Contact.CSV-paketet till din Microsoft® Dynamics-instans:
 
@@ -75,5 +78,4 @@ Innan du börjar konfigurera och konfigurera Dynamics 365 måste du se till att 
 
       `https://[server]:[port]/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv`
 
-   1. Importera paketet till din Microsoft® Dynamics-instans. I din Microsoft® Dynamics-instans går du till **Sales** > **Contacts** och trycker sedan på **Import Data**.
-
+   1. Importera paketet till din Microsoft® Dynamics-instans. I din Microsoft® Dynamics-instans går du till **Försäljning** > **Kontakter** och sedan trycka **Importera data**.

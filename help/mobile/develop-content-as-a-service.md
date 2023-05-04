@@ -1,23 +1,26 @@
 ---
 title: Innehållsleverans
-seo-title: Innehållsleverans
+seo-title: Content Delivery
 description: Innehållsleverans
-seo-description: 'null'
+seo-description: null
 uuid: 1e7bea34-ca50-41ed-8295-fa182c27fa69
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 discoiquuid: 3d65cc6b-5721-472f-a805-588d50f3571b
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 16fa0371-6bf5-449a-872a-914840640efa
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '1004'
 ht-degree: 0%
 
 ---
 
-
 # Innehållsleverans{#content-delivery}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
@@ -29,7 +32,7 @@ Detta inkluderar användning av resurser, webbplatsinnehåll, CAAS-innehåll (ov
 
 >[!NOTE]
 >
->**Över-the-Air** Contentkan komma från någon av ovanstående hanterare via ContentSync. Den kan användas för att batchpaketera och leverera via zip-enheter samt för att underhålla uppdateringar för dessa paket.
+>**Innehåll som är över allt** kan komma från något av ovanstående via ContentSync-hanterare. Den kan användas för att batchpaketera och leverera via zip-enheter samt för att underhålla uppdateringar för dessa paket.
 
 Det finns tre huvudtyper av material som Content Services levererar:
 
@@ -48,13 +51,13 @@ En resurssamling kan visas via innehållstjänster. När en resurssamling anropa
 * En sidenhet returnerar JSON (sidobjekt) som innehåller en bildreferens. Bildreferensen är en URL som används för att hämta resursens binärfil för bilden.
 * En begäran om en lista med resurser i en mapp returnerar JSON med information om alla enheter i den mappen. Listan är ett objekt. JSON har URL-referenser som används för att hämta resursens binärfil för varje resurs i den mappen.
 
-### Resursoptimering {#asset-optimization}
+### Optimering av tillgångar {#asset-optimization}
 
 Ett viktigt värde för Content Services är möjligheten att returnera resurser som är optimerade för enheten. Detta minskar behovet av lagring på lokala enheter och förbättrar appprestanda.
 
 Tillgångsoptimering är en funktion på serversidan som baseras på information som anges i API-begäran. Där det är möjligt bör resursåtergivningarna cachelagras så att liknande förfrågningar inte kräver en ny generering av resursåtergivningen.
 
-### Resurser, arbetsflöde {#assets-workflow}
+### Arbetsflöde för resurser {#assets-workflow}
 
 Resursarbetsflödet är följande:
 
@@ -65,7 +68,7 @@ Resursarbetsflödet är följande:
    1. Välj tillgång eller resursinsamling
    1. Anpassa JSON-återgivning
 
-I följande diagram visas **resursreferensarbetsflödet**:
+I följande diagram visas **Referensarbetsflöde för resurser**:
 
 ![chlimage_1-155](assets/chlimage_1-155.png)
 
@@ -73,7 +76,7 @@ I följande diagram visas **resursreferensarbetsflödet**:
 
 Content Services ger åtkomst till AEM hanterade resurser som inte kan refereras via annat AEM.
 
-#### Befintliga hanterade resurser {#existing-managed-assets}
+#### Befintliga hanterade tillgångar {#existing-managed-assets}
 
 En befintlig AEM Sites- och Assets-användare använder AEM Assets för att hantera allt digitalt material för alla kanaler. De utvecklar en intern mobilapp och behöver använda flera resurser som hanteras av AEM Assets. Till exempel logotyper, bakgrundsbilder, knappikoner osv.
 
@@ -95,7 +98,7 @@ Låt oss bortse från stegen i hur sidan görs tillgänglig via API:t för tillf
 * /content/entities/appImages/icons/cart
 * /content/entities/appImages/icons/home
 
-#### Hämtar en lista över tillgängliga resursenheter {#getting-a-list-of-available-asset-entities}
+#### Hämta en lista med tillgängliga resursenheter {#getting-a-list-of-available-asset-entities}
 
 En apputvecklare kan få en lista över vilka resurser som är tillgängliga genom att hämta resursenheter. Slutpunkten för Content Services space kan tillhandahålla den informationen via webbtjänstens API SDK.
 
@@ -113,12 +116,12 @@ Klientbiblioteket används en gång till för att hämta binärfilen för kundva
 
 HTML-innehåll behövs för kunder som behöver ha innehållets layout. Detta är användbart för inbyggda program som använder en webbbehållare, till exempel en Cordova-webbvy, för att visa innehållet.
 
-AEM Content Services kommer att kunna tillhandahålla HTML-innehåll till mobilappen via API:t. Kunder som vill visa AEM innehåll som HTML skapar en HTML-sidenhet som pekar på AEM innehållskälla.
+AEM Content Services kommer att kunna tillhandahålla HTML-innehåll till mobilappen via API:t. Kunder som vill visa AEM innehåll som HTML skapar en HTML-sidenhet som pekar mot AEM innehållskälla.
 
 Följande alternativ beaktas:
 
-* **Zip-fil:** För att få bästa möjliga visning på enheten, är det allt som sidan refererar till - css, JavaScript, resurser osv. - kommer att inkluderas i en enda komprimerad fil med svaret. Referenserna på HTML-sidan justeras till att använda en relativ sökväg till dessa filer.
-* **Direktuppspelning:** Hämta ett manifest med de filer som krävs från AEM. Använd sedan det manifestet för att begära alla filer (HTML, CSS, JS, osv.) med efterföljande förfrågningar.
+* **Zip-fil:** För att få den bästa möjligheten att visas korrekt på enheten har du tillgång till allt material som refereras till på sidan - css, JavaScript, resurser osv. - kommer att inkluderas i en enda komprimerad fil med svaret. Referenserna på HTML-sidan justeras så att en relativ sökväg till dessa filer används.
+* **Direktuppspelning:** Hämtar ett manifest med nödvändiga filer från AEM. Använd sedan det manifestet för att begära alla filer (HTML, CSS, JS osv.) med efterföljande förfrågningar.
 
 ![chlimage_1-157](assets/chlimage_1-157.png)
 
@@ -145,4 +148,3 @@ Innehåll kan komma åt appen på flera sätt.
    * Körklara standardåtergivningsprogram
    * AEM Mobile/Content Services Content Renderers
    * Anpassade återgivningar
-

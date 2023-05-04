@@ -8,20 +8,24 @@ topic-tags: managing-assets
 exl-id: b11b19c1-712d-4698-aefc-930ff8cacbc1
 feature: Dynamic Media Classic
 role: User
-source-git-commit: 50b657456d2a0eaaaf681d3902eba38b15d00e12
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2689'
+source-wordcount: '2725'
 ht-degree: 1%
 
 ---
 
 # Lägga till Dynamic Media Classic-komponenter på sidor {#adding-scene-features-to-your-page}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 Adobe Dynamic Media Classic är en värdbaserad lösning för att hantera, förbättra, publicera och leverera mediefiler för webben, mobiler, e-post och internetanslutna displayer samt tryck.
 
 Du kan visa AEM resurser som publicerats i Dynamic Media Classic i olika visningsprogram:
 
-* Zoomning
+* Zooma
 * Utfällbar
 * Video
 * Bildmall
@@ -55,7 +59,7 @@ Du kan publicera digitala resurser till Dynamic Media Classic på följande sät
 
 Följande Dynamic Media Classic-komponenter finns i AEM:
 
-* Zoomning
+* Zooma
 * Utfällbar (zoom)
 * Bildmall
 * Bild
@@ -137,7 +141,7 @@ Du anger dessa konfigurationsalternativ genom att öppna (dubbelklicka) en Dynam
 
 ![chlimage_1-226](assets/chlimage_1-226.png)
 
-### Zoomning {#zoom}
+### Zooma {#zoom}
 
 Zoomkomponenten för HTML5 visar en större bild när du trycker på **[!UICONTROL +]** -knappen.
 
@@ -297,7 +301,6 @@ Bläddra bland Dynamic Media Classic-resurser genom att välja **[!UICONTROL Dyn
 >
 >* Dynamic Media Classic innehållsläsare läser in cirka 100 resurser och sorterar dem efter namn.
 >* Om du har en säker förhandsgranskningsserver angiven använder webbläsaren den förhandsvisningsservern för att återge miniatyrer och resurser.
-
 >
 
 
@@ -353,7 +356,6 @@ I Dynamic Media Classic webbläsare kan du filtrera resultaten så att de inneh�
 >
 >* När du söker efter video söker du efter en enskild återgivning. Resultatet returnerar den ursprungliga återgivningen (endast &amp;ast;.mp4) och den kodade återgivningen.
 >* När du söker i en adaptiv videouppsättning söker du i mappen och i alla undermappar, men bara om du har lagt till ett nyckelord i sökningen. Om du inte har lagt till något nyckelord söker AEM inte igenom undermapparna.
-
 >
 
 

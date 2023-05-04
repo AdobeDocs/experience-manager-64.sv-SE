@@ -1,24 +1,27 @@
 ---
 title: Komponentsidladdning
-seo-title: Komponentsidladdning
+seo-title: Component Sideloading
 description: Webbgruppskomponentsideloading är användbart när en webbsida är utformad som en enkel enkelsidig app som dynamiskt ändrar vad som visas beroende på vad som valts av webbplatsbesökaren
-seo-description: Webbgruppskomponentsideloading är användbart när en webbsida är utformad som en enkel enkelsidig app som dynamiskt ändrar vad som visas beroende på vad som valts av webbplatsbesökaren
+seo-description: Communities component sideloading is useful when a web page is designed as a simple, single page app that dynamically alters what is displayed depending on what is selected by the site visitor
 uuid: 8c9a5fde-26a3-4610-bc14-f8b665059015
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: a9cb5294-e5ab-445b-b7c2-ffeecda91c50
-translation-type: tm+mt
-source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+exl-id: 12fdc503-29b6-4970-a883-c22162f7a9eb
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
 
-
 # Komponentsidladdning {#component-sideloading}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Översikt {#overview}
 
@@ -34,7 +37,7 @@ Stegen för att lägga till SCF-komponenter dynamiskt är:
 
 1. [Lägg till komponenten i DOM](#dynamically-add-component-to-dom)
 
-1. [Läs in ](#sideload-by-invoking-scf) komponenten separat med en av två metoder:
+1. [Läs in komponenten separat](#sideload-by-invoking-scf) med någon av två metoder:
 
 * [Dynamisk inkludering](#dynamic-inclusion)
    * Boostrap alla dynamiskt tillagda komponenter
@@ -53,11 +56,11 @@ När du lägger till SCF-komponenten är den vanligaste taggen DIV-taggen, men �
 
 Oavsett vilken tagg som används måste elementet åtminstone överensstämma med det vanliga SCF-rotelementmönstret genom att innehålla dessa två attribut:
 
-* **data-component-**
-idDen effektiva sökvägen till den tillagda komponenten
+* **data-component-id**
+Den effektiva sökvägen till den tillagda komponenten
 
-* **data-scf-**
-componentThe resourceType of the component
+* **data-scf-component**
+Komponentens resourceType
 
 Här följer ett exempel på en kommenteringskomponent:
 
@@ -70,7 +73,7 @@ Här följer ett exempel på en kommenteringskomponent:
 </div>
 ```
 
-## Inläsning genom att anropa SCF {#sideload-by-invoking-scf}
+## Inläsning via anrop av SCF {#sideload-by-invoking-scf}
 
 ### Dynamisk inkludering {#dynamic-inclusion}
 
@@ -86,6 +89,6 @@ Dynamisk inläsning ger kontroll över inläsningen av SCF-komponenter.
 
 I stället för att starta alla SCF-komponenter som finns i DOM kan du ange en specifik SCF-komponent som ska läsas in med den här JavaScript-metoden:
 
-SCF.addComponent(document.getElementById(*someId*));
+SCF.addComponent(document.getElementById()*someId*)).
 
-Där *someId* är värdet för attributet **data-component-id**.
+Plats *someId* är värdet för **data-component-id** -attribut.

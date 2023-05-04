@@ -8,14 +8,18 @@ content-type: reference
 exl-id: acb95a2b-0171-449e-97fa-f9a533f990de
 feature: Video
 role: User
-source-git-commit: f2b7ffa37bcb14e7be47c10ea9d3e39f89e1858d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '9905'
+source-wordcount: '9941'
 ht-degree: 3%
 
 ---
 
 # Video {#video}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 I det här avsnittet beskrivs hur du arbetar med video i Dynamic Media.
 
@@ -181,7 +185,7 @@ För strömning av anpassningsbara video för datorer och mobilenheter baseras d
 
 Videouppspelning sker med videoströmning (HLS) (HTTP Live Streaming) eller progressiv nedladdning. I tidigare versioner av AEM, som 6.0, 6.1 och 6.2, strömmades videor via HTTP.
 
-I AEM 6.3 och senare direktuppspelas videor nu via HTTPS (dvs. HLS-videoströmning) eftersom DM-gatewaytjänstens URL alltid använder HTTPS. Observera att det här standardbeteendet inte påverkar kunderna. Det innebär att direktuppspelning av video alltid sker via HTTPS, såvida det inte stöds av webbläsaren. (se följande tabell). Därför returnerar
+I AEM 6.3 och senare direktuppspelas videor nu via HTTPS (dvs. HLS-videoströmning) eftersom DM-gatewaytjänstens URL alltid använder HTTPS. Observera att det här standardbeteendet inte påverkar kunderna. Det innebär att direktuppspelning av video alltid sker via HTTPS, såvida det inte stöds av webbläsaren. (se följande tabell). Därför
 
 * Om du har en HTTPS-webbplats med HTTPS-videoströmning går det bra att strömma.
 * Om du har en HTTP-webbplats med HTTPS-videoströmning går det bra att strömma och det finns inga blandade innehållsproblem i webbläsaren.
@@ -318,10 +322,10 @@ I följande tabell beskrivs hur formelresultaten översätts till vanliga altern
 
 | Formelresultat | Proportioner |
 |--- |--- |
-| 1,33 | 4:3 |
-| 0,75 | 3:4 |
-| 1,78 | 16:9 |
-| 0,56 | 9:16 |
+| 1.33 | 4:3 |
+| 0.75 | 3:4 |
+| 1.78 | 16:9 |
+| 0.56 | 9:16 |
 
 En video som till exempel är 1440 bredd x 1080 höjd har proportionerna 1440/1080 eller 1,33. I det här fallet väljer du en förinställning för videokodning med 4:3-proportioner för att koda videofilen.
 
@@ -363,8 +367,8 @@ Upplösning och datahastighet är två sammankopplade faktorer som avgör videok
 
 | Upplösning | Pixlar per bildruta |
 |--- |--- |
-| 320 x 240 | 76 800 |
-| 640 x 480 | 307 200 |
+| 320 x 240 | 76,800 |
+| 640 x 480 | 307,200 |
 
 Filen på 640 x 480 har fyra gånger fler pixlar per bildruta. För att uppnå samma datahastighet för dessa två exempelupplösningar tillämpar du fyra gånger komprimeringen på 640 x 480-filen, vilket kan minska videons kvalitet. En videodatahastighet på 250 kbit/s ger därför en högkvalitativ bild med upplösningen 320 x 240, men inte med upplösningen 640 x 480.
 

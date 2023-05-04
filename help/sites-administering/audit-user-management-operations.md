@@ -1,9 +1,9 @@
 ---
 title: Granska åtgärder för användarhantering i AEM
-seo-title: Granska åtgärder för användarhantering i AEM
+seo-title: How to Audit User Management Operations in AEM
 description: Lär dig hur du granskar åtgärder för användarhantering i AEM.
 feature: Operations
-seo-description: Lär dig hur du granskar åtgärder för användarhantering i AEM.
+seo-description: Learn how to audit User Management Operations in AEM.
 uuid: 4ea704b4-9150-4b5f-b9cb-cdac95cfd70c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,15 +11,18 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 437fa139-2dde-41a0-9649-6bb110039618
 exl-id: f987c4f5-64dd-491b-aafe-cb98acf0b1eb
-translation-type: tm+mt
-source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 1%
+source-wordcount: '338'
+ht-degree: 0%
 
 ---
 
 # Granska åtgärder för användarhantering i AEM{#how-to-audit-user-management-operations-in-aem}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Introduktion {#introduction}
 
@@ -31,22 +34,22 @@ Förbättringen möjliggör granskning av CRUD-åtgärder (Skapa, Läs, Uppdater
 * En användare läggs till i en grupp
 * Behörighetsändringar för en befintlig användare eller grupp
 
-Som standard skrivs posterna i `error.log`-filen. För att underlätta övervakningen rekommenderar vi att de dirigeras om till en separat loggfil. Mer information om hur du gör detta i stycket nedan.
+Som standard skrivs posterna till `error.log` -fil. För att underlätta övervakningen rekommenderar vi att de dirigeras om till en separat loggfil. Mer information om hur du gör detta i stycket nedan.
 
 ## Omdirigera utdata till en separat loggfil {#redirecting-the-output-to-a-separate-log-file}
 
-Om du vill omdirigera loggningsutdata till en separat loggfil måste du skapa en ny **konfiguration för Apache Sling Logging Logger**. Vi använder `useraudit.log` som namn på den separata filen i exemplet nedan.
+Om du vill omdirigera loggningsutdata till en separat loggfil måste du skapa en ny **Loggningsloggare för Apache Sling** konfiguration. Vi använder `useraudit.log` som namnet på den separata filen i exemplet nedan.
 
-1. Gå till webbkonsolen genom att gå till `https://<serveraddress>:<serverport>/system/console/configMgr`
-1. Sök efter **Loggningskonfiguration för Apache Sling**. Tryck sedan på + till höger om posten för att skapa en ny fabrikskonfiguration.
+1. Gå till webbkonsolen genom att bläddra till `https://<serveraddress>:<serverport>/system/console/configMgr`
+1. Sök efter **Konfiguration av loggningsloggare för Apache Sling**. Tryck sedan på + till höger om posten för att skapa en ny fabrikskonfiguration.
 1. Skapa följande konfiguration:
 
-   * **loggnivå:** information
-   * **loggfil:** logs/useraudit.log
+   * **Loggnivå:** Information
+   * **Loggfil:** logs/useraudit.log
    * **Meddelandemönster:** standardnivå
    * **Logger:** com.adobe.granite.security.user.internal.audit, com.adobe.granite.security.user.internal.servlets.AuthorizableServlet
 
-   Om du vill ange båda loggarna i fältet **Logger** måste du ange namnet på den första, sedan skapa ett annat fält genom att trycka på plusknappen (+) och ange namnet på den andra loggen.
+   För att kunna ange båda loggarna i **Logger** måste du ange namnet på den första, sedan skapa ett annat fält genom att trycka på plusknappen (+) och ange namnet på den andra loggaren.
 
 ## Exempelutdata {#example-output}
 

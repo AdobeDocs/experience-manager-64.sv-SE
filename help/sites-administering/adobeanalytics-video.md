@@ -10,14 +10,18 @@ topic-tags: integration
 content-type: reference
 discoiquuid: e7672b23-a4af-49bb-bba7-0565d3bda802
 exl-id: 24dd0d05-6327-47e2-a3d1-6ed40af06783
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1753'
+source-wordcount: '1789'
 ht-degree: 1%
 
 ---
 
 # Konfigurera videospårning för Adobe Analytics{#configuring-video-tracking-for-adobe-analytics}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Det finns flera metoder för att spåra videohändelser, varav två är äldre alternativ för äldre versioner av Adobe Analytics. Dessa äldre alternativ är: Äldre milstolpar och äldre sekunder.
 
@@ -320,7 +324,7 @@ Den här metoden liknar metoden milstolpar med skillnaden att de milstolpar som 
 
    **Exempelsamtal** till Adobe Analytics som använder exemplet ska se ut så här när du tittar på DigitalPulse Debugger:
 
-   ![milstolpar1](assets/lmilestones1.png)
+   ![lmilestones1](assets/lmilestones1.png)
 
    *The **pev3**variabeln som skickades i anropet innehåller följande information:*
 

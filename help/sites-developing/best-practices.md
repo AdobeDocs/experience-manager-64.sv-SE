@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
 exl-id: a2a299b5-a15a-47d9-a9d8-83f45917d080
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 1%
+source-wordcount: '498'
+ht-degree: 2%
 
 ---
 
 # Bästa praxis{#best-practices}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Best Practices for Developers - Getting Started {#best-practices-for-developers-getting-started}
 
@@ -50,7 +54,7 @@ De bästa sätten att administrera, distribuera och underhålla, eller att skapa
 * [Bästa tillvägagångssätt](/help/sites-authoring/best-practices.md)
 * [Effektiva rutiner](/help/sites-deploying/best-practices.md)
 
-## Webbplatser {#sites}
+## Sites {#sites}
 
 Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
 
@@ -102,4 +106,4 @@ HTML Template Language (HTL) är ett nytt mallsystem för HTML, som introducerad
 >[!NOTE]
 >
 >Följande självstudiekurs i flera delar kan vara av intresse för den bästa metoden för att skapa ett nytt AEM, med information om kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling:\
->[Komma igång med AEM Sites - WKND självstudiekurs](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
+>[Kom igång med AEM Sites – självstudiekurs om WKND](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)

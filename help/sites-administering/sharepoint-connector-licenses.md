@@ -1,30 +1,33 @@
 ---
 title: SharePoint Connector-licenser, copyrightmeddelanden och friskrivningsklausuler
-seo-title: SharePoint Connector-licenser, copyrightmeddelanden och friskrivningsklausuler
-description: Läs mer om SharePoint Connector-licenser, copyrightmeddelanden och ansvarsfriskrivningar.
-seo-description: Läs mer om SharePoint Connector-licenser, copyrightmeddelanden och ansvarsfriskrivningar.
+seo-title: SharePoint Connector Licenses, Copyright Notices, and Disclaimers
+description: Läs mer om SharePoint Connector Licenses, Copyright Notices and Disclaimers.
+seo-description: Learn about SharePoint Connector Licenses, Copyright Notices and Disclaimers.
 uuid: fba2c8ad-c6f3-484e-87b6-ddc426f7087a
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: 487fc170-3750-49a7-af59-f1cc20d5f528
-translation-type: tm+mt
-source-git-commit: b98e1ec0f4f5bf44e0d91e4eb9b9317523a23938
+exl-id: 4cd44f33-1bf9-4ec6-868f-0db60bfc56c0
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '398'
 ht-degree: 4%
 
 ---
 
-
 # SharePoint Connector-licenser, copyrightmeddelanden och friskrivningsklausuler{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
 
-I det här avsnittet listas alla licenser, meddelanden om upphovsrätt och friskrivningar som måste anges uttryckligen i samband med Day JCR Connector för MS SharePoint.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-## Översikt över anslutning till bibliotek från tredje part {#overview-of-connector-rd-party-libraries}
+I detta avsnitt listas alla licenser, meddelanden om upphovsrätt och friskrivningar som måste anges uttryckligen i samband med Day JCR Connector för MS SharePoint.
 
-I följande tabell visas tredjepartsbibliotek som används i SharePoint Connector-kärnbiblioteken tillsammans med de licenser, copyrightmeddelanden och ansvarsfriskrivningar som de omfattas av:
+## Översikt över anslutning av bibliotek från tredje part {#overview-of-connector-rd-party-libraries}
+
+I följande tabell visas tredjepartsbibliotek som används i SharePoint Connector-huvudbiblioteken tillsammans med de licenser, copyrightmeddelanden och ansvarsfriskrivningar som de omfattas av:
 
 | Bibliotek | Licenstyp |
 |---|---|
@@ -41,7 +44,7 @@ I följande tabell visas tredjepartsbibliotek som används i SharePoint Connecto
 | comons-httpclient | [Apache](#apache) |
 | comons-io | [Apache](#apache) |
 | Commons-lang | [Apache](#apache) |
-| samtidig | [Samtidig](#concurrent)  (offentlig domän) |
+| samtidig | [Samtidig](#concurrent) (Offentlig domän) |
 | geronimo-activation_1.1_spec | [Apache](#apache) |
 | geronimo-stax-api_1.0_spec | [Apache](#apache) |
 | httpcore | [Apache](#apache) |
@@ -60,7 +63,7 @@ I följande tabell visas tredjepartsbibliotek som används i SharePoint Connecto
 | wstx-asl | [Apache](#apache) |
 | xalan | [Apache](#apache) |
 | xbean | [Apache](#apache) |
-| xml-apis | [Apache](#apache)  (innehåller delar som täcks av Public Domain och W3C Software licenses) |
+| xml-apis | [Apache](#apache) (innehåller delar som täcks av Public Domain och W3C Software licenses) |
 | XmlSchema | [Apache](#apache) |
 
 ## Översikt över CRX-bibliotek från tredje part {#overview-of-crx-rd-party-libraries}
@@ -438,7 +441,7 @@ I följande tabell visas bibliotek från tredje part som används i Communiqué 
      <a href="https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf" TARGET="_blank" >https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf</a>
 ```
 
-## Dag-JCR {#day-jcr}
+## Day JCR {#day-jcr}
 
 ```xml
      Day Management AG ("Licensor") is willing to license this 
@@ -1290,4 +1293,3 @@ database. Title to copyright in this software, database and any associated
 documentation shall at all times remain with Princeton University and 
 LICENSEE agrees to preserve same.
 ```
-

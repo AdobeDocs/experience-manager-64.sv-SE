@@ -1,24 +1,27 @@
 ---
 title: Översikt över korrespondenshantering
-seo-title: Korrespondenshantering
+seo-title: Correspondence Management
 description: I det här avsnittet finns en översikt över Correspondence Management.
-seo-description: I det här avsnittet finns en översikt över Correspondence Management.
+seo-description: This topic gives you an overview of Correspondence Management.
 uuid: fa230c7e-fef1-4996-bdda-1637b36dac68
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 1291b395-a981-4ef9-b4f0-c0d3026c5f19
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 3cda92c9-5f3e-4704-a52b-55eda3b3fd2a
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
 
-
 # Översikt över korrespondenshantering {#correspondence-management-overview}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Introduktion {#introduction}
 
@@ -26,7 +29,7 @@ Correspondence Management centraliserar och hanterar framtagning, sammanställni
 
 ## Fördelar {#benefits}
 
-### Effektiv och produktiv {#efficient-and-productive}
+### Effektivt och produktivt {#efficient-and-productive}
 
 Det effektiviserar bearbetningen så att du kan:
 
@@ -49,4 +52,3 @@ Det förbättrar kundengagemanget och gör att ni kan:
 * Lägg till interaktiva tekniker för att möjliggöra en tvåvägskanal och minska mängden papper som skickas in
 * Protect-känslig information med inbyggd, komplett dokumentsäkerhet
 * Skicka korrespondens via den kommunikationskanal kunden föredrar, oavsett om det är e-post, mobil eller fax.
-

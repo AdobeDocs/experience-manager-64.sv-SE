@@ -1,8 +1,8 @@
 ---
 title: Ta bort formulär och relaterade resurser
-seo-title: Ta bort formulär och relaterade resurser
+seo-title: Deleting forms and related resources
 description: Så här tar du bort ett formulär eller en resurs i AEM Forms och hur det påverkar refererade och refererade resurser och XFA-formulär.
-seo-description: Så här tar du bort ett formulär eller en resurs i AEM Forms och hur det påverkar refererade och refererade resurser och XFA-formulär.
+seo-description: How to delete a form or an asset in AEM Forms and the impact on referenced and referring assets and XFA forms.
 uuid: df522b87-59d8-4678-922d-c9aab82b1381
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,14 +10,18 @@ topic-tags: forms-manager
 discoiquuid: c8519eec-f841-4867-baa9-a9e03042755e
 role: Admin
 exl-id: 94a66d83-b359-4be6-b668-4b4ba024b1e7
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
 
 # Ta bort formulär och relaterade resurser {#deleting-forms-and-related-resources}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Du kan ta bort formulären och resurserna för att ta bort dessa resurser från databasen. Borttagningsåtgärden fungerar för alla resurstyper och mappar.
 
@@ -26,7 +30,7 @@ Om du tar bort en resurs från författarinstansen tas även resursen bort från
 ## Så här tar du bort ett formulär {#how-to-delete-a-form}
 
 1. Logga in på AEM Forms användargränssnitt med `https://[hostname]:[portport]/aem/forms.html.`
-1. Navigera till och markera det formulär som du vill ta bort. Klicka på Ta bort ![aem6forms_delete2](assets/aem6forms_delete2.png) från verktygsfältet och bekräfta borttagningsåtgärden.
+1. Navigera till och markera det formulär som du vill ta bort. Klicka på Ta bort ![aem6forms_delete2](assets/aem6forms_delete2.png) i verktygsfältet och bekräfta borttagningsåtgärden.
 
    >[!NOTE]
    >
@@ -46,6 +50,6 @@ Om du tar bort en resurs från författarinstansen tas även resursen bort från
 
 I AEM Forms kan en XFA-formulärmall refereras av ett adaptivt formulär eller en annan XFA-formulärmall. En mall kan även referera till en resurs eller en annan XFA-mall.
 
-Det är inte tillrådligt att ta bort ett XFA-formulär som refereras av ett adaptivt formulär, eftersom det kan skada det adaptiva formuläret. När ett adaptivt formulär refererar till ett XFA-formulär är fälten bundna. När XFA har tagits bort kan det adaptiva formuläret inte synkronisera sina fält med XFA-fälten och ett felmeddelande visas för sådana fält. Om du vill veta mer om effekten av den refererade XFA-borttagningen och om felaktiga AF:er kan du läsa [Uppdatera refererade XFA-formulär](/help/forms/using/get-xdp-pdf-documents-aem.md#p-updating-referenced-xfa-forms-p).
+Det är inte tillrådligt att ta bort ett XFA-formulär som refereras av ett adaptivt formulär, eftersom det kan skada det adaptiva formuläret. När ett adaptivt formulär refererar till ett XFA-formulär är fälten bundna. När XFA har tagits bort kan det adaptiva formuläret inte synkronisera sina fält med XFA-fälten och ett felmeddelande visas för sådana fält. Mer information om effekterna av XFA-borttagning och om smutsiga AF:er finns i [Uppdaterar refererade XFA-formulär](/help/forms/using/get-xdp-pdf-documents-aem.md#p-updating-referenced-xfa-forms-p).
 
 Om du vill ta bort ett sådant XFA-formulär uppdaterar du det adaptiva formuläret och tar bort bindningarna med XFA-fälten.

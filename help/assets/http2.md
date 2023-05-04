@@ -12,14 +12,18 @@ discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 exl-id: 59cd9f8c-6d01-448d-bf57-bdc9fd2e381b
 feature: Asset Management
 role: Admin,User
-source-git-commit: a750c5425e33c2a115aab581b71862c1d30cf166
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '741'
 ht-degree: 0%
 
 ---
 
 # HTTP2-leverans av innehåll {#http-delivery-of-content}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Adobe är glada över att kunna meddela att det finns HTTP/2-leverans av innehåll, vilket i sin helhet ger bättre prestanda.
 

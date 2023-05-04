@@ -1,30 +1,33 @@
 ---
 title: Implementera en anpassad predikatutvärderare för Query Builder
-seo-title: Implementera en anpassad predikatutvärderare för Query Builder
+seo-title: Implementing a Custom Predicate Evaluator for the Query Builder
 description: Med Query Builder kan du enkelt hämta frågor till innehållsdatabasen
-seo-description: Med Query Builder kan du enkelt hämta frågor till innehållsdatabasen
+seo-description: The Query Builder offers an easy way of querying the content repository
 uuid: 5b599b60-a149-4425-b7ac-7fbe7e048bca
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: platform
 content-type: reference
 discoiquuid: 08bdade7-fdad-445d-80fe-8fc06596dace
-translation-type: tm+mt
-source-git-commit: 15bea340f3ba7d5a315d71932e521ad1f1a40073
+exl-id: afa7f346-fefa-4faa-bf2d-7480a7e5a5ee
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
 
+# Implementera en anpassad predikatutvärderare för Query Builder{#implementing-a-custom-predicate-evaluator-for-the-query-builder}
 
-# Implementera en anpassad predikatutvärderare för frågebyggaren{#implementing-a-custom-predicate-evaluator-for-the-query-builder}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 I det här avsnittet beskrivs hur du utökar [Query Builder](/help/sites-developing/querybuilder-api.md) genom att implementera en anpassad predikatutvärderare.
 
 ## Översikt {#overview}
 
-[Frågebyggaren](/help/sites-developing/querybuilder-api.md) är ett enkelt sätt att fråga innehållsdatabasen. AEM levereras med en uppsättning prediktiva utvärderare som hjälper dig att hantera dina data.
+The [Query Builder](/help/sites-developing/querybuilder-api.md) erbjuder ett enkelt sätt att fråga innehållsdatabasen. AEM levereras med en uppsättning prediktiva utvärderare som hjälper dig att hantera dina data.
 
 Men du kanske vill förenkla dina frågor genom att implementera en anpassad predikatutvärderare som döljer komplexiteten och ger ett bättre semantiskt resultat.
 
@@ -39,7 +42,7 @@ Ett anpassat predikat kan även utföra andra saker som inte är direkt möjliga
 
 >[!NOTE]
 >
->Exempel på frågor finns i [Query Builder](/help/sites-developing/querybuilder-api.md)-avsnittet.
+>Du kan hitta exempel på frågor i [Query Builder](/help/sites-developing/querybuilder-api.md) -avsnitt.
 
 KOD PÅ GITHUB
 
@@ -56,7 +59,7 @@ Det mappar en sökbegränsning på högre nivå (t.ex. &quot;width > 200&quot;) 
 
 >[!NOTE]
 >
->Mer information om `PredicateEvaluator` och `com.day.cq.search`-paketet finns i [Java-dokumentationen](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/search/package-summary.html).
+>Mer information om `PredicateEvaluator` och `com.day.cq.search` paketet finns i [Java-dokumentation](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/search/package-summary.html).
 
 ## Implementera en anpassad predikatutvärderare för replikeringsmetadata {#implementing-a-custom-predicate-evaluator-for-replication-metadata}
 
@@ -70,7 +73,7 @@ I det här avsnittet beskrivs hur du skapar en anpassad predikatutvärderare som
 
 ### Frågar efter replikeringsmetadata med standardpredikatutvärderare {#querying-replication-metadata-with-default-predicate-evaluators}
 
-Följande fråga hämtar listan med noder i `/content`-grenen som har aktiverats av `admin` sedan årets början.
+Följande fråga hämtar listan med noder i `/content` gren som har aktiverats av `admin` sedan början av året.
 
 ```xml
 path=/content
@@ -90,7 +93,7 @@ Frågan är giltig men svårläst och visar inte relationen mellan de tre replik
 
 ### Mål {#objectives}
 
-Målet med `ReplicationPredicateEvaluator` är att ge stöd för ovanstående fråga med följande syntax.
+Målsättningen med `ReplicationPredicateEvaluator` ska ha stöd för ovanstående fråga med följande syntax.
 
 ```xml
 path=/content
@@ -106,17 +109,17 @@ Genom att gruppera metadata för replikering med en anpassad predikatutvärderar
 
 >[!NOTE]
 >
->Uppsättningen nya AEM med maven beskrivs i [Så här skapar du AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
+>Införandet av nya AEM med hjälp av Maven dokumenteras av [Skapa AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
 
-Först måste du uppdatera Maven-beroendena för ditt projekt. `PredicateEvaluator` är en del av `cq-search`-artefakten, så den måste läggas till i din Maven-pom-fil.
+Först måste du uppdatera Maven-beroendena för ditt projekt. The `PredicateEvaluator` är en del av `cq-search` artefakt så den behöver läggas till i din Maven-pom-fil.
 
 >[!NOTE]
 >
->Omfånget för `cq-search`-beroendet är inställt på `provided` eftersom `cq-search` kommer att anges av `OSGi`-behållaren.
+>Omfattningen av `cq-search` beroende är inställt på `provided` därför `cq-search` kommer att tillhandahållas av `OSGi` behållare.
 
 pom.xml
 
-Följande kodutdrag visar skillnaderna i [enhetligt diff-format](https://en.wikipedia.org/wiki/Diff#Unified_format)
+I följande utdrag visas skillnaderna i [enhetligt format för differenser](https://en.wikipedia.org/wiki/Diff#Unified_format)
 
 ```
 @@ -120,6 +120,12 @@
@@ -133,22 +136,22 @@ Följande kodutdrag visar skillnaderna i [enhetligt diff-format](https://en.wiki
              <version>3.8.1</version></dependency>
 ```
 
-[aem-search-custom-predikate-valuator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)-  [pom.xml](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/raw/7aed6b35b4c8dd3655296e1b10cf40c0dd1eaa61/pom.xml)
+[aem-search-custom-prediate-utvärderator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)- [pom.xml](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/raw/7aed6b35b4c8dd3655296e1b10cf40c0dd1eaa61/pom.xml)
 
 ### Skriver ReplicationPredicateEvaluator {#writing-the-replicationpredicateevaluator}
 
-`cq-search`-projektet innehåller den abstrakta klassen `AbstractPredicateEvaluator`. Detta kan utökas med några steg för att implementera din egen anpassade predikatutvärderare `(PredicateEvaluator`).
+The `cq-search` projektet innehåller `AbstractPredicateEvaluator` abstrakt klass. Detta kan utökas med några steg för att implementera en egen anpassad predikatutvärderare `(PredicateEvaluator`).
 
 >[!NOTE]
 >
->I proceduren nedan beskrivs hur du skapar ett `Xpath`-uttryck för att filtrera data. Ett annat alternativ är att implementera metoden `includes` som markerar data på radbasis. Mer information finns i [Java-dokumentationen](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29).
+>I proceduren nedan beskrivs hur du skapar en `Xpath` -uttryck för att filtrera data. Ett annat alternativ är att implementera `includes` metod som markerar data på radbasis. Se [Java-dokumentation](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29) för mer information.
 
 1. Skapa en ny Java-klass som utökar `com.day.cq.search.eval.AbstractPredicateEvaluator`
-1. Anteckna din klass med en `@Component` som följande
+1. Anteckna din klass med en `@Component` gillar följande
 
    src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java
 
-   Följande kodutdrag visar skillnaderna i [enhetligt diff-format](https://en.wikipedia.org/wiki/Diff#Unified_format)
+   I följande utdrag visas skillnaderna i [enhetligt format för differenser](https://en.wikipedia.org/wiki/Diff#Unified_format)
 
 
 ```
@@ -163,11 +166,11 @@ Följande kodutdrag visar skillnaderna i [enhetligt diff-format](https://en.wiki
   }
 ```
 
-[aem-search-custom-prediate-valuator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)-  [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/raw/ec70fac35fbd0d132e00c6066a204804e9cbe70f/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)
+[aem-search-custom-prediate-utvärderator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)- [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/raw/ec70fac35fbd0d132e00c6066a204804e9cbe70f/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)
 
 >[!NOTE]
 >
->`factory`måste vara en unik sträng som börjar med `com.day.cq.search.eval.PredicateEvaluator/`och slutar med namnet på din anpassade `PredicateEvaluator`.
+>The `factory`måste vara en unik sträng som börjar med `com.day.cq.search.eval.PredicateEvaluator/`och avslutas med namnet på din egen `PredicateEvaluator`.
 
 >[!NOTE]
 >
@@ -179,11 +182,11 @@ Följande kodutdrag visar skillnaderna i [enhetligt diff-format](https://en.wiki
    public String getXPathExpression(Predicate predicate, EvaluationContext context)
    ```
 
-   I åsidosättningsmetoden skapar du ett `Xpath`-uttryck baserat på det `Predicate` som anges i argumentet.
+   I åsidosättningsmetoden skapar du en `Xpath` uttryck baserat på `Predicate` anges i argumentet.
 
 ### Exempel på en anpassad predikatutvärderare för replikeringsmetadata {#example-of-a-custom-predicate-evalutor-for-replication-metadata}
 
-Den fullständiga implementeringen av denna `PredicateEvaluator` kan likna följande klass.
+Det fullständiga genomförandet av detta `PredicateEvaluator` kan likna följande klass.
 
 src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java
 
@@ -328,4 +331,4 @@ public class ReplicationPredicateEvaluator extends AbstractPredicateEvaluator {
 }
 ```
 
-[aem-search-custom-prediate-valuator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator) -  [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/blob/master/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)
+[aem-search-custom-prediate-utvärderator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator) - [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/blob/master/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)

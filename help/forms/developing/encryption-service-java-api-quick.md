@@ -1,8 +1,8 @@
 ---
 title: Java API QuickStart (SOAP) för krypteringstjänsten
-seo-title: Java API QuickStart (SOAP) för krypteringstjänsten
-description: Använd krypteringstjänstens Java API för att kryptera ett PDF-dokument, ta bort lösenordsbaserad kryptering, kryptera ett PDF-dokument med ett certifikat, ta bort certifikatbaserad kryptering, låsa upp ett krypterat PDF-dokument och fastställa krypteringstyp.
-seo-description: Använd krypteringstjänstens Java API för att kryptera ett PDF-dokument, ta bort lösenordsbaserad kryptering, kryptera ett PDF-dokument med ett certifikat, ta bort certifikatbaserad kryptering, låsa upp ett krypterat PDF-dokument och fastställa krypteringstyp.
+seo-title: Encryption Service Java API QuickStart(SOAP)
+description: Använd krypteringstjänstens Java API för att kryptera ett PDF-dokument, ta bort lösenordsbaserad kryptering, kryptera ett PDF-dokument med ett certifikat, ta bort certifikatbaserad kryptering, låsa upp ett krypterat PDF och fastställa krypteringstyp.
+seo-description: Use the Encryption Service Java API to encrypt a PDF document, remove password-based encryption, encrypt a PDF document with a certificate, remove certificate-based encryption, unlock an encrypted PDF document, and determine encryption type.
 uuid: 3e29b3e9-340b-4b35-80cc-f0aff4180892
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: f12c10c3-1ce6-4415-ba9d-5349d1888237
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 3f287fb1-b1bb-4494-ad66-5addcc6ef2a8
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
 
+# Snabbstart för Java API för krypteringstjänsten (SOAP) {#encryption-service-java-api-quickstart-soap}
 
-# SOAP (Java API Quick Start) {#encryption-service-java-api-quickstart-soap} för krypteringstjänsten
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 [Snabbstart (SOAP-läge): Kryptera ett PDF-dokument med Java API](encryption-service-java-api-quick.md#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api)
 
@@ -37,11 +40,11 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 >[!NOTE]
 >
->Snabbstarter som finns i Programmering med AEM baseras på den Forms-server som distribueras på JBoss Application Server och operativsystemet Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Snabbstarter som finns i Programmering med AEM baseras på den Forms-server som distribueras på JBoss Application Server och Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## Snabbstart (SOAP-läge): Kryptera ett PDF-dokument med Java API {#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api}
 
-I följande Java-kodexempel krypteras ett PDF-dokument med namnet *Loan.pdf* med lösenordsvärdet `OpenPassword`. Det överordnad lösenordet är `PermissionPassword`. Det skyddade PDF-dokumentet sparas som en PDF-fil med namnet *EncryptLoan.pdf*. (Se [Kryptera PDF-dokument med ett lösenord](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password).)
+I följande Java-kodexempel krypteras ett PDF-dokument med namnet *Loan.pdf* med ett lösenordsvärde på `OpenPassword`. Det överordnad lösenordet är `PermissionPassword`. Det skyddade PDF-dokumentet sparas som en PDF-fil med namnet *EncryptLoan.pdf*. (Se [Kryptera PDF-dokument med ett lösenord](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password).)
 
 ```as3
  /* 
@@ -159,9 +162,9 @@ I följande Java-kodexempel krypteras ett PDF-dokument med namnet *Loan.pdf* med
  }
 ```
 
-## Snabbstart (SOAP-läge): Tar bort lösenordsbaserad kryptering med Java API {#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api}
+## Snabbstart (SOAP-läge): Ta bort lösenordsbaserad kryptering med Java API {#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api}
 
-I följande Java-kodexempel tas lösenordsbaserad kryptering bort från ett PDF-dokument med namnet *EncryptLoan.pdf*. Det överordnad lösenordsvärdet som används för att ta bort lösenordsbaserad kryptering är *PermissionPassword*. Det oskyddade PDF-dokumentet sparas som en PDF-fil med namnet *noEncryptionLoan.pdf*. (Se [Ta bort lösenordskryptering](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-password-encryption).)
+I följande Java-kodexempel tas lösenordsbaserad kryptering bort från ett PDF-dokument med namnet *EncryptLoan.pdf*. Det överordnad lösenordsvärdet som används för att ta bort lösenordsbaserad kryptering är *PermissionPassword*. Det oskyddade PDF-dokumentet sparas som en PDF-fil med namnet *noEncryptionLoan.pdf*. (Se [Tar bort lösenordskryptering](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-password-encryption).)
 
 ```as3
  /* 
@@ -387,7 +390,7 @@ I följande Java-kodexempel krypteras ett PDF-dokument med namnet *Loan.pdf* med
 
 ## Snabbstart (SOAP-läge): Tar bort certifikatbaserad kryptering med Java API {#quick-start-soap-mode-removing-certificate-based-encryption-using-the-java-api}
 
-Följande Java-kodexempel tar bort certifikatbaserad kryptering från ett PDF-dokument med namnet *EncryptLoanCert.pdf*. Aliaset för den offentliga nyckeln som används för att ta bort kryptering är `Encryption`. Det oskyddade PDF-dokumentet sparas som en PDF-fil med namnet *noEncryptionLoan.pdf*. (Se [Tar bort certifikatbaserad kryptering](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-certificate-based-encryption).)
+I följande Java-kodexempel tas certifikatbaserad kryptering bort från ett PDF-dokument med namnet *EncryptLoanCert.pdf*. Aliaset för den offentliga nyckeln som används för att ta bort kryptering är `Encryption`. Det oskyddade PDF-dokumentet sparas som en PDF-fil med namnet *noEncryptionLoan.pdf*. (Se [Tar bort certifikatbaserad kryptering](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-certificate-based-encryption).)
 
 ```as3
  /* 
@@ -484,7 +487,7 @@ Följande Java-kodexempel tar bort certifikatbaserad kryptering från ett PDF-do
 
 ## Snabbstart (SOAP-läge): Låsa upp ett krypterat PDF-dokument med Java API {#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api}
 
-Följande Java-kodexempel låser upp ett lösenordskrypterat PDF-dokument med namnet *EncryptLoan.pdf*. (Se [Låsa upp krypterade PDF-dokument](/help/forms/developing/encrypting-decrypting-pdf-documents.md#unlocking-encrypted-pdf-documents).)
+I följande Java-kodexempel låses ett lösenordskrypterat PDF-dokument upp med namnet *EncryptLoan.pdf*. (Se [Låsa upp krypterade PDF-dokument](/help/forms/developing/encrypting-decrypting-pdf-documents.md#unlocking-encrypted-pdf-documents).)
 
 ```as3
  /* 
@@ -580,7 +583,7 @@ Följande Java-kodexempel låser upp ett lösenordskrypterat PDF-dokument med na
 
 ## Snabbstart (SOAP-läge): Bestämma krypteringstyp med Java API {#quick-start-soap-mode-determining-encryption-type-using-the-java-api}
 
-Följande Java-kodexempel avgör vilken typ av kryptering som skyddar ett PDF-dokument med namnet *EncryptLoan.pdf*. (Se [Bestämma krypteringstyp](/help/forms/developing/encrypting-decrypting-pdf-documents.md#determining-encryption-type).)
+Följande Java-kodexempel avgör vilken typ av kryptering som skyddar ett PDF-dokument med namnet *EncryptLoan.pdf*. (Se [Bestämmer krypteringstyp](/help/forms/developing/encrypting-decrypting-pdf-documents.md#determining-encryption-type).)
 
 ```as3
  /* 
@@ -682,4 +685,3 @@ Följande Java-kodexempel avgör vilken typ av kryptering som skyddar ett PDF-do
   
  
 ```
-

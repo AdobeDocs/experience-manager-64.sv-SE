@@ -1,8 +1,8 @@
 ---
 title: Avlastar jobb
-seo-title: Avlastar jobb
+seo-title: Offloading Jobs
 description: Lär dig hur du konfigurerar och använder AEM instanser i en topologi för att utföra specifika typer av bearbetning.
-seo-description: Lär dig hur du konfigurerar och använder AEM instanser i en topologi för att utföra specifika typer av bearbetning.
+seo-description: Learn how to configure and use AEM instances in a topology in order to perform specific types of processing.
 uuid: e971d403-dfd2-471f-b23d-a67e35f1ed88
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,22 +10,25 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 370151df-3b8e-41aa-b586-5c21ecb55ffe
 feature: Configuring
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: b10bf1b6-0360-45ca-b1aa-f4184cbfb5c0
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2804'
-ht-degree: 1%
+source-wordcount: '2818'
+ht-degree: 0%
 
 ---
 
-
 # Avlastar jobb{#offloading-jobs}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Introduktion {#introduction}
 
 Avlastning av distribuerar bearbetningsuppgifter som är Experience Manager instanser i en topologi. Med avlastning kan du använda särskilda Experience Manager-instanser för att utföra vissa typer av bearbetning. Specialiserad bearbetning gör att du kan maximera användningen av tillgängliga serverresurser.
 
-Avlastningen baseras på funktionerna [Apache Sling Discovery](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html) och Sling JobManager. Om du vill använda avlastning lägger du till Experience Manager-kluster i en topologi och identifierar de jobbämnen som klusterprocessen gör. Kluster består av en eller flera instanser av Experience Manager, så att en enda instans betraktas som ett kluster.
+Avlastningen baseras på [Apache Sling Discovery](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html) och Sling JobManager-funktioner. Om du vill använda avlastning lägger du till Experience Manager-kluster i en topologi och identifierar de jobbämnen som klusterprocessen gör. Kluster består av en eller flera instanser av Experience Manager, så att en enda instans betraktas som ett kluster.
 
 Mer information om hur du lägger till instanser i en topologi finns i [Administrera topologier](/help/sites-deploying/offloading.md#administering-topologies).
 
@@ -41,7 +44,7 @@ När JobManager skapar ett jobb väljer avlastningsramverket ett Experience Mana
 * Klustret måste innehålla en eller flera instanser som kör en JobConsumer som är registrerad för jobbämnet.
 * Ämnet måste aktiveras för minst en instans i klustret.
 
-Mer information om hur du förfinar jobbdistributionen finns i [Konfigurera ämnesförbrukning](/help/sites-deploying/offloading.md#configuring-topic-consumption).
+Se [Konfigurera ämnesförbrukning](/help/sites-deploying/offloading.md#configuring-topic-consumption) om du vill ha information om hur du finjusterar jobbdistributionen.
 
 ![chlimage_1-109](assets/chlimage_1-109.png)
 
@@ -105,7 +108,7 @@ Gör så här för att öppna sidan Topology Management i webbkonsolen:
 
    ![chlimage_1-112](assets/chlimage_1-112.png)
 
-### Konfigurerar topologimedlemskap {#configuring-topology-membership}
+### Konfigurera topologimedlemskap {#configuring-topology-membership}
 
 Resursbaserad sökningstjänst för Apache Sling körs på varje instans för att styra hur instanser från Experience Manager interagerar med en topologi.
 
@@ -158,7 +161,7 @@ Använd webbkonsolen eller en sling:OsgiConfig-nod för att konfigurera följand
    <td>Databasbeskrivningsnamn</td> 
    <td>leaderValectionRepositoryDescriptor</td> 
    <td> </td> 
-   <td>&lt;no value=""&gt;</td> 
+   <td>&lt;no value&gt;</td> 
   </tr> 
  </tbody> 
 </table>
@@ -177,7 +180,7 @@ Utför följande procedur på rotmedlemmen i topologin. Proceduren lägger till 
 1. Klicka på Konfigurera sökningstjänst.
 1. För varje medlem i topologin lägger du till ett objekt i tillåtelselista-egenskapen Topology Connector och anger värdnamnet eller IP-adressen för topologimedlemmen.
 
-## Konfigurerar ämnesförbrukning {#configuring-topic-consumption}
+## Konfigurera ämnesförbrukning {#configuring-topic-consumption}
 
 Använd Avlastningsläsaren för att konfigurera ämnesförbrukning för Experience Manager-instanserna i topologin. För varje förekomst kan du ange ämnen som den upptar. Om du till exempel vill konfigurera din topologi så att endast en instans förbrukar ämnen av en viss typ, inaktiverar du ämnet för alla instanser utom en.
 
@@ -202,7 +205,7 @@ Jobb distribueras som summeringsinstanser där det associerade ämnet är aktive
    * Inaktiverad: Den här instansen förbrukar inte jobb i det här avsnittet.
    * Exklusivt: Den här instansen förbrukar endast jobb i det här avsnittet.
 
-   **Obs!** När du väljer Exklusiv för ett ämne anges alla andra ämnen automatiskt till Inaktiverad.
+   **Obs!** När du väljer Exklusiv för ett ämne ställs alla andra ämnen automatiskt in på Inaktiverad.
 
 ### Installerade jobbkonsumenter {#installed-job-consumers}
 
@@ -220,16 +223,16 @@ Tjänsten Apache Sling Job Consumer Manager innehåller egenskaperna tillåtelse
 
 **Obs!** Om instansen tillhör en topologi kan du även använda Avlastningsläsaren på vilken dator som helst i topologin för att aktivera eller inaktivera ämnen.
 
-Den logik som skapar listan med aktiverade ämnen tillåter först alla ämnen som finns i tillåtelselista och tar sedan bort ämnen som finns i blockeringslista. Som standard aktiveras alla ämnen (tillåtelselista är `*`) och inga ämnen inaktiveras (blockeringslista har inget värde).
+Den logik som skapar listan med aktiverade ämnen tillåter först alla ämnen som finns i tillåtelselista och tar sedan bort ämnen som finns i blockeringslista. Som standard aktiveras alla ämnen (värdet tillåtelselista är `*`) och inga ämnen är inaktiverade (blockeringslista har inget värde).
 
-Använd webbkonsolen eller en `sling:OsgiConfig`-nod för att konfigurera följande egenskaper. För `sling:OsgiConfig`-noder är PID för tjänsten Job Consumer Manager org.apache.sling.event.impl.job.JobConsumerManager.
+Använd webbkonsol eller en `sling:OsgiConfig` -nod för att konfigurera följande egenskaper. För `sling:OsgiConfig` noder, PID för tjänsten Job Consumer Manager är org.apache.sling.event.impl.job.JobConsumerManager.
 
 | Egenskapsnamn i webbkonsolen | OSGi ID | Beskrivning |
 |---|---|---|
 | Ämnesvitlista | job.consumermanager.whitelist | En lista med ämnen som den lokala JobManager-tjänsten bearbetar. Standardvärdet för &amp;ast; skickar alla ämnen till den registrerade TopicConsumer-tjänsten. |
 | Ämnessvartlista | job.consumermanager.blacklist | En lista med ämnen som den lokala JobManager-tjänsten inte bearbetar. |
 
-## Skapar replikeringsagenter för avlastning av {#creating-replication-agents-for-offloading}
+## Skapar replikeringsagenter för avlastning {#creating-replication-agents-for-offloading}
 
 Avlastningsramverket använder replikering för att transportera resurser mellan författare och arbetare. Ramverket för avlastning skapar automatiskt replikeringsagenter när instanser ansluts till topologin. Agenterna skapas med standardvärden. Du måste ändra lösenordet som agenterna använder för autentisering manuellt.
 
@@ -255,17 +258,17 @@ Replikeringsschemat liknar det som används mellan författare och publiceringsi
 
 ### Namnge replikeringsagenter för avlastning {#naming-the-replication-agents-for-offloading}
 
-Använd ett specifikt format för egenskapen ***Namn*** för replikeringsagenterna så att avlastningsramverket automatiskt använder rätt agent för specifika arbetarinstanser.
+Använd ett specifikt format för ***Namn*** egenskapen för replikeringsagenterna så att avlastningsramverket automatiskt använder rätt agent för specifika arbetarinstanser.
 
 **Namnge den utgående agenten på författarinstansen:**
 
-`offloading_<slingid>`, där  `<slingid>` är Sling-ID:t för arbetarinstansen.
+`offloading_<slingid>`, där `<slingid>` är Sling-ID för arbetarinstansen.
 
 Exempel: `offloading_f5c8494a-4220-49b8-b079-360a72f71559`
 
 **Namnge den omvända agenten på författarinstansen:**
 
-`offloading_reverse_<slingid>`, där  `<slingid>` är Sling-ID:t för arbetarinstansen.
+`offloading_reverse_<slingid>`, där `<slingid>` är Sling-ID för arbetarinstansen.
 
 Exempel: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
 
@@ -275,7 +278,7 @@ Exempel: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
 
 ### Skapar den utgående agenten {#creating-the-outgoing-agent}
 
-1. Skapa en **replikeringsagent** på författaren. (Se [dokumentet för replikeringsagenter](/help/sites-deploying/replication.md)). Ange en **titel**. **Namnet** måste följa namnkonventionen.
+1. Skapa en **Replikeringsagent** på författaren. (Se [dokument för replikeringsagenter](/help/sites-deploying/replication.md)). Ange **Titel**. The **Namn** måste följa namnkonventionen.
 1. Skapa agenten med följande egenskaper:
 
    | Egenskap | Värde |
@@ -289,7 +292,7 @@ Exempel: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
 
 ### Skapar den omvända agenten {#creating-the-reverse-agent}
 
-1. Skapa en **omvänd replikeringsagent** på författaren. (Se [dokumentet för replikeringsagenter](/help/sites-deploying/replication.md).) Ange en **titel**. **Namnet** måste följa namnkonventionen.
+1. Skapa en **Agenten för omvänd replikering** på författaren. (Se [dokument för replikeringsagenter](/help/sites-deploying/replication.md).) Ange **Titel**. The **Namn** måste följa namnkonventionen.
 1. Skapa agenten med följande egenskaper:
 
    | Egenskap | Värde |
@@ -300,9 +303,9 @@ Exempel: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
    | Transport >Transportlösenord | Lösenord för replikeringsanvändare för målinstans |
    | Extended > HTTP Method | GET |
 
-### Skapar utkorgsagenten {#creating-the-outbox-agent}
+### Skapa en utkorgsagent {#creating-the-outbox-agent}
 
-1. Skapa en **replikeringsagent** på arbetsinstansen. (Se [dokumentet för replikeringsagenter](/help/sites-deploying/replication.md).) Ange en **titel**. **Namnet** måste vara `offloading_outbox`.
+1. Skapa en **Replikeringsagent** på arbetarinstansen. (Se [dokument för replikeringsagenter](/help/sites-deploying/replication.md).) Ange **Titel**. The **Namn** måste vara `offloading_outbox`.
 1. Skapa agenten med följande egenskaper.
 
    | Egenskap | Värde |
@@ -311,18 +314,18 @@ Exempel: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
    | Transport >Transport-URI | repo://var/replication/outbox |
    | Utlösare > Ignorera standard | True |
 
-### Söker efter Sling ID {#finding-the-sling-id}
+### Sling ID hittas {#finding-the-sling-id}
 
 Hämta Sling ID för en Experience Manager-instans med någon av följande metoder:
 
-* Öppna webbkonsolen och i Stilar-inställningarna hittar du värdet för egenskapen Sling ID ([http://localhost:4502/system/console/status-slingsettings](http://localhost:4502/system/console/status-slingsettings)). Den här metoden är användbar om instansen ännu inte ingår i topologin.
+* Öppna webbkonsolen och i Sling-inställningarna hittar du värdet för egenskapen Sling ID ([http://localhost:4502/system/console/status-slingsettings](http://localhost:4502/system/console/status-slingsettings)). Den här metoden är användbar om instansen ännu inte ingår i topologin.
 * Använd Topology-webbläsaren om instansen redan är en del av topologin.
 
-## Avlastar bearbetningen av DAM-resurser {#offloading-the-processing-of-dam-assets}
+## Avlasta bearbetning av DAM-resurser {#offloading-the-processing-of-dam-assets}
 
 Konfigurera instanserna av en topologi så att specifika instanser utför bakgrundsbearbetningen av resurser som läggs till eller uppdateras i DAM.
 
-Som standard kör Experience Manager arbetsflödet DAM Update Asset när en DAM-resurs ändras eller en resurs läggs till i DAM. Ändra standardbeteendet så att Experience Manager i stället kör arbetsflödet DAM Update Asset Offloader. Det här arbetsflödet genererar ett JobManager-jobb som har ämnet `com/adobe/granite/workflow/offloading`. Konfigurera sedan topologin så att jobbet skickas till en dedikerad arbetare.
+Som standard kör Experience Manager arbetsflödet DAM Update Asset när en DAM-resurs ändras eller en resurs läggs till i DAM. Ändra standardbeteendet så att Experience Manager i stället kör arbetsflödet DAM Update Asset Offloader. Det här arbetsflödet genererar ett JobManager-jobb som har ett ämne i `com/adobe/granite/workflow/offloading`. Konfigurera sedan topologin så att jobbet skickas till en dedikerad arbetare.
 
 >[!CAUTION]
 >
@@ -335,7 +338,7 @@ Följande procedur utgår från följande egenskaper för avlastningstopologin:
 
 1. Konfigurera sökningstjänsten för varje Experience Manager-instans så att den pekar på rotkonnektorn för topografi. (Se [Konfigurera topologimedlemskap](#title4).)
 1. Konfigurera Topography Connector för roten så att anslutande instanser finns på tillåtelselista.
-1. Öppna Avlastningsläsaren och inaktivera `com/adobe/granite/workflow/offloading`-avsnittet om de instanser som användarna interagerar med för att överföra eller ändra DAM-resurser.
+1. Öppna Avlastningsläsaren och inaktivera `com/adobe/granite/workflow/offloading` Information om de instanser med vilka användarna interagerar för att överföra eller ändra DAM-resurser.
 
    ![chlimage_1-116](assets/chlimage_1-116.png)
 
@@ -350,9 +353,8 @@ Följande procedur utgår från följande egenskaper för avlastningstopologin:
 
 ## Ytterligare läsning {#further-reading}
 
-Förutom den information som visas på den här sidan kan du även läsa följande:
+Förutom informationen på den här sidan kan du läsa följande:
 
 * Mer information om hur du använder Java API:er för att skapa jobb och jobbkunder finns i [Skapa och använda jobb för avlastning](/help/sites-developing/dev-offloading.md).
-* Allmänna riktlinjer och bästa praxis för avlastning av resurser finns i [Allmänna riktlinjer och bästa praxis för avlastning av tillgångar](/help/assets/assets-offloading-best-practices.md#general-guidance-and-best-practices-for-asset-offloading).
-* Mer information om hur du inaktiverar det automatiska skapandet av avlastningsagenter finns i [Stänga av automatisk agenthantering](/help/assets/assets-offloading-best-practices.md#turning-off-automatic-agent-management).
-
+* Allmänna riktlinjer och metodtips för avlastning av resurser finns i [Allmänna riktlinjer och bästa praxis för tillgångsavlastning](/help/assets/assets-offloading-best-practices.md#general-guidance-and-best-practices-for-asset-offloading).
+* Om du vill veta hur du inaktiverar det automatiska skapandet av avlastningsagenter läser du i [Stänger av automatisk agenthantering](/help/assets/assets-offloading-best-practices.md#turning-off-automatic-agent-management).

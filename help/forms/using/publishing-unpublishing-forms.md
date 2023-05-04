@@ -10,14 +10,18 @@ topic-tags: publish
 content-strategy: max-2018
 discoiquuid: 7dd08e81-5df6-4522-9f8c-48b4bba8927b
 exl-id: 1afef311-c1e6-48ec-ae23-dbd553a99ac6
-source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1385'
+source-wordcount: '1421'
 ht-degree: 0%
 
 ---
 
 # Publicera och avpublicera formulär och dokument {#publishing-and-unpublishing-forms-and-documents}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Med AEM Forms kan du enkelt skapa, publicera och avpublicera formulär. Mer information om AEM Forms finns i [Introduktion till hantering av formulär](/help/forms/using/introduction-managing-forms.md).
 
@@ -196,7 +200,7 @@ Så här aktiverar du autentisering för dina formulär:
 
 1. Öppna configMgr i publiceringsinstansen i webbläsaren.
 
-   Webbadress: `https://<hostname>:<PublishPort>/system/console/configMgr`
+   URL: `https://<hostname>:<PublishPort>/system/console/configMgr`
 
 1. Klicka på Adobe Experience Manager Web Console **Autentiseringstjänst för Apache Sling** för att konfigurera den.
 1. I dialogrutan Apache Sling Authentication Service som visas använder du **+** för att lägga till banor.

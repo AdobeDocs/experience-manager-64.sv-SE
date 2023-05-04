@@ -2,23 +2,26 @@
 title: Blog Essentials
 seo-title: Blog Essentials
 description: Översikt över bloggar
-seo-description: Översikt över bloggar
+seo-description: Blog overview
 uuid: ce0885de-6276-47a2-8f6c-358f0beb2b89
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: de8d0e6d-827b-45fe-a538-d3fe1dec8427
-translation-type: tm+mt
-source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+exl-id: 8cff0b7b-c120-462f-8fce-13822073eabb
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
 
-
 # Blog Essentials {#blog-essentials}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Från och med AEM 6.1 Communities är en blogg en community-aktivitet. Bloggartiklar publiceras nu från publiceringsmiljön, där bloggartiklar tidigare bara kunde skapas i författarmiljön och publiceras.
 
@@ -32,7 +35,7 @@ Den här sidan innehåller viktig information om hur du arbetar med bloggfunktio
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 
-Bloggfunktionen består av två huvudkomponenter som är tillgängliga genom att lägga till funktionen [Blog](functions.md#blog-function) eller genom att lägga till komponenterna på en sida i redigeringsläge för författare.
+Bloggfunktionen består av två huvudkomponenter som är tillgängliga genom att lägga till [Bloggfunktion](functions.md#blog-function) eller genom att lägga till komponenterna på en sida i redigeringsläge.
 
 ### Blogg {#blog}
 
@@ -48,10 +51,10 @@ Bloggfunktionen består av två huvudkomponenter som är tillgängliga genom att
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>klientlibs</strong></a></td> 
-   <td>cq.ckeditor<br /> cq.social.hbs.voice<br /> cq.social.hbs.journal</td> 
+   <td>cq.ckeditor<br /> cq.social.hbs.röstning<br /> cq.social.hbs.journal</td> 
   </tr>
   <tr>
-   <td> <strong>templates</strong></td> 
+   <td> <strong>mallar</strong></td> 
    <td> /libs/social/journal/components/hbs/journal/journal.hbs<br /> /libs/social/journal/components/hbs/entry_topic/list-item.hbs</td> 
   </tr>
   <tr>
@@ -65,7 +68,7 @@ Bloggfunktionen består av två huvudkomponenter som är tillgängliga genom att
  </tbody>
 </table>
 
-### Blogg, sidofält {#blog-sidebar}
+### Blogg, marginallist {#blog-sidebar}
 
 | **resourceType** | social/journal/components/hbs/sidebar |
 |---|---|
@@ -87,29 +90,29 @@ Bloggfunktionen består av två huvudkomponenter som är tillgängliga genom att
 
 ### Bloggfunktion {#blog-function}
 
-En community-platsstruktur som innehåller [Bog-funktionen](functions.md#blog-function) har konfigurerat `Blog`- och `Blog Sidebar`-komponenterna. Bloggfunktionen stöder identifiering av en [privilegierad medlemsgrupp](users.md#privileged-members-group).
+En community-webbplatsstruktur som innehåller [Funktionen Bog](functions.md#blog-function) har konfigurerats `Blog` och `Blog Sidebar` -komponenter. Funktionen Blog har stöd för att identifiera en [privilegierad medlemsanvändargrupp](users.md#privileged-members-group).
 
 ### Åtkomst till blogginlägg (UGC) {#accessing-blog-entries-ugc}
 
 UGC bör modereras med någon av standardmetoderna för moderering.\
-Se [Moderating User Generated Content](moderate-ugc.md).
+Se [Modererar användargenererat innehåll](moderate-ugc.md).
 
-Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities används [gemensam lagringsplats](working-with-srp.md) för UGC omfattar programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (till exempel ASRP, MSRP eller JSRP).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
 Se:
 
-* [Översikt över](srp.md)  lagringsresursprovidern - introduktion och databasanvändning - översikt
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
-* [Åtkomst till UGC med riktlinjer för SRP](accessing-ugc-with-srp.md) -kodning
-* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utgått verktygsmetoder till aktuella SRP-verktygsmetoder
+* [Översikt över lagringsresursprovider](srp.md) - introduktion och databasanvändning - översikt
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning
+* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av borttagna verktygsmetoder till aktuella SRP-verktygsmetoder
 
 ## Primär utgivare {#primary-publisher}
 
 När distributionen är en publiceringsgrupp är det nödvändigt att identifiera en primär utgivare som söker efter artiklar som är schemalagda att publiceras.
 
-Mer information finns i [Primär utgivare](deploy-communities.md#primary-publisher).
+Se [Primär utgivare](deploy-communities.md#primary-publisher) för mer information.
 
 ## Tillåta multimedia {#allowing-rich-media}
 
@@ -119,5 +122,4 @@ Den AEM plattformen blockerar länkar från andra webbplatser för att förhindr
 
 Från och med AEM 6.2 inkluderas de ändringar som tidigare krävdes för att göras manuellt i standardkonfigurationsfilen för AntiSamy.
 
-Multimedia bäddas in i en bloggartikel genom att du väljer ikonen `Embed Media from External Sites`:  ![chlimage_1-471](assets/chlimage_1-471.png)
-
+Multimedia är inbäddade i en bloggartikel genom att välja `Embed Media from External Sites` ikon:  ![chlimage_1-471](assets/chlimage_1-471.png)

@@ -1,24 +1,27 @@
 ---
 title: Kreativt projekt- och PIM-integrering
-seo-title: Kreativt projekt- och PIM-integrering
+seo-title: Creative Project and PIM Integration
 description: Creative Project effektiviserar hela arbetsflödet för fotografering, inklusive generering av en fotoplåtningsförfrågan, överföring av en fotoplåtning, samarbete i en fotoplåtning och paketering av godkända mediefiler
-seo-description: Creative Project effektiviserar hela arbetsflödet för fotografering, inklusive generering av en fotoplåtningsförfrågan, överföring av en fotoplåtning, samarbete i en fotoplåtning och paketering av godkända mediefiler
+seo-description: Creative Project streamlines the entire photo shoot workflow that including generating a photo shoot request, uploading a photo shoot, collaborating on a photo shoot, and packaging approved assets
 uuid: 09f27d36-e725-45cb-88d1-27383aedceed
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: projects
 content-type: reference
 discoiquuid: 0e5d0a45-c663-4d91-b793-03d39119d103
-translation-type: tm+mt
-source-git-commit: d8398575c28f571a7c2173f5d13471873089efdb
+exl-id: b477d6ab-126a-489a-a13f-2b6f439ab85b
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3013'
+source-wordcount: '3016'
 ht-degree: 1%
 
 ---
 
+# Kreativt projekt- och PIM-integrering{#creative-project-and-pim-integration}
 
-# Kreativt projekt och PIM-integrering{#creative-project-and-pim-integration}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Om du är marknadsförare eller kreatör kan du använda verktygen i Adobe Experience Manager (AEM) för att hantera e-handelsrelaterade produktfotografier och tillhörande kreativa processer inom organisationen.
 
@@ -31,16 +34,16 @@ Du kan särskilt använda Creative Project för att effektivisera följande uppg
 
 >[!NOTE]
 >
->Mer information om hur du tilldelar användarroller och arbetsflöden till vissa typer av användare finns i [Projektanvändarroller.](/help/sites-authoring/projects.md#user-roles-in-a-project)
+>Se [Användarroller för projekt för information](/help/sites-authoring/projects.md#user-roles-in-a-project) om hur du tilldelar användarroller och arbetsflöden till vissa typer av användare.
 
-## Utforska arbetsflöden för produktfotografering {#exploring-product-photo-shoot-workflows}
+## Utforska arbetsflöden för produktfotografering  {#exploring-product-photo-shoot-workflows}
 
 Creative Project innehåller olika projektmallar som uppfyller olika projektkrav. Mallen **Product Photo Shoot Project **finns redan. Den här mallen innehåller arbetsflöden för fotoplåtning där du kan initiera och hantera begäranden om produktfotografering. Det innehåller även en rad uppgifter som gör att du kan få digitala bilder för produkter genom lämpliga gransknings- och godkännandeprocesser.
 
 Mallen innehåller följande arbetsflöden:
 
-* **Arbetsflöde** för produktfotografering (e-handelsintegrering): Det här arbetsflödet utnyttjar handelsintegrering med PIM-systemet (product information management) för att automatiskt generera en tagningslista för de valda produkterna (hierarki). Du kan visa produktdata som en del av resursmetadata när arbetsflödet är klart.
-* **Arbetsflöde** för fotografering: Med det här arbetsflödet kan du ange en tagningslista i stället för att vara beroende av handelsintegrering. Den mappar de överförda bilderna till en CSV-fil i projektresursmappen.
+* **Arbetsflöde för produktfototagning (e-handelsintegrering)**: Det här arbetsflödet utnyttjar handelsintegrering med PIM-systemet (product information management) för att automatiskt generera en tagningslista för de valda produkterna (hierarki). Du kan visa produktdata som en del av resursmetadata när arbetsflödet är klart.
+* **Arbetsflöde för fotografering**: Med det här arbetsflödet kan du ange en tagningslista i stället för att vara beroende av handelsintegrering. Den mappar de överförda bilderna till en CSV-fil i projektresursmappen.
 
 >[!NOTE]
 >
@@ -48,11 +51,11 @@ Mallen innehåller följande arbetsflöden:
 
 ## Skapa ett produktfotoprojekt {#create-a-product-photo-shoot-project}
 
-1. I konsolen **Projekt** trycker/klickar du på **Skapa** och väljer sedan **Skapa projekt** i listan.
+1. I **Projekt** konsol, tryck/klicka **Skapa** och sedan välja **Skapa projekt** från listan.
 
    ![chlimage_1-132](assets/chlimage_1-132.png)
 
-1. På sidan **Skapa projekt** väljer du mallen för fotoprojekt och trycker/klickar på **Nästa**.
+1. I **Skapa projekt** väljer du projektmallen för fotoprojekt och trycker/klickar på **Nästa**.
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
@@ -60,12 +63,12 @@ Mallen innehåller följande arbetsflöden:
 
    ![chlimage_1-134](assets/chlimage_1-134.png)
 
-1. Tryck/klicka på **Skapa**. Ett bekräftelsemeddelande meddelar att projektet har skapats.
-1. Tryck/klicka på **Klar** för att återgå till konsolen **Projekt**. Du kan också trycka/klicka på **Öppna** för att visa resurserna i fotoprojektet.
+1. Tryck/klicka **Skapa**. Ett bekräftelsemeddelande meddelar att projektet har skapats.
+1. Tryck/klicka **Klar** för att gå tillbaka till **Projekt** konsol. Du kan också trycka/klicka **Öppna** för att visa resurserna i fotoprojektet.
 
 ## Starta arbete i ett produktfotoprojekt {#starting-work-in-a-product-photo-shoot-project}
 
-Om du vill initiera en begäran om fotofotografering trycker eller klickar du på ett projekt och sedan på/klickar på **Lägg till arbete** på sidan med projektinformation för att starta ett arbetsflöde.
+Om du vill starta en bildinspelningsförfrågan trycker eller klickar du på ett projekt och sedan på/klickar du **Lägg till arbete** på sidan med projektinformation för att starta ett arbetsflöde.
 
 ![chlimage_1-135](assets/chlimage_1-135.png)
 
@@ -102,7 +105,7 @@ Båda arbetsflödena innehåller steg för att länka produkter till deras godk�
 * Starta ett projektarbetsflöde: Beskriver hur du startar en produktfototagning
 * Information om arbetsflödesuppgifter: Visar information om uppgifter som är tillgängliga i arbetsflödet
 
-## Spårar projektförlopp {#tracking-project-progress}
+## Spåra projektförlopp {#tracking-project-progress}
 
 Du kan följa förloppet för ett projekt genom att övervaka de aktiva/slutförda uppgifterna i ett projekt.
 
@@ -129,18 +132,18 @@ Uppgiftslistan innehåller detaljerad information om den aktuella arbetsflödesa
 
 Den här uppgiften innebär att tilldela användare arbetsflödessteg baserat på deras roller.
 
-Så här konfigurerar du arbetsflödet för **produktfototagning**:
+Så här konfigurerar du **Fotofotografering** arbetsflöde:
 
-1. Navigera till **Verktyg** > **Arbetsflöden** och tryck sedan på plattan **Models** för att öppna sidan **Arbetsflödesmodeller**.
-1. Välj arbetsflödet för **produktfototagning** och tryck på ikonen **Redigera** i verktygsfältet för att öppna den i redigeringsläge.
+1. Navigera till **verktyg** > **Arbetsflöden** och sedan trycker du på **Modeller** för att öppna **Arbetsflödesmodeller** sida.
+1. Välj **Fotofotografering** arbetsflöde och tryck på **Redigera** i verktygsfältet för att öppna det i redigeringsläge.
 
    ![chlimage_1-138](assets/chlimage_1-138.png)
 
-1. Öppna en projektuppgift på sidan **Produkt - fotograferingsarbetsflöde**. Öppna till exempel aktiviteten **Överför fotolista**.
+1. I **Fotofotografering** öppnar du en projektuppgift. Öppna till exempel **Överför bildlista** uppgift.
 
    ![chlimage_1-139](assets/chlimage_1-139.png)
 
-1. Klicka på fliken **Aktivitet** för att konfigurera följande:
+1. Klicka på **Uppgift** för att konfigurera följande:
 
    * Namn på uppgiften
    * Standardanvändare (roll) som tar emot uppgiften
@@ -148,32 +151,32 @@ Så här konfigurerar du arbetsflödet för **produktfototagning**:
    * Uppgiftsbeskrivning som ska visas när den som tilldelas öppnar uppgiften
    * Förfallodatum för en aktivitet, som beräknas baserat på den tid som aktiviteten startades
 
-1. Klicka på **OK** om du vill spara konfigurationsinställningarna.
+1. Klicka **OK** för att spara konfigurationsinställningarna.
 
-   På samma sätt kan du konfigurera följande åtgärder för arbetsflödet **produktfototagning**:
+   På samma sätt kan du konfigurera följande uppgifter för **Fotofotografering** arbetsflöde:
 
    * Överför fototagning
    * Retuschera produktfoto
    * Fotofotograferingsgranskning
    * Flytta till produktion
 
-   Utför en liknande procedur för att konfigurera uppgifterna i arbetsflödet **Produktfototagning (Commerce Integration)**.
+   Utför en liknande procedur för att konfigurera uppgifterna i **Arbetsflöde för produktfototagning (Commerce Integration)**.
 
 I det här avsnittet beskrivs hur du integrerar produktinformationshantering med ditt kreativa projekt.
 
 ## Starta ett projektarbetsflöde {#starting-a-project-workflow}
 
-1. Gå till ett produktfotoprojekt och tryck/klicka på ikonen **Lägg till arbete** på **arbetsflödeskortet**.
-1. Välj arbetsflödeskortet **Produktfototagning (Commerce Integration)** för att starta arbetsflödet Produktfototagning (Commerce Integration). Om produktinformationen inte är tillgänglig under /etc/commerce väljer du arbetsflödet **Produktfototagning** och startar arbetsflödet Produktfototagning.
+1. Navigera till ett produktfotoprojekt och tryck/klicka på **Lägg till arbete** ikonen på **Arbetsflöden** kort.
+1. Välj **Fotofoto (Commerce Integration)** arbetsflödeskort för att starta arbetsflödet för produktfototagning (Commerce Integration). Om produktinformationen inte är tillgänglig under /etc/commerce väljer du **Fotofotografering** arbetsflöde och starta arbetsflödet för produktfotografering.
 
    ![chlimage_1-140](assets/chlimage_1-140.png)
 
-1. Tryck/klicka på **Nästa** för att starta arbetsflödet i projektet.
+1. Tryck/klicka **Nästa** för att initiera arbetsflödet i projektet.
 1. Ange arbetsflödesinformation på nästa sida.
 
    ![chlimage_1-141](assets/chlimage_1-141.png)
 
-   Klicka på **Skicka** för att starta arbetsflödet för fototagning. Sidan med projektinformation för fotoprojektet visas.
+   Klicka **Skicka** för att starta arbetsflödet för fotografering. Sidan med projektinformation för fotoprojektet visas.
 
    ![chlimage_1-142](assets/chlimage_1-142.png)
 
@@ -181,19 +184,19 @@ I det här avsnittet beskrivs hur du integrerar produktinformationshantering med
 
 Arbetsflödet för fotografering omfattar flera uppgifter. Varje uppgift tilldelas till en användargrupp baserat på den konfiguration som har definierats för uppgiften.
 
-#### Skapa aktivitet för lista över fotografier {#create-shot-list-task}
+#### Skapa aktivitet för lista över bilder {#create-shot-list-task}
 
-Aktiviteten **Skapa scenlista** gör det möjligt för projektägaren att välja produkter för vilka bilder krävs. Baserat på det alternativ som användaren valt skapas en CSV-fil som innehåller grundläggande produktinformation.
+The **Skapa lista över bilder** gör att projektägaren kan välja produkter för vilka bilder krävs. Baserat på det alternativ som användaren valt skapas en CSV-fil som innehåller grundläggande produktinformation.
 
-1. Tryck/klicka på ellipserna i [aktivitetskortet](#tracking-project-progress) i projektmappen för att visa uppgiftsobjektet i arbetsflödet.
+1. Tryck/klicka på ellipserna i projektmappen i [Aktivitetskort](#tracking-project-progress) om du vill visa uppgiftsobjektet i arbetsflödet.
 
    ![chlimage_1-143](assets/chlimage_1-143.png)
 
-1. Välj aktiviteten **Skapa scenlista** och tryck/klicka sedan på ikonen **Öppna** i verktygsfältet.
+1. Välj **Skapa lista över bilder** och sedan trycka/klicka på **Öppna** -ikonen i verktygsfältet.
 
    ![chlimage_1-144](assets/chlimage_1-144.png)
 
-1. Granska aktivitetsinformationen och tryck/klicka sedan på knappen **Skapa scenlista**.
+1. Granska uppgiftsinformationen och tryck/klicka sedan på **Skapa lista över bilder** -knappen.
 
    ![chlimage_1-145](assets/chlimage_1-145.png)
 
@@ -201,22 +204,22 @@ Aktiviteten **Skapa scenlista** gör det möjligt för projektägaren att välja
 
    ![chlimage_1-146](assets/chlimage_1-146.png)
 
-1. Tryck/klicka på ikonen **Lägg till i Shotlist** för att skapa en CSV-fil som innehåller en lista över alla sådana produkter. Ett meddelande bekräftar att tagningslistan har skapats för de valda produkterna. Klicka på **Stäng** för att slutföra arbetsflödet.
-1. När du har skapat en tagningslista visas länken **Visa tagningslista**. Om du vill lägga till fler produkter i tagningslistan trycker/klickar du på **Lägg till i tagningslista**. I det här fallet läggs data till i den ursprungligen skapade tagningslistan.
+1. Tryck/klicka på **Lägg till i scenlista** om du vill skapa en CSV-fil som innehåller en lista över alla sådana produkter. Ett meddelande bekräftar att tagningslistan har skapats för de valda produkterna. Klicka **Stäng** för att slutföra arbetsflödet.
+1. När du har skapat en tagningslista visas **Visa lista över bilder** visas. Om du vill lägga till fler produkter i fotolistan trycker du/klickar **Lägg till i lista över bilder**. I det här fallet läggs data till i den ursprungligen skapade tagningslistan.
 
    ![chlimage_1-147](assets/chlimage_1-147.png)
 
-1. Tryck/klicka på **Visa fotolista** för att visa den nya fotolistan.
+1. Tryck/klicka **Visa lista över bilder** för att visa den nya tagningslistan.
 
    ![chlimage_1-148](assets/chlimage_1-148.png)
 
-   Om du vill redigera befintliga data eller lägga till nya data trycker/klickar du på **Redigera** i verktygsfältet. Endast fälten **Product **och **Description** kan redigeras.
+   Om du vill redigera befintliga data eller lägga till nya data trycker/klickar du **Redigera** i verktygsfältet. Endast **Product **och **Beskrivning** fält kan redigeras.
 
    ![chlimage_1-149](assets/chlimage_1-149.png)
 
-   När du har uppdaterat filen trycker/klickar du på **Spara** i verktygsfältet för att spara filen.
+   När du har uppdaterat filen trycker/klickar du **Spara** i verktygsfältet för att spara filen.
 
-1. När du har lagt till produkterna trycker/klickar du på ikonen **Complete** på sidan **Create Shot List **aktivitetsinformation för att markera uppgiften som slutförd. Du kan lägga till en valfri kommentar.
+1. När du har lagt till produkterna trycker du på/klickar på **Slutförd** på sidan **Create Shot List **aktivitetsinformation för att markera uppgiften som slutförd. Du kan lägga till en valfri kommentar.
 
    När aktiviteten har slutförts introduceras följande ändringar i projektet:
 
@@ -224,66 +227,66 @@ Aktiviteten **Skapa scenlista** gör det möjligt för projektägaren att välja
    * Metadata för resurserna kan redigeras med Assets-konsolen, även innan fotografen visar bilderna.
    * Mappen Fototagning skapas som lagrar de bilder som fotografen tillhandahåller. Mappen Fototagning innehåller undermappar för varje produktpost i listan Fototagning.
 
-   För arbetsflödet för produktfototagning (utan integration med andra program) är Upload Shot List den första uppgiften. Tryck/klicka på **Överför fotolista** om du vill överföra en **fillista.csv**-fil. CSV-filen ska innehålla produkt-ID:t. De andra fälten är valfria. Du kan använda dem för att mappa resurser till produkter.
+   För arbetsflödet för produktfototagning (utan integration med andra program) är Upload Shot List den första uppgiften. Tryck/klicka **Överför bildlista** för att överföra en **fillista.csv** -fil. CSV-filen ska innehålla produkt-ID:t. De andra fälten är valfria. Du kan använda dem för att mappa resurser till produkter.
 
-### Överför aktivitet för lista över bilder {#upload-shot-list-task}
+### Uppgift för överföring av lista över bilder {#upload-shot-list-task}
 
 Den här uppgiften ingår i arbetsflödet för produktfotografering. Du utför den här uppgiften om produktinformation inte är tillgänglig i AEM. I det här fallet överför du en lista över produkter i en CSV-fil för vilka bildresurser krävs. Baserat på informationen i CSV-filen kan du mappa bildobjekt till produkterna.
 
-Använd länken **Visa lista** under projektkortet i föregående procedur för att hämta en CSV-exempelfil. Granska exempelfilen för att ta reda på det vanliga innehållet i en CSV-fil.
+Använd **Visa lista över bilder** under projektkortet i föregående procedur för att hämta en CSV-exempelfil. Granska exempelfilen för att ta reda på det vanliga innehållet i en CSV-fil.
 
-Produktlistan eller CSV-filen kan innehålla fält, till exempel **Kategori, Produkt, ID, Beskrivning** och **Sökväg**. Fältet **Id** är obligatoriskt och innehåller produkt-ID:t. De andra fälten är valfria.
+Produktlistan eller CSV-filen kan innehålla fält, t.ex. **Kategori, produkt, ID, beskrivning** och **Bana**. The **ID** fältet är obligatoriskt och innehåller produkt-id:t. De andra fälten är valfria.
 
-En produkt kan tillhöra en viss kategori. Produktkategorin kan listas i CSV-filen under kolumnen **Kategori**. Fältet **Produkt** innehåller namnet på produkten. I fältet **Beskrivning** anger du produktbeskrivningen eller instruktionerna för fotografen.
+En produkt kan tillhöra en viss kategori. Produktkategorin kan listas i CSV-filen under **Kategori** kolumn. The **Produkt** -fältet innehåller namnet på produkten. I **Beskrivning** anger du produktbeskrivningen eller instruktionerna för fotografen.
 
 >[!NOTE]
 >
->Namnet på de bilder som ska överföras ska börja med **&lt;ProductId>_&quot;** där det finns referenser till produkt-ID från fältet **Id** i filen *short.csv*. För en produkt i listan över tagningar med **ID 39712** kan du till exempel överföra filer med namnen **397122_highcontrast.jpg**, **397122_lowlight.png** och så vidare på.
+>Namnet på de bilder som ska överföras måste börja med &quot;**&lt;productid>_&quot;** där produkt-ID refereras från **ID** i *fillista.csv* -fil. För en produkt i bildlistan med **ID 397122** kan du överföra filer med namn **397122_highcontrast.jpg**, **397122_lowlight.png** och så vidare.
 
-1. Tryck/klicka på ellipserna i [aktivitetskortet](#tracking-project-progress) i projektmappen för att visa listan med uppgifter i arbetsflödet.
-1. Välj aktiviteten **Överför fotolista** och tryck/klicka sedan på ikonen **Öppna** i verktygsfältet.
+1. Tryck/klicka på ellipserna i projektmappen i [Aktivitetskort](#tracking-project-progress) om du vill visa en lista med uppgifter i arbetsflödet.
+1. Välj **Överför bildlista** och sedan trycka/klicka på **Öppna** -ikonen i verktygsfältet.
 
    ![chlimage_1-150](assets/chlimage_1-150.png)
 
-1. Granska uppgiftsinformationen och tryck/klicka sedan på knappen **Överför fotolista**.
+1. Granska uppgiftsinformationen och tryck/klicka sedan på **Överför bildlista** -knappen.
 
    ![chlimage_1-151](assets/chlimage_1-151.png)
 
-1. Tryck/klicka på knappen **Överför fotolista** om du vill överföra CSV-filen med filename-fillista.csv. Arbetsflödet identifierar den här filen som en källa som kan användas för att extrahera produktdata för nästa uppgift.
+1. Tryck/klicka på **Överför bildlista** om du vill överföra CSV-filen med filnamnet short.csv. Arbetsflödet identifierar den här filen som en källa som kan användas för att extrahera produktdata för nästa uppgift.
 1. Överför en CSV-fil som innehåller produktinformation i lämpligt format. Länken **Visa överförda resurser **visas under kortet efter att CSV-filen har överförts.
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
 
-   Klicka på ikonen **Complete** för att slutföra uppgiften.
+   Klicka på **Slutförd** för att slutföra uppgiften.
 
-1. Tryck/klicka på ikonen **Complete** för att slutföra uppgiften.
+1. Tryck/klicka på **Slutförd** för att slutföra uppgiften.
 
-### Överför fototagningsaktivitet {#upload-photo-shoot-task}
+### Ladda upp fototagningsaktivitet {#upload-photo-shoot-task}
 
-Om du är redigerare kan du överföra tagningar för de produkter som listas i filen **short.csv** som skapades eller överfördes i föregående uppgift.
+Om du är redigerare kan du överföra bilder för de produkter som listas i **fillista.csv** som skapades eller överfördes i föregående uppgift.
 
-Namnet på de bilder som ska överföras ska börja med **&quot;&lt;productId>_&quot;** där produkt-id refereras från fältet **Id** i filen **short.csv**. För en produkt med **ID 397122** i tagningslistan kan du till exempel överföra filer med namnen **397122_highcontrast.jpg**, **397122_lowlight.png** och så vidare på.
+Namnet på de bilder som ska överföras ska börja med **&quot;&lt;productid>_&quot;** där produkt-ID refereras från **ID** i **fillista.csv** -fil. För en produkt med **ID 397122** i tagningslistan kan du överföra filer med namn **397122_highcontrast.jpg**, **397122_lowlight.png** och så vidare.
 
-Du kan antingen överföra bilderna direkt eller överföra en ZIP-fil som innehåller bilderna. Baserat på deras namn placeras bilderna i respektive produktmapp i mappen **Fototagning**.
+Du kan antingen överföra bilderna direkt eller överföra en ZIP-fil som innehåller bilderna. Baserat på deras namn placeras bilderna i respektive produktmapp i **Fototagning** mapp.
 
-1. Tryck/klicka på ellipserna i [aktivitetskortet](#tracking-project-progress) i projektmappen för att visa uppgiftsobjektet i arbetsflödet.
-1. Välj aktiviteten **Överför fototagning** och tryck/klicka sedan på ikonen **Öppna** i verktygsfältet.
+1. Under projektmappen trycker/klickar du på ellipserna i [Aktivitetskort](#tracking-project-progress) om du vill visa uppgiftsobjektet i arbetsflödet.
+1. Välj **Överför fototagning** och sedan trycka/klicka på **Öppna** -ikonen i verktygsfältet.
 
    ![chlimage_1-153](assets/chlimage_1-153.png)
 
 1. Tryck/klicka på **Överför fototagning **och överför fototagningsbilderna.
-1. Tryck/klicka på ikonen **Complete** i verktygsfältet för att slutföra uppgiften.
+1. Tryck/klicka på **Slutförd** ikonen i verktygsfältet för att slutföra uppgiften.
 
 ### Retuschera fototagningsaktivitet {#retouch-photo-shoot-task}
 
 Om du har redigeringsbehörighet utför du åtgärden Retuschera fototagning för att redigera de bilder som överförts till mappen Fototagning.
 
-1. Tryck/klicka på ellipserna i [aktivitetskortet](#tracking-project-progress) i projektmappen för att visa uppgiftsobjektet i arbetsflödet.
-1. Välj aktiviteten **Retuschera fototagning** och tryck/klicka sedan på ikonen **Öppna** i verktygsfältet.
+1. Under projektmappen trycker/klickar du på ellipserna i [Aktivitetskort](#tracking-project-progress) om du vill visa uppgiftsobjektet i arbetsflödet.
+1. Välj **Retuschera fototagning** och sedan trycka/klicka på **Öppna** -ikonen i verktygsfältet.
 
    ![chlimage_1-154](assets/chlimage_1-154.png)
 
-1. Tryck/klicka på länken **Visa överförda resurser** på sidan **Retuschera fototagning** för att bläddra bland de överförda bilderna.
+1. Tryck/klicka på **Visa överförda resurser** i **Retuschera fototagning** för att bläddra bland de överförda bilderna.
 
    ![chlimage_1-155](assets/chlimage_1-155.png)
 
@@ -291,18 +294,18 @@ Om du har redigeringsbehörighet utför du åtgärden Retuschera fototagning fö
 
    ![chlimage_1-156](assets/chlimage_1-156.png)
 
-1. Tryck/klicka på ikonen **Complete** i verktygsfältet för att slutföra uppgiften.
+1. Tryck/klicka på **Slutförd** ikonen i verktygsfältet för att slutföra uppgiften.
 
 ### Granska och godkänn uppgift {#review-and-approve-task}
 
 I det här fallet granskar du fotot som överförts av en fotograf och markerar bilderna som godkända för användning.
 
-1. Tryck/klicka på ellipserna i [aktivitetskortet](#tracking-project-progress) i projektmappen för att visa uppgiftsobjektet i arbetsflödet.
-1. Välj aktiviteten **Granska och godkänn** och tryck/klicka sedan på ikonen **Öppna** i verktygsfältet.
+1. Under projektmappen trycker/klickar du på ellipserna i [Aktivitetskort](#tracking-project-progress) om du vill visa uppgiftsobjektet i arbetsflödet.
+1. Välj **Granska och godkänn** och sedan trycka/klicka på **Öppna** -ikonen i verktygsfältet.
 
    ![chlimage_1-157](assets/chlimage_1-157.png)
 
-1. På sidan **Granska och godkänn** tilldelar du granskningsaktiviteten till roll, till exempel Granskare, och sedan trycker/klickar du på **Granska **för att börja granska de överförda produktbilderna.
+1. I **Granska och godkänn** tilldelar du granskningsaktiviteten till roll, till exempel Granskare, och sedan trycker/klickar du på **Review **för att börja granska de överförda produktbilderna.
 
    ![chlimage_1-158](assets/chlimage_1-158.png)
 
@@ -315,7 +318,7 @@ I det här fallet granskar du fotot som överförts av en fotograf och markerar 
    >[!NOTE]
    Du kan utelämna vissa produkter utan någon bild. Senare kan du göra om uppgiften och markera den som slutförd när den är klar.
 
-1. Tryck/klicka på **Complete**. De godkända bilderna länkas till de tomma resurserna som skapades.
+1. Tryck/klicka **Slutförd**. De godkända bilderna länkas till de tomma resurserna som skapades.
 
 Du kan navigera till projektresurser med resursgränssnittet och verifiera godkända bilder.
 
@@ -330,26 +333,26 @@ I arbetsflödet för produktfototagning (utan integration med andra program) har
 
 Den här aktiviteten flyttar de godkända resurserna till den produktionsklara mappen så att de blir tillgängliga för användning.
 
-1. Tryck/klicka på ellipserna i [aktivitetskortet](#tracking-project-progress) i projektmappen för att visa uppgiftsobjektet i arbetsflödet.
-1. Välj aktiviteten **Flytta till produktion** och tryck/klicka sedan på ikonen **Öppna** i verktygsfältet.
+1. Under projektmappen trycker/klickar du på ellipserna i [Aktivitetskort](#tracking-project-progress) om du vill visa uppgiftsobjektet i arbetsflödet.
+1. Välj **Flytta till produktion** och sedan trycka/klicka på **Öppna** -ikonen i verktygsfältet.
 
    ![chlimage_1-160](assets/chlimage_1-160.png)
 
-1. Om du vill visa godkända resurser för fototagningen innan du flyttar dem till produktionsklar mapp klickar du på länken **Visa godkända resurser** under miniatyrbilden för projektet på **aktivitetssidan Flytta till produktion**.
+1. Om du vill visa godkända resurser för fototagningen innan du flyttar dem till produktionsklar mapp klickar du på knappen **Visa godkända resurser** länk under projektets miniatyrbild på sidan **Flytta till produktion** aktivitetssida.
 
    ![chlimage_1-161](assets/chlimage_1-161.png)
 
-1. Ange sökvägen till den produktionsklara mappen i fältet **Flytta till**.
+1. Ange sökvägen till den produktionsklara mappen i **Flytta till** fält.
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
-   Tryck/klicka på **Flytta till produktion**. Stäng bekräftelsemeddelandet. Resurserna flyttas till den angivna sökvägen och en snurruppsättning skapas automatiskt för de godkända resurserna för varje produkt baserat på mapphierarkin.
+   Tryck/klicka **Flytta till produktion**. Stäng bekräftelsemeddelandet. Resurserna flyttas till den angivna sökvägen och en snurruppsättning skapas automatiskt för de godkända resurserna för varje produkt baserat på mapphierarkin.
 
-1. Tryck/klicka på ikonen **Complete** i verktygsfältet. Arbetsflödet slutförs när det sista steget markeras som slutfört.
+1. Tryck/klicka på **Slutförd** -ikonen i verktygsfältet. Arbetsflödet slutförs när det sista steget markeras som slutfört.
 
 ## Visa DAM-resursmetadata {#viewing-dam-asset-metadata}
 
-När du har godkänt mediefilerna länkas de till motsvarande produkter. På sidan [Egenskaper](/help/assets/managing-assets-touch-ui.md#editing-properties) för de godkända resurserna finns nu en extra **produktdatafliken** (länkad produktinformation). På den här fliken visas produktinformation, SKU-nummer och annan produktrelaterad information som länkar resursen. Tryck/klicka på ikonen **Redigera** för att uppdatera en resursegenskap. Produktrelaterad information förblir skrivskyddad.
+När du har godkänt mediefilerna länkas de till motsvarande produkter. The [Egenskaper](/help/assets/managing-assets-touch-ui.md#editing-properties) av de godkända tillgångarna har nu ytterligare **Produktdata** (länkad produktinformation). På den här fliken visas produktinformation, SKU-nummer och annan produktrelaterad information som länkar resursen. Tryck/klicka på **Redigera** om du vill uppdatera en resursegenskap. Produktrelaterad information förblir skrivskyddad.
 
 Tryck/klicka på länken som visas för att navigera till respektive produktinformationssida i produktkonsolen som resursen är associerad med.
 
@@ -357,29 +360,29 @@ Tryck/klicka på länken som visas för att navigera till respektive produktinfo
 
 Du kan anpassa arbetsflödena för projektfototagning baserat på behov. Detta är en valfri rollbaserad uppgift som du utför för att ange värdet för en variabel i projektet. Senare kan du använda det konfigurerade värdet för att komma fram till ett beslut.
 
-1. Klicka på/tryck på AEM logotyp och navigera sedan till **Verktyg** > **Arbetsflöde** > **Modeller** för att öppna sidan Arbetsflödesmodeller.
-1. Välj arbetsflödet för **produktfototagning (Commerce Integration)** eller **produktfototagning** och klicka/tryck på **Redigera** i verktygsfältet för att öppna arbetsflödet i redigeringsläge.
-1. Öppna **projekten** i sidosparken och dra steget **Skapa rollbaserad projektaktivitet** till arbetsflödet.
+1. Klicka/tryck på AEM logotyp och navigera sedan till **verktyg** > **Arbetsflöde** > **Modeller** för att öppna sidan Arbetsflödesmodeller.
+1. Välj **Fotofoto (Commerce Integration)** arbetsflöde eller **Fotofotografering** arbetsflöde och klicka/peka **Redigera** i verktygsfältet för att öppna arbetsflödet i redigeringsläge.
+1. Öppna **Projekt** uppgifter i sidosparken och dra **Skapa rollbaserad projektaktivitet** steg till arbetsflödet.
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
 
-1. Öppna steget **Rollbaserad aktivitet**.
-1. På fliken **Aktivitet** anger du ett namn för aktiviteten som ska visas i **Aktivitet**-listan. Du kan också tilldela en roll uppgiften, ange standardprioritet, ange en beskrivning och ange en tidpunkt när uppgiften förfaller.
+1. Öppna **Rollbaserad aktivitet** steg.
+1. I **Uppgift** anger du ett namn för uppgiften som ska visas på fliken **Uppgift** Lista. Du kan också tilldela en roll uppgiften, ange standardprioritet, ange en beskrivning och ange en tidpunkt när uppgiften förfaller.
 
    ![chlimage_1-164](assets/chlimage_1-164.png)
 
-1. Ange åtgärderna för uppgiften på fliken **Routning**. Om du vill lägga till flera åtgärder trycker/klickar du på länken **Lägg till objekt **.
+1. I **Routning** anger du åtgärderna för uppgiften. Om du vill lägga till flera åtgärder trycker/klickar du på länken **Lägg till objekt **.
 
    ![chlimage_1-165](assets/chlimage_1-165.png)
 
-1. När du har lagt till alternativen klickar du på **OK** för att lägga till ändringarna i steget.
+1. När du har lagt till alternativen klickar du på **OK** om du vill lägga till ändringarna i steget.
 
    >[!NOTE]
-   Om du trycker/klickar på **OK** sparas inte ändringarna i arbetsflödet. Om du vill spara ändringarna i arbetsflödet trycker/klickar du på **Spara**.
+   Tryck/klicka **OK** sparar inte ändringarna i arbetsflödet. Om du vill spara ändringarna i arbetsflödet trycker du/klickar **Spara**.
 
-1. Öppna **arbetsflödesuppgifterna** från sidosparken och lägg till en **Gå till**-aktivitet.
-1. Öppna aktiviteten **Gå till** och tryck/klicka på fliken **Process**.
-1. Ange följande kod i rutan **Skript**:
+1. Öppna **Arbetsflöde** aktiviteter från sidokickning och lägga till en **Gå** uppgift.
+1. Öppna **Gå** och trycka/klicka på **Process** -fliken.
+1. Ange följande kod i dialogrutan **Skript** box:
 
 ```
    function check() {
@@ -406,20 +409,19 @@ Mer information om skript i arbetsflödessteg finns i [Definiera en regel för e
 
 ![chlimage_1-166](assets/chlimage_1-166.png)
 
-1. Tryck/klicka på **OK**.
+1. Tryck/klicka **OK**.
 
-1. Tryck/klicka på **Spara** för att spara arbetsflödet.
+1. Tryck/klicka **Spara** för att spara arbetsflödet.
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
-1. En ny accepterande uppgift för projektägare visas nu när [aktiviteten Flytta till produktion](#move-to-production-task) har slutförts och tilldelats ägaren.
+1. En ny accepterande uppgift för projektägare visas nu efter [Flytta till produktionsuppgift](#move-to-production-task) har slutförts och tilldelats ägaren.
 
    Användaren i rollen Ägare kan slutföra uppgiften och välja en åtgärd (från listan med åtgärder som lagts till i arbetsflödesstegskonfigurationerna) i listan i kommentarspopup-fönstret.
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
-   Välj lämpligt alternativ och klicka på **Fullständig** för att köra **Gå till steg** i arbetsflödet.
+   Välj lämpligt alternativ och klicka på **Slutförd** för att köra **Gå till steg** i arbetsflödet.
 
 >[!NOTE]
-När du startar en server cachelagrar uppgiftslistservleten mappningarna mellan uppgiftstyper och URL:er som definieras under `/libs/cq/core/content/projects/tasktypes`. Du kan sedan utföra den vanliga övertäckningen och lägga till anpassade uppgiftstyper genom att placera dem under `/apps/cq/core/content/projects/tasktypes`.
-
+När du startar en server cachelagrar uppgiftslistservleten mappningarna mellan uppgiftstyper och URL:er som definieras under `/libs/cq/core/content/projects/tasktypes`. Sedan kan du utföra den vanliga övertäckningen och lägga till egna uppgiftstyper genom att placera dem under `/apps/cq/core/content/projects/tasktypes`.

@@ -10,14 +10,18 @@ topic-tags: introduction, author
 discoiquuid: c7a1d13e-cb61-4082-8ae7-7f5eee9e0a51
 feature: Adaptive Forms
 exl-id: 62f1ddd3-9fc2-49dd-b588-0c3520e1cdd2
-source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2977'
+source-wordcount: '3013'
 ht-degree: 0%
 
 ---
 
 # Introduktion till utveckling av anpassningsbara formulär  {#introduction-to-authoring-adaptive-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Översikt {#overview}
 

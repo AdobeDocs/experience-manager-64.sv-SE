@@ -3,14 +3,18 @@ title: Konfigurera RTF-redigeraren
 description: Lär dig att konfigurera AEM RTF-redigerare.
 contentOwner: AG
 exl-id: 2d5e9ada-1567-43dc-ab19-6891e20e1d0b
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2659'
+source-wordcount: '2695'
 ht-degree: 0%
 
 ---
 
 # Konfigurera RTF-redigeraren {#configure-the-rich-text-editor}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Med textredigeraren får författarna ett stort antal funktioner för redigering av textinnehåll. Ikoner, markeringsrutor, verktygsfält och menyer finns för WYSIWYG-textredigering.
 
@@ -46,10 +50,10 @@ Författare kan skapa och redigera textinnehåll i AEM med de olika komponentlä
 
 | Redigeringsläge | Redigeringsområde | Rekommenderade funktioner som ska aktiveras | Pekgränssnitt | Klassiskt användargränssnitt |
 |--- |--- |--- |--- |--- |
-| Textbunden | On-place editing for quick, minor edits; Formatera utan att öppna en dialogruta | Minimala RTE-funktioner | J | J |
-| RTE helskärm | Täcker hela sidan | Alla RTE-funktioner som krävs | J | N |
-| Dialog | Dialogrutan visas ovanpå sidinnehållet men täcker inte hela sidan | Alla nödvändiga RTE-funktioner i Classic UI. aktivera funktioner i Touch-gränssnittet | J | J |
-| Dialogruta i helskärmsläge | Samma som helskärmsläge. innehåller fält i dialogrutan vid sidan om textredigeringsprojektet | Alla RTE-funktioner som krävs | J | N |
+| Textbunden | On-place editing for quick, minor edits; Formatera utan att öppna en dialogruta | Minimala RTE-funktioner | Y | Y |
+| RTE helskärm | Täcker hela sidan | Alla RTE-funktioner som krävs | Y | N |
+| Dialog | Dialogrutan visas ovanpå sidinnehållet men täcker inte hela sidan | Alla nödvändiga RTE-funktioner i Classic UI. aktivera funktioner i Touch-gränssnittet | Y | Y |
+| Dialogruta i helskärmsläge | Samma som helskärmsläge. innehåller fält i dialogrutan vid sidan om textredigeringsprojektet | Alla RTE-funktioner som krävs | Y | N |
 
 >[!NOTE]
 >
@@ -121,7 +125,7 @@ I följande tabell visas de aktuella plugin-programmen:
 | stavningskontroll | checkText | [Språkmedveten stavningskontroll](/help/sites-administering/configure-rich-text-editor-plug-ins.md#add-dict). |
 | stilar | stilar | Stöd för formatering med en CSS-klass. [Lägga till nya textformat](/help/sites-administering/configure-rich-text-editor-plug-ins.md#text-styles) om du vill lägga till (eller utöka) egna format för användning med text. |
 | nedsänkt | nedsänkt upphöjd text | Tillägg till de grundläggande formaten, med både sub- och super-script. |
-| tabell | tabell borttagbar infogning ta bort infogkolumn borttagbar kolumn cellprops mergeceller splitcell markervalkolumner | Se [konfigurera tabellformat](/help/sites-administering/configure-rich-text-editor-plug-ins.md#table-styles)om du vill lägga till egna format för hela tabeller eller enskilda celler. |
+| table | tabell borttagbar infogning ta bort infogkolumn borttagbar kolumn cellprops mergeceller splitcell markervalkolumner | Se [konfigurera tabellformat](/help/sites-administering/configure-rich-text-editor-plug-ins.md#table-styles)om du vill lägga till egna format för hela tabeller eller enskilda celler. |
 | ångra | ångra gör om | Historikstorlek för [ångra och göra om](/help/sites-administering/configure-rich-text-editor-plug-ins.md#undo-history) åtgärder. |
 
 >[!NOTE]
@@ -135,9 +139,9 @@ The [RTE-redigeringsläge (och användargränssnittet)](#editingmodes) som du an
 | Redigeringsläge | Plats för Touch UI | Plats för Classic UI |
 |---|---|---|
 | Textbunden | `cq:editConfig/cq:inplaceEditing` | `cq:editConfig/cq:inplaceEditing` |
-| Helskärm | `cq:editConfig/cq:inplaceEditing` | Ej relevant |
+| Helskärm | `cq:editConfig/cq:inplaceEditing` | Ej tillämpligt |
 | Dialog | `cq:dialog` | `dialog` |
-| Dialogrutan Helskärm | `cq:dialog` | Ej relevant |
+| Dialogrutan Helskärm | `cq:dialog` | Ej tillämpligt |
 
 >[!NOTE]
 >

@@ -1,24 +1,27 @@
 ---
 title: Delta i arbetsflöden
-seo-title: Delta i arbetsflöden
+seo-title: Participating in Workflows
 description: Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en aktivitet på en sida eller en resurs.
-seo-description: Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en aktivitet på en sida eller en resurs.
+seo-description: Workflows typically include steps that require a person to perform an activity on a page or asset.
 uuid: 3e195da4-b25e-459d-9a4c-84549f62d7ff
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 37c8b1bd-0e60-42d2-80ed-dece3f5c2342
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 7b645497-ddbf-403c-9e78-5e845f6bda50
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1535'
+source-wordcount: '1551'
 ht-degree: 1%
 
 ---
 
-
 # Delta i arbetsflöden{#participating-in-workflows}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en aktivitet på en sida eller en resurs. Arbetsflödet väljer en användare eller grupp som ska utföra aktiviteten och tilldelar en arbetsuppgift till den personen eller gruppen. Användaren får ett meddelande och kan sedan vidta lämpliga åtgärder:
 
@@ -33,11 +36,11 @@ Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en akti
 
 När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas olika varningar och/eller meddelanden:
 
-* Din [aviseringsindikator](/help/sites-authoring/inbox.md) (verktygsfält) ökar:
+* Dina [meddelande](/help/sites-authoring/inbox.md) Indikatorn (verktygsfältet) ökas:
 
    ![](do-not-localize/wf-57.png)
 
-* Objektet visas i din [Inkorg](/help/sites-authoring/inbox.md):
+* Objektet kommer att listas i meddelandet [Inkorg](/help/sites-authoring/inbox.md):
 
    ![wf-58](assets/wf-58.png)
 
@@ -54,12 +57,12 @@ När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas o
 
    >[!NOTE]
    >
-   >Statusfältet är endast synligt för användare med arbetsflödesbehörighet. till exempel medlemmar i gruppen `workflow-users`.
+   >Statusfältet är endast synligt för användare med arbetsflödesbehörighet. till exempel medlemmar i `workflow-users` grupp.
    >
    >
    >Åtgärder visas när den aktuella användaren är direkt involverad i det aktuella steget i arbetsflödet.
 
-* När **tidslinjen** är öppen för resursen visas arbetsflödessteget. När du klickar/trycker på varningsbanderollen visas även de tillgängliga åtgärderna:
+* När **Tidslinje** är öppet för resursen visas arbetsflödessteget. När du klickar/trycker på varningsbanderollen visas även de tillgängliga åtgärderna:
 
    ![wf-64](assets/wf-64.png)
 
@@ -77,36 +80,36 @@ Du kan slutföra ett deltagarsteg från:
 * [Inkorgen](#completing-a-participant-step-inbox)
 * [sidredigeraren](#completing-a-participant-step-page-editor)
 * [Tidslinje](#completing-a-participant-step-timeline)
-* när [ett arbetsflödesobjekt öppnas för att visa information](#opening-a-workflow-item-to-view-details-and-take-actions).
+* när [öppna ett arbetsflödesobjekt för att visa information](#opening-a-workflow-item-to-view-details-and-take-actions).
 
-#### Slutför ett deltagarsteg - inkorgen {#completing-a-participant-step-inbox}
+#### Slutför ett deltagarsteg - Inkorg {#completing-a-participant-step-inbox}
 
 Gör så här för att slutföra arbetsuppgiften:
 
-1. Öppna **[AEM Inkorg](/help/sites-authoring/inbox.md)**.
+1. Öppna **[AEM](/help/sites-authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
-1. Välj **Fullständig** i verktygsfältet.
-1. Dialogrutan **Fullständigt arbetsobjekt** öppnas. Välj **Nästa steg** i listrutan och lägg till en **kommentar** om det behövs.
+1. Välj **Slutförd** i verktygsfältet.
+1. The **Slutför arbetsuppgift** öppnas. Välj **Nästa steg** i listrutan och lägg till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
 
 #### Slutför ett deltagarsteg - sidredigeraren {#completing-a-participant-step-page-editor}
 
 Gör så här för att slutföra arbetsuppgiften:
 
-1. Öppna sidan [för redigering](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
-1. Välj **Fullständig** i statusfältet högst upp.
-1. Dialogrutan **Fullständigt arbetsobjekt** öppnas. Välj **Nästa steg** i listrutan och lägg till en **kommentar** om det behövs.
+1. Öppna [sida för redigering](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
+1. Välj **Slutförd** i statusfältet högst upp.
+1. The **Slutför arbetsuppgift** öppnas. Välj **Nästa steg** i listrutan och lägg till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
 
 #### Slutför ett deltagarsteg - tidslinje {#completing-a-participant-step-timeline}
 
 Du kan också använda tidslinjen för att slutföra och gå vidare ett steg:
 
-1. Markera önskad sida och öppna **tidslinjen** (eller öppna **tidslinjen** och markera sidan):
+1. Välj önskad sida och öppna **Tidslinje** (eller öppna **Tidslinje** och markera sidan):
 
    ![wf-65](assets/wf-65.png)
 
-1. Klicka/tryck på varningsbanderollen för att visa tillgängliga åtgärder. Välj **Avancerat**:
+1. Klicka/tryck på varningsbanderollen för att visa tillgängliga åtgärder. Välj **Förskott**:
 
    ![wf-66](assets/wf-66.png)
 
@@ -114,7 +117,7 @@ Du kan också använda tidslinjen för att slutföra och gå vidare ett steg:
 
    ![wf-67](assets/wf-67.png)
 
-1. Välj **Avancerat** för att bekräfta åtgärden.
+1. Välj **Förskott** för att bekräfta åtgärden.
 
 ### Delegera ett deltagarsteg {#delegating-a-participant-step}
 
@@ -136,33 +139,33 @@ Du kan delegera ett deltagarsteg från antingen:
 * [Inkorgen](#delegating-a-participant-step-inbox)
 * [sidredigeraren](#delegating-a-participant-step-page-editor)
 * [Tidslinje](#delegating-a-participant-step-timeline)
-* när [ett arbetsflödesobjekt öppnas för att visa information](#opening-a-workflow-item-to-view-details-and-take-actions).
+* när [öppna ett arbetsflödesobjekt för att visa information](#opening-a-workflow-item-to-view-details-and-take-actions).
 
-#### Delegera ett deltagarsteg - inkorgen {#delegating-a-participant-step-inbox}
+#### Delegera ett deltagarsteg - Inkorg {#delegating-a-participant-step-inbox}
 
 Använd följande procedur för att delegera en arbetsuppgift:
 
-1. Öppna **[AEM Inkorg](/help/sites-authoring/inbox.md)**.
+1. Öppna **[AEM](/help/sites-authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
 1. Välj **Delegera** i verktygsfältet.
-1. Dialogrutan öppnas. Ange **Användare** i listrutan (kan också vara en grupp) och lägg till en **kommentar** om det behövs.
+1. Dialogrutan öppnas. Ange **Användare** i listrutan (det kan också vara en grupp) och lägga till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
 
 #### Delegera ett deltagarsteg - sidredigeraren {#delegating-a-participant-step-page-editor}
 
 Använd följande procedur för att delegera en arbetsuppgift:
 
-1. Öppna sidan [för redigering](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
+1. Öppna [sida för redigering](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
 1. Välj **Delegera** i statusfältet högst upp.
-1. Dialogrutan öppnas. Ange **Användare** i listrutan (kan också vara en grupp) och lägg till en **kommentar** om det behövs.
+1. Dialogrutan öppnas. Ange **Användare** i listrutan (det kan också vara en grupp) och lägga till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
 
 #### Delegera ett deltagarsteg - tidslinje {#delegating-a-participant-step-timeline}
 
 Du kan också använda tidslinjen för att delegera och/eller tilldela ett steg:
 
-1. Markera önskad sida och öppna **tidslinjen** (eller öppna **tidslinjen** och markera sidan).
-1. Klicka/tryck på varningsbanderollen för att visa tillgängliga åtgärder. Välj **Ändra tilldelare**:
+1. Välj önskad sida och öppna **Tidslinje** (eller öppna **Tidslinje** och markera sidan).
+1. Klicka/tryck på varningsbanderollen för att visa tillgängliga åtgärder. Välj **Ändra tilldelad**:
 
    ![wf-69](assets/wf-69.png)
 
@@ -172,7 +175,7 @@ Du kan också använda tidslinjen för att delegera och/eller tilldela ett steg:
 
 1. Välj **Tilldela** för att bekräfta åtgärden.
 
-### Utför steg tillbaka på ett deltagarsteg {#performing-step-back-on-a-participant-step}
+### Stega bakåt i ett deltagarsteg {#performing-step-back-on-a-participant-step}
 
 Om du upptäcker att ett steg, eller en serie steg, måste upprepas, kan du stega tillbaka. På så sätt kan du välja ett steg som inträffade tidigare i arbetsflödet för ombearbetning. Arbetsflödet återgår till det steg du anger och fortsätter sedan därifrån.
 
@@ -186,33 +189,33 @@ Du kan utföra steg tillbaka för ett deltagarsteg från antingen:
 * [Inkorgen](#performing-step-back-on-a-participant-step-inbox)
 * [sidredigeraren](#performing-step-back-on-a-participant-step-page-editor)
 * [Tidslinje](#performing-step-back-on-a-participant-step-timeline)
-* när [ett arbetsflödesobjekt öppnas för att visa information](#opening-a-workflow-item-to-view-details-and-take-actions).
+* när [öppna ett arbetsflödesobjekt för att visa information](#opening-a-workflow-item-to-view-details-and-take-actions).
 
-#### Utför steg bakåt i ett deltagarsteg - inkorgen {#performing-step-back-on-a-participant-step-inbox}
+#### Utför steg tillbaka på ett deltagarsteg - inkorgen {#performing-step-back-on-a-participant-step-inbox}
 
 Använd följande procedur för att stega bakåt:
 
-1. Öppna **[AEM Inkorg](/help/sites-authoring/inbox.md)**.
+1. Öppna **[AEM](/help/sites-authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
-1. Välj **Gå bakåt** för att öppna dialogrutan.
+1. Välj **Stega bakåt** för att öppna dialogrutan.
 
-1. Ange **Föregående steg** och lägg till en **kommentar** om det behövs.
+1. Ange **Föregående steg** och lägga till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
 
-#### Utför steg bakåt i ett deltagarsteg - sidredigeraren {#performing-step-back-on-a-participant-step-page-editor}
+#### Utför steg tillbaka på deltagarsteget - sidredigeraren {#performing-step-back-on-a-participant-step-page-editor}
 
 Använd följande procedur för att stega bakåt:
 
-1. Öppna sidan [för redigering](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
-1. Välj **Gå bakåt** i statusfältet högst upp.
-1. Ange **Föregående steg** och lägg till en **kommentar** om det behövs.
+1. Öppna [sida för redigering](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
+1. Välj **Stega bakåt** i statusfältet högst upp.
+1. Ange **Föregående steg** och lägga till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
 
-#### Utför steg bakåt i ett deltagarsteg - tidslinje {#performing-step-back-on-a-participant-step-timeline}
+#### Stega bakåt i ett deltagarsteg - tidslinje {#performing-step-back-on-a-participant-step-timeline}
 
 Du kan också använda tidslinjen för att återställa (steg) till ett tidigare steg:
 
-1. Markera önskad sida och öppna **tidslinjen** (eller öppna **tidslinjen** och markera sidan).
+1. Välj önskad sida och öppna **Tidslinje** (eller öppna **Tidslinje** och markera sidan).
 1. Klicka/tryck på varningsbanderollen för att visa tillgängliga åtgärder. Välj **Återställ**:
 
    ![wf-69-1](assets/wf-69-1.png)
@@ -229,7 +232,7 @@ Visa information om arbetsflödesuppgiften och vidta lämpliga åtgärder.
 
 Arbetsflödesinformationen visas i flikar och lämpliga åtgärder är tillgängliga i verktygsfältet:
 
-* **** WORKITEMtab:
+* **ARBETSOBJEKT** tab:
 
    ![wf-72](assets/wf-72.png)
 
@@ -237,7 +240,7 @@ Arbetsflödesinformationen visas i flikar och lämpliga åtgärder är tillgäng
 
    ![wf-73](assets/wf-73.png)
 
-   Om [Arbetsflödessteg](/help/sites-developing/workflows.md#workflow-stages) har konfigurerats för modellen kan du visa förloppet enligt följande:
+   If [Arbetsflödessteg](/help/sites-developing/workflows.md#workflow-stages) har konfigurerats för modellen, kan du visa förloppet enligt följande:
 
    ![wf-107](assets/wf-107.png)
 
@@ -250,11 +253,11 @@ Du kan öppna information om arbetsobjekt från:
 * [Inkorgen](#performing-step-back-on-a-participant-step-inbox)
 * [sidredigeraren](#performing-step-back-on-a-participant-step-page-editor)
 
-#### Öppnar arbetsflödesinformation - Inkorg {#opening-workflow-details-inbox}
+#### Öppnar information om arbetsflöde - Inkorg {#opening-workflow-details-inbox}
 
 Så här öppnar du ett arbetsflödesobjekt och visar information:
 
-1. Öppna **[AEM Inkorg](/help/sites-authoring/inbox.md)**.
+1. Öppna **[AEM](/help/sites-authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
 1. Välj **Öppna** för att öppna informationsflikarna.
 
@@ -265,7 +268,7 @@ Så här öppnar du ett arbetsflödesobjekt och visar information:
 
 Så här öppnar du ett arbetsflödesobjekt och visar information:
 
-1. Öppna sidan [för redigering](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
+1. Öppna [sida för redigering](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing).
 1. Välj **Visa detaljer** i statusfältet för att öppna informationsflikarna.
 
 1. Om det behövs väljer du lämplig åtgärd, anger information och bekräftar med **OK** (eller **Avbryt**).
@@ -277,13 +280,12 @@ Du kan visa information om nyttolasten som är kopplad till arbetsflödesinstans
 
 Så här visar du arbetsflödesinstansens nyttolast och resurser:
 
-1. Öppna **[AEM Inkorg](/help/sites-authoring/inbox.md)**.
+1. Öppna **[AEM](/help/sites-authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
 1. Välj **Visa nyttolast** i verktygsfältet för att öppna dialogrutan.
 
-   Eftersom ett arbetsflödespaket är en samling pekare till sökvägar i databasen, kan du lägga till/ta bort/ändra posterna här för att justera vad som refereras av arbetsflödespaketet. Använd komponenten **Resursdefinition** för att lägga till nya poster.
+   Eftersom ett arbetsflödespaket är en samling pekare till sökvägar i databasen, kan du lägga till/ta bort/ändra posterna här för att justera vad som refereras av arbetsflödespaketet. Använd **Resursdefinition** för att lägga till nya poster.
 
    ![wf-78](assets/wf-78.png)
 
 1. Länkarna kan användas för att öppna de enskilda sidorna.
-

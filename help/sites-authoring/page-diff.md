@@ -1,24 +1,27 @@
 ---
 title: Sidskillnader
-seo-title: Sidskillnader
+seo-title: Page Diff
 description: Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid sida med skillnaderna markerade.
-seo-description: Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid sida med skillnaderna markerade.
+seo-description: The page diff feature allows for the convenient side-by-side comparison of two pages with their differences highlighted.
 uuid: cf029ed8-606e-4f12-ac8e-5ea9ebd70b1b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 5a771d8c-cc56-4979-aeab-b508755a2078
-translation-type: tm+mt
-source-git-commit: 6de5e6f12f123ca2ec45358a138becc410c89e4e
+exl-id: 1b1fa592-a145-4abe-a455-df24d551b937
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '708'
 ht-degree: 1%
 
 ---
 
-
 # Sidskillnader{#page-diff}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Introduktion {#introduction}
 
@@ -28,18 +31,18 @@ Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid si
 
 >[!CAUTION]
 >
->Om du kör en version som är äldre än AEM 6.4.3 måste användaren ha behörigheten **Ändra/Skapa/Ta bort** på noden `/content/versionhistory` för att kunna använda funktionen.
+>Om du kör en version före AEM 6.4.3 måste användaren ha **Ändra/skapa/ta bort** behörighet på noden `/content/versionhistory` för att använda funktionen.
 >
->Mer teknisk information om den här funktionen finns i [Developing and Page Diff](/help/sites-developing/pagediff.md#operation-details).
+>Se [Developing and Page Diff](/help/sites-developing/pagediff.md#operation-details) om du vill ha mer teknisk information om den här funktionen.
 
 ## Använd {#use}
 
 Diff:en sida vid sida kan jämföra:
 
-* [Versioner](/help/sites-authoring/working-with-page-versions.md#comparing-a-version-with-current-page)  - Tidigare version av en sida med det aktuella läget
-* [Live-kopior](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page)  - Live Copy med utkast
-* [Startar](/help/sites-authoring/launches-editing.md#comparing-a-launch-page-to-its-source-page)  - Starta med dess källa
-* [Språkkopior](/help/sites-administering/tc-manage.md#comparing-language-copies)  - En sida före och efter (re-)översättning
+* [Versioner](/help/sites-authoring/working-with-page-versions.md#comparing-a-version-with-current-page) - Tidigare version av en sida med det aktuella läget
+* [Live-kopior](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page) - Live Copy med utkast
+* [Startar](/help/sites-authoring/launches-editing.md#comparing-a-launch-page-to-its-source-page) - Starta med källan
+* [Språkkopior](/help/sites-administering/tc-manage.md#comparing-language-copies) - En sida före och efter (re-)översättning
 
 Läs respektive avsnitt om hur du påbörjar skillnaderna i dessa sammanhang.
 
@@ -56,7 +59,7 @@ Källan för båda sidorna visas tydligt i sidhuvudsfältet högst upp i webblä
 
 ![chlimage_1-355](assets/chlimage_1-355.png)
 
-Skillnaden identifierar ändringar på komponentnivå och HTML-nivå. Objekt som har ändrats markeras med olika färger.
+Skillnaden identifierar ändringar på komponentnivå och HTML. Objekt som har ändrats markeras med olika färger.
 
 **Komponentändringar**
 
@@ -67,16 +70,16 @@ Skillnaden identifierar ändringar på komponentnivå och HTML-nivå. Objekt som
 
 Observera att färgerna Ändrad och Flyttad är desamma.
 
-**HTML-ändringar**
+**Ändringar i HTML**
 
-* Mörkgrön - HTML tillagd
-* Röd - HTML borttagen
+* Mörkgrön - tillagd HTML
+* Röd - HTML har tagits bort
 
 >[!NOTE]
 >
 >När du jämför språkkopior inaktiveras markering, eftersom i en översättning ändras allt och markering inte har någon fördel.
 
-### Helskärm och Avslutar {#fullscreen-and-exiting}
+### Helskärm och avslutande {#fullscreen-and-exiting}
 
 Om du vill fokusera på ett visst innehåll kan du klicka på helskärmsikonen för endera&quot;sidan&quot; av diff:n för att förstora den till hela webbläsarfönstret.
 
@@ -102,7 +105,7 @@ I vissa situationer kan det hända att sidskillnader inte identifierar någon sk
 * Skillnaden kan inte identifiera bildrotation.
 * Om en sida flyttas kan du inte längre göra några skillnader med versioner som gjorts före flyttningen.
 
-   * Om du får problem med en skillnad kontrollerar du [tidslinjen](/help/sites-authoring/basic-handling.md#timeline) för sidan för att se om sidan har flyttats.
+   * Om du får problem med en skillnad ska du kontrollera [Tidslinje](/help/sites-authoring/basic-handling.md#timeline) för att se om sidan har flyttats.
 
 >[!NOTE]
 >
@@ -110,5 +113,4 @@ I vissa situationer kan det hända att sidskillnader inte identifierar någon sk
 
 >[!NOTE]
 >
->Mer information om hur sidskillnader fungerar och om begränsningar som kan påverka sidskillnader finns i [utvecklardokumentationen](/help/sites-developing/pagediff.md) för den här funktionen.
-
+>Mer information om hur sidskillnader fungerar samt om begränsningar som kan påverka sidskillnader finns i [dokumentation för utvecklare](/help/sites-developing/pagediff.md) av den här funktionen.

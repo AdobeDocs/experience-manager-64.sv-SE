@@ -1,24 +1,27 @@
 ---
 title: Modeller i databas
-seo-title: Modeller i databas
-description: 'null'
-seo-description: 'null'
+seo-title: Models in Repository
+description: null
+seo-description: null
 uuid: 54f81180-4178-4e33-a6f0-e9e6ea50798e
 contentOwner: User
 content-type: reference
 discoiquuid: ae1a72f4-d8c1-4c75-ba2c-7322f3743b17
 noindex: true
 redirecttarget: /content/help/en/experience-manager/6-4/mobile/using/administer-mobile-apps
-translation-type: tm+mt
-source-git-commit: 5fe3d533e51a0536064b22e9549578bb5ba754a4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1332'
+source-wordcount: '1364'
 ht-degree: 0%
 
 ---
 
 
 # Modeller i databas{#models-in-repository}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
@@ -28,21 +31,21 @@ En modell innehåller en uppsättning datatyper som definierar de egenskaper som
 
 Som utvecklare bör du känna till modellstrukturen i databasen. Du kan skapa egna modeller och enheter utifrån dina appbehov.
 
-## Skapar modelltyper {#creating-model-types}
+## Skapa modelltyper {#creating-model-types}
 
-Det finns två modelltyper som tillhandahålls av systemet under */libs/settings/mobileapps/model-types*. Om du vill åsidosätta systemmodelltyperna måste en *mobileapps/model-types*-nod skapas under konfigurationsnoden som du vill att åsidosättningen ska ske på.
+Det finns två systemangivna modelltyper under */libs/settings/mobileapps/model-types*. Om du vill åsidosätta systemmodelltyperna a *mobileapps/model-types* noden måste skapas under den konfigurationsnod som du vill att åsidosättningen ska ske på.
 
-Om du till exempel har skapat konfigurationer på */conf/myconf1* och */conf/myconf2* och vill åsidosätta systemmodelltyperna på *conf1*, skulle du skapa en *mobileapps/model-types*-nod under inställningarna för &lt;a7/ a8/>conf1 *.*
+Om du till exempel har skapat konfigurationer på */conf/myconf1* och */conf/myconf2* och vill åsidosätta systemmodelltyperna på *conf1* du skapar en *mobileapps/model-types* nod under inställningarna för *conf1*.
 
-Om du vill tillåta att datatyper läggs till i en modell måste modelltypen ha en underordnad nod med namnet &#39;scaffolding&#39; av typen &#39;cq:Page&#39; och resurstypen *wcm/scaffolding/components/scaffolding*.
+Om du vill tillåta att datatyper läggs till i en modell måste modelltypen ha en underordnad nod med namnet &#39;scaffolding&#39; av typen &#39;cq:Page&#39; och en resurstyp av *wcm/scaffolding/components/scaffolding*.
 
-Skolningssidan måste även innehålla en *dataTypesConfig*-egenskap på PageContent-noden som anger att datatyperna som skapas från den här typen kan användas.
+Ställningssidan måste även innehålla en *dataTypesConfig* på PageContent-noden som anger vilka datatyper som modeller som skapas från den här typen kan användas.
 
 >[!NOTE]
 >
->En **struktur** är en sida som definierar de datatyper som kan redigeras av en entitet baserat på modellen. Varje datatyp kan också konfigureras för att definiera hur fältet ska presenteras i användargränssnittet samt hur datavärdet ska bevaras.
+>A **Ställning** är en sida som definierar de datatyper som kan redigeras av en entitet baserat på modellen. Varje datatyp kan också konfigureras för att definiera hur fältet ska presenteras i användargränssnittet samt hur datavärdet ska bevaras.
 
-### Konfig. datatyper {#data-types-config}
+### Konfigurera datatyper {#data-types-config}
 
 Konfigurationsnoden för datatyper innehåller en lista med datatypsobjekt. Varje datatypsobjekt anger hur en datatyp kommer att visas i modellredigeraren samt hur den måste bevaras för eventuell återgivning av en enhet.
 
@@ -61,11 +64,11 @@ Konfigurationsnoden för datatyper innehåller en lista med datatypsobjekt. Varj
 
 Egenskapen dataTypesConfig stöder sammanslagning av Sling-resurser. Det innebär att de datatyper som används av systemmodelltyperna (eller till och med anpassade modelltyper) kan anpassas med hjälp av överläggsnoder.
 
-En övertäckning på */libs/settings/mobileapps/models/formbuilderconfig/datatypes* måste skapas och sedan anpassas efter behov.
+En övertäckning av */libs/settings/mobileapps/models/formbuilderconfig/datatypes* måste skapas och sedan anpassas efter behov.
 
 En övertäckning för datatypen String kan till exempel läggas till för att ändra fieldResourceType till en anpassad komponent.
 
-Mer information om Sling Resource Merging finns i [Använda Sling Resource Merger i AEM](/help/sites-developing/sling-resource-merger.md).
+Mer information om Sling Resource Merging finns i [Använda Sling Resource Merge i AEM](/help/sites-developing/sling-resource-merger.md).
 
 ![chlimage_1-7](assets/chlimage_1-7.png)
 
@@ -79,13 +82,13 @@ Alla primitiva datatyper använder befintliga Granite-formulärkomponenter. Se: 
 
 Alla anpassade datatyper kan sedan läggas till i en datatypskonfiguration som kan användas av modellredigeraren.
 
-## Skapar modeller {#creating-models}
+## Skapa modeller {#creating-models}
 
 Du kan börja skapa modeller när alla önskade modelltyper och datatyper har utvecklats. Författarna kommer i slutändan att använda modeller för att skapa enheter som innehållstjänsterna använder för att återge data från.
 
 Att skapa en modell består av att välja en tillåten modelltyp baserat på den aktuella konfigurationen och sedan ange en rubrik och beskrivning.
 
-Mer information om hur du skapar och hanterar en modell från kontrollpanelen finns i [Skapa en modell](/help/mobile/administer-mobile-apps.md) under redigeringsavsnittet för mobilappar.
+Mer information om hur du skapar och hanterar en modell från kontrollpanelen finns i [Skapa en modell](/help/mobile/administer-mobile-apps.md) under utvecklingsavsnittet för mobilappar.
 
 ### Egenskaper för en modell {#properties-of-a-model}
 
@@ -102,9 +105,9 @@ I följande tabell visas egenskaperna som definierats för en modell:
 
 >[!NOTE]
 >
->Egenskaperna *för tillåtna underordnade* och *tillåtna överordnade* följer samma regler som sidmallar. Mer information finns i [Sidmallar](/help/sites-developing/page-templates-static.md).
+>The *tillåtna underordnade* och *tillåtna överordnade* -egenskaper följer samma regler som sidmallar. Mer information finns i [Sidmallar](/help/sites-developing/page-templates-static.md).
 >
->I referens till egenskapen *Modelltyp* måste alla modeller ha en överordnad typ *mobileapps/caas/components/data/entity*, men kan ha en undertyp som tillåter innehållsleveransen att anpassas. Om du ser till att alla modelltyper är unika kan det också hjälpa klienter med innehållstjänster att skilja mellan objekt i data.
+>I referens till *Modelltyp* -egenskap, alla modeller måste ha en överordnad typ av *mobileapps/caas/components/data/entity* men kan ha en undertyp som gör att innehållsleveransen kan anpassas. Om du ser till att alla modelltyper är unika kan det också hjälpa klienter med innehållstjänster att skilja mellan objekt i data.
 
 ### Redigera en modell {#editing-a-model}
 
@@ -114,9 +117,9 @@ När modellens ställningar finns kommer modellredigeraren att återge det som f
 
 >[!NOTE]
 >
->Alla modeller är mallar, så de följer alla AEM regler. Detta gör att du kan använda egenskaper som *allowedParents* och *allowedChildren*-egenskaper. Dessa gäller när nya entiteter skapas baserat på en modell. Mallreglerna säkerställer att enheter bara kan baseras på vissa modeller beroende på deras hierarki.
+>Alla modeller är mallar, så de följer alla AEM regler. Detta gör att du kan använda egenskaper som *allowedParents* och *allowedChildren* egenskaper. Dessa gäller när nya entiteter skapas baserat på en modell. Mallreglerna säkerställer att enheter bara kan baseras på vissa modeller beroende på deras hierarki.
 >
->Mer information om hur du redigerar en modell från kontrollpanelen finns i [Skapa en modell](/help/mobile/administer-mobile-apps.md) under redigeringsavsnittet för mobilappar.
+>Mer information om hur du redigerar en modell från kontrollpanelen finns i [Skapa en modell](/help/mobile/administer-mobile-apps.md) under utvecklingsavsnittet för mobilappar.
 
 ### Systemmodeller {#system-models}
 
@@ -128,12 +131,12 @@ resourceType för entiteter som baseras på sidmodellen är: mobileapps/caas/com
 
 Sökväg: Sökväg till en webbplatssida. Innehåll från den här sökvägen (och dess underordnade objekt) återges av innehållstjänsthanterare.
 
-**Assets** ModelResursmodellen är en snabb metod för att återanvända befintligt innehåll från Assets för leverans via innehållstjänster.
+**Resursmodell** Med Assets-modellen kan du snabbt återanvända befintligt innehåll från Assets för leverans via innehållstjänster.
 
 resourceType för entiteter som baseras på sidmodellen är: *mobileapps/caas/components/data/assets.*
 
-Resurslista: Lista med sökvägar från Assets. Varje resurs läggs till som en underordnad entitetsnod med en resourceType på *wcm/foundation/components/image*.
+Resurslista: Lista med sökvägar från Assets. Varje resurs läggs till som en underordnad entitetsnod med en resourceType av *wcm/foundation/components/image*.
 
 >[!NOTE]
 >
->Mer information om hur du använder de här mallarna för att skapa modeller från kontrollpanelen finns i [Skapa en modell](/help/mobile/administer-mobile-apps.md) under redigeringsavsnittet för mobilappar.
+>Mer information om hur du använder de här mallarna för att skapa modeller från kontrollpanelen finns i [Skapa en modell](/help/mobile/administer-mobile-apps.md) under utvecklingsavsnittet för mobilappar.

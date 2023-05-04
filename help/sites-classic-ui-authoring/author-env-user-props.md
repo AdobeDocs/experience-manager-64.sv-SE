@@ -1,45 +1,48 @@
 ---
 title: Konfigurera kontomiljön
-seo-title: Konfigurera kontomiljön
+seo-title: Configuring your account environment
 description: AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön.
-seo-description: AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön.
+seo-description: AEM provides you with the capability to configure your account and certain aspects of the author environment.
 uuid: 79b52684-6c33-4abd-8e06-4e886be33782
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: a91fd37e-5975-4572-a4b3-c7e8993d5f88
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 6a7de639-9c87-4e7c-b431-e48c9cdc7982
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '245'
-ht-degree: 5%
+source-wordcount: '260'
+ht-degree: 3%
 
 ---
 
-
 # Konfigurera kontomiljön{#configuring-your-account-environment}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön.
 
-Med hjälp av [kontoinställningarna](#account-settings) och [användarinställningarna](#user-preferences) kan följande alternativ och inställningar definieras:
+Använda [kontoinställningar](#account-settings) och [användarinställningar](#user-preferences) följande alternativ och inställningar kan definieras:
 
-* **Redigera**
-verktygsfältVälj om du vill ha det globala verktygsfältet för redigering. Det här verktygsfältet, som visas högst upp i webbläsarfönstret, ger dig 
-**Kopiera**,  **Klipp ut**,  **Klistra in**,  **** Ta bort-knappar för att använda med styckekomponenterna på den sidan:
+* **Verktygsfältet Redigering**
+Välj om du vill ha det globala verktygsfältet för redigering. Det här verktygsfältet, som visas högst upp i webbläsarfönstret, ger dig 
+**Kopiera**, **Klipp ut**, **Klistra in**, **Ta bort** knappar för att använda med styckekomponenterna på den sidan:
 
    * Visa vid behov (standard)
    * Visa alltid
    * Behåll dolda
 
-* **Personifiera**
-som Med  [personifiera ](/help/sites-administering/security.md#impersonating-another-user) asfunktionalitet kan en användare arbeta för en annan användares räkning.
+* **Personifiera som**
+Med [Personifiera som](/help/sites-administering/security.md#impersonating-another-user) funktioner som en användare kan arbeta för en annan användares räkning.
 
 * **Språk**
-Det språk som ska användas för redigeringsmiljöns användargränssnitt. Välj önskat språk i listan.
+Språket som ska användas för redigeringsmiljöns användargränssnitt. Välj önskat språk i listan.
 
-* **FönsterhanteringVälj**
-något av följande:
+* **Fönsterhantering**
+Välj något av följande:
 
    * Flera fönster (standard): Sidorna öppnas i ett nytt fönster.
    * Enkelt fönster: Sidorna öppnas i det aktuella fönstret.
@@ -57,11 +60,10 @@ Med användarikonen får du tillgång till olika alternativ:
 
 ## Användarinställningar {#user-preferences}
 
-Varje användare kan ange vissa egenskaper för sig själv. Det här är tillgängligt från dialogrutan **Inställningar** i det övre högra hörnet av konsolerna.
+Varje användare kan ange vissa egenskaper för sig själv. Det här är tillgängligt från **Inställningar** i det övre högra hörnet av konsolerna.
 
 ![screen_shot_2012-02-08at105033am](assets/screen_shot_2012-02-08at105033am.png)
 
 I dialogrutan finns följande alternativ:
 
 ![chlimage_1-171](assets/chlimage_1-171.png)
-

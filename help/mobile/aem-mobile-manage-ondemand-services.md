@@ -1,24 +1,27 @@
 ---
 title: Förhandsgranska med Preflight
-seo-title: Förhandsgranska med Preflight
+seo-title: Previewing with Preflight
 description: Den här sidan förklarar Förhandsvisa med Preflight-appen.
-seo-description: Med preflight-appen Mobile On Demand kan du visa alla projekt som du har tillgång till. Följ den här sidan om du vill veta mer om detta.
+seo-description: With the Mobile On Demand Preflight app, you can view all projects to which you have access. Follow this page to learn more about this.
 uuid: bea83055-8172-4634-88ec-5d3f163ad8e0
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: administering-on-demand-services-app
 discoiquuid: c08729f6-1512-4aee-82bb-7cc05749a72f
-translation-type: tm+mt
-source-git-commit: 55b6a113bcb4d39b7eb100f21a05b9b44e3fe1c3
+exl-id: 1eb9f997-70ff-4309-a219-87ef56b723e5
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '335'
 ht-degree: 0%
 
 ---
 
+# Förhandsgranska med Preflight {#previewing-with-preflight}
 
-# Förhandsgranska med preflight {#previewing-with-preflight}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Den här sidan förklarar Förhandsvisa med Preflight-appen.
 
@@ -34,21 +37,21 @@ Med preflight-appen Mobile On Demand kan du visa alla projekt som du har tillgå
 >
 >Preflight-appen liknar till sin natur PhoneGap Enterprise-visningsprogrammet.
 
-## Förhandsgranska med preflight {#previewing-with-preflight-1}
+## Förhandsgranska med Preflight {#previewing-with-preflight-1}
 
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Klicka på ellipsen (..) i **Hantera artiklar** (eller Banners/Collections).
+1. Klicka på ellipsen (..) på menyn **Hantera artiklar** (eller Banners/Collections).
 1. Välj **Preflight** i åtgärdsfältet.
-1. Klicka på **Aktivera Preflight** i dialogrutan.
+1. Klicka **Aktivera preflight** i dialogrutan.
 1. Du kan nu förhandsgranska ditt program i preflight-appen Mobile On-Demand.
 
 ![chlimage_1-8](assets/chlimage_1-8.gif)
 
 >[!NOTE]
 >
->AEM Preflight-appen används för att förhandsgranska innehåll och bläddra bland sidor. Klicka [här](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html) om du vill veta mer om Preflight-appen.
+>AEM Preflight-appen används för att förhandsgranska innehåll och bläddra bland sidor. Om du vill veta mer om Preflight-appen klickar du [här](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html).
 >
->Den AEM Preflight-appen finns i [iTunes App Store](https://itunes.apple.com/us/app/adobe-experience-manager-mobile/id1042687518?mt=8), [Google Play Store](https://play.google.com/store/apps/details?id=com.adobe.dps.preflight&amp;hl=en) och [Windows Store](https://www.microsoft.com/en-us/store/p/adobe-experience-manager-mobile-preflight/9nblggh5wmxq).
+>AEM Preflight-appen finns i [iTunes App Store](https://itunes.apple.com/us/app/adobe-experience-manager-mobile/id1042687518?mt=8), [Google Play Store](https://play.google.com/store/apps/details?id=com.adobe.dps.preflight&amp;hl=en)och [Windows Store](https://www.microsoft.com/en-us/store/p/adobe-experience-manager-mobile-preflight/9nblggh5wmxq).
 
 ### Komma framåt {#getting-ahead}
 

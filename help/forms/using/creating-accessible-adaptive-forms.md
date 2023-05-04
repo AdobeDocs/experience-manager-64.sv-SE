@@ -1,23 +1,26 @@
 ---
 title: Skapa hjälpmedelsförberedda adaptiva formulär
-seo-title: Skapa hjälpmedelsförberedda adaptiva formulär
+seo-title: Creating accessible adaptive forms
 description: AEM Forms har verktyg och verktyg för att skapa hjälpmedelsförberedda, anpassningsbara blanketter som följer tillgänglighetsstandarder.
-seo-description: AEM Forms har verktyg och verktyg för att skapa hjälpmedelsförberedda, anpassningsbara blanketter som följer tillgänglighetsstandarder.
+seo-description: AEM Forms provides you tools and to create accessible adaptive forms and helps comply with accessibility standards.
 uuid: eceb3282-0b90-4e0a-8b89-137d27029747
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 96d9ad52-074b-4084-b818-abce79282776
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: adad26fa-b27a-4bd7-806c-4ddfbaae7a37
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 1%
+source-wordcount: '939'
+ht-degree: 0%
 
 ---
 
-
 # Skapa hjälpmedelsförberedda adaptiva formulär {#creating-accessible-adaptive-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Introduktion {#introduction}
 
@@ -40,22 +43,22 @@ Etiketten som upplevs av skärmläsare behöver inte nödvändigtvis vara samma 
 
 Så här använder du alternativet Hjälpmedel:
 
-1. Markera en komponent och tryck på ![cmpr](assets/cmppr.png).
-1. Klicka på **Tillgänglighet** i sidofältet för att välja önskat hjälpmedelsalternativ.
+1. Markera en komponent och tryck på ![cmppr](assets/cmppr.png).
+1. Klicka **Tillgänglighet** i sidlisten för att välja önskat hjälpmedelsalternativ.
 
 ### Tillgänglighetsalternativ i formulärkomponenter {#accessibility-options-in-form-components}
 
 ![Tillgänglighetsalternativ i formulärkomponenter](assets/accessibility-options.png)
 
-**Anpassade** TextForm-författare tillhandahåller innehållet i hjälpmedelsalternativet Anpassat textfält. Den här anpassade texten används i hjälpmedelstekniken, till exempel skärmläsare. Att använda inställningen Titel är det bästa alternativet i de flesta scenarier. Du bör endast skapa Reader-text för anpassad skärm när du inte kan använda rubriken eller en kort beskrivning.
+**Egen text** Formulärförfattare anger innehållet i alternativet Anpassad text för hjälpmedel. Den här anpassade texten används i hjälpmedelstekniken, till exempel skärmläsare. Att använda inställningen Titel är det bästa alternativet i de flesta scenarier. Du bör endast skapa Reader-text för anpassad skärm när du inte kan använda rubriken eller en kort beskrivning.
 
-**Kort** beskrivningFör de flesta komponenter visas den korta beskrivningen vid körning när användaren placerar pekaren över komponenten. Du kan ange det här alternativet i fältet för kort beskrivning under alternativet för hjälpinnehåll.
+**Kort beskrivning** För de flesta komponenter visas den korta beskrivningen vid körning när användaren placerar pekaren över komponenten. Du kan ange det här alternativet i fältet för kort beskrivning under alternativet för hjälpinnehåll.
 
-**** TitelAnvänd det här alternativet om du vill att den visuella etikett som är kopplad till formulärfältet ska kunna användas som skärmläsartext i AEM Forms.
+**Titel** Använd det här alternativet om du vill att AEM Forms ska kunna använda den visuella etikett som är kopplad till formulärfältet som skärmläsartext.
 
-**** NamnDu kan ange ett värde i fältet Namn på fliken Bindning. Namnet får inte innehålla blanksteg.
+**Namn** Du kan ange ett värde i fältet Namn på fliken Bindning. Namnet får inte innehålla blanksteg.
 
-**IngenOm du väljer** Ingen får formulärobjektet inget namn i det publicerade formuläret. Ingen rekommenderas inte för formulärkontroller.
+**Ingen** Om du väljer Ingen får formulärobjektet inget namn i det publicerade formuläret. Ingen rekommenderas inte för formulärkontroller.
 
 >[!NOTE]
 >
@@ -71,7 +74,7 @@ Bilder kan förbättra förståelsen för vissa användare. För användare som 
 
 Kontrollera att texten beskriver objektet och dess syfte i formuläret. En skärmläsare läser upp den här alternativa texten när en bild påträffas. En bild måste alltid ha en alternativ text angiven.
 
-Markera en bildkomponent och tryck på ![cmpr](assets/cmppr.png). Ange alternativ text för en bild under Egenskaper i sidlisten.
+Markera en bildkomponent och tryck ![cmppr](assets/cmppr.png). Ange alternativ text för en bild under Egenskaper i sidlisten.
 
 ![Alternativ text för en bild](assets/image-properties.png)
 
@@ -83,7 +86,7 @@ Användare med nedsatt syn förlitar sig på hög kontrast mellan text och bakgr
 
 Vi rekommenderar att du använder standardfärgerna för teckensnitt och bakgrund - innehåll i svart färg mot en vit bakgrund. Om du ändrar standardfärgerna väljer du antingen en mörk förgrundsfärg på en ljus bakgrundsfärg, eller tvärtom.
 
-Mer information om hur du ändrar färgkontrast och tema för anpassade former finns i [Skapa anpassade teman för anpassade formulär](/help/forms/using/creating-custom-adaptive-form-themes.md).
+Se [Skapa anpassade teman för anpassade formulär](/help/forms/using/creating-custom-adaptive-form-themes.md), om du vill ha mer information om hur du ändrar färgkontrast och tema för de adaptiva formerna.
 
 ## Kontrollera att formulärkontrollerna är tangentbordstillgängliga {#ensure-that-form-controls-are-keyboard-accessible}
 
@@ -95,7 +98,7 @@ Följande kortkommandon finns i AEM Forms.
 |---|---|
 | Flytta markören framåt genom ett formulär | Tabb |
 | Flytta markören bakåt genom ett formulär | Skift+Tabb |
-| Flytta till nästa panel | Alt + högerpil |
-| Flytta till föregående panel | Alt + vänsterpil |
+| Flytta till nästa panel | Alt+högerpil |
+| Flytta till föregående panel | Alt+vänsterpil |
 | Återställ ifyllda data i ett formulär | Alt+R |
 | Skicka ett formulär | Alt+S | configuring-watched-folder-endpoints.md |

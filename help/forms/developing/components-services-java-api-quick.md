@@ -11,14 +11,18 @@ topic-tags: develop
 discoiquuid: 14f17126-e744-479b-a8e6-24c131615b46
 role: Developer
 exl-id: 85c77bd4-e424-491f-8db2-73240732a6e4
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
 
 # Komponenter och tjänster - Java API snabbstart (SOAP) {#components-and-services-java-apiquick-start-soap}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Java API Quick Start (SOAP) är tillgängligt för komponenter och tjänster.
 
@@ -46,7 +50,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 
 >[!NOTE]
 >
->Om du har en anpassad komponent och använder SOAP- eller EJB-protokoll för att anropa DSC:er på samma lokala server, och dessa anrop slutar att fungera efter en uppgradering, använder du en startstrategi för DSC ([DSC_IN_VM_PASSTHROUGH_STRATEGY](https://www.adobe.io/experience-manager/reference-materials/6-4/forms/programlc/javadoc/com/adobe/idp/dsc/clientsdk/ServiceClientFactoryProperties.html)). Använd DSC-anropsmetoden in-VM med ServiceClientFactory som standard och konstruera inte ServiceClientFactory med SOAP- eller EJB-protokoll.
+>Om du har en anpassad komponent och använder SOAP- eller EJB-protokoll för att anropa DSC:er på samma lokala server, och dessa anrop slutar att fungera efter en uppgradering, använder du in-VM ([DSC_IN_VM_PASSTHROUGH_STRATEGY](https://www.adobe.io/experience-manager/reference-materials/6-4/forms/programlc/javadoc/com/adobe/idp/dsc/clientsdk/ServiceClientFactoryProperties.html)). Använd DSC-anropsmetoden in-VM med ServiceClientFactory som standard och konstruera inte ServiceClientFactory med SOAP- eller EJB-protokoll.
 
 ## Snabbstart (SOAP-läge): Distribuera en komponent med Java API {#quick-start-soap-mode-deploying-a-component-using-the-java-api}
 

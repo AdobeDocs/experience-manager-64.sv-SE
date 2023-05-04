@@ -10,16 +10,20 @@ topic-tags: repo_restructuring
 discoiquuid: 212930fc-3430-4a0a-842c-2fb613ef981f
 feature: Upgrading
 exl-id: 3d5bbf95-bd1e-453b-b487-517a56fe727f
-source-git-commit: cda63b9ece88d8172fa4d9817e315c9cff88c224
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1149'
 ht-degree: 0%
 
 ---
 
 # Omstrukturering av tillgångar Repository i AEM 6.4{#assets-repository-restructuring-in-aem}
 
-Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM Assets-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/sites-deploying/repository-restructuring.md) ska kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM Assets-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
 
 **Med 6.4-uppgradering**
 
@@ -80,13 +84,13 @@ Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/he
    <td><strong>Omstruktureringsvägledning</strong></td> 
    <td><p>Om e-postmallarna har ändrats av kunden utför du följande åtgärder för att anpassa dem till den nya databasstrukturen:</p> 
     <ol> 
-     <li>E-postmallen <code>/libs/settings/dam/notification</code> ska kopieras från <strong><code>/etc/notification/email/default</code></strong> till <strong><code>/apps/settings/notification/email/default</code></strong> 
+     <li>The <code>/libs/settings/dam/notification</code> E-postmallen ska kopieras från <strong><code>/etc/notification/email/default</code></strong> till <strong><code>/apps/settings/notification/email/default</code></strong> 
       <ol> 
-       <li>Eftersom målet är i <strong> <code>/apps</code></strong> bör den här ändringen bevaras i SCM.</li> 
+       <li>Eftersom målet finns i<strong> <code>/apps</code></strong> den här ändringen bör sparas i SCM.</li> 
       </ol> </li> 
-     <li>Ta bort mappen: <strong><code>/etc/dam/notification/email/default</code></strong> efter att e-postmallarna i den har flyttats.<br /> 
+     <li>Ta bort mappen: <strong><code>/etc/dam/notification/email/default</code></strong> efter att e-postmallarna har flyttats.<br /> 
       <ol> 
-       <li>Om inga uppdateringar gjordes av e-postmallen under<strong> <code>/etc/notification/email/default</code></strong> kan mappen tas bort eftersom den ursprungliga e-postmallen finns under <strong><code>/libs/settings/notification/email/default</code></strong> som en del av AEM 6.4-installationen.</li> 
+       <li>Om e-postmallen under inga uppdateringar gjordes<strong> <code>/etc/notification/email/default</code></strong>kan mappen tas bort eftersom den ursprungliga e-postmallen finns under <strong><code>/libs/settings/notification/email/default</code></strong> som en del av AEM 6.4-installationen.</li> 
       </ol> </li> 
     </ol> </td> 
   </tr> 
@@ -114,11 +118,11 @@ Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/he
    <td><p>Utför följande åtgärder för alla designer som hanteras i SCM och som inte skrivs till vid körning via designdialogrutor för att anpassa sig till den senaste modellen:</p> 
     <ol> 
      <li>Kopiera designen från föregående plats till den nya platsen under <code>/apps</code>.</li> 
-     <li>Konvertera CSS-, JavaScript- och statiska resurser i designen till ett <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">klientbibliotek</a> med <code>allowProxy = true</code>.</li> 
-     <li>Uppdatera referenser till föregående plats i egenskapen <code>cq:designPath</code> via <strong>AEM &gt; DAM Admin &gt; Resursdelningssida &gt; Sidegenskaper &gt; fliken Avancerat &gt; Designfält</strong>.</li> 
+     <li>Konvertera CSS-, JavaScript- och statiska resurser i designen till en <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">Klientbibliotek</a> med <code>allowProxy = true</code>.</li> 
+     <li>Uppdatera referenser till föregående plats i dialogrutan <code>cq:designPath</code> egenskap via <strong>AEM &gt; DAM-administratör &gt; Resursdelningssida &gt; Sidegenskaper &gt; fliken Avancerat &gt; Designfält</strong>.</li> 
      <li>Uppdatera alla sidor som refererar till föregående plats så att den nya kategorin Klientbibliotek används. Detta kräver uppdatering av koden för implementering av sidan.</li> 
-     <li>Uppdatera Dispatcher-reglerna så att klientbibliotek kan hanteras via proxyservern <code>/etc.clientlibs/</code>.</li> 
-    </ol> <p>För alla designer som inte hanteras i SCM, och som ändras vid körning via designdialogrutor, ska du inte flytta redigerbara designer från <code>/etc</code>.</p> </td> 
+     <li>Uppdatera Dispatcher-reglerna så att klientbibliotek kan hanteras via <code>/etc.clientlibs/</code> proxyserver.</li> 
+    </ol> <p>För alla designer som inte hanteras i SCM, och som modifieras vid körning via designdialogrutor, ska du inte flytta bort redigerbara designer från <code>/etc</code>.</p> </td> 
   </tr> 
   <tr> 
    <td><strong>Anteckningar</strong></td> 
@@ -141,21 +145,21 @@ Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/he
   </tr> 
   <tr> 
    <td><strong>Omstruktureringsvägledning</strong></td> 
-   <td><p>Om e-postmallarna (<strong>downloader</strong> eller <strong>transientworkflow completed</strong>) har ändrats följer du nedanstående procedur för att anpassa dig till den nya strukturen:</p> 
+   <td><p>Om e-postmallarna (<strong>nedladdningstillgång</strong> eller <strong>transientarbetsflöde slutfört</strong>) har ändrats och följer sedan nedanstående procedur för att anpassa sig till den nya strukturen:</p> 
     <ol> 
      <li>Den uppdaterade e-postmallen ska kopieras från <strong><code>/etc/dam/workflow/notification/email/downloadasset</code></strong> till <strong><code>/apps/settings/dam/workflow/notification/email/downloadasset</code></strong> 
       <ol> 
-       <li>Eftersom målet är i <strong> <code>/apps</code></strong> bör den här ändringen bevaras i SCM.</li> 
+       <li>Eftersom målet finns i<strong> <code>/apps</code></strong> den här ändringen bör sparas i SCM.</li> 
       </ol> </li> 
-     <li>Ta bort mappen: <code>/etc/dam/workflow/notification/email/downloadasset </code>efter att e-postmallarna i den har flyttats.<br /> 
+     <li>Ta bort mappen: <code>/etc/dam/workflow/notification/email/downloadasset </code>efter att e-postmallarna har flyttats.<br /> 
       <ol> 
-       <li>Om inga uppdateringar gjordes av e-postmallen under<strong> <code>/etc</code></strong> kan mappen tas bort eftersom den ursprungliga e-postmallen finns under <strong><code>/libs/settings/dam/workflownotification/email/downloadasset</code></strong> som en del av AEM 6.4-installationen.</li> 
+       <li>Om e-postmallen under inga uppdateringar gjordes<strong> <code>/etc</code></strong>kan mappen tas bort eftersom den ursprungliga e-postmallen finns under <strong><code>/libs/settings/dam/workflownotification/email/downloadasset</code></strong> som en del av AEM 6.4-installationen.</li> 
       </ol> </li> 
     </ol> </td> 
   </tr> 
   <tr> 
    <td><strong>Anteckningar</strong></td> 
-   <td><code>/conf/global/settings/dam/workflownotification/email/downloadasset</code> stöds tekniskt för sökning (har företräde före /apps via vanlig Sling CAConfig-sökning, men efter <code>/etc</code>) kan mallen placeras i <code>/conf/global/settings/dam/workflownotification/email/downloadasset</code>. Detta rekommenderas dock inte eftersom det inte finns något användargränssnitt som underlättar redigeringen av e-postmallen.</td> 
+   <td>while <code>/conf/global/settings/dam/workflownotification/email/downloadasset</code> har tekniskt stöd för sökning (har prioritet före /apps via vanlig Sling CAConfig-sökning, men efter <code>/etc</code>) kan mallen placeras i <code>/conf/global/settings/dam/workflownotification/email/downloadasset</code>. Detta rekommenderas dock inte eftersom det inte finns något användargränssnitt som underlättar redigeringen av e-postmallen.</td> 
   </tr> 
  </tbody> 
 </table>
@@ -186,17 +190,17 @@ Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/he
     <ol> 
      <li>Den uppdaterade e-postmallen ska kopieras från <strong><code>/etc/dam/adhocassetshare</code></strong> till <strong><code>/apps/settings/dam/adhocassetshare</code></strong> 
       <ol> 
-       <li>Eftersom målet är i <strong> <code>/apps</code></strong> bör den här ändringen bevaras i SCM.</li> 
+       <li>Eftersom målet finns i<strong> <code>/apps</code></strong> den här ändringen bör sparas i SCM.</li> 
       </ol> </li> 
-     <li>Ta bort mappen: <strong><code>/etc/dam/adhocassetshare</code></strong> efter att e-postmallarna i den har flyttats.<br /> 
+     <li>Ta bort mappen: <strong><code>/etc/dam/adhocassetshare</code></strong> efter att e-postmallarna har flyttats.<br /> 
       <ol> 
-       <li>Om inga uppdateringar gjordes av e-postmallen under<strong> <code>/etc</code></strong> kan mappen tas bort eftersom den ursprungliga e-postmallen finns under <strong><code>/libs/settings/dam/adhocassetshare</code></strong> som en del av AEM 6.4-installationen.</li> 
+       <li>Om e-postmallen under inga uppdateringar gjordes<strong> <code>/etc</code></strong>kan mappen tas bort eftersom den ursprungliga e-postmallen finns under <strong><code>/libs/settings/dam/adhocassetshare</code></strong> som en del av AEM 6.4-installationen.</li> 
       </ol> </li> 
     </ol> </td> 
   </tr> 
   <tr> 
    <td><strong>Anteckningar</strong></td> 
-   <td><code>/conf/global/settings/dam/adhocassetshare</code> stöds tekniskt för sökning (det har företräde före <code>/apps</code> via vanlig Sling CAConfig-sökning, men efter <code>/etc</code>), men mallen kan placeras i <code>/conf/global/settings/dam/adhocassetshare</code>. Detta rekommenderas dock inte eftersom det inte finns något användargränssnitt som underlättar redigeringen av e-postmallen</td> 
+   <td>while <code>/conf/global/settings/dam/adhocassetshare</code> har tekniskt stöd för sökning (det har företräde före <code>/apps</code> via vanlig Sling CAConfig-sökning, men efter <code>/etc</code>) kan mallen placeras i <code>/conf/global/settings/dam/adhocassetshare</code>. Detta rekommenderas dock inte eftersom det inte finns något användargränssnitt som underlättar redigeringen av e-postmallen</td> 
   </tr> 
  </tbody> 
 </table>
@@ -223,9 +227,9 @@ Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/he
       </ol> </li> 
      <li>Hitta alla arbetsflödesmodeller som använder WF-steget för medieextraheringsprocessen och 
       <ol> 
-       <li>För varje instans av arbetsflödessteget ska du uppdatera sökvägarna i config så att de pekar explicit på rätt skript under <strong> <code>/apps/settings/dam/indesign/scripts</code></strong> eller <strong><code>/libs/settings/dam/indesign/scripts</code></strong>.</li> 
+       <li>För varje instans av arbetsflödessteget ska du uppdatera sökvägarna i config så att de pekar explicit på rätt skript under<strong> <code>/apps/settings/dam/indesign/scripts</code></strong> eller <strong><code>/libs/settings/dam/indesign/scripts</code></strong> i tillämpliga fall.</li> 
       </ol> </li> 
-     <li>Ta bort <strong> <code>/etc/dam/indesign/scripts</code></strong> helt.</li> 
+     <li>Ta bort<strong> <code>/etc/dam/indesign/scripts</code></strong> helt och hållet.</li> 
     </ol> </td> 
   </tr> 
   <tr> 
@@ -249,7 +253,7 @@ Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/he
   </tr> 
   <tr> 
    <td><strong>Omstruktureringsvägledning</strong></td> 
-   <td><p>Anpassningar på projektnivå måste klippas ut och klistras in under motsvarande <code>/apps</code>- eller <code>/conf</code>-sökvägar, beroende på vad som är tillämpligt.</p> <p>Så här anpassar du dig till databasstrukturen i AEM 6.4:</p> 
+   <td><p>Anpassningar på projektnivå måste klippas ut och klistras in under motsvarande <code>/apps</code> eller <code>/conf</code> sökvägar, beroende på vad som är tillämpligt.</p> <p>Så här anpassar du dig till databasstrukturen i AEM 6.4:</p> 
     <ol> 
      <li>Kopiera ändrade videokonfigurationer från <code>/etc/dam/video</code> till <code>/apps/settings/dam/video</code></li> 
      <li>Ta bort <code>/etc/dam/video</code></li> 
@@ -280,7 +284,7 @@ Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/he
     <ul> 
      <li>du måste köra ett migreringsskript för att flytta noden från <code>/etc</code> till <code>/conf</code>. Skriptet finns på <em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></li> 
      <li>eller så kan du redigera konfigurationen så sparas de automatiskt på den nya platsen.</li> 
-    </ul> <p>Observera att du inte behöver justera deras copyURL/embed-kod så att den pekar på <code>/conf</code>. Den befintliga begäran till <code>/etc</code> dirigeras om till rätt innehåll från <code>/conf</code>.</p> </td> 
+    </ul> <p>Observera att du inte behöver justera deras copyURL/embed-kod så att de pekar på <code>/conf</code>. Befintlig begäran till <code>/etc</code> dirigeras om till rätt innehåll från <code>/conf</code>.</p> </td> 
   </tr> 
   <tr> 
    <td><strong>Anteckningar</strong></td> 
@@ -303,7 +307,7 @@ Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/he
   </tr> 
   <tr> 
    <td><strong>Omstruktureringsvägledning</strong></td> 
-   <td><p>Justera alla referenser så att de pekar på de nya resurserna under <code>/libs</code> med hjälp av <code>/etc.clientlibs/</code>-prefixet allow.</p> <p>Rensa slutligen genom att ta bort mapparna för de migrerade klientlibs från <code>/etc/clientlibs/foundation/</code></p> </td> 
+   <td><p>Justera referenser för att peka på de nya resurserna under <code>/libs</code> med <code>/etc.clientlibs/</code> tillåt proxyprefix.</p> <p>Rensa slutligen genom att ta bort mapparna för de migrerade klientlibs från <code>/etc/clientlibs/foundation/</code></p> </td> 
   </tr> 
   <tr> 
    <td><strong>Anteckningar</strong></td> 

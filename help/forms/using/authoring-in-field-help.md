@@ -1,23 +1,26 @@
 ---
 title: Sammanhangsberoende hjälp för formulärfält
-seo-title: Sammanhangsberoende hjälp för formulärfält
-description: 'Med AEM Forms kan du lägga till sammanhangsberoende hjälp till anpassningsbara formulärfält och paneler, som text eller multimedia, inklusive videor. '
-seo-description: 'Med AEM Forms kan du lägga till sammanhangsberoende hjälp till anpassningsbara formulärfält och paneler, som text eller multimedia, inklusive videor. '
+seo-title: Authoring in-context help for form fields
+description: Med AEM Forms kan du lägga till sammanhangsberoende hjälp till anpassningsbara formulärfält och paneler, som text eller multimedia, inklusive videor.
+seo-description: AEM Forms allows you to add in-context help to adaptive form fields and panels, as text or rich media, including videos.
 uuid: 07427ddd-9d35-41f6-a807-0e418aade199
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 893a72c7-d68f-464f-9765-ec2272189e58
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 0c761c0c-fbe4-4129-8a90-c4ef1127a762
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '402'
 ht-degree: 0%
 
 ---
 
+# Sammanhangsberoende hjälp för formulärfält {#authoring-in-context-help-for-form-fields}
 
-# Om du skriver sammanhangsberoende hjälp för formulärfält {#authoring-in-context-help-for-form-fields}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Introduktion {#introduction}
 
@@ -46,7 +49,7 @@ Fältet Kort beskrivning ger snabba och korta tips om hur du fyller i ett formul
 
 >[!NOTE]
 >
->Välj **Visa alltid kort beskrivning** om du vill visa hjälptexten under fältet permanent.
+>Välj **Visa alltid kort beskrivning** för att permanent visa hjälptexten under fältet.
 
 ![Permanent kort sammanhangsberoende hjälp nedanför fältet](assets/short1.png)
 
@@ -69,4 +72,3 @@ Utöver sammanhangsberoende hjälp för formulärfält kan du ange hjälp på pa
 Om du lägger till hjälp för panelen visas en **?** -ikonen bredvid panelbeskrivningen. När du klickar på ikonen visas det innehåll som lagts till i hjälpdelen i dialogrutan Redigera i panelen.
 
 ![Exempel på sammanhangsberoende hjälp på formulärpanelsnivå](assets/photoshop-1.png)
-

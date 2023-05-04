@@ -1,8 +1,8 @@
 ---
 title: Document Management Service (utgått) Java API Quick Start (SOAP)
-seo-title: Document Management Service (utgått) Java API Quick Start (SOAP)
+seo-title: Document Management Service (Deprecated)Java API Quick Start(SOAP)
 description: Använd Java API:t för Document Management Service för att skapa Content Services-platser, ta bort innehållstjänstplatser, lägga till innehåll i Content Services, hämta innehåll från Content Services, flytta innehåll i Content Services, lista innehåll i Content Services, söka efter innehåll i Content Services och ange behörigheter för Content Services.
-seo-description: Använd Java API:t för Document Management Service för att skapa Content Services-platser, ta bort innehållstjänstplatser, lägga till innehåll i Content Services, hämta innehåll från Content Services, flytta innehåll i Content Services, lista innehåll i Content Services, söka efter innehåll i Content Services och ange behörigheter för Content Services.
+seo-description: Use the Document Management Service Java API to create Content Services spaces, delete Content Services spaces, Add content to Content Services, retrieve content from Content Services, move Content Services content, list Content Services content, search Content Services content, and set Content Services permissions.
 uuid: 967c282a-ccde-4489-a4d5-53c6a1a0cac0
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 9cffdb77-c8a4-4a15-b64f-1d3aadaa60c7
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 5ffd9600-03ec-4fd5-abb1-a8d9adefe6f3
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '713'
 ht-degree: 0%
 
 ---
 
-
 # Document Management Service (utgått) Java API Quick Start (SOAP) {#document-management-service-deprecated-java-api-quick-start-soap}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Följande snabbstarter är tillgängliga för dokumenthanteringstjänsten (borttagen).
 
@@ -247,7 +250,7 @@ I följande Java-kodexempel tas ett blanksteg med namnet /Company Home/Test Dire
 
 ## Snabbstart (SOAP-läge): Lägg till innehåll i innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated}
 
-I följande Java-kodexempel läggs en PDF-fil med namnet *MortgageForm.pdf* till i mappen /Company Home/Test Directory. Attributen creator och description har angetts. Identifieringsvärdet för det nya innehållet skrivs till konsolen.
+I följande Java-kodexempel läggs en PDF-fil till med namnet *MortgageForm.pdf* till en mapp med namnet /Company Home/Test Directory. Attributen creator och description har angetts. Identifieringsvärdet för det nya innehållet skrivs till konsolen.
 
 ```as3
  /* 
@@ -370,7 +373,7 @@ I följande Java-kodexempel läggs en PDF-fil med namnet *MortgageForm.pdf* till
 
 ## Snabbstart (SOAP-läge): Hämta innehåll från innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated}
 
-I följande Java-kodexempel hämtas en PDF-fil med namnet *MortgageForm.pdf* från /Company Home. PDF-filen sparas i det lokala filsystemet och har namnet *UpdatedMortgageForm.pdf*.
+Följande Java-kodexempel hämtar en PDF-fil med namnet *MortgageForm.pdf* från /Företagets startsida. PDF-filen sparas i det lokala filsystemet och får ett namn *UpdatedMortgageForm.pdf*.
 
 ```as3
  /* 
@@ -800,7 +803,7 @@ Följande Java-kod söker efter ett dokument som innehåller texten MortgageForm
 
 ## Snabbstart (SOAP-läge): Ange behörigheter för innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated}
 
-I följande Java-kodexempel anges en behörighet för en användare med namnet tony blue. Den angivna domänen är standarddomän. Konsumentbehörigheten har angetts och noden är `/Company Home/Test Directory`.
+I följande Java-kodexempel anges en behörighet för en användare med namnet tony blue. Den angivna domänen är standarddomän. Användarbehörighet anges och noden är `/Company Home/Test Directory`.
 
 ```as3
  /* 
@@ -910,7 +913,7 @@ I följande Java-kodexempel anges en behörighet för en användare med namnet t
 
 ## Snabbstart (SOAP-läge): Skapa associationer med Java API (inaktuellt) {#quick-start-soap-mode-creating-associations-using-the-java-api-deprecated}
 
-Följande Java-kod skapar en association för en XML-datafil och ett PDF-formulär. Den här associationstypen heter LinkedBy. PDF-dokumentet måste ha proportionslänkningsfunktionen tillämpad.
+I följande Java-kod skapas en association för en XML-datafil och ett PDF-formulär. Den här associationstypen heter LinkedBy. Dokumentet PDF måste ha proportionslänkningsfunktionen tillämpad på det.
 
 ```as3
  /* 
@@ -1024,4 +1027,3 @@ Följande Java-kod skapar en association för en XML-datafil och ett PDF-formul�
      } 
  
 ```
-

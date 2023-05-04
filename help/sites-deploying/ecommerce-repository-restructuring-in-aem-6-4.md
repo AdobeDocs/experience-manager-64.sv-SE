@@ -1,30 +1,33 @@
 ---
 title: Omstrukturering av e-handelslager i AEM 6.4
-seo-title: Omstrukturering av e-handelslager i AEM 6.4
+seo-title: E-Commerce Repository Restructuring in AEM 6.4
 description: Lär dig hur du gör nödvändiga ändringar för att migrera till den nya databasstrukturen i AEM 6.4 för e-handel.
-seo-description: Lär dig hur du gör nödvändiga ändringar för att migrera till den nya databasstrukturen i AEM 6.4 för e-handel.
+seo-description: Learn how to make the necessary changes in order to migrate to the new repository structure in AEM 6.4 for E-Commerce.
 uuid: 1fff1a4b-c8d0-4016-92fb-e2ea26e3a302
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 28c92e7d-2106-4333-afa6-c5528a00d7b4
 feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 6adcc1a4-eb0f-4410-8219-dbd7e6bbe469
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
 
+# Omstrukturering av e-handelslager i AEM 6.4{#e-commerce-repository-restructuring-in-aem}
 
-# Omstrukturering av databas för e-handel i AEM 6.4{#e-commerce-repository-restructuring-in-aem}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM e-handelslösning. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
+Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/sites-deploying/repository-restructuring.md) på denna sida bör kunder som uppgraderar till AEM 6.4 använda denna sida för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM e-handelslösning. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
 
 ## Med 6.4-uppgradering {#with-upgrade}
 
-### Produkt-, order-, samlings-, klassificerings-, leveranssätt- och betalningsmetoder - data {#product-order-collections-classifications-shipping-methods-and-payment-methods-data}
+### Produkt, beställning, samlingar, klassificeringar, leveransmetoder och betalningsmetoder {#product-order-collections-classifications-shipping-methods-and-payment-methods-data}
 
 <table> 
  <tbody>
@@ -38,7 +41,7 @@ Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/he
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td> 
-   <td><p>Du kan använda en <a href="/help/sites-deploying/lazy-content-migration.md" target="_blank">Lazy Migration</a>-åtgärd för att migrera e-handelsdata.</p> <p>Följande steg utförs:</p> 
+   <td><p>Du kan använda en <a href="/help/sites-deploying/lazy-content-migration.md" target="_blank">Lazy Migration</a> uppgift att migrera e-handelsdata.</p> <p>Följande steg utförs:</p> 
     <ul> 
      <li>justerar referenser till gammal plats så att de pekar på ny plats</li> 
      <li>flyttar innehåll från den gamla platsen till den nya</li> 
@@ -58,4 +61,3 @@ Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/he
   </tr>
  </tbody>
 </table>
-

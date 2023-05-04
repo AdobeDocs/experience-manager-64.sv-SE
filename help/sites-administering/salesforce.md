@@ -1,24 +1,27 @@
 ---
 title: Integrera med Salesforce
-seo-title: Integrera med Salesforce
+seo-title: Integrating with Salesforce
 description: Läs om hur du integrerar AEM med Salesforce.
-seo-description: Läs om hur du integrerar AEM med Salesforce.
+seo-description: Learn about integrating AEM with Salesforce.
 uuid: db3b25f3-b680-4054-a8db-4161d4c86201
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: b9752c60-eb26-4840-9163-a99537a58727
-translation-type: tm+mt
-source-git-commit: 7dc90299b7a0e5166c30702323f1678353fe39b3
+exl-id: 4c09699a-c7ae-48ee-9423-87ff35b1e9d9
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1532'
 ht-degree: 1%
 
 ---
 
-
 # Integrera med Salesforce{#integrating-with-salesforce}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Genom att integrera Salesforce med AEM kan du hantera leads och dra nytta av de befintliga funktionerna som Salesforce tillhandahåller direkt. Du kan konfigurera AEM att publicera leads till Salesforce och skapa komponenter som får åtkomst till data direkt från Salesforce.
 
@@ -43,9 +46,9 @@ Om du vill konfigurera AEM att integrera med Salesforce måste du först konfigu
 >
 >Du kan skapa ett kostnadsfritt utvecklarkonto i Salesforce.
 
-Så här konfigurerar du AEM att integreras med Salesforce:
+Så här konfigurerar du AEM att integrera med Salesforce:
 
-1. I AEM navigerar du till **Cloud Services**. I tredjepartstjänster klickar du på **Konfigurera nu** i **Salesforce**.
+1. I AEM navigerar du till **Cloud Services**. I tredjepartstjänster klickar du på **Konfigurera nu** in **Salesforce**.
 
    ![chlimage_1-84](assets/chlimage_1-84.png)
 
@@ -55,19 +58,19 @@ Så här konfigurerar du AEM att integreras med Salesforce:
    >
    >Den nya konfigurationen dirigeras om till en ny sida: **http://localhost:4502/etc/cloudservices/salesforce/developer.html**. Detta är exakt samma värde som du måste ange i återanrops-URL när du skapar fjärråtkomstprogrammet i Salesforce. Dessa värden måste matcha.
 
-1. Logga in på ditt Salesforce-konto (eller om du inte har något, skapa ett på [https://developer.force.com](https://developer.force.com).)
-1. I Salesforce går du till **Create** > **Appar** för att komma till **anslutna appar** (i tidigare versioner av Salesforce var arbetsflödet **Distribuera** > **Fjärråtkomst**).
-1. Klicka på **Nytt** om du vill ansluta AEM med Salesforce.
+1. Logga in på ditt Salesforce-konto (eller om du inte har något), skapa ett på [https://developer.force.com](https://developer.force.com).)
+1. I Salesforce navigerar du till **Skapa** > **Appar** för att komma till **Anslutna appar** (i tidigare versioner av Salesforce var arbetsflödet **Distribuera** > **Fjärråtkomst**).
+1. Klicka **Nytt** för att ansluta AEM till Salesforce.
 
    ![chlimage_1-85](assets/chlimage_1-85.png)
 
-1. Ange **namnet på det anslutna programmet**, **API-namnet** och **e-postadress**. Markera kryssrutan **Aktivera OAuth-inställningar** och ange **Återanrops-URL** och lägg till ett OAuth-scope (till exempel fullständig åtkomst). Återanrops-URL:en ser ut ungefär så här: `http://localhost:4502/etc/cloudservices/salesforce/developer.html`
+1. Ange **Namn på ansluten app**, **API-namn** och **E-postadress**. Välj **Aktivera OAuth-inställningar** och ange **Återanrops-URL** och lägga till ett OAuth-scope (till exempel fullständig åtkomst). Återanrops-URL:en ser ut ungefär så här: `http://localhost:4502/etc/cloudservices/salesforce/developer.html`
 
    Ändra servernamnet/portnumret och sidnamnet så att de matchar konfigurationen.
 
    ![chlimage_1-86](assets/chlimage_1-86.png)
 
-1. Klicka på **Spara** för att spara Salesforce-konfigurationen. Salesforce skapar en **konsumentnyckel** och **konsumenthemlighet** som du behöver för AEM.
+1. Klicka **Spara** för att spara Salesforce-konfigurationen. Salesforce skapar en **konsumentnyckel** och **hemlighet**, som du behöver för AEM konfiguration.
 
    ![chlimage_1-87](assets/chlimage_1-87.png)
 
@@ -75,7 +78,7 @@ Så här konfigurerar du AEM att integreras med Salesforce:
    >
    >Du kan behöva vänta flera minuter (upp till 15 minuter) på att fjärråtkomstprogrammet i Salesforce ska aktiveras.
 
-1. I AEM går du till **Cloud Services** och navigerar till Salesforce-konfigurationen som du skapade tidigare (till exempel **utvecklare**). Klicka på **Redigera** och ange kundnyckeln och kundhemligheten från salesforce.com.
+1. I AEM navigerar du till **Cloud Services** och navigera till Salesforce-konfigurationen som du skapade tidigare (till exempel **utvecklare**). Klicka **Redigera** och ange kundnyckeln och kundhemligheten från salesforce.com.
 
    ![chlimage_1-23](assets/chlimage_1-23.jpeg)
 
@@ -84,13 +87,13 @@ Så här konfigurerar du AEM att integreras med Salesforce:
    | Kundnyckel | Ange det värde som hämtas från registreringssidan för fjärråtkomstprogram (RAS) i salesforce.com |
    | Kundhemlighet | Ange det värde som hämtas från registreringssidan för fjärråtkomstprogram (RAS) i salesforce.com |
 
-1. Klicka på **Anslut till Salesforce** för att ansluta. Salesforce begär att du tillåter din konfiguration att ansluta till Salesforce.
+1. Klicka **Anslut till Salesforce** för att ansluta. Salesforce begär att du tillåter din konfiguration att ansluta till Salesforce.
 
    ![chlimage_1-88](assets/chlimage_1-88.png)
 
    I AEM visas en bekräftelsedialogruta som talar om att du har anslutit.
 
-1. Navigera till webbplatsens rotsida och klicka på **Sidegenskaper**. Välj sedan **Cloud Services** och lägg till **Salesforce** och välj rätt konfiguration (till exempel **utvecklare**).
+1. Navigera till webbplatsens rotsida och klicka på **Sidegenskaper**. Välj sedan **Cloud Services** och lägga till **Salesforce** och välja rätt konfiguration (till exempel **utvecklare**).
 
    ![chlimage_1-89](assets/chlimage_1-89.png)
 
@@ -102,25 +105,25 @@ Om du vill exportera en AEM användare som en Salesforce-lead måste du konfigur
 
 Så här exporterar du AEM användare som Salesforce-leads:
 
-1. Navigera till Salesforce-arbetsflödet på `http://localhost:4502/workflow` genom att högerklicka på arbetsflödet **Salesforce.com Export** och klicka på **Start**.
+1. Navigera till Salesforce-arbetsflödet på `http://localhost:4502/workflow` genom att högerklicka på arbetsflödet **Salesforce.com-export** och klicka **Starta**.
 
    ![chlimage_1-90](assets/chlimage_1-90.png)
 
-1. Välj den AEM användare som du vill skapa som lead som **nyttolast** för det här arbetsflödet (home -> användare). Se till att du väljer profilnoden för användaren eftersom den innehåller information som **givenName**, **familyName** och så vidare, som mappas till fälten **FirstName** och **LastName** för Salesforce-leadet.
+1. Markera AEM användare som du vill skapa som lead som **Nyttolast** för det här arbetsflödet (home -> användare). Se till att du väljer profilnoden för användaren eftersom den innehåller information som **givenName**, **familyName** och så vidare, som är mappade till Salesforce-leads **FirstName** och **LastName** fält.
 
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
    >[!NOTE]
    >
-   >Innan det här arbetsflödet startas finns det vissa obligatoriska fält som en huvudnod i AEM måste ha innan den publiceras i Salesforce. Dessa är **givenName**, **familyName**, **company** och **e-post**. En fullständig lista över mappning mellan AEM användare och Salesforce-lead finns i [Mappningskonfiguration mellan AEM användare och Salesforce-lead.](#mapping-configuration-between-aem-user-and-salesforce-lead)
+   >Innan det här arbetsflödet startas finns det vissa obligatoriska fält som en huvudnod i AEM måste ha innan den publiceras i Salesforce. Dessa är **givenName**, **familyName**, **företag** och **e-post**. En fullständig lista över mappning mellan AEM användare och Salesforce-lead finns i [Mappningskonfiguration mellan AEM användare och Salesforce-lead.](#mapping-configuration-between-aem-user-and-salesforce-lead)
 
-1. Klicka på **OK**. Användarinformationen exporteras till salesforce.com. Du kan verifiera den på salesforce.com.
+1. Klicka **OK**. Användarinformationen exporteras till salesforce.com. Du kan verifiera den på salesforce.com.
 
    >[!NOTE]
    >
    >I felloggarna visas om ett lead har importerats. Mer information finns i felloggen.
 
-### Konfigurera exportarbetsflödet för Salesforce.com {#configuring-the-salesforce-com-export-workflow}
+### Konfigurera arbetsflödet för Salesforce.com-export {#configuring-the-salesforce-com-export-workflow}
 
 Du kan behöva konfigurera exportarbetsflödet för Salesforce.com så att det matchar rätt Salesforce.com-konfiguration eller göra andra ändringar.
 
@@ -130,24 +133,24 @@ Så här konfigurerar du exportarbetsflödet för Salesforce.com:
 
    ![chlimage_1-24](assets/chlimage_1-24.jpeg)
 
-1. Öppna exportsteget för Salesforce.com, välj fliken **Argument** och välj att rätt konfiguration är markerad och klicka på **OK**. Om du dessutom vill att arbetsflödet ska återskapa ett lead som har tagits bort i Salesforce markerar du kryssrutan.
+1. Öppna exportsteget för Salesforce.com och välj **Argument** och välj rätt konfiguration och klicka på **OK**. Om du dessutom vill att arbetsflödet ska återskapa ett lead som har tagits bort i Salesforce markerar du kryssrutan.
 
    ![chlimage_1-92](assets/chlimage_1-92.png)
 
-1. Klicka på **Spara** för att spara ändringarna.
+1. Klicka **Spara** för att spara ändringarna.
 
    ![chlimage_1-93](assets/chlimage_1-93.png)
 
 ### Mappningskonfiguration mellan AEM och Salesforce Lead {#mapping-configuration-between-aem-user-and-salesforce-lead}
 
-Om du vill visa eller redigera den aktuella mappningskonfigurationen mellan en AEM användare och ett Salesforce-lead öppnar du Configuration Manager: `https://<hostname>:<port>/system/console/configMgr` och sök efter **Salesforce Lead Mapping Configuration**.
+Om du vill visa eller redigera den aktuella mappningskonfigurationen mellan en AEM användare och ett Salesforce-lead öppnar du Configuration Manager: `https://<hostname>:<port>/system/console/configMgr` och söka efter **Konfiguration av Salesforce-lead-mappning**.
 
-1. Öppna Configuration Manager genom att klicka på **webbkonsolen** eller gå direkt till `https://<hostname>:<port>/system/console/configMgr.`
-1. Sök efter **Salesforce Lead Mapping Configuration**.
+1. Öppna Configuration Manager genom att klicka på **Webbkonsol** eller går direkt till `https://<hostname>:<port>/system/console/configMgr.`
+1. Sök efter **Konfiguration av Salesforce-lead-mappning**.
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
-1. Ändra mappningar efter behov. Standardmappningen följer mönstret** aemUserAttribute=sfLeadAttribute**. Klicka på **Spara** för att spara ändringarna.
+1. Ändra mappningar efter behov. Standardmappningen följer mönstret** aemUserAttribute=sfLeadAttribute**. Klicka **Spara** för att spara ändringarna.
 
 ## Konfigurerar Salesforce Client Context Store {#configuring-salesforce-client-context-store}
 
@@ -161,17 +164,17 @@ För att göra detta måste du konfigurera följande:
 
 ### Länka en AEM användare med ett Salesforce-ID {#linking-an-aem-user-with-a-salesforce-id}
 
-Du måste mappa en AEM användare med ett Salesforce ID för att kunna läsa in det i klientkontexten. I ett verkligt scenario skulle du länka baserat på kända användardata med validering. För demonstrationssyften använder du i den här proceduren **Salesforce Connect**-komponenten.
+Du måste mappa en AEM användare med ett Salesforce ID för att kunna läsa in det i klientkontexten. I ett verkligt scenario skulle du länka baserat på kända användardata med validering. För demonstrationssyften använder du **Salesforce Connect** -komponenten.
 
-1. Navigera till en webbplats i AEM, logga in och dra och släpp **Salesforce Connect**-komponenten från sidan.
+1. Navigera till en webbplats i AEM, logga in och dra och släpp **Salesforce Connect** -komponenten från sidosparken.
 
    >[!NOTE]
    >
-   >Om komponenten **Salesforce Connect** inte är tillgänglig går du till vyn **Design** och markerar den för att göra den tillgänglig i vyn **Redigera**.
+   >Om **Salesforce Connect** -komponenten är inte tillgänglig, gå till **Design** visa och markera den för att göra den tillgänglig i **Redigera** vy.
 
    ![chlimage_1-25](assets/chlimage_1-25.jpeg)
 
-   När du drar komponenten till sidan visas **Länk till Salesforce=Av**.
+   När du drar komponenten till sidan visas den **Länk till Salesforce=Av**.
 
    ![chlimage_1-95](assets/chlimage_1-95.png)
 
@@ -187,7 +190,7 @@ Du måste mappa en AEM användare med ett Salesforce ID för att kunna läsa in 
 
    ![chlimage_1-97](assets/chlimage_1-97.png)
 
-### Lägger till Salesforce-data i klientkontexten {#adding-salesforce-data-to-client-context}
+### Lägga till Salesforce-data i klientkontext {#adding-salesforce-data-to-client-context}
 
 Du kan läsa in användardata från Salesforce i klientkontexten som ska användas för personalisering:
 
@@ -195,11 +198,11 @@ Du kan läsa in användardata från Salesforce i klientkontexten som ska använd
 
    ![chlimage_1-26](assets/chlimage_1-26.jpeg)
 
-1. Dra komponenten **Salesforce-profildata** till klientkontexten.
+1. Dra **Salesforce-profildata** till klientkontexten.
 
    ![chlimage_1-27](assets/chlimage_1-27.jpeg)
 
-1. Dubbelklicka på komponenten för att öppna den. Välj **Lägg till objekt** och välj en egenskap i listrutan. Lägg till så många egenskaper du vill och välj **OK**.
+1. Dubbelklicka på komponenten för att öppna den. Välj **Lägg till objekt** och välj en egenskap i listrutan. Lägg till så många egenskaper du vill och markera **OK**.
 
    ![chlimage_1-98](assets/chlimage_1-98.png)
 
@@ -207,11 +210,11 @@ Du kan läsa in användardata från Salesforce i klientkontexten som ska använd
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
-### Skapa ett segment med data från Salesforce Client Context Store {#building-a-segment-using-data-from-salesforce-client-context-store}
+### Bygga ett segment med data från Salesforce Client Context Store {#building-a-segment-using-data-from-salesforce-client-context-store}
 
 Du kan skapa ett segment som använder data från Salesforce Client Context Store. Så här gör du:
 
-1. Navigera till segmentering i AEM genom att antingen gå till **Verktyg** > **Segmentering** eller till [http://localhost:4502/miscadmin#/etc/segmentation](http://localhost:4502/miscadmin#/etc/segmentation).
+1. Navigera till segmentering i AEM genom att gå till **verktyg** > **Segmentering** eller går till [http://localhost:4502/miscadmin#/etc/segmentation](http://localhost:4502/miscadmin#/etc/segmentation).
 1. Skapa eller uppdatera ett segment för att inkludera data från Salesforce. Mer information finns i [Segmentering](/help/sites-administering/campaign-segmentation.md).
 
 ## Söker efter leads {#searching-leads}
@@ -224,7 +227,7 @@ AEM levereras med en exempelsökkomponent som söker efter leads i Salesforce en
 
 Så här använder du den här komponenten:
 
-1. Navigera till sidan där du vill använda den här konfigurationen. Öppna sidegenskaper och välj **Cloud Services.** Klicka på  **Lägg till** tjänster, välj  **** Salesforce och lämplig konfiguration och klicka på  **OK**.
+1. Navigera till sidan där du vill använda den här konfigurationen. Öppna sidegenskaper och markera **Cloud Services.** Klicka **Lägg till tjänster** och markera **Salesforce** och rätt konfiguration och klicka **OK**.
 
    ![chlimage_1-28](assets/chlimage_1-28.jpeg)
 
@@ -239,4 +242,3 @@ Så här använder du den här komponenten:
 1. AEM visar de leads som har angetts i sökkomponenten som matchar de angivna villkoren.
 
    ![chlimage_1-101](assets/chlimage_1-101.png)
-

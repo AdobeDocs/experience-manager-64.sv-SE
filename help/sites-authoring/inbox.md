@@ -1,37 +1,40 @@
 ---
 title: Din inkorg
-seo-title: Din inkorg
+seo-title: Your Inbox
 description: Hantera dina uppgifter med inkorgen
-seo-description: Hantera dina uppgifter med inkorgen
+seo-description: Managing your tasks with the inbox
 uuid: ddd48019-ce69-4a47-be2b-5b66ae2fe3c8
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
-translation-type: tm+mt
-source-git-commit: 966263cc94f44bcad76e7e9ba5c6ecdc93574348
+exl-id: 9037f21c-5392-4322-af0d-7e220c810954
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '896'
-ht-degree: 10%
+source-wordcount: '924'
+ht-degree: 9%
 
 ---
 
-
 # Din inkorg{#your-inbox}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Du kan få meddelanden från olika AEM, inklusive arbetsflöden och projekt. om:
 
 * Uppgifter:
 
-   * dessa kan också skapas vid olika punkter i det AEM användargränssnittet, till exempel under **Projekt**,
-   * dessa kan vara produkten av ett **steg i Skapa uppgift** eller **Skapa projektuppgift**.
+   * dessa kan också skapas vid olika punkter i AEM, t.ex. under **Projekt**,
+   * kan vara produkten av ett arbetsflöde **Skapa uppgift** eller **Skapa projektuppgift** steg.
 
 * Arbetsflöden:
 
    * Arbetsobjekt som representerar åtgärder som du måste utföra på sidinnehåll.
 
-      * det här är produkten av arbetsflödet **Deltagare** steg
+      * det här är produkten av arbetsflöde **Deltagare** steg
    * felobjekt, så att administratörer kan försöka utföra det misslyckade steget igen.
 
 
@@ -39,7 +42,7 @@ Du får dessa meddelanden i din egen Inkorg där du kan visa dem och vidta åtg�
 
 >[!NOTE]
 >
->AEM levereras förinläst med administrativa uppgifter som tilldelats administratörsanvändargruppen. Mer information finns i [Administrativa åtgärder som inte är tillgängliga](#out-of-the-box-administrative-tasks).
+>AEM levereras förinläst med administrativa uppgifter som tilldelats administratörsanvändargruppen. Se [Administrativa arbetsmoment som inte går att köra](#out-of-the-box-administrative-tasks) för mer information.
 
 >[!NOTE]
 >
@@ -49,9 +52,7 @@ Du får dessa meddelanden i din egen Inkorg där du kan visa dem och vidta åtg�
 >* [Projekt - arbeta med uppgifter](/help/sites-authoring/task-content.md)
 >* [Arbetsflöden](/help/sites-authoring/workflows.md)
 >* [Forms](/help/forms/home.md)
-
 >
-
 
 
 ## Inkorgen i sidhuvudet {#inbox-in-the-header}
@@ -62,9 +63,9 @@ Från någon av konsolerna visas det aktuella antalet objekt i din inkorg i sidh
 
 >[!NOTE]
 >
->Vissa åtgärder visas också i [kortvyn för den aktuella resursen](/help/sites-authoring/basic-handling.md#card-view).
+>Vissa åtgärder visas också i [kortvy över lämplig resurs](/help/sites-authoring/basic-handling.md#card-view).
 
-## Administrativa åtgärder som inte är tillgängliga {#out-of-the-box-administrative-tasks}
+## Administrativa arbetsmoment som inte går att köra  {#out-of-the-box-administrative-tasks}
 
 Färdiga AEM levereras förinläst med fyra uppgifter tilldelade till administratörsanvändargruppen.
 
@@ -73,7 +74,7 @@ Färdiga AEM levereras förinläst med fyra uppgifter tilldelade till administra
 * Aktivera insamling av aggregerad användningsstatistik
 * [Konfigurera HTTPS](/help/sites-administering/ssl-by-default.md)
 
-## Öppnar inkorgen {#opening-the-inbox}
+## Öppna Inkorgen {#opening-the-inbox}
 
 Så här öppnar du AEM inkorg:
 
@@ -106,7 +107,7 @@ Du kan:
 
 * välja en specifik vy, **Tidslinje**, **Kolumn**, **Lista**
 
-* Ange vilka uppgifter som ska visas enligt **Schema**; **Alla**, **Planerade**, **Pågår**, **Förfaller snart**, **Förfallna**
+* ange vilka uppgifter som ska visas enligt **Schema**; **Alla**, **Planerad**, **Pågår**, **Förfaller snart**, **Förfallodatum**
 
 * detaljgranska för mer detaljerad information om ett objekt
 * markera ett datumintervall som vyn ska fokuseras i:
@@ -119,7 +120,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
 * **Kalendervy**
 
-   För **Kalendervy** kan du konfigurera:
+   För **Kalendervy** du kan konfigurera:
 
    * **Gruppera efter**
    * **Schema** eller **Ingen**
@@ -129,7 +130,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
 * **Listvy**
 
-   För **listvyn** kan du konfigurera sorteringsmekanismen:
+   För **Listvy** du kan konfigurera sorteringsmekanismen:
 
    * **Sortera efter**
    * **Sorteringsordning**
@@ -144,14 +145,14 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
    Åtgärderna är lämpliga för objektet och omfattar:
 
-   * **** Slutförande. till exempel en uppgift eller ett arbetsflödesobjekt.
-   * **Tilldela** om/**** delegera objekt.
-   * **Öppen** post Beroende på objekttypen kan den här åtgärden:
+   * **Slutförd** Åtgärd. till exempel en uppgift eller ett arbetsflödesobjekt.
+   * **Tilldela igen**/**Delegera** ett objekt.
+   * **Öppna** en post, Beroende på objekttypen kan den här åtgärden:
 
       * visa objektegenskaperna
       * öppna en lämplig kontrollpanel eller guide för ytterligare åtgärder
       * öppna relaterad dokumentation
-   * **Gå** tillbaka till ett tidigare steg.
+   * **Stega bakåt** till ett föregående steg.
    * Visa nyttolasten för ett arbetsflöde.
    * Skapa ett projekt från objektet.
 
@@ -168,7 +169,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    * en åtgärdsguide startas.
    * en dokumentationssida öppnas.
 
-   **Tilldela om** öppnar till exempel en dialogruta:
+   Till exempel: **Tilldela igen** öppnar en dialogruta:
 
    ![wf-85](assets/wf-85.png)
 
@@ -179,12 +180,12 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    * Bakpil: Om en åtgärdsguide eller dokumentationssida till exempel har öppnats kan du gå tillbaka till Inkorgen.
 
 
-## Skapar en aktivitet {#creating-a-task}
+## Skapa en uppgift {#creating-a-task}
 
 I inkorgen kan du skapa uppgifter:
 
-1. Välj **Skapa** och sedan **Aktivitet**.
-1. Fyll i de nödvändiga fälten på flikarna **Basic** och **Advanced**. endast **Titeln** är obligatorisk, alla andra är valfria:
+1. Välj **Skapa** sedan **Uppgift**.
+1. Fyll i de nödvändiga fälten i **Grundläggande** och **Avancerat** tabbar; endast **Titel** är obligatoriskt, alla andra är valfria:
 
    * **Grundläggande**:
 
@@ -201,7 +202,7 @@ I inkorgen kan du skapa uppgifter:
 
    * **Avancerat**
 
-      * **Namn**: detta kommer att användas för att skapa URL:en, om det är tomt baseras den på  **titeln**.
+      * **Namn**: detta kommer att användas för att skapa URL:en, om det är tomt kommer det att baseras på **Titel**.
 
    ![wf-87](assets/wf-87.png)
 
@@ -209,18 +210,18 @@ I inkorgen kan du skapa uppgifter:
 
 ## Skapa ett projekt {#creating-a-project}
 
-För vissa uppgifter kan du skapa ett [projekt](/help/sites-authoring/projects.md) baserat på den uppgiften:
+För vissa uppgifter kan du skapa en [Projekt](/help/sites-authoring/projects.md) baserat på den uppgiften:
 
 1. Välj lämplig åtgärd genom att trycka/klicka på miniatyrbilden.
 
    >[!NOTE]
    >
-   >Endast uppgifter som skapats med alternativet **Skapa** i **Inkorgen** kan användas för att skapa ett projekt.
+   >Endast uppgifter som skapats med **Skapa** alternativ för **Inkorg** kan användas för att skapa ett projekt.
    >
    >Arbetsobjekt (från ett arbetsflöde) kan inte användas för att skapa ett projekt.
 
 1. Välj **Skapa projekt** i verktygsfältet för att öppna guiden.
-1. Välj lämplig mall och **Nästa**.
+1. Välj lämplig mall och sedan **Nästa**.
 1. Ange de nödvändiga egenskaperna:
 
    * **Grundläggande**
@@ -229,21 +230,21 @@ För vissa uppgifter kan du skapa ett [projekt](/help/sites-authoring/projects.m
       * **Beskrivning**
       * **Startdatum**
       * **Förfallodatum**
-      * **** Användarroll
+      * **Användare** och roll
    * **Avancerat**
 
       * **Namn**
    >[!NOTE]
    >
-   >Mer information finns i [Skapa ett projekt](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project).
+   >Se [Skapa ett projekt](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project) för fullständig information.
 
 1. Välj **Skapa** för att bekräfta åtgärden.
 
-## Filtrera objekt i AEM Inkorg {#filtering-items-in-the-aem-inbox}
+## Filtrera objekt i AEM {#filtering-items-in-the-aem-inbox}
 
 Du kan filtrera objekten i listan:
 
-1. Öppna **AEM Inkorg**.
+1. Öppna **AEM**.
 
 1. Öppna filterväljaren:
 
@@ -255,5 +256,4 @@ Du kan filtrera objekten i listan:
 
    >[!NOTE]
    >
-   >Med [Visa inställningar](#inbox-view-settings) kan du även konfigurera sorteringsordningen när du använder [listvyn](#inbox-list-view).
-
+   >Med [Visa inställningar](#inbox-view-settings) Du kan också konfigurera sorteringsordningen när du använder [Listvy](#inbox-list-view).

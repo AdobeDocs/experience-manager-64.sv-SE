@@ -1,7 +1,7 @@
 ---
 title: Mallar för referensbrev
 seo-title: Reference letter templates
-description: 'AEM Forms innehåller layoutmallar för Correspondence Management-brev som du kan använda för att snabbt skapa brev. '
+description: AEM Forms innehåller layoutmallar för Correspondence Management-brev som du kan använda för att snabbt skapa brev.
 seo-description: AEM Forms provides Correspondence Management letter layout templates that you can use to create letters quickly.
 uuid: 3b2312d9-daa0-435b-976f-4969b54c5056
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
@@ -9,18 +9,22 @@ content-type: reference
 topic-tags: correspondence-management
 discoiquuid: afeb9f4d-3feb-4a0e-8884-e3ec1309b33b
 exl-id: 319db420-3318-4ef7-be2b-1ff2b1c08563
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
 
 # Mallar för referensbrev {#reference-letter-templates}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 I Correspondence Management innehåller en brevmall typiska formulärfält, layoutfunktioner som sidhuvud och sidfot samt tomma målområden för innehållsplacering.
 
-Correspondence Management tillhandahåller brevmallar i AEM Forms-paketet [AEM Forms tilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). Information om hur du installerar ett paket finns i [Arbeta med paket](/help/sites-administering/package-manager.md). Du kan anpassa mallarna i Designer efter företagets grafiska profil och behov. Paketet innehåller följande mallar:
+Correspondence Management tillhandahåller brevmallar i AEM Forms-paketet [AEM Forms tilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). Information om hur du installerar ett paket finns i [Så här arbetar du med paket](/help/sites-administering/package-manager.md). Du kan anpassa mallarna i Designer efter företagets grafiska profil och behov. Paketet innehåller följande mallar:
 
 * Klassisk
 * Klassisk enkel
@@ -36,7 +40,7 @@ När du har installerat paketet visas layoutmallarna (XDP) i mappen templates p�
 
 Följande är de gemensamma fälten i alla mallar i det här paketet:
 
-* Date
+* Datum
 * Hälsning
 * Stänger text
 * Signaturtext
@@ -47,11 +51,11 @@ När du har installerat paketet AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES visas m
 
 ## Klassisk {#classic}
 
-Klassisk mall passar för ett enkelt professionellt brev med en logotyp överst.
+Klassisk mall med en logotyp överst passar för ett vanligt professionellt brev.
 
 ![klassisk](assets/classic.png)
 
-PDF-förhandsgranskning av ett brev som skapats med mallen Klassisk
+Förhandsgranskning i PDF av ett brev som skapats med mallen Klassisk
 
 ## Klassisk enkel {#classic-simple}
 
@@ -59,7 +63,7 @@ Inkluderar fält för att hämta telefonnummer och e-postadress. En klassisk enk
 
 ![Kontaktinformationsfragment](assets/classicsimple.png)
 
-PDF-förhandsgranskning av ett brev som skapats med den klassiska enkla mallen
+Förhandsgranskning i PDF av ett brev som skapats med den klassiska enkla mallen
 
 ## Balanserad vänster {#balanced-left}
 
@@ -75,7 +79,7 @@ Mallen Balanced Right har företagslogotypen till vänster och ger utrymme för 
 
 ![balanserad höger](assets/balancedright.png)
 
-PDF-förhandsgranskning av ett brev som skapats med mallen för balanserat höger
+PDF förhandsgranskning av ett brev som skapats med mallen för balanserat höger
 
 ## Visual Left {#visual-left}
 
@@ -83,7 +87,7 @@ Mallen Visual Left har ett sidohuvud till vänster på sidan med företagets log
 
 ![visuell](assets/visualleft.png)
 
-PDF-förhandsgranskning av ett brev som skapats med mallen Visual Left
+PDF förhandsgranskning av ett brev som skapats med mallen Visual Left
 
 ## Visual Top {#visual-top}
 
@@ -91,7 +95,7 @@ Visuell toppmall har en visuell marginal högst upp. Mallen Visual Top innehåll
 
 ![visualtop](assets/visualtop.png)
 
-PDF-förhandsgranskning av ett brev som skapats med mallen Visual Top
+PDF förhandsgranskning av ett brev som skapats med mallen Visual Top
 
 ## Visual Top - Classic {#visual-top-classic}
 
@@ -99,4 +103,4 @@ Mallen Visual Top - Classic har en rubrik ovanför sidan med företagslogotypen.
 
 ![visualtopclassic](assets/visualtopclassic.png)
 
-PDF-förhandsgranskning av ett brev som skapats med mallen Visual Top - Classic
+PDF förhandsgranskning av ett brev som skapats med mallen Visual Top - Classic

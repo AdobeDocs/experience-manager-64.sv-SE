@@ -1,8 +1,8 @@
 ---
 title: Sammanställa PDF-dokument
-seo-title: Sammanställa PDF-dokument
-description: Använd Assembler-tjänsten för att samla ihop flera PDF-dokument till ett PDF-dokument eller för att dela upp ett PDF-dokument till flera PDF-dokument.
-seo-description: Använd Assembler-tjänsten för att samla ihop flera PDF-dokument till ett PDF-dokument eller för att dela upp ett PDF-dokument till flera PDF-dokument.
+seo-title: Assembling PDF Documents
+description: Använd Assembler-tjänsten för att samla ihop flera PDF-dokument till ett PDF-dokument eller dela upp ett PDF-dokument till flera PDF-dokument.
+seo-description: Use the Assembler service to assemble multiple PDF documents into one PDF document or disassemble one PDF document into multiple PDF documents.
 uuid: 0789feea-1bbc-4acd-9ad7-ddf4d05e1c68
 contentOwner: admin
 content-type: reference
@@ -11,16 +11,19 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 3dd2b0d3-6023-490a-9b17-e29cc21c1b9d
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: d89bac8d-67e6-4442-845b-e358cbe0a568
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '170'
 ht-degree: 0%
 
 ---
 
-
 # Sammanställa PDF-dokument {#assembling-pdf-documents}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 **Om Assembler Service**
 
@@ -30,5 +33,4 @@ Från och med LiveCycle ES 8.0 och senare finns stöd för PDF-paket i Assembler
 
 >[!NOTE]
 >
->Mer information om tjänsten Assembler finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
-
+>Mer information om Assembler-tjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).

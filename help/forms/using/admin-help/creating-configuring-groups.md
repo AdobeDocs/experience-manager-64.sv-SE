@@ -1,24 +1,27 @@
 ---
 title: Skapa och konfigurera grupper
-seo-title: Skapa och konfigurera grupper
+seo-title: Creating and configuring groups
 description: Lär dig hur du skapar grupper manuellt eller dynamiskt, redigerar en grupp, visar information om en grupp eller tar bort en grupp.
-seo-description: Lär dig hur du skapar grupper manuellt eller dynamiskt, redigerar en grupp, visar information om en grupp eller tar bort en grupp.
+seo-description: Learn how to create groups manually or dynamically, edit a group, view details about a group, or delete a group.
 uuid: 8532d72b-270a-4fcf-b7a5-56fca979a5fe
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 2058b501-65ce-4ad3-8e1b-b2eab896f70f
-translation-type: tm+mt
-source-git-commit: ccf4f4232d6a7af0781480106526c4c6fcb7c40e
+exl-id: 21f5cca3-46e2-4aa2-9703-ac51e8eecd40
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1607'
 ht-degree: 0%
 
 ---
 
-
 # Skapa och konfigurera grupper{#creating-and-configuring-groups}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 När du skapar grupper med användare kan du tilldela roller till gruppen i stället för till enskilda användare.
 
@@ -76,7 +79,7 @@ En dynamisk grupp innehåller bara användare. Den får inte innehålla andra gr
 1. Ange när användarhanteraren ska söka efter nya e-postdomäner. Den här tiden bör vara efter domänsynkroniseringstiden eftersom skapandet av dynamiska grupper bara är logiskt om domänsynkroniseringen är slutförd.
 
    * Om du vill aktivera automatisk synkronisering dagligen anger du tiden i 24-timmarsformat i rutan Inträffar varje dag. När du sparar inställningarna konverteras det här värdet till ett cron-uttryck, som visas i rutan nedan.
-   * Om du vill schemalägga synkronisering på en viss dag i veckan eller månaden, eller under en viss månad, väljer du lämpligt cron-uttryck i rutan. Standardvärdet är `0 00 4 ? * *`(vilket betyder check vid 4 A.M. varje dag).
+   * Om du vill schemalägga synkronisering på en viss dag i veckan eller månaden, eller under en viss månad, väljer du lämpligt cron-uttryck i rutan. Standardvärdet är `0 00 4 ? * *`(vilket innebär kontroll vid 4 A.M. varje dag).
 
       Användningen av cron-uttryck baseras på Quartz-systemet för jobbschemaläggning med öppen källkod, version 1.4.0.
 
@@ -93,13 +96,13 @@ En dynamisk grupp innehåller bara användare. Den får inte innehålla andra gr
    >
    >Attributen för e-post, beskrivning och kanoniskt namn är skiftlägeskänsliga när du använder operatorn Lika med. De är inte skiftlägeskänsliga med operatorerna Börjar med, Slutar med eller Innehåller.
 
-   **E-post:** Användarens e-postdomän, till exempel  `@adobe.com`.
+   **E-post:** Användarens e-postdomän, som `@adobe.com`.
 
-   **Beskrivning:** Användarbeskrivning, t.ex.&quot;Computer Scientist&quot;
+   **Beskrivning:** Användarens beskrivning, t.ex.&quot;Computer Scientist&quot;
 
-   **Kanoniskt namn:** användarens kanoniska namn, till exempel  `ou=adobe.com`
+   **Kanoniskt namn:** Användarens kanoniska namn, till exempel `ou=adobe.com`
 
-   **Domännamn:** Namnet på den domän som användaren tillhör, till exempel  `DefaultDom`. Attributet Domännamn är skiftlägeskänsligt när du använder operatorn Innehåller. Den är inte skiftlägeskänslig med operatorerna Börjar med, Slutar med eller Likhetstecken.
+   **Domännamn:** Namnet på domänen som användaren tillhör, till exempel `DefaultDom`. Attributet Domännamn är skiftlägeskänsligt när du använder operatorn Innehåller. Den är inte skiftlägeskänslig med operatorerna Börjar med, Slutar med eller Likhetstecken.
 
 1. Klicka på Testa. På en testsida visas de första 200 användarna som uppfyller de definierade villkoren. Klicka på Stäng.
 1. Om testet returnerade det förväntade resultatet klickar du på Nästa. I annat fall redigerar du de dynamiska gruppvillkoren och testar igen.
@@ -155,4 +158,3 @@ En dynamisk grupp innehåller bara användare. Den får inte innehålla andra gr
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Användare och grupper.
 1. Välj Grupper i listan Sök och klicka sedan på Sök.
 1. Markera kryssrutan för gruppen som ska tas bort, klicka på Ta bort och klicka sedan på OK.
-

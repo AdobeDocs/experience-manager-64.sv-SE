@@ -1,33 +1,36 @@
 ---
 title: Visa och förstå AEM Forms analysrapporter
-seo-title: Visa och förstå AEM Forms analysrapporter
+seo-title: View and understand AEM Forms analytics reports
 description: AEM Forms kan integreras med Adobe Analytics och ger er en sammanfattning och detaljerad analys av era publicerade adaptiva formulär.
-seo-description: AEM Forms kan integreras med Adobe Analytics och ger er en sammanfattning och detaljerad analys av era publicerade adaptiva formulär.
+seo-description: AEM Forms integrates with Adobe Analytics and provides you summary and detailed analytics about your published adaptive forms.
 uuid: 193f472d-4aa3-4c31-b3c7-b5a2957dfb3d
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: integrations
 discoiquuid: a9045816-cae7-42cf-a734-6c3a25d0f522
-translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+exl-id: 0483b6ed-676a-4272-a00e-23d53a979b07
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1086'
 ht-degree: 0%
 
 ---
 
-
 # Visa och förstå AEM Forms analysrapporter {#view-and-understand-aem-forms-analytics-reports}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Adobe Experience Manager Forms kan integreras med Adobe Analytics så att ni kan samla in och spåra prestandamått för era publicerade formulär och dokument. Syftet med att analysera dessa värden är att fatta välgrundade beslut baserat på uppgifter om de ändringar som krävs för att göra formulär eller dokument mer användbara.
 
-## Konfigurera analys {#setting-up-analytics}
+## Ställa in analyser {#setting-up-analytics}
 
-Analysfunktionen i AEM Forms ingår i AEM Forms tilläggspaket. Information om hur du installerar tilläggspaketet finns i [Installera och konfigurera AEM Forms](/help/forms/using/installing-configuring-aem-forms-osgi.md).
+Analysfunktionen i AEM Forms ingår i AEM Forms tilläggspaket. Mer information om hur du installerar tilläggspaketet finns i [Installera och konfigurera AEM Forms](/help/forms/using/installing-configuring-aem-forms-osgi.md).
 
 Utöver tilläggspaketet behöver du ett Adobe Analytics-konto. Information om lösningen finns i [Adobe Analytics](https://www.adobe.com/solutions/digital-analytics.html).
 
-När du har AEM Forms-tilläggspaketet och ett Adobe Analytics-konto integrerar du Adobe Analytics-kontot med AEM Forms och aktiverar spårning i formulär eller dokument enligt beskrivningen i [Konfigurera analyser och rapporter](/help/forms/using/configure-analytics-forms-documents.md).
+När du har AEM Forms-tilläggspaketet och ett Adobe Analytics-konto kan du integrera Adobe Analytics-kontot med AEM Forms och aktivera spårning av formulär och dokument enligt beskrivningen i [Konfigurera analyser och rapporter](/help/forms/using/configure-analytics-forms-documents.md).
 
 ## Hur användarinteraktionsinformation registreras {#how-user-interaction-information-is-recorded}
 
@@ -51,21 +54,21 @@ När en användare interagerar med formuläret registreras interaktionerna och s
 
 Följ de här stegen för att visa analysrapporter:
 
-1. Logga in på AEM portal på `https://[hostname]:[port]`
-1. Klicka på **Forms > Forms &amp; Documents**.
+1. Logga in på AEM `https://[hostname]:[port]`
+1. Klicka **Forms > Forms &amp; Documents**.
 
 1. Välj det formulär som du vill visa analysrapporterna för.
 1. Välj **Mer > Analysrapporter**.
 
 ![analytikerrapport](assets/analyticsreport.png)
 
-**A. Kommandot** Analysrapport
+**S.** Analysrapport, kommando
 
 AEM Forms visar analysrapporter för formuläret och för varje panel i formuläret, enligt nedan.
 
 ![Sammanfattningsrapport för ett anpassat formulär](assets/analyticsdashboard_callout.png)
 
-**A.** Konverteringar  **B. Sammanfattning på** formulärnivå  **C.** Sammanfattning på panelnivå  **D.** Besökare i webbläsare - filter  **E.** OS - filter  **** F.¥Språk - filter
+**S.** Konverteringar **B.** Sammanfattning på formulärnivå **C.** Sammanfattning på panelnivå **D.** Webbläsare för besökare - filtrera **E.** Operativsystem för besökare - filter **F.** Besökarnas språk - filter
 
 Som standard visas analysrapporten för de senaste sju dagarna. Du kan visa rapporter för de senaste 15 dagarna, den senaste månaden och så vidare, eller ange ett datumintervall.
 
@@ -81,7 +84,7 @@ Med konverteringsdiagrammet på formulärnivå får du insikt i hur formuläret 
 
 * **Återgivningar**: Antalet gånger som ett formulär öppnas
 * **Besökare**: Antalet besökare i formuläret
-* **Sändningar**: Antal gånger som formuläret skickas in
+* **Inlämningar**: Antal gånger som formuläret skickas in
 
 ![konvertering](assets/conversion-graph.png)
 
@@ -93,9 +96,9 @@ I avsnittet Sammanfattning på formulärnivå får du information om hur formul�
 * **Återgivningar**: Antal gånger som formuläret har återgetts eller öppnats
 
 * **Utkast**: Antal gånger som formuläret har sparats som utkast
-* **Sändningar**: Antal gånger som formuläret har skickats in
+* **Inlämningar**: Antal gånger som formuläret har skickats in
 * **Avbryt**: Antal gånger som användarna började fylla i formuläret och sedan gick utan att fylla i det
-* **Unika besökare**: Antal gånger som formuläret återges av unika besökare. Mer information om unika besökare finns i [Unika besökare, besök och kundbeteende](https://helpx.adobe.com/analytics/kb/unique-visitors-visitor-behavior.html).
+* **Unika besökare**: Antal gånger som formuläret återges av unika besökare. Mer information om unika besökare finns på [Unika besökare, besök och kundbeteende](https://helpx.adobe.com/analytics/kb/unique-visitors-visitor-behavior.html).
 
 ![Utökad sammanfattningsanalysrapport på formulärnivå](assets/analytics-report.png)
 
@@ -107,7 +110,7 @@ I avsnittet Sammanfattning på panelnivå finns följande information om varje p
 
 * **Fel påträffades**: Genomsnittligt antal fel som användarna har påträffat i fälten på en panel. Fel som påträffas uppstår genom att det totala antalet fel i ett fält divideras med antalet återgivningar av formuläret.
 
-* **Hjälp tillgänglig**: Genomsnittligt antal gånger som användare har använt sammanhangsberoende hjälp för fälten i panelen. Hjälpen Åtkomst fås genom att det totala antalet gånger som hjälpen är tillgänglig för ett fält divideras med antalet återgivningar av formuläret.
+* **Hjälp använd**: Genomsnittligt antal gånger som användare har använt sammanhangsberoende hjälp för fälten i panelen. Hjälpen Åtkomst fås genom att det totala antalet gånger som hjälpen är tillgänglig för ett fält divideras med antalet återgivningar av formuläret.
 
 ### Detaljerad panelrapport {#detailed-panel-report}
 
@@ -119,7 +122,7 @@ Den detaljerade rapporten visar värden för alla fält i panelen.
 
 Panelrapporten har tre flikar:
 
-* **Tidsrapport**  (standard): Visar hur många sekunder som har ägnats åt att fylla i fälten på panelen
+* **Tidsrapport** (Standard): Visar hur många sekunder som har ägnats åt att fylla i fälten på panelen
 * **Felrapport**: Visar antalet fel som användare har råkat ut för när de fyller i fälten
 * **Hjälprapport**: Antal gånger som hjälpen för ett visst fält användes
 
@@ -131,7 +134,7 @@ I tabellerna Webbläsardistribution, Operativsystemsdistribution och Språkdistr
 
 Om du vill filtrera analysdata ytterligare kan du klicka på en post i någon av tabellerna. Om du till exempel klickar på Google Chrome i tabellen Webbläsardistribution återges rapporten igen med data som är relevanta för webbläsaren Google Chrome enligt följande:
 
-![Filter tillämpat på analysrapport - Google Chrome  ](assets/filter.png)
+![Filter som tillämpas på analysrapporten - Google Chrome ](assets/filter.png)
 
 Om du visar panelrapporten när du har använt ett filter visas även panelrapportdata enligt det använda filtret.
 
@@ -147,4 +150,4 @@ När ett filter har använts:
 
 Om du har A/B-testning aktiverat och konfigurerat för formuläret har rapportsidan en listruta som du kan använda för att visa A/B-testrapporten. A/B-testrapporten visar den jämförande prestandan för två versioner av formuläret som du har konfigurerat.
 
-Mer information om A/B-testning finns i [Skapa och hantera A/B-test för adaptiva formulär](/help/forms/using/ab-testing-adaptive-forms.md).
+Mer information om A/B-testning finns i [Skapa och hantera A/B-tester för adaptiva formulär](/help/forms/using/ab-testing-adaptive-forms.md).

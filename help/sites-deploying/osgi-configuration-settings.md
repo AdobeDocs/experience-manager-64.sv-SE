@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: ccddb2cd-8e67-43aa-a495-8996ad349761
 feature: Configuring
 exl-id: 5c07c773-53a3-41fd-860a-da0cb14f8bc6
-source-git-commit: 904c7acc63dac5c92a5d1754380d075727e6a28a
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3460'
+source-wordcount: '3496'
 ht-degree: 0%
 
 ---
 
 # Konfigurationsinställningar för OSGi{#osgi-configuration-settings}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 [OSGi](https://www.osgi.org/) är en grundläggande del i AEM. Det används för att styra de sammansatta AEM och deras konfiguration.
 
@@ -368,7 +372,7 @@ För valda användare kan användarnamnet som extraheras från HTTP-begäran ers
 `admin` visas på båda sidor om kartan, kommer mappningen att ignoreras. Observera att tecknet &quot;=&quot; måste föregås av ett &quot;\&quot;-tecken.
 
 * **Format**
-Anger i vilket format användar-ID:t anges. Användning:
+Anger i vilket format användar-ID:t anges. Använd:
 
    * `Basic` om användar-ID är kodat i HTTP Basic Authentication-format
    * `AsIs` om användar-ID anges i oformaterad text eller ett reguljärt uttryck ska användas som det är eller ett reguljärt uttryck

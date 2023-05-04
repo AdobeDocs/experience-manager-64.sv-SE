@@ -1,39 +1,42 @@
 ---
 title: Skapa och tilldela aktiveringsresurser
-seo-title: Skapa och tilldela aktiveringsresurser
+seo-title: Create and Assign Enablement Resources
 description: Lägg till aktiveringsresurser
-seo-description: Lägg till aktiveringsresurser
+seo-description: Add enablement resources
 uuid: da940242-0c9b-4ad8-8880-61fd41461c3b
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 8fe97181-600e-42ac-af25-d5d4db248740
-translation-type: tm+mt
-source-git-commit: 28948f1f8678512f8fc970a4289cb01cde86c5c2
+exl-id: 9f447a54-4512-41ab-b8d3-327e751eda58
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 4%
+source-wordcount: '684'
+ht-degree: 3%
 
 ---
 
-
 # Skapa och tilldela aktiveringsresurser {#create-and-assign-enablement-resources}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Lägg till en aktiveringsresurs {#add-an-enablement-resource}
 
 Så här lägger du till en aktiveringsresurs på den nya communitywebbplatsen:
 
 * På författarinstansen
-   * Till exempel [http://localhost:4502/](http://localhost:4503/)
+   * Till exempel: [http://localhost:4502/](http://localhost:4503/)
 * Logga in som systemadministratör
-* Välj **Communities > [Resources](resources.md)** från global navigering
+* Från global navigering väljer du **Communities > [Resurser](resources.md)**
 
    ![chlimage_1-199](assets/chlimage_1-199.png)
    ![chlimage_1-200](assets/chlimage_1-200.png)
 * Välj den community där aktiveringsresurser läggs till
    * Välj `Enablement Tutorial`
-* Välj ` Create` på menyn
+* Välj ` Create`
 * Välj **[!UICONTROL Resource]**
 
 ![chlimage_1-201](assets/chlimage_1-201.png)
@@ -55,7 +58,7 @@ Fyll i grundläggande information för resursen:
 
 Det ser ut som om flera resurser kan väljas, men bara en är tillåten.
 
-Välj `'+' icon` i det övre högra hörnet för att börja välja resursen genom att identifiera källan.
+Välj `'+' icon`, i det övre högra hörnet, för att börja välja resursen genom att identifiera källan.
 
 ![chlimage_1-203](assets/chlimage_1-203.png) ![chlimage_1-204](assets/chlimage_1-204.png)
 
@@ -63,7 +66,7 @@ Välj `'+' icon` i det övre högra hörnet för att börja välja resursen geno
 
 ![chlimage_1-205](assets/chlimage_1-205.png)
 
-* select **[!UICONTROL Next]**
+* välj **[!UICONTROL Next]**
 
 ### Inställningar {#settings}
 
@@ -71,17 +74,17 @@ Välj `'+' icon` i det övre högra hörnet för att börja välja resursen geno
 Lämna standardinställningarna så att eleverna kan kommentera och betygsätta aktiveringsresurser.
 * **[!UICONTROL Due Date]**
 
-   *(Valfritt)*  Ett datum då uppdraget ska vara slutfört kan väljas.
+   *(Valfritt)* Ett datum då uppdraget ska vara slutfört kan väljas.
 * **[!UICONTROL Resource Author]**
 
    *(Valfritt)* Lämna tomt.
 * **[!UICONTROL Resource Contact&ast;]**
 
-   *(Obligatoriskt)* Använd listrutan för att välja medlem  `Quinn Harper`.
+   *(Obligatoriskt)* Använd listrutemenyn för att välja medlem `Quinn Harper`.
 * **[!UICONTROL Resource Expert]**
 
    *(Valfritt)* Lämna tomt.
-   **Obs**: Om användare eller grupper inte visas kontrollerar du att de har lagts till i  `Community Enable Members` gruppen och  ** sparats i publiceringsinstansen.
+   **Anteckning**: om användare eller grupper inte är synliga kontrollerar du att de har lagts till i `Community Enable Members` gruppera och *Sparad* på publiceringsinstansen.
    ![chlimage_1-206](assets/chlimage_1-206.png)
 * Välj **[!UICONTROL Next]**
 
@@ -104,7 +107,7 @@ Om du vill överföra en ny version av aktiveringsresursen rekommenderar vi att 
 
 Innan registrerare kan se den tilldelade kursen måste den publiceras:
 
-* Markera världen `Publish`ikon
+* Välj världen `Publish`icon
 
 Aktiveringen har bekräftats med ett meddelande:
 
@@ -128,7 +131,7 @@ Gå tillbaka till självstudiekursen om aktivering av dess resurser.
 
 En inlärningsväg är en logisk gruppering av aktiveringsresurser som utgör en kurs.
 
-* Välj `+ Create` från resurskonsolen
+* I resurskonsolen väljer du `+ Create`
 * Välj **[!UICONTROL Learning Path]**
 
 ![chlimage_1-212](assets/chlimage_1-212.png)
@@ -150,9 +153,9 @@ Hoppa över nästa panel eftersom det inte finns några nödvändiga inlärnings
 
 På panelen Lägg till resurser
 
-* Välj `+ Add Resources` för att välja de två skidlesionsresurserna som ska läggas till i inlärningsvägen
+* Välj `+ Add Resources` för att välja de två skidlektioner som ska läggas till i inlärningsvägen
 
-   Obs! Endast **publicerade** resurser kan markeras.
+   Obs! Endast **publicerad** Resurserna går att välja.
 
 >[!NOTE]
 >
@@ -168,11 +171,11 @@ På panelen Lägg till resurser
 
 * **[!UICONTROL Add Assignees]**
 Använd listrutan för att välja 
-`Community Ski Class` grupp, som bör omfatta medlemmar  `Riley Taylor` och  `Sidney Croft.`
+`Community Ski Class` grupp, som bör omfatta medlemmar `Riley Taylor` och `Sidney Croft.`
 
 * **[!UICONTROL Learning Path Contact&ast;]**
 
-   *(Obligatoriskt)* Använd listrutan för att välja medlem  `Quinn Harper`.
+   *(Obligatoriskt)* Använd listrutemenyn för att välja medlem `Quinn Harper`.
 
 * Välj **[!UICONTROL Create]**
 
@@ -181,4 +184,3 @@ Använd listrutan för att välja
 Utbildningssökvägen har skapats och återgår till resurskonsolen med den nya utbildningssökvägen markerad. Från den här konsolen går det att publicera, lägga till deltagare och ändra andra inställningar.
 
 **Publicera** utbildningsvägen.
-

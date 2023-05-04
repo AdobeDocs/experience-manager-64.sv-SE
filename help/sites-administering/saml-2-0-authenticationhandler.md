@@ -1,26 +1,29 @@
 ---
 title: SAML 2.0-autentiseringshanterare
-seo-title: SAML 2.0-autentiseringshanterare
+seo-title: SAML 2.0 Authentication Handler
 description: Läs mer om autentiseringshanteraren för SAML 2.0 i AEM.
-seo-description: Läs mer om autentiseringshanteraren för SAML 2.0 i AEM.
+seo-description: Learn about the SAML 2.0 Authentication Handler in AEM.
 uuid: 51f97315-350a-42a4-af2c-2de87307c6ad
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
-translation-type: tm+mt
-source-git-commit: 9f8ee3448abeb9a2f4de09b6ccc2f29b00b44fe5
+exl-id: 4868daad-0f3e-48cb-9b20-08dee270e74e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '871'
 ht-degree: 0%
 
 ---
 
-
 # SAML 2.0-autentiseringshanterare{#saml-authentication-handler}
 
-AEM levereras med en [SAML](http://saml.xml.org/saml-specifications)-autentiseringshanterare. Hanteraren stöder [SAML](http://saml.xml.org/saml-specifications) 2.0 Authentication Request Protocol (Web-SSO-profil) med bindningen `HTTP POST`.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+AEM levererar [SAML](http://saml.xml.org/saml-specifications) autentiseringshanterare. Hanteraren har stöd för [SAML](http://saml.xml.org/saml-specifications) 2.0 Authentication Request Protocol (Web-SSO-profil) med `HTTP POST` bindning.
 
 Det har stöd för:
 
@@ -33,13 +36,13 @@ Den här hanteraren lagrar det krypterade SAML-svarsmeddelandet i användarnoden
 
 >[!NOTE]
 >
->Se [en demonstration av AEM- och SAML-integrering](https://helpx.adobe.com/experience-manager/kb/simple-saml-demo.html).
+>Se [en demonstration av AEM och SAML-integrering](https://helpx.adobe.com/experience-manager/kb/simple-saml-demo.html).
 >
 >Om du vill läsa en community-artikel från början till slut klickar du på: [Integrera SAML med Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/aem63_saml.html).
 
-## Konfigurerar SAML 2.0-autentiseringshanteraren {#configuring-the-saml-authentication-handler}
+## Konfigurera autentiseringshanteraren för SAML 2.0 {#configuring-the-saml-authentication-handler}
 
-[Webbkonsolen](/help/sites-deploying/configuring-osgi.md) ger åtkomst till autentiseringshanterarkonfigurationen [SAML](http://saml.xml.org/saml-specifications) 2.0 med namnet **Adobe Granite SAML 2.0 Authentication Handler**. Följande egenskaper kan anges.
+The [Webbkonsol](/help/sites-deploying/configuring-osgi.md) ger åtkomst till [SAML](http://saml.xml.org/saml-specifications) 2.0-konfiguration för autentiseringshanterare har anropats **Autentiseringshanterare för Adobe Granite SAML 2.0**. Följande egenskaper kan anges.
 
 >[!NOTE]
 >
@@ -47,53 +50,51 @@ Den här hanteraren lagrar det krypterade SAML-svarsmeddelandet i användarnoden
 >
 >* Identitetsleverantörens POST-URL.
 >* Tjänstleverantörens enhets-ID.
-
 >
-
 
 
 >[!NOTE]
 >
->SAML-försäkringar är signerade och kan eventuellt krypteras. För att detta ska fungera måste du tillhandahålla minst det offentliga certifikatet för identitetsleverantören i TrustStore. Mer information finns i [Lägga till IdP-certifikatet i avsnittet TrustStore](/help/sites-administering/saml-2-0-authenticationhandler.md#add-the-idp-certificate-to-the-aem-truststore).
+>SAML-försäkringar är signerade och kan eventuellt krypteras. För att detta ska fungera måste du tillhandahålla minst det offentliga certifikatet för identitetsleverantören i TrustStore. Se [Lägger till IdP-certifikatet till TrustStore](/help/sites-administering/saml-2-0-authenticationhandler.md#add-the-idp-certificate-to-the-aem-truststore) för mer information.
 
-**Sökväg till** PathRepository som denna autentiseringshanterare ska användas för av Sling. Om detta är tomt inaktiveras autentiseringshanteraren.
+**Bana** Databassökväg som den här autentiseringshanteraren ska användas för av Sling. Om detta är tomt inaktiveras autentiseringshanteraren.
 
-**Rankningsvärdet för Service** RankingOSGi Framework-tjänsten anger i vilken ordning tjänsten ska anropas. Detta är ett heltalsvärde där högre värden anger högre prioritet.
+**Servicerangordning** OSGi Framework Service Ranking-värde för att ange i vilken ordning tjänsten ska anropas. Detta är ett heltalsvärde där högre värden anger högre prioritet.
 
-**IDP-certifikatalias** Alias för IdP-certifikatets certifikat i det globala förtroendearkivet. Om den här egenskapen är tom inaktiveras autentiseringshanteraren. Se kapitlet&quot;Add the IdP Certificate to the AEM TrustStore&quot; nedan om hur du konfigurerar det.
+**IDP-certifikatalias** Aliaset för IdP:s certifikat i det globala förtroendearkivet. Om den här egenskapen är tom inaktiveras autentiseringshanteraren. Se kapitlet&quot;Add the IdP Certificate to the AEM TrustStore&quot; nedan om hur du konfigurerar det.
 
-**Identity Provider** URLURL för den IDP dit SAML-autentiseringsbegäran ska skickas. Om den här egenskapen är tom inaktiveras autentiseringshanteraren.
+**URL för identitetsleverantör** URL för den IDP dit SAML-autentiseringsbegäran ska skickas. Om den här egenskapen är tom inaktiveras autentiseringshanteraren.
 
 >[!CAUTION]
 >
->Identitetsproviderns värdnamn måste läggas till i konfigurationen för OSGi för **Apache Sling Referrer Filter**. Mer information finns i avsnittet [Webbkonsol](/help/sites-deploying/configuring-osgi.md).
+>Identitetsleverantörens värdnamn måste läggas till i **Apache Sling Referer-filter** OSGi-konfiguration. Se [Webbkonsol](/help/sites-deploying/configuring-osgi.md) för mer information.
 
-**Tjänstleverantörens enhets-** ID som unikt identifierar den här tjänstleverantören med identitetsleverantören. Om den här egenskapen är tom inaktiveras autentiseringshanteraren.
+**Tjänstleverantörens enhets-ID** ID som unikt identifierar den här tjänstleverantören med identitetsleverantören. Om den här egenskapen är tom inaktiveras autentiseringshanteraren.
 
-**Standardomdirigering:** Standardplatsen att omdirigera till efter lyckad autentisering.
+**Standardomdirigering** Standardplatsen att omdirigera till efter lyckad autentisering.
 
 >[!NOTE]
 >
->Den här platsen används bara om cookien `request-path` inte har angetts. Om du begär en sida under den konfigurerade sökvägen utan en giltig inloggningstoken, lagras den begärda sökvägen i en cookie\
+>Den här platsen används bara om `request-path` cookie har inte angetts. Om du begär en sida under den konfigurerade sökvägen utan en giltig inloggningstoken, lagras den begärda sökvägen i en cookie\
 >och webbläsaren omdirigeras till den här platsen igen när autentiseringen är klar.
 
-**Användar-ID-** attribut Namnet på attributet som innehåller det användar-ID som används för att autentisera och skapa användaren i CRX-databasen.
+**Användar-ID-attribut** Namnet på attributet som innehåller det användar-ID som används för att autentisera och skapa användaren i CRX-databasen.
 
 >[!NOTE]
 >
->Användar-ID:t hämtas inte från noden `saml:Subject` i SAML-försäkran utan från denna `saml:Attribute`.
+>Användar-ID:t hämtas inte från `saml:Subject` noden i SAML-försäkran men från den `saml:Attribute`.
 
-**Använd** krypteringOm denna autentiseringshanterare förväntar sig krypterade SAML-försäkringar eller inte.
+**Använd kryptering** Om den här autentiseringshanteraren förväntar sig krypterade SAML-försäkringar eller inte.
 
-**Skapa CRX-** användare automatisktOm icke-befintliga användare ska skapas automatiskt i databasen efter lyckad autentisering eller inte.
+**Skapa CRX-användare automatiskt** Om icke-befintliga användare ska skapas automatiskt i databasen efter att autentiseringen lyckades eller inte.
 
 >[!CAUTION]
 >
 >Om det automatiska skapandet av CRX-användare är inaktiverat måste användarna skapas manuellt.
 
-**Lägg till i** grupperOm en användare automatiskt ska läggas till i CRX-grupper efter lyckad autentisering eller inte.
+**Lägg till i grupper** Anger om en användare automatiskt ska läggas till i CRX-grupper efter lyckad autentisering.
 
-**GruppmedlemskapNamnet** på saml:Attribute som innehåller en lista med CRX-grupper som den här användaren ska läggas till i.
+**Gruppmedlemskap** Namnet på saml:Attribute som innehåller en lista med CRX-grupper som den här användaren ska läggas till i.
 
 ## Lägg till IdP-certifikatet i AEM TrustStore {#add-the-idp-certificate-to-the-aem-truststore}
 
@@ -115,15 +116,15 @@ SAML-försäkringar är signerade och kan eventuellt krypteras. För att detta s
 >Stegen nedan är obligatoriska, annars kommer följande undantag att inträffa: `com.adobe.granite.keystore.KeyStoreNotInitialisedException: Uninitialised system trust store`
 
 1. Gå till: [http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html)
-1. Redigera `authentication-service`-användaren.
-1. Skapa en KeyStore genom att klicka på **Create KeyStore** under **Kontoinställningar**.
+1. Redigera `authentication-service` användare.
+1. Skapa en KeyStore genom att klicka på **Skapa KeyStore** under **Kontoinställningar**.
 
 >[!NOTE]
 >
 >Stegen nedan är bara obligatoriska om hanteraren ska kunna signera eller dekryptera meddelanden.
 
-1. Överför filen med den privata nyckeln genom att klicka på **Välj filen med den privata nyckeln**. Nyckeln måste vara i PKCS#8-format med DER-kodning.
-1. Ladda upp certifikatfilen genom att klicka på **Välj certifikatkedjefiler**.
+1. Överför filen med den privata nyckeln genom att klicka på **Välj privat nyckelfil**. Nyckeln måste vara i PKCS#8-format med DER-kodning.
+1. Överför certifikatfilen genom att klicka på **Välj filer för certifikatkedja**.
 1. Tilldela ett alias enligt nedan:
 
    ![chlimage_1-373](assets/chlimage_1-373.png)
@@ -133,10 +134,9 @@ SAML-försäkringar är signerade och kan eventuellt krypteras. För att detta s
 Du kan konfigurera en loggare för att felsöka problem som kan uppstå när SAML felkonfigureras. Du kan göra detta genom att:
 
 1. Gå till webbkonsolen på *http://localhost:4502/system/console/configMgr*
-1. Sök efter och klicka på posten **Konfiguration av loggningsloggare för Apache Sling**
+1. Sök efter och klicka på den anropade posten **Konfiguration av loggningsloggare för Apache Sling**
 1. Skapa en loggare med följande konfiguration:
 
-   * **loggnivå:** felsökning
-   * **loggfil:** logs/saml.log
+   * **Loggnivå:** Felsök
+   * **Loggfil:** logs/saml.log
    * **Logger:** com.adobe.granite.auth.saml
-

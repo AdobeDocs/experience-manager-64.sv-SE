@@ -1,17 +1,21 @@
 ---
-title: Användarhandbok för AEM 6.4 Communities
+title: Användarhandbok om AEM 6.4 Communities
 seo-title: AEM 6.4 Communities User Guide
 description: Den här guiden täcker alla AEM Communities-uppgifter, t.ex. att skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner.
 seo-description: Covers all AEM Communities tasks, such as creating online experiences such as forums, user groups, learning resources, and other social features.
 exl-id: 4711564b-adcc-4835-8215-138b209d1578
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 10%
+source-wordcount: '368'
+ht-degree: 16%
 
 ---
 
-# Användarhandbok för AEM 6.4 Communities
+# Användarhandbok om AEM 6.4 Communities
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Den här guiden täcker alla AEM Communities-uppgifter, t.ex. att skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner.
 
@@ -30,8 +34,8 @@ Den här guiden täcker alla AEM Communities-uppgifter, t.ex. att skapa onlineup
 | [Användarhandbok för Assets](/help/assets/home.md) | Lär dig hur du skapar, hanterar, levererar och optimerar digitala resurser. |
 | [Forms Användarhandbok](/help/forms/home.md) | Den här guiden beskriver hur du skapar, hanterar, publicerar och uppdaterar digitala formulär. |
 | [Användarhandbok för Communities](/help/communities/home.md) | Skapa onlineupplevelser som forum, användargrupper, utbildningsresurser och andra sociala funktioner. |
-| [Administratörshandbok](/help/sites-administering/home.md) | Förstå hur du administrerar AEM |
-| [Redigeringshandbok](/help/sites-authoring/home.md) | I den här handboken förklaras begreppen för redigering i AEM. |
+| [Användarhandbok om administration](/help/sites-administering/home.md) | Förstå hur du administrerar AEM |
+| [Användarhandbok om redigering](/help/sites-authoring/home.md) | I den här handboken förklaras begreppen för redigering i AEM. |
 | [Användargränssnittets skrivguide](/help/sites-classic-ui-authoring/home.md) | I den här handboken förklaras begreppen för redigering i AEM i det klassiska användargränssnittet. |
 | [Användarhandbok för skärmar](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html) | Lär dig mer om den digitala signeringslösningen för att publicera dynamiska och interaktiva digitala upplevelser. |
 | [Distribuera användarhandbok](/help/sites-deploying/home.md) | Den här guiden visar grunderna i AEM. |

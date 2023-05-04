@@ -1,23 +1,26 @@
 ---
 title: Mät och förbättra effektiviteten och konverteringen av blanketter
-seo-title: Mät och förbättra effektiviteten och konverteringen av blanketter
+seo-title: Measure and improve effectiveness and conversion of forms
 description: AEM Forms kan integreras med lösningar från Adobe Target och Adobe Analytics som gör att ni kan mäta och förbättra formulärens prestanda och konverteringsgrad.
-seo-description: AEM Forms kan integreras med lösningar från Adobe Target och Adobe Analytics som gör att ni kan mäta och förbättra formulärens prestanda och konverteringsgrad.
+seo-description: AEM Forms integrates with Adobe Target and Adobe Analytics solutions that allows you to measure and improve the performance and conversion rate of your forms.
 uuid: 5876f2f3-1c97-4fb9-a032-b869ee3c6a45
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: integrations
 discoiquuid: 6b62b280-d101-410a-ba8c-02940f766c32
-translation-type: tm+mt
-source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+exl-id: 364dd7f3-9009-440e-8aff-28e2dac08fe7
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1314'
 ht-degree: 0%
 
 ---
 
+# Mät och förbättra effektiviteten och konverteringen av blanketter {#measure-and-improve-effectiveness-and-conversion-of-forms}
 
-# Mät och förbättra effektiviteten och konverteringen av formulär {#measure-and-improve-effectiveness-and-conversion-of-forms}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Utmaningen {#the-challenge-br}
 
@@ -33,18 +36,18 @@ För att maximera avkastningen måste organisationer övervaka hur kunderna inte
 
 ## Lösningen {#the-solution}
 
-AEM Forms kan integreras med [Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)-lösningar - [Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html) och [Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html) - som hjälper dig att övervaka och analysera hur formulären fungerar och som gör det möjligt att experimentera och identifiera upplevelsen som leder till bättre konverteringsgrad.
+AEM Forms kan integreras med [Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html) lösningar - [Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html) och [Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html) - som kan hjälpa er att övervaka och analysera hur era formulär fungerar och göra det möjligt att experimentera och identifiera upplevelsen som leder till bättre konverteringsgrad.
 
 ## Arbetsflödet {#the-workflow}
 
 Låt oss titta närmare på hur du kan mäta prestanda och förbättra konverteringsgraden för formulär.
 
-### Målgrupp {#target-audience}
+### Målgrupper {#target-audience}
 
 * Affärsanvändare och analytiker som ansvarar för marknadsföringsstrategier och framgång
 * IT-personal som vill ha infrastruktur och lösningar för installation och underhåll
 
-### AEM Forms komponenter och funktioner som ingår i {#aem-forms-components-and-features-involved}
+### AEM Forms komponenter och funktioner {#aem-forms-components-and-features-involved}
 
 * Anpassningsbara formulär
 * Integrering med Adobe Analytics för att samla in, ordna och rapportera kundinteraktioner med era adaptiva formulär
@@ -69,7 +72,7 @@ För att få djupgående insikter om hur kunderna interagerar med era formulär 
 1. Konfigurera konfigurationstjänsten för AEM Forms Analytics i AEM
 1. Aktivera analys i formuläret i AEM
 
-Detaljerade steg finns i [Konfigurera analyser och rapporter för adaptiva formulär](/help/forms/using/configure-analytics-forms-documents.md).
+Detaljerade anvisningar finns i [Konfigurera analyser och rapporter för adaptiva formulär](/help/forms/using/configure-analytics-forms-documents.md).
 
 **Konfigurera mål**
 
@@ -97,7 +100,7 @@ Analysrapporten för adaptiva formulär innehåller följande KPI:er (Key Perfor
 * **Återgivningar**: Antal gånger som formuläret har återgetts eller öppnats
 * **Utkast**: Antal gånger som formuläret har sparats som utkast
 
-* **Sändningar**: Antal gånger som formuläret har skickats in
+* **Inlämningar**: Antal gånger som formuläret har skickats in
 * **Avbryt**: Antal gånger som användaren inte fyllt i formuläret
 * **Besök/överföringar**: Andel besök per inlämning
 
@@ -111,7 +114,7 @@ Dessutom får du följande information om varje panel i formuläret:
 
 ![En exempelanalysrapport för ett adaptivt formulär](assets/summary-report.png)
 
-Mer information om rapporter för formuläranalys finns i [Visa och förstå AEM Forms analysrapporter](/help/forms/using/view-understand-aem-forms-analytics-reports.md).
+Mer information om rapporter från formuläranalyser finns i [Visa och förstå AEM Forms analysrapporter](/help/forms/using/view-understand-aem-forms-analytics-reports.md).
 
 >[!NOTE]
 >
@@ -127,7 +130,7 @@ I det här steget ska du analysera datapunkter i analysrapporten och sluta dig t
 
 När du har analyserat dessa datapunkter och kommit fram till en hypotes kan du göra de ändringar som krävs i formuläret.
 
-#### Steg 4: Validera din analys och dina korrigeringar {#step-validate-your-analysis-and-fixes}
+#### Steg 4: Validera analyser och korrigeringar {#step-validate-your-analysis-and-fixes}
 
 I det här steget validerar du de ändringar du har gjort i formuläret och kontrollerar om det påverkar konverteringsgraden.
 
@@ -159,4 +162,3 @@ Nedan följer några rekommendationer om hur du utformar formulär och kör A/B-
 * Skapa en hypotes och identifiera framgångsmått innan A/B-testet körs.
 * Gör minimala variationer (helst en i taget) i den alternativa upplevelsen för att ta reda på vilken påverkan konverteringsgraden har.
 * Testa ofta för att eliminera ineffektivitet.
-

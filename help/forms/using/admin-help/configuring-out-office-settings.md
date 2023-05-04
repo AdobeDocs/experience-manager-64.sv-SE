@@ -1,24 +1,27 @@
 ---
 title: Konfigurerar frånvaroinställningar
-seo-title: Konfigurerar frånvaroinställningar
+seo-title: Configuring Out of Office Settings
 description: Med funktionen Frånvarande kan du ange när en användare ska vara frånvarande och inte kunna utföra uppgifter som tilldelats av AEM formulär.
-seo-description: Med funktionen Frånvarande kan du ange när en användare ska vara frånvarande och inte kunna utföra uppgifter som tilldelats av AEM formulär.
+seo-description: The Out of Office feature enables you to specify when a user will be out of the office and unable to complete tasks assigned by AEM forms.
 uuid: 0d01df0a-aa6a-40e5-bf24-423ed1c932cc
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 30312159-58a5-4781-b554-29dcbce696cb
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 8787ffa9-9ddc-439d-9934-8913d1ed459e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '695'
 ht-degree: 0%
 
 ---
 
-
 # Konfigurerar frånvaroinställningar {#configuring-out-of-office-settings}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Funktionen Frånvarande gör att användare och administratörer kan ange när en användare ska vara utanför kontoret och inte kunna slutföra uppgifter som tilldelats av AEM formulär. När en användare är inställd på Frånvarande tilldelas användaren sina uppgifter till en eller flera angivna användare. Användare kan ändra sina frånvaroinställningar i arbetsytan eller så kan administratörer ändra inställningarna för en användares räkning i formulärarbetsflödet.
 
@@ -41,20 +44,20 @@ När du skapar en process kan Workbench-användaren ange om en uppgift kan omdir
 
 ## Ändra en användares frånvarostatus {#change-a-user-s-out-of-office-status}
 
-1. Hitta användaren enligt beskrivningen i [Visa användarens frånvaroinformation](configuring-out-office-settings.md#view-a-user-s-out-of-office-information).
+1. Hitta användaren enligt beskrivningen i [Visa information om frånvaro för en användare](configuring-out-office-settings.md#view-a-user-s-out-of-office-information).
 1. Klicka på namnet på den användare som du vill ändra.
-1. I listan *Användarnamn* är för närvarande väljer du antingen In the Office or Out of the Office.
+1. Från *Användarnamn* är för närvarande en lista, välj antingen In the Office eller Out of the Office.
 1. Klicka på Spara.
 
-## Lägg till ett datumintervall utanför kontoret för en användare {#add-an-out-of-office-date-range-for-a-user}
+## Lägga till ett datumintervall utanför kontoret för en användare {#add-an-out-of-office-date-range-for-a-user}
 
-1. Hitta användaren enligt beskrivningen i [Visa användarens frånvaroinformation](configuring-out-office-settings.md#view-a-user-s-out-of-office-information).
+1. Hitta användaren enligt beskrivningen i [Visa information om frånvaro för en användare](configuring-out-office-settings.md#view-a-user-s-out-of-office-information).
 1. Klicka på namnet på den användare som du vill ändra.
 1. Klicka på Lägg till datumintervall.
 1. Ange en starttid och en sluttid. Du kan klicka på kalenderikonen för att välja ett datum. Om du inte anger någon sluttid anges användaren som ledig på obestämd tid.
 1. Klicka på Spara.
 
-## Tilldela en användare för frånvarouppgifter {#assign-a-user-for-out-of-office-tasks}
+## Tilldela en användare en frånvarouppgift {#assign-a-user-for-out-of-office-tasks}
 
 När en användare inte är på kontoret kan du tilldela en eller flera användare för att utföra nya uppgifter för användaren. Du kan konfigurera följande konfigurationer:
 
@@ -63,7 +66,7 @@ När en användare inte är på kontoret kan du tilldela en eller flera använda
 * Tilldela en standardanvändare som tar emot de flesta av användarens uppgifter, men ange att uppgifter från vissa processer ska tilldelas andra användare eller förbli tilldelade till den användare som inte är på kontoret.
 * Tilldela inte en standardanvändare, men tilldela vissa uppgifter från vissa processer till specifika användare.
 
-   1. Hitta användaren enligt beskrivningen i [Visa användarens frånvaroinformation](configuring-out-office-settings.md#view-a-user-s-out-of-office-information).
+   1. Hitta användaren enligt beskrivningen i [Visa information om frånvaro för en användare](configuring-out-office-settings.md#view-a-user-s-out-of-office-information).
    1. Klicka på namnet på den användare som du vill ändra.
    1. Välj en användare i listan Standardanvändare för aktiviteter utanför kontoret. Om du inte vill utse en standardanvändare som ska ta emot omtilldelade objekt väljer du Tilldela inte.
 
@@ -71,4 +74,3 @@ När en användare inte är på kontoret kan du tilldela en eller flera använda
 
    1. Om det finns processer som inte ska skickas till standardanvändaren klickar du på Lägg till ett undantag, markerar processen och väljer en annan användare i listan. Du kan också välja Tilldela inte om du vill att uppgiften ska fortsätta att vara tilldelad den användare som inte är på kontoret.
    1. Klicka på Spara.
-

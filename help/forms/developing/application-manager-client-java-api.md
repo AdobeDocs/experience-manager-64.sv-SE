@@ -1,8 +1,8 @@
 ---
 title: JavaAPI-snabbstart för Application Manager-klient (SOAP)
-seo-title: JavaAPI-snabbstart för Application Manager-klient (SOAP)
+seo-title: Application Manager Client JavaAPI Quick Start(SOAP)
 description: Använd Application Manager Client för att skapa en programversion, exportera program, importera program, hämta ett AEM Forms-program, hämta program, få status för program, förhandsgranska AEM Forms och senare programarkiv samt ta bort AEM Forms programarkiv.
-seo-description: Använd Application Manager Client för att skapa en programversion, exportera program, importera program, hämta ett AEM Forms-program, hämta program, få status för program, förhandsgranska AEM Forms och senare programarkiv samt ta bort AEM Forms programarkiv.
+seo-description: Use the Application Manager Client to create an application version, export applications, import applications, get an AEM Forms application, get applications, get status of applications, preview AEM Forms and later application archive, and delete AEM Forms application archive.
 uuid: 043f1c08-c7de-4e2d-88ca-b46428b1b551
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 2ec2a75e-4191-4660-a6f2-26cc667720b3
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 8369beeb-4628-40ea-9167-717f112768da
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
 
+# JavaAPI-snabbstart för Application Manager-klient (SOAP) {#application-manager-client-javaapi-quick-start-soap}
 
-# JavaAPI-snabbstart (SOAP) för Application Manager-klienten {#application-manager-client-javaapi-quick-start-soap}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Följande Java API Quick Start (SOAP) är tillgängliga för Application Manager-klienten.
 
@@ -445,7 +448,7 @@ public class GetApplication_SOAP {
 
 I följande Java-kodexempel hämtas programmen med Java API.
 
-***Obs!**: När AEM Forms Application API hämtas, getApplications(), returneras endast distribuerade program. *
+***anteckning**: När AEM Forms Application API hämtas, getApplications(), returneras endast distribuerade program. *
 
 ```as3
 /* 
@@ -540,7 +543,7 @@ public class GetApplications_SOAP {
 }
 ```
 
-## Snabbstart (SOAP-läge): Hämtar status för program med Java API {#quick-start-soap-mode-getting-status-of-applications-using-java-api}
+## Snabbstart (SOAP-läge): Hämta status för program med Java API {#quick-start-soap-mode-getting-status-of-applications-using-java-api}
 
 ```as3
 /* 
@@ -724,7 +727,7 @@ public class PreviewLCA_SOAP {
 }
 ```
 
-## Snabbstart (SOAP-läge):Ta bort programarkivet med Java API {#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api}
+## Snabbstart (SOAP-läge):ta bort programarkivet med Java API {#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api}
 
 I följande Java-kodexempel tas ett programarkiv bort.
 
@@ -819,4 +822,3 @@ public class DeleteApplication_SOAP {
     } 
 }
 ```
-

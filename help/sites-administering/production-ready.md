@@ -1,38 +1,41 @@
 ---
 title: Köra AEM i produktionsklart läge
-seo-title: Köra AEM i produktionsklart läge
+seo-title: Running AEM in Production Ready Mode
 description: Lär dig hur du kör AEM i produktionsklart läge.
-seo-description: Lär dig hur du kör AEM i produktionsklart läge.
+seo-description: Learn how to run AEM in Production Ready Mode.
 uuid: f48c8bae-c72f-4772-967e-f1526f096399
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: 32da99f0-f058-40ae-95a8-2522622438ce
-translation-type: tm+mt
-source-git-commit: 87729e62bf9c1e9e943b6b6cf97cb40d3b0ed774
+exl-id: 2ab55a72-2eb2-49dc-8716-0a8a4d0c4b73
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 3%
+source-wordcount: '419'
+ht-degree: 1%
 
 ---
 
+# Köra AEM i produktionsklart läge{#running-aem-in-production-ready-mode}
 
-# Kör AEM i produktionsklart läge{#running-aem-in-production-ready-mode}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-I AEM 6.1 introducerar Adobe det nya `"nosamplecontent"`-körningsläget som automatiserar de steg som krävs för att förbereda en AEM instans för driftsättning i en produktionsmiljö.
+Med AEM 6.1 introducerar Adobe den nya `"nosamplecontent"` runmode som automatiserar de steg som krävs för att förbereda en AEM instans för driftsättning i en produktionsmiljö.
 
 Det nya körningsläget konfigurerar inte bara instansen automatiskt så att den följer de säkerhetspraxis som beskrivs i checklistan för säkerhet, utan tar även bort alla exempelgeometrixprogram och -konfigurationer i processen.
 
 >[!NOTE]
 >
->Eftersom AEM produktionsklart läge av praktiska skäl endast omfattar de flesta uppgifter som krävs för att skydda en instans rekommenderar vi att du läser [säkerhetschecklistan](/help/sites-administering/security-checklist.md) innan du publicerar i produktionsmiljön.
+>Eftersom AEM produktionsklart läge av praktiska skäl endast omfattar de flesta uppgifter som krävs för att skydda en instans rekommenderar vi att du läser [Säkerhetschecklista](/help/sites-administering/security-checklist.md) innan du publicerar med produktionsmiljön.
 >
->Observera också att om du kör AEM i produktionsklart läge inaktiveras åtkomsten till CRXDE Lite. Om du behöver det för felsökning läser du [Aktivera CRXDE Lite i AEM](/help/sites-administering/enabling-crxde-lite.md).
+>Observera också att om du kör AEM i produktionsklart läge inaktiveras åtkomsten till CRXDE Lite. Om du behöver det för felsökning kan du läsa [Aktivera CRXDE Lite i AEM](/help/sites-administering/enabling-crxde-lite.md).
 
 ![chlimage_1-83](assets/chlimage_1-83.png)
 
-För att kunna köra AEM i produktionsklar läge behöver du bara lägga till `nosamplecontent` via körningsväxeln `-r` till dina befintliga startargument:
+För att kunna köra AEM i produktionsklar läge behöver du bara lägga till `nosamplecontent` via `-r` byt runmode till dina befintliga startargument:
 
 ```shell
 java -jar aem-quickstart.jar -r nosamplecontent
@@ -48,32 +51,31 @@ java -jar aem-quickstart.jar -r author,crx3,crx3mongo,nosamplecontent -Doak.mong
 
 Mer specifikt kommer följande konfigurationsändringar att utföras när AEM körs i produktionsklar läge:
 
-1. **CRXDE-stödpaketet** ( `com.adobe.granite.crxde-support`) är inaktiverat som standard i produktionsklart läge. Den kan installeras när som helst från Adobe offentliga Maven-databasen. Version 3.0.0 krävs för AEM 6.1.
+1. The **CRXDE-supportpaket** ( `com.adobe.granite.crxde-support`) är inaktiverat som standard i produktionsklar läge. Den kan installeras när som helst från Adobe offentliga Maven-databasen. Version 3.0.0 krävs för AEM 6.1.
 
-1. **Apache Sling Simple WebDAV Access till databaser** ( `org.apache.sling.jcr.webdav`)-paketet är bara tillgängligt för **författare**-instanser.
+1. The **Apache Sling Simple WebDAV Åtkomst till databaser** ( `org.apache.sling.jcr.webdav`) kommer endast att vara tillgängligt på **författare** -instanser.
 
 1. Användare som skapats nyligen måste ändra lösenordet vid den första inloggningen. Detta gäller inte administratörsanvändaren.
-1. **Generate debug** infois disabled for the  **Apache Sling Java Script Handler**.
+1. **Generera felsökningsinformation** är inaktiverat för **Apache Sling Java Script Handler**.
 
-1. **Mappat** innehåll och  **genererad felsökningsinformation är** inaktiverade för JSP-skripthanteraren för  **Apache Sling**.
+1. **Mappat innehåll** och **Generera felsökningsinformation** är inaktiverade för **Apache Sling JSP Script Handler**.
 
-1. **Dag CQ WCM-filtret** är inställt på `edit` på **författare** och `disabled` på **publiceringsinstanser**.
+1. The **Dag CQ WCM-filter** är inställd på `edit` på **författare** och `disabled` på **publicera** -instanser.
 
-1. **HTML-bibliotekshanteraren för Adobe Granite** har konfigurerats med följande inställningar:
+1. The **Bibliotekshanteraren Adobe Granite HTML** har konfigurerats med följande inställningar:
 
    1. **Minimera:** `enabled`
    1. **Felsök:** `disabled`
    1. **Gzip:** `enabled`
    1. **Timing:** `disabled`
 
-1. **Apache Sling GET-servern** är inställd på att stödja säkra konfigurationer som standard enligt följande:
+1. The **Apache Sling GET Servlet** är inställt på att stödja säkra konfigurationer som standard enligt följande:
 
 | **Konfiguration** | **Författare** | **Publicera** |
 |---|---|---|
-| TXT-rendering | inaktiverat | inaktiverat |
-| HTML-återgivning | inaktiverat | inaktiverat |
+| TXT-rendering | inaktiverad | inaktiverad |
+| HTML rendering | inaktiverad | inaktiverad |
 | JSON-rendering | aktiverad | aktiverad |
-| XML-rendering | inaktiverat | inaktiverat |
+| XML-rendering | inaktiverad | inaktiverad |
 | json.maximumresults | 1000 | 100 |
-| Automatiskt index | inaktiverat | inaktiverat |
-
+| Automatiskt index | inaktiverad | inaktiverad |

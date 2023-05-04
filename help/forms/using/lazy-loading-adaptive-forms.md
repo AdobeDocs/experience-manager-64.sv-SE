@@ -1,23 +1,26 @@
 ---
 title: Förbättra prestanda för stora formulär med lat inläsningsverktyg
-seo-title: Förbättra prestanda för stora formulär med lat inläsningsverktyg
+seo-title: Improve performance of large forms with lazy loading
 description: Lazy loading förbättrar prestanda avsevärt för stora och komplexa adaptiva formulär genom att skjuta upp initieringen och inläsningen av formulärfragment tills de syns.
-seo-description: Lazy loading förbättrar prestanda avsevärt för stora och komplexa adaptiva formulär genom att skjuta upp initieringen och inläsningen av formulärfragment tills de syns.
+seo-description: Lazy loading significantly improves the performance of large and complex adaptive forms by deferring initialization and loading of form fragments until they are visible.
 uuid: 3ead2b82-f895-4a7b-9683-495fcd94fade
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: d570ead9-8f9c-4668-8b23-e8984d9b25e9
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 92d88888-343c-4edb-9b11-8e876539573a
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
 
+# Förbättra prestanda för stora formulär med lat inläsningsverktyg {#improve-performance-of-large-forms-with-lazy-loading}
 
-# Förbättra prestanda för stora formulär med lazy loading {#improve-performance-of-large-forms-with-lazy-loading}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Introduktion till lazy loading {#introduction-to-lazy-loading}
 
@@ -29,18 +32,18 @@ Låt oss först förstå kraven och de förberedande stegen innan du konfigurera
 
 Innan du konfigurerar lazy loading av fragment i ditt adaptiva formulär är det viktigt att du definierar strategier för att skapa fragment, identifiera värden som används i skript eller som refereras i andra fragment samt definierar regler för att styra visningen av fält i lagerinlästa fragment.
 
-* **Identifiera och skapa**
-fragmentDu kan bara konfigurera adaptiva formulärfragment för lazy loading. Ett fragment är ett fristående segment som ligger utanför ett anpassningsbart formulär och kan återanvändas i olika formulär. Så det första steget mot att implementera lat inläsningsarbete är att identifiera logiska avsnitt i ett formulär och konvertera dem till fragment. Du kan skapa ett fragment från grunden eller spara en befintlig formulärpanel som fragment.
+* **Identifiera och skapa fragment**
+Du kan bara konfigurera adaptiva formulärfragment för lazy loading. Ett fragment är ett fristående segment som ligger utanför ett anpassningsbart formulär och kan återanvändas i olika formulär. Så det första steget mot att implementera lat inläsningsarbete är att identifiera logiska avsnitt i ett formulär och konvertera dem till fragment. Du kan skapa ett fragment från grunden eller spara en befintlig formulärpanel som fragment.
 
-   Mer information om att skapa fragment finns i [Adaptiva formulärfragment](/help/forms/using/adaptive-form-fragments.md).
+   Mer information om hur du skapar fragment finns i [Anpassningsbara formulärfragment](/help/forms/using/adaptive-form-fragments.md).
 
-* **Identifiera och markera globala**
-värdenFormulärbaserade transaktioner innefattar dynamiska element för att hämta in relevanta data från användarna och bearbeta dem för att förenkla ifyllandet av formulären. Formuläret har till exempel fält A i fragment X vars värde bestämmer giltigheten för fält B i ett annat fragment. Om fragment X i det här fallet har markerats för lazy loading måste värdet i fält A vara tillgängligt för att validera fält B även när fragment X inte har lästs in. För att uppnå detta kan du markera fält A som globalt, vilket garanterar att dess värde är tillgängligt för validering av fält B när fragment X inte har lästs in.
+* **Identifiera och markera globala värden**
+Forms-baserade transaktioner innefattar dynamiska element för att hämta in relevanta data från användarna och bearbeta dem för att förenkla ifyllandet av formulär. Formuläret har till exempel fält A i fragment X vars värde bestämmer giltigheten för fält B i ett annat fragment. Om fragment X i det här fallet har markerats för lazy loading måste värdet i fält A vara tillgängligt för att validera fält B även när fragment X inte har lästs in. För att uppnå detta kan du markera fält A som globalt, vilket garanterar att dess värde är tillgängligt för validering av fält B när fragment X inte har lästs in.
 
-   Mer information om hur du gör ett fältvärde globalt finns i [Konfigurera lazy loading](/help/forms/using/lazy-loading-adaptive-forms.md#p-configuring-lazy-loading-p).
+   Mer information om hur du gör ett fältvärde globalt finns i [Konfigurerar lazy loading](/help/forms/using/lazy-loading-adaptive-forms.md#p-configuring-lazy-loading-p).
 
-* **Skriv regler för att kontrollera**
-fältens synlighetFormulär innehåller fält och avsnitt som inte är tillämpliga för alla användare och under alla förhållanden. Forms författare och utvecklare använder synlighets- eller visningsregler för att styra synligheten baserat på användarindata. Fältet Kontorsadress visas t.ex. inte för användare som väljer Arbetslösa i fältet Anställningsstatus i ett formulär. Mer information om hur du skriver regler finns i [Använda regelredigeraren](/help/forms/using/rule-editor.md).
+* **Skriv regler för att kontrollera synligheten för fält**
+Forms innehåller fält och avsnitt som inte är tillämpliga för alla användare och under alla förhållanden. Forms författare och utvecklare använder synlighets- eller visningsregler för att styra synligheten baserat på användarindata. Fältet Kontorsadress visas t.ex. inte för användare som väljer Arbetslösa i fältet Anställningsstatus i ett formulär. Mer information om hur du skriver regler finns i [Använda regelredigeraren](/help/forms/using/rule-editor.md).
 
    Du kan använda synlighetsregler i de lagligen inlästa fragmenten så att villkorsfält bara visas när de är obligatoriska. Markera dessutom det villkorliga fältet globalt så att det refererar till det i synlighetsuttrycket för det lagerinlästa fragmentet.
 
@@ -49,8 +52,8 @@ fältens synlighetFormulär innehåller fält och avsnitt som inte är tillämpl
 Utför följande steg för att aktivera lazy loading på ett adaptivt formulärfragment:
 
 1. Öppna det adaptiva formuläret i redigeringsläget som innehåller det fragment som du vill aktivera för lazy loading.
-1. Markera det adaptiva formulärfragmentet och tryck på ![cmpr](assets/cmppr.png).
-1. Aktivera **[!UICONTROL Load fragment lazily]** i sidofältet och tryck på **Klar**.
+1. Markera det adaptiva formulärfragmentet och tryck på ![cmppr](assets/cmppr.png).
+1. Aktivera **[!UICONTROL Load fragment lazily]** och trycka **Klar**.
 
    ![Aktivera lazy loading för det adaptiva formulärfragmentet](assets/lazy-loading-fragment.png)
 
@@ -60,12 +63,12 @@ Du kan markera objektvärden i det lagerinlästa fragmentet som globala så att 
 
 1. Öppna det adaptiva formulärfragmentet i redigeringsläge.
 1. Tryck på fältet vars värde du vill markera som globalt och tryck sedan på ![](assets/cmppr.png).
-1. Aktivera **[!UICONTROL Use value during lazy loading]** i sidofältet.
+1. Aktivera **[!UICONTROL Use value during lazy loading]**.
    ![Lazy loading field in sidebar](assets/enable-lazy-loading.png)
 
    Värdet är nu markerat som globalt och kommer att vara tillgängligt för användning i skript även när det innehållande fragmentet har tagits bort.
 
-## Att tänka på och bästa tillvägagångssätt vid konfigurering av lazy loading {#considerations-and-best-practices-for-configuring-lazy-loading}
+## Överväganden och bästa praxis för konfiguration av lat inläsningsarbete {#considerations-and-best-practices-for-configuring-lazy-loading}
 
 Vissa begränsningar, rekommendationer och viktiga punkter som du bör tänka på när du arbetar med lazy loading är följande:
 
@@ -87,4 +90,3 @@ Viktiga punkter att tänka på när du utvecklar skript för lazy loading-panele
 * Använd panelåterställningsfunktionen för att återställa allt som visas på panelen med följande klickuttryck.
 
    guideBridge.resolveNode(guideBridge.getFocus({&quot;focusOption&quot;): &quot;navigablePanel&quot;}).resetData()
-

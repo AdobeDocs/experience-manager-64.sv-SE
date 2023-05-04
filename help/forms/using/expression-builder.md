@@ -2,23 +2,26 @@
 title: Fjärrfunktioner i Expression Builder
 seo-title: Expression Builder
 description: Med Expression Builder i Correspondence Management kan du skapa uttryck och fjärrfunktioner.
-seo-description: Med Expression Builder i Correspondence Management kan du skapa uttryck och fjärrfunktioner.
+seo-description: Expression Builder in Correspondence Management lets you create expressions and remote functions.
 uuid: 998f7ec9-2645-431e-b483-c68d24ef49cb
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 4a864547-edbe-4d2d-a8ee-39bc65dffe88
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: cd565ec5-f453-4692-83f8-e1fb06dc28c7
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '799'
-ht-degree: 1%
+source-wordcount: '819'
+ht-degree: 0%
 
 ---
 
-
 # Fjärrfunktioner i Expression Builder {#remote-functions-in-expression-builder}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Med Expression Builder kan du skapa uttryck eller villkor som utför beräkningar på datavärden som tillhandahålls av Data Dictionary eller av slutanvändare. Correspondence Management använder resultatet av uttrycksutvärderingen för att välja resurser som text, bilder, listor och villkor och infoga dem i korrespondensen efter behov.
 
@@ -40,16 +43,16 @@ Här är några vanliga JSP EL-exempel som du kan använda i din Correspondence 
 * Så här sammanfogar du två strängar: ${str1} ${str2}
 * Så här jämför du två tal: ${age &lt; 18}
 
-Mer information finns i [JSP EL-specifikationen](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf). Uttryckshanteraren på klientsidan stöder inte vissa variabler och funktioner i JSP EL-specifikationen, närmare bestämt:
+Mer information finns i [JSP EL-specifikation](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf). Uttryckshanteraren på klientsidan stöder inte vissa variabler och funktioner i JSP EL-specifikationen, närmare bestämt:
 
-* Samlingsindex och kartnycklar (med []-notation) stöds inte i variabelnamn för uttryck som utvärderas på klientsidan.
+* Samlingsindex och kartnycklar (med [] notation) stöds inte i variabelnamn för uttryck som utvärderas på klientsidan.
 * Följande är parametertyper eller returtyper för funktioner som används i uttryck:
 
    * java.lang.String
    * java.lang.Character
    * Char
    * java.lang.Boolean
-   * Boolesk
+   * Boolean
    * java.lang.Integer
    * Int
    * java.util.list
@@ -62,7 +65,7 @@ Mer information finns i [JSP EL-specifikationen](https://download.oracle.com/otn
    * java.lang.Long
    * Lång
    * java.lang.Float
-   * Flyttal
+   * Float
    * java.util.Calendar
    * java.util.Date
    * java.util.List
@@ -102,7 +105,7 @@ Du kan skapa ett anpassat paket för att exportera dina egna fjärrfunktioner f�
    * java.lang.Character
    * Char
    * java.lang.Boolean
-   * Boolesk
+   * Boolean
    * java.lang.Integer
    * Int
    * java.lang.Short
@@ -114,7 +117,7 @@ Du kan skapa ett anpassat paket för att exportera dina egna fjärrfunktioner f�
    * java.lang.Long
    * Lång
    * java.lang.Float
-   * Flyttal
+   * Float
    * java.util.Calendar
    * java.util.Date
    * java.util.List
@@ -129,7 +132,7 @@ Du kan skapa ett anpassat paket för att exportera dina egna fjärrfunktioner f�
   @org.apache.felix.scr.annotations.Property(name = "exm.service", boolValue = true)})
 ```
 
-Posten exm.service=true instruerar Expression Manager att tjänsten innehåller fjärrfunktioner som är lämpliga att använda i uttryck. Värdet för &lt;service_id> måste vara en giltig Java-identifierare (alfanumerisk,$, _ utan andra specialtecken). Det här värdet, som har nyckelordet REMOTE_ som prefix, utgör prefixet som används i uttryck. Ett gränssnitt med en kommenterad metod bar() och tjänst-ID:t foo i tjänsteegenskaperna kan till exempel refereras inuti uttryck med REMOTE_foo:bar().
+Posten exm.service=true instruerar Expression Manager att tjänsten innehåller fjärrfunktioner som är lämpliga att använda i uttryck. The &lt;service_id> värdet måste vara en giltig Java-identifierare (alfanumerisk,$, _ utan andra specialtecken). Det här värdet, som har nyckelordet REMOTE_ som prefix, utgör prefixet som används i uttryck. Ett gränssnitt med en kommenterad metod bar() och tjänst-ID:t foo i tjänsteegenskaperna kan till exempel refereras inuti uttryck med REMOTE_foo:bar().
 
 ```
 package mergeandfuse.com;
@@ -157,8 +160,8 @@ public class RemoteFuntionImpl implements RemoteFunction {
 
 Nedan finns exempelarkiv att använda:
 
-* **GoodFunctions.jar.** zipis the jar file with bundle containing a sample remote function definition. Ladda ned filen GoodFunctions.jar.zip och zippa upp den för att få filen jar.
-* **GoodFunctions.** zipis är det paket med källkod som används för att definiera en anpassad fjärrfunktion och skapa ett paket för den.
+* **GoodFunctions.jar.zip** är jar-filen med ett paket som innehåller en fjärrfunktionsdefinition. Ladda ned filen GoodFunctions.jar.zip och zippa upp den för att få filen jar.
+* **GoodFunctions.zip** är det paket med källkod som används för att definiera en anpassad fjärrfunktion och skapa ett paket för den.
 
 GoodFunctions.jar.zip
 

@@ -1,26 +1,29 @@
 ---
 title: Konfigurera användarhantering för en SSL-aktiverad LDAP-server
-seo-title: Konfigurera användarhantering för en SSL-aktiverad LDAP-server
+seo-title: Configure User Management for an SSL-enabled LDAP server
 description: Lär dig hur du konfigurerar användarhantering för en SSL-aktiverad LDAP-server så att synkroniseringen kan fungera korrekt i stället för LDAPS.
-seo-description: Lär dig hur du konfigurerar användarhantering för en SSL-aktiverad LDAP-server så att synkroniseringen kan fungera korrekt i stället för LDAPS.
+seo-description: Learn how  to configure User Management for an SSL-enabled LDAP server to enable synchronization to work properly over LDAPS.
 uuid: 4b3f8ac7-fa38-4adf-a851-82d55fe431fe
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e6e7e2fa-579d-4b36-8598-6ced469a94b1
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 9ed22c75-bce7-4d26-a4cd-a58e41e5068e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
 
-
 # Konfigurera användarhantering för en SSL-aktiverad LDAP-server {#configure-user-management-for-an-ssl-enabled-ldap-server}
 
-För att synkroniseringen ska fungera korrekt i stället för LDAPS måste LDAP-certifikaten som utfärdades av certifikatutfärdaren finnas i programserverns JRE (Java Runtime Environment). Importera certifikatet till programserverns JRE-cacerts-fil, som vanligtvis finns i katalogen *[JAVA_HOME]*/jre/lib/security/cacerts.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+För att synkroniseringen ska fungera korrekt i stället för LDAPS måste LDAP-certifikaten som utfärdades av certifikatutfärdaren finnas i programserverns JRE (Java Runtime Environment). Importera certifikatet till programserverns JRE-cacerts-fil, som vanligtvis finns i *[JAVA_HOME]*/jre/lib/security/cacerts-katalog.
 
 1. Aktivera SSL på katalogservern. Mer information finns i dokumentationen från katalogleverantören.
 1. Exportera ett klientcertifikat från katalogservern.
@@ -29,10 +32,9 @@ För att synkroniseringen ska fungera korrekt i stället för LDAPS måste LDAP-
    `keytool -import -alias`*alias* `-file certificatename -keystore C:\bea\jdk15_04\jre\lib\security\cacerts`
 
 1. Skriv lösenordet när du uppmanas till det. (För Java är standardlösenordet `changeit`.) Ett meddelande om att certifikatet har importerats visas.
-1. Ange `Yes` som betrodd för certifikatet när du uppmanas att göra det.
+1. Skriv när du uppmanas att göra det `Yes` för att lita på certifikatet.
 1. Aktivera SSL i Användarhantering och, när du konfigurerar kataloginställningarna, välj Ja för SSL-alternativet och ändra portinställningarna därefter. Standardportnumret är 636.
 
 >[!NOTE]
 >
 >Om du får problem med SSL kan du använda en LDAP-webbläsare för att kontrollera om den kan komma åt LDAP-systemet när SSL används. Om LDAP-webbläsaren inte kan få åtkomst är certifikatet eller programservern inte korrekt konfigurerad. Om LDAP-webbläsaren fungerar som den ska och du fortfarande har problem, är inte användarhanteringen korrekt konfigurerad.
-

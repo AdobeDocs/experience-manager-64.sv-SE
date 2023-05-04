@@ -1,23 +1,26 @@
 ---
 title: Anpassa spårningstabeller
-seo-title: Anpassa spårningstabeller
+seo-title: Customize tracking tables
 description: Anpassa visningen av information om användarprocesser i uppgiftstabellen som visas på fliken Spårning på arbetsytan i AEM Forms.
-seo-description: Anpassa visningen av information om användarprocesser i uppgiftstabellen som visas på fliken Spårning på arbetsytan i AEM Forms.
+seo-description: How-to customize the display of the details of user processes in the task table displayed in the tracking tab of AEM Forms workspace.
 uuid: 13d6ebf2-99d5-434f-85f9-b0cba5f5751a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: bb7a6e9f-4f28-4d97-8a0c-949259fd6857
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: 5f925f47-3123-4a27-aea1-0a1c1fba7bb6
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '356'
-ht-degree: 1%
+source-wordcount: '366'
+ht-degree: 0%
 
 ---
 
-
 # Anpassa spårningstabeller{#customize-tracking-tables}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Fliken Spårning på arbetsytan i AEM Forms används för att visa information om processinstanser där den inloggade användaren är involverad. Om du vill visa spårningstabellerna börjar du med att markera ett processnamn i den vänstra rutan för att visa dess lista med instanser i den mittersta rutan. Markera en processinstans om du vill visa en tabell med uppgifter som genereras av den här instansen i den högra rutan. Som standard visar tabellkolumnerna följande uppgiftsattribut (motsvarande attribut i aktivitetsmodellen anges inom parentes):
 
@@ -90,7 +93,7 @@ De återstående attributen i aktivitetsmodellen som är tillgängliga för visn
   </tr> 
   <tr> 
    <td><p>isApprovalUI</p> </td> 
-   <td><p>priority</p> </td> 
+   <td><p>prioritet</p> </td> 
    <td><p>taskACL</p> </td> 
   </tr> 
   <tr> 
@@ -116,7 +119,7 @@ De återstående attributen i aktivitetsmodellen som är tillgängliga för visn
  </tbody> 
 </table>
 
-För följande anpassningar i uppgiftstabellen måste du göra semantiska ändringar i källkoden. Se [Introduktion till anpassning av AEM Forms-arbetsytan](/help/forms/using/introduction-customizing-html-workspace.md) för hur du kan göra semantiska ändringar med hjälp av arbetsytans SDK och skapa ett minierat paket från den ändrade källan.
+För följande anpassningar i uppgiftstabellen måste du göra semantiska ändringar i källkoden. Se [Introduktion till anpassning av arbetsytan i AEM Forms](/help/forms/using/introduction-customizing-html-workspace.md) om hur du kan göra semantiska ändringar med arbetsytans SDK och skapa ett minierat paket från den ändrade källan.
 
 ## Ändra tabellkolumner och deras ordning {#changing-table-columns-and-their-order}
 
@@ -168,7 +171,7 @@ Så här sorterar du uppgiftslisttabellen när du klickar på kolumnrubriken:
    }
    ```
 
-   Anropa funktionen `onTaskTableHeaderClick` i `js/runtime/util/history.js` i hanteraren.
+   Anropa `onTaskTableHeaderClick` funktion för `js/runtime/util/history.js`.
 
    ```as3
    onTaskTableHeaderClick: function (event) {
@@ -176,7 +179,7 @@ Så här sorterar du uppgiftslisttabellen när du klickar på kolumnrubriken:
    }
    ```
 
-1. Visa metoden `TaskTableHeaderClick` i `js/runtime/util/history.js`.
+1. Visa `TaskTableHeaderClick` metod i `js/runtime/util/history.js`.
 
    Metoden hittar uppgiftsattributet från click-händelsen, sorterar aktivitetslistan för det attributet och återger uppgiftstabellen med den sorterade aktivitetslistan.
 

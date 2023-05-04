@@ -1,23 +1,26 @@
 ---
 title: Nyckelord för adaptiva formulär
-seo-title: Nyckelord för adaptiva formulär
+seo-title: Adaptive forms keywords
 description: Du kan inte använda dessa reserverade ord som identifierare i dina adaptiva formulär.
-seo-description: Du kan inte använda dessa reserverade ord som identifierare i dina adaptiva formulär.
+seo-description: You cannnot use these reserved words as identifiers in your adaptive forms.
 uuid: 79e77692-2f0c-493b-8c2c-c408ff3dcece
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 45578c86-6ec8-4f9c-92d9-e2f28f989fd3
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 13%
+source-wordcount: '244'
+ht-degree: 0%
 
 ---
 
+# Nyckelord för adaptiva formulär {#adaptive-forms-keywords}
 
-# Anpassade formulärnyckelord {#adaptive-forms-keywords}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Nyckelord för adaptiva formulär är fördefinierade, reserverade identifierare som har en speciell betydelse för adaptiva formulär. Du kan inte använda dessa nyckelord som identifierare i dina adaptiva formulär. I följande tabell visas alla nyckelord som är reserverade identifierare för adaptiva formulär.
 
@@ -29,7 +32,7 @@ Nyckelord för adaptiva formulär är fördefinierade, reserverade identifierare
    <td><p>minOccur</p> </td> 
   </tr>
   <tr>
-   <td><p>validate</p> </td> 
+   <td><p>validera</p> </td> 
    <td><p>setGuideState</p> </td> 
    <td><p>maxOccur</p> </td> 
   </tr>
@@ -104,7 +107,7 @@ Nyckelord för adaptiva formulär är fördefinierade, reserverade identifierare
    <td><p>name</p> </td> 
   </tr>
   <tr>
-   <td><p>mandatory</p> </td> 
+   <td><p>obligatoriskt</p> </td> 
    <td><p>panel</p> </td> 
    <td><p>templateId</p> </td> 
   </tr>
@@ -120,7 +123,7 @@ Nyckelord för adaptiva formulär är fördefinierade, reserverade identifierare
   </tr>
   <tr>
    <td><p>validatePictureClauseMessage</p> </td> 
-   <td><p>items</p> </td> 
+   <td><p>objekt</p> </td> 
    <td><p>nonLocalizedTitle</p> </td> 
   </tr>
   <tr>
@@ -199,7 +202,7 @@ Nyckelord för adaptiva formulär är fördefinierade, reserverade identifierare
    <td><p>activePart</p> </td> 
   </tr>
   <tr>
-   <td><p>toolbar</p> </td> 
+   <td><p>verktygsfält</p> </td> 
    <td><p>completeBeforeMessage</p> </td> 
    <td><p>isLastPart</p> </td> 
   </tr>
@@ -241,4 +244,4 @@ Nyckelord för adaptiva formulär är fördefinierade, reserverade identifierare
  </tbody>
 </table>
 
-Förutom nyckelorden ovan bör du undvika att använda namn som liknar [JavaScript API:er för adaptiva formulär](https://adobe.com/go/learn_aemforms_javascript_api_63).
+Undvik, förutom nyckelorden ovan, att använda namn som liknar [adaptiva formulär JavaScript API:er](https://adobe.com/go/learn_aemforms_javascript_api_63).

@@ -1,31 +1,34 @@
 ---
 title: Använda taggar
-seo-title: Använda taggar
+seo-title: Using Tags
 description: Taggar är ett snabbt och enkelt sätt att klassificera innehåll på en webbplats
-seo-description: Taggar är ett snabbt och enkelt sätt att klassificera innehåll på en webbplats
+seo-description: Tags are a quick and easy method of classifying content within a website
 uuid: a91f8724-fc35-4f40-b21c-bee90429765b
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: d0b0e47b-e68d-407d-9d06-deca2039dede
-translation-type: tm+mt
-source-git-commit: 8326ee711558a390f79fc185fc37bbbb3097e309
+exl-id: 846a925a-673e-4051-a673-1a9236701f0a
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '711'
 ht-degree: 3%
 
 ---
 
-
 # Använda taggar {#using-tags}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Taggar är ett snabbt och enkelt sätt att klassificera innehåll på en webbplats. Taggar kan ses som nyckelord eller etiketter som kan bifogas till en sida, en resurs eller annat innehåll för att göra det möjligt att söka efter innehållet och relaterat innehåll.
 
 * Se [Administrera taggar](/help/sites-administering/tags.md) om du vill ha information om hur du skapar och hanterar taggar, samt om vilka innehållstaggar som har tillämpats.
 * Se [Tagga för utvecklare](/help/sites-developing/tags.md) om du vill ha information om taggningsramverket samt om hur du inkluderar och utökar taggar i anpassade program.
 
-## Tio skäl att använda taggning {#ten-reasons-to-use-tagging}
+## Tio skäl att använda märkord {#ten-reasons-to-use-tagging}
 
 1. Ordna innehåll: taggning gör livet enklare för skribenterna eftersom de snabbt kan ordna innehållet med mindre ansträngning.
 
@@ -49,15 +52,15 @@ Taggar är ett snabbt och enkelt sätt att klassificera innehåll på en webbpla
 
 När du utformar innehållsstrukturen för en plats och metadatarammet för resurser bör du tänka på att taggningen är enkel och tillgänglig.
 
-## Använder taggar {#applying-tags}
+## Tillämpar taggar {#applying-tags}
 
-I redigeringsmiljön kan författare lägga till taggar genom att gå till sidegenskaperna och ange en eller flera taggar i fältet **Taggar/nyckelord**.
+I redigeringsmiljön kan författare lägga till taggar genom att gå till sidegenskaperna och ange en eller flera taggar i **Taggar/nyckelord** fält.
 
-Om du vill använda [fördefinierade taggar](/help/sites-administering/tags.md) använder du fältet **Sidegenskaper** och fönstret **Taggar** och fönstret **Välj taggar** i -fönstret. Fliken **Standardtaggar** är standardnamnutrymmet, vilket innebär att taxonomin inte har prefixet `namespace-string:`. 
+Använd [fördefinierade taggar](/help/sites-administering/tags.md), i **Sidegenskaper** fönstret använder **Taggar** fält och **Markera taggar** -fönstret. Fliken **Standardtaggar** är standardnamnutrymmet, vilket innebär att taxonomin inte har prefixet `namespace-string:`. 
 
 ![chlimage_1-92](assets/chlimage_1-92.png)
 
-### Publicerar taggar {#publishing-tags}
+### Publiceringstaggar {#publishing-tags}
 
 Precis som med sidor kan du göra följande med taggar och namnutrymmen:
 
@@ -79,15 +82,14 @@ Precis som med sidor kan du göra följande med taggar och namnutrymmen:
 
 Taggmoln visar ett moln med taggar, antingen för den aktuella sidan, för hela webbplatsen eller för de mest använda. Tagga moln är ett sätt att markera problem som är (har varit) av intresse för användaren. Storleken på texten som används för att visa taggen varierar beroende på hur den används.
 
-Komponenten [Tag Cloud](/help/sites-authoring/default-components-foundation.md#tag-cloud) (General component group) används för att lägga till ett taggmoln på en sida.
+The [Tag Cloud](/help/sites-authoring/default-components-foundation.md#tag-cloud) används för att lägga till ett taggmoln på en sida.
 
-## Söker på taggar {#searching-on-tags}
+## Söka på taggar {#searching-on-tags}
 
 Du kan söka efter taggar både i författarmiljön och i publiceringsmiljön.
 
 ### Använda sökkomponenten {#using-search-component}
 
-Om du lägger till en [sökkomponent](/help/sites-authoring/default-components-foundation.md#search) på en sida kan du söka efter taggar som kan användas i både författarmiljön och publiceringsmiljön.
+Lägga till en [Sökkomponent](/help/sites-authoring/default-components-foundation.md#search) till en sida har en sökfunktion som innehåller taggar och kan användas både i författarmiljön och publiceringsmiljön.
 
 ![chlimage_1-93](assets/chlimage_1-93.png)
-

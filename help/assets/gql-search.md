@@ -1,20 +1,24 @@
 ---
 title: Fulltextsökning i GQL
-description: Utforska fulltextsökningsfunktionen i  [!DNL Experience Manager] Assets. Använd det för att söka efter resurser baserat på specifika metadata, som titel, beskrivning och författarnamn.
+description: Utforska fulltextsökningsfunktionen i GQL [!DNL Experience Manager] Resurser. Använd det för att söka efter resurser baserat på specifika metadata, som titel, beskrivning och författarnamn.
 contentOwner: AG
 feature: Search,Metadata
 role: User
 exl-id: e819501c-4ac3-447f-944c-67adc42e8c61
-source-git-commit: cc9b6d147a93688e5f96620d50f8fc8b002e2d0d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
 
 # Fulltextsökning i GQL {#gql-full-text-search}
 
-Utforska fulltextsökningsfunktionen i [!DNL Experience Manager] Assets. Använd det för att söka efter resurser baserat på specifika metadata, som titel, beskrivning och författarnamn.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+Utforska fulltextsökningsfunktionen i GQL [!DNL Experience Manager] Resurser. Använd det för att söka efter resurser baserat på specifika metadata, som titel, beskrivning och författarnamn.
 
 Med fulltextsökningsfunktionen i GQL kan du söka efter resurser baserat på specifika metadata, som titel, beskrivning, författare och så vidare.
 
@@ -24,12 +28,12 @@ Om du till exempel vill söka efter resurser som har titeln &quot;Mål&quot; utf
 
 ## Söka efter resurser {#searching-assets}
 
-1. Klicka eller tryck på ikonen **[!UICONTROL Search]** i verktygsfältet i användargränssnittet för Resurser för att visa Omnissökrutan.
+1. I verktygsfältet i Assets-användargränssnittet klickar eller trycker du på **[!UICONTROL Search]** -ikonen för att visa Omnissearch-rutan.
 
    ![](assets/do-not-localize/chlimage_1.png)
 
 1. Tryck på Retur med markören i rutan Sök.
-1. Klicka på eller tryck på ikonen GlobalNav för att visa panelen **[!UICONTROL Filters]**.
+1. Klicka eller tryck på ikonen GlobalNav för att visa **[!UICONTROL Filters]** -panelen.
 1. Ange värdet &quot;Target&quot; i rutan Omni Search. Om du vill begränsa sökningen till en viss mapp klickar eller trycker du på ikonen Bläddra i panelen Filter och väljer mappen. I det här fallet söks matchningen endast efter i mappen och i undermapparna under den.
 
    >[!NOTE]
@@ -38,7 +42,7 @@ Om du till exempel vill söka efter resurser som har titeln &quot;Mål&quot; utf
 
    ![gql_search](assets/gql_search.png)
 
-1. Tryck på **[!UICONTROL Enter]**. [!DNL Assets]-användargränssnittet visar endast resurser vars titel exakt matchar &quot;Target&quot;.
+1. Tryck **[!UICONTROL Enter]**. The [!DNL Assets] I -användargränssnittet visas endast de resurser vars titel exakt matchar &quot;Target&quot;.
 
 Med fulltextsökningsfunktionen i GQL kan du söka efter resurser baserat på följande:
 
@@ -63,12 +67,12 @@ Med fulltextsökningsfunktionen i GQL kan du söka efter resurser baserat på f�
 | [!UICONTROL Copyright Owner] | copyrightowner:&quot;Adobe Systems&quot; |
 | [!UICONTROL Contributor] | medarbetare:John |
 | [!UICONTROL Usage Terms] | usageterms:&quot;CopyRights Reserved&quot; |
-| [!UICONTROL Created] | skapat:YYYY-MM-DDTHH:MM:SS.000+05:30..YYYY-MM-DDTHH:MM:SS.000+05:30 |
-| [!UICONTROL Expires Date] | förfaller:YYYY-MM-DDTHH:MM:SS.000+05:30.YYYY-MM-DDTHH:MM:SS.000+05:30 |
-| [!UICONTROL On time] | ontime:YYYY-MM-DDTHH:MM:SS.000+05:30..YYYY-MM-DDTHH:MM:SS.000+05:30 |
-| [!UICONTROL Off time] | offtime:YYYY-MM-DDTHH:MM:SS.000+05:30..YYYY-MM-DDTHH:MM:SS.000+05:30 |
+| [!UICONTROL Created] | skapad:YYYY-MM-DDTHH:MM:SS.000+05:30...YYY-MM-DDTHH:MM:SS.000+05:30 |
+| [!UICONTROL Expires Date] | förfaller:YYYY-MM-DDTHH:MM:SS.000+05:30...YYY-MM-DDTHH:MM:SS.000+05:30 |
+| [!UICONTROL On time] | ontime:YYYY-MM-DDTHH:MM:SS.000+05:30...YYY-MM-DDTHH:MM:SS.000+05:30 |
+| [!UICONTROL Off time] | offtime:YYYY-MM-DDTHH:MM:SS.000+05:30...YYY-MM-DDTHH:MM:SS.000+05:30 |
 | [!UICONTROL Range of time] (förfaller dateontime, offtime) | faktafält: nedsänkt..upperbound |
-| [!UICONTROL Path] | /content/dam/&lt;mappnamn> |
+| [!UICONTROL Path] | /content/dam/&lt;folder name=&quot;&quot;> |
 | [!UICONTROL PDF Title] | pdftitle:&quot;Adobe-dokument&quot; |
 | [!UICONTROL Subject] | ämne:&quot;Utbildning&quot; |
 | [!UICONTROL Tags] | taggar:&quot;Plats och resa&quot; |
@@ -105,7 +109,7 @@ title:&quot;Meeting&quot;;
 
 * Så här visar du resurser som innehåller en viss sträng och har ett specifikt egenskapsvärde (till exempel: sök efter strängen Adobe i resurser med rubriken=John Doe)
 
-&amp;ast;Adobe&amp;ast; title:&quot;John Doe &quot;OR title:&quot;John Doe&quot; &amp;ast;Adobe&amp;ast;
+&amp;ast;Adobe; title:&quot;John Doe &quot;OR title:&quot;John Doe&quot; &amp;ast;Adobe&amp;ast;
 
 >[!NOTE]
 >
@@ -124,11 +128,11 @@ Fulltextsökning stöder även operatorer som -, ^ och så vidare. Om du vill s�
 Du kan förbättra nyckelordens relevans för vissa resurser för att öka sökningen baserat på nyckelorden. Det innebär att de bilder som du befordrar särskilda nyckelord för visas högst upp i sökresultatet när du söker baserat på dessa nyckelord.
 
 1. Öppna egenskapssidan för resursen som du vill befordra ett nyckelord för i resursgränssnittet.
-1. Växla till fliken **[!UICONTROL Advanced]** och klicka/tryck på **[!UICONTROL Add]** under **[!UICONTROL Elevate for search keywords]**.
+1. Växla till **[!UICONTROL Advanced]** och klicka/peka **[!UICONTROL Add]** under **[!UICONTROL Elevate for search keywords]**.
 
    ![elevate_for_search](assets/elevate_for_search.png)
 
-1. I rutan **[!UICONTROL Search Promote]** anger du ett nyckelord för vilket du vill öka sökningen efter bilden och klickar/trycker sedan på **[!UICONTROL Add]**. Ange vid behov flera nyckelord på samma sätt.
+1. I **[!UICONTROL Search Promote]** anger du ett nyckelord som du vill göra sökningen efter bilden snabbare och klickar/trycker sedan på **[!UICONTROL Add]**. Ange vid behov flera nyckelord på samma sätt.
 
    ![add_search_word](assets/add_search_word.png)
 

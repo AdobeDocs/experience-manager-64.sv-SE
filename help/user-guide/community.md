@@ -1,20 +1,23 @@
 ---
 title: AEM
-seo-title: AEM
+seo-title: The AEM Community
 description: AEM
-seo-description: AEM
+seo-description: The AEM Community
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
-translation-type: tm+mt
-source-git-commit: 4c1b1210503dc535585ae8912a7b94b88d1604cf
+exl-id: 537f6fe5-011b-4d4a-ac71-71708fd72b85
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '360'
 ht-degree: 1%
 
 ---
 
+# AEM {#the-aem-community}
 
-# Den AEM communityn {#the-aem-community}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Vad är AEM community? {#what-is}
 
@@ -24,9 +27,9 @@ AEM har tusentals medlemmar världen över. De kan vara allt från människor so
 
 ## Vilka händelser finns det för AEM användare? {#events}
 
-Det finns en mängd händelser för medlemmarna! Varje månad håller vi sessioner där du kan ställa frågor till experten i specifika AEM. Vi kommer även att informera dig om större händelser, som [Immerse](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__fb7p-the_immerseagendai.html) eller [Adobe Summit](http://summit.adobe.com/na/?promoid=6JMR7JQY&amp;mv=other), eller till och med användargrupphändelser i ditt område.
+Det finns en mängd händelser för medlemmarna! Varje månad håller vi sessioner där du kan ställa frågor till experten i specifika AEM. Vi kommer också att informera dig om större händelser, som [Immerse](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__fb7p-the_immerseagendai.html) eller [Adobe Summit](http://summit.adobe.com/na/?promoid=6JMR7JQY&amp;mv=other)eller till och med användargruppshändelser i ditt område.
 
-Det bästa är att [besöka AEM Community idag och se vad som pågår.](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html)
+Det bästa att göra är [Besök AEM Community idag och se vad som pågår.](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html)
 
 ## Kan jag få kodexempel som hjälp? {#code-samples}
 

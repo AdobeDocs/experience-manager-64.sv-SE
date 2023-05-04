@@ -1,27 +1,30 @@
 ---
 title: API:er för Form Bridge för HTML5-formulär
-seo-title: API:er för Form Bridge för HTML5-formulär
+seo-title: Form Bridge APIs for HTML5 forms
 description: Externa program använder FormBridge API för att ansluta till XFA-mobilformuläret. API:t skickar en FormBridgeInitialized-händelse i det överordnade fönstret.
-seo-description: Externa program använder FormBridge API för att ansluta till XFA-mobilformuläret. API:t skickar en FormBridgeInitialized-händelse i det överordnade fönstret.
+seo-description: External applications use the FormBridge API to connect to the XFA Mobile Form. The API dispatches a FormBridgeInitialized event on the parent window.
 uuid: 0db22649-522b-4857-9ffd-826c52381d15
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: developer-reference
 discoiquuid: c05c9911-7c49-4342-89de-61b8b9953c83
-translation-type: tm+mt
-source-git-commit: b9d2a5b65f7ae48a9bde5580b5ddd3e55fc68d61
+exl-id: ad669f3b-2bda-4c41-8032-cf25a192ce12
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
 
-
 # API:er för Form Bridge för HTML5-formulär {#form-bridge-apis-for-html-forms}
 
-Du kan använda API:erna för Form Bridge för att öppna en kommunikationskanal mellan ett XFA-baserat HTML5-formulär och dina program. API:erna för Form Bridge tillhandahåller ett **connect**-API för att skapa anslutningen.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-API:t **connect** accepterar en hanterare som ett argument. När en anslutning har skapats mellan ett XFA-baserat HTML5-formulär och Form Bridge anropas handtaget.
+Du kan använda API:erna för Form Bridge för att öppna en kommunikationskanal mellan ett XFA-baserat HTML5-formulär och dina program. API:erna för Form Bridge innehåller en **koppla** API för att skapa anslutningen.
+
+The **koppla** API accepterar en hanterare som ett argument. När en lyckad anslutning har skapats mellan XFA-baserade HTML5-formulär och Form Bridge anropas handtaget.
 
 Du kan använda följande exempelkod för att skapa anslutningen.
 
@@ -53,7 +56,7 @@ Returnerar versionsnumret för skriptbiblioteket
 **isConnected()** Kontrollerar om formulärtillståndet har initierats
 
 * **Indata**: Ingen
-* **Utdata**:  **Om** tillståndet för XFA-formuläret har initierats
+* **Utdata**: **True** om XFA-formulärtillståndet har initierats
 
 * **Fel**: Ingen
 
@@ -74,8 +77,8 @@ Returnerar versionsnumret för skriptbiblioteket
    * **alternativ:** JavaScript-objekt som innehåller följande egenskaper:
 
       * **Fel**: Felhanterarfunktion
-      * **lyckades**: Hanterarfunktionen Slutfört. Den här funktionen skickas till ett objekt som innehåller XML i egenskapen *data*.
-      * **kontext**: Det objekt som kontexten (this) för  ** funktionen success anges till
+      * **framgång**: Hanterarfunktionen Slutfört. Den här funktionen skickar ett objekt som innehåller XML i *data* -egenskap.
+      * **kontext**: Det objekt som kontexten (this) för *framgång* funktionen är inställd
       * **validationChecker**: Funktion som ska anropas för att kontrollera verifieringsfel som tagits emot från servern. Valideringsfunktionen skickar en array med felsträngar.
       * **formState**: JSON-tillståndet för XFA-formuläret som data-XML ska returneras för. Om inget anges returneras data-XML för det återgivna formuläret.
 
@@ -86,15 +89,15 @@ Returnerar versionsnumret för skriptbiblioteket
 
 * **Indata:**
 
-   * **configName:** Namnet på konfigurationen som ska åsidosättas
+   * **configName:** Namn på konfigurationen som ska åsidosättas
 
-      * **widgetConfig:** Låter användaren åsidosätta standardwidgetar i formuläret med anpassade widgetar. Konfigurationen åsidosätts enligt följande:
+      * **widgetConfig:** Låter användaren åsidosätta standardwidgetarna i formuläret med anpassade widgetar. Konfigurationen åsidosätts enligt följande:
 
          formBridge.registerConfig(&quot;widgetConfig&quot;:{/&amp;ast;configuration&amp;ast;/})
 
-      * **pagingConfig:** Tillåter användaren att åsidosätta standardbeteendet för återgivning av endast den första sidan. Konfigurationen åsidosätts enligt följande:
+      * **pagingConfig:** Låter användaren åsidosätta standardbeteendet för återgivning av endast den första sidan. Konfigurationen åsidosätts enligt följande:
 
-         window.formBridge.registerConfig(&quot;pagingConfig&quot;:{pagingDisabled: &lt;true | false>, crinkPageDisabled: &lt;true | false> }).
+         window.formBridge.registerConfig(&quot;pagingConfig&quot;:{pagingDisabled: &lt;true false=&quot;&quot;>, crinkPageDisabled: &lt;true false=&quot;&quot;> }).
 
       * **LoggingConfig:** Låter användaren åsidosätta loggningsnivån, inaktivera loggning för en kategori eller visa loggkonsolen eller skicka till servern. Konfigurationen kan åsidosättas på följande sätt:
 
@@ -110,7 +113,7 @@ Returnerar versionsnumret för skriptbiblioteket
         }
       ```
 
-      * **SubmitServiceProxyConfig:** Tillåt användarna att registrera proxytjänster för sändning och inloggning.
+      * **SubmitServiceProxyConfig:** Tillåt användarna att registrera insändning och inloggningstjänster för proxy.
 
          ```css
          window.formBridge.registerConfig("submitServiceProxyConfig",  
@@ -124,11 +127,11 @@ Returnerar versionsnumret för skriptbiblioteket
 
 
 
-* **Output:** Object containing original value of the configuration in  ** data property.
+* **Utdata:** Objekt som innehåller det ursprungliga värdet för konfigurationen i *data* -egenskap.
 
 * **Fel:** Ingen
 
-**hideFields(fieldArray)** Döljer de fält vars uttryck är angivna i fieldArray. Anger egenskapen presence för de angivna fälten till osynlig
+**hideFields(fieldArray)** Döljer de fält vars som innehåller vissa uttryck i fieldArray. Anger egenskapen presence för de angivna fälten till osynlig
 
 * **Indata:**
 
@@ -137,7 +140,7 @@ Returnerar versionsnumret för skriptbiblioteket
 * **Utdata:** Ingen
 * **Fel:** Ingen
 
-**showFields(fieldArray)** Visar de fält vars uttryck anges i fieldArray. Anger egenskapen presence för de angivna fälten till visible
+**showFields(fieldArray)** Visar de fält vars som innehåller vissa uttryck i fieldArray. Anger egenskapen presence för de angivna fälten till visible
 
 * **Indata:**
 
@@ -152,47 +155,47 @@ Returnerar versionsnumret för skriptbiblioteket
 * **Utdata**: Ingen
 * **Fel**: Utlöser ett undantag om formulärtillståndet inte har initierats
 
-**getFormState()** Returnerar den JSON som representerar formulärläget
+**getFormState()** Returnerar den JSON som representerar formulärstatusen
 
 * **Indata:** Ingen
-* **output:** Object containing JSON representing the current Form State in  ** data property.
+* **Utdata:** Objekt som innehåller JSON som representerar det aktuella formulärläget i *data* -egenskap.
 
 * **Fel:** Ingen
 
-**restoreFormState(options)** Återställer formulärtillståndet från det angivna JSON-läget i options-objektet. Läget används och hanterare för lyckade eller fel anropas när åtgärden har slutförts
+**restoreFormState(options)** Återställer formulärläget från det angivna JSON-läget i options-objektet. Läget används och hanterare för lyckade eller fel anropas när åtgärden har slutförts
 
 * **Indata:**
 
    * **Alternativ:** JavaScript-objekt som innehåller följande egenskaper:
 
       * **Fel**: Felhanterarfunktion
-      * **lyckades**: Hanterarfunktionen Slutfört
-      * **kontext**: Det objekt som kontexten (this) för  ** efterföljande funktion anges till
+      * **framgång**: Hanterarfunktionen Slutfört
+      * **kontext**: Det objekt som kontexten (this) för *framgång* funktionen är inställd
       * **formState**: Formulärets JSON-tillstånd. Formuläret återställs till JSON-läget.
 
 * **Utdata:** Ingen
 * **Fel:** Ingen
 
-**setFocus (som)** Anger fokus på fältet som anges i som-uttrycket
+**setFocus (som)** Anger fokus på fältet som anges i SOM-uttrycket
 
-* **Indata:** Som uttryck för fältet som fokus ska ställas in på
+* **Indata:** Ett uttryck för fältet som fokus ska ställas in på
 * **Utdata:** Ingen
-* **Fel:** Utlöser ett undantag om ett felaktigt &quot;SOM&quot;-uttryck används
+* **Fel:** Utlöser ett undantag om ett felaktigt SOM-uttryck används
 
-**setFieldValue (som, value)** Anger värdet för fälten för de angivna som-uttrycken
+**setFieldValue (som, värde)** Anger värdet för fälten för de angivna som-uttrycken
 
 * **Indata:**
 
-   * **som:** Array som innehåller några uttryck för fältet. Det uttryck som anger fältets värde.
-   * **value:** Array som innehåller värden som motsvarar de som anges i en  **** somarray. Om värdeets datatyp inte är densamma som fieldType ändras inte värdet.
+   * **som:** Array som innehåller vissa uttryck för fältet. Det uttryck som anger fältets värde.
+   * **värde:** Array som innehåller värden som motsvarar &quot;SOM&quot;-uttryck som finns i en **som** array. Om värdeets datatyp inte är densamma som fieldType ändras inte värdet.
 
 * **Utdata:** Ingen
-* **Fel:** Utlöser ett undantag om ett felaktigt som-uttryck används
+* **Fel:** Utlöser ett undantag om ett felaktigt SOM-uttryck används
 
 **getFieldValue (som)** Returnerar värdet för fälten för angivna som-uttryck
 
-* **Indata:** Array som innehåller uttryck för fält vars värde måste hämtas
-* **output:** Object containing the result as Array in  **** data property.
+* **Indata:** Array som innehåller vissa uttryck av fält vars värde måste hämtas
+* **Utdata:** Objekt som innehåller resultatet som en array i **data** -egenskap.
 
 * **Fel:** Ingen
 
@@ -209,29 +212,29 @@ if(a.errors) {
 }
 ```
 
-**getFieldProperties(som, property)** Hämta listan med värden för den angivna egenskapen i fälten som anges i vissa uttryck
+**getFieldProperties(som, egenskap)** Hämta listan med värden för den angivna egenskapen i de fält som anges i Vissa-uttryck
 
 * **Indata:**
 
-   * **som:** Array som innehåller vissa-uttryck för fälten
-   * **egenskap**: Namn på egenskapen vars värde krävs
+   * **som:** Array som innehåller vissa uttryck för fälten
+   * **property**: Namn på egenskapen vars värde krävs
 
-* **output:** Object containing the result as Array in *data *property
+* **Utdata:** Objekt som innehåller resultatet som array i *data *property
 
 * **Fel:** Ingen
 
-**setFieldProperties(som, property, values)** Anger värdet för den givna egenskapen för alla fält som anges i som-uttryck
+**setFieldProperties(som, egenskap, värden)** Anger värdet för den angivna egenskapen för alla fält som anges i som-uttrycken
 
 * **Indata:**
 
-   * **som:** Array som innehåller uttryck för de fält vars värde måste anges
-   * **egenskap**: Egenskap vars värde måste anges
-   * **value:** Array containing values of the given property for fields specified in As expressions
+   * **som:** Array som innehåller vissa uttryck för de fält vars värde måste anges
+   * **property**: Egenskap vars värde måste anges
+   * **värde:** Array som innehåller värden för den angivna egenskapen för fält som anges i som-uttryck
 
 * **Utdata:** Ingen
 * **Fel:** Ingen
 
-## Exempel på användning av Form Bridge API {#sample-usage-of-form-bridge-api}
+## Exempel på användning av API:t för Form Bridge {#sample-usage-of-form-bridge-api}
 
 ```JavaScript
 // Example 1: FormBridge.restoreFormState
@@ -264,5 +267,3 @@ if(a.errors) {
     formBridge.submitForm({success:suc,error:err}); // not passing a context means that this will be formBridge itself. Validation errors will be checked.
   }
 ```
-
-

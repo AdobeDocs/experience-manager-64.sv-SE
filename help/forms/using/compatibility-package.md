@@ -1,7 +1,7 @@
 ---
 title: Kompatibilitetspaket
 seo-title: Compatibility Package
-description: 'Genom att installera kompatibilitetspaketet på AEM Forms 6.4 kan du använda Correspondence Management-resurser från AEM Forms 6.3 och inaktuella adaptiva formulärmallar och sidor. '
+description: Genom att installera kompatibilitetspaketet på AEM Forms 6.4 kan du använda Correspondence Management-resurser från AEM Forms 6.3 och inaktuella adaptiva formulärmallar och sidor.
 seo-description: Installing the Compatibility package on AEM Forms 6.4 allows you to use the Correspondence Management assets from AEM Forms 6.3 and deprecated adaptive forms templates and pages
 uuid: e50b1ff9-c357-422a-8da8-a791ff805317
 contentOwner: gtalwar
@@ -11,20 +11,24 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 38a80992-2eda-4535-89af-0de34b1a9686
 role: Admin
 exl-id: 0bfa0e65-c4cd-4c37-b42b-bff1b777a7be
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
 
 # Installera kompatibilitetspaket {#compatibility-package}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 Genom att installera kompatibilitetspaketet på AEM Forms 6.4 kan du använda Correspondence Management-resurser från AEM Forms 6.3 och inaktuella adaptiva formulärmallar och sidor.
 
 ## Översikt {#overview}
 
-Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa kundkommunikation i AEM Forms 6.4. Om du vill fortsätta använda bokstäverna från AEM 6.3 Forms och AEM 6.2 Forms måste du installera [AEMFD-kompatibilitetspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
+Interaktiv kommunikation är standardmetoden och rekommenderas för att skapa kundkommunikation i AEM Forms 6.4. Om du vill fortsätta använda bokstäverna från AEM 6.3 Forms och AEM 6.2 Forms måste du installera [AEMFD-kompatibilitetspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
 Med AEMFD-kompatibilitetspaketet kan du använda följande resurser från AEM Forms 6.3 och 6.2 i AEM Forms 6.4:
 
@@ -33,22 +37,22 @@ Med AEMFD-kompatibilitetspaketet kan du använda följande resurser från AEM Fo
 * Dataordlistor
 * Mallar och sidor för anpassade formulär har tagits bort
 
-Mer information finns i [Resurser som gjorts kompatibla med AEM Forms 6.4 genom att installera Kompatibilitetspaketet](/help/forms/using/compatibility-package.md#assetsmadecompatible).
+Mer information finns i [Resurser som gjorts kompatibla med AEM Forms 6.4 genom att installera kompatibilitetspaketet](/help/forms/using/compatibility-package.md#assetsmadecompatible).
 
 ## Lägg till stöd för AEM Forms 6.3- och 6.2-material i AEM Forms 6.4 {#add-support-for-aem-forms-and-assets-in-aem-forms}
 
 När du har utfört en uppgradering gör du följande för att installera AEMFD-kompatibilitetspaketet och göra dina resurser kompatibla med 6.4:
 
-Kontrollera att du har [AEM Kompatibilitetspaket](/help/sites-deploying/backward-compatibility.md) förinstallerat.
+Se till att du har [AEM](/help/sites-deploying/backward-compatibility.md) förinstallerat.
 
-1. Installera [Kompatibilitetspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
+1. Installera [Kompatibilitetspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
    Mer information om hur du överför och installerar paketet finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
 
 1. Starta om servern när loggarna har stabiliserats.
 1. Använd flyttningsverktyget för att göra dina resurser kompatibla med 6.4.
 
-   Mer information finns i [migreringsverktyget](/help/forms/using/migration-utility.md).
+   Mer information finns i [migreringsverktyg](/help/forms/using/migration-utility.md).
 
 ## Resurser som gjorts kompatibla med AEM Forms 6.4 genom att installera kompatibilitetspaketet {#assetsmadecompatible}
 

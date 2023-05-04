@@ -1,30 +1,33 @@
 ---
 title: Spåra studsade e-postmeddelanden
-seo-title: Spåra studsade e-postmeddelanden
+seo-title: Tracking Bounced Emails
 description: När du skickar ett nyhetsbrev till många användare finns det vanligtvis några ogiltiga e-postadresser i listan. Skickar nyhetsbrev till adresserna som studsar tillbaka. AEM kan hantera dessa studsar och kan sluta skicka nyhetsbrev till dessa adresser när den konfigurerade studsräknaren har överskridits.
-seo-description: När du skickar ett nyhetsbrev till många användare finns det vanligtvis några ogiltiga e-postadresser i listan. Skickar nyhetsbrev till adresserna som studsar tillbaka. AEM kan hantera dessa studsar och kan sluta skicka nyhetsbrev till dessa adresser när den konfigurerade studsräknaren har överskridits.
+seo-description: When you send a newsletter to many users, there are usually some invalid emails addresses in the list. Sending newsletters to those addresses bounce back. AEM is capable of managing those bounces and can stop sending newsletters to those addresses after the configured bounce counter is exceeded.
 uuid: 749959f2-e6f8-465f-9675-132464c65f11
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: fde9027b-9057-48c3-ae34-3f3258c5b371
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 3be35bb8-3485-42a6-8195-c3e95d097856
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '747'
 ht-degree: 0%
 
 ---
 
-
 # Spåra studsade e-postmeddelanden{#tracking-bounced-emails}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
 >Adobe planerar inte att ytterligare förbättra spårningen av öppnade/studsade e-postmeddelanden som skickas av AEM SMTP-tjänst.
 >
->Rekommendationen är att [utnyttja Adobe Campaign och dess AEM integrering](/help/sites-administering/campaign.md).
+>Rekommendationen är att [utnyttja Adobe Campaign och dess AEM](/help/sites-administering/campaign.md).
 
 När du skickar ett nyhetsbrev till många användare finns det oftast några ogiltiga e-postadresser i listan. Skickar nyhetsbrev till adresserna som studsar tillbaka. AEM kan hantera dessa studsar och kan sluta skicka nyhetsbrev till adresserna när den konfigurerade studsräknaren har överskridits. Som standard är studsfrekvensen 3, men den kan konfigureras.
 
@@ -36,9 +39,9 @@ Med flödesimporteraren kan du importera innehåll från externa källor till di
 
 Så här konfigurerar du feed-importeraren för att spåra utskickad e-post:
 
-1. I **Verktyg** väljer du Feed Importer.
+1. I **verktyg** väljer du Feed Importer.
 
-1. Klicka på **Lägg till** för att skapa en ny konfiguration.
+1. Klicka **Lägg till** för att skapa en ny konfiguration.
 
    ![chlimage_1](assets/chlimage_1.png)
 
@@ -68,7 +71,7 @@ Så här konfigurerar du feed-importeraren för att spåra utskickad e-post:
 
    `imap.flag.SEEN`:Ange false för nytt/osynligt meddelande, true för redan lästa meddelanden
 
-   Se [https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html](https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html) för en fullständig lista över flaggor.
+   Se [https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html](https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html) för den fullständiga listan över flaggor.
 
    **IMAP-exempel:**
 
@@ -79,7 +82,7 @@ Så här konfigurerar du feed-importeraren för att spåra utskickad e-post:
 
 1. Spara konfigurationen.
 
-## Konfigurerar tjänstkomponenten för nyhetsbrev {#configuring-the-newsletter-service-component}
+## Konfigurera tjänstkomponenten för nyhetsbrev {#configuring-the-newsletter-service-component}
 
 När du har konfigurerat feed-importeraren måste du konfigurera From-adressen och studsräknaren.
 

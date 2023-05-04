@@ -5,14 +5,18 @@ contentOwner: VG
 feature: Brand Portal
 role: Admin
 exl-id: cde35555-259f-4d16-999f-2b93d597b8a5
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1550'
-ht-degree: 37%
+source-wordcount: '1586'
+ht-degree: 36%
 
 ---
 
 # Konfigurera AEM Assets med varumärkesportalen {#configure-integration-64}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Adobe Experience Manager Assets har konfigurerats med Brand Portal via [!DNL Adobe I/O], som köper en IMS-token för godkännande av din Brand Portal-klient.
 

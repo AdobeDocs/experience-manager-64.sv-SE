@@ -1,23 +1,26 @@
 ---
 title: XFA-stöd i XDP-baserade adaptiva formulär
-seo-title: XFA-stöd i XDP-baserade adaptiva formulär
+seo-title: XFA support in XDP-based adaptive forms
 description: Visar XFA-händelser, egenskaper, skript och validering som stöds i adaptiva formulär.
-seo-description: Visar XFA-händelser, egenskaper, skript och validering som stöds i adaptiva formulär.
+seo-description: Lists supported XFA events, properties, scripts, and validation in adaptive forms.
 uuid: 2f976de3-2cdf-4bbb-acd1-048a498930f0
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: eaf60421-097e-4feb-b661-433a512470ab
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 86596819-8108-409e-af14-4634e8a1959d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 5%
+source-wordcount: '719'
+ht-degree: 0%
 
 ---
 
-
 # XFA-stöd i XDP-baserade adaptiva formulär {#xfa-support-in-xdp-based-adaptive-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Introduktion {#introduction}
 
@@ -31,9 +34,9 @@ När ett anpassat formulär skapas baserat på en XDP-fil fylls egenskaperna, h�
 
 I den här artikeln listas XFA-händelser, egenskaper och valideringar som stöds i anpassningsbara formulär och hur du åsidosätter dem i anpassningsbara formulär.
 
-## XFA-element som stöds och deras mappning i adaptiva former {#supported-xfa-elements-and-their-mapping-in-adaptive-forms-br}
+## XFA-element som stöds och deras mappning i adaptiva formulär {#supported-xfa-elements-and-their-mapping-in-adaptive-forms-br}
 
-### fält {#fields}
+### Fält {#fields}
 
 När ett adaptivt formulär skapas med en XDP-fil kan du dra och släppa ett XFA-fält på det adaptiva formuläret. I följande tabell visas hur XFA-fält mappas till adaptiva formulärfält.
 
@@ -56,7 +59,7 @@ När ett adaptivt formulär skapas med en XDP-fil kan du dra och släppa ett XFA
    <td><p>Nedrullningsbar lista</p> </td> 
   </tr>
   <tr>
-   <td><p>Datum-/tidfält </p> </td> 
+   <td><p>Datum-/tidsfält </p> </td> 
    <td><p>Datumväljaren</p> </td> 
   </tr>
   <tr>
@@ -117,11 +120,11 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filerna fungera
    <td><p>Mappad till egenskapen Bind reference (bindRef) i adaptiv form.</p> </td> 
   </tr>
   <tr>
-   <td><p>presence </p> </td> 
+   <td><p>närvaro </p> </td> 
    <td><p>Mappas till egenskapen visible i adaptiv form. Du kan åsidosätta den med synlighetsuttrycket.</p> </td> 
   </tr>
   <tr>
-   <td><p>access </p> </td> 
+   <td><p>åtkomst </p> </td> 
    <td><p>Mappas till egenskapen enabled i adaptiv form. Du kan åsidosätta den med Access-uttrycket.</p> </td> 
   </tr>
   <tr>
@@ -141,7 +144,7 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filerna fungera
    <td><p>Mappad till egenskapen short description i adaptiv form.</p> </td> 
   </tr>
   <tr>
-   <td><p>caption<em> (alla fälttyper)</em></p> </td> 
+   <td><p>bildtext<em> (alla fälttyper)</em></p> </td> 
    <td><p>Mappad till egenskapen Title i adaptiv form.</p> </td> 
   </tr>
   <tr>
@@ -153,27 +156,27 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filerna fungera
    <td><p>Mappad till värdeegenskap i adaptiv form.</p> </td> 
   </tr>
   <tr>
-   <td><p>objekt<em> (listruta, kryssruta)</em></p> </td> 
+   <td><p>objekt<em> (Listruta, kryssruta)</em></p> </td> 
    <td><p>Mappad till alternativegenskap i adaptiv form. Du kan åsidosätta den med hjälp av uttrycket Alternativ.</p> </td> 
   </tr>
   <tr>
-   <td><p>maxChar<em> (textfält)</em></p> </td> 
+   <td><p>maxChar<em> (Textfält)</em></p> </td> 
    <td><p>Mappas till egenskapen Maximum för tillåtna tecken i adaptiv form.</p> </td> 
   </tr>
   <tr>
-   <td><p>multiline<em> (textfält)</em></p> </td> 
+   <td><p>flerradig<em> (Textfält)</em></p> </td> 
    <td><p>Mappad till egenskapen Tillåt flera rader i adaptiv form.</p> </td> 
   </tr>
   <tr>
-   <td><p>fracDigit<em> (numeriskt fält, decimalfält)</em></p> </td> 
+   <td><p>fracDigit<em> (Numeriskt fält, decimalfält)</em></p> </td> 
    <td><p>Mappas till egenskapen Frac digits i adaptiv form.</p> </td> 
   </tr>
   <tr>
-   <td><p>leadDigit<em> (numeriskt fält, decimalfält)</em></p> </td> 
+   <td><p>leadDigit<em> (Numeriskt fält, decimalfält)</em></p> </td> 
    <td><p>Mappas till egenskapen Leadsiffror i adaptiv form.</p> </td> 
   </tr>
   <tr>
-   <td><p>multiSelect<em> (listruta)</em></p> </td> 
+   <td><p>multiSelect<em> (Listruta)</em></p> </td> 
    <td><p>Mappad till Tillåter flera markeringsegenskaper i adaptiv form.</p> </td> 
   </tr>
  </tbody>
@@ -194,19 +197,19 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filen fungerar 
    <td><p>Det här skriptet körs under körning och kan inte åsidosättas i adaptiv form.</p> </td> 
   </tr>
   <tr>
-   <td><p>calculate</p> </td> 
+   <td><p>beräkna</p> </td> 
    <td><p>Mappad till beräkningsuttrycket i adaptiv form.</p> </td> 
   </tr>
   <tr>
-   <td><p>validate </p> </td> 
+   <td><p>validera </p> </td> 
    <td><p>Mappas till valideringsuttrycket i adaptiv form.</p> </td> 
   </tr>
   <tr>
    <td><p>validationState </p> </td> 
-   <td><p>Skriptet körs under körning och kan inte åsidosättas i anpassningsbar form.<br /> </p> </td> 
+   <td><p>Det här skriptet körs under körning och kan inte åsidosättas i adaptiv form.<br /> </p> </td> 
   </tr>
   <tr>
-   <td><p>exit </p> </td> 
+   <td><p>avsluta </p> </td> 
    <td><p>Det här skriptet körs under körning och kan inte åsidosättas i adaptiv form.</p> </td> 
   </tr>
   <tr>
@@ -248,7 +251,7 @@ Följande tabell visar hur XFA-valideringar mappas till valideringar i adaptiva 
   </tr>
   <tr>
    <td><p>Obligatoriskt (nullTest)</p> </td> 
-   <td><p>mandatory </p> </td> 
+   <td><p>obligatoriskt </p> </td> 
   </tr>
   <tr>
    <td><p>Tomt meddelande (nullTestMessage) </p> </td> 
@@ -268,4 +271,3 @@ Följande tabell visar hur XFA-valideringar mappas till valideringar i adaptiva 
 >[!NOTE]
 >
 >Du kan inte åsidosätta den obligatoriska egenskapen för alternativknappar för adaptiva formulär och kryssrutegrupper som är bundna till XFA-kontrollknappar.
-

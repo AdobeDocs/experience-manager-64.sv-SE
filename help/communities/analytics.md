@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 36ea97a4-4e13-4e89-866b-495f3c30cb94
 role: Admin
 exl-id: cb2f61df-73bb-47f7-86ce-feda4772c8d0
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2700'
-ht-degree: 2%
+source-wordcount: '2736'
+ht-degree: 1%
 
 ---
 
 # Analyskonfiguration för communityfunktioner {#analytics-configuration-for-communities-features}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Översikt {#overview}
 
@@ -296,7 +300,7 @@ Den idekiske behövs inte och kan minimeras så att den inte förhindrar åtkoms
 1. Välj en `Report suite` rapportsviterna som är kopplade till företagskontot ska vara tillgängliga för urval
 1. Välj **[!UICONTROL Yes]** i dialogrutan som öppnas: ```Load default server settings? Do you want to load the default server settings and overwrite current values in the Server section?```
 1. Välj en `Run Mode`\
-   Choose **[!UICONTROL publish]**
+   Välj **[!UICONTROL publish]**
 
 ![chlimage_1-272](assets/chlimage_1-272.png)
 
@@ -339,8 +343,20 @@ För att Analytics-spårning och -import ska fungera på rätt sätt för en com
 
 ```xml
 # present in default sitepage.hbs
+
+>[!CAUTION]
+>
+>AEM 6.4 has reached the end of extended support and this documentation is no longer updated. For further details, see our [technical support periods](https://helpx.adobe.com/support/programs/eol-matrix.html). Find the supported versions [here](https://experienceleague.adobe.com/docs/).
 # only one scf-js-site-title class should be included
+
+>[!CAUTION]
+>
+>AEM 6.4 has reached the end of extended support and this documentation is no longer updated. For further details, see our [technical support periods](https://helpx.adobe.com/support/programs/eol-matrix.html). Find the supported versions [here](https://experienceleague.adobe.com/docs/).
 # this example sets it to be hidden as it serves no visual purpose
+
+>[!CAUTION]
+>
+>AEM 6.4 has reached the end of extended support and this documentation is no longer updated. For further details, see our [technical support periods](https://helpx.adobe.com/support/programs/eol-matrix.html). Find the supported versions [here](https://experienceleague.adobe.com/docs/).
 <div
     class="navbar-brand scf-js-site-title"
     href="{{siteUrl}}.html"
@@ -391,8 +407,8 @@ Följande är ett exempel på standardmappningar efter följande [komma igång, 
 |  | Typ av aktiveringsresurs | Platsrubrik | Funktionstyp | Grupptitel | Gruppsökväg | UGC-typ | UGC-titel | Användare (medlem) | UGC-sökväg | Platssökväg |
 |------------------------|------------------------|-----------|--------------|------------|-----------|---------|----------|--------------|---------|----------|
 |  | **eVar1** | **eVar2** | **eVar3** | **eVar4** | **eVar5** | **eVar6** | **eVar7** | **eVar8** | **eVar9** | **eVar10** |
-| event1Resurs - uppspelning | (en) | - | - | - | - | - | - | - | (i) | - |
-| event2SCFView | (en) | b) | (c) | (d) | (e) | (f) | (g) | (h) | (i) | (j) |
+| event1Resurs - uppspelning | (a) | - | - | - | - | - | - | - | (i) | - |
+| event2SCFView | (a) | b) | (c) | (d) | (e) | (f) | (g) | (h) | (i) | (j) |
 | event3SCFCreate (Post) | - | b) | (c) | (d) | (e) | (f) | (g) | (h) | (i) | (j) |
 | event4SCFFollow | - | b) | (c) | (d) | (e) | (f) | (g) | (h) | (i) | (j) |
 | event5SCFVoteUp | - | b) | (c) | (d) | (e) | (f) | (g) | (h) | (i) | (j) |

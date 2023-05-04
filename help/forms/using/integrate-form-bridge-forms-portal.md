@@ -1,26 +1,29 @@
 ---
 title: Integrera Form Bridge med en anpassad portal för HTML5-formulär
-seo-title: Integrera Form Bridge med en anpassad portal för HTML5-formulär
+seo-title: Integrating Form Bridge with custom portal for HTML5 forms
 description: Du kan använda API:t för FormBridge för att hämta eller ange värden för formulärfält från HTML-sidan och skicka formuläret.
-seo-description: Du kan använda API:t för FormBridge för att hämta eller ange värden för formulärfält från HTML-sidan och skicka formuläret.
+seo-description: You can use the FormBridge API to get or set the values of form fields from the HTML page and submit the form.
 uuid: 09f2189f-d584-4b84-895e-22833b6b17e3
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: e0608649-bd49-4f40-bc1b-821c9b208883
 feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: bf4ae163-5d89-48fb-9bc4-182281b28f35
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: '429'
 ht-degree: 0%
 
 ---
 
-
 # Integrera Form Bridge med en anpassad portal för HTML5-formulär {#integrating-form-bridge-with-custom-portal-for-html-forms}
 
-FormBridge är ett API för en HTML5-formulärbrygga som gör att du kan interagera med ett formulär. Information om API-referens för FormBridge finns i [API-referens för FormBridge](/help/forms/using/form-bridge-apis.md).
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+FormBridge är ett HTML5-API för formulärbryggan som gör att du kan interagera med ett formulär. Information om API-referens för FormBridge finns i [API-referens för FormBridge](/help/forms/using/form-bridge-apis.md).
 
 Du kan använda API:t för FormBridge för att hämta eller ange värden för formulärfält från HTML-sidan och skicka formuläret. Du kan till exempel använda API för att skapa en guideliknande upplevelse.
 
@@ -38,7 +41,7 @@ Ett befintligt HTML-program kan utnyttja API:t för FormBridge för att interage
 
 1. **Ändra HTML-profilen**
 
-   Inkludera XFA-miljön, XFA-språkbiblioteket och XFA-formulärets HTML-kodfragment i profilåtergivaren, utforma webbsidan och placera formuläret inuti webbsidan.
+   Inkludera XFA-miljön, XFA-språkbiblioteket och kodavsnittet XFA från HTML i profilåtergivaren, utforma webbsidan och placera formuläret inuti webbsidan.
 
    Använd till exempel följande kodfragment om du vill skapa en app med två indatafält och ett formulär som visar interaktionen mellan formuläret och en extern app.
 
@@ -76,21 +79,21 @@ Ett befintligt HTML-program kan utnyttja API:t för FormBridge för att interage
 
    >[!NOTE]
    >
-   >**Rad 9** innehåller ytterligare JSP-referens för CSS-format och JavaScript-filer för att utforma sidan.
+   >The **rad 9**, innehåller ytterligare JSP-referens för CSS-format och JavaScript-filer för att utforma sidan.
    >
-   >Taggen &lt;div id=&quot;rightdiv&quot;> på **rad 18** innehåller HTML-fragmentet för XFA-formuläret.
+   >The &lt;div id=&quot;rightdiv&quot;> tagg på **rad 18** innehåller HTML-fragmentet i XFA-formuläret.
    Sidan är formaterad i två behållare: **vänster** och **höger**. Den högra behållaren har formuläret. Den vänstra behållaren har två inmatningsfält och en del av den externa HTML-sidan.
    Följande skärmbild visar hur formuläret visas i en webbläsare.
 
    ![portal](assets/portal.jpg)
 
-   Vänster sida är en del av **HTML-sidan**. Den högra sidan som innehåller fälten är **xfa-formuläret**.
+   Den vänstra sidan är en del av **HTML page**. Den högra sidan som innehåller fälten är **xfa-form**.
 
 1. **Åtkomst till formulärfält från sidan**
 
    Följande är ett exempelskript som du kan lägga till för att ange värden i ett formulärfält.
 
-   Om du till exempel vill ange **EmployeeName** med värdena i fälten **Förnamn** och **Efternamn** anropar du funktionen **window.formBridge.setFieldValue**.
+   Om du till exempel vill ange **EmployeeName** med värdena i fälten **Förnamn** och **Efternamn**, anropa **window.formBridge.setFieldValue** funktion.
 
    På samma sätt kan du läsa värdet genom att anropa **window.formBridge.getFieldValue **API.
 
@@ -104,4 +107,3 @@ Ett befintligt HTML-program kan utnyttja API:t för FormBridge för att interage
                    });
            });
    ```
-

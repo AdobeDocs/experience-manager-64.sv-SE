@@ -1,24 +1,27 @@
 ---
 title: Integrera med tredjepartstjänster
-seo-title: Integrera med tredjepartstjänster
+seo-title: Integrating with Third-Party Services
 description: Lär dig hur du integrerar AEM med tredjepartstjänster.
-seo-description: Lär dig hur du integrerar AEM med tredjepartstjänster.
+seo-description: Learn how to integrate AEM with third party services.
 uuid: bfafd00b-46bc-4af2-b3e8-874afb1ed697
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: e0d6478a-4420-46a6-96fe-082a30ee82f0
-translation-type: tm+mt
-source-git-commit: 2cd539dd645f1e3a823a17b57410ca4b9fc1364a
+exl-id: 9a3857fd-4f62-4293-950b-75626e4dcf50
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
 
-
 # Integrera med tredjepartstjänster{#integrating-with-third-party-services}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Med AEM kan du integrera med följande icke-Adobe-produkter direkt:
 
@@ -46,7 +49,7 @@ Mer information om hur du integrerar din AEM och Salesforce finns i [Integrera m
 
 >[!NOTE]
 >
->Integrering med Silverpop Engage är inte tillgängligt direkt. [Hämta paketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content) från paketresursen om du vill integrera AEM med Silverpop Engage.
+>Integrering med Silverpop Engage är inte tillgängligt direkt. För att integrera AEM med Silverpop Engage [hämta paketet](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content) från paketresurs.
 
 Silverpop Engage erbjuder automatiserad marknadsföring, e-post, mobilt och socialt.
 
@@ -56,14 +59,14 @@ Mer information om hur du integrerar AEM och ExactTarget finns i [Integrera med 
 
 Med ExactTarget e-postmarknadsföringslösningar kan organisationer av alla storlekar utforma och leverera målinriktade, verksamhetskritiska och helintegrerade e-postkampanjer.
 
-Mer information om hur du integrerar AEM och ExactTarget finns i [Konfigurera ExactTarget](/help/sites-administering/exacttarget.md).
+Mer information om hur du integrerar AEM och ExactTarget finns i [Konfigurerar ExactTarget](/help/sites-administering/exacttarget.md).
 
 ## Integrera med Facebook och Twitter {#integrating-with-facebook-and-twitter}
 
 Facebook och Twitter är populära sociala nätverkstjänster. AEM integrering med Facebook och Twitter gör det möjligt för organisationer att tillhandahålla inloggningsalternativ för Facebook eller Twitter på ägda digitala resurser och sedan anpassa användarupplevelsen baserat på profilinformation. Marknadsförarna kan också kombinera profilinformation med data från andra källor, som ett kundrelationssystem eller en webbplatsprofil, för att skapa en enhetlig bild av kunden.
 
-Mer information finns i [Social Login](/help/communities/social-login.md).
+Se [Social inloggning](/help/communities/social-login.md) för mer information.
 
-## Integrera med andra leverantörer {#integrating-with-other-providers}
+## Integrering med andra leverantörer {#integrating-with-other-providers}
 
-Med AEM kan du ansluta till andra externa leverantörer med ett [generiskt analysfragment.](/help/sites-administering/external-providers.md)
+AEM kan du ansluta till andra externa leverantörer med en [Generic Analytics-kodfragment.](/help/sites-administering/external-providers.md)

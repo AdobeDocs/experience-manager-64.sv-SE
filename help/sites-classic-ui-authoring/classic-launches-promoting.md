@@ -1,8 +1,8 @@
 ---
 title: Marknadsföra Launches
-seo-title: Marknadsföra Launches
+seo-title: Promoting Launches
 description: Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar. När en startsida befordras ersätts motsvarande sida på källsidorna med innehållet på den befordrade sidan.
-seo-description: Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar. När en startsida befordras ersätts motsvarande sida på källsidorna med innehållet på den befordrade sidan.
+seo-description: You need to promote launch pages to move the content back into the source (production) before publishing. When a launch page is promoted, the corresponding page of the source pages is replaced with the content of the promoted page.
 uuid: 91f1c6ac-8c4e-4459-aaab-feaa32befc45
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,16 +10,19 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 8d38c6f7-8fea-4d27-992d-03b604b9541f
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 793c44fa-9dd1-45f2-b1ab-219b436fcb54
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '350'
 ht-degree: 3%
 
 ---
 
-
 # Marknadsföra Launches{#promoting-launches}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar. När en startsida befordras ersätts motsvarande sida på källsidorna med innehållet på den befordrade sidan. Följande alternativ är tillgängliga när du befordrar en startsida:
 
@@ -27,19 +30,19 @@ Du måste befordra startsidor för att kunna flytta tillbaka innehållet till k�
 * Anger om underordnade sidor för den aktuella sidan ska befordras.
 * Anger om en fullständig start ska erbjudas eller endast sidor som har ändrats.
 
-## Markerar startsidor {#promoting-launch-pages}
+## Marknadsför startsidor {#promoting-launch-pages}
 
 Om du vill befordra sidor utför du följande steg när du redigerar startsidan som du vill befordra:
 
-1. På fliken **Sida** i Sidspark klickar du på **Promote Launch**.
+1. På **Sida** -flik i Sidekick, klicka **Promote Launch**.
 1. Ange vilka sidor som ska befordras:
 
    * (Standard) Om du bara vill befordra den aktuella sidan väljer du **Befordra sidändringar till produktionsversion**.
    * Om du även vill befordra den aktuella sidans underordnade sidor väljer du **Inkludera undersidor**.
    * Om du vill befordra alla sidor i starten väljer du **Befordra fullständig start till produktionsversion**.
 
-1. Om du vill lägga till produktionssidorna i ett arbetsflödespaket väljer du **Lägg till i arbetsflödespaket** och väljer sedan arbetsflödespaketet.
-1. Klicka på **Befordra**.
+1. Om du vill lägga till produktionssidorna i ett arbetsflödespaket väljer du **Lägg till i arbetsflödespaket** och välj sedan arbetsflödespaketet.
+1. Klicka **Befordra**.
 
 ## Bearbeta befordrade sidor med AEM Workflow {#processing-promoted-pages-using-aem-workflow}
 
@@ -49,9 +52,8 @@ Använd arbetsflödesmodeller för att utföra massbearbetning av befordrade sta
 1. När författare befordrar startsidor lagrar de dem i arbetsflödespaketet.
 1. Starta en arbetsflödesmodell med paketet som nyttolast.
 
-Om du vill starta ett arbetsflöde automatiskt när sidor befordras, [konfigurerar du en arbetsflödesstartare](/help/sites-administering/workflows-starting.md#workflows-launchers) för paketnoden.
+Så här startar du ett arbetsflöde automatiskt när sidor befordras: [konfigurera en startfunktion för arbetsflöden](/help/sites-administering/workflows-starting.md#workflows-launchers) för paketnoden.
 
 Du kan t.ex. automatiskt generera begäranden om sidaktivering när författare befordrar startsidor. Konfigurera en startfunktion för arbetsflödet för aktivering av begäran när paketnoden ändras.
 
 ![chlimage_1-136](assets/chlimage_1-136.png)
-

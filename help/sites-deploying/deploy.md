@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 6696c325-d188-41c8-a39f-c8ae7f339fe8
 exl-id: 9a779cde-dfdf-4d70-a452-5e7d12bf3f28
-source-git-commit: 79ff6834acd2bc1105bbea798d946cd7354474d5
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1819'
+source-wordcount: '1855'
 ht-degree: 1%
 
 ---
 
 # Driftsättning och underhåll{#deploying-and-maintaining}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 På den här sidan hittar du:
 
@@ -220,7 +224,7 @@ resulterar i att en publiceringsinstans körs på **`localhost:4503`**.
 
 Du installerar de här två instanserna i
 
-`<aem-install>/author`and
+`<aem-install>/author`och
 
 **`<aem-install>/publish`**
 

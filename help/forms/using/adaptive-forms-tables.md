@@ -1,25 +1,28 @@
 ---
 title: Tabeller i anpassningsbara former
-seo-title: Tabeller i anpassningsbara former
-description: 'Med tabellkomponenten i AEM Forms kan du skapa tabeller i adaptiva formulär som är responsiva för mobila layouter, och som även tillåter användning av XDP-tabellkomponenter. '
-seo-description: 'Med tabellkomponenten i AEM Forms kan du skapa tabeller i adaptiva formulär som är responsiva för mobila layouter, och som även tillåter användning av XDP-tabellkomponenter. '
+seo-title: Tables in adaptive forms
+description: Med tabellkomponenten i AEM Forms kan du skapa tabeller i adaptiva formulär som är responsiva för mobila layouter, och som även tillåter användning av XDP-tabellkomponenter.
+seo-description: The Table component in AEM Forms lets you create tables in adaptive forms that are responsive to mobile layouts, and also allows using XDP table components.
 uuid: 604cd51f-2a47-4410-b414-9cb13fe63713
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: e7d53127-3a0f-4c74-a656-25d9cf969f98
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 3269aab9-ac39-4adc-9a6b-9fe9f4276b29
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2166'
+source-wordcount: '2170'
 ht-degree: 0%
 
 ---
 
-
 # Tabeller i anpassningsbara former {#tables-in-adaptive-forms}
 
-Att använda tabeller är ett effektivt, förenklat och organiserat sätt att presentera komplexa data. Det gör det enkelt för användarna att identifiera information och lägga in data i en ordnad ordning av rader och kolumner. De flesta formulär från finanssektorn och myndigheter kräver stora datatabeller för att skicka siffror och utföra beräkningar.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+Att använda tabeller är ett effektivt, förenklat och organiserat sätt att presentera komplexa data. Det gör det enkelt för användarna att identifiera information och ge indata i en ordnad ordning av rader och kolumner. De flesta formulär från finanssektorn och myndigheter kräver stora datatabeller för att skicka siffror och utföra beräkningar.
 
 AEM Forms tillhandahåller en tabellkomponent i komponentwebbläsaren i sidofältet som gör att du kan skapa tabeller i adaptiva formulär. Några av de viktigaste funktionerna i den är:
 
@@ -39,9 +42,9 @@ Om du vill skapa en tabell drar och släpper du tabellkomponenten från komponen
 
 ![Tabellkomponent i AEM](assets/sidebar-tables.png)
 
-### Om huvud- och brödceller {#about-header-and-body-cells}
+### Om rubrik- och brödceller {#about-header-and-body-cells}
 
-Rubrikcellerna är textfält. Om du vill ändra rubrikens etikett högerklickar du på rubrikcellen och klickar på **Redigera**. Uppdatera etiketten i fältet **Värde** i dialogrutan Redigera och klicka på **OK**.
+Rubrikcellerna är textfält. Om du vill ändra rubrikens etikett högerklickar du på rubrikcellen och klickar på **Redigera**. Uppdatera etiketten i dialogrutan Redigera **Värde** fält och klicka **OK**.
 
 Tabellcellerna är som standard textrutor. Du kan ersätta en innehållscell med andra adaptiva formulärkomponenter som är tillgängliga i sidosparken, till exempel en numerisk ruta, datumväljare eller nedrullningsbar lista.
 
@@ -49,9 +52,9 @@ Den första innehållsraden i följande tabell innehåller till exempel textruta
 
 ![radcellstyper](assets/row-cell-types.png)
 
-Du kan sammanfoga två eller flera innehållsceller genom att markera cellerna som du vill sammanfoga, högerklicka och välja **Sammanfoga**. Du kan även dela en sammanfogad cell genom att högerklicka på den och välja **Dela celler**.
+Du kan sammanfoga två eller flera innehållsceller genom att markera cellerna som du vill sammanfoga, högerklicka och markera **Sammanfoga**. Du kan också dela en sammanfogad cell genom att högerklicka på den och markera **Dela celler**.
 
-### Lägg till, ta bort, flytta rader och kolumner {#add-delete-move-rows-and-columns}
+### Lägga till, ta bort, flytta rader och kolumner {#add-delete-move-rows-and-columns}
 
 Du kan lägga till och ta bort en rad eller kolumn och flytta en rad uppåt och nedåt i en tabell.
 
@@ -73,25 +76,25 @@ I den nedrullningsbara menyn för raden finns även redigeringsåtgärden för a
 
 Gör så här för att ange kolumnbredd för en tabell:
 
-1. På fliken **[!UICONTROL Content]** trycker du på komponenten **[!UICONTROL Table]** och på ikonen Konfigurera (![Konfigurera](assets/configure-icon.svg)).
+1. I **[!UICONTROL Content]** trycker du på **[!UICONTROL Table]** och tryck på Konfigurera (![Konfigurera](assets/configure-icon.svg))ikon.
 
-1. Ange den kommaavgränsade listan med värden i fältet **[!UICONTROL Column Width]** för att ange den proportionella bredden för varje kolumn i tabellen. Om du till exempel anger 2,4,6 som värde i fältet **[!UICONTROL Column Width]** för en tabell som innehåller 3 kolumner, blir kolumnbredden 2/12 för den första kolumnen, 4/12 för den andra kolumnen och 6/12 för den tredje kolumnen. 2/12 som bredd för den första kolumnen avser en sjättedel av tabellbredden. På samma sätt anger 4/12 den andra kolumnbredden som en tredjedel av tabellbredden och 6/12 den tredje kolumnbredden som halva tabellbredden.
+1. Ange en kommaavgränsad lista med värden i **[!UICONTROL Column Width]** -fält för att ange den proportionella bredden för varje kolumn i tabellen. För en tabell som innehåller 3 kolumner anger du till exempel 2,4,6 som värde i **[!UICONTROL Column Width]** resulterar i att kolumnbredden ställs in som 2/12 för den första kolumnen, 4/12 för den andra kolumnen och 6/12 för den tredje kolumnen. 2/12 som bredd för den första kolumnen avser en sjättedel av tabellbredden. På samma sätt anger 4/12 den andra kolumnbredden som en tredjedel av tabellbredden och 6/12 den tredje kolumnbredden som halva tabellbredden.
 
 ### Lägg till tabellbeskrivning {#add-table-description}
 
 Du kan lägga till en beskrivning av tabellen för att förklara hur informationen är organiserad och att skärmläsare kan tolka och läsa upp den. Så här lägger du till beskrivningen:
 
-1. Markera tabellen och tryck på ![cmpr](assets/cmppr.png) för att visa dess egenskaper i sidofältet.
+1. Markera tabellen och tryck på ![cmppr](assets/cmppr.png) om du vill visa dess egenskaper i sidofältet.
 1. Ange en sammanfattning på fliken Tillgänglighet.
-1. Klicka på **Klar**.
+1. Klicka **Klar**.
 
 ## Konfigurera tabellformat {#configure}
 
 Du kan definiera formatet för en tabell med hjälp av stilläget i verktygsfältet på sidan. Utför följande steg för att växla till formateringsläge och redigera tabellformatet
 
-1. Tryck på ![canvas-drop-down](assets/canvas-drop-down.png) > **Style** i sidverktygsfältet före förhandsvisning.
+1. Tryck på innan du förhandsgranskar i sidverktygsfältet ![canvas-drop-down](assets/canvas-drop-down.png) > **Stil**.
 
-1. Markera tabellen i sidlisten och tryck på redigeringsknappen ![edit-button](assets/edit-button.png).
+1. Markera en tabell i sidlisten och tryck på redigeringsknappen ![edit-button](assets/edit-button.png).
 
    Du kan se formategenskaperna i sidofältet.
 
@@ -101,15 +104,15 @@ Du kan definiera formatet för en tabell med hjälp av stilläget i verktygsfäl
 >
 >Du kan ändra färgtemat för huvud- och innehållsrader genom att ändra värdena för LESS-variabler. Mer information finns i [Teman i AEM Forms](/help/forms/using/themes.md).
 
-## Lägg till eller ta bort en rad dynamiskt {#add-or-delete-a-row-dynamically}
+## Lägga till eller ta bort en rad dynamiskt {#add-or-delete-a-row-dynamically}
 
-Tabeller har färdiga funktioner för att dynamiskt lägga till eller ta bort rader vid körning.
+Tabeller har körklara funktioner för att dynamiskt lägga till eller ta bort rader vid körning.
 
-1. Markera en tabellrad och tryck på ![cmpr](assets/cmppr.png).
+1. Markera en tabellrad och tryck på ![cmppr](assets/cmppr.png).
 1. På fliken Upprepa inställningar anger du minsta och högsta antal rader för att begränsa antalet rader i tabellen.
-1. Klicka på **Klar**.
+1. Klicka **Klar**.
 
-Under körning visas knapparna **`+`** och *`-`* för att lägga till eller ta bort en rad.
+Under körningen visas **`+`** och *`-`* för att lägga till eller ta bort en rad.
 
 ![add-delete-rows-dynamically](assets/add-delete-rows-dynamically.png)
 
@@ -124,7 +127,7 @@ Tabeller i anpassningsbara formulär gör att du kan skriva uttryck i JavaScript
 Tabellerna och raderna har endast stöd för synlighetsuttryck som styr synligheten baserat på värdet som returneras av ett uttryck, men cellerna har stöd för följande uttryck:
 
 * **Initieringsskript:** för att utföra en åtgärd vid initiering av ett fält.
-* **Värde implementera skript:** för att ändra komponenterna i ett formulär efter att värdet för ett fält har ändrats.
+* **Värde för implementeringsskript:** om du vill ändra komponenterna i ett formulär efter att värdet för ett fält har ändrats.
 
 >[!NOTE]
 >
@@ -137,7 +140,7 @@ Tabellerna och raderna har endast stöd för synlighetsuttryck som styr synlighe
 
 Synlighetsuttrycket för en tabell eller rad kan definieras på fliken Panelegenskaper i motsvarande dialogruta för redigeringskomponenter. Uttrycken för en cell kan definieras på fliken Skript i dialogrutan Redigera komponent.
 
-En fullständig lista över adaptiva formulärklasser, händelser, objekt och offentliga API:er finns i [API-referens för JavaScript-bibliotek för adaptiva formulär](https://helpx.adobe.com/aem-forms/6/javascript-api/index.html).
+En fullständig lista över adaptiva formulärklasser, händelser, objekt och offentliga API:er finns på [API-referens för JavaScript-bibliotek för adaptiva formulär](https://helpx.adobe.com/aem-forms/6/javascript-api/index.html).
 
 ## Mobillayouter {#mobile-layouts}
 
@@ -149,11 +152,11 @@ Du kan konfigurera en mobil layout för en tabell på fliken Format i dialogruta
 
 I sidhuvudena i den vänstra layouten flyttas tabellhuvudet till vänster och bara en cell visas mot en rubrik. Varje rad i den här layouten visas som ett distinkt avsnitt. I följande bilder jämförs en tabell på en dator med den på en mobil enhet.
 
-![](assets/desktopview.png)
-**skrivbordsvyBild:** *Skrivbordsvy för en tabell med sidhuvud i vänsterlayout*
+![skrivbordsöversikt](assets/desktopview.png)
+**Bild:** *Skrivbordsvy av en tabell med sidhuvud i den vänstra layouten*
 
-![](assets/headersontheleft.png)
-**headersonthelleftFigure:** *Mobilvy för en tabell med sidhuvud i vänsterlayout*
+![headersontheleft](assets/headersontheleft.png)
+**Bild:** *Mobil vy av en tabell med sidhuvud i vänster layout*
 
 ### Komprimerbar kolumnlayout {#collapsible-columns-layout}
 
@@ -165,11 +168,11 @@ I kolumnlayouten Komprimerbar komprimeras kolumnerna i tabellen så att en eller
 
 Följande bilder jämför hur en tabell ser ut på en enhet med komprimerade och expanderade kolumner.
 
-![komprimerad-](assets/collapsed-column.png)
-**kolumnFigur:** *Komprimerade kolumner i en tabell där endast två kolumner visas på en mobil enhet*
+![komprimerad kolumn](assets/collapsed-column.png)
+**Bild:** *Komprimerade kolumner i en tabell där bara två kolumner visas på en mobil enhet*
 
-![collapsible_](assets/collapsible_column.png)
-**columnFigure:** *Expanded column of a table on a mobile device*
+![collapsible_column](assets/collapsible_column.png)
+**Bild:** *Utökad kolumn i en tabell på en mobil enhet*
 
 ## Sammanfoga data i en tabell {#merge-data-in-a-table}
 
@@ -179,13 +182,13 @@ Låt oss ta ett exempel på följande sammanfattande tabell över banktransaktio
 
 ![data-merge-table](assets/data-merge-table.png)
 
-I det här exemplet är elementnamnegenskapen för:
+I det här exemplet används elementnamnsegenskapen för:
 
 * raden är **Rad1**
 * innehållscellen under transaktionsdatumet är **tableItem1**
 * innehållscellen under Beskrivning är **tableItem2**
-* innehållscellen under transaktionstypen är **typ**
-* innehållscellen under Belopp i USD är **tableItem3**
+* innehållscellen under Transaktionstypen är **type**
+* den cell under Belopp i USD är **tableItem3**
 
 XML-filen som innehåller data i följande format:
 
@@ -245,15 +248,15 @@ XML-filen som innehåller data i följande format:
 </afData>
 ```
 
-I XML-exempelkoden definieras data för en rad med `<Row1>`-taggarna, som är elementnamnet för raden i tabellen. I taggen `<Row1>` definieras data för varje cell i taggen för elementnamnet, till exempel `<tableItem1>`, `<tableItem2>`, `<tableItem3>` och `<type>`.
+I XML-exemplet definieras data för en rad av `<Row1>` -taggar, som är elementnamnet för raden i tabellen. I `<Row1>` -taggen definieras data för varje cell i -taggen för elementnamnet, till exempel `<tableItem1>`, `<tableItem2>`, `<tableItem3>`och `<type>`.
 
-Om du vill sammanfoga dessa data med tabellen vid körning måste vi peka det adaptiva formuläret som innehåller tabellen mot den absoluta XML-platsen med wcmmode inaktiverat. Om det adaptiva formuläret till exempel finns på *http://localhost:4502/myForms/bankTransaction.html* och XML-datafilen sparas på *C:/myTransactions/bankSummary.xml* kan du visa tabellen med data på följande URL:
+Om du vill sammanfoga dessa data med tabellen vid körning måste vi peka det adaptiva formuläret som innehåller tabellen mot den absoluta XML-platsen med wcmmode inaktiverat. Om det adaptiva formuläret till exempel är *http://localhost:4502/myForms/bankTransaction.html* och XML-filen sparas på *C:/myTransactions/bankSummary.xml* kan du visa tabellen med data på följande URL:
 
 *http://localhost:4502/myForms/bankTransaction.html?dataRef=file:/// C:/myTransactions/bankSummary.xml&amp;wcmmode=disabled*
 
 ![datasammanfogad tabell](assets/data-merged-table.png)
 
-## Använd XDP-komponenter och XSD-komplexa typer {#use-xdp-components-and-xsd-complex-types}
+## Använd XDP-komponenter och komplexa XSD-typer {#use-xdp-components-and-xsd-complex-types}
 
 Om du har skapat ett adaptivt formulär baserat på en XFA-formulärmall är XFA-elementen tillgängliga på fliken Datamodell AEM Content Finder. Du kan dra och släppa dessa XFA-element, inklusive tabeller, i det anpassningsbara formuläret.
 
@@ -276,7 +279,6 @@ Dessutom kan du dra och släppa en grupp XSD-element med komplex typ för att sk
 ## Viktiga överväganden {#key-considerations}
 
 * Om du flyttar rader uppåt och nedåt när du redigerar en XSD-baserad tabell, visas en del dataförluster från tabellrader i den data-XML som genereras när formuläret skickas.
-* Varje tabellcell i standardtabellen har ett fördefinierat elementnamn kopplat till sig. Om du lägger till en annan tabell i det adaptiva formuläret får standardcellerna i den nya tabellen samma elementnamn som i den första tabellen. I sådana fall kommer de data som genereras när formuläret skickas att innehålla data i standardcellerna i endast en av tabellerna. Se därför till att du byter namn på elementnamnen för standardcellerna för brödtext så att de är unika i alla tabeller och undvika dataförlust.
+* Varje tabellcell i standardtabellen har ett fördefinierat elementnamn kopplat till sig. Om du lägger till en annan tabell i det adaptiva formuläret får standardcellerna i den nya tabellen samma elementnamn som i den första tabellen. I sådana fall kommer de data som genereras när formuläret skickas endast att innehålla data i standardcellerna för en av tabellerna. Se därför till att du byter namn på elementnamnen för standardcellerna för brödtext så att de är unika i alla tabeller och undvika dataförlust.
 
    Observera att detta endast gäller för standardcellerna. Om du lägger till fler rader eller kolumner i en tabell genereras unika elementnamn automatiskt för brödtextceller som inte är standard.
-

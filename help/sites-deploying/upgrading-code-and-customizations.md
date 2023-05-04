@@ -1,8 +1,8 @@
 ---
 title: Uppgradera kod och anpassningar
-seo-title: Uppgradera kod och anpassningar
+seo-title: Upgrading Code and Customizations
 description: Läs mer om hur du uppgraderar anpassad kod i AEM.
-seo-description: Läs mer om hur du uppgraderar anpassad kod i AEM.
+seo-description: Learn more about upgrading custom code in AEM.
 uuid: d4b6717c-41da-4dcc-b85c-51842192ca8d
 contentOwner: sarchiz
 topic-tags: upgrading
@@ -11,16 +11,19 @@ content-type: reference
 discoiquuid: ba8efc24-a34c-477b-8c6d-6e8f893eb999
 targetaudience: target-audience upgrader
 feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: ed67e664-3be0-4337-85bd-cd042915b021
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2227'
+source-wordcount: '2250'
 ht-degree: 0%
 
 ---
 
+# Uppgradera kod och anpassningar{#upgrading-code-and-customizations}
 
-# Uppgraderar kod och anpassningar{#upgrading-code-and-customizations}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 När man planerar en uppgradering måste man undersöka och åtgärda följande områden i en implementering.
 
@@ -31,20 +34,20 @@ När man planerar en uppgradering måste man undersöka och åtgärda följande 
 
 ## Översikt {#overview}
 
-1. **Mönsteravkännare**  - Kör mönsteravkännaren enligt beskrivningen i uppgraderingsplaneringen och beskrivs i detalj i  [den här ](/help/sites-deploying/pattern-detector.md) sidan för att få en mönsteravkännarrapport som innehåller mer information om områden som behöver åtgärdas utöver de otillgängliga API:erna/paketen i målversionen av AEM. Rapporten Mönsteridentifiering bör ge dig en indikation på eventuella inkompatibiliteter i koden, om det inte finns någon sådan, så är distributionen redan 6.4-kompatibel, du kan fortfarande välja att göra ny utveckling för att använda 6.4-funktionalitet, men du behöver den inte bara för att bibehålla kompatibiliteten. Om inkompatibiliteter rapporteras kan du välja att antingen a) köra i kompatibilitetsläge och skjuta upp utvecklingen för nya 6.4-funktioner eller kompatibilitet, b) välja att göra utvecklingen efter uppgraderingen och gå vidare till steg 2. Mer information finns i [Bakåtkompatibilitet i AEM 6.4](/help/sites-deploying/backward-compatibility.md).
+1. **Mönsteravkännare** - Kör mönsteravkännaren enligt beskrivningen i uppgraderingsplaneringen och beskrivs i detalj i [den här sidan](/help/sites-deploying/pattern-detector.md) för att få en mönsterdetektorrapport som innehåller mer information om områden som behöver åtgärdas utöver de otillgängliga API:erna/paketen i målversionen av AEM. Rapporten Mönsteridentifiering bör ge dig en indikation på eventuella inkompatibiliteter i koden, om det inte finns någon sådan, så är distributionen redan 6.4-kompatibel, du kan fortfarande välja att göra ny utveckling för att använda 6.4-funktionalitet, men du behöver den inte bara för att bibehålla kompatibiliteten. Om inkompatibiliteter rapporteras kan du välja att antingen a) köra i kompatibilitetsläge och skjuta upp utvecklingen för nya 6.4-funktioner eller kompatibilitet, b) välja att göra utvecklingen efter uppgraderingen och gå vidare till steg 2. Se [Bakåtkompatibilitet i AEM 6.4](/help/sites-deploying/backward-compatibility.md) för mer information.
 
 1. **Utveckla kodbas för 6.4** - Skapa en dedikerad gren eller databas för kodbasen för målversionen. Använd information från Kompatibilitet före uppgradering för att planera områden med kod att uppdatera.
-1. **Kompilera med 6.4 Uber jar**  - Uppdatera källkodens POM till 6.4 uber jar och kompilera koden mot detta.
-1. **Uppdatera AEM Anpassningar**  - Alla anpassningar eller tillägg som ska AEM uppdateras/valideras så att de fungerar i 6.4 och läggs till i 6.4-kodbasen. Innehåller användargränssnittssökning i Forms, anpassning av resurser, allt som använder /mnt/overlay
+1. **Kompilera med 6.4 Uber jar** - Uppdatera kodbas-POM till 6.4 uber jar och kompilera kod mot detta.
+1. **Uppdatera AEM** - Anpassningar eller tillägg till AEM ska uppdateras/valideras så att de fungerar i 6.4 och läggas till i 6.4-kodbasen. Innehåller användargränssnittssökning i Forms, anpassning av resurser, allt som använder /mnt/overlay
 
-1. **Driftsätt till 6.4-miljö**  - En ren instans av AEM 6.4 (Författare + Publicera) bör ställas upp i en Dev/QA-miljö. Uppdaterad kodbas och ett representativt urval av innehåll (från aktuell produktion) bör distribueras.
-1. **QA-validering och felkorrigering**  - QA ska validera programmet både i Author- och Publish-instanser av 6.4. Alla buggar som hittas ska vara fasta och implementerade i 6.4-kodbasen. Upprepa Dev-Cycle tills alla fel är åtgärdade.
+1. **Distribuera till 6.4-miljö** - En ren instans av AEM 6.4 (Författare + Publicera) ska ställas upp i en Dev/QA-miljö. Uppdaterad kodbas och ett representativt urval av innehåll (från aktuell produktion) bör distribueras.
+1. **QA-validering och felkorrigering** - QA bör validera programmet både i Author- och Publish-instanser av 6.4. Alla buggar som hittas ska vara fasta och implementerade i 6.4-kodbasen. Upprepa Dev-Cycle tills alla fel är åtgärdade.
 
 Innan du fortsätter med en uppgradering bör du ha en stabil programkodbas som har testats noggrant mot målversionen av AEM. Baserat på observationer som gjorts i testningen kan det finnas sätt att optimera den anpassade koden. Detta kan innefatta omfaktorisering av koden för att undvika att gå igenom databasen, anpassad indexering för att optimera sökningen eller användning av osorterade noder i JCR, bland annat.
 
-Förutom möjligheten att uppgradera kodbasen och anpassa den till den nya AEM-versionen, hjälper 6.4 dig även att hantera dina anpassningar effektivare med funktionen Bakåtkompatibilitet som beskrivs på [den här sidan](/help/sites-deploying/backward-compatibility.md).
+Förutom möjligheten att uppgradera din kodbas och anpassa den så att den fungerar med den nya AEM-versionen, hjälper 6.4 dig även att hantera dina anpassningar effektivare med funktionen Bakåtkompatibilitet som beskrivs på [den här sidan](/help/sites-deploying/backward-compatibility.md).
 
-Som vi nämnt ovan och som visas i diagrammet nedan kan du genom att köra [mönsteravkännaren](/help/sites-deploying/pattern-detector.md) i det första steget utvärdera den övergripande komplexiteten i uppgraderingen och om du vill köra i kompatibilitetsläge eller uppdatera dina anpassningar till alla nya AEM 6.4-funktioner. Mer information finns på sidan [Bakåtkompatibilitet i AEM 6.4](/help/sites-deploying/backward-compatibility.md).
+Som nämnts ovan och visas i diagrammet nedan, kör [Mönsteravkännare](/help/sites-deploying/pattern-detector.md) i det första steget får du hjälp att bedöma den övergripande komplexiteten hos uppgraderingen och om du vill köra i kompatibilitetsläge eller uppdatera dina anpassningar så att de använder alla nya AEM 6.4-funktioner. Se [Bakåtkompatibilitet i AEM 6.4](/help/sites-deploying/backward-compatibility.md) sida för mer information.
 [ ![screen_shot_2018-03-30at175257](assets/screen_shot_2018-03-30at175257.png)](assets/upgrade-code-base-highlevel.png)
 
 ## Uppgradera kodbasen {#upgrade-code-base}
@@ -67,7 +70,7 @@ AEM Uber jar innehåller alla AEM-API:er som ett enda beroende i Maven-projektet
 </dependency>
 ```
 
-### Använd den administrativa resurslösaren {#phase-out-use-of-administrative-resource-resolver} fasas ut
+### Avveckla användningen av den administrativa resurslösaren {#phase-out-use-of-administrative-resource-resolver}
 
 Användning av en administrativ session via `SlingRepository.loginAdministrative()` och `ResourceResolverFactory.getAdministrativeResourceResolver()` var mycket vanligt i kodbaser före AEM 6.0. Dessa metoder har tagits bort av säkerhetsskäl eftersom de ger för stor åtkomstnivå. [I framtida versioner av Sling kommer dessa metoder att tas bort](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication). Vi rekommenderar att du omfaktoriserar kod så att du kan använda tjänstanvändare i stället. Mer information om tjänstanvändare och [hur du fasar ut administrativa sessioner finns här](/help/sites-administering/security-service-users.md#how-to-phase-out-admin-sessions).
 
@@ -81,7 +84,7 @@ Det finns flera verktyg för analys och granskning av frågeprestanda:
 
 * [Diagnostikverktyg för åtgärder - Frågeprestanda](/help/sites-administering/operations-dashboard.md#diagnosis-tools)
 
-* [Eak Utils](https://oakutils.appspot.com/). Detta är ett verktyg med öppen källkod som inte underhålls av Adobe.
+* [Oak Utils](https://oakutils.appspot.com/). Detta är ett verktyg med öppen källkod som inte underhålls av Adobe.
 
 ### Klassisk gränssnittsredigering {#classic-ui-authoring}
 
@@ -89,15 +92,15 @@ Klassisk gränssnittsredigering är fortfarande tillgängligt i AEM 6.4, men är
 
 >[!NOTE]
 >
->För att hjälpa dig att gå från det klassiska användargränssnittet och dra nytta av den senaste AEM tekniken bör du överväga att använda [AEM Moderniseringsverktyg](/help/sites-developing/modernization-tools.md) för att underlätta migreringen.
+>För att hjälpa dig att gå från det klassiska användargränssnittet och dra nytta av den senaste AEM tekniken bör du överväga att utnyttja [AEM](/help/sites-developing/modernization-tools.md) för att underlätta migreringen.
 
 ## Justera med 6.4-databasstruktur {#align-repository-structure}
 
 För att underlätta uppgraderingarna och säkerställa att konfigurationerna inte skrivs över under en uppgradering har databasen omstrukturerats i 6.4 för att skilja innehåll från konfiguration.
 
-Därför måste ett antal inställningar flyttas så att de inte längre finns under `/etc`, vilket tidigare varit fallet. För att se över alla omstruktureringsproblem i databasen som måste granskas och anpassas i uppdateringen till AEM 6.4, se [Repository-omstrukturering i AEM 6.4](/help/sites-deploying/repository-restructuring.md).
+Därför måste ett antal inställningar flyttas så att de inte längre finns under `/etc` som tidigare varit fallet. För att se över alla omstruktureringsproblem i databasen som måste granskas och anpassas i den uppdaterade versionen till AEM 6.4, se [Omstrukturering av lager i AEM 6.4](/help/sites-deploying/repository-restructuring.md).
 
-## AEM{#aem-customizations}
+## AEM  {#aem-customizations}
 
 Alla anpassningar av AEM redigeringsmiljö i källversionen av AEM måste identifieras. När du har identifierat dem rekommenderar vi att du lagrar alla anpassningar i versionskontrollen eller åtminstone säkerhetskopierar dem som en del av ett innehållspaket. Alla anpassningar bör driftsättas och valideras i en QA- eller mellanlagringsmiljö som kör målversionen av AEM innan en produktionsuppgradering.
 
@@ -107,7 +110,7 @@ Det är vanligt att utöka AEM genom att lägga över noder och/eller filer unde
 
 ### Uppgraderar Forms för anpassad sökning {#upgrading-custom-search-forms}
 
-Anpassade sökfaktorer kräver vissa manuella justeringar efter uppgraderingen för att de ska fungera korrekt. Mer information finns i [Uppgradera Forms för anpassad sökning](/help/sites-deploying/upgrading-custom-search-forms.md).
+Anpassade sökfaktorer kräver vissa manuella justeringar efter uppgraderingen för att de ska fungera korrekt. Mer information finns i [Uppgraderar Forms för anpassad sökning](/help/sites-deploying/upgrading-custom-search-forms.md).
 
 ### Användargränssnittsanpassningar för resurser {#assets-ui-customizations}
 
@@ -119,7 +122,7 @@ Instanser som har anpassade Assets-distributioner måste förberedas för uppgra
 
 Du kan förbereda anpassningar av resursgränssnittet genom att göra följande:
 
-1. Öppna CRXDE Lite på den instans som ska uppgraderas genom att gå till `https://server:port/crx/de/index.jsp`
+1. Öppna CRXDE Lite genom att gå till `https://server:port/crx/de/index.jsp`
 
 1. Gå till följande nod:
 
@@ -127,29 +130,29 @@ Du kan förbereda anpassningar av resursgränssnittet genom att göra följande:
 
 1. Byt namn på innehållsnoden till **content_backup**. Du kan göra detta genom att högerklicka på utforskarrutan till vänster i fönstret och välja **Byt namn**.
 
-1. När noden har bytt namn skapar du en ny nod med namnet `/apps/dam` under **content** och anger dess nodtyp till **sling:Folder**.
+1. Skapa en ny nod med namnet content under när noden har bytt namn `/apps/dam` namngiven **innehåll** och ange dess nodtyp till **sling:mapp**.
 
 1. Flytta alla underordnade noder för **content_backup** till den nya innehållsnoden. Du kan göra detta genom att högerklicka på varje underordnad nod i utforskarrutan och välja **Flytta**.
 
-1. Ta bort noden **content_backup**.
+1. Ta bort **content_backup** nod.
 
-1. De uppdaterade noderna under `/apps/dam` med rätt nodtyp `sling:Folder` bör helst sparas i versionskontrollen och distribueras med kodbasen eller åtminstone säkerhetskopieras som innehållspaket.
+1. De uppdaterade noderna under `/apps/dam` med rätt nodtyp för `sling:Folder` bör helst sparas i versionskontrollen och distribueras med kodbasen eller åtminstone säkerhetskopieras som innehållspaket.
 
 ### Genererar resurs-ID:n för befintliga resurser {#generating-asset-ids-for-existing-assets}
 
-Om du vill generera resurs-ID:n för befintliga resurser ska du uppgradera resurserna när du uppgraderar din AEM så att AEM 6.4 körs. Detta krävs för att aktivera funktionen [Resursinsikter](/help/assets/touch-ui-asset-insights.md). Mer information finns i [Lägga till inbäddad kod](/help/assets/touch-ui-using-page-tracker.md#adding-embed-code).
+Om du vill generera resurs-ID:n för befintliga resurser ska du uppgradera resurserna när du uppgraderar din AEM så att AEM 6.4 körs. Detta krävs för att aktivera [Funktionen för resursinsikter](/help/assets/touch-ui-asset-insights.md). Mer information finns i [Lägga till inbäddningskod](/help/assets/touch-ui-using-page-tracker.md#adding-embed-code).
 
-Om du vill uppgradera resurser konfigurerar du paketet Associate Asset IDs i JMX-konsolen. Beroende på antalet resurser i databasen kan det ta lång tid att `migrateAllAssets`. Våra interna tester beräknar cirka en timme för 125 000 tillgångar på TjärMK.
+Om du vill uppgradera resurser konfigurerar du paketet Associate Asset IDs i JMX-konsolen. Beroende på antalet resurser i databasen, `migrateAllAssets` kan ta lång tid. Våra interna tester beräknar cirka en timme för 125 000 tillgångar på TjärMK.
 
 ![1487758945977](assets/1487758945977.png)
 
-Om du behöver resurs-ID:n för en delmängd av hela dina resurser använder du API:t `migrateAssetsAtPath`.
+Om du behöver resurs-ID:n för en delmängd av dina hela resurser använder du `migrateAssetsAtPath` API.
 
-Använd API:t `migrateAllAssets()` för alla andra syften.
+Använd `migrateAllAssets()` API.
 
 ### Anpassa InDesign-skript {#indesign-script-customizations}
 
-Adobe rekommenderar att du placerar egna skript på `/apps/settings/dam/indesign/scripts` plats. Mer information om anpassning av InDesign Script finns [här](/help/assets/indesign.md#configuring-the-aem-assets-workflow).
+Adobe rekommenderar att du skickar egna skript på `/apps/settings/dam/indesign/scripts` plats. Mer information om anpassning av InDesign Script finns [här](/help/assets/indesign.md#configuring-the-aem-assets-workflow).
 
 ### Återställer ContextHub-konfigurationer {#recovering-contexthub-configurations}
 
@@ -165,21 +168,21 @@ Det är vanligt att uppdatera ändringar som görs direkt i arbetsflöden för a
 >
 >Den här proceduren krävs endast för webbplatsuppgraderingar som använder Redigerbara mallar från AEM 6.2
 
-Strukturen för redigerbara mallar har ändrats mellan AEM 6.2 och 6.3. Om du uppgraderar från 6.2 eller tidigare och om ditt webbplatsinnehåll byggs med redigerbara mallar måste du använda [rensningsverktyget för responsiva noder](https://github.com/Adobe-Marketing-Cloud/aem-sites-template-migration). Verktyget ska köras **_efter_** en uppgradering för att rensa upp innehållet. Den måste köras på både författarnivå och publiceringsnivå.
+Strukturen för redigerbara mallar har ändrats mellan AEM 6.2 och 6.3. Om du uppgraderar från 6.2 eller tidigare och om webbplatsinnehållet byggs med redigerbara mallar måste du använda [Verktyget Rensa responsiva noder](https://github.com/Adobe-Marketing-Cloud/aem-sites-template-migration). Verktyget ska köras **_efter_** en uppgradering för att rensa upp i materialet. Den måste köras på både författarnivå och publiceringsnivå.
 
 ### Ändringar av CUG-implementering {#cug-implementation-changes}
 
 Implementeringen av stängda användargrupper har ändrats avsevärt för att åtgärda prestandabegränsningar och skalbarhetsbegränsningar i tidigare versioner av AEM. Den tidigare versionen av CUG har tagits bort i 6.3 och den nya implementeringen stöds bara i Touch-gränssnittet. Om du uppgraderar från 6.2 eller tidigare finns instruktioner för att migrera till den nya CUG-implementeringen [här](/help/sites-administering/closed-user-groups.md#upgrade-cug).
 
-## Testprocedur {#testing-procedure}
+## Testförfarande {#testing-procedure}
 
 En omfattande testplan bör utarbetas för testning av uppgraderingar. Testning av den uppgraderade kodbasen och programmet måste göras i lägre miljöer först. Alla buggar som hittas bör fixeras på ett iterativt sätt tills kodbasen är stabil, men endast då bör högre nivåmiljöer uppgraderas.
 
 ### Testa uppgraderingsproceduren {#testing-the-upgrade-procedure}
 
-Uppgraderingsproceduren som beskrivs här bör testas i Dev- och QA-miljöer så som den beskrivs i din anpassade körbok (se [Planera din uppgradering](/help/sites-deploying/upgrade-planning.md)). Uppgraderingsproceduren bör upprepas tills alla steg har dokumenterats i uppgraderingsboken och uppgraderingsprocessen är smidig.
+Uppgraderingsproceduren som beskrivs här bör testas i Dev- och QA-miljöer enligt din anpassade körningsbok (se [Planera din uppgradering](/help/sites-deploying/upgrade-planning.md)). Uppgraderingsproceduren bör upprepas tills alla steg har dokumenterats i uppgraderingsboken och uppgraderingsprocessen är smidig.
 
-### Implementeringstestområden {#implementation-test-areas-}
+### Implementeringstestområden  {#implementation-test-areas-}
 
 Nedan visas viktiga delar av AEM implementering som ska ingå i testplanen när miljön har uppgraderats och den uppgraderade kodbasen har distribuerats.
 
@@ -191,7 +194,7 @@ Nedan visas viktiga delar av AEM implementering som ska ingå i testplanen när 
   </tr> 
   <tr> 
    <td>Publicerade webbplatser</td> 
-   <td>Testa AEM implementering och associerad kod på publiceringsnivån<br /> via dispatchern. Bör innehålla kriterier för siduppdatering och<br /> cacheogiltigförklaring.</td> 
+   <td>Testa AEM implementering och associerad kod på publiceringsnivån<br /> genom dispatchern. Bör innehålla kriterier för siduppdateringar och<br /> cacheogiltigförklaring.</td> 
   </tr> 
   <tr> 
    <td>Redigering</td> 
@@ -207,7 +210,7 @@ Nedan visas viktiga delar av AEM implementering som ska ingå i testplanen när 
   </tr> 
   <tr> 
    <td>Autentisering, säkerhet och behörigheter</td> 
-   <td>Alla autentiseringsmekanismer som LDAP/SAML bör valideras.<br /> Behörigheter och grupper ska testas både i författare och <br /> publiceringsnivåer.</td> 
+   <td>Alla autentiseringsmekanismer som LDAP/SAML bör valideras.<br /> Behörigheter och grupper ska testas både för författare och publicering<br /> lager.</td> 
   </tr> 
   <tr> 
    <td>Frågor</td> 

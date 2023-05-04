@@ -1,24 +1,27 @@
 ---
 title: Stöd för inkapslad token
-seo-title: Stöd för inkapslad token
+seo-title: Encapsulated Token Support
 description: Läs mer om stödet för Encapsulated Token i AEM.
-seo-description: Läs mer om stödet för Encapsulated Token i AEM.
+seo-description: Learn about the Encapsulated Token support in AEM.
 uuid: a7c6f269-bb5a-49ba-abef-ea029202ab6d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: 2c263c0d-2521-49df-88ba-f304a25af8ab
-translation-type: tm+mt
-source-git-commit: 770cf9a616b44312e80ee9fbe3cb8924aa5297de
+exl-id: 2339657a-20ac-42af-96fb-aebafd5044c7
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '869'
 ht-degree: 0%
 
 ---
 
-
 # Stöd för inkapslad token{#encapsulated-token-support}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Introduktion {#introduction}
 
@@ -52,16 +55,14 @@ Du kan se hur detta fungerar i en geografiskt distribuerad distribution med Mong
 >
 >Om en ny användare till exempel skapas på publiceringsinstans nummer ett på grund av hur den inkapslade token fungerar, kommer den att autentiseras korrekt på publiceringsinstans nummer två. Om användaren inte finns i den andra publiceringsinstansen kommer begäran fortfarande inte att lyckas.
 
-
-## Konfigurerar den inkapslade token {#configuring-the-encapsulated-token}
+## Konfigurera den inkapslade token {#configuring-the-encapsulated-token}
 
 >[!NOTE]
 >Alla autentiseringshanterare som synkroniserar användare och förlitar sig på tokenautentisering (som SAML och OAuth) fungerar bara med inkapslade tokens om:
 >
 >* Anteckningssessioner är aktiverade, eller
-   >
-   >
-* Användare skapas redan i AEM när synkroniseringen startar. Detta innebär att inkapslade token inte stöds i situationer där hanterarna **skapar**-användare under synkroniseringsprocessen.
+>
+>* Användare skapas redan i AEM när synkroniseringen startar. Detta innebär att inkapslade token inte stöds i situationer där hanterarna **skapa** -användare under synkroniseringsprocessen.
 
 
 Det finns några saker du behöver tänka på när du konfigurerar den inkapslade token:
@@ -71,18 +72,18 @@ Det finns några saker du behöver tänka på när du konfigurerar den inkapslad
 
 ### Replikerar HMAC-nyckeln {#replicating-the-hmac-key}
 
-HMAC-nyckeln finns som en binär egenskap på `/etc/key` i databasen. Du kan hämta den separat genom att trycka på länken **view** bredvid den:
+HMAC-nyckeln finns som en binär egenskap för `/etc/key` i databasen. Du kan ladda ned den separat genom att trycka på **visa** länk intill den:
 
 ![chlimage_1-35](assets/chlimage_1-35.png)
 
 För att replikera nyckeln mellan instanser måste du:
 
 1. få åtkomst till AEM, vanligtvis en författarinstans, som innehåller det nyckelmaterial som ska kopieras,
-1. Leta reda på `com.adobe.granite.crypto.file`-paketet i det lokala filsystemet. Under den här sökvägen:
+1. Leta reda på `com.adobe.granite.crypto.file` i det lokala filsystemet. Under den här sökvägen:
 
    * &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21
 
-   `bundle.info`-filen i varje mapp identifierar paketnamnet.
+   The `bundle.info` filen i varje mapp identifierar paketnamnet.
 
 1. Navigera till datamappen. Till exempel:
 
@@ -94,15 +95,14 @@ För att replikera nyckeln mellan instanser måste du:
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
 1. Klistra in de två filer som du kopierade tidigare.
-1. [Uppdatera Crypto ](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle) Bundleom målinstansen redan körs.
+1. [Uppdatera krypteringspaketet](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle) om målinstansen redan körs.
 
 1. Upprepa stegen ovan för alla förekomster som du vill replikera nyckeln till.
 
-#### Aktiverar den inkapslade token {#enabling-the-encapsulated-token}
+#### Aktivera den inkapslade token {#enabling-the-encapsulated-token}
 
 När HMAC-nyckeln har replikerats kan du aktivera den inkapslade token via webbkonsolen:
 
-1. Peka webbläsaren på `https://serveraddress:port/system/console/configMgr`
-1. Leta efter en post med namnet **Day CRX Token Authentication Handler** och klicka på den.
-1. I följande fönster: markera rutan **Aktivera inkapslat tokenstöd** och tryck på **Spara**.
-
+1. Peka webbläsaren till `https://serveraddress:port/system/console/configMgr`
+1. Leta efter en post som anropas **Autentiseringshanterare för CRX-token för dag** och klicka på den.
+1. I följande fönster: **Aktivera stöd för inkapslad token** och tryck **Spara**.

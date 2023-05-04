@@ -1,24 +1,27 @@
 ---
 title: Skapar artikelexportkonfiguration
-seo-title: Skapar artikelexportkonfiguration
+seo-title: Creating Article Export Configuration
 description: Följ den här sidan om du vill veta mer om hur du exporterar innehåll från Adobe Experience Manager (AEM) för överföring till AEM Mobile.
-seo-description: Följ den här sidan om du vill veta mer om hur du exporterar innehåll från Adobe Experience Manager (AEM) för överföring till AEM Mobile.
+seo-description: Follow this page to learn about exporting content from Adobe Experience Manager (AEM) for upload to AEM Mobile.
 uuid: 089bc15b-669e-4623-bdbb-fd9abf46e098
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: bc681589-5d46-44cd-888d-b0722a2fd006
-translation-type: tm+mt
-source-git-commit: 622e613d556acda7cd98d4b3d20a20133756fd92
+exl-id: d6e8412d-09d4-4cac-a691-71703ebaa374
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '335'
 ht-degree: 0%
 
 ---
 
-
 # Skapar artikelexportkonfiguration{#creating-article-export-configuration}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
@@ -26,9 +29,9 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->**Krav**:
+>**Förutsättning**:
 >
->Innan du får veta mer om hur du skapar och ändrar delade resurser kan du läsa [Innehållssynkronisering](/help/mobile/mobile-ondemand-contentsync.md) för att förstå de grundläggande begreppen.
+>Läs mer om hur du skapar och ändrar delade resurser i [Innehållssynkronisering](/help/mobile/mobile-ondemand-contentsync.md) för att förstå de grundläggande begreppen.
 
 AEM Mobile-användare använder Innehållssynkronisering för att exportera live-innehåll till statiskt innehåll för användning i mobilappar, och den här exporten sker när innehåll överförs till Mobile On-Demand Services från AEM Mobile.
 
@@ -38,9 +41,9 @@ I följande resurser beskrivs hur du exporterar innehåll från Adobe Experience
 
 Artiklar har innehåll som behöver exporteras och överföras. En del av det här innehållet kan delas mellan artiklar.
 
-Använd [ContentSync](/help/mobile/mobile-ondemand-contentsync.md) för att samla ihop innehållet och skapa ett ***paket med delade resurser***.
+Använd [ContentSync](/help/mobile/mobile-ondemand-contentsync.md) för att samla ihop innehåll och skapa en ***Delade resurser*** paket.
 
-Den ContentSync-konfiguration som finns på **&lt;dps-exportTemplate>/dps-article>** bör konfigureras att exportera allt innehåll som en artikel kräver för statisk återgivning av egenskaper på enheten.
+ContentSync-konfigurationen finns på **&lt;dps-exporttemplate>/dps-article>** bör vara konfigurerad för att exportera allt innehåll som en artikel kräver för statisk återgivning av egenskaper på enheten.
 
 >[!CAUTION]
 >
@@ -49,15 +52,13 @@ Den ContentSync-konfiguration som finns på **&lt;dps-exportTemplate>/dps-articl
 >* har installerat exempelinnehållet
 >* kör AEM
 >* ingen konfigurerad anpassad kontext eller en annan port
-
 >
-
 
 
 Om du vill visa exempel på delad resurs, se stegen nedan:
 
 1. Öppna CRXDE Lite på AEM.
-1. Bläddra till den här sökvägen [/etc/contentsync/templates/dps-we-unlimited-app/dps-article](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-article) för att visa delade exempelresurser.
+1. Bläddra till den här sökvägen [/etc/contentsync/templates/dps-we-unlimited-app/dps-article](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-article), för att visa de delade exempelresurserna.
 
    Du kan visa alla egenskaper som krävs för att skapa dina delade resurser enligt bilden nedan:
 
@@ -66,4 +67,3 @@ Om du vill visa exempel på delad resurs, se stegen nedan:
 >[!NOTE]
 >
 >Artiklar bör laddas upp eller exporteras till AEM Mobile On-demand Services när ett artikelinnehåll ändras.
-

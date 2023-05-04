@@ -1,24 +1,27 @@
 ---
 title: Tekniska krav
-seo-title: Tekniska krav
+seo-title: Technical Requirements
 description: En lista över de klient- och serverplattformar som stöds för AEM.
-seo-description: En lista över de klient- och serverplattformar som stöds för AEM.
+seo-description: A list of the supported client and server platforms for AEM.
 uuid: d5bdcd41-3585-41f7-860d-8068a2931a72
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: platform
 discoiquuid: 4d3c4650-3e2a-43b1-ad2d-8d0ae2254ca9
-translation-type: tm+mt
-source-git-commit: 95b5e70c1b474d4d207a5a33e8d1ab8ef39685b6
+exl-id: 21c10b39-ca37-4085-86f8-063c30a180ed
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3271'
+source-wordcount: '3294'
 ht-degree: 0%
 
 ---
 
-
 # Tekniska krav{#technical-requirements}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Adobe stöder Adobe Experience Manager (AEM) på plattformarna enligt följande information i det här dokumentet.
 
@@ -32,7 +35,7 @@ Kontakta plattformsleverantören direkt om du har frågor som är specifikt rela
 
 Lägsta krav för installation av Adobe Experience Manager:
 
-* Installerad Java Platform, Standard Edition JDK eller andra kompatibla [Java Virtual Machines](#java-virtual-machines)
+* Installerad Java Platform, Standard Edition JDK eller annat som stöds [Java Virtual Machines](#java-virtual-machines)
 * Experience Manager QuickStart-fil (fristående JAR eller WAR för webbapplikationsdistribution)
 
 ### Krav för minsta storlek {#minimum-sizing-requirements}
@@ -44,14 +47,12 @@ Lägsta krav för att köra Adobe Experience Manager:
 
 >[!NOTE]
 >
->* Användningsexempel för digitala resurser kräver mer basminne. Mer information finns i [Distribuera och underhålla](/help/sites-deploying/deploy.md#default-local-install).
->* [AEM Forms tilläggspaket ](/help/forms/using/installing-configuring-aem-forms-osgi.md) kräver 15 GB temporärt utrymme.
-
+>* Användningsexempel för digitala resurser kräver mer basminne. Se [Driftsättning och underhåll](/help/sites-deploying/deploy.md#default-local-install) för mer information.
+>* [AEM Forms tilläggspaket](/help/forms/using/installing-configuring-aem-forms-osgi.md) kräver 15 GB temporärt utrymme.
 >
 
 
-
-Mer information finns i [Riktlinjerna för maskinvarustorlek](/help/managing/hardware-sizing-guidelines.md).
+Se [Riktlinjer för maskinvarans storlek](/help/managing/hardware-sizing-guidelines.md) för ytterligare information.
 
 ### Supportnivåer {#support-levels}
 
@@ -129,10 +130,10 @@ Adobe Experience Manager arbetar med följande versioner av Java Virtual Machine
  </tbody> 
 </table>
 
-1. Oraclet har flyttat till en LTS-modell (Long Term Support) för Oracle Java SE-produkter. Java 9 och 10 är icke-LTS-versioner som Oracle (se [Oracle Java SE support roadmap](https://www.oracle.com/technetwork/java/eol-135779.html)). Adobe tillhandahåller endast stöd för LTS-versioner av Java för AEM i produktionen.
+1. Oraclet har flyttat till en LTS-modell (Long Term Support) för Oracle Java SE-produkter. Java 9 och 10 är icke-LTS-versioner som Oracle (se [Oracle Java SE - supportöversikt](https://www.oracle.com/technetwork/java/eol-135779.html)). Adobe tillhandahåller endast stöd för LTS-versioner av Java för AEM i produktionen.
 
 1. IBM JRE stöds endast i kombination med WebSphere Application Server.
-1. Stöd för och distribution av Oraclet Java SE JDK, inklusive alla underhållsuppdateringar av LTS-releaser efter slutet av de offentliga uppdateringarna, kommer att stödjas av Adobe direkt för alla AEM som använder Oraclet Java SE. Mer information finns i [Oraclets Java-stöd för Adobe Experience Manager Q&amp;A](assets/adobe-oracle-java-license-agreement.pdf).
+1. Stöd för och distribution av Oraclet Java SE JDK, inklusive alla underhållsuppdateringar av LTS-releaser efter slutet av de offentliga uppdateringarna, kommer att stödjas av Adobe direkt för alla AEM som använder Oraclet Java SE. Se [Stöd för Oracle Java i Adobe Experience Manager Q&amp;A](assets/adobe-oracle-java-license-agreement.pdf) för mer information.
 
 ### Lagring och beständighet {#storage-persistence}
 
@@ -237,13 +238,13 @@ Det finns olika alternativ för att distribuera Adobe Experience Manager-databas
 
 >[!NOTE]
 >
->Mer information om AEM Communities-funktionen finns i [Distribuera communities](/help/communities/deploy-communities.md).
+>Se [Distribuera webbgrupper](/help/communities/deploy-communities.md) om du vill ha mer information om AEM Communities.
 
 >[!NOTE]
 >
->MongoDB är en tredjepartsprogramvara och ingår inte i AEM licenspaket. Mer information finns på sidan [MongoDB-licenspolicy](https://www.mongodb.org/about/licensing/).
+>MongoDB är en tredjepartsprogramvara och ingår inte i AEM licenspaket. Mer information finns i [MongoDB-licenspolicy](https://www.mongodb.org/about/licensing/) sida.
 >
->För att få ut så mycket som möjligt av er AEM med MongoDB rekommenderar Adobe att ni licensierar MongoDB Enterprise-versionen för att få tillgång till professionell support. Mer information finns i [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk).
+>För att få ut så mycket som möjligt av er AEM med MongoDB rekommenderar Adobe att ni licensierar MongoDB Enterprise-versionen för att få tillgång till professionell support. Se [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk) för mer information.
 >
 >Licensen innehåller en standarduppsättning av repliker, som består av en primär och två sekundära instanser som kan användas för antingen författaren eller publiceringsdistributionerna.
 >
@@ -251,7 +252,7 @@ Det finns olika alternativ för att distribuera Adobe Experience Manager-databas
 >
 >Adobe kundtjänst kommer att hjälpa dig med kvalificeringsproblem i samband med användningen av MongoDB med AEM.
 >
->Mer information finns på sidan [MongoDB för Adobe Experience Manager](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager).
+>Mer information finns i [MongoDB för Adobe Experience Manager](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager).
 
 >[!NOTE]
 >
@@ -279,7 +280,7 @@ Den lägsta servlet API-version som krävs är Servlet 3.1, men under Servlet 4.
 
 1. Stöds inte för AEM Forms.
 
-### Serveroperativsystem {#server-operating-systems}
+### Operativsystem för servrar {#server-operating-systems}
 
 Adobe Experience Manager fungerar med följande serverplattformar:
 
@@ -321,23 +322,23 @@ Adobe Experience Manager fungerar med följande serverplattformar:
 </table>
 
 1. Linux Kernel 2.6, 3.x och 4.x innehåller derivat från Red Hat-distributionen, inklusive Red Hat Enterprise Linux, CentOS, Oracle Linux och Amazon Linux. AEM Forms tilläggsfunktioner stöds endast i CentOS 7 och Red Hat Enterprise Linux 7.
-1. AEM Assets: Se avsnittet [Stöd för XMP av metadata-återskrivningar](#requirements-for-aem-assets-xmp-metadata-write-back)
+1. AEM Assets: Se avsnittet [Stöd för XMP metadata-återskrivning](#requirements-for-aem-assets-xmp-metadata-write-back)
 1. AEM Assets: Dynamic Media Imaging stöds inte. Dynamic Media Video stöds.
 1. AEM Forms stöds bara på Ubuntu 16.04 LTS.
-1. AEM Assets: Inget stöd för [Raw-filtransformering](/help/assets/camera-raw.md)
+1. AEM Assets: Inget stöd för [Omvandling av råfiler](/help/assets/camera-raw.md)
 1. AEM Forms: Inget stöd för produktionsmiljön
-1. AEM Assets: Inget stöd för [förbättrad PDF-rastrering](/help/assets/aem-pdf-rasterizer.md)
+1. AEM Assets: Inget stöd för [förbättrad PDF rastrering](/help/assets/aem-pdf-rasterizer.md)
 1. AEM Forms: Stöds inte
 
-### Virtuella miljöer och datormiljöer i molnet {#virtual-cloud-computing-environments}
+### Virtuella miljöer och molnmiljöer {#virtual-cloud-computing-environments}
 
 Adobe Experience Manager stöds i en virtuell dator i molnmiljöer som Microsoft Azure och Amazon Web Services (AWS), i enlighet med de tekniska krav som anges på den här sidan och i enlighet med Adobe standardsupportvillkoren.
 
-Adobe rekommenderar att du använder Adobes hanterade tjänster för att distribuera AEM på Azure eller AWS. Adobes hanterade tjänster ger experterna erfarenhet och kunskaper av att driftsätta och AEM i dessa molndatormiljöer. Läs vår [ytterligare dokumentation om Adobe Managed Services](https://www.adobe.com/marketing-cloud/enterprise-content-management/managed-services-cloud-platform.html?aemClk=t).
+Adobe rekommenderar att du använder Adobes hanterade tjänster för att distribuera AEM på Azure eller AWS. Adobes hanterade tjänster ger experterna erfarenhet och kunskaper av att driftsätta och AEM i dessa molndatormiljöer. Ta en titt på [ytterligare dokumentation om Adobe Managed Services](https://www.adobe.com/marketing-cloud/enterprise-content-management/managed-services-cloud-platform.html?aemClk=t).
 
-I alla andra fall där AEM distribueras på Azure eller AWS, eller i någon annan molndatormiljö, kommer stöd från Adobe att finnas i den virtuella datormiljön i enlighet med de tekniska specifikationer som anges på den här sidan. Alla rapporterade problem som rör AEM som körs i någon av dessa molnmiljöer måste kunna reproduceras oberoende av alla molntjänster som är specifika för molndatormiljön, såvida inte molntjänsten specifikt stöds som en del av de tekniska krav som anges på den här sidan, till exempel Azure Blob Storage eller AWS S3.
+I alla andra fall där AEM distribueras på Azure eller AWS, eller i någon annan molndatormiljö, kommer support från Adobe att finnas i den virtuella datormiljön i enlighet med de tekniska specifikationer som anges på den här sidan. Alla rapporterade problem som rör AEM som körs i någon av dessa molnmiljöer måste kunna reproduceras oberoende av alla molntjänster som är specifika för molndatormiljön, såvida inte molntjänsten specifikt stöds som en del av de tekniska krav som anges på den här sidan, till exempel Azure Blob Storage eller AWS S3.
 
-För rekommendationer om hur du distribuerar AEM på Azure eller AWS, utanför Adobes hanterade tjänster, rekommenderar vi starkt att du arbetar direkt med molnleverantören eller Adobe partners som stöder distributionen av AEM i den molnmiljö du väljer. Den valda molnleverantören eller partnern ansvarar för storleksspecifikationerna, designen och implementeringen av arkitekturen, för att uppfylla dina specifika krav på prestanda, belastning, skalbarhet och säkerhet.
+För rekommendationer om hur du distribuerar AEM på Azure eller AWS, utanför Adobe Managed Services, rekommenderar vi att du arbetar direkt med molnleverantören eller Adobe-partners som stöder distributionen av AEM i den molnmiljö du väljer. Den valda molnleverantören eller partnern ansvarar för storleksspecifikationerna, designen och implementeringen av arkitekturen, för att uppfylla dina specifika krav på prestanda, belastning, skalbarhet och säkerhet.
 
 ### Dispatcher Platforms (webbservrar) {#dispatcher-platforms-web-servers}
 
@@ -347,7 +348,7 @@ Följande webbservrar kan användas med Dispatcher version 4.3.1:
 
 | Plattform | Supportnivå |
 |---|---|
-| **Apache httpd 2.4.x** (se även 1.2 nedan) | S: Stöds |
+| **Apache httpd 2.4.x** (se även 1,2 nedan) | S: Stöds |
 | Microsoft IIS 10 (Internet Information Server) | S: Stöds |
 | Microsoft IIS 8.5 (Internet Information Server) | S: Stöds |
 
@@ -360,17 +361,17 @@ Följande webbservrar kan användas med Dispatcher version 4.3.1:
 
 ## Klientplattformar som stöds {#supported-client-platforms}
 
-### Webbläsare som stöds för redigeringsanvändargränssnittet {#supported-browsers-for-authoring-user-interface}
+### Webbläsare som stöds för redigeringsgränssnittet {#supported-browsers-for-authoring-user-interface}
 
 Adobe Experience Manager användargränssnitt fungerar med följande klientplattformar. Alla webbläsare testas med standarduppsättningen med plugin-program och tillägg.
 
-Det AEM användargränssnittet är optimerat för större skärmar (vanligen bärbara och stationära datorer) och surfplattor (som Apple iPad eller Microsoft Surface). Telefonformfaktorn stöds inte.
+Det AEM användargränssnittet är optimerat för större skärmar (vanligen bärbara och stationära datorer) och surfplattor (t.ex. Apple iPad eller Microsoft Surface). Telefonformfaktorn stöds inte.
 
 >[!NOTE]
 >
 >**Stöd för webbläsare med snabb lansering:**
 >
->Uppdateringar av Mozilla Firefox, Google Chrome och Microsoft Edge var sjätte månad. Adobe tillhandahåller uppdateringar för Adobe Experience Manager för att upprätthålla den supportnivå som anges nedan för kommande versioner av dessa webbläsare.
+>Uppdateringar för Mozilla Firefox, Google Chrome och Microsoft Edge var sjätte månad. Adobe tillhandahåller uppdateringar för Adobe Experience Manager för att upprätthålla den supportnivå som anges nedan för kommande versioner av dessa webbläsare.
 
 <table> 
  <tbody> 
@@ -405,17 +406,17 @@ Det AEM användargränssnittet är optimerat för större skärmar (vanligen bä
    <td>S: Stöds</td> 
   </tr> 
   <tr> 
-   <td>Apple Safari 12.x i macOS</td> 
+   <td>Apple Safari 12.x på macOS</td> 
    <td>S: Stöds</td> 
    <td>S: Stöds</td> 
   </tr> 
   <tr> 
-   <td>Apple Safari 11.x i macOS</td> 
+   <td>Apple Safari 11.x på macOS</td> 
    <td>S: Stöds</td> 
    <td>S: Stöds</td> 
   </tr> 
   <tr> 
-   <td>Apple Safari 10.x i macOS</td> 
+   <td>Apple Safari 10.x på macOS</td> 
    <td>S: Stöds</td> 
    <td>S: Stöds</td> 
   </tr> 
@@ -454,13 +455,13 @@ Om du vill ansluta med Microsoft Windows 7+ till en AEM som inte är säker med 
 
    * HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters
 
-1. Lägg till registerposten BasicAuthLevel i den här undernyckeln med värdet 2 eller mer.
+1. Lägg till registerposten BasicAuthLevel till den här undernyckeln med värdet 2 eller mer.
 
 Se [Microsoft Support KB 841215](https://support.microsoft.com/default.aspx/kb/841215).
 
 Mer information om hur du kan förbättra WebDav-klientens svar i Windows finns i [Microsoft Support KB 2445570](https://support.microsoft.com/kb/2445570)
 
-## Ytterligare information om plattformen {#additional-platform-notes}
+## Information om ytterligare plattformar {#additional-platform-notes}
 
 I det här avsnittet finns specialanteckningar och mer detaljerad information om hur du kör Adobe Experience Manager och dess tillägg.
 
@@ -488,16 +489,16 @@ Det innebär att när en IP-adress måste anges kan du välja (efter behov) blan
 
    till exempel `http://localhost:4502`
 
-### Krav för AEM Dynamic Media-tillägg {#requirements-for-aem-dynamic-media-add-on}
+### Krav för AEM Dynamic Media Add-on {#requirements-for-aem-dynamic-media-add-on}
 
 AEM Dynamic Media är inaktiverat som standard. Se [Aktivera Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media).
 
 När Dynamic Media är aktiverat gäller följande ytterligare systemkrav:
 >[!NOTE]
 >
->Följande systemkrav gäller **_endast_** om du använder Dynamic Media - hybridläge; Dynamic Media - Hybridläget har en inbäddad bildserver, som bara är certifierad på vissa operativsystem.
+>Följande systemkrav gäller **_endast_** om du använder Dynamic Media - hybridläge, Dynamic Media - Hybridläget har en inbäddad bildserver, som bara är certifierad på vissa operativsystem.
 >
->För Dynamic Media-kunder som kör Dynamic Media - Scene7-läge (d.v.s. **dynamicmedia_scene7** runmode) finns inga ytterligare systemkrav. endast samma systemkrav som AEM. Dynamic Media - Scene7-lägesarkitekturen använder den molnbaserade bildtjänsten, inte den tjänst som är inbäddad i AEM.
+>För Dynamic Media-kunder som kör Dynamic Media - Scene7-läge (dvs. **dynamicmedia_scene7** runmode), det finns inga ytterligare systemkrav, endast samma systemkrav som AEM. Dynamic Media - Scene7-lägesarkitekturen använder den molnbaserade bildtjänsten, inte den tjänst som är inbäddad i AEM.
 
 #### Maskinvara {#hardware}
 
@@ -521,9 +522,9 @@ För att kunna använda Dynamic Media i Linux krävs följande krav:
 
 >[!NOTE]
 >
->**Inaktivera SELinux:** Bildservrar fungerar inte med SELinux aktiverat. Det här alternativet är aktiverat som standard. Du åtgärdar det här problemet genom att redigera filen **/etc/selinux/config** och ändra SELinux-värdet från:
+>**Inaktiverar SELinux:** Image Serving fungerar inte med SELinux aktiverat. Det här alternativet är aktiverat som standard. Du kan åtgärda problemet genom att redigera **/etc/selinux/config** och ändra SELinux-värdet från:
 >
->`SELINUX=enforcing` till   `SELINUX=disabled`
+>`SELINUX=enforcing` till  `SELINUX=disabled`
 
 >[!NOTE]
 >
@@ -531,11 +532,11 @@ För att kunna använda Dynamic Media i Linux krävs följande krav:
 >
 >Konstruktionen för flera noder kan resultera i minnesöverbelastning på en eller flera av noderna innan andra noder töms. När minnesöverbelastning inträffar kan kärnan bestämma sig för att avsluta processer (till exempel Image Server eller Platform Server) trots att det finns tillgängligt minne.
 >
->Därför rekommenderar Adobe att du, om du kör ett sådant system, stänger av NUMA med startalternativet **numa=off** för att undvika att dessa processer dör av kerneln.
+>Därför rekommenderar Adobe att du stänger av NUMA med **numa=off** startalternativ för att undvika att kärnan tar kål på dessa processer.
 
 >[!NOTE]
 >
->**Serverns värdnamn måste kunna matchas:** Kontrollera att serverns värdnamn kan matchas till en IP-adress. Om det inte är möjligt lägger du till det fullständiga, kvalificerade värdnamnet och IP-adressen till **/etc/hosts**:
+>**Värdnamnet för servern måste kunna matchas:** Kontrollera att serverns värdnamn kan matchas till en IP-adress. Om det inte är möjligt lägger du till det fullständiga, kvalificerade värdnamnet och IP-adressen i **/etc/värdar**:
 >
 >`<ip address> <fully qualified hostname>`
 
@@ -548,17 +549,17 @@ Om du vill använda Dynamic Media i Windows måste du installera Microsoft Visua
 
 x64
 
-* Omdistribuerbar Microsoft Visual Studio 2010 finns på [https://www.microsoft.com/en-us/download/details.aspx?id=13523](https://www.microsoft.com/en-us/download/details.aspx?id=13523)
-* Omdistribuerbar Microsoft Visual Studio 2013 finns på [https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
-* Omdistribuerbar Microsoft Visual Studio 2015 finns på [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+* Den återdistribuerbara Microsoft Visual Studio 2010 finns på [https://www.microsoft.com/en-us/download/details.aspx?id=13523](https://www.microsoft.com/en-us/download/details.aspx?id=13523)
+* Microsoft Visual Studio 2013 redistributable finns på [https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
+* Microsoft Visual Studio 2015 redistributable finns på [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
 
 x86
 
-* Omdistribuerbar Microsoft Visual Studio 2010 finns på [https://www.microsoft.com/en-in/download/details.aspx?id=5555](https://www.microsoft.com/en-in/download/details.aspx?id=5555)
-* Omdistribuerbar Microsoft Visual Studio 2013 finns på [https://www.microsoft.com/en-in/download/details.aspx?id=40769](https://www.microsoft.com/en-in/download/details.aspx?id=40769)
-* Omdistribuerbar Microsoft Visual Studio 2015 finns på [https://www.microsoft.com/en-us/download/details.aspx?id=52685](https://www.microsoft.com/en-us/download/details.aspx?id=52685)
+* Den återdistribuerbara Microsoft Visual Studio 2010 finns på [https://www.microsoft.com/en-in/download/details.aspx?id=5555](https://www.microsoft.com/en-in/download/details.aspx?id=5555)
+* Microsoft Visual Studio 2013 redistributable finns på [https://www.microsoft.com/en-in/download/details.aspx?id=40769](https://www.microsoft.com/en-in/download/details.aspx?id=40769)
+* Microsoft Visual Studio 2015 redistributable finns på [https://www.microsoft.com/en-us/download/details.aspx?id=52685](https://www.microsoft.com/en-us/download/details.aspx?id=52685)
 
-#### MacOS {#macos}
+#### macOS {#macos}
 
 * 10.9.x och senare
 * Stöds endast i demos- och testversioner
@@ -573,7 +574,7 @@ x86
   </tr> 
   <tr> 
    <td><p><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Klassiskt Acrobat 2017-spår</a></p> </td> 
-   <td><p>XPS, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC), HTML, HTM, DWG, DXF och DWF</p> </td> 
+   <td><p>XPS, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPX, JP2, J2K, J2C, JPC), HTML, HTM, DWG, DXF och DWF</p> </td> 
   </tr> 
   <tr> 
    <td>Microsoft® Project 2016</td> 
@@ -601,11 +602,11 @@ x86
   </tr> 
   <tr> 
    <td>OpenOffice 4.1.2</td> 
-   <td>ODT, ODP, ODS, ODG, ODF, SXW, SXI, SXC, SXD, XLS, XLSX, DOC, DOCX, PPT, PPTX, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPX, JP2, J2K, J2C, JPC), HTML, HTM, RTF och TXT</td> 
+   <td>ODT, ODP, ODS, ODG, ODF, SXW, SXI, SXC, SXD, XLS, XLSX, DOC, DOCX, PPT, PPTX, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC), HTML, HTM, RTF och TXT</td> 
   </tr> 
   <tr> 
    <td><p>OpenOffice 3.4</p> </td> 
-   <td><p>ODT, ODP, ODS, ODG, ODF, SXW, SXI, SXC, SXD, XLS, XLSX, DOC, DOCX, PPT, PPTX, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPX, JP2, J2K, J2C, JPC), HTML, HTM, RTF och TXT</p> </td> 
+   <td><p>ODT, ODP, ODS, ODG, ODF, SXW, SXI, SXC, SXD, XLS, XLSX, DOC, DOCX, PPT, PPTX, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC), HTML, HTM, RTF och TXT</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -616,16 +617,14 @@ x86
 >
 >Dessutom:
 >
->* PDF Generator kräver [Acrobat 2017 Classic track version 17.011.30078 eller senare](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) för att kunna utföra konverteringen.
+>* PDF Generator kräver [Acrobat 2017 Classic track version 17.011.30078 eller senare](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) för att utföra konverteringen.
 >* AEM Forms stöder endast 32-bitarsversioner av de program som stöds.
->* Funktionerna för OCR PDF (sökbar PDF), Optimize PDF och Export PDF stöds endast i Microsoft Windows.
->* HTML2PDF-tjänsten används inte i AIX.
+>* Funktionerna OCR PDF (sökbar PDF), Optimize PDF och Export PDF stöds endast i Microsoft Windows.
+>* Tjänsten HTML2PDF används inte i AIX.
 >* PDF Generator-konverteringar för OpenOffice stöds bara i Windows, Linux och Solaris.
->* Funktionerna för OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
->* En version av Acrobat medföljer AEM Forms för PDF Generator-funktioner. Programmeringsversionen ska endast användas med AEM Forms under AEM Forms-licensens löptid, för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning för din distribution ([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
-
+>* Funktionerna OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
+>* En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator-funktionaliteten. Programmeringsversionen ska endast användas med AEM Forms under AEM Forms-licensens löptid, för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning för din distribution ([Lokal](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
 >
-
 
 
 ### Krav för AEM Forms Designer {#requirements-for-aem-forms-designer}
@@ -647,7 +646,7 @@ XMP stöds och är aktiverat för följande plattformar och filformat:
 
 **Operativsystem**
 
-* Linux (32-bitars, behöver stöd för 32-bitarsprogram på 64-bitarssystem). Anvisningar om hur du installerar 32-bitars klientbibliotek finns i [Så här aktiverar du XMP extrahering och återskrivning på 64-bitars RedHat Linux](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html).
+* Linux (32-bitars, behöver stöd för 32-bitarsprogram på 64-bitarssystem). Anvisningar om hur du installerar 32-bitars klientbibliotek finns i [Aktivera XMP och återskrivning på 64-bitars RedHat Linux](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html).
 
 * Windows Server
 * Oracle Solaris

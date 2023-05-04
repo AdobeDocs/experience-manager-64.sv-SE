@@ -1,37 +1,40 @@
 ---
 title: Förhandsgranska sidor med ContextHub-data
-seo-title: Förhandsgranska sidor med ContextHub-data
+seo-title: Previewing Pages Using ContextHub Data
 description: Verktygsfältet ContextHub visar data från ContextHub-butiker och gör att du kan ändra lagringsdata. Det är användbart för förhandsgranskning av innehåll
-seo-description: Verktygsfältet ContextHub visar data från ContextHub-butiker och gör att du kan ändra lagringsdata. Det är användbart för förhandsgranskning av innehåll
+seo-description: The ContextHub toolbar displays data from ContextHub stores and enables you to change store data and  is useful for previewing content
 uuid: 0150555a-0a92-4692-a706-bbe59fd34d6a
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: personalization
 discoiquuid: f281ef8c-0831-470c-acb7-189f20452a50
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 24f94dd5-62a4-4ac3-9a1b-a8e189da9958
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 4%
+source-wordcount: '401'
+ht-degree: 2%
 
 ---
 
-
 # Förhandsgranska sidor med ContextHub-data{#previewing-pages-using-contexthub-data}
 
-Verktygsfältet [ContextHub](/help/sites-developing/contexthub.md) visar data från ContextHub-arkiv och gör att du kan ändra lagringsdata. Verktygsfältet ContextHub är användbart när du vill förhandsgranska innehåll som bestäms av data i ett ContextHub-lager.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+The [ContextHub](/help/sites-developing/contexthub.md) I verktygsfältet visas data från ContextHub-arkiv och du kan ändra lagringsdata. Verktygsfältet ContextHub är användbart när du vill förhandsgranska innehåll som bestäms av data i ett ContextHub-lager.
 
 Verktygsfältet består av en serie användargränssnittslägen som innehåller en eller flera användargränssnittsmoduler.
 
 * Gränssnittslägen är ikoner som visas till vänster i verktygsfältet. När du klickar på eller trycker på en ikon visas de gränssnittsmoduler som finns i verktygsfältet.
 * Gränssnittsmoduler visar data från en eller flera ContextHub-butiker. Vissa gränssnittsmoduler gör det även möjligt för dig att ändra lagrade data.
 
-ContextHub installerar flera gränssnittslägen och gränssnittsmoduler. Din administratör kan ha [konfigurerat ContextHub](/help/sites-administering/contexthub-config.md) för att visa olika.
+ContextHub installerar flera gränssnittslägen och gränssnittsmoduler. Administratören kan ha [konfigurerad ContextHub](/help/sites-administering/contexthub-config.md) för att visa olika.
 
 ![screen_shot_2018-03-23at093446](assets/screen_shot_2018-03-23at093446.png)
 
-## Visar ContextHub-verktygsfältet {#revealing-the-contexthub-toolbar}
+## Visa verktygsfältet ContextHub {#revealing-the-contexthub-toolbar}
 
 Verktygsfältet ContextHub är tillgängligt i förhandsgranskningsläget. Verktygsfältet är bara tillgängligt på författarinstanser och endast när administratören har aktiverat det.
 
@@ -45,11 +48,11 @@ Verktygsfältet ContextHub är tillgängligt i förhandsgranskningsläget. Verkt
 
    ![](do-not-localize/screen_shot_2018-03-23at093621.png)
 
-## Funktioner för användargränssnittsmodul {#ui-module-features}
+## Funktioner i gränssnittsmodul {#ui-module-features}
 
 Varje gränssnittsmodul innehåller olika uppsättningar funktioner, men följande typer av funktioner är vanliga. Eftersom gränssnittsmodulerna kan utökas kan utvecklaren implementera andra funktioner efter behov.
 
-### Verktygsfältsinnehåll {#toolbar-content}
+### Innehåll i verktygsfält {#toolbar-content}
 
 Gränssnittsmoduler kan visa data från en eller flera ContextHub-butiker i verktygsfältet. I gränssnittsmoduler används en ikon och en titel för att identifiera sig själva.
 
@@ -63,11 +66,10 @@ I vissa gränssnittsmoduler visas ett popup-fönster som är övertryckt när an
 
 ### Popup Forms {#popup-forms}
 
-Popup-överlägget för en modul kan innehålla formulärelement som gör att du kan ändra data i ContextHub-arkivet. Om sidinnehållet bestäms av lagringsdata kan du använda formuläret och observera ändringar i sidinnehållet.
+Popup-överlägget för en modul kan innehålla formulärelement som gör att du kan ändra data i ContextHub-arkivet. Om sidinnehållet avgörs av lagringsdata kan du använda formuläret och observera ändringar i sidinnehållet.
 
 ### Helskärmsläge {#fullscreen-mode}
 
 Popup-övertäckningar kan innehålla en ikon som du klickar på eller trycker på för att expandera popup-innehållet så att det täcker hela webbläsarfönstret eller skärmen.
 
 ![](do-not-localize/chlimage_1-18.png)
-

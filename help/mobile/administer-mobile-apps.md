@@ -1,24 +1,27 @@
 ---
 title: Mobilappar
-seo-title: Mobilappar
+seo-title: Mobile Apps
 description: Följ den här sidan för att komma igång med att administrera innehåll för mobilappar.
-seo-description: Följ den här sidan för att komma igång med att administrera innehåll för mobilappar.
+seo-description: Follow this page to get started with administering content for mobile apps.
 uuid: 0ef31513-b720-46cb-b162-35883ae48912
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: introduction
 content-type: reference
 discoiquuid: 302d1bd9-fdb3-4db6-a446-6ed85ad9fba5
-translation-type: tm+mt
-source-git-commit: 95499f59b2ce7d5d864d948d596f3efaae0b0d27
+exl-id: c5aa2311-e7c4-4a7c-a525-6ce8611baaa0
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '167'
 ht-degree: 0%
 
 ---
 
-
 # Mobilappar{#mobile-apps}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
@@ -33,4 +36,4 @@ AEM Mobile erbjuder flera metoder för att skapa appar. De olika sätt du kan an
 
 >[!NOTE]
 >
->Om du inte har använt Adobe Experience Manager tidigare kan du gå igenom [Komma igång med AEM](/help/sites-deploying/deploy.md).
+>Om du inte har använt Adobe Experience Manager tidigare vill du kanske gå igenom [Komma igång med AEM](/help/sites-deploying/deploy.md).

@@ -5,18 +5,22 @@ contentOwner: AG
 feature: Translation
 role: User,Admin
 exl-id: 15162b80-ddef-4ec0-9db6-36695c93ebb1
-source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 1%
+source-wordcount: '534'
+ht-degree: 0%
 
 ---
 
 # Bästa tillvägagångssätt för att översätta resurser effektivt {#best-practices-for-translating-assets-efficiently}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 Adobe Experience Manager Assets har stöd för flerspråkiga arbetsflöden för att översätta binära filer, metadata och taggar för digitala resurser till flera språkområden och för att hantera översatta resurser. Mer information finns i [Flerspråkiga resurser](multilingual-assets.md).
 
-För effektiv hantering av resurser, för att säkerställa att olika översatta versioner förblir synkroniserade, skapar du [språkkopior](preparing-assets-for-translation.md) av resurserna innan du kör översättningsarbetsflöden.
+För effektiv hantering av resurser, för att säkerställa att olika översatta versioner förblir synkroniserade, skapar du [språkversioner](preparing-assets-for-translation.md) av resurser innan översättningsarbetsflöden körs.
 
 En språkkopia av en resurs eller en grupp av resurser är ett språkjämlikt (eller en version av resursen/resurserna på ett modersmål) med en liknande innehållshierarki.
 
@@ -33,17 +37,17 @@ Du kan också göra några konfigurationsändringar i ett par arbetsflöden och 
    * [Konfigurera arkiv för fildata](/help/sites-deploying/data-store-config.md)
    * [Konfigurera Amazon S3-datalagret](/help/sites-deploying/data-store-config.md)
 
-1. Inaktivera arbetsflödet [DAM MetaData Writeback](/help/sites-administering/workflow-offloader.md#disable-offloading)
+1. Inaktivera [DAM MetaData Writeback](/help/sites-administering/workflow-offloader.md#disable-offloading) arbetsflöde
 
-   Som namnet antyder skriver arbetsflödet *DAM Metadata Writeback* om metadata till den binära filen. Eftersom metadata ändras efter översättning, genereras en annan binär fil för en språkkopia när du skriver tillbaka den till den binära filen.
+   Som namnet antyder *DAM-metadataåterställning* metadata skrivs om till den binära filen. Eftersom metadata ändras efter översättning, genereras en annan binär fil för en språkkopia när du skriver tillbaka den till den binära filen.
 
    >[!NOTE]
    >
-   >Om du inaktiverar arbetsflödet *DAM MetaData Writeback* inaktiveras skrivningen XMP metadata för objektbinärfiler. Därför sparas inte längre framtida metadataändringar i resurserna. Utvärdera konsekvenserna innan du inaktiverar arbetsflödet.
+   >Inaktiverar *DAM MetaData Writeback* arbetsflödet stänger av XMP metadata-återskrivningen av resurbinärfiler. Därför sparas inte längre framtida metadataändringar i resurserna. Utvärdera konsekvenserna innan du inaktiverar arbetsflödet.
 
-1. Aktivera arbetsflödet *Ange senaste ändringsdatum*.
+1. Aktivera *Ange senaste ändringsdatum* arbetsflöde.
 
-   Arbetsflödet *DAM MetaData Writeback* konfigurerar det senaste ändringsdatumet för en resurs. Eftersom du inaktiverar det här arbetsflödet i steg 2 kan [!DNL Experience Manager Assets] inte längre hålla det senaste ändrade datumet för resurser uppdaterat. Aktivera därför arbetsflödet *Ange senaste ändringsdatum* för att säkerställa att de senaste ändrade datumen för resurser är uppdaterade. Resurser med inaktuella senast ändrade datum kan orsaka fel.
+   The *DAM MetaData Writeback* arbetsflödet konfigurerar det senast ändrade datumet för en resurs. Eftersom du inaktiverar det här arbetsflödet i steg 2, [!DNL Experience Manager Assets] kan inte längre hålla det senaste ändrade datumet för tillgångar uppdaterat. Aktivera därför *Ange senaste ändringsdatum* arbetsflöde för att säkerställa att de senaste ändrade datumen för mediefiler är aktuella. Resurser med inaktuella senast ändrade datum kan orsaka fel.
 
-1. [Konfigurera ](/help/sites-administering/tc-tic.md) ramverket för översättningsintegrering så att översättningen av resursbinärfiler avbryts. Avmarkera alternativet &quot;Översätt resurser&quot; på fliken Resurser för att stoppa översättningen av resurbinärfiler.
-1. Översätt metadata/taggar för resurser med [arbetsflöden för flerspråkiga resurser](multilingual-assets.md).
+1. [Konfigurera översättningsintegreringsramverket](/help/sites-administering/tc-tic.md) om du vill sluta översätta resurbinärfiler. Avmarkera alternativet &quot;Översätt resurser&quot; på fliken Resurser för att stoppa översättningen av resurbinärfiler.
+1. Översätt metadata/taggar för resurser med [Arbetsflöden för flerspråkiga resurser](multilingual-assets.md).

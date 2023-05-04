@@ -1,20 +1,24 @@
 ---
 title: Förbättrad sortering av material i AEM
-description: Lär dig hur  [!DNL Experience Manager] Assets distribuerar sortering på serversidan för att sortera mappresurser eller en sökfråga på en gång i stället för att sortera dem i grupper på klientsidan.
+description: Lär dig mer [!DNL Experience Manager] Resurser distribuerar sortering på serversidan för att sortera mappresurser eller en sökfråga samtidigt i stället för att sortera dem i grupper på klientsidan.
 contentOwner: AG
 feature: Search
 role: User
 exl-id: aa24ca68-d94e-4bd4-a5cc-113906650a2e
-source-git-commit: cc9b6d147a93688e5f96620d50f8fc8b002e2d0d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 3%
+source-wordcount: '465'
+ht-degree: 1%
 
 ---
 
 # Förbättrad sortering av resurser i [!DNL Experience Manager] {#enhanced-sorting-of-assets-in-aem}
 
-Lär dig hur [!DNL Experience Manager] Assets använder sortering på serversidan för att sortera mappresurser eller en sökfråga på en gång i stället för att sortera dem i grupper på klientsidan.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+Lär dig mer [!DNL Experience Manager] Resurser distribuerar sortering på serversidan för att sortera mappresurser eller en sökfråga samtidigt i stället för att sortera dem i grupper på klientsidan.
 
 Sökfunktionen i Adobe Experience Manager Assets har förbättrats så att du effektivt kan sortera ett stort antal resurser i mapplistvyn och på sökresultatsidorna. Du kan också sortera tidslinjeposter.
 
@@ -24,7 +28,7 @@ Sökfunktionen i Adobe Experience Manager Assets har förbättrats så att du ef
 
 [!DNL Experience Manager] Med resurser kan du sortera mappresurser baserat på följande fält:
 
-* Nat. inst
+* Språk
 * Status
 * Typ
 * Storlek
@@ -51,7 +55,7 @@ Sökfunktionen i Adobe Experience Manager Assets har förbättrats så att du ef
 
 >[!NOTE]
 >
->Om du vill sortera värdena i `Name` eller `Title`kolumnerna ska du täcka över `/libs/dam/gui/content/commons/availablecolumns` och ändra värdet för `sortable` till `True`.
+>Sortera värdena i `Name` eller `Title`kolumner, övertäckning `/libs/dam/gui/content/commons/availablecolumns` och ändra värdet för `sortable` till `True`.
 
 ## Sortera resurser i sökresultat {#sorting-assets-in-search-results}
 
@@ -78,14 +82,14 @@ Du kan sortera sökresultaten baserat på följande fält:
 [!DNL Assets] Med kan du sortera tidslinjeposter kronologiskt, t.ex. anteckningar, versioner, arbetsflöden och aktiviteter.
 
 1. I resursgränssnittet väljer du en resurs som du vill visa tidslinjen för.
-1. Klicka på/tryck på ikonen GlobalNav och välj **[!UICONTROL Timeline]**.
+1. Klicka/tryck på ikonen GlobalNav och välj **[!UICONTROL Timeline]**.
 
    ![chlimage_1-399](assets/chlimage_1-399.png)
 
-1. Välj en post i listan på tidslinjen. Välj till exempel **[!UICONTROL Comments]** om du vill visa listan över anteckningar som är associerade med resursen.
+1. Välj en post i listan på tidslinjen. Välj till exempel **[!UICONTROL Comments]** om du vill visa en lista med anteckningar som är associerade med resursen.
 
    ![chlimage_1-400](assets/chlimage_1-400.png)
 
-1. Klicka/tryck på ikonen **[!UICONTROL Sort]** bredvid etiketten **[!UICONTROL Date]**. Beroende på vad du väljer listas anteckningarna i den kronologiska/omvända kronologiska ordning som de lades till i resursen.
+1. Klicka/tryck på **[!UICONTROL Sort]** -ikonen bredvid **[!UICONTROL Date]** label. Beroende på vad du väljer listas anteckningarna i den kronologiska/omvända kronologiska ordning som de lades till i resursen.
 
    ![chlimage_1-401](assets/chlimage_1-401.png)

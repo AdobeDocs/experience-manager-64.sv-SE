@@ -1,23 +1,26 @@
 ---
 title: Visa formulär på en webbsida med API:er
-seo-title: Visa formulär på en webbsida med API:er
+seo-title: Listing forms on a web page using APIs
 description: Fråga Forms Manager programmatiskt om du vill hämta en filtrerad lista över formulär och visa den på dina egna webbsidor.
-seo-description: Fråga Forms Manager programmatiskt om du vill hämta en filtrerad lista över formulär och visa den på dina egna webbsidor.
+seo-description: Programmatically query Forms Manager to retrieve a filtered list of forms and display on your own web pages.
 uuid: e51cb2d4-816f-4e6d-a081-51e4999b00ba
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: 515ceaf6-c132-4e1a-b3c6-5d2c1ccffa7c
-translation-type: tm+mt
-source-git-commit: 9229642edd5a91bee017d8c0680cd6c10bfe43df
+exl-id: e42b7cdf-9a70-4ff6-8283-7bbc3690ca05
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '729'
 ht-degree: 1%
 
 ---
 
-
 # Visa formulär på en webbsida med API:er {#listing-forms-on-a-web-page-using-apis}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 AEM Forms tillhandahåller ett REST-baserat söknings-API som webbutvecklare kan använda för att fråga och hämta en uppsättning formulär som uppfyller sökvillkoren. Du kan använda API:er för att söka efter formulär baserat på olika filter. Svarsobjektet innehåller formulärattribut, egenskaper och återge formulärens slutpunkter.
 
@@ -33,9 +36,9 @@ Om du vill söka efter formulär med REST API skickar du en GET-förfrågan till
   </tr>
   <tr>
    <td>func<br /> </td>
-   <td><p>Anger den funktion som ska anropas. Om du vill söka efter formulär anger du <code>func </code>attributet till <code>searchForms</code>.</p> <p>Till exempel, <code class="code">
+   <td><p>Anger den funktion som ska anropas. Om du vill söka efter formulär anger du värdet för <code>func </code>attribut till <code>searchForms</code>.</p> <p>Till exempel, <code class="code">
        URLParameterBuilder entityBuilder=new URLParameterBuilder ();
-       entityBuilder.add("func", "searchForms");</code></p> <p><strong>Obs! </strong> <em>Den här parametern är obligatorisk.</em><br /> </p> </td>
+       entityBuilder.add("func", "searchForms");</code></p> <p><strong>Obs!</strong> <em>Den här parametern är obligatorisk.</em><br /> </p> </td>
   </tr>
   <tr>
    <td>appPath<br /> </td>
@@ -43,7 +46,7 @@ Om du vill söka efter formulär med REST API skickar du en GET-förfrågan till
   </tr>
   <tr>
    <td>cutPoints<br /> </td>
-   <td><p>Anger vilka egenskaper som ska hämtas med resurserna. Du kan använda asterisk (*) för att hämta alla egenskaper samtidigt. Använd vertikalstrecksoperatorn (|) om du vill ange flera egenskaper. </p> <p>Till exempel, <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>Obs</strong>: </p>
+   <td><p>Anger vilka egenskaper som ska hämtas med resurserna. Du kan använda asterisk (*) för att hämta alla egenskaper samtidigt. Använd vertikalstrecksoperatorn (|) om du vill ange flera egenskaper. </p> <p>Till exempel, <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>Anteckning</strong>: </p>
     <ul>
      <li><em>Egenskaper som id, sökväg och namn hämtas alltid. </em></li>
      <li><em>Alla resurser har olika egenskapsuppsättningar. Egenskaper som formUrl, pdfUrl och guideUrl är inte beroende av attributet cutpoints. Dessa egenskaper beror på resurstypen och hämtas därefter. </em></li>
@@ -78,8 +81,8 @@ Om du vill söka efter formulär med REST API skickar du en GET-förfrågan till
        statement.put("value", "SimpleSurveyAF");
        statement.put("operator", "EQ"); statementArray.put(statement);</code></p> <p>I exemplet ovan </p>
     <ul>
-     <li><strong>namn</strong>: Anger namnet på egenskapen som ska sökas efter.</li>
-     <li><strong>värde</strong>: anger värdet på den egenskap som du vill söka efter.</li>
+     <li><strong>name</strong>: Anger namnet på egenskapen som ska sökas efter.</li>
+     <li><strong>value</strong>: anger värdet på den egenskap som du vill söka efter.</li>
      <li><strong>operator</strong>: anger vilken operator som ska användas vid sökning. Följande operatorer stöds:
       <ul>
        <li>EQ - lika med </li>
@@ -94,11 +97,11 @@ Om du vill söka efter formulär med REST API skickar du en GET-förfrågan till
        <li>ENDSWITH - A slutar med B om B är slutdelen av A</li>
        <li>LIKE - Implementerar operatorn LIKE</li>
        <li>AND - Kombinera flera programsatser</li>
-      </ul> <p><strong>Obs!</strong> <em>GT-, LT-, GTEQ- och LTEQ-operatorer kan användas för egenskaper av linjär typ, till exempel LONG, DOUBLE och DATE.</em></p> </li>
+      </ul> <p><strong>Obs!</strong> <em>GT-, LT-, GTEQ- och LTEQ-operatorer kan användas för egenskaper av linjär typ som LONG, DUBLE och DATE.</em></p> </li>
     </ul> </td>
   </tr>
   <tr>
-   <td>beställningar<br /> </td>
+   <td>orderfunktioner<br /> </td>
    <td><p>Anger sökresultatens ordningsvillkor. Kriterierna definieras i JSON-formatet. Du kan sortera sökresultat i mer än ett fält. Resultatet sorteras i den ordning som fälten visas i frågan.</p> <p>Till exempel,</p> <p>Om du vill hämta frågeresultat ordnade efter title-egenskap i stigande ordning lägger du till följande parameter: </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
        JSONObject orderings=new JSONObject();
        orderings.put("name", "title");
@@ -106,17 +109,17 @@ Om du vill söka efter formulär med REST API skickar du en GET-förfrågan till
        orderingsArray.put(orderings);
        entityBuilder.add("orderings", orderingsArray.toString());</code></p>
     <ul>
-     <li><strong>namn</strong>: Anger namnet på den egenskap som ska användas för att ordna sökresultaten.</li>
-     <li><strong>villkor</strong>: Anger resultatordningen. Attributet order accepterar följande värden:
+     <li><strong>name</strong>: Anger namnet på den egenskap som ska användas för att ordna sökresultaten.</li>
+     <li><strong>kriterier</strong>: Anger resultatordningen. Attributet order accepterar följande värden:
       <ul>
-       <li>ASC - Använd ASC för att ordna resultat i stigande ordning.<br /> </li>
+       <li>ASC - Använd ASC för att ordna resultatet i stigande ordning.<br /> </li>
        <li>DES - Använd DES för att ordna resultatet i fallande ordning.</li>
       </ul> </li>
     </ul> </td>
   </tr>
   <tr>
    <td>includeXdp</td>
-   <td>Anger om det binära innehållet ska hämtas eller inte. Attributet <code>includeXdp</code> gäller för resurser av typen <code>FORM</code>, <code>PDFFORM</code> och <code>PRINTFORM</code>.</td>
+   <td>Anger om det binära innehållet ska hämtas eller inte. The <code>includeXdp</code> attribut kan användas för tillgångar av typen <code>FORM</code>, <code>PDFFORM</code>och <code>PRINTFORM</code>.</td>
   </tr>
   <tr>
    <td>assetType</td>

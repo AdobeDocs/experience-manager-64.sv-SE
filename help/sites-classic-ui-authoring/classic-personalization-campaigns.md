@@ -1,24 +1,27 @@
 ---
-title: Kampanjhantering
-seo-title: Kampanjhantering
+title: Campaign Management
+seo-title: Campaign Management
 description: Kampanjhantering ger digitala marknadsförare möjlighet att leverera personaliserat innehåll och skapa dedikerade upplevelser för besökare. Ni kan samordna era marknadsföringskampanjer över webben, e-post och mobiltjänster och därmed engagera besökarna.
-seo-description: Kampanjhantering ger digitala marknadsförare möjlighet att leverera personaliserat innehåll och skapa dedikerade upplevelser för besökare. Ni kan samordna era marknadsföringskampanjer över webben, e-post och mobiltjänster och därmed engagera besökarna.
+seo-description: Campaign management provides digital marketers the opportunity to deliver personalized content and so create dedicated experiences for visitors. It allows you to orchestrate your marketing campaigns across the web, email and mobile services and so engage your visitors.
 uuid: 202d614b-a607-45de-8c24-1ee66b230315
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: e8b70971-4f23-45f8-8c23-e147413243c2
-translation-type: tm+mt
-source-git-commit: 02aee2202a570320cd7eb40c2e566d886af4e163
+exl-id: 2980ec6d-cdd4-4fbd-b4a4-5e45e4508903
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '664'
 ht-degree: 0%
 
 ---
 
+# Campaign Management{#campaign-management}
 
-# Kampanjhantering{#campaign-management}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Kampanjhantering ger digitala marknadsförare möjlighet att leverera personaliserat innehåll och skapa dedikerade upplevelser för besökare.
 
@@ -36,20 +39,20 @@ I det här dokumentet beskrivs de olika element som utgör kampanjer. Mer detalj
 
 Kampanjhanteringen består av olika delar:
 
-* ****
-VarumärkenaI AEM är varumärken den viktigaste enheten och utgör en samling av 
+* **Varumärken**
+I AEM är varumärken den översta enheten och utgör en samling 
 **Kampanjer**.
 
-* ****
-KampanjerEn kampanj består av en samling individuella kampanjer 
-**Upplevelser**.
+* **Kampanjer**
+En kampanj är en samling individuella 
+**Erfarenheter**.
 
-* ****
-ErfarenheterDet fokuserade innehållet utgör de olika upplevelserna, som presenteras för besökaren på 
+* **Erfarenheter**
+Det fokuserade innehållet utgör de olika upplevelserna, som presenteras för besökaren på 
 **Pekpunkter**. Det finns flera olika typer av upplevelser:
 
    * **Lärare**
-      [Teaser Pages/](#teasers) Paragraphes används för att styra specifika besökarsegment  **** till innehåll som är inriktat på deras intressen.
+      [Teaser Pages / Paragrapes](#teasers) används för att styra specifika besökare **Segment** till innehåll som fokuseras på deras intressen.
 
       Teaser pages can:
 
@@ -60,7 +63,7 @@ ErfarenheterDet fokuserade innehållet utgör de olika upplevelserna, som presen
 
    * **Nyhetsbrev**
 
-      [E-](#emailmarketing) postkommunikation används för att engagera användare och uppmuntra dem att besöka din webbplats. Dessa består vanligtvis av ett nyhetsbrev som skickas till dina **leads** (som vanligtvis grupperas i **listor**). **Obs!** Adobe planerar inte att ytterligare förbättra den här funktionen. Rekommendationen är att [utnyttja Adobe Campaign och integreringen till AEM](/help/sites-administering/campaign.md).
+      [E-postkommunikation](#emailmarketing) används för att engagera användare och uppmuntra dem att besöka din webbplats. Dessa kan oftast fås i form av ett nyhetsbrev som skickas till **Leads** (som vanligtvis grupperas i **Listor**). **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet. Rekommendationen är att [utnyttja Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
 
    * **Adobe Target**
 
@@ -75,15 +78,15 @@ ErfarenheterDet fokuserade innehållet utgör de olika upplevelserna, som presen
 
 * **Leads**
 
-   Den information som ni har samlat in om era besökare och hur ni kontaktar dem utgör grunden för era leads. **Obs!** Adobe planerar inte att ytterligare förbättra den här funktionen.
+   Den information som ni har samlat in om era besökare och hur ni kontaktar dem utgör grunden för era leads. **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet.
 
-   Rekommendationen är att [utnyttja Adobe Campaign och integreringen till AEM](/help/sites-administering/campaign.md).
+   Rekommendationen är att [utnyttja Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
 
 * **Listor**
 
-   Leads grupperas vanligtvis i listor så att du kan vidta kollektiva åtgärder för dem. Obs! **Obs!** Adobe planerar inte att förbättra den här funktionen ytterligare.
+   Leads grupperas vanligtvis i listor så att du kan vidta kollektiva åtgärder för dem. Obs! **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet.
 
-   Rekommendationen är att [utnyttja Adobe Campaign och integreringen till AEM.](/help/sites-administering/campaign.md)
+   Rekommendationen är att [utnyttja Adobe Campaign och integreringen för AEM.](/help/sites-administering/campaign.md)
 
 * **Segment**
 
@@ -93,7 +96,6 @@ ErfarenheterDet fokuserade innehållet utgör de olika upplevelserna, som presen
 
    Marketing Campaign Manager (MCM) är en konsol som ger er tillgång till alla funktioner ni behöver för att skapa och kontrollera kampanjer, varumärken, upplevelser, kontaktytor, leads, listor, segment och rapporter.
 
-   Den kan nås från olika platser (märkta som **Campaigns**) eller med till exempel URL:en:
+   Den kan nås från olika platser (märkta som **Kampanjer**), eller med till exempel URL-adressen:
 
    `http://localhost:4502/libs/mcm/content/admin.html`
-

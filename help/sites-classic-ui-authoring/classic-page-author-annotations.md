@@ -1,8 +1,8 @@
 ---
 title: Anteckningar vid redigering av en sida
-seo-title: Anteckningar vid redigering av en sida
+seo-title: Annotations when Editing a Page
 description: Om du lägger till innehåll på webbplatsens sidor kan det ofta bli aktuellt med diskussioner innan det faktiskt publiceras. För att underlätta detta kan du lägga till en anteckning i många komponenter som är direkt relaterade till innehållet.
-seo-description: Om du lägger till innehåll på webbplatsens sidor kan det ofta bli aktuellt med diskussioner innan det faktiskt publiceras. För att underlätta detta kan du lägga till en anteckning i många komponenter som är direkt relaterade till innehållet.
+seo-description: Adding content to the pages of your website is often subject to discussions prior to it actually being published. To aid this, many components directly related to content allow you to add an annotation.
 page-status-flag: de-activated
 uuid: d8d6ba76-f2aa-4044-98bf-5d506742d90d
 contentOwner: Chris Bohnert
@@ -10,16 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 9bee0197-f275-49cc-922d-62cba826c4e5
-translation-type: tm+mt
-source-git-commit: 363f084e086c2afd5585caa08d5b55c0e02bd4b2
+exl-id: 76e36d3b-4a8a-45ee-bb4e-28b150ec089c
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '818'
 ht-degree: 0%
 
 ---
 
-
 # Anteckningar vid redigering av en sida{#annotations-when-editing-a-page}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Om du lägger till innehåll på webbplatsens sidor kan det ofta bli aktuellt med diskussioner innan det faktiskt publiceras. För att underlätta detta kan du lägga till en anteckning i många komponenter som är direkt relaterade till innehåll (till skillnad från till exempel layout).
 
@@ -31,7 +34,7 @@ En anteckning placerar en färgmarkör/anteckning på sidan. Med anteckningen ka
 
 >[!NOTE]
 >
->Anteckningar som skapas i det klassiska användargränssnittet visas också i det pekoptimerade användargränssnittet. Skisser är dock gränssnittsspecifika och visas endast i det användargränssnitt där de skapades.
+>Anteckningar som skapas i det klassiska användargränssnittet visas också i det pekoptimerade användargränssnittet. Skisser är dock användargränssnittsspecifika och visas endast i det användargränssnitt där de skapades.
 
 >[!CAUTION]
 >
@@ -45,7 +48,7 @@ En anteckning placerar en färgmarkör/anteckning på sidan. Med anteckningen ka
 
 Beroende på styckedesignen är anteckningen antingen tillgänglig som ett alternativ på snabbmenyn (vanligtvis högerknappen när den placeras över det önskade stycket) eller som en knapp på styckets redigeringsfält.
 
-I båda fallen väljer du **Anteckna**. En färgad anteckning kommer att användas på stycket. Du är direkt i redigeringsläge, vilket gör att du kan lägga till text direkt:
+I båda fallen ska du **Anteckna**. En färgad anteckning kommer att användas på stycket. Du är direkt i redigeringsläge, vilket gör att du kan lägga till text direkt:
 
 ![chlimage_1-137](assets/chlimage_1-137.png)
 
@@ -80,9 +83,7 @@ Med de tre ikonerna längst upp till vänster kan du minimera anteckningen (till
 >
 >* ikonen visas inte.
 >* befintliga skisser som skapats i en annan webbläsare visas inte.
-
 >
-
 
 
 Skisser är en funktion av anteckningar som gör att du kan skapa enkla linjeregrafik var som helst i webbläsarfönstret (synlig del):
@@ -98,13 +99,12 @@ Skisser är en funktion av anteckningar som gör att du kan skapa enkla linjereg
 
    * rak:
 
-      håll ned `ALT` och klicka på start- och slutpunkterna; avsluta med ett dubbelklick.
+      håll ned `ALT` och klicka på start- och slutpunkterna, avsluta med ett dubbelklick.
 
 * När du har avslutat skissläget kan du klicka på en skiss för att markera den.
 * Flytta en skiss genom att markera skissen och sedan dra den till önskad plats.
 * En skiss täcker över innehållet. Det innebär att du inte kan klicka på det underliggande stycket i skissens fyra hörn. om du till exempel behöver redigera eller komma åt en länk. Om det här blir ett problem (du till exempel har en skiss som täcker ett stort område på sidan) minimerar du sedan lämplig anteckning, eftersom detta även minimerar alla relaterade skisser och ger dig tillgång till det underliggande området.
-* Om du vill ta bort en enskild skiss markerar du önskad skiss och trycker sedan på **Delete**-tangenten (**fn**-**backsteg** på en Mac).
+* Om du vill ta bort en enskild skiss markerar du önskad skiss och trycker sedan på **Ta bort** tangent (**fn**-**backspace** på en MAC).
 
 * Om du flyttar, eller kopierar, ett stycke kommer alla relaterade anteckningar och skisser också att flyttas, eller kopieras; deras position i förhållande till stycket förblir densamma.
 * Om du tar bort en anteckning tas även alla skisser som är kopplade till den anteckningen bort.
-

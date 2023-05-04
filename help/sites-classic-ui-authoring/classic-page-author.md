@@ -1,28 +1,31 @@
 ---
 title: Redigeringssidor
-seo-title: Redigeringssidor
+seo-title: Authoring Pages
 description: Det finns två översikter att skriva med AEM. (1) Första steget för författare - en introduktion för nya författare och (2) Snabbguide till redigeringssidor - en snabbguide (på hög nivå) till de viktigaste åtgärderna.
-seo-description: Det finns två översikter att skriva med AEM. (1) Första steget för författare - en introduktion för nya författare och (2) Snabbguide till redigeringssidor - en snabbguide (på hög nivå) till de viktigaste åtgärderna.
+seo-description: There are two overviews to authoring with AEM. (1) First Steps for Authors - an introduction for new authors, and (2) Quick Guide to Authoring Pages - a quick guide (high-level) to the main actions.
 uuid: 95d12bd6-c51d-4b7c-9d67-a152a822eb01
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 3fe5b6cc-1494-43e1-add7-2f7828b676ad
-translation-type: tm+mt
-source-git-commit: 040f776ee6a164cec57685f8a010ec82fd8bb48b
+exl-id: be2465a5-8875-4c9c-bd0d-32631b0fe294
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '334'
 ht-degree: 0%
 
 ---
 
-
 # Redigeringssidor{#authoring-pages}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Här följer en översikt över redigering med AEM:
 
-* [Steg 1 för författare](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md)  - en introduktion för nya författare
+* [Steg 1 för författare](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md) - en introduktion för nya författare
 
 >[!NOTE]
 >
@@ -32,24 +35,23 @@ Här följer en översikt över redigering med AEM:
 
 För att underlätta utvecklingen av sidor innehåller redigeringsmiljön funktioner som:
 
-* **Du kan dra och**
-släppa komponenter (t.ex. text, bild) och digitala resurser (t.ex. bilder) på sidan genom att dra och släppa dem på önskad plats.
+* **Dra och släpp**
+Komponenter (t.ex. Text, Bild) och digitala resurser (t.ex. bilder) kan placeras på sidan genom att dra och släppa dem på önskad plats.
 
-* **RedigeringNär du har placerat**
-den på sidan kan du öppna en komponentspecifik dialogruta där du kan ange innehåll och/eller konfigurera egenskaper för komponenten (till exempel bildstorlek).
+* **Redigering**
+När du har placerat den på sidan kan du öppna en komponentspecifik dialogruta där du kan ange komponentens innehåll och/eller konfigurera egenskaper (till exempel bildstorlek).
 
-* **Du kan redigera text- och**
-bildkomponenter direkt på webbsidan utan att öppna en dialogruta eller någon explicit sparåtgärd.
+* **In-place Editing**
+Text- och bildkomponenter kan redigeras direkt på webbsidan utan att du behöver öppna en dialogruta eller någon explicit sparåtgärd.
 
-* **[](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekickclassicui)**
-SidekickEtt flytande &quot;inspektörsfönster&quot; som visas på den redigerbara sidan. Härifrån kan nya komponenter dras till sidan och sidspecifika åtgärder kan utföras.
+* **[Sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekickclassicui)**
+Ett flytande &quot;kontrollfönster&quot; som visas på den redigerbara sidan. Härifrån kan nya komponenter dras till sidan och sidspecifika åtgärder kan utföras.
 
-* **[InnehållssökningPå vänster sida av varje redigerbar sida ger innehållssökaren snabb åtkomst till en rad olika resurser, inklusive digitala resurser (som andra bilder, element och dokument i Flash), andra sidor och stycken.](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#thecontentfinderclassicui)**
-Dessa objekt kan dras till sidan; till exempel för att placera resurser eller skapa länkar till andra sidor.
+* **[Content Finder](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#thecontentfinderclassicui)**
+Till vänster på varje redigerbar sida ger innehållssökaren snabb åtkomst till en rad olika resurser, inklusive digitala resurser (som andra bilder, element och dokument i Flash), andra sidor och stycken. Dessa objekt kan dras till sidan; till exempel för att placera resurser eller skapa länkar till andra sidor.
 
-* **SnabbmenyHögerklick**
-på de flesta element på skärmen (t.ex. stycken på sidan) öppnar en snabbmeny med lämpliga åtgärdsalternativ.
+* **Snabbmeny**
+Högerklick på de flesta element på skärmen (till exempel stycken på sidan) öppnar en snabbmeny med lämpliga åtgärdsalternativ.
 
-* **Sök när du**
-skriverI vissa scenarier (t.ex. sökvägsval i redigeringsdialogrutor) visas dynamiska träffar när du skriver frågan när du söker efter innehåll via AEM.
-
+* **Sök medan du skriver**
+I vissa scenarier (t.ex. sökvägsval i redigeringsdialogrutor) visas dynamiska matchningar när du skriver frågan när du söker efter innehåll via AEM.

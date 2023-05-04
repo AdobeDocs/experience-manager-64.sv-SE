@@ -1,23 +1,26 @@
 ---
 title: Anpassa listan över processinstanser
-seo-title: Anpassa listan över processinstanser
+seo-title: Customizing the listing of process instances
 description: Anpassa egenskaperna som visas i processinstansen i AEM Forms arbetsyta.
-seo-description: Anpassa egenskaperna som visas i processinstansen i AEM Forms arbetsyta.
+seo-description: How-to customize the properties displayed in process instance in AEM Forms workspace.
 uuid: 3b55d9b9-7f73-46dd-9eb6-42be218440a1
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 40d7d43f-ee0a-4e34-ae93-20c9c940f76b
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: e7b8206c-bac2-48a6-b353-d06bc73b29f9
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
 
-
 # Anpassa listan över processinstanser {#customizing-the-listing-of-process-instances}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Processinstanslistan visas på fliken Spåra i AEM Forms arbetsyta.
 
@@ -51,7 +54,7 @@ I processinstanslistan visar AEM Forms-arbetsytan några egenskaper för den ins
   </tr> 
   <tr> 
    <td>processInstanceStatus</td> 
-   <td>0 = Initierad<br /> 1 = Körning<br /> 2 = Fullständig<br /> 3 = Slutför<br /> 4 = Avbruten<br /> 5 = Avsluta<br /> 6 = Upphävd<br /> 7 = Upphävande<br /> 8 = Upphävande</td> 
+   <td>0 = Initierad<br /> 1 = Körs<br /> 2 = Fullständigt<br /> 3 = Slutför<br /> 4 = Avbruten<br /> 5 = Avslutar<br /> 6 = Uppskjuten<br /> 7 = Pausa<br /> 8 = Upphäv upphängning</td> 
   </tr> 
   <tr> 
    <td>processName</td> 
@@ -63,19 +66,19 @@ I processinstanslistan visar AEM Forms-arbetsytan några egenskaper för den ins
   </tr> 
   <tr> 
    <td>processVariables</td> 
-   <td>Array med objekt av processvariabler. Varje processvariabelobjekt innehåller <strong>namn</strong> (namnet på processvariabeln), <strong>värde</strong> (värdet på processvariabeln) och<strong> typ</strong> (typen av processvariabel).</td> 
+   <td>Array med objekt av processvariabler. Varje processvariabelobjekt innehåller <strong>name</strong> (processvariabelns namn), <strong>value</strong> (processvariabelns värde), och<strong> type</strong> (typ av processvariabel).</td> 
   </tr> 
  </tbody> 
 </table>
 
 **Exempel:**
 
-Utför följande steg för att visa egenskapen `description` för processinstansen i processinstanskortet.
+Visa `description` utför följande steg för processinstansens egenskap på processinstanskortet.
 
-1. Följ de allmänna [stegen för anpassning av arbetsytan i AEM Forms](/help/forms/using/generic-steps-html-workspace-customization.md).
+1. Följ [Allmänna steg för anpassning av AEM Forms arbetsyta](/help/forms/using/generic-steps-html-workspace-customization.md).
 1. Gör följande:
 
-   1. Kopiera /libs/ws/js/runtime/templates/processinstance.html till/apps/ws/js/runtime/templates/, om den inte finns. Klicka på **Spara alla**.
+   1. Kopiera /libs/ws/js/runtime/templates/processinstance.html till/apps/ws/js/runtime/templates/, om den inte finns. Klicka **Spara alla**.
    1. Lägg till processbeskrivning div med klass = &#39;processDescription&#39; inprocessinstance.html.
 
    ```
@@ -85,7 +88,7 @@ Utför följande steg för att visa egenskapen `description` för processinstans
 1. Gör följande:
 
    1. Öppna /apps/ws/js/registry.js för redigering.
-   1. Sök och ersätt `text!/lc/libs/ws/js/runtime/templates/processinstance.html`med `text!/lc/`**program**/ws/js/runtime/templates/processinstance.html.
+   1. Söka och ersätta `text!/lc/libs/ws/js/runtime/templates/processinstance.html`med `text!/lc/`**appar**/ws/js/runtime/templates/processinstance.html.
 
 1. Ovanstående ändringar kan kräva en uppdatering av CSS-filen genom att lägga till en post i formatmallen /apps/ws/css/newStyle.css på följande sätt:
 

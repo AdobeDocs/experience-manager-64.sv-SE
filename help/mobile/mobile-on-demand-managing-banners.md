@@ -1,24 +1,27 @@
 ---
 title: Hantera banners
-seo-title: Hantera banners
+seo-title: Managing Banners
 description: Banderoller representerar vanligtvis grafiska marknadsföringslänkar. Följ den här sidan om du vill veta mer.
-seo-description: Banderoller representerar vanligtvis grafiska marknadsföringslänkar. Följ den här sidan om du vill veta mer.
+seo-description: Banners represent typically graphical promotional links. Follow this page to learn more.
 uuid: 593fe2ef-84df-42e2-8a03-897fb67a896d
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: fb1abaa0-9c02-4f20-aa7c-073def067452
-translation-type: tm+mt
-source-git-commit: 55b6a113bcb4d39b7eb100f21a05b9b44e3fe1c3
+exl-id: 516a052d-dfe7-42fd-be38-397e92868814
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
 
-
 # Hantera banners{#managing-banners}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
@@ -26,7 +29,7 @@ ht-degree: 0%
 
 Innehållshanteringsåtgärder är byggstenar som används för att skapa och hantera innehåll i ett program. Följande åtgärder utförs på innehåll i programmet.
 
-## Banderoller - översikt {#banners-overview}
+## Banners - översikt {#banners-overview}
 
 Banderoller representerar vanligtvis grafiska marknadsföringslänkar.
 
@@ -34,13 +37,10 @@ Banderoller representerar vanligtvis grafiska marknadsföringslänkar.
 >
 >Läs följande resurser i onlinehjälpen om du vill veta mer om följande ämnen i AEM Mobile-program:
 >
->* [Att tänka på vid design](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
-   >
-   >
-* [Skapa banners](https://helpx.adobe.com/digital-publishing-solution/help/creating-banners.html)
-
+>* [Designöverväganden](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
 >
-
+>* [Skapa banners](https://helpx.adobe.com/digital-publishing-solution/help/creating-banners.html)
+>
 
 
 ## Skapa en banderoll {#creating-a-banner}
@@ -49,10 +49,10 @@ Det allmänna arbetsflödet för att skapa en artikel är följande:
 
 1. Välj **Mobil** från sidospåret.
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Klicka på nedpilen i det övre högra hörnet av rutan **Hantera banderoller**.
+1. Klicka på nedpilen i det övre högra hörnet av **Hantera banners** platta.
 1. Gå igenom varje steg i guiden för att fortsätta skapa din nya banderoll.
 1. När du är klar klickar du på **Skapa**.
-1. Din nya banderoll visas i **Manage Banners**-rutan.
+1. Din nya banderoll visas i **Hantera banners** platta.
 
 ![chlimage_1-6](assets/chlimage_1-6.gif)
 
@@ -67,9 +67,9 @@ Befintligt mobilt On-Demand-innehåll kan hämtas (importeras) från Mobile On-D
 Arbetsflödet för att importera en ny artikel
 
 1. Välj mobilapp i katalogen i Mobile On-Demand-appen.
-1. Klicka på nedpilen i det övre högra hörnet av rutan **Hantera banderoller** och välj Importera banderoller.
-1. Klicka på **Importera banderoll** i dialogrutan och sedan på Stäng.
-1. Dina artiklar för mobil on demand visas nu i **Manage Banners**-panelen.
+1. Klicka på nedpilen i det övre högra hörnet av **Hantera banners** och välj Importera banderoller.
+1. Klicka **Importera banderoll** i dialogrutan och sedan Stäng.
+1. Dina artiklar om mobil on demand visas nu i **Hantera banners** platta.
 
 >[!CAUTION]
 >
@@ -97,39 +97,39 @@ Banderoller har flera egenskaper som titlar, beskrivningar och bilder. Den här 
 Det allmänna arbetsflödet för att visa/redigera en artikel:
 
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Välj en banderoll i rutan **Hantera banderoller**.
+1. Välj en banderoll på menyn **Hantera banners** platta.
 
 1. Välj **Egenskaper** i åtgärdsfältet.
 1. Visa alla tillgängliga metadata för artikeln.
-1. Redigera metadata vid behov och klicka på **Spara** när du är klar.
+1. Redigera metadata vid behov och klicka på **Spara** när det är klart.
 1. Du kan också ladda upp ändringarna direkt till Mobile On-Demand.
 
-## Överför en banderoll {#uploading-a-banner}
+## Överföra en banderoll {#uploading-a-banner}
 
 Överföringsåtgärden kopierar det markerade innehållet och lägger till det i ett Mobile On-Demand-projekt. Redan befintligt Mobile On-Demand-innehåll ersätts av den nya versionen.
 
 Det allmänna arbetsflödet för att överföra en banderoll:
 
-1. Från **Mobile** väljer du appen Mobile On-Demand i katalogen.
-1. I rutan **Hantera banners** väljer du en banner för överföring till Mobile On-Demand.
+1. Från **Mobil** väljer du mobilappen på begäran i katalogen.
+1. I **Hantera banners** väljer du en banderoll för överföring till Mobile On-Demand.
 1. Lägg till fler banners om det behövs från listvyn.
-1. Välj **Överför** från åtgärdsfältet och klicka sedan på Överför i dialogrutan.
+1. Välj **Överför** i åtgärdsfältet och klicka sedan på Överför i dialogrutan.
 1. Din banderoll har nu överförts till Mobile On-Demand.
 
 ![chlimage_1-7](assets/chlimage_1-7.gif)
 
-## Tar bort en banderoll {#deleting-a-banner}
+## Ta bort en banderoll {#deleting-a-banner}
 
 Den här åtgärden tar bort den markerade banderollen från Mobile On-Demand och eventuellt från den lokala AEM.
 
 Det allmänna arbetsflödet för att ta bort en banderoll:
 
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Markera den banderoll som ska tas bort i rutan **Hantera banderoller**.
+1. Markera den banderoll som ska tas bort i **Hantera banners** platta.
 1. Se till att det är markerat i listan (markera andra att ta bort efter behov).
-1. Klicka på **Ta bort** från åtgärdsfältet.
+1. Klicka **Ta bort** i åtgärdsfältet.
 1. Kontrollera om du vill ta bort från AEM och Mobile On-Demand.
-1. Klicka på **Ta bort**.
+1. Klicka **Ta bort**.
 1. Din banderoll har nu tagits bort från listan.
 
 ### Nästa steg {#the-next-steps}

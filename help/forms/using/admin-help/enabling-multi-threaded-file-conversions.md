@@ -1,8 +1,8 @@
 ---
 title: Aktivera filkonvertering med flera trådar
-seo-title: Aktivera filkonvertering med flera trådar
+seo-title: Enabling multi-threaded file conversions
 description: Lär dig hur du aktiverar filkonvertering med flera trådar.
-seo-description: Lär dig hur du aktiverar filkonvertering med flera trådar.
+seo-description: Learn how to enable multi-threaded file conversions.
 uuid: 830c78aa-4f68-4e01-8b24-69a0275689c7
 contentOwner: admin
 content-type: reference
@@ -10,22 +10,25 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 85d655bb-1b6b-4b4d-ae39-eca3ef9b7fd7
 feature: PDF Generator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: f0441588-7c16-40ab-841f-e89576a0d292
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '905'
 ht-degree: 0%
 
 ---
 
+# Aktivera filkonvertering med flera trådar {#enabling-multi-threaded-file-conversions}
 
-# Aktivera filkonverteringar med flera trådar {#enabling-multi-threaded-file-conversions}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-Med PDF Generator kan du aktivera flertrådiga filkonverteringar för vissa typer av filer. Konvertering av flertrådade filer förbättrar prestanda för PDF Generator genom att det kan utföra flera konverteringar samtidigt.
+PDF Generator gör det möjligt att aktivera flertrådiga filkonverteringar för vissa typer av filer. Konvertering av flertrådade filer förbättrar prestanda för PDF Generator genom att det kan utföra flera konverteringar samtidigt.
 
-## Aktivera filkonverteringar med flera trådar för OpenOffice-, Word- och PowerPoint-dokument {#enabling-multi-threaded-file-conversions-for-openoffice-word-and-powerpoint-documents}
+## Möjliggör flertrådskonvertering av dokument i OpenOffice, Word och PowerPoint {#enabling-multi-threaded-file-conversions-for-openoffice-word-and-powerpoint-documents}
 
-Som standard kan PDF Generator bara konvertera ett OpenOffice-, Microsoft Word- eller PowerPoint-dokument åt gången. Om du aktiverar flertrådskonvertering kan PDF Generator konvertera fler än ett av dokumenten samtidigt. PDF Generator startar flera instanser av OpenOffice eller PDFMaker (används för att utföra Word- och PowerPoint-konverteringar).
+Som standard kan PDF Generator endast konvertera ett OpenOffice-, Microsoft Word- eller PowerPoint-dokument åt gången. Om du aktiverar flertrådskonvertering kan PDF Generator konvertera fler än ett av dokumenten samtidigt. PDF Generator startar flera instanser av OpenOffice eller PDFMaker (används för att utföra Word- och PowerPoint-konverteringar).
 
 >[!NOTE]
 >
@@ -43,10 +46,10 @@ När du lägger till användare för OpenOffice, Microsoft Word eller Microsoft 
 
 ### Lägg till rättigheten att ersätta token på processnivå {#add-the-right-to-replace-the-process-level-token}
 
-I ett Windows-operativsystem måste administratörens användarkonton som används för PDF-konvertering (PDFG-användare) ersätta tokenbehörighet på processnivå. Du kan lägga till den här rättigheten med hjälp av grupprincipredigeraren:
+I ett Windows-operativsystem måste administratörsanvändarkonton som används för PDF-konvertering (PDFG-användare) ersätta tokenbehörighet på processnivå. Du kan lägga till den här rättigheten med hjälp av grupprincipredigeraren:
 
 1. Klicka på Kör på Start-menyn i Windows och ange gpedit.msc.
-1. Klicka på Lokal datorprincip > Datorkonfiguration > Windows-inställningar > Skyddsinställningar > Lokala principer > Tilldelning av användarrättigheter. Redigera *Ersätt en token på processnivå*-principen om du vill ta med gruppen Administratörer.
+1. Klicka på Lokal datorprincip > Datorkonfiguration > Windows-inställningar > Skyddsinställningar > Lokala principer > Tilldelning av användarrättigheter. Redigera *Ersätta en processnivåtoken* princip som ska inkludera gruppen Administratörer.
 1. Lägg till användaren i posten Ersätt en processnivåtoken.
 
 ### Ytterligare konfiguration krävs för OpenOffice, Microsoft Word och Microsoft PowerPoint på Windows Server 2008 {#additional-configuration-required-for-openoffice-microsoft-word-and-microsoft-powerpoint-on-windows-server-2008}
@@ -72,7 +75,7 @@ Om du kör OpenOffice, Microsoft Word eller Microsoft PowerPoint på Windows Ser
 
    >[!NOTE]
    >
-   >Se till att du har tilldelat användarrollerna system och PDFG till user1 och user2. Information om hur du tilldelar PDFG-roll till en användare finns i [Lägga till ett användarkonto](enabling-multi-threaded-file-conversions.md#add-a-user-account)
+   >Se till att du har tilldelat användarrollerna system och PDFG till user1 och user2. Information om hur du tilldelar PDFG-roll till en användare finns i [Lägg till ett användarkonto](enabling-multi-threaded-file-conversions.md#add-a-user-account)
 
 1. I /etc/sudoers-filen kan du söka efter och kommentera den här raden genom att lägga till ett nummertecken (#) i början av raden:
 
@@ -83,7 +86,7 @@ Om du kör OpenOffice, Microsoft Word eller Microsoft PowerPoint på Windows Ser
    Detta gör att du kan lägga till Linux-användare.
 
 1. Ändra behörigheten för filen etc/sudoers tillbaka till 440.
-1. Tillåt alla användare som du har lagt till via [Lägg till ett användarkonto](enabling-multi-threaded-file-conversions.md#add-a-user-account) att ansluta till formulärservern. Om du till exempel vill ge en lokal användare med namnet user1 behörighet att ansluta till formulärservern använder du följande kommando
+1. Tillåt alla användare som du har lagt till via [Lägg till ett användarkonto](enabling-multi-threaded-file-conversions.md#add-a-user-account) för att ansluta till formulärservern. Om du till exempel vill ge en lokal användare med namnet user1 behörighet att ansluta till formulärservern använder du följande kommando
 
    `xhost +local:user1@`
 
@@ -106,7 +109,7 @@ Om du kör OpenOffice, Microsoft Word eller Microsoft PowerPoint på Windows Ser
 
 1. Starta om formulärservern.
 
-### Ta bort en användare från listan som används för filkonverteringar med flera trådar {#remove-a-user-from-the-list-used-for-multi-threaded-file-conversions}
+### Ta bort en användare från listan som används för filkonvertering med flera trådar {#remove-a-user-from-the-list-used-for-multi-threaded-file-conversions}
 
 1. I administrationskonsolen klickar du på Tjänster > PDF Generator > Användarkonton.
 1. Klicka i kryssrutan bredvid användaren som du vill ta bort och klicka på Ta bort.
@@ -117,4 +120,3 @@ Om du kör OpenOffice, Microsoft Word eller Microsoft PowerPoint på Windows Ser
 
 1. I administrationskonsolen klickar du på Tjänster > PDF Generator > Användarkonton.
 1. Klicka på användarnamnet och ange och bekräfta det nya lösenordet. Lösenordet måste matcha användarens systemlösenord.
-

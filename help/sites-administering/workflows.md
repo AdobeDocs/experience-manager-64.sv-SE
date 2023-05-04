@@ -1,24 +1,27 @@
 ---
 title: Administrera arbetsflöden
-seo-title: Administrera arbetsflöden
+seo-title: Administering Workflows
 description: Lär dig hur du administrerar arbetsflöden i AEM.
-seo-description: Lär dig hur du administrerar arbetsflöden i AEM.
+seo-description: Learn how to administer workflows in AEM.
 uuid: d000a13c-97cb-4b1b-809e-6c3eb0d675e8
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: 4b09cd44-434e-4834-bc0d-c9c082a4ba5a
-translation-type: tm+mt
-source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+exl-id: e57b7a69-6e25-4066-ad7a-917969cebbe8
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
 
-
 # Administrera arbetsflöden{#administering-workflows}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Med arbetsflöden kan du automatisera Adobe Experience Manager-aktiviteter (AEM). Arbetsflöden:
 
@@ -41,15 +44,13 @@ De affärsprocesser som din organisation har etablerat kan representeras som arb
 >
 >* Använda och delta i arbetsflöden: [Arbeta med arbetsflöden](/help/sites-authoring/workflows.md).
 >* Skapa arbetsflödesmodeller och utöka arbetsflödesfunktioner: [Utveckla och utöka arbetsflöden](/help/sites-developing/workflows.md).
->* Förbättra prestanda för arbetsflöden som använder betydande serverresurser: [Samtidig arbetsflödesbearbetning](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing).
-
+>* Förbättra prestanda för arbetsflöden som använder betydande serverresurser: [Samtidig bearbetning av arbetsflöden](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing).
 >
-
 
 
 ## Arbetsflödesmodeller och instanser {#workflow-models-and-instances}
 
-[Arbetsflödesmodelli ](/help/sites-developing/workflows.md#model) AEM representerar och implementerar affärsprocesser:
+[Arbetsflödesmodeller](/help/sites-developing/workflows.md#model) AEM representeras och implementeras affärsprocesser:
 
 * Vanligtvis arbetar de med sidor eller resurser för att uppnå ett visst resultat.
 * Dessa sidor och/eller resurser kallas arbetsflödets nyttolast.
@@ -60,7 +61,7 @@ När en arbetsflödesmodell startas (körs) skapas en arbetsflödesinstans. En a
 
 >[!CAUTION]
 >
->Stegen som utförs är de som definieras av arbetsflödesmodellen *när instansen skapas*. Mer information finns i [Utveckla arbetsflöden](/help/sites-developing/workflows.md#model).
+>Stegen som utförs är de som definieras av arbetsflödesmodellen *när instansen genereras*. Se [Utveckla arbetsflöden](/help/sites-developing/workflows.md#model) för mer information.
 
 Arbetsflödesinstanser går igenom följande livscykel:
 
@@ -90,24 +91,23 @@ Antingen utför en användare eller tjänst arbetsflödessteg beroende på typ a
 >
 >Om ett fel inträffar bör tjänste-/stegimplementeringen hantera beteendet för ett felscenario. Arbetsflödesmotorn kommer själv att försöka utföra jobbet igen, logga ett fel och stoppa instansen.
 
-## Arbetsflödesstatus och åtgärder {#workflow-status-and-actions}
+## Arbetsflödets status och åtgärder {#workflow-status-and-actions}
 
 Ett arbetsflöde kan ha någon av följande status:
 
 * **KÖRS**: Arbetsflödesinstansen körs.
-* **SLUTFÖRT**: Arbetsflödesinstansen har avslutats.
+* **SLUTFÖRD**: Arbetsflödesinstansen har avslutats.
 
-* **UPPSKJUTEN**: Arbetsflödesinstansen har inaktiverats.
+* **UPPHÄVD**: Arbetsflödesinstansen har inaktiverats.
 * **AVBRUTEN**: Arbetsflödesinstansen har avslutats.
 * **STAL**: Progression av arbetsflödesinstansen kräver att ett bakgrundsjobb körs, men jobbet kan inte hittas i systemet. Detta kan inträffa när ett fel inträffar när arbetsflödet körs.
 
 >[!NOTE]
 >
->När körningen av ett processsteg resulterar i fel visas steget i administratörens inkorg och arbetsflödets status är **RUNNING**.
+>När körningen av ett processteg resulterar i fel visas steget i administratörens inkorg och arbetsflödets status är **KÖRS**.
 
 Beroende på aktuell status kan du utföra åtgärder för att köra arbetsflödesinstanser när du behöver ingripa i den normala förloppet för en arbetsflödesinstans:
 
 * **Gör uppehåll**: Stoppar tillfälligt körningen av arbetsflödet. Att göra uppehåll är användbart i undantagsfall när du inte vill att arbetsflödet ska fortsätta, t.ex. för underhåll. När du gör uppehåll ändras arbetsflödets status till Pausat.
 * **Återuppta**: Startar om ett pausat arbetsflöde på samma plats där det pausades, med samma konfiguration.
-* **Avsluta**: Avslutar arbetsflödets körning och ändrar tillståndet till  **ABORTED**. En avbruten arbetsflödesinstans kan inte startas om.
-
+* **Avsluta**: Slutar arbetsflödets körning och ändrar tillståndet till **AVBRUTEN**. En avbruten arbetsflödesinstans kan inte startas om.

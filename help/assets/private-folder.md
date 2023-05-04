@@ -5,22 +5,26 @@ contentOwner: AG
 feature: Collaboration
 role: User
 exl-id: b6aa3cba-4085-47ac-a249-7461baee2a00
-source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '469'
 ht-degree: 7%
 
 ---
 
 # Delning av privata mappar {#private-folder-sharing}
 
-Du kan skapa en privat mapp i Adobe Experience Manager Assets-användargränssnittet som är exklusivt tillgänglig för dig. Du kan dela den här privata mappen med andra användare och tilldela olika behörigheter till dem. Beroende på vilken behörighetsnivå du tilldelar kan användare utföra olika åtgärder i mappen, till exempel visa resurser i mappen eller redigera resurserna.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-1. I resurskonsolen trycker/klickar du på **[!UICONTROL Create]** i verktygsfältet och väljer sedan **[!UICONTROL Folder]** på menyn.
+Du kan skapa en privat mapp i användargränssnittet för Adobe Experience Manager Assets som är exklusivt tillgänglig för dig. Du kan dela den här privata mappen med andra användare och tilldela olika behörigheter till dem. Beroende på vilken behörighetsnivå du tilldelar kan användare utföra olika åtgärder i mappen, till exempel visa resurser i mappen eller redigera resurserna.
+
+1. Tryck/klicka på i resurskonsolen **[!UICONTROL Create]** i verktygsfältet och välj **[!UICONTROL Folder]** på menyn.
 
    ![chlimage_1-411](assets/chlimage_1-411.png)
 
-1. I dialogrutan **[!UICONTROL Add Folder]** anger du en rubrik och ett namn (valfritt) för mappen och väljer **[!UICONTROL Private]**.
+1. I **[!UICONTROL Add Folder]** anger du en rubrik och ett namn (valfritt) för mappen och väljer **[!UICONTROL Private]**.
 
    ![chlimage_1-412](assets/chlimage_1-412.png)
 
@@ -36,7 +40,7 @@ Du kan skapa en privat mapp i Adobe Experience Manager Assets-användargränssni
    >
    >Mappen visas inte för andra användare förrän du delar den.
 
-1. På sidan Mappegenskaper väljer du en användare i listan **[!UICONTROL Add User]**, tilldelar en roll till användaren i din privata mapp och klickar på **[!UICONTROL Add]**.
+1. Välj en användare på sidan Mappegenskaper **[!UICONTROL Add User]** lista, tilldela en roll till användaren i din privata mapp och klicka på **[!UICONTROL Add]**.
 
    ![chlimage_1-415](assets/chlimage_1-415.png)
 
@@ -45,8 +49,8 @@ Du kan skapa en privat mapp i Adobe Experience Manager Assets-användargränssni
    >Du kan tilldela olika roller, till exempel redigeraren, ägaren eller visningsprogrammet, till användaren som du delar mappen med. Om du tilldelar användaren en ägarroll har användaren redigeringsbehörighet för mappen. Dessutom kan användaren dela mappen med andra. Om du tilldelar en redigeringsroll kan användaren redigera resurserna i din privata mapp. Om du tilldelar en visningsprogramroll kan användaren bara visa resurserna i din privata mapp.
 
 1. Klicka på **[!UICONTROL Save]**. Beroende på vilken roll du tilldelar tilldelas användaren en uppsättning behörigheter i din privata mapp när användaren loggar in på [!DNL Experience Manager] Resurser.
-1. Klicka på **[!UICONTROL Ok]** för att stänga bekräftelsemeddelandet.
-1. Användaren som du delar mappen med får ett delningsmeddelande. Logga in på [!DNL Experience Manager] Resurser med inloggningsuppgifterna för användaren för att visa meddelandet.
+1. Klicka **[!UICONTROL Ok]** för att stänga bekräftelsemeddelandet.
+1. Användaren som du delar mappen med får ett delningsmeddelande. Logga in på [!DNL Experience Manager] Resurser med användarens autentiseringsuppgifter för att visa meddelandet.
 
    ![chlimage_1-416](assets/chlimage_1-416.png)
 
@@ -58,4 +62,4 @@ Du kan skapa en privat mapp i Adobe Experience Manager Assets-användargränssni
 
 >[!NOTE]
 >
->Om du vill kunna skapa en privat mapp måste du ha behörigheten Läs och Redigera åtkomstkontrollista för den överordnade mappen som du vill skapa en privat mapp i. Om du inte är administratör aktiveras dessa behörigheter inte som standard för */content/dam*. I så fall måste du först skaffa dessa behörigheter för ditt användar-ID/din grupp innan du försöker skapa privata mappar eller visa mappinställningar.
+>Om du vill kunna skapa en privat mapp måste du ha behörigheten Läs och Redigera åtkomstkontrollista för den överordnade mappen som du vill skapa en privat mapp i. Om du inte är administratör är dessa behörigheter inte aktiverade för dig som standard */content/dam*. I så fall måste du först skaffa dessa behörigheter för ditt användar-ID/din grupp innan du försöker skapa privata mappar eller visa mappinställningar.

@@ -1,8 +1,8 @@
 ---
 title: Felsökning av replikering
-seo-title: Felsökning av replikering
+seo-title: Troubleshooting Replication
 description: I den här artikeln finns information om hur du felsöker replikeringsproblem.
-seo-description: I den här artikeln finns information om hur du felsöker replikeringsproblem.
+seo-description: This article provides information on how to troubleshoot replication issues.
 uuid: 7c3fdaad-0916-4159-a26c-17ff8c6617fe
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,16 +10,19 @@ content-type: reference
 topic-tags: configuring
 discoiquuid: e862c8a9-b5b6-4857-a154-03d3ffac3e67
 feature: Configuring
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: e83317bb-e69c-4e2c-92f8-4f613786e7ae
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1283'
+source-wordcount: '1306'
 ht-degree: 0%
 
 ---
 
-
 # Felsökning av replikering{#troubleshooting-replication}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Den här sidan innehåller information om hur du felsöker replikeringsproblem.
 
@@ -43,7 +46,7 @@ Kontrollera detta genom att gå till /etc/replication/agents.author.html och sed
 
 **Om en agentkö eller ett fåtal agentköer har fastnat:**
 
-1. Visar kön **statusen Blockerad**? Om så är fallet, körs inte publiceringsinstansen eller svarar den inte alls? Kontrollera publiceringsinstansen för att se vad som är fel med den (d.v.s. kontrollera loggarna och se om det finns ett OutOfMemory-fel eller något annat problem. Om det sedan är långsamt tar du tråd och analyserar dem.
+1. Visas kön **blockerad** status? Om så är fallet, körs inte publiceringsinstansen eller svarar den inte alls? Kontrollera publiceringsinstansen för att se vad som är fel med den (d.v.s. kontrollera loggarna och se om det finns ett OutOfMemory-fel eller något annat problem. Om det sedan är långsamt tar du tråd och analyserar dem.
 1. Visar köstatusen **Kön är aktiv - # väntande**? Replikeringsjobbet kan i princip fastna i en socketläsning i väntan på att publiceringsinstansen eller dispatchern ska svara. Det kan innebära att publiceringsinstansen eller dispatchern är under hög belastning eller sitter fast i ett lås. Ta tråddumpar från författaren och publicera i det här fallet.
 
    * Öppna trådsdumpar från författaren i en tråddumpsanalyserare, kontrollera om det visar att replikeringsagentens snedningsjobb har fastnat i en socketRead.
@@ -53,11 +56,11 @@ Kontrollera detta genom att gå till /etc/replication/agents.author.html och sed
 
 1. Det är möjligt att en viss del av innehållet inte kan serialiseras under /var/replication/data på grund av att databasen är skadad eller något annat problem. Kontrollera om det finns ett relaterat fel i logs/error.log. Så här rensar du bort det felaktiga replikeringsobjektet:
 
-   1. Gå till https://&lt;host>:&lt;port>/crx och logga in som admin-användare. I CQ5.5 går du till https://&lt;host>:&lt;port>/crx/explorer i stället.
+   1. Gå till https://&lt;host>:&lt;port>/crx och logga in som admin-användare. CQ5.5 finns på https://&lt;host>:&lt;port>/crx/explorer i stället.
    1. Klicka på &quot;Innehållsutforskaren&quot;.
    1. I fönstret &quot;Innehållsutforskaren&quot; klickar du på förstoringsglaset längst upp till höger i fönstret så öppnas en sökdialogruta.
    1. Välj alternativknappen &quot;XPath&quot;.
-   1. I rutan Fråga anger du den här frågan /jcr:root/var/eventing/job//element(&amp;ast;,slingevent:Job) efter @slingevent:created
+   1. I rutan Fråga anger du den här frågans/jcr:root/var/eventing/job//element(&amp;ast;,slingevent:Job) sortering av @slingevent:created
    1. Klicka på Sök
    1. I resultatet är de viktigaste objekten de senaste snedsättningsjobben. Klicka på var och en av dem och hitta de replikeringar som matchar det som visas högst upp i kön.
 
@@ -76,7 +79,7 @@ Kontrollera detta genom att gå till /etc/replication/agents.author.html och sed
 Ibland kan det vara praktiskt att ange att all replikeringsloggning ska läggas till i en separat loggfil på DEBUG-nivå. Så här gör du:
 
 1. Gå till `https://host:port/system/console/configMgr` och logga in som administratör.
-1. Hitta Apache Sling Logging Logger-fabriken och skapa en instans genom att klicka på knappen **+** till höger om fabrikskonfigurationen. Detta skapar en ny loggningslogg.
+1. Hitta fabriken Apache Sling Logging Logger och skapa en instans genom att klicka på **+** till höger om fabrikskonfigurationen. Detta skapar en ny loggningslogg.
 1. Ställ in konfigurationen så här:
 
    * Loggnivå: FELSÖKNING
@@ -85,7 +88,7 @@ Ibland kan det vara praktiskt att ange att all replikeringsloggning ska läggas 
 
 1. Om du misstänker att problemet är relaterat till snedstreck/jobb på något sätt kan du även lägga till det här java-paketet under kategorier:org.apache.sling.event
 
-### Pausar kön för replikeringsagent {#pausing-replication-agent-queue}
+### Pausar kön för replikeringsagent  {#pausing-replication-agent-queue}
 
 Ibland kan det vara lämpligt att pausa replikeringskön för att minska belastningen på författarsystemet, utan att inaktivera den. För närvarande är detta endast möjligt om en port konfigureras tillfälligt. Från och med 5.4 kan du se pausknappen i replikeringsagentkön. Den har vissa begränsningar
 
@@ -98,19 +101,18 @@ Sidbehörigheter replikeras inte eftersom de lagras under noderna som åtkomst b
 
 I allmänhet bör inte sidbehörigheter replikeras från författaren till publiceringen och är inte standard. Detta beror på att åtkomsträttigheterna bör vara olika i dessa två miljöer. Därför rekommenderar vi att du konfigurerar åtkomstkontrollistor vid publicering separat från författaren.
 
-### Replikeringskön har blockerats vid replikering av namnområdesinformation från författaren till publiceringen {#replication-queue-blocked-when-replicating-namespace-information-from-author-to-publish}
+### Replikeringskön har blockerats vid replikering av namnområdesinformation från författare till publicering {#replication-queue-blocked-when-replicating-namespace-information-from-author-to-publish}
 
-I vissa fall blockeras replikeringskön när du försöker replikera namnområdesinformation från författarinstansen till publiceringsinstansen. Detta beror på att replikeringsanvändaren inte har `jcr:namespaceManagement`-behörighet. Undvik problemet genom att se till att:
+I vissa fall blockeras replikeringskön när du försöker replikera namnområdesinformation från författarinstansen till publiceringsinstansen. Detta beror på att replikeringsanvändaren inte har `jcr:namespaceManagement` privilegium. Undvik problemet genom att se till att:
 
-* Replikeringsanvändaren (som konfigurerats under fliken [Transport](/help/sites-deploying/replication.md#replication-agents-configuration-parameters) User) finns också på Publish-instansen.
+* Replikeringsanvändaren (konfigurerad under [Transport](/help/sites-deploying/replication.md#replication-agents-configuration-parameters) tab>User) finns också på Publish-instansen.
 * Användaren har läs- och skrivbehörighet på sökvägen där innehållet är installerat.
-* Användaren har `jcr:namespaceManagement`-behörighet på databasnivå. Du kan bevilja privilegiet enligt följande:
+* Användaren har `jcr:namespaceManagement` behörighet på databasnivå. Du kan bevilja privilegiet enligt följande:
 
 1. Logga in på CRX/DE ( `http://localhost:4502/crx/de/index.jsp`) som administratör.
-1. Klicka på fliken **Åtkomstkontroll**.
+1. Klicka på **Åtkomstkontroll** -fliken.
 1. Välj **Databas**.
-1. Klicka på **Lägg till post** (plusikonen).
+1. Klicka **Lägg till post** (plusikonen).
 1. Ange användarens namn.
-1. Välj `jcr:namespaceManagement` i behörighetslistan.
+1. Välj `jcr:namespaceManagement` från listan över behörigheter.
 1. Klicka på OK.
-

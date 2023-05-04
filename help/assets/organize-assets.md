@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Asset Management,Search
 role: User
 exl-id: 41e083b3-e956-4346-9a99-008de2c6a169
-source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '839'
 ht-degree: 0%
 
 ---
 
 # Ordna dina digitala resurser {#organize-digital-assets}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Alla digitala resurser, metadata och innehåll i Microsoft Office- och PDF-dokument extraheras och görs sökbara. Sökning möjliggör avancerad filtrering av resurser och respekterar fullt ut rätt behörigheter. Metadata beskrivs i detalj i metadata i Digital Asset Management.
 
@@ -23,20 +27,20 @@ Alla digitala resurser, metadata och innehåll i Microsoft Office- och PDF-dokum
 Det mest grundläggande sättet att ordna resurser är att spara dessa i mappar. Det motsvarar att ordna filer i mappar i vårt lokala filsystem. Mer information om hur du skapar och hanterar mappar finns i [Hantera resurser](managing-assets-touch-ui.md). Hur du namnger filer och mappar, hur du ordnar undermappar och hur du hanterar filerna i dessa mappar kan påverka hur dessa resurser bearbetas. Genom att använda enhetliga och lämpliga namngivningsstrategier för filer och mappar tillsammans med god metadatapraxis kan ni få ut det mesta av era digitala resurslager.
 
 * I de flesta fall växer din databas för digitala resurser. Därför är det viktigt att formalisera metadataanvändning, mappstruktur och filnamngivning tidigt när du skapar innehåll.
-* Använd endast mappar för att få en enhetlig lagringsstruktur för dina digitala resurser. Denna konsekvens hjälper er att hantera era resurser bättre. Resurser som placerats i följande typer av mappar kan till exempel hjälpa dig att använda lämpliga [profiler för resursbearbetning](processing-profiles.md):
+* Använd endast mappar för att få en enhetlig lagringsstruktur för dina digitala resurser. Denna konsekvens hjälper er att hantera era resurser bättre. Resurser som placerats i följande typer av mappar kan till exempel hjälpa dig att använda rätt [profiler som ska användas för bearbetning av tillgångar](processing-profiles.md):
 
-   * **Utvecklingsmappar**  - innehåller digitala resurser som du arbetar med just nu.
-   * **Klientmappar**  - innehåller digitala resurser baserade på klienter eller projektnamn.
-   * **Primära mappar**  - innehåller digitala källresurser.
-   * **Återgivningsmappar**  - innehåller återgivningar och kopior av det ursprungliga digitala källmaterialet.
-   * **Filstorleksmappar**  - innehåller digitala resurser baserade på små, medelstora eller stora filstorlekar.
-   * **Mellanlagringsmappar**  - innehåller digitala resurser som är klara att publiceras live på din webbplats.
-   * **MIME-typmappar**  - innehåller digitala resurser som är specifika för MIME-typer som bilder, dokument och multimedia.
-   * **Arkivmappar**  - innehåller kasserade digitala resurser.
-   * **Datumbaserade mappar**  - innehåller digitala resurser baserat på skapandedatum eller senaste ändringsdatum.
+   * **Utvecklingsmappar** - innehåller digitala resurser som du arbetar med just nu.
+   * **Klientmappar** - innehåller digitala resurser baserade på klienter eller projektnamn.
+   * **Primära mappar** - innehåller digitala källresurser.
+   * **Återgivningsmappar** - innehåller återgivningar och kopior av det ursprungliga digitala källmaterialet.
+   * **Filstorleksmappar** - innehåller digitala resurser baserade på små, medelstora eller stora filstorlekar.
+   * **Mellanlagringsmappar** - innehåller digitala resurser som är klara att publiceras live på din webbplats.
+   * **MIME-typmappar** - innehåller digitala resurser som är specifika för MIME-typer som bilder, dokument och multimedia.
+   * **Arkivera mappar** - innehåller pensionerade digitala resurser.
+   * **Datumbaserade mappar** - innehåller digitala resurser baserat på skapandedatum eller senaste ändringsdatum.
 
 * Skapa en katalog med mappar som troligtvis inte ändras så att anpassningar och automatisering fortsätter att fungera. De tilldelade bearbetningsprofilerna fortsätter till exempel att fungera.
-* Om en resurs redan är publicerad använder du [!DNL Experience Manager] för att flytta resursen till en annan mapp och publicera på nytt från den nya platsen, är den ursprungliga publicerade resursplatsen fortfarande tillgänglig tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen är *borttappad* till [!DNL Experience Manager] och kan inte avpubliceras. Därför bör du först avpublicera en resurs och sedan flytta den till en annan mapp.
+* Om en resurs redan har publicerats använder du [!DNL Experience Manager] om du vill flytta resursen till en annan mapp och publicera på nytt från den nya platsen är den ursprungliga publicerade resursplatsen fortfarande tillgänglig, tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen är dock *vilse* till [!DNL Experience Manager] och kan inte avpubliceras. Därför bör du först avpublicera en resurs och sedan flytta den till en annan mapp.
 
 ## Ordna resurser med taggar {#use-tags-to-organize-assets}
 

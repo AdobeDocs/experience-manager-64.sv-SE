@@ -1,8 +1,8 @@
 ---
 title: Webbkonsol
-seo-title: Webbkonsol
+seo-title: Web Console
 description: Lär dig hur du använder AEM webbkonsol.
-seo-description: Lär dig hur du använder AEM webbkonsol.
+seo-description: Learn how to use the AEM web console.
 uuid: 7856b2b3-4216-421d-a315-cd9a55936362
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,16 +10,19 @@ content-type: reference
 topic-tags: configuring
 discoiquuid: 4a33fddd-0399-40e4-8687-564fb6765b76
 feature: Configuring
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: a8a3267d-2af5-4cca-b76d-66de62d93f69
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '754'
 ht-degree: 1%
 
 ---
 
-
 # Webbkonsol{#web-console}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Webbkonsolen i AEM baseras på [Apache Felix Web Management Console](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix är en community-satsning för att implementera OSGi R4 Service Platform, som innehåller OSGi-ramverket och standardtjänster.
 
@@ -43,13 +46,13 @@ Konsolen kan nås från `../system/console`; till exempel:
 
 ## Konfiguration {#configuration}
 
-Fliken **Konfiguration** används för att konfigurera OSGi-paket och är därför den underliggande mekanismen för att konfigurera AEM systemparametrar.
+The **Konfiguration** -fliken används för att konfigurera OSGi-paket och är därför den underliggande mekanismen för att konfigurera AEM systemparametrar.
 
 >[!NOTE]
 >
->Mer information finns i [OSGi Configuration with the Web Console](/help/sites-deploying/configuring-osgi.md).
+>Se [OSGi-konfiguration med webbkonsolen](/help/sites-deploying/configuring-osgi.md) för mer information.
 
-Fliken **Konfiguration** kan nås av antingen:
+The **Konfiguration** -fliken kan nås av antingen:
 
 * Listrutan:
 
@@ -65,14 +68,14 @@ En lista över konfigurationer visas:
 
 Det finns två typer av konfigurationer tillgängliga i listrutorna på den här skärmen:
 
-* ****
-KonfigurationerHär kan du uppdatera befintliga konfigurationer. Dessa har en Persistent Identity (PID) och kan antingen vara:
+* **Konfigurationer**
+Gör att du kan uppdatera befintliga konfigurationer. Dessa har en Persistent Identity (PID) och kan antingen vara:
 
    * standard och integrerad i AEM, dessa är obligatoriska, om de tas bort återgår värdena till standardinställningarna.
    * instanser som skapats från fabrikskonfigurationer, om instanserna skapas av användaren tas instansen bort.
 
-* **Factory**
-ConfigurationsGör att du kan skapa en instans av det funktionsobjekt som krävs.
+* **Fabrikskonfigurationer**
+Gör att du kan skapa en instans av det nödvändiga funktionsobjektet.
 
    Detta tilldelas en beständig identitet och visas sedan i listrutan Konfigurationer.
 
@@ -106,7 +109,7 @@ Du kan sedan uppdatera parametrarna efter behov och:
 
 ## Paket {#bundles}
 
-Fliken **Paket** är den mekanism som används för att installera OSGi-paket som krävs för AEM. Du kommer åt fliken på något av följande sätt:
+The **Paket** är den mekanism som används för att installera OSGi-paket som krävs för AEM. Du kommer åt fliken på något av följande sätt:
 
 * Listrutan:
 
@@ -124,7 +127,7 @@ På den här fliken kan du:
 
 * **Installera eller uppdatera**
 
-   Du kan **Bläddra** för att hitta filen som innehåller ditt paket och ange om den ska **starta** omedelbart och vid vilken **startnivå**.
+   Du kan **Bläddra** för att hitta filen som innehåller ditt paket och ange om det ska **Starta** omedelbart och **Startnivå**.
 
 * **Läs in igen**
 
@@ -136,7 +139,7 @@ På den här fliken kan du:
 
    Efter en uppdatering kan till exempel både den gamla och den nya versionen fortfarande köras på grund av tidigare referenser. Med det här alternativet kontrolleras och flyttas alla referenser till den nya versionen så att den gamla versionen kan stoppas.
 
-* **Start**
+* **Starta**
 
    Startar ett paket enligt den angivna startnivån.
 
@@ -154,11 +157,11 @@ På den här fliken kan du:
 
 >[!NOTE]
 >
->Efter **Uppdatera** bör du utföra en **uppdatering av paket**.
+>Efter **Uppdatera** vi rekommenderar att du utför en **Uppdatera paket**.
 
 ## Komponenter {#components}
 
-På fliken **Komponenter** kan du aktivera och/eller inaktivera de olika komponenterna. Den kan nås av antingen:
+The **Komponenter** På -fliken kan du aktivera och/eller inaktivera de olika komponenterna. Den kan nås av antingen:
 
 * Listrutan:
 
@@ -181,4 +184,3 @@ Om du klickar på namnet på en viss komponent visas mer information om dess sta
 >Om du aktiverar, eller inaktiverar, en komponent gäller det bara tills AEM/CRX startas om.
 >
 >Startläget definieras i komponentbeskrivningen, som genereras under utveckling och lagras i paketet när paketet skapas.
-

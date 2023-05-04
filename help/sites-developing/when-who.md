@@ -1,24 +1,27 @@
 ---
 title: Testning - när och med vem?
-seo-title: Testning - när och med vem?
+seo-title: Testing - when and with whom?
 description: Olika roller kan vara involverade i testningen och i olika faser av projektutvecklingen
-seo-description: Olika roller kan vara involverade i testningen och i olika faser av projektutvecklingen
+seo-description: Various roles can be involved in testing and at various stages of project development
 uuid: 431e8f06-80eb-4fb3-a4c7-2580608b0a1c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: testing
 content-type: reference
 discoiquuid: 6148f8e6-ab62-4eb8-8a2d-c431b8318000
-translation-type: tm+mt
-source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+exl-id: cba4a814-052b-4b9f-96f2-8c80b2766ecc
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '310'
 ht-degree: 0%
 
 ---
 
-
 # Testning - när och med vem?{#testing-when-and-with-whom}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Olika roller kan vara involverade i testningen och i olika faser av projektutvecklingen.
 
@@ -45,10 +48,9 @@ Olika roller kan vara involverade i testningen och i olika faser av projektutvec
     <ul> 
      <li><p>Ger kunden en upplevelse av det projekt som utvecklas.</p> </li> 
      <li><p>Ger tidig feedback från kunden.</p> </li> 
-     <li><p>Användarna uttrycker ofta sina krav i fråga om tidigare erfarenheter. om kunderna deltar i testningen så tidigt som möjligt ökar deras upplevelse av det nya projektet i form av <i>praktisk</i>-upplevelse.</p> </li> 
+     <li><p>Användarna uttrycker ofta sina krav i fråga om tidigare erfarenheter. om kunderna deltar i testningen så tidigt som möjligt ökar deras upplevelse av det nya projektet i termer av <i>prydlig</i> upplevelse.</p> </li> 
     </ul> </td> 
    <td><p>Återigen är tidiga engagemang bra, men alla releaser som kunderna använder bör vara stabila, med rimlig funktionalitet.</p> <p>Första intrycket är alltid viktigt.</p> </td> 
   </tr> 
  </tbody> 
 </table>
-

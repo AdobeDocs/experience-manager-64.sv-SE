@@ -9,14 +9,18 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 6d4188f4-ad98-49df-9bb4-7936b7bea9c8
 exl-id: 73995327-d781-4501-ba14-3394dc8ea4fc
-source-git-commit: b46f0325ddbf68b65270c8e741e06469c584ae4d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2126'
 ht-degree: 0%
 
 ---
 
 # SPA Blueprint{#spa-blueprint}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Om du vill att författaren ska kunna använda AEM SPA Editor för att redigera innehållet i en SPA, finns det krav som SPA måste uppfylla, vilket beskrivs i det här dokumentet.
 
@@ -153,7 +157,7 @@ En behållare är en komponent som ska innehålla och återge underordnade kompo
 
 Behållaren hämtar de underordnade komponenterna dynamiskt från arkivet i [`ComponentMapping`](/help/sites-developing/spa-blueprint.md#componentmapping) bibliotek. Behållaren utökar sedan den underordnade komponenten med modellproviderfunktionerna och instansierar den till slut.
 
-### Sidan {#page}
+### Sida {#page}
 
 The `Page` -komponenten utökar `Container` -komponenten. En behållare är en komponent som är avsedd att innehålla och återge underordnade komponenter, inklusive underordnade sidor. För att göra det upprepas behållaren över `:itemsOrder`, `:items`och `:children` modellens egenskaper. The `Page` hämtar dynamiskt de underordnade komponenterna från arkivet för [ComponentMapping](/help/sites-developing/spa-blueprint.md#componentmapping) bibliotek. The `Page` är ansvarig för att instansiera underordnade komponenter.
 

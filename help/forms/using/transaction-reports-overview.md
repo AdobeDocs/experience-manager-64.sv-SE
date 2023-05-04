@@ -1,23 +1,26 @@
 ---
 title: Översikt över transaktionsrapporter
-seo-title: Översikt över transaktionsrapporter
+seo-title: Transaction Reports Overview
 description: Räkna med alla inskickade blanketter, interaktiv kommunikation, dokument som konverterats till ett format till ett annat, med mera
-seo-description: Räkna med alla inskickade blanketter, interaktiv kommunikation, dokument som konverterats till ett format till ett annat, med mera
+seo-description: Keep a count of all the forms submitted, interactive communication rendered, Documents converted to one format to another, and more
 uuid: b40220e6-88c8-4507-b228-6c57d9b54422
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-manager
 discoiquuid: 1fb11e02-d8f1-41a0-8e23-cb890b4e2244
-translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+exl-id: a545aa0a-9d71-48ba-ba3e-ed30a7e34f3d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
 
-
 # Översikt över transaktionsrapporter {#transaction-reports-overview}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Räkna med alla inskickade blanketter, interaktiv kommunikation, dokument som konverterats till ett format till ett annat, med mera
 
@@ -25,7 +28,7 @@ Räkna med alla inskickade blanketter, interaktiv kommunikation, dokument som ko
 
 Med transaktionsrapporter i AEM Forms kan du räkna med alla transaktioner som har utförts sedan ett visst datum i din AEM Forms-distribution. Målet är att tillhandahålla information om produktanvändning och hjälpa företagsintressenter att förstå sina digitala bearbetningsvolymer. Exempel på en transaktion är:
 
-* Skicka in ett anpassningsbart formulär, ett HTML5-formulär eller en formuläruppsättning
+* Inlämning av ett anpassningsbart formulär, ett HTML5-formulär eller en formuläruppsättning
 * Återgivning av en utskrift eller webbversion av en interaktiv kommunikation
 * Konvertering av ett dokument från ett filformat till ett annat
 
@@ -39,11 +42,11 @@ Skapa inte innehåll (skapa anpassningsbara formulär, interaktiv kommunikation,
 
 En transaktion finns kvar i bufferten under en angiven period (Tömningstid för buffert + Omvänd replikeringstid). Som standard tar det ca 90 sekunder för antalet transaktioner att återspeglas i transaktionsrapporten.
 
-Åtgärder som att skicka ett PDF-formulär, använda agentgränssnittet för att förhandsgranska interaktiv kommunikation eller använda icke-standardiserade metoder för att skicka formulär räknas inte som transaktioner. AEM Forms tillhandahåller ett API för att registrera sådana transaktioner. Anropa API:t från dina anpassade implementeringar för att registrera en transaktion.
+Åtgärder som att skicka ett PDF-formulär, använda agentanvändargränssnittet för att förhandsgranska interaktiv kommunikation eller använda icke-standardiserade metoder för att skicka formulär räknas inte som transaktioner. AEM Forms tillhandahåller ett API för att registrera sådana transaktioner. Anropa API:t från dina anpassade implementeringar för att registrera en transaktion.
 
 ## Topologi som stöds {#supported-topology}
 
-Transaktionsrapporter finns endast för AEM Forms i OSGi-miljö. Det stöder författarpublicering, författarbearbetning-publicering och endast bearbetningstopologier. Exempel på topologier finns i [Arkitektur och distributionstopologier för AEM Forms](/help/forms/using/transaction-reports-overview.md).
+Transaktionsrapporter finns endast för AEM Forms i OSGi-miljö. Det stöder författarpublicering, författarbearbetning-publicering och endast bearbetningstopologier. Till exempel topologier finns i [Arkitektur och driftsättningstopologier för AEM Forms](/help/forms/using/transaction-reports-overview.md).
 
 Transaktionsantalet replikeras baklänges från publiceringsinstanser till författare eller bearbetningsinstanser. En indikativ topologi för författarpublicering visas nedan:
 
@@ -56,7 +59,7 @@ Transaktionsantalet replikeras baklänges från publiceringsinstanser till förf
 ### Riktlinjer för att använda transaktionsrapporter {#guidelines-for-using-transaction-reports}
 
 * Inaktivera transaktionsrapporter för alla författarinstanser som rapporter om författarinstanser inkluderar transaktioner som registrerats under redigeringsaktiviteter.
-* Aktivera alternativet **Visa transaktioner från endast publicering** i författarinstansen om du vill visa kumulativa transaktioner från alla publiceringsinstanser. Du kan också visa transaktionsrapporter för varje publiceringsinstans för faktiska transaktioner endast för den aktuella publiceringsinstansen.
+* Aktivera **Visa endast transaktioner från publicering** på författarinstansen för att visa kumulativa transaktioner från alla publiceringsinstanser. Du kan också visa transaktionsrapporter för varje publiceringsinstans för faktiska transaktioner endast för den aktuella publiceringsinstansen.
 * Använd inte författarinstanser för att köra arbetsflöden och bearbeta dokument.
 * Innan du använder transaktionsrapportering måste du se till att omvänd replikering är aktiverat för alla publiceringsinstanser om du har en tologi med publiceringsservrar.
 * Transaktionsdata återreplikeras från en publiceringsinstans till endast motsvarande författare eller bearbetningsinstans. Författaren eller bearbetningsinstansen kan inte replikera data till en annan instans. Om du till exempel har topologi för redigeringsbearbetning/publicering, replikeras aggregerade transaktionsdata bara till bearbetningsinstansen.
@@ -66,4 +69,3 @@ Transaktionsantalet replikeras baklänges från publiceringsinstanser till förf
 * [Visa och förstå transaktionsrapporter](/help/forms/using/viewing-and-understanding-transaction-reports.md)
 * [Fakturerbara API:er för transaktionsrapporter](/help/forms/using/transaction-reports-billable-apis.md)
 * [Registrera en transaktion för anpassade implementeringar](/help/forms/using/record-transaction-custom-implementation.md)
-

@@ -1,24 +1,27 @@
 ---
 title: Integrera Create Correspondence UI med din anpassade portal
-seo-title: Integrera Create Correspondence UI med din anpassade portal
+seo-title: Integrating Create Correspondence UI with your custom portal
 description: Lär dig hur du integrerar ett gränssnitt för korrespondens med din anpassade portal
-seo-description: Lär dig hur du integrerar ett gränssnitt för korrespondens med din anpassade portal
+seo-description: Learn how to integrate create correspondence UI with your custom portal
 uuid: 4ae9c5fb-bb9d-46d8-be84-455f386ab443
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: cb232931-60b7-4956-bc77-10636c19325e
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 8b1bbd85-66ba-4e96-917a-d768d84a417f
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 3%
+source-wordcount: '514'
+ht-degree: 0%
 
 ---
 
-
 # Integrera Create Correspondence UI med din anpassade portal {#integrating-create-correspondence-ui-with-your-custom-portal}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Översikt {#overview}
 
@@ -47,9 +50,9 @@ Om portalen har mallnamnet Letter kan URL:en vara\
 
 ## Inline databaserat anrop {#inline-data-based-invocation}
 
-Ett annat (och säkrare) sätt att anropa programmet Create Correspondence kan vara att bara trycka på URL:en på `https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html` samtidigt som parametrarna och data skickas för att anropa programmet Create Correspondence som en POST (dölja dem för slutanvändaren). Det innebär också att du nu kan skicka XML-data för Create Correspondence-programmet (som en del av samma begäran, med parametern cmData), vilket inte var möjligt/idealiskt i den tidigare metoden.
+Ett annat (och säkrare) sätt att anropa programmet Create Correspondence kan vara att bara trycka på URL:en på `https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html`, när du skickar parametrar och data för att anropa programmet Create Correspondence som en POST (dölja dem för slutanvändaren). Det innebär också att du nu kan skicka XML-data för Create Correspondence-programmet (som en del av samma begäran, med parametern cmData), vilket inte var möjligt/idealiskt i den tidigare metoden.
 
-### Parametrar för att ange bokstaven {#parameters-for-specifying-letter}
+### Parametrar för att ange bokstav {#parameters-for-specifying-letter}
 
 <table> 
  <tbody>
@@ -89,7 +92,7 @@ Parametrarnas ordning i tabellen anger inställningarna för parametrar som anv�
   </tr>
   <tr>
    <td>cmDataUrl<br /> </td> 
-   <td>Webbadress</td> 
+   <td>URL</td> 
    <td>XML-data från en källfil med hjälp av grundläggande protokoll som cq, ftp, http eller file.<br /> </td> 
   </tr>
   <tr>
@@ -99,7 +102,7 @@ Parametrarnas ordning i tabellen anger inställningarna för parametrar som anv�
   </tr>
   <tr>
    <td>cmUseTestData</td> 
-   <td>Boolesk</td> 
+   <td>Boolean</td> 
    <td>Om du vill återanvända testdata som bifogats i dataordlistan.</td> 
   </tr>
  </tbody>
@@ -118,7 +121,7 @@ Parametrarnas ordning i tabellen anger inställningarna för de parametrar som a
   </tr>
   <tr>
    <td>cmPreview<br /> </td> 
-   <td>Boolesk</td> 
+   <td>Boolean</td> 
    <td>True to open the letter in preview mode<br /> </td> 
   </tr>
   <tr>

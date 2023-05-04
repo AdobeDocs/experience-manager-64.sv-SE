@@ -5,18 +5,22 @@ contentOwner: AG
 feature: Developer Tools
 role: Developer
 exl-id: 0291690b-874a-483d-901f-f02cb6d8ab28
-source-git-commit: cc9b6d147a93688e5f96620d50f8fc8b002e2d0d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '293'
 ht-degree: 0%
 
 ---
 
 # Anpassa och utöka resurser {#customizing-and-extending-assets}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 Resursredigeraren är den primära åtkomstpunkten som användare på en Adobe Enterprise Manager-webbplats kommer att använda för att hitta, visa och ändra digitala resurser i din databas.
 
-Som [!DNL Experience Manager]-utvecklare kan du anpassa och utöka resursredigeraren på flera olika sätt, och ge användarna ett särskilt skräddarsytt gränssnitt och en uppsättning funktioner.
+Som en [!DNL Experience Manager] kan du anpassa och utöka Resursredigeraren på flera olika sätt och ge användarna ett särskilt skräddarsytt gränssnitt och en uppsättning funktioner.
 
 Följande funktionalitetsaspekter kan anpassas eller förbättras:
 
@@ -37,6 +41,6 @@ Följande aspekter av utseendet och känslan i resursredigeraren kan anpassas:
 
 ## Anpassa återgivningar {#customizing-renditions}
 
-I [!DNL Experience Manager Assets]-terminologi är en återgivning den form i vilken en resurs presenteras. I allmänhet kan en viss resurs ha flera renderingar. Fullfärgsbilder kan till exempel ha en återgivning i sin ursprungliga storlek, en annan i en nedskalad storlek och en annan som både är nedskalad och konverterad till gråskala.
+I [!DNL Experience Manager Assets] terminologi en återgivning är den form i vilken en resurs presenteras. I allmänhet kan en viss resurs ha flera renderingar. Fullfärgsbilder kan till exempel ha en återgivning i sin ursprungliga storlek, en annan i en nedskalad storlek och en annan som både är nedskalad och konverterad till gråskala.
 
 De återgivningar som en viss resurs är tillgänglig i kan anpassas och nya återgivningar skapas.

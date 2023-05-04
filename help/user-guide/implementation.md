@@ -6,14 +6,18 @@ seo-description: An overview of how to implement AEM 6.4
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 exl-id: e8434d46-b169-4408-85e7-b619c6f7b877
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '102'
-ht-degree: 0%
+source-wordcount: '138'
+ht-degree: 7%
 
 ---
 
 # Handböcker för implementering av AEM 6.4 {#aem-64-implementation-user-guides}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Utveckla AEM {#developing-on-aem}
 
@@ -21,7 +25,7 @@ ht-degree: 0%
 
 ## Kärnkomponenter för AEM {#core-components-for-aem}
 
-[Använd de utbyggbara kärnkomponenterna för att låta skribenterna enkelt skapa innehåll.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+[Redigerare kan enkelt skapa innehåll genom att använda de utökningsbara grundläggande komponenterna.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 
 ## HTML (HTML Template Language) för AEM {#htl-for-aem}
 

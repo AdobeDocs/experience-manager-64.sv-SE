@@ -1,23 +1,26 @@
 ---
 title: API:er som används i AEM Forms arbetsyta
-seo-title: API:er som används i AEM Forms arbetsyta
+seo-title: APIs used in AEM Forms workspace
 description: Offentliga Java- och JavaScript-API:er och metoder för arbetsytan i LiveCycle AEM Forms som kan anpassas och automatiseras.
-seo-description: Offentliga Java- och JavaScript-API:er och metoder för arbetsytan i LiveCycle AEM Forms som kan anpassas och automatiseras.
+seo-description: Public Java and JavaScript APIs and methods of LiveCycle AEM Forms workspace, exposed for customization and automation.
 uuid: 9602990e-8ac7-42eb-b507-50b3594055ba
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 4a73a973-fccf-466b-b4a0-47652a14a080
-translation-type: tm+mt
-source-git-commit: 0ce79686522da4fb3d017068b623c76f81c6b23a
+exl-id: 1d74fdb9-c118-45f7-93c6-116cacb2f1c4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1020'
-ht-degree: 1%
+source-wordcount: '1033'
+ht-degree: 0%
 
 ---
 
-
 # API:er som används i AEM Forms arbetsyta {#apis-used-in-aem-forms-workspace}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Följande API:er används i AEM Forms arbetsyta.
 
@@ -50,7 +53,7 @@ Följande API:er används i AEM Forms arbetsyta.
   <tr>
    <td>submitTask</td> 
    <td>ProcessManagementDocumentHandlingService</td> 
-   <td>submit</td> 
+   <td>skicka</td> 
    <td>Det skickar dokumentobjektet som är associerat med en uppgift (och skicka i sin tur).</td> 
   </tr>
   <tr>
@@ -108,7 +111,7 @@ Följande API:er används i AEM Forms arbetsyta.
    <td>Den skickar formulärdata (skickas som sträng) som är kopplade till uppgiften med TaskManagers API. Det används för flexformulär som inte anropar TaskManagers API.</td> 
   </tr>
   <tr>
-   <td>save</td> 
+   <td>spara</td> 
    <td>ProcessManagementTaskService</td> 
    <td>spara</td> 
    <td>Den sparar en aktivitet på servern.</td> 
@@ -237,7 +240,7 @@ Följande API:er används i AEM Forms arbetsyta.
    <td>getAllQueues<br /> </td> 
    <td>ProcessManagementQueueService<br /> </td> 
    <td>getAllQueues<br /> </td> 
-   <td>Den får alla köer (egna, delade och gruppköer) tillgängliga för den inloggade användaren.<br /> </td> 
+   <td>Den får alla köer (egna, delade och gruppköer) tillgängliga för inloggad användare.<br /> </td> 
   </tr>
   <tr>
    <td>getOutOfOfficeSettings</td> 
@@ -403,6 +406,3 @@ Följande API:er används i AEM Forms arbetsyta.
   </tr>
  </tbody>
 </table>
-
-
-

@@ -1,28 +1,31 @@
 ---
 title: Meddelandefunktion
-seo-title: Meddelandefunktion
+seo-title: Messaging Feature
 description: Konfigurera meddelandekomponenter
-seo-description: Konfigurera meddelandekomponenter
+seo-description: Configuring Messaging components
 uuid: 29ab63b6-67a1-4eb8-8cf8-c1ff52ff2bac
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 discoiquuid: 88ee8573-58c4-42cd-8e36-2ea4a0d654e4
-translation-type: tm+mt
-source-git-commit: 8c66f2b0053882bd1c998d8e01dbb0573881bc87
+exl-id: e03cf05c-2469-4883-ae7b-9d7e6660b71f
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '891'
 ht-degree: 1%
 
 ---
 
-
 # Meddelandefunktion {#messaging-feature}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Förutom de synliga interaktionerna som förekommer i forum och i kommentarer gör meddelandefunktionen i AEM Communities det möjligt för communitymedlemmar att interagera med varandra mer privat.
 
-Den här funktionen kan ingå när en [community-webbplats](overview.md#communitiessites) skapas.
+Den här funktionen kan ingå när en [communitywebbplats](overview.md#communitiessites) skapas.
 
 Med meddelandefunktionerna kan du:
 
@@ -36,32 +39,32 @@ Med meddelandefunktionerna kan du:
 
 Om du vill aktivera och ändra meddelandefunktionen går du till
 
-* [Konfigurera ](messaging.md) meddelanden för administratörer
-* [Messaging ](essentials-messaging.md) Essentials för utvecklare
+* [Konfigurerar meddelanden](messaging.md) för administratörer
+* [Viktiga meddelanden](essentials-messaging.md) för utvecklare
 
 >[!NOTE]
 >
->Det går inte att lägga till `Compose Message, Message, or Message List`-komponenter (finns i `Communities`komponentgrupp) till en sida i redigeringsläge för författare.
+>Det går inte att lägga till `Compose Message, Message, or Message List` komponenter (finns i `Communities`till en sida i redigeringsläge.
 
 ## Konfigurerar meddelandekomponenter {#configuring-messaging-components}
 
 När meddelanden är aktiverat för en community-webbplats är det helt konfigurerat utan någon ytterligare konfiguration. Den här informationen tillhandahålls om du behöver ändra standardkonfigurationen.
 
-### Konfigurerar meddelandelista (meddelanderuta) {#configuring-message-list-messagebox}
+### Konfigurera meddelandelista (meddelanderuta) {#configuring-message-list-messagebox}
 
-Om du vill ändra konfigurationen för listan med meddelanden för **Inkorg**, **Skickade objekt** och **Papperskorgssidor för meddelandefunktionen öppnar du webbplatsen i [redigeringsläge](sites-console.md#authoring-site-content) för författare.**
+För att ändra konfigurationen av meddelandelistan för **Inkorg**, **Skickade objekt** och **Papperskorgen** sidor med meddelandefunktionen, öppna webbplatsen i [redigeringsläge för författare](sites-console.md#authoring-site-content).
 
-I `Preview`-läget väljer du länken **[!UICONTROL Messages]** för att öppna huvudmeddelandesidan. Välj sedan antingen **[!UICONTROL Inbox, Sent Items, or Trash]** för att konfigurera komponenten för den meddelandelistan.
+I `Preview` läge, välj **[!UICONTROL Messages]** för att öppna meddelandesidan. Välj sedan antingen **[!UICONTROL Inbox, Sent Items, or Trash]** för att konfigurera komponenten för den meddelandelistan.
 
-Markera komponenten på sidan i `Edit`-läge.
+I `Edit` markerar du komponenten på sidan.
 
-Om du vill komma åt konfigurationsdialogrutan måste du avbryta arvet genom att välja ikonen `link`.
+Om du vill komma åt konfigurationsdialogrutan måste du avbryta arv genom att välja `link`ikon.
 
-När konfigurationen är klar måste du återställa arvet genom att välja ikonen `broken link`.
+När konfigurationen är klar måste du återställa arvet genom att välja `broken link` ikon.
 
 ![chlimage_1-396](assets/chlimage_1-396.png)
 
-När arvet har avbrutits går det att välja ikonen `configure` för att öppna konfigurationsdialogrutan.
+När arvet har avbrutits går det att välja `configure` -ikonen för att öppna konfigurationsdialogrutan.
 
 ![chlimage_1-397](assets/chlimage_1-397.png)
 
@@ -70,10 +73,10 @@ När arvet har avbrutits går det att välja ikonen `configure` för att öppna 
 ![chlimage_1-398](assets/chlimage_1-398.png)
 
 * **[!UICONTROL Service selector]**
-(*Obligatoriskt*) Ange det här till värdet för egenskapen  `serviceSelector.name` från  [AEM Communities Messaging Operations Service](messaging.md#messaging-operations-service).
+(*Obligatoriskt*) Ange värdet för egenskapen `serviceSelector.name` från [Tjänsten AEM Communities Messaging Operations](messaging.md#messaging-operations-service).
 
 * **[!UICONTROL Compose Page]**
-(*Obligatoriskt*) Den sida som ska öppnas när en medlem klickar på  `Reply` knappen. Målsidan ska innehålla formuläret **[!UICONTROL Compose Message]**.
+(*Obligatoriskt*) Den sida som ska öppnas när en medlem klickar på `Reply` -knappen. Målsidan ska innehålla **[!UICONTROL Compose Message]** formulär.
 
 * **[!UICONTROL Reply/View as Resource]**
 Om det här alternativet är markerat refererar URL:en för svar och vy till en resurs, annars skickas data som frågeparametrar i URL:en.
@@ -85,9 +88,9 @@ Det profilformulär som ska användas för att visa avsändarprofilen.
 Om den här meddelandelistekomponenten är markerad visas endast meddelanden som har flaggats som borttagna (papperskorg).
 
 * **[!UICONTROL Folder Paths]**
-(*Obligatoriskt*) Referera till de värden som angetts för  `inbox.path.name` och  `sentitems.path.name` i  [AEM Communities meddelandetjänst](messaging.md#messaging-operations-service). När du konfigurerar för en `Inbox` lägger du till en post med värdet `inbox.path.name`. När du konfigurerar för en `Outbox` lägger du till en post med värdet `sentitems.path.name`. När du konfigurerar för `Trash` lägger du till två poster med båda värdena.
+(*Obligatoriskt*) Referera till de värden som angetts för `inbox.path.name` och `sentitems.path.name` i [Tjänsten AEM Communities Messaging Operations](messaging.md#messaging-operations-service). Vid konfigurering för en `Inbox`, lägger till en post med värdet för `inbox.path.name`. Vid konfigurering för en `Outbox`, lägger till en post med värdet för `sentitems.path.name`. Vid konfigurering för `Trash`lägger du till två poster med båda värdena.
 
-#### Visningsflik {#display-tab}
+#### Fliken Visa {#display-tab}
 
 ![chlimage_1-399](assets/chlimage_1-399.png)
 
@@ -101,11 +104,11 @@ Om det här alternativet är markerat visas en
 
 * **[!UICONTROL Delete Button]**
 Om det här alternativet är markerat visas en 
-`Delete`så att ett meddelande kan markeras som läst. Duplicerar borttagningsfunktionen om **`Message Options`** också är markerat.
+`Delete`så att ett meddelande kan markeras som läst. Duplicerar borttagningsfunktionen om **`Message Options`** också markeras.
 
 * **[!UICONTROL Message Options]**
 Om det här alternativet är markerat visas 
-**`Reply`**,  **`Reply All`** och  **`Forward`**   **`Delete`** knappar som gör att ett meddelande kan skickas igen eller tas bort. Duplicerar borttagningsfunktionen om **`Delete Button`** också är markerat.
+**`Reply`**, **`Reply All`**, **`Forward`** och **`Delete`** -knappar som gör att ett meddelande kan skickas igen eller tas bort. Duplicerar borttagningsfunktionen om **`Delete Button`** också markeras.
 
 * **[!UICONTROL Messages Per Page]**
 Det angivna antalet är det högsta antalet meddelanden som visas per sida i ett sidnumreringsschema. Om inget tal anges (vänster tomt) visas alla meddelanden och ingen sidnumrering visas.
@@ -115,23 +118,23 @@ Ange tidsstämpelmönster för ett eller flera språk. Standard är för en, de,
 
 * **[!UICONTROL Display User]**
 Välj antingen 
-**`Sender`** eller  **`Recipients`** för att avgöra om avsändaren eller mottagarna ska visas.
+**`Sender`** eller **`Recipients`** för att avgöra om avsändaren eller mottagarna ska visas.
 
 ### Konfigurera Compose Message {#configuring-compose-message}
 
-Om du vill ändra konfigurationen för den sammansatta meddelandesidan öppnar du webbplatsen i [redigeringsläge](sites-console.md#authoring-site-content).
+Om du vill ändra konfigurationen för den sammansatta meddelandesidan öppnar du webbplatsen i [redigeringsläge för författare](sites-console.md#authoring-site-content).
 
-I `Preview`läge väljer du länken **[!UICONTROL Messages]** för att öppna huvudmeddelandesidan. Klicka sedan på knappen Nytt meddelande för att öppna sidan `Compose Message`.
+I `Preview`läge, välj **[!UICONTROL Messages]** för att öppna meddelandesidan. Klicka sedan på knappen Nytt meddelande för att öppna dialogrutan `Compose Message` sida..
 
-I `Edit`-läge väljer du huvudkomponenten på sidan som innehåller meddelandetexten.
+I `Edit` markerar du huvudkomponenten på sidan som innehåller meddelandetexten.
 
-Om du vill komma åt konfigurationsdialogrutan måste du avbryta arvet genom att välja ikonen `link`.
+Om du vill komma åt konfigurationsdialogrutan måste du avbryta arv genom att välja `link`ikon.
 
-När konfigurationen är klar måste du återställa arvet genom att välja ikonen `broken link`.
+När konfigurationen är klar måste du återställa arvet genom att välja `broken link` ikon.
 
 ![chlimage_1-400](assets/chlimage_1-400.png)
 
-När arvet har avbrutits går det att välja ikonen `configure` för att öppna konfigurationsdialogrutan.
+När arvet har avbrutits går det att välja `configure` -ikonen för att öppna konfigurationsdialogrutan.
 
 ![chlimage_1-401](assets/chlimage_1-401.png)
 
@@ -154,9 +157,9 @@ Det maximala antalet tecken som tillåts i fältet Ämne. Till exempel 500. Stan
 Det högsta antalet tecken som tillåts i fältet Innehåll. Exempel: 10000. Standard är ingen gräns.
 
 * **[!UICONTROL Service selector]**
-(*Obligatoriskt*) Ange det här till värdet för egenskapen  **`serviceSelector.name`** från  [AEM Communities Messaging Operations Service](messaging.md#messaging-operations-service).
+(*Obligatoriskt*) Ange värdet för egenskapen **`serviceSelector.name`** från [Tjänsten AEM Communities Messaging Operations](messaging.md#messaging-operations-service).
 
-#### Visningsflik {#display-tab-1}
+#### Fliken Visa {#display-tab-1}
 
 ![chlimage_1-403](assets/chlimage_1-403.png)
 
@@ -166,7 +169,7 @@ Om du markerar det här alternativet visas
 
 * **[!UICONTROL Subject Label]**
 Ange den text som ska visas intill 
-`Subject` fält. Standardvärdet är `Subject`.
+`Subject` fält. Standard är `Subject`.
 
 * **[!UICONTROL Show Attach File Field]**
 Om du markerar det här alternativet visas 
@@ -174,7 +177,7 @@ Om du markerar det här alternativet visas
 
 * **[!UICONTROL Attach File Label]**
 Ange den text som ska visas intill 
-`Attachment` fält. Standardvärdet är **`Attach File`**.
+`Attachment` fält. Standard är **`Attach File`**.
 
 * **[!UICONTROL Show Content Field]**
 Om du markerar det här alternativet visas 
@@ -182,11 +185,10 @@ Om du markerar det här alternativet visas
 
 * **[!UICONTROL Content Label]**
 Ange den text som ska visas intill 
-`Content` fält. Standardvärdet är **`Body`**.
+`Content` fält. Standard är **`Body`**.
 
 * **[!UICONTROL With Rich Text Editor]**
 Om det här alternativet är markerat används en anpassad innehållstextruta med en egen RTF-redigerare. Standard är inte markerat.
 
 * **[!UICONTROL Timestamp patterns]**
 Ange tidsstämpelmönster för ett eller flera språk. Standard är för en, de, fr, it, es, ja, zh_CN, ko_KR.
-

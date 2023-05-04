@@ -2,33 +2,36 @@
 title: Developing and Page Diff
 seo-title: Developing and Page Diff
 description: Developing and Page Diff
-seo-description: 'null'
+seo-description: null
 uuid: 48bbeca3-fe16-48ef-bb4d-ac605fe0ca76
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 13e8cbef-698f-4e69-9f8c-f9bee82e9fd1
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 365e944d-d8a3-4f4e-8925-88629845232f
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
 
-
 # Developing and Page Diff{#developing-and-page-diff}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Funktionsöversikt {#feature-overview}
 
 Att skapa innehåll är en repetitiv process. Effektiv redigering kräver att man kan se vad som har ändrats från en iteration till en annan. Om du visar den ena sidversionen och den andra är ineffektiv och felbenägen kan uppstå. En författare vill kunna jämföra den aktuella sidan med en tidigare version sida vid sida med skillnaderna markerade.
 
-Med sidskillnader kan en användare jämföra den aktuella sidan med startsidor, tidigare versioner osv. Mer information om den här användarfunktionen finns i [Sidskillnad](/help/sites-authoring/page-diff.md).
+Med sidskillnader kan en användare jämföra den aktuella sidan med startsidor, tidigare versioner osv. Mer information om den här användarfunktionen finns i [Sidskillnader](/help/sites-authoring/page-diff.md).
 
-## Åtgärdsinformation {#operation-details}
+## Operationsinformation {#operation-details}
 
-När du jämför versioner av en sida skapas den tidigare versionen som användaren vill jämföra av AEM i bakgrunden för att underlätta skillnaderna. Detta behövs för att kunna återge innehållet [för jämförelse sida vid sida](/help/sites-authoring/page-diff.md#presentation-of-differences).
+När du jämför versioner av en sida skapas den tidigare versionen som användaren vill jämföra av AEM i bakgrunden för att underlätta skillnaderna. Detta krävs för att innehållet ska kunna återges [för jämförelse sida vid sida](/help/sites-authoring/page-diff.md#presentation-of-differences).
 
 Denna rekreationsåtgärd görs internt av AEM och är transparent för användaren och kräver ingen åtgärd. En administratör som visar databasen, till exempel i CRX DE Lite, skulle dock se dessa återskapade versioner i innehållsstrukturen.
 
@@ -44,7 +47,7 @@ När du använder sidans diff-mekanism återskapar AEM den tidigare versionen av
 
 >[!CAUTION]
 >
->För att kunna använda funktionen för sidskillnad måste användaren ha behörigheten **Ändra/Skapa/Ta bort** på noden `/content/versionhistory`.
+>Användaren måste ha **Ändra/skapa/ta bort** behörighet på noden `/content/versionhistory`.
 
 ### Från och med AEM 6.4.3 {#as-of-aem}
 
@@ -58,7 +61,7 @@ En rensningsåtgärd körs automatiskt för att rensa upp det tillfälliga inneh
 
 ## Begränsningar för utvecklare {#developer-limitations}
 
-I det klassiska användargränssnittet tidigare var det nödvändigt att ta särskild hänsyn till utvecklingen för att underlätta AEM (t.ex. med `cq:text` tag lib eller för att integrera OSGi-tjänsten i komponenter). `DiffService` Det här behövs inte längre för den nya diff-funktionen, eftersom skillnaden inträffar på klientsidan via DOM-jämförelse.
+I det klassiska användargränssnittet måste man överväga en särskild utveckling för att underlätta AEM (t.ex. användning av `cq:text` tagg lib, eller anpassad integrering av `DiffService` OSGi-tjänst in i komponenter). Det här behövs inte längre för den nya diff-funktionen, eftersom skillnaden inträffar på klientsidan via DOM-jämförelse.
 
 Det finns dock ett antal begränsningar som måste beaktas av utvecklaren.
 
@@ -76,4 +79,3 @@ Det finns dock ett antal begränsningar som måste beaktas av utvecklaren.
    * Komponenter som använder AJAX för att inkludera innehåll
    * Enkelsidiga program
    * Javascript-baserade komponenter som manipulerar DOM när användaren interagerar.
-

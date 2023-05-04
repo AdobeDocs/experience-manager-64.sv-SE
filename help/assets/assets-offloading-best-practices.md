@@ -1,24 +1,28 @@
 ---
 title: Metodtips för att avlasta resurser
-description: Rekommenderade användningsexempel och bästa praxis för att avlasta arbetsflöden för tillgångsintag och replikering i [!DNL Experience Manager] Resurser.
+description: Rekommenderade användningsexempel och bästa praxis för att avlasta arbetsflöden för tillgångsinmatning och replikering i [!DNL Experience Manager] Resurser.
 contentOwner: AG
 feature: Asset Management
 role: User,Admin
 exl-id: 3ecc8988-add1-47d5-80b4-984beb4d8dab
-source-git-commit: cc6de21180c9fff74f7d64067db82f0c11ac9333
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1805'
+source-wordcount: '1841'
 ht-degree: 0%
 
 ---
 
 # Metodtips för att avlasta resurser {#assets-offloading-best-practices}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 >[!WARNING]
 >
->Den här funktionen är inaktuell [!DNL Experience Manager] 6.4 och framåt och har tagits bort i [!DNL Experience Manager] 6.5. Planera därefter.
+>Den här funktionen är föråldrad [!DNL Experience Manager] 6.4 och framåt och tas bort i [!DNL Experience Manager] 6.5. Planera därefter.
 
-Att hantera stora filer och köra arbetsflöden i Adobe Experience Manager Assets kan ta mycket processorkraft, minne och I/O-resurser i anspråk. I synnerhet kan storleken på resurser, arbetsflöden, antalet användare och frekvensen för tillgångsinmatning påverka systemets totala prestanda. De mest resurskrävande åtgärderna omfattar arbetsflöden för tillgångsinmatning och replikering. Intensiv användning av dessa arbetsflöden i en enda redigeringsinstans kan påverka redigeringseffektiviteten negativt.
+Att hantera stora filer och köra arbetsflöden i Adobe Experience Manager Assets kan ta mycket processorkraft, minne och I/O-resurser i anspråk. I synnerhet kan storleken på resurser, arbetsflöden, antalet användare och frekvensen för tillgångsinmatning påverka systemets totala prestanda. De mest resurskrävande åtgärderna är bland annat arbetsflöden för tillgångsinmatning och replikering. Intensiv användning av dessa arbetsflöden i en enda redigeringsinstans kan påverka redigeringseffektiviteten negativt.
 
 Genom att avlasta dessa uppgifter för dedikerade arbetarinstanser kan du minska kostnaderna för processor, minne och IO. I allmänhet är tanken bakom avlastning att distribuera uppgifter som förbrukar intensiva processor-/minnes-/IO-resurser till dedikerade arbetarinstanser. Följande avsnitt innehåller rekommenderade användningsfall för avlastning av resurser.
 
@@ -34,11 +38,11 @@ I följande diagram visas huvudkomponenterna i resursavlastningsprocessen:
 
 ### Arbetsflöde för DAM Update Asset Offloading {#dam-update-asset-offloading-workflow}
 
-Arbetsflödet för DAM Update Asset Offloading körs på den primära (författarservern) på vilken användaren överför resurserna. Det här arbetsflödet utlöses av ett vanligt startprogram för arbetsflöden. I stället för att bearbeta den överförda resursen skapar det här avlastande arbetsflödet ett nytt jobb med ämnet *com/adobe/granite/workflow/avlastning*. Arbetsflödet för avlastning lägger till namnet på målarbetsflödet - arbetsflödet för DAM-uppdatering av resurs i det här fallet, och resursens sökväg till jobbets nyttolast. När avlastningsjobbet har skapats väntar avlastningsarbetsflödet på den primära instansen tills avlastningsjobbet har körts.
+Arbetsflödet för DAM Update Asset Offloading körs på den primära (författarservern) på vilken användaren överför resurserna. Det här arbetsflödet utlöses av ett vanligt startprogram för arbetsflöden. I stället för att bearbeta den överförda resursen skapar det här avlastande arbetsflödet ett nytt jobb med hjälp av ämnet *com/adobe/granite/workflow/offloading*. Arbetsflödet för avlastning lägger till namnet på målarbetsflödet - arbetsflödet för DAM-uppdatering av resurs i det här fallet, och resursens sökväg till jobbets nyttolast. När avlastningsjobbet har skapats väntar avlastningsarbetsflödet på den primära instansen tills avlastningsjobbet har körts.
 
 ### Jobbhanterare {#job-manager}
 
-Jobbhanteraren distribuerar nya jobb till arbetarinstanser. När du utformar distributionsmekanismen är det viktigt att ta hänsyn till ämnesaktivering. Jobb kan bara tilldelas till instanser där jobbets ämne är aktiverat. Inaktivera ämnet `com/adobe/granite/workflow/offloading` på den primära arbetsytan och aktivera det på arbetaren för att se till att jobbet är tilldelat arbetaren.
+Jobbhanteraren distribuerar nya jobb till arbetarinstanser. När du utformar distributionsmekanismen är det viktigt att ta hänsyn till ämnesaktivering. Jobb kan bara tilldelas till instanser där jobbets ämne är aktiverat. Inaktivera ämnet `com/adobe/granite/workflow/offloading` på den primära arbetaren och aktivera den på arbetaren för att säkerställa att jobbet har tilldelats arbetaren.
 
 ### [!DNL Experience Manager] avlastning {#aem-offloading}
 
@@ -46,11 +50,11 @@ Avlastningsramverket identifierar arbetsflödesavlastningsjobb som tilldelats ar
 
 ### Avlastning av arbetsflöde, jobbkonsument {#workflow-offloading-job-consumer}
 
-När ett jobb har skrivits på arbetaren anropar jobbhanteraren den jobbkonsument som är ansvarig för *com/adobe/granite/workflow/offloading*-avsnittet. Jobbkonsumenten kör sedan arbetsflödet DAM Update Asset på resursen.
+När ett jobb har skrivits på arbetaren, anropar jobbchefen den jobbkonsument som ansvarar för *com/adobe/granite/workflow/offloading* ämne. Jobbkonsumenten kör sedan arbetsflödet DAM Update Asset på resursen.
 
 ## Sling Topology {#sling-topology}
 
-Sling-topologin grupperar [!DNL Experience Manager] instanser och gör det möjligt för dem att vara medvetna om varandra, oberoende av den underliggande persistensen. Denna egenskap hos Sling-topologin gör att du kan skapa topologier för icke-klustrade, grupperade och blandade scenarier. En instans kan visa egenskaper för hela topologin. Ramverket innehåller återanrop för avlyssning av ändringar i topologin (instanser och egenskaper). Sling-topologin utgör grunden för Sling-distribuerade jobb.
+Sling-topologigrupperna [!DNL Experience Manager] och gör det möjligt för dem att vara medvetna om varandra, oberoende av den underliggande persistensen. Denna egenskap hos Sling-topologin gör att du kan skapa topologier för icke-klustrade, grupperade och blandade scenarier. En instans kan visa egenskaper för hela topologin. Ramverket innehåller återanrop för avlyssning av ändringar i topologin (instanser och egenskaper). Sling-topologin utgör grunden för Sling-distribuerade jobb.
 
 ### Säljer distribuerade jobb {#sling-distributed-jobs}
 
@@ -89,7 +93,7 @@ Om du kommer fram till att avlastning av resurser är ett lämpligt sätt för d
 
 ### Rekommenderade resurser avlastar distributionen {#recommended-assets-offloading-deployment}
 
-Med [!DNL Experience Manager] och Oak finns flera distributionsscenarier möjliga. För avlastning av resurser rekommenderas en TARMK-baserad distribution med ett delat datalager. I följande diagram visas den rekommenderade distributionen:
+Med [!DNL Experience Manager] och Oak, det finns flera möjliga distributionsscenarier. För avlastning av resurser rekommenderas en TARMK-baserad distribution med ett delat datalager. I följande diagram visas den rekommenderade distributionen:
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
@@ -107,9 +111,9 @@ Adobe rekommenderar att du inaktiverar automatisk agenthantering eftersom den in
 
 Som standard används omvänd replikering för att hämta avlastade resurser från arbetaren till den primära resursen för att avlasta transporten. Omvända replikeringsagenter stöder inte binär replikering. Du bör konfigurera avlastning för att använda framåtreplikering för att överföra avlastade resurser från arbetare till primär.
 
-1. Om du migrerar från standardkonfigurationen med omvänd replikering kan du inaktivera eller ta bort alla agenter med namnen `offloading_outbox` och `offloading_reverse_*` på primär nivå och arbetare, där &amp;ast; representerar Sling-ID för målinstansen.
-1. Skapa en ny framåtriktad replikeringsagent som pekar på den primära för varje arbetare. Proceduren är densamma som att skapa framåtagenter från primär till arbetare. Se [Skapa replikeringsagenter för avlastning](../sites-deploying/offloading.md#creating-replication-agents-for-offloading) för instruktioner om hur du ställer in avlastning av replikeringsagenter.
-1. Öppna konfigurationen för `OffloadingDefaultTransporter` (`http://localhost:4502/system/console/configMgr/com.adobe.granite.offloading.impl.transporter.OffloadingDefaultTransporter`).
+1. Om du migrerar från standardkonfigurationen med omvänd replikering kan du inaktivera eller ta bort alla agenter med namnet &quot; `offloading_outbox`&quot; och &quot; `offloading_reverse_*`&quot; på primär och arbetare, där &amp;ast; representerar Sling-ID för målinstansen.
+1. Skapa en ny framåtriktad replikeringsagent som pekar på den primära för varje arbetare. Proceduren är densamma som att skapa framåtagenter från primär till arbetare. Se [Skapar replikeringsagenter för avlastning](../sites-deploying/offloading.md#creating-replication-agents-for-offloading) för instruktioner om hur du ställer in avlastning av replikeringsagenter.
+1. Öppna konfiguration för `OffloadingDefaultTransporter`  (`http://localhost:4502/system/console/configMgr/com.adobe.granite.offloading.impl.transporter.OffloadingDefaultTransporter`).
 1. Ändra värdet för egenskapen `default.transport.agent-to-master.prefix` från `offloading_reverse` till `offloading`.
 
 <!-- TBD: Make updates to the configuration for allow and block list after product updates are done.
@@ -118,18 +122,18 @@ TBD: Update the property in the last step when GRANITE-30586 is fixed.
 
 ### Använda delad datalager och binär replikering mellan författare och arbetare  {#using-shared-datastore-and-binary-less-replication-between-author-and-workers}
 
-Du bör använda binär replikering utan att använda binärfiler för att minska transportkostnaderna vid avlastning av resurser. Mer information om hur du ställer in binär replikering för ett delat datalager finns i [Konfigurera nodlager och datalager i AEM](/help/sites-deploying/data-store-config.md). Proceduren skiljer sig inte åt när det gäller avlastning av resurser, förutom att den omfattar andra replikeringsagenter. Eftersom binärfri replikering endast fungerar med framåtriktade replikeringsagenter bör du även använda framåtreplikering för alla avlastningsagenter.
+Du bör använda binär replikering utan att använda binärfiler för att minska transportkostnaderna vid avlastning av resurser. Om du vill veta hur du konfigurerar binär replikering utan att använda binärfiler för ett delat datalager kan du läsa mer i [Konfigurera nodarkiv och datalager i AEM](/help/sites-deploying/data-store-config.md). Proceduren skiljer sig inte åt när det gäller avlastning av resurser, förutom att den omfattar andra replikeringsagenter. Eftersom binärfri replikering endast fungerar med framåtriktade replikeringsagenter bör du även använda framåtreplikering för alla avlastningsagenter.
 
 ### Inaktivera transportpaket {#turning-off-transport-packages}
 
 Som standard skapas ett innehållspaket som innehåller avlastningsjobbet och jobbnyttolasten (den ursprungliga resursen), och det här avlastningspaketet överförs med en enda replikeringsbegäran. Det är kontraproduktivt att skapa avlastningspaketen när binär replikering används, eftersom binärfiler serialiseras i paketet igen när paketet skapas. Användningen av dessa transportpaket kan stängas av, vilket gör att avlastningsjobbet och nyttolasten transporteras i flera replikeringsbegäranden, en för varje nyttolastpost. På så sätt kan fördelarna med binär replikering användas.
 
-1. Öppna komponentkonfigurationen för *OffloadingDefaultTransporter*-komponenten på [http://localhost:4502/system/console/configMgr/com.adobe.granite.offloading.impl.transporter.OffloadingDefaultTransporter](http://localhost:4502/system/console/configMgr/com.adobe.granite.offloading.impl.transporter.OffloadingDefaultTransporter)
+1. Öppna komponentkonfigurationen för *OffloadingDefaultTransporter* komponent vid [http://localhost:4502/system/console/configMgr/com.adobe.granite.offloading.impl.transporter.OffloadingDefaultTransporter](http://localhost:4502/system/console/configMgr/com.adobe.granite.offloading.impl.transporter.OffloadingDefaultTransporter)
 1. Inaktivera egenskapen *Replikeringspaket (default.transport.contentpackage)*.
 
 ### Inaktivera transport av arbetsflödesmodell {#disabling-the-transport-of-workflow-model}
 
-Som standard läggs arbetsflödesmodellen *DAM Update Asset Offloading* som avlastning till för att anropa arbetaren till jobbnyttolasten. Eftersom det här arbetsflödet följer den körklara *DAM Update Asset*-modellen som standard, kan denna ytterligare nyttolast tas bort.
+Som standard är *DAM - uppdatera tillgångsavlastning* avlastning av arbetsflöde lägger till arbetsflödesmodellen för att anropa arbetaren till jobbnyttolasten. Eftersom det här arbetsflödet följer körklart *DAM-uppdateringsresurs* som standard kan denna ytterligare nyttolast tas bort.
 
 Om arbetsflödesmodellen är inaktiverad från jobbnyttolasten ska du se till att du distribuerar ändringar till den refererade arbetsflödesmodellen med andra verktyg, till exempel pakethanteraren.
 

@@ -5,20 +5,24 @@ contentOwner: AG
 feature: Projects,Translation
 role: User,Admin
 exl-id: cc6c4f9e-8e22-4622-8b24-230ae258351c
-source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '478'
 ht-degree: 3%
 
 ---
 
 # Förbereder resurser för översättning {#preparing-assets-for-translation}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 Flerspråkiga resurser innebär resurser med binärfiler, metadata och taggar på flera språk. I allmänhet finns binära filer, metadata och taggar för resurser på ett språk, som sedan översätts till andra språk för användning i flerspråkiga projekt.
 
 I Adobe Experience Manager Assets inkluderas flerspråkiga resurser i mappar, där varje mapp innehåller resurserna på ett annat språk.
 
-Varje språkmapp kallas för en språkkopia. Rotmappen för en språkkopia, som kallas språkrot, identifierar språket för innehållet i språkkopian. Till exempel är */content/dam/it* den italienska språkroten för den italienska språkkopian. Språkkopior måste använda en [korrekt konfigurerad språkrot](preparing-assets-for-translation.md#creating-a-language-root) så att rätt språk används när översättningar av källresurser utförs.
+Varje språkmapp kallas för en språkkopia. Rotmappen för en språkkopia, som kallas språkrot, identifierar språket för innehållet i språkkopian. Till exempel: */content/dam/it* är den italienska språkroten för den italienska språkversionen. Språkkopior måste använda [korrekt konfigurerad språkrot](preparing-assets-for-translation.md#creating-a-language-root) så att rätt språk anges som mål när översättningar av källresurser utförs.
 
 Språkkopian som du ursprungligen lade till resurser för är det primära språket. Språkets primära språk är källan som översätts till andra språk.
 
@@ -57,17 +61,17 @@ Rotsidan för den italienska språkkopian av exempelhierarkin har till exempel `
 
    ![chlimage_1-121](assets/chlimage_1-121.png)
 
-1. Klicka eller tryck på **[!UICONTROL Create]**. Språkroten skapas i resurskonsolen.
+1. Klicka eller tryck **[!UICONTROL Create]**. Språkroten skapas i resurskonsolen.
 
 ## Visa språkrot {#viewing-language-roots}
 
-Det pekoptimerade användargränssnittet innehåller en referenspanel som visar en lista med språkrötter som har skapats i [!DNL Experience Manager]-resurser.
+Det pekoptimerade användargränssnittet innehåller en referenspanel som visar en lista med språkrötter som har skapats i [!DNL Experience Manager] Resurser.
 
 1. I resurskonsolen väljer du det språk som är primärt för vilket du vill skapa språkkopior.
 1. Klicka på eller tryck på ikonen GlobalNav och välj **[!UICONTROL References]** för att öppna referensrutan.
 
    ![chlimage_1-122](assets/chlimage_1-122.png)
 
-1. Klicka eller tryck på **[!UICONTROL Language Copies]** i rutan Referenser. På panelen Språkkopior visas språkkopiorna för resurserna.
+1. Klicka eller tryck på i rutan Referenser **[!UICONTROL Language Copies]**. På panelen Språkkopior visas språkkopiorna för resurserna.
 
    ![chlimage_1-123](assets/chlimage_1-123.png)

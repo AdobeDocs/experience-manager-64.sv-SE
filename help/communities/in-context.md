@@ -1,8 +1,8 @@
 ---
 title: Sammanhangsbaserad moderering
-seo-title: Sammanhangsbaserad moderering
+seo-title: In-Context Moderation
 description: Så här utför du moderatoråtgärder
-seo-description: Så här utför du moderatoråtgärder
+seo-description: How to perform moderator actions
 uuid: 282a8bea-2822-4e5c-b9f4-4d9a5380d895
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -11,22 +11,26 @@ content-type: reference
 discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
 role: Admin
 exl-id: a7678273-81f6-4089-ac73-2458d940e374
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '825'
 ht-degree: 0%
 
 ---
 
 # Sammanhangsbaserad moderering {#in-context-moderation}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 För AEM Communities kan moderering utföras av administratörer och betrodda communitymedlemmar direkt på den publicerade sidan där communityinnehållet publicerades.
 
-När du använder en [moderationskonsol](moderation.md) innehåller den information som visas för innehållet en länk till den publicerade sidan som ger åtkomst till ytterligare modereringsåtgärder som är tillgängliga vid moderering i kontext.
+När en [modereringskonsol](moderation.md)innehåller den information som visas för innehållet en länk till den publicerade sidan som ger åtkomst till ytterligare modereringsåtgärder som är tillgängliga vid moderering i sitt sammanhang.
 
 ## Modereringsåtgärder {#moderation-actions}
 
-På modereringsöversikten finns en beskrivning av [modereringsåtgärder](moderate-ugc.md#moderation-actions).
+Besök modereringsöversikten för en beskrivning av [modereringsåtgärder](moderate-ugc.md#moderation-actions).
 
 ## Modereringsgränssnitt {#moderation-ui}
 
@@ -40,11 +44,11 @@ Användargränssnittet som visas för moderatorn i publiceringsinstansen finns i
 
 ## Exempel {#example}
 
-Med hjälp av [Geometrixx Engage](http://localhost:4503/content/sites/engage/en.html)-webbplatsen som skapades när [Komma igång med AEM Communities](getting-started.md) går det snabbt att konfigurera en tråd i ett forum där olika modereringsaktiviteter i publiceringsmiljön kan användas, vilket visas nedan.
+Använda [Geometrixx Engage](http://localhost:4503/content/sites/engage/en.html) webbplats skapad när [Komma igång med AEM Communities](getting-started.md)kan du snabbt skapa en tråd i ett forum där du kan uppleva olika modereringsaktiviteter i publiceringsmiljön, vilket visas nedan.
 
 Aaron McDonald (aaron.mcdonald@mailinator.com) identifierades som en betrodd community-medlem genom att han lades till i gruppen community-engage-moderators när webbplatsen skapades.
 
-Rebekah Larsen (rebekah.larsen@trashymail.com) kan läggas till som medlem i en community-engage-members-grupp med [Medlemskonsolen](members.md).
+Rebekah Larsen (rebekah.larsen@trashymail.com) kan läggas till som medlem i en community-engage-members-grupp med hjälp av [Medlemskonsol](members.md).
 
 Mer information om användargrupper finns på [Hantera användare och användargrupper](users.md).
 
@@ -96,9 +100,9 @@ En anonym besökare kan endast visa forumet, men inte publicera något innehåll
 
 ### Ny medlem (#4) {#new-member}
 
-Logga in som administratör och lägg till Boyd Larsen (boyd.larsen@dodgit.com) som ny medlem i en community-engage-members-grupp med [Medlemskonsolen](members.md) och logga sedan ut.
+Logga in som administratör och lägg till Boyd Larsen (boyd.larsen@dodgit.com) som ny medlem i en community-engage-members-grupp med [Medlemskonsol](members.md)och sedan logga ut.
 
-Vid publicering loggar du in som Boyd Larsen och öppnar tråden genom att välja `Forum` och sedan `Read more` för den hummingbird-posten.
+Vid publicering loggar du in som Boyd Larsen och öppnar tråden genom att välja `Forum`och sedan `Read more` för den hummingbird-posten.
 
 Meddelande
 
@@ -123,7 +127,7 @@ Meddelande
 
 ![communityadmin-forum](assets/communityadmin-forum.png)
 
-Välj menyalternativet Administration om du vill få åtkomst till [moderationskonsolen](moderation.md) från publiceringsmiljön.
+Välj menyalternativet Administration för att komma åt [modereringskonsol](moderation.md) från publiceringsmiljön.
 
 Observera att för en administratör är allt modereringsbart innehåll synligt, inte bara innehåll från Geometrixx Engage Community-webbplatsen.
 
@@ -146,7 +150,7 @@ Meddelande
 
 ![chlimage_1-2](assets/chlimage_1-2.png)
 
-Välj menyalternativet Administration om du vill få åtkomst till [moderationskonsolen](moderation.md) från publiceringsmiljön.
+Välj menyalternativet Administration för att komma åt [modereringskonsol](moderation.md) från publiceringsmiljön.
 
 Observera att för en community-moderator är det bara moderatorbart innehåll från Geometrixx Engage community-webbplatsen som visas.
 

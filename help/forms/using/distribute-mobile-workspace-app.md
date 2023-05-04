@@ -1,29 +1,32 @@
 ---
 title: Distribuera AEM Forms-app
-seo-title: Distribuera AEM Forms-app
+seo-title: Distribute AEM Forms app
 description: Använd MDM (Mobile Device Management) för storskalig driftsättning av appar på mobila enheter.
-seo-description: Använd MDM (Mobile Device Management) för storskalig driftsättning av appar på mobila enheter.
+seo-description: Use Mobile Device Management (MDM) for the large-scale deployment of apps on mobile devices.
 uuid: 8a2ce42b-5e9b-42c1-a945-c069f6152f6e
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 5756cb52-dd47-4277-981c-fd0af9a20638
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: c1bf0a0e-70f7-41dd-8b1a-c114d89a265b
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '279'
 ht-degree: 0%
 
 ---
 
-
 # Distribuera AEM Forms-app {#distribute-aem-forms-app}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 MDM (Mobile Device Management) möjliggör storskalig driftsättning av appar på mobila enheter.
 
 >[!NOTE]
 >
->Distributionen gäller endast iOS- och Android-enheter.
+>Distributionen gäller endast för iOS- och Android-enheter.
 
 ## De viktigaste funktionerna i MDM-lösningar: {#main-features-generally-provided-by-mdm-solutions}
 
@@ -40,10 +43,10 @@ MDM-administratören kan överföra både ipa- och apk-filer till MDM-servern oc
 
 Följande profilinställningar på enheten påverkar hur AEM Forms-appen fungerar på din enhet:
 
-* **Tillåt användning av** kameran i avsnittet  **Device** function
+* **Tillåt användning av kamera** i **Enhetsfunktioner** section
 
-Om du inaktiverar **Tillåt användning av kamera** fungerar inte kamerafunktionen i [fotoanteckningen](/help/forms/using/add-attachments.md). Du måste aktivera det här alternativet om du vill använda kameran i appen.
+Om du inaktiverar **Tillåt användning av kamera**, kamerans funktion i [Fotografanteckning](/help/forms/using/add-attachments.md) fungerar inte. Du måste aktivera det här alternativet om du vill använda kameran i appen.
 
-* **Kräv lösenord för** enheten i avsnittet Lösenordspolicyer
+* **Kräv lösenord på enheten** i avsnittet Lösenordspolicyer
 
-Om du vill aktivera **kryptering av programdata** rekommenderar vi att du aktiverar **lösenordet** på enheten. Om lösenordet inte har angetts på enheten krypteras inte programdata som lagras på enheten.
+Aktivera **kryptering av programdata** rekommenderar vi att du aktiverar **lösenord** på din enhet. Om lösenordet inte har angetts på enheten krypteras inte programdata som lagras på enheten.

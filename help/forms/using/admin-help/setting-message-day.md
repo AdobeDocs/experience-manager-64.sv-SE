@@ -10,32 +10,36 @@ geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: c2b3a412-70c2-4257-bfb4-1430bb1f8891
 exl-id: 7ddd5a4d-2b46-4408-b241-81e16cfead3c
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 1%
+source-wordcount: '210'
+ht-degree: 0%
 
 ---
 
 # Ställa in dagens meddelande {#setting-the-message-of-the-day}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 Du kan ange att ett meddelande ska visas på välkomstsidan i användargränssnittet för arbetsytan.
 
 Om det behövs kan du använda HTML-taggarna som stöds av Adobe Flash® Player för att formatera textens utseende:
 
-* &lt;a> Ankarmärke&lt;/a>
-* &lt;b> Fet tagg&lt;/b>
+* &lt;a> Ankarmärke
+* &lt;b> Fet tagg
 * &lt;br> Bryttagg
-* &lt;font> Teckensnittstagg&lt;/font>
+* &lt;font> Teckensnittstagg
 * &lt;img> Bildtagg
-* &lt;i> Kursiv tagg&lt;/i>
+* &lt;i> Kursiv tagg
 * &lt;li> Tagg för listobjekt
 * &lt;p> Stycketagg
-* &lt;span> Spänn tagg&lt;/span>
+* &lt;span> Spänn tagg
 * &lt;textformat> Tagg för textformat
-* &lt;u> Understrykningstagg&lt;/u>
+* &lt;u> Understrykningstagg
 
-Mer information om vilka taggar som stöds finns i definitionen av egenskapen `htmlText` för klassen TextField i [Flex Language Reference](https://flex.apache.org/).
+Mer information om taggarna som stöds finns i definitionen av `htmlText` egenskapen för klassen TextField i [Flex språkreferens](https://flex.apache.org/).
 
 ## Ange dagens meddelande {#set-the-message-of-the-day}
 

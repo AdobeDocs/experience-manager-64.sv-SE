@@ -2,7 +2,7 @@
 title: Moderating Community Content
 seo-title: Moderating Community Content
 description: Moderniseringskoncept och åtgärder
-seo-description: Moderniseringskoncept och åtgärder
+seo-description: Moderation concepts and actions
 uuid: a24d09e7-3260-4eec-844e-97e6849c94d8
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: d11b8fc8-5e98-4a77-a536-d445ac88e1b3
 role: Admin
 exl-id: 9865b366-b9e5-40f3-8863-789ccfb792f5
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1510'
-ht-degree: 1%
+source-wordcount: '1539'
+ht-degree: 0%
 
 ---
 
 # Moderating Community Content {#moderating-community-content}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Översikt {#overview}
 
@@ -28,7 +32,7 @@ Community-innehåll, som också kallas användargenererat innehåll (UGC), skapa
 * [Kalender](calendar.md): medlemmar publicerar en kalenderhändelse eller kommentar
 * [Kommentarer](comments.md): medlemmar publicerar en kommentar eller svarar på en kommentar
 * [Forum](forum.md): medlemmar publicerar ett nytt ämne eller svarar på ett ämne
-* [Idén](ideation-feature.md): medlemmar publicerar en idé eller kommentar
+* [Ideation](ideation-feature.md): medlemmar publicerar en idé eller kommentar
 * [QnA](working-with-qna.md): medlemmar skapar en fråga eller besvarar en fråga
 * [Recensioner](reviews.md): medlemmar publicerar en kommentar när de klassificerar ett objekt
 
@@ -36,7 +40,7 @@ Moderering av användargenererat innehåll är användbart för att redovisa pos
 
 * [Konsol för massmoderering](moderation.md)
 
-   Moderationskonsolen är tillgänglig för administratörer och [community-moderatorer](users.md) i den offentliga miljön samt för administratörer i författarmiljön. Detta är möjligt när communityinnehåll lagras i en [gemensam butik](working-with-srp.md).
+   Moderationskonsolen är tillgänglig för administratörer och [community-moderatorer](users.md) i den offentliga miljön samt av administratörer i författarmiljön. Detta är möjligt när communityinnehåll lagras i en [gemensam lagringsplats](working-with-srp.md).
 
 * [Kontextanpassad moderering](in-context.md)
 
@@ -47,9 +51,9 @@ Moderering av användargenererat innehåll är användbart för att redovisa pos
 Vilka åtgärder som kan utföras på det publicerade innehållet (UGC) varierar beroende på användaridentitet och miljö. I tabellen nedan används följande terminologi för att beskriva de olika rollerna utifrån användaridentitet:
 
 * `Admin`\
-   En användare som är medlem i gruppen [community-administratörer](users.md)
+   En användare som är medlem i [communityadministratörer](users.md) grupp
 * `Moderator`
-En medlem i en  [community-](users.md#publishenvironmentusersandgroups) moderatorgrupp (har  [moderatorbehörighet](in-context.md#moderatorpermissions))
+En medlem i en [community-moderatorer](users.md#publishenvironmentusersandgroups) grupp (har [moderatorbehörigheter](in-context.md#moderatorpermissions))
 * `Creator`\
    Användaren som publicerade innehållet
 * `Member`\
@@ -63,10 +67,10 @@ En anonym användare
    <td> </td> 
    <td><strong>Administratör</strong></td> 
    <td><strong>Moderator</strong></td> 
-   <td><strong>Originalformat</strong></td> 
+   <td><strong>Skapare</strong></td> 
    <td><strong>medlem</strong></td> 
    <td><strong>Besökare</strong></td> 
-   <td><strong>Händelse<br /> utlöst</strong></td> 
+   <td><strong>Händelse<br /> Utlöst</strong></td> 
    <td><strong>Förmodererad</strong></td> 
   </tr>
   <tr>
@@ -144,7 +148,7 @@ Administratörer och community-moderatorer kan flytta ett eller flera forumämne
 
 Genom att välja åtgärden Klipp ut kopieras innehållet till ett urklipp. Flera inlägg kan kopieras och flyttas som en grupp till den nya platsen.
 
-![cutugcputbackugc ](assets/cutugc.png) ![cutugc](assets/putbackugc.png)
+![cutugc](assets/cutugc.png) ![putbackugc](assets/putbackugc.png)
 
 På den andra platsen, när innehållet finns i Urklipp, visas knappen Klistra in bredvid Nytt inlägg med ett nummer som anger antalet inlägg som ska klistras in. Knappen Klistra in innehåller ett alternativ för att rensa Urklipp i stället för att klistra in.
 
@@ -180,13 +184,13 @@ Systemet håller reda på alla flaggor, vem som har flaggats, och flaggorsaken o
 
 ### Förmoderering {#premoderation}
 
-När UGC är förmodererat visas inte inlägget på den publicerade webbplatsen förrän det har godkänts av en modereringsåtgärd. När du skapar en [community-webbplats](sites-console.md) aktiverar kryssrutan ` [Content is Premoderated](sites-console.md#moderation)` förmoderering för hela platsen. När komponenter har placerats på en sida kan komponenter som stöder moderering konfigureras för förmoderering med en inställning i redigeringsdialogrutan:
+När UGC är förmodererat visas inte inlägget på den publicerade webbplatsen förrän det har godkänts av en modereringsåtgärd. När en [communitywebbplats](sites-console.md), markera rutan ` [Content is Premoderated](sites-console.md#moderation)` aktiverar förmoderering för hela webbplatsen. När komponenter har placerats på en sida kan komponenter som stöder moderering konfigureras för förmoderering med en inställning i redigeringsdialogrutan:
 
-* [](comments.md) Kommentarer och  [recensioner](reviews.md)
+* [Kommentarer](comments.md) och [recensioner](reviews.md)
 
-   på fliken **[!UICONTROL User Moderation]**, kontrollera **[!UICONTROL Pre-Moderation]**
+   på **[!UICONTROL User Moderation]** flik, kontrollera **[!UICONTROL Pre-Moderation]**
 
-* [Forum](forum.md),  [ideation](ideation-feature.md),  [QnA](working-with-qna.md) och  [](calendar.md) calendaron  **[!UICONTROL Settings]** tab, check  **[!UICONTROL Moderated]**
+* [Forum](forum.md), [ideation](ideation-feature.md), [QnA](working-with-qna.md)och [kalender](calendar.md) på **[!UICONTROL Settings]** flik, kontrollera **[!UICONTROL Moderated]**
 
 ### Skräppostidentifiering {#spam-detection}
 
@@ -194,7 +198,7 @@ Skräppostavkänning är en automatisk modereringsfunktion som filtrerar bort o�
 
 `/libs/settings/community/sites/moderation/spamdetector-conf/profiles/spam_words.txt`.
 
-Om du vill anpassa eller utöka standardskräppost skapar du en uppsättning ord i katalogen /apps efter strukturen för standardskräppostorden med [övertäckning](overlay-comments.md).
+Men om du vill anpassa eller utöka standardskräppost skapar du en uppsättning ord i katalogen /apps efter strukturen för standardskräppostorden med hjälp av [övertäckning](overlay-comments.md).
 
 Ett användargenererat inlägg (i alla innehållstyper, t.ex. bloggar, forum och kommentarer) som innehåller skräppostord markeras med texten&quot;Det här inlägget klassificerades som skräppost&quot; ovanför inlägget.
 
@@ -204,10 +208,10 @@ Moderatorn kan se ett sådant inlägg och markera detsamma för att tillåta ell
 
 Så här aktiverar du skräppostavkänningsmotorn:
 
-1. Öppna [webbkonsolen](http://localhost:4502/system/console/configMgr) genom att gå till `/system/console/configMgr`.
+1. Öppna [Webbkonsol](http://localhost:4502/system/console/configMgr), genom att gå till `/system/console/configMgr`.
 
-1. Leta reda på konfigurationen **[!UICONTROL AEM Communities Auto Moderation]** och redigera den.
-1. Lägg till `SpamProcess`-posten.
+1. Sök **[!UICONTROL AEM Communities Auto Moderation]** och redigera.
+1. Lägg till `SpamProcess` post.
 
 ![skräp](assets/spamprocess.png)
 
@@ -217,7 +221,7 @@ Så här aktiverar du skräppostavkänningsmotorn:
 
 ### Sentiment {#sentiment}
 
-Sentiment beräknas baserat på antalet positiva och negativa nyckelord ([bevakningsord](#configuringwatchwords)) som finns i ett inlägg (UGC).
+Sentiment beräknas baserat på antalet positiva och negativa nyckelord ([watchwords](#configuringwatchwords)) finns på en post (UGC).
 
 I ekvationsanalysen används en uppsättning förkonfigurerade regler och UGC-känslan beräknas. Standardreglerna finns på `/libs/cq/workflow/components/workflow/social/sentiments/rules.`
 
@@ -234,51 +238,51 @@ Om du vill skriva över eller lägga till regler skapar du en uppsättning regle
 
 Efter analys lagras känslan med användargenererat innehåll.
 
-Från [masmoderationskonsolen](moderation.md) går det att filtrera och visa UGC baserat på om känslan är negativ, neutral eller positiv.
+Från [masmodereringskonsol](moderation.md)är det möjligt att filtrera och visa UGC baserat på om känslan är negativ, neutral eller positiv.
 
 #### Bevakningsord {#watchwords}
 
-AEM communities tillhandahåller en *bevakningsordsanalys *som ett steg i processen för att utvärdera [känslan](#sentiment). Bidraget till det känslomässiga värde som tillhandahålls av bevakningsord beror på en jämförelse av negativa och positiva bevakningsord som används i det publicerade innehållet samt förbjudna ord.
+AEM communities tillhandahåller en *bevakningsfunktion *som ett steg i processen för att utvärdera [känslouttryck](#sentiment). Bidraget till det känslomässiga värde som tillhandahålls av bevakningsord beror på en jämförelse av negativa och positiva bevakningsord som används i det publicerade innehållet samt förbjudna ord.
 
 #### Konfigurera känslolägesikoner och bevakningsord {#configure-sentiment-and-watchwords}
 
 Listan med positiva och negativa bevakningsord kan anpassas på samma sätt som personlighetsreglerna.
 
-Standardlistan med bevakade ord kan anges som egenskaper för en nod i databasen, ungefär som standardvärdet eller genom att åsidosätta standardvärdet genom att konfigurera OSGi-tjänsten `sentimentprocess.name`med listan över ord.
+Standardlistan med bevakningsord kan anges som egenskaper för en nod i databasen, ungefär som standardvärdet eller genom att åsidosätta standardinställningen genom att konfigurera OSGi-tjänsten `sentimentprocess.name`med listan över ord.
 
-**sentimentprocess.name** kan också ändras för att referera till platsen för en anpassad uppsättning med känslomegler.
+The **sentimentprocess.name** kan också ändras för att hänvisa till platsen för en anpassad uppsättning med känslomegler.
 
 Så här konfigurerar du uttryck och bevakningsord:
 
 * På en författarinstans
 * Logga in som administratör
-* Öppna [webbkonsolen](http://localhost:4502/system/console/configMgr)
-* Sök efter `sentimentprocess.name`
+* Öppna [Webbkonsol](http://localhost:4502/system/console/configMgr)
+* Sök `sentimentprocess.name`
 * Välj konfigurationen som ska öppnas i redigeringsläge
 
 ![sentimentprocess](assets/sentimentprocess.png)
 
-* **Positiva**
-watchwordsEn kommaseparerad lista med ord som bidrar till en positiv uppfattning som åsidosätter standardvärdena. Standard är en tom lista.
+* **Positiva Watchwords**
+En kommaavgränsad lista med ord som bidrar till en positiv uppfattning som åsidosätter standardvärdena. Standard är en tom lista.
 
-* **Negativa**
-watchwordsEn kommaseparerad lista med ord som bidrar till en negativ uppfattning som åsidosätter standardvärdena. Standard är en tom lista.
+* **Negativa Watchwords**
+En kommaavgränsad lista med ord som bidrar till en negativ uppfattning som åsidosätter standardvärdena. Standard är en tom lista.
 
-* **Explicit sökväg till**
-bevakningsordsnodDatabasplatsen för en nod som innehåller standard 
-`positive` och  `negative` egenskaper som anger standardbevakningsord. Standardvärdet är `/libs/settings/community/watchwords/default`.
+* **Explicit sökväg till bevakningsordsnod**
+Databasplatsen för en nod som innehåller standard 
+`positive` och `negative` egenskaper som anger standardbevakningsord. Standard är `/libs/settings/community/watchwords/default`.
 
-* **Sentiment**
-RulesDatabasplatsen för reglerna för beräkning av uppfattning baserat på positiva och negativa bevakningsord. Standard är 
+* **Känslighetsregler**
+Databasplatsen för reglerna för att beräkna en uppfattning baserat på positiva och negativa bevakningsord. Standard är 
 `/libs/cq/workflow/components/workflow/social/sentiments/rules` (men det finns inte längre något arbetsflöde).
 
-Nedan visas ett exempel på en anpassad post för standardbevakningsorden när `Explicit Path to Watchwords Node` är `/libs/settings/community/watchwords/default`.
+Följande är ett exempel på en anpassad post för standardbevakningsorden, när `Explicit Path to Watchwords Node` är inställd på `/libs/settings/community/watchwords/default`.
 
 ![crxde](assets/crxde.png)
 
 ### Tillstånd för moderatorn {#moderator-permissions}
 
-Följande behörigheter, som tilldelas till samma resurs, kallas tillsammans **`moderator permissions`**:
+Följande behörigheter, som tilldelas samma resurs, kallas tillsammans för **`moderator permissions`**:
 
 * `Read`
 * **`Modify`**

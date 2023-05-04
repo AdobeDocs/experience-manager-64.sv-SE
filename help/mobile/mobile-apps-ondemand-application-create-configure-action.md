@@ -1,24 +1,27 @@
 ---
 title: Skapa och konfigurera program
-seo-title: Skapa och konfigurera program
+seo-title: Application Create and Configuration Actions
 description: Att skapa en app är ofta det första steget mot att skapa och hantera AEM Mobile On-Demand-innehåll. Följ den här sidan om du vill veta mer.
-seo-description: Att skapa en app är ofta det första steget mot att skapa och hantera AEM Mobile On-Demand-innehåll. Följ den här sidan om du vill veta mer.
+seo-description: Creating an app is often the first step towards creating and managing AEM Mobile On-Demand content. Follow this page to learn more.
 uuid: f6b41d9a-d896-479e-9f6c-e91a88f3e74d
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: ccafd49a-5c8a-44eb-9b0c-37070560bb52
-translation-type: tm+mt
-source-git-commit: 8078976ab79ccc0fefac5bfe6b000a008a917489
+exl-id: 42fa3026-ea37-40e7-8932-147fb3db2784
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
 
-
 # Skapa och konfigurera program{#application-create-and-configuration-actions}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
@@ -34,18 +37,18 @@ Information om ditt program kan visas på kontrollpanelen eller i AEM Mobile Con
 >
 >Kontrollpanelen är en serie användbara paneler som ger en översikt över programmets innehåll, metadata och anslutningsstatus för AEM Mobile On-Demand.
 >
->Mer information finns i [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
+>Se [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md) för mer information.
 
 **Så här skapar du en on demand-app:**
 
 1. Välj **Mobil** från sidospåret.
-1. Välj **Appar** i navigeringen.
-1. Klicka på **Skapa** och välj **App** i listrutan.
+1. Välj **Appar** från Navigation.
+1. Klicka **Skapa** och markera **App** från listrutan.
 1. Välj mallen för mobilappar och klicka på **Nästa**.
-1. Ange appegenskaper som **Title**, **Name**, **Description**.
+1. Ange appegenskaper som **Titel**, **Namn**, **Beskrivning**.
 1. Klicka på **Nästa**.
 1. Om du känner till detta anger du information om molnkonfigurationen. Klicka annars på **Skapa**.
-1. Klicka på **Klar** för att visa din nya AEM Mobile-app i katalogen.
+1. Klicka **Klar** för att visa din nya AEM Mobile-app i katalogen.
 
 ![chlimage_1](assets/chlimage_1.gif)
 
@@ -66,13 +69,13 @@ Du måste ha en befintlig mobilappsmall (eller en app som har en appmall) för a
 
 När du har skapat en On-Demand-app från kontrollpanelen för program är nästa steg att koppla din app till molnkonfigurationen.
 
-Mer information finns i [Associera din app med molnkonfigurationen](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md).
+Se [Koppla ditt program till molnkonfigurationen](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) för mer information.
 
 ### Komma framåt {#getting-ahead}
 
-När du är bekant med att skapa ett on demand-program och därmed koppla det programmet till en molnkonfiguration, se [Innehållshanteringsåtgärder](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
+När du är bekant med att skapa ett on-demand-program och därmed koppla det programmet till en molnkonfiguration kan du läsa [Innehållshanteringsåtgärder](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
 
-**Innehållshanteringsåtgärder** innefattar att skapa och hantera följande innehåll:
+**Innehållshanteringsåtgärder** innebär att följande innehåll skapas och hanteras:
 
 * [Hantera artiklar](/help/mobile/mobile-on-demand-managing-articles.md)
 * [Hantera banners](/help/mobile/mobile-on-demand-managing-banners.md)

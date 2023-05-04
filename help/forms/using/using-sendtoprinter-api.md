@@ -1,23 +1,26 @@
 ---
 title: Använda API:t sendToPrinter
-seo-title: Använda API:t sendToPrinter
+seo-title: Using the sendToPrinter API
 description: Skicka ett dokument till skrivaren med hjälp av tjänsten sendToPrinter.
-seo-description: Skicka ett dokument till skrivaren med hjälp av tjänsten sendToPrinter.
+seo-description: Using the sendToPrinter service to send a document to printer.
 uuid: c6a3fe8d-ec19-4350-b4a6-4c3d1971b501
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: document_services
 discoiquuid: c2d564ba-fa5a-4130-b7fe-7e2c64d92170
-translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+exl-id: 89b6c8b4-4872-4bf5-a543-f33a1660636e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '372'
-ht-degree: 2%
+source-wordcount: '394'
+ht-degree: 0%
 
 ---
 
-
 # Använda API:t sendToPrinter {#using-the-sendtoprinter-api}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Översikt {#overview}
 
@@ -35,7 +38,7 @@ I AEM Forms kan du använda tjänsten SendToPrinter för att skicka ett dokument
    * **SharedPrinter** `: A printing protocol that enables a computer to use a printer that is configured for that computer.`
    * **CIFS**: Utdatatjänsten stöder CIFS-utskriftsprotokollet (Common Internet File System).
 
-## Använda SendToPrinter Service {#using-sendtoprinter-service}
+## Använda tjänsten SendToPrinter {#using-sendtoprinter-service}
 
 Tabellen nedan listar:
 
@@ -44,23 +47,23 @@ Tabellen nedan listar:
 
 | Protokoll (åtkomstmekanism) | Print Server-URI (PrinterSpec.printServer) | Skrivarens namn (PrinterSpec.printerName) | Resultat |
 |--- |--- |--- |--- |
-| SharedPrinter | Alla | Tomt | Undantag: Det obligatoriska argumentet sPrinterName får inte vara tomt. |
+| SharedPrinter | Alla | Tom | Undantag: Det obligatoriska argumentet sPrinterName får inte vara tomt. |
 | SharedPrinter | Alla | Ogiltig | Ett undantag är att skrivaren inte kan hittas. |
 | SharedPrinter | Alla | Giltig | Utskriften är klar. |
-| LPD | Tomt | Alla | ett undantag som anger att det obligatoriska argumentet sPrintServerUri inte får vara tomt. |
-| LPD | Ogiltig | Tomt | ett undantag som anger att det obligatoriska argumentet sPrinterName inte får vara tomt. |
+| LPD | Tom | Alla | ett undantag som anger att det obligatoriska argumentet sPrintServerUri inte får vara tomt. |
+| LPD | Ogiltig | Tom | ett undantag som anger att det obligatoriska argumentet sPrinterName inte får vara tomt. |
 | LPD | Ogiltig | Inte tom | ett undantag som anger att sPrintServerUri inte hittas. |
 | LPD | Giltig | Ogiltig | ett undantag som anger att skrivaren inte kan hittas. |
 | LPD | Giltig | Giltig | Utskriften är klar. |
-| CUPS | Tomt | Alla | ett undantag som anger att det obligatoriska argumentet sPrintServerUri inte får vara tomt. |
+| CUPS | Tom | Alla | ett undantag som anger att det obligatoriska argumentet sPrintServerUri inte får vara tomt. |
 | CUPS | Ogiltig | Alla | ett undantag som anger att skrivaren inte kan hittas. |
 | CUPS | Giltig | Alla | Utskriften är klar. |
-| DirectIP | Tomt | Alla | ett undantag som anger att det obligatoriska argumentet sPrintServerUri inte får vara tomt. |
+| DirectIP | Tom | Alla | ett undantag som anger att det obligatoriska argumentet sPrintServerUri inte får vara tomt. |
 | DirectIP | Ogiltig | Alla | ett undantag som anger att skrivaren inte kan hittas. |
 | DirectIP | Giltig | Alla | Utskriften är klar. |
-| CIFS | Giltig | Tomt | Utskriften är klar. |
+| CIFS | Giltig | Tom | Utskriften är klar. |
 | CIFS | Ogiltig | Alla | ett okänt fel vid utskrift med CIFS. |
-| CIFS | Tomt | Alla | ett undantag som anger att det obligatoriska argumentet sPrintServerUri inte får vara tomt. |
+| CIFS | Tom | Alla | ett undantag som anger att det obligatoriska argumentet sPrintServerUri inte får vara tomt. |
 
 ## Autentiseringsstöd {#authentication-support}
 
@@ -70,5 +73,4 @@ Autentisering stöds bara för CIFS-utskrift. Ange användarnamn/lösenord/domä
 
 1. Gå till **[!UICONTROL Main]** > **[!UICONTROL Crypto Support]**.
 
-1. Ange oformaterad text och klicka på **[!UICONTROL Protect]**.
-
+1. Ange oformaterad text och klicka **[!UICONTROL Protect]**.

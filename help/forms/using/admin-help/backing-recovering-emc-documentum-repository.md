@@ -1,24 +1,27 @@
 ---
 title: Säkerhetskopiera och återställa EMC Documentum-databasen
-seo-title: Säkerhetskopiera och återställa EMC Documentum-databasen
+seo-title: Backing up and recovering the EMC Documentum repository
 description: I det här dokumentet beskrivs de uppgifter som krävs för att säkerhetskopiera och återställa EMC Documentum-databasen som konfigurerats för din AEM formulärmiljö.
-seo-description: I det här dokumentet beskrivs de uppgifter som krävs för att säkerhetskopiera och återställa EMC Documentum-databasen som konfigurerats för din AEM formulärmiljö.
+seo-description: This document describes the tasks required to back up and recover the EMC Documentum repository configured for your AEM forms environment.
 uuid: ab3b1fb1-25b3-4c95-801f-82d4b58f05ff
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: f146202f-25f1-46a0-9943-c483f5f09f9f
-translation-type: tm+mt
-source-git-commit: f957ca343d12c325d012034a6fdbc36f77e41d87
+exl-id: 89d7b2e1-1d88-4392-89d3-484a98f07121
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '869'
 ht-degree: 0%
 
 ---
 
-
 # Säkerhetskopiera och återställa EMC Documentum-databasen {#backing-up-and-recovering-the-emc-documentum-repository}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 I det här avsnittet beskrivs de uppgifter som krävs för att säkerhetskopiera och återställa EMC Documentum-databasen som konfigurerats för din AEM formulärmiljö.
 
@@ -47,7 +50,7 @@ Du behöver följande EMC NetWorker-moduler:
 * NetWorker-modul för den databastyp som används av Content Server
 * NetWorker-modul för Documentum
 
-## Förbereder EMC Document Content Server för säkerhetskopiering och återställning {#preparing-the-emc-document-content-server-for-backup-and-recovery}
+## Förbereda EMC Document Content Server för säkerhetskopiering och återställning {#preparing-the-emc-document-content-server-for-backup-and-recovery}
 
 I det här avsnittet beskrivs hur du installerar och konfigurerar EMC NetWorker-programmet på innehållsservern.
 
@@ -55,9 +58,9 @@ I det här avsnittet beskrivs hur du installerar och konfigurerar EMC NetWorker-
 
 1. Installera EMC NetWorker-modulerna på EMC Documentum Content Server och acceptera alla standardvärden.
 
-   Under installationsprocesserna uppmanas du att ange servernamnet på innehållsserverdatorn som *NetWorker-servernamn*. När du installerar EMC NetWorker-modulen för din databas väljer du en fullständig installation.
+   Under installationsprocesserna uppmanas du att ange servernamnet på Content Server-datorn som *NetWorker-servernamn*. När du installerar EMC NetWorker-modulen för din databas väljer du en fullständig installation.
 
-1. Med exempelinnehållet nedan skapar du en konfigurationsfil med namnet *nsrnmd_win.cfg* och sparar den på en tillgänglig plats på innehållsservern. Filen anropas av kommandona för säkerhetskopiering och återställning.
+1. Skapa en konfigurationsfil med namnet med exempelinnehållet nedan *nsrnmd_win.cfg* och spara det på en tillgänglig plats på Content Server. Filen anropas av kommandona för säkerhetskopiering och återställning.
 
    Följande text innehåller formateringstecken för radbrytningar. Om du kopierar den här texten till en plats utanför det här dokumentet kopierar du en del i taget och tar bort formateringstecknen när du klistrar in den på den nya platsen.
 
@@ -188,26 +191,26 @@ I det här avsnittet beskrivs hur du installerar och konfigurerar EMC NetWorker-
     NMDDE_DM_PASSWD=XAtup9pl
    ```
 
-   Behåll konfigurationsfilens lösenordsfält `NMDDE_DM_PASSWD` tomt. Du anger lösenordet i nästa steg.
+   Behåll lösenordsfältet för konfigurationsfilen `NMDDE_DM_PASSWD` tom. Du anger lösenordet i nästa steg.
 
 1. Ange lösenordet för konfigurationsfilen enligt följande:
 
    * Öppna en kommandotolk och ändra till *[NetWorker_root]*\Legato\nsr\bin.
-   * Kör följande kommando: `-nsrnmdsv.exe -f`*&lt;sökväg_till_cfg_fil> -P &lt;lösenord>*
+   * Kör följande kommando: `-nsrnmdsv.exe -f`*&lt;path_to_cfg_file> -P &lt;password>*
 
 1. Skapa de körbara batchfiler (.bat) som används för att säkerhetskopiera databasen. (Se dokumentationen för NetWorker.) Ange information i gruppfilerna enligt installationen.
 
    * Fullständig säkerhetskopiering av databasen (nsrnmddbf.bat):
 
-      *[NetWorker_database_module_]* `-s`*&lt;networker_server_name>* `-U`*[]*`-P`*[rootusernamepassword]* `-l full`*&lt;database_name>*
+      *[NetWorker_database_module_root]* `-s`*&lt;networker_server_name>* `-U`*[användarnamn ]*`-P`*[lösenord]* `-l full`*&lt;database_name>*
 
    * Inkrementell säkerhetskopiering av databas (nsrnmddbi.bat):
 
-      *[NetWorker_database_module_]* `-s`*&lt;networker_server_name>* `-U`*[]*`-P`*[rootusernamepassword]* `-l 1 -R`*&lt;database_name>*
+      *[NetWorker_database_module_root]* `-s`*&lt;networker_server_name>* `-U`*[användarnamn ]*`-P`*[lösenord]* `-l 1 -R`*&lt;database_name>*
 
    * Säkerhetskopiering av databaslogg (nsrnmddbl.bat):
 
-      *[NetWorker_database_module_]* `-s`*&lt;networker_server_name>* `-U`*[]*`-P`*[rootusernamepassword]* `-l incr -R`*&lt;database_name>*
+      *[NetWorker_database_module_root]* `-s`*&lt;networker_server_name>* `-U`*[användarnamn ]*`-P`*[lösenord]* `-l incr -R`*&lt;database_name>*
 
       Var:
 
@@ -215,7 +218,7 @@ I det här avsnittet beskrivs hur du installerar och konfigurerar EMC NetWorker-
 
       `NetWorker_Server_Name` är den server där NetWorker är installerat.
 
-      `username` och  `password` är användarnamn och lösenord för databasadministratörsanvändaren.
+      `username` &amp; `password` är användarnamn och lösenord för databasadministratörsanvändaren.
 
       `database_name` är namnet på den databas som ska säkerhetskopieras.
 
@@ -269,4 +272,3 @@ Utför följande åtgärder innan du återställer AEM formulärdata. (Se [Åter
    ```as3
     - nsrnmdrs.exe -B <docbase_name> -f <path_to_cfg_file> -C SA
    ```
-

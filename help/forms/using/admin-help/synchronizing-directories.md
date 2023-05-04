@@ -1,5 +1,5 @@
 ---
-title: 'Synkroniserar kataloger '
+title: Synkroniserar kataloger
 seo-title: Synchronizing directories
 description: Lär dig hur du synkroniserar användarhanteringsdatabasen med ändringar i källkatalogservrarna med hjälp av manuell eller schemalagd synkronisering.
 seo-description: Learn how to synchronize the User Management database with changes to the source directory servers using manual or scheduled synchronization.
@@ -10,16 +10,20 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 7ec0698a-9e6e-48d4-bba2-5a6eee313900
 exl-id: d6b2f389-bff4-481d-93bf-87f56114a91b
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
 
 # Synkroniserar kataloger {#synchronizing-directories}
 
-Om du vill synkronisera domäner kan du välja att göra en manuell eller schemalagd synkronisering. En *manuell synkronisering* synkroniserar alla markerade domäner. En *schemalagd synkronisering* synkroniserar alla domäner.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+Om du vill synkronisera domäner kan du välja att göra en manuell eller schemalagd synkronisering. A *manuell synkronisering* synkroniserar alla markerade domäner. A *schemalagd synkronisering* synkroniserar alla domäner.
 
 Katalogsynkronisering används för att hämta information från katalogservrarna som du har angett i dina kataloginställningar till databasen för användarhantering. Senare kan du även göra en manuell synkronisering om det sker ändringar eller uppdateringar på katalogservrarna. Du kan till exempel göra en manuell synkronisering om användare och grupper läggs till eller om ändringar görs i en användares konto.
 
@@ -53,7 +57,7 @@ Användarhantering utför följande steg när deltakatalogsynkronisering är akt
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering.
 1. Markera kryssrutan under Deltasynkronisering och klicka på Spara.
-1. Redigera kataloginställningarna för var och en av de företagsdomäner som ska använda funktionen för deltakatalogsynkronisering. På sidorna Användarinställningar och Gruppinställningar letar du reda på inställningen Ändra tidsstämpel och anger `modify TimeStamp` som värde. Mer information om hur du redigerar företagsdomäner finns i [Redigera och konvertera befintliga domäner](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains).
+1. Redigera kataloginställningarna för var och en av de företagsdomäner som ska använda funktionen för deltakatalogsynkronisering. På sidorna Användarinställningar och Gruppinställningar letar du reda på inställningen Ändra tidsstämpel och anger `modify TimeStamp` som värdet. Mer information om hur du redigerar företagsdomäner finns i [Redigera och konvertera befintliga domäner](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains).
 
 ## Aktivera eller inaktivera detaljerad loggning under synkronisering {#enable-or-disable-detailed-logging-during-synchronization}
 
@@ -69,7 +73,7 @@ Du kan konfigurera användarhantering så att det regelbundet görs en sökning 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Konfigurera avancerade systemattribut.
 1. Under Synch Finisher Cron Expression anger du ett cron-uttryck som representerar intervallet där användarhanteringsförsök misslyckades med synkroniseringar. Användningen av cron-uttryck baseras på Quartz-systemet för jobbschemaläggning med öppen källkod, version 1.4.0.
 
-   Standardvärdet är 0 0/13 &amp;ast; ? &amp;ast; vilket innebär att kontrollen utförs var 13:e minut.
+   Standardvärdet är 0/13 &amp;ast; ? &amp;ast; vilket innebär att kontrollen utförs var 13:e minut.
 
 ## Synkronisera kataloger manuellt {#manually-synchronize-directories}
 

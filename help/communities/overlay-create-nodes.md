@@ -1,24 +1,27 @@
 ---
 title: Skapa noder
-seo-title: Skapa noder
-description: 'Täck över kommentarsystemet '
-seo-description: 'Täck över kommentarsystemet '
+seo-title: Create Nodes
+description: Täck över kommentarsystemet
+seo-description: Overlay the comments system
 uuid: 802ae28b-9989-4c2c-b466-ab76a724efd3
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: cd4f53ee-537b-4f10-a64f-474ba2c44576
-translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+exl-id: fc044a4e-0037-405f-8c26-b388c6a98733
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '260'
-ht-degree: 4%
+source-wordcount: '290'
+ht-degree: 2%
 
 ---
 
-
 # Skapa noder {#create-nodes}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Täck över kommentarsystemet med en anpassad version genom att kopiera det minsta antalet filer som behövs från /libs till /apps och ändra dem i /apps.
 
@@ -26,7 +29,7 @@ Täck över kommentarsystemet med en anpassad version genom att kopiera det mins
 >
 >Innehållet i mappen /libs redigeras aldrig eftersom ominstallation eller uppgradering kan ta bort eller ersätta mappen /libs medan innehållet i mappen /apps lämnas orört.
 
-Om du använder [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) på en författarinstans börjar du med att skapa en sökväg i mappen /apps som är identisk med sökvägen till de överordnade komponenterna i mappen /libs.
+Använda [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) i en författarinstans börjar du med att skapa en sökväg i mappen /apps som är identisk med sökvägen till de överlagrade komponenterna i mappen /libs.
 
 Sökvägen som dupliceras är
 
@@ -36,27 +39,27 @@ Vissa noder i sökvägen är mappar och andra är komponenter.
 
 1. Bläddra till [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
 1. Skapa `/apps/social` (om den inte redan finns)
-   * Välj `/apps`-nod
+   * Välj `/apps` nod
    * **[!UICONTROL Create > Folder ...]**
       * Ange namn: `social`
-1. Välj `social`-nod
+1. Välj `social` nod
    * **[!UICONTROL Create > Folder...]**
       * Ange namn: `commons`
-1. Välj `commons`-nod
+1. Välj `commons` nod
    * **[!UICONTROL Create > Folder...]**
       * Ange namn: `components`
-1. Välj `components`-nod
+1. Välj `components` nod
    * **[!UICONTROL Create > Folder..]**.
       * Ange namn: `hbs`
-1. Välj `hbs`-nod
+1. Välj `hbs` nod
    * **[!UICONTROL Create > Create Component...]**
       * Ange etikett: `comments`
       * Ange titel: `Comments`
       * Ange beskrivning: `List of comments without showing avatars`
       * Supertyp: `social/commons/components/comments`
       * Ange grupp: `Communities`
-      * Klicka på **[!UICONTROL Next]** tills **[!UICONTROL OK]**
-1. Välj `comments`-nod
+      * Klicka **[!UICONTROL Next]** tills **[!UICONTROL OK]**
+1. Välj `comments` nod
 
    * **[!UICONTROL Create > Create Component...]**
 
@@ -65,9 +68,9 @@ Vissa noder i sökvägen är mappar och andra är komponenter.
       * Ange beskrivning: `A comment instance without avatars`
       * Supertyp: `social/commons/components/comments/comment`
       * Ange grupp: `.hidden`
-      * Klicka på **[!UICONTROL Next]** tills **[!UICONTROL OK]**
+      * Klicka **[!UICONTROL Next]** tills **[!UICONTROL OK]**
    * Välj **[!UICONTROL Save All]**
-1. Ta bort standard `comments.jsp`
+1. Ta bort standardinställningen `comments.jsp`
    * Välj nod `/apps/social/commons/components/hbs/comments/comments.jsp`
    * Välj **[!UICONTROL Delete]**
 1. Ta bort standardkommentaren.jsp
@@ -77,16 +80,14 @@ Vissa noder i sökvägen är mappar och andra är komponenter.
 
 >[!NOTE]
 >
->För att bevara arvskedjan anges `Super Type` (egenskapen `sling:resourceSuperType`) för övertäckningskomponenterna till samma värde som `Super Type` för de komponenter som ska överlappas, i det här fallet
+>Om du vill bevara arvskedjan måste du `Super Type` (egenskap `sling:resourceSuperType`) för övertäckningskomponenterna anges med samma värde som `Super Type` av de komponenter som skall täckas, i detta fall
 >
 >* `social/commons/components/comments`
 >* `social/commons/components/comments/comment`
-
 >
 
 
-
-Övertäckningens egna `Type`(egenskap `sling:resourceType`) måste vara en relativ självreferens så att innehåll som inte hittas i /apps sedan söks efter i /libs.
+Övertäckningen är egen `Type`(egenskap `sling:resourceType`) måste vara en relativ självreferens så att innehåll som inte hittas i /apps sedan söks efter i /libs.
 * Namn: `sling:resourceType`
 * Typ: `String`
 * Värde: `social/commons/components/hbs/comments`
@@ -99,4 +100,3 @@ Vissa noder i sökvägen är mappar och andra är komponenter.
    * Välj **[!UICONTROL Save All]**
 
 ![chlimage_1-4](assets/chlimage_1-4.png)
-

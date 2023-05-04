@@ -10,14 +10,18 @@ discoiquuid: d1f45751-1761-4d6b-b17d-110b2f1117ea
 exl-id: bb97b649-a50d-49c8-97aa-18c32f18d527
 feature: Components
 role: User
-source-git-commit: 50b657456d2a0eaaaf681d3902eba38b15d00e12
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2692'
+source-wordcount: '2728'
 ht-degree: 4%
 
 ---
 
 # Lägga till Dynamic Media Assets på sidor {#adding-dynamic-media-assets-to-pages}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Om du vill lägga till funktionen för dynamiska medier i resurser som du använder på dina webbplatser kan du lägga till **Dynamic Media** eller **Interaktiva media** direkt på sidan. Det gör du genom att öppna layoutläget och aktivera de dynamiska mediekomponenterna. Sedan kan du lägga till komponenterna på sidan och lägga till resurser i komponenterna. Komponenterna för dynamiska media och interaktiva media är smarta - de vet om du lägger till en bild eller en video och de tillgängliga alternativen ändras i enlighet med detta.
 
@@ -114,7 +118,6 @@ Dynamic Media-komponenten är smart - beroende på om du lägger till en bild el
 >
 >* Du har [aktiverad Dynamic Media](config-dynamic.md). Dynamic Media är inaktiverat som standard.
 >* Bilden har en pyramidformad fil. Bilder som importerats innan dynamiska medier har aktiverats har ingen pyramiddiff-fil.
-
 >
 
 

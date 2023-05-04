@@ -1,8 +1,8 @@
 ---
 title: Communities-konsoler
-seo-title: Communities-konsoler
+seo-title: Communities Consoles
 description: Förklaring av Community-konsoler
-seo-description: Förklaring av Community-konsoler
+seo-description: Community Consoles explained
 uuid: 1c5b2600-9059-4b44-9741-f1b627423d3c
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -11,38 +11,42 @@ content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 role: Admin
 exl-id: f31072dc-ad2d-4f2d-b222-05d7fb19e471
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '375'
 ht-degree: 1%
 
 ---
 
 # Communities-konsoler {#communities-consoles}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 AEM Communities-konsolerna, som finns i författarmiljön från den globala navigeringspanelen, ger åtkomst till administrativa uppgifter som
 
 * [Skapa en communitywebbplats](sites-console.md)
-* Lägga till [grupper](groups.md) kapslade inom platsen
-* Hantera [communitywebbplatsmallar](sites.md)
-* Hantera [communitymedlemmar](members.md)
-* [Hanterar ](moderate-ugc.md) användargenererat innehåll (UGC)
-* Skapa [egna emblem](badges.md)
-* Konfigurerar [standardlagring för UGC](srp-config.md)
+* Lägger till [grupper](groups.md) kapslad inom webbplatsen
+* Hantera [mallar för communitysajter](sites.md)
+* Hantera [community-medlemmar](members.md)
+* [Moderering](moderate-ugc.md) användargenererat innehåll (UGC)
+* Skapa [anpassade märken](badges.md)
+* Konfigurera [standardlagring för UGC](srp-config.md)
 
-När [UGC-lagring](working-with-srp.md) är konfigurerad att vara en gemensam butik som delas av författar- och publiceringsmiljöer, fungerar moderationskonsolen [](moderation.md), som är tillgänglig både från författar- och publiceringsmiljöer, på en enda instans av UGC.
+När [UGC-lagring](working-with-srp.md) är konfigurerad att vara en gemensam lagringsplats som delas av författar- och publiceringsmiljöer, [modereringskonsol](moderation.md), som finns i både författar- och publiceringsmiljöer, används i en enda instans av UGC.
 
-När du har loggat in med administratörsbehörighet i redigeringsmiljön är `Communities`-konsolerna tillgängliga i navigerings- och verktygskonsolerna.
+När du har loggat in med administratörsbehörighet i redigeringsmiljön visas `Communities` konsoler är tillgängliga från navigerings- och verktygskonsolerna.
 
 >[!NOTE]
 >
->I publiceringsmiljön visar en [community-webbplats](sites-console.md) ett `Administration`menyalternativ när den inloggade medlemmen har lämplig behörighet.
+>I publiceringsmiljön kan du [communitywebbplats](sites-console.md) visar `Administration`menyalternativ när den inloggade medlemmen har lämplig behörighet.
 
 ## Global navigeringspanel {#global-navigation-panel}
 
 ![chlimage_1-91](assets/chlimage_1-91.png)
 
-Välj ikonen `Adobe Experience Manager` i det övre vänstra hörnet för att öppna den globala navigeringspanelen och få tillgång till två ikoner:
+Välj `Adobe Experience Manager` ikonen i det övre vänstra hörnet för att öppna den globala navigeringspanelen och få tillgång till två ikoner:
 
 * [Navigeringskonsol](#navigation-console)
 * [Verktygskonsol](tools.md)
@@ -55,11 +59,11 @@ Om du vill komma åt de olika webbgruppskonsolerna väljer du **navigering, Comm
 
 * [Sites](sites-console.md)
 
-   Konsolen Sites är tillgänglig i författarmiljön för att skapa och hantera communityplatser och dess [grupper](groups.md).
+   Webbplatskonsolen är tillgänglig i författarmiljön för att skapa och hantera communitywebbplatser och dess [grupper](groups.md).
 
 * [Moderering](moderation.md)
 
-   Moderationskonsolen används för massmoderering av UGC och i författarmiljön. En liknande masmodereringskonsol är tillgänglig i publiceringsmiljön för communitymedlemmar som tilldelats rollen [community moderator](users.md#publishenvironmentusersandgroups) för en eller flera communitywebbplatser.
+   Moderationskonsolen används för massmoderering av UGC och i författarmiljön. En liknande masmodereringskonsol är tillgänglig i publiceringsmiljön för communitymedlemmar som tilldelats rollen [community moderator](users.md#publishenvironmentusersandgroups) för en eller flera communitysajter.
 
 * [Medlemmar, grupper](members.md)
 
@@ -67,12 +71,12 @@ Om du vill komma åt de olika webbgruppskonsolerna väljer du **navigering, Comm
 
 * [Rapporter](reports.md)
 
-   Rapporteringskonsolen är den plats där rapporter om tilldelningar, sidvisningar och publicerat innehåll (UGC) kan genereras när en communitywebbplats har [Adobe Analytics](sites-console.md#analytics) aktiverat. Konsolen är bara tillgänglig i författarmiljön.
+   I rapportkonsolen kan rapporter om tilldelningar, sidvisningar och publicerat innehåll (UGC) genereras när en communitywebbplats har [aktiverad Adobe Analytics](sites-console.md#analytics). Konsolen är bara tillgänglig i författarmiljön.
 
 * [Resurser](resources.md)
 
-   Resurskonsolen är där [aktiveringshanterare](enablement.md#communitymanagers) skapar, hanterar och tilldelar resurser till medlemmar på en [aktiveringscommunityplats](overview.md#enablement-community). Konsolen är bara tillgänglig i författarmiljön.
+   Resurskonsolen är där [aktiveringsansvariga](enablement.md#communitymanagers) skapa, hantera och tilldela resurser till medlemmar i en [communitywebbplats för aktivering](overview.md#enablement-community). Konsolen är bara tillgänglig i författarmiljön.
 
 ## Verktygskonsol {#tools-console}
 
-Om du vill komma åt [Webbgruppsverktyg](tools.md) (tidigare administrationskonsolen) från global navigering: **[!UICONTROL Tools > Communities]**
+För åtkomst [Communities Tools](tools.md) (tidigare administrationskonsolen) från global navigering: **[!UICONTROL Tools > Communities]**

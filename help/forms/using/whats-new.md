@@ -1,23 +1,26 @@
 ---
 title: Sammanfattning av nya funktioner | AEM 6.4 Forms
-seo-title: Sammanfattning av nya funktioner | AEM 6.4 Forms
+seo-title: New features summary | AEM 6.4 Forms
 description: Sammanfattning av nya funktioner och förbättringar i AEM 6.4 Forms.
-seo-description: Sammanfattning av nya funktioner och förbättringar i AEM 6.4 Forms.
+seo-description: Summary of new features and enhancements in AEM 6.4 Forms.
 uuid: 152068ec-47a8-43f4-b9c8-3a17d1f085fe
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: introduction
 discoiquuid: 436aa424-d05e-4f3d-90ac-5ff3b05ddba8
-translation-type: tm+mt
-source-git-commit: f2b0d37a0666f2a0be9e7034da12dddf0c56fb25
+exl-id: 21b8ed83-9c0c-41ee-9fbb-56ccebaee132
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2011'
+source-wordcount: '2033'
 ht-degree: 0%
 
 ---
 
-
 # Sammanfattning av nya funktioner | AEM 6.4 Forms {#new-features-summary-aem-forms}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Sammanfattning av nya funktioner och förbättringar i AEM 6.4 Forms.
 
@@ -48,7 +51,7 @@ Med hjälp av interaktiv kommunikation kan du skapa och redigera både utskrifts
 
 Mer information finns i [Översikt över interaktiv kommunikation](/help/forms/using/interactive-communications-overview.md).
 
-### WYSIWYG Document Editor {#wysiwyg-document-editor}
+### WYSIWYG-dokumentredigerare {#wysiwyg-document-editor}
 
 WYSIWYG-redigeraren för dra-och-släpp-dokument är enkel att använda. Det intuitiva gränssnittet, dra-och-släpp-funktionen, standardkomponenter, datamodeller och det integrerade arkivet för resurser gör det enkelt att snabbt skapa interaktiv kommunikation.
 
@@ -62,9 +65,9 @@ Mer information finns i [Introduktion till utveckling av interaktiv kommunikatio
 
 Man kan automatiskt generera webbdokumentinnehåll från utskrift av dokument till författare, förhandsgranskning och redigering av både utskrifts- och webbdokument i samma redigerare. De som skapar interaktiv kommunikation kan skapa en gång och publicera i alla kanaler. Den som skapar interaktiv kommunikation kan använda samma dokumentfragment i tryck- och webbkanalen för att undvika dubbelarbete.
 
-Mer information finns i [Skriv ut kanal och webbkanal](/help/forms/using/web-channel-print-channel.md).
+Mer information finns i [Skriva ut kanal och webbkanal](/help/forms/using/web-channel-print-channel.md).
 
-### Använd teman för att utforma webbkanalen för interaktiv kommunikation {#use-themes-to-style-web-channel-of-interactive-communication}
+### Använd teman för att utforma webbkanaler för interaktiv kommunikation {#use-themes-to-style-web-channel-of-interactive-communication}
 
 Interaktiv kommunikation stöder teman. Du kan skapa teman och använda dem i din interaktiva kommunikation. Ett tema innehåller formatinformation för komponenter och paneler. Du kan återanvända ett tema i olika interaktiva dokument för att ge dem ett vanligt och konsekvent utseende och varumärke.
 
@@ -76,7 +79,7 @@ Mer information finns i [Teman i AEM Forms](/help/forms/using/themes.md).
 
 Användargränssnittet Agent har nu stöd för förhandsgranskning av interaktiv kommunikation i tryck och på webben. I samma agentanvändargränssnitt kan du välja att redigera utskriftskanalen och förhandsgranska webbkanalen i din interaktiva kommunikation i flera kanaler. Fält, variabler, FDM-element och dokumentfragment i utskriftskanalen kan konfigureras så att de ändras av agenten i agentens användargränssnitt. Med stöd för formulärdatamodell kan du generera förhandsgranskningar med förfyllda exempeldata.
 
-Mer information finns i [Förbered och skicka interaktiv kommunikation med agentgränssnittet](/help/forms/using/prepare-send-interactive-communication.md).
+Mer information finns i [Förbereda och skicka interaktiv kommunikation med agentens användargränssnitt](/help/forms/using/prepare-send-interactive-communication.md).
 
 ### Visa information i diagram {#present-information-in-charts}
 
@@ -116,7 +119,7 @@ Som standard stöds inte bokstavsresurser från tidigare versioner av AEM Forms 
 
 ![](do-not-localize/data-integeration-1.png)
 
-[Med AEM Forms ](/help/forms/using/data-integration.md) dataintegrering kan ni konfigurera olika datakällor. såsom databaser, RESTful- eller SOAP-baserade webbtjänster och OData-tjänster, för att skapa en formulärdatamodell som du kan använda för att binda data, förifylla och anropa tjänster i anpassningsbara formulär och dokument.
+[AEM Forms dataintegrering](/help/forms/using/data-integration.md) låter dig konfigurera olika datakällor, såsom databaser, RESTful- eller SOAP-baserade webbtjänster och OData-tjänster, för att skapa en formulärdatamodell som du kan använda för att binda data, förifylla och anropa tjänster i anpassningsbara formulär och dokument.
 
 Det finns flera nya funktioner och förbättringar i dataintegreringen i den här versionen.
 
@@ -144,19 +147,19 @@ Exempeldata är en uppsättning slumpmässiga värden som ändras varje gång du
 
 Mer information finns i [Använd formulärdatamodell](/help/forms/using/using-form-data-model.md).
 
-### Uppdatera datakälldefinitioner {#refresh-data-source-definitions}
+### Uppdatera definitioner för datakällor {#refresh-data-source-definitions}
 
-Uppdateringar i datakällenheter eller egenskaper återspeglas inte automatiskt i tillhörande formulärdatamodeller. Formulärdatamodellredigeraren har nu ![refresh_forms_di](assets/refresh_forms_di.png) (Uppdatera definitioner för datakälla) som gör servercachen ogiltig och hämtar uppdaterat schema från datakällan så att det omedelbart återspeglas i formulärdatamodellen.
+Uppdateringar i datakällenheter eller egenskaper återspeglas inte automatiskt i tillhörande formulärdatamodeller. Nu finns funktioner för redigering av formulärdatamodell ![refresh_forms_di](assets/refresh_forms_di.png) (Uppdatera definitioner för datakälla) som gör servercachen ogiltig och hämtar uppdaterat schema från datakällan så att det omedelbart återspeglas i formulärdatamodellen.
 
 ### Konfigurera datakällor med Touch-användargränssnittet {#configure-data-sources-using-touch-user-interface}
 
-I den här versionen är molntjänstkonfigurationen för datakällor tillgänglig i Touch-användargränssnittet. Platsen för konfigurering av molntjänster har ändrats till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Se [Konfigurera datakällor](/help/forms/using/configure-data-sources.md).
+I den här versionen är molntjänstkonfigurationen för datakällor tillgänglig i Touch-användargränssnittet. Platsen för att konfigurera molntjänster har ändrats till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Se [Konfigurera datakällor](/help/forms/using/configure-data-sources.md).
 
 ## Adaptiv Forms {#adaptive-forms}
 
 ![simplified-of-authoring-forms-and-documents_hero-image_2](assets/simplification-of-authoring-forms-and-documents_hero-image_2.png)
 
-### Förbättra prestanda för adaptiva formulär med förbättrad lazy loading {#improve-performance-of-adaptive-forms-with-enhanced-lazy-loading}
+### Förbättra prestanda för anpassningsbara formulär med förbättrad lazy loading {#improve-performance-of-adaptive-forms-with-enhanced-lazy-loading}
 
 Den lata inläsningsfunktionen i adaptiva formulär förenklar initieringen av formulärfragment tills de behövs. Det förbättrar prestanda för stora formulär genom att minimera den tid som krävs för att återge ett formulär, vilket ger en bättre användarupplevelse.
 
@@ -166,11 +169,11 @@ Det finns flera förbättringar av funktionen för lazy loading i den här versi
 * Anpassningsbara formulärfragment med lazy loading aktiverat stöds i repeterbara paneler.
 * Anpassningsbara formulär med lazy loading-aktiverade fragment stöds i AEM Forms-appen.
 
-## Forms-centrerade AEM{#forms-centric-aem-workflows}
+## Forms-centrerade AEM {#forms-centric-aem-workflows}
 
 ![aem-forms-workflow-on-osgi-](assets/aem-forms-workflow-on-osgi-.png)
 
-Med Forms-Centric AEM Workflows kan du snabbt skapa och driftsätta arbetsflöden för olika uppgifter i OSGi-stacken. Du behöver inte längre installera processhanteringsfunktionen som finns i JEE-stacken, vilket förenklar driftsättningen och eliminerar kostnaderna för programservrar och infrastruktur. Mer information finns i [Forms-centrerade arbetsflöden i OSGi](/help/forms/using/aem-forms-workflow.md).
+Med Forms-Centric AEM Workflows kan du snabbt skapa och driftsätta arbetsflöden för olika uppgifter i OSGi-stacken. Du behöver inte längre installera processhanteringsfunktionen som finns i JEE-stacken, vilket förenklar driftsättningen och eliminerar kostnaderna för programservrar och infrastruktur. Mer information finns i [Forms-centrerade arbetsflöden på OSGi](/help/forms/using/aem-forms-workflow.md).
 
 Följande är förbättringar i Forms-centrerade AEM arbetsflöden: ・
 
@@ -182,7 +185,7 @@ Följande är förbättringar i Forms-centrerade AEM arbetsflöden: ・
 
 ![aem-forms-app](assets/aem-forms-app.png)
 
-Med AEM Forms-appen kan fältarbetare synkronisera sina mobila enheter med en AEM Forms-server och arbeta med sina formulär. Programmet fungerar sömlöst när enheten är offline genom att spara data lokalt på enheten och synkronisera data med servern när enheten är online igen. Mer information finns i [AEM Forms app](/help/forms/using/aem-forms-app.md).
+Med AEM Forms-appen kan fältarbetare synkronisera sina mobila enheter med en AEM Forms-server och arbeta med sina formulär. Programmet fungerar sömlöst när enheten är offline genom att spara data lokalt på enheten och synkronisera data med servern när enheten är online igen. Mer information finns i [AEM Forms](/help/forms/using/aem-forms-app.md).
 
 Nedan följer förbättringarna i AEM Forms-appen:
 
@@ -195,7 +198,7 @@ Nedan följer förbättringarna i AEM Forms-appen:
 
 Med dokumentsäkerhet kan du distribuera all information som du har sparat i ett format som stöds. Dokumentsäkerheten säkerställer att bara behöriga användare kan använda dina dokument. Nedan följer de största förändringarna inom dokumentsäkerhet:
 
-* Dokumentsäkerhet tillhandahåller ett [PPL-bibliotek (Portable Protection Library)](/help/forms/using/document-security-offerings.md) som skyddar ett dokument lokalt, utan att skicka dokumentet till AEM Forms-servern. Det är bara säkerhetsuppgifter och principinformation som överförs över nätverket till AEM Forms-servern. AEM 6.4 Forms har infört PPL (Portable Protection Library) i ett OSGi-paketformat. Nu kan du direkt installera PPL-biblioteket på en AEM Forms-server och använda funktionerna i AEM och PPL tillsammans.
+* Dokumentsäkerhet ger en [PPL (Portable Protection Library)](/help/forms/using/document-security-offerings.md) för att skydda ett dokument lokalt, utan att skicka dokumentet till AEM Forms-servern. Det är bara säkerhetsuppgifter och principinformation som överförs över nätverket till AEM Forms-servern. AEM 6.4 Forms har infört PPL (Portable Protection Library) i ett OSGi-paketformat. Nu kan du direkt installera PPL-biblioteket på en AEM Forms-server och använda funktionerna i AEM och PPL tillsammans.
 * Dokumentsäkerhet C++ SDK och C++ PPL-bibliotek kan kompileras med Microsoft Visual Studio 2013. Den tidigare versionen som stöds var Microsoft Visual Studio 2010.
 
 ## Plattformar som stöds {#supported-platforms}
@@ -281,14 +284,14 @@ AEM Forms kan konfigureras med valfri kombination av operativsystem, programserv
    <td>Anslutningar</td> 
    <td> 
     <ul> 
-     <li>Koppling för Microsoft Sharepoint 2016</li> 
+     <li>Connector for Microsoft Sharepoint 2016</li> 
      <li>Connector for EMC Documentum 7.3</li> 
     </ul> </td> 
    <td> 
     <ul> 
-     <li>Koppling för Microsoft Sharepoint 2007</li> 
-     <li>Koppling för Microsoft SharePoint 2010</li> 
-     <li>Koppling till IBM Filenet 5.0</li> 
+     <li>Connector for Microsoft Sharepoint 2007</li> 
+     <li>Connector for Microsoft Sharepoint 2010</li> 
+     <li>Connector for IBM Filenet 5.0</li> 
      <li>Connector for EMC Documentum 6.7</li> 
     </ul> </td> 
   </tr> 
@@ -296,7 +299,7 @@ AEM Forms kan konfigureras med valfri kombination av operativsystem, programserv
    <td>Webbläsare</td> 
    <td> 
     <ul> 
-     <li>Apple Safari 11.x i macOS</li> 
+     <li>Apple Safari 11.x på macOS</li> 
      <li>Apple Safari 11.x på iOS</li> 
     </ul> </td> 
    <td> 
@@ -305,7 +308,7 @@ AEM Forms kan konfigureras med valfri kombination av operativsystem, programserv
     </ul> </td> 
   </tr> 
   <tr> 
-   <td>AEM Forms app<br /> </td> 
+   <td>AEM Forms<br /> </td> 
    <td> 
     <ul> 
      <li>Android 4.4 eller senare</li> 

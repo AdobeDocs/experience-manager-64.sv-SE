@@ -1,24 +1,27 @@
 ---
 title: Molnkonfiguration
-seo-title: Molnkonfiguration
+seo-title: Cloud Configuration
 description: Genom att koppla en On-Demand-app till en molnkonfiguration kan Adobe Experience Manager (AEM) kommunicera direkt med ett Mobile On-Demand-projekt genom att skapa en tvåvägslänk. Följ den här sidan om du vill veta mer.
-seo-description: Genom att koppla en On-Demand-app till en molnkonfiguration kan Adobe Experience Manager (AEM) kommunicera direkt med ett Mobile On-Demand-projekt genom att skapa en tvåvägslänk. Följ den här sidan om du vill veta mer.
+seo-description: Associating an On-Demand App to a Cloud Configuration allows Adobe Experience Manager (AEM) to communicate directly with a Mobile On-Demand hosted project by establishing a two way link. Follow this page to learn more.
 uuid: f377f2af-864b-43df-9d42-4a5fd6cd70d5
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: d0d29b99-53d4-4b0d-947b-39d91b381de7
-translation-type: tm+mt
-source-git-commit: 64090e3c7cf722f44968467c51291a11aeeec237
+exl-id: eff852b0-99cd-4242-bac8-992ee10401e2
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 1%
 
 ---
 
-
 # Molnkonfiguration{#cloud-configuration}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
@@ -28,7 +31,7 @@ Genom att koppla en On-Demand-app till en molnkonfiguration kan Adobe Experience
 
 Därifrån blir det möjligt att publicera, förhandsgranska och hantera innehåll. Du kan också importera befintligt mobilt on demand-innehåll till AEM och redigera innehåll.
 
-## Konfigurerar molnkonfigurationen {#setting-up-cloud-configuration}
+## Konfigurera molnkonfiguration {#setting-up-cloud-configuration}
 
 >[!CAUTION]
 >
@@ -36,9 +39,9 @@ Därifrån blir det möjligt att publicera, förhandsgranska och hantera innehå
 >
 >Mer information finns i [Konfigurera AEM Mobile On-demand Services](/help/mobile/aem-mobile-setup.md) i avsnittet Administrera.
 
-Om du vill konfigurera Cloud Services för mobil på begäran klickar du på den övre kugghjulet i det övre högra hörnet av plattan **Hantera anslutning** från appinstrumentpanelen.
+Om du vill konfigurera Cloud Services för mobil on demand klickar du på den översta kugghjulet i det högra hörnet av **Hantera anslutning** från appkontrollpanelen.
 
-Du bör känna till appkontrollpanelen och tillgängliga paneler. Mer information finns i [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
+Du bör känna till appkontrollpanelen och tillgängliga paneler. Se [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md) för mer information.
 
 ### Konfigurera länk till molnkonfiguration {#setting-up-link-to-cloud-configuration}
 
@@ -50,22 +53,22 @@ Du bör känna till appkontrollpanelen och tillgängliga paneler. Mer informatio
 
 I följande steg beskrivs hur du konfigurerar länken till molnkonfigurationen:
 
-1. Från **Mobile** väljer du **Appar** och sedan appen Mobile On-Demand från katalogen.
-1. Klicka på kugghjulsikonen på plattan **Hantera anslutning**.
+1. Från **Mobil**, välja **Appar** och sedan mobilappen On-Demand från katalogen.
+1. Klicka på kugghjulsikonen på **Hantera anslutning** platta.
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
-1. Ange den befintliga konfigurationen eller skapa en ny genom att ange **konfigurationstiteln**, **enhets-ID** och **enhetstoken**.
+1. Ange den befintliga konfigurationen eller skapa en ny genom att ange **Konfigurationstitel**, **Enhets-ID** och **Enhetstoken**.
 
    ![chlimage_1-66](assets/chlimage_1-66.png)
 
-1. När du har verifierat ditt **enhets-ID** och **enhetstoken** väljer du ditt On-Demand-projekt i listan.
+1. När du **Enhets-ID** och **Enhetstoken** Om du har verifierat det väljer du ett On-Demand-projekt i listan.
 
-   Klicka på **Skicka**.
+   Klicka **Skicka**.
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
-   I rutan **Hantera anslutning** visas din molnkonfiguration.
+   The **Hantera anslutning** visas din molnkonfiguration.
 
    ![chlimage_1-68](assets/chlimage_1-68.png)
 

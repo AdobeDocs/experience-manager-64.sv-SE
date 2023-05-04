@@ -1,26 +1,29 @@
 ---
 title: Omstrukturering av Forms-lager i AEM 6.4
-seo-title: Omstrukturering av Forms-lager i AEM 6.4
+seo-title: Forms Repository Restructuring in AEM 6.4
 description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 för Forms.
-seo-description: Lär dig hur du gör de ändringar som krävs för att migrera till den nya databasstrukturen i AEM 6.4 för Forms.
+seo-description: Learn how to make the necessary changes in order to migrate to the new repository structure in AEM 6.4 for Forms.
 uuid: e60830d4-23ca-4be9-941a-ee4abe4786a6
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 1ce9a622-5968-407f-a74b-d325a2bff669
 feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: a2d6524e-3f5b-4d1e-af64-61ff95889657
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 2%
+source-wordcount: '565'
+ht-degree: 0%
 
 ---
 
+# Omstrukturering av Forms-lager i AEM 6.4{#forms-repository-restructuring-in-aem}
 
-# Forms Repository-omstrukturering i AEM 6.4{#forms-repository-restructuring-in-aem}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM Forms-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
+Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/sites-deploying/repository-restructuring.md) ska kunder som uppgraderar till AEM 6.4 använda den här sidan för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM Forms-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.4, medan andra kan skjutas upp till en uppgradering av version 6.5.
 
 **Med 6.4-uppgradering**
 
@@ -91,14 +94,14 @@ Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/he
 | **Omstruktureringsvägledning** | Att ändra dessa klientlibs har aldrig rekommenderats eller fått stöd. Om du har gjort ändringar i dessa klientlibs bör de återställas till att använda den AEM koden. |
 | **Anteckningar** | Ej tillämpligt |
 
-## Före 6.5 uppgradering {#prior-to-upgrade}
+## Före 6.5-uppgradering {#prior-to-upgrade}
 
 ### Konfiguration av EchoSign-Cloud Service {#echosign-cloud-service-configuration}
 
 | **Föregående plats** | `/etc/cloudservices/echosign` |
 |---|---|
 | **Ny plats(er)** | `/conf/<tenant>/settings/cloudconfigs/echosign` |
-| **Omstruktureringsvägledning** | Verktyget [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) som ska utlösas från användargränssnittet för Forms-migrering. |
+| **Omstruktureringsvägledning** | The [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) verktyg som ska utlösas från Forms migreringsgränssnitt. |
 | **Anteckningar** | Ej tillämpligt |
 
 ### Konfigurationer av Recaptcha-Cloud Service {#recaptcha-cloud-service-configurations}
@@ -106,7 +109,7 @@ Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/he
 | **Föregående plats** | `/etc/cloudservices/recaptcha` |
 |---|---|
 | **Ny plats(er)** | `/conf/<tenant>/settings/cloudconfigs/recaptcha` |
-| **Omstruktureringsvägledning** | Verktyget [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) som ska utlösas från användargränssnittet för Forms-migrering. |
+| **Omstruktureringsvägledning** | The [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) verktyg som ska utlösas från Forms migreringsgränssnitt. |
 | **Anteckningar** | Ej tillämpligt |
 
 ### Konfigurationer av Typekit-Cloud Service {#typekit-cloud-service-configurations}
@@ -114,7 +117,7 @@ Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/he
 | **Föregående plats** | `/etc/cloudservices/typekit` |
 |---|---|
 | **Ny plats(er)** | `/conf/<tenant>/settings/cloudconfigs/typekit` |
-| **Omstruktureringsvägledning** | Verktyget [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) som ska utlösas från användargränssnittet för Forms-migrering. |
+| **Omstruktureringsvägledning** | The [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) verktyg som ska utlösas från Forms migreringsgränssnitt. |
 | **Anteckningar** | Ej tillämpligt |
 
 ### Diverse {#misc-1}
@@ -122,12 +125,11 @@ Som beskrivs på den överordnade sidan [Databasomstrukturering på AEM 6.4](/he
 | **Föregående plats** | `/etc/cloudservices/fdm` |
 |---|---|
 | **Ny plats(er)** | `/conf/<tenant>/settings/cloudconfigs/fdm` |
-| **Omstruktureringsvägledning** | Verktyget [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) som ska utlösas från användargränssnittet för Forms-migrering. |
+| **Omstruktureringsvägledning** | The [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) verktyg som ska utlösas från Forms migreringsgränssnitt. |
 | **Anteckningar** | Ej tillämpligt |
 
 | **Föregående plats** | `/etc/designs/fd/fp` |
 |---|---|
 | **Ny plats(er)** | `/libs/fd/fp` |
-| **Omstruktureringsvägledning** | Alla referenser till mallarna /etc ska så småningom uppdateras så att de pekar på sina `/libs`-motsvarigheter. |
+| **Omstruktureringsvägledning** | Eventuella referenser till mallarna /etc ska så småningom uppdateras så att de pekar på dem `/libs` motpart. |
 | **Anteckningar** | Ej tillämpligt |
-

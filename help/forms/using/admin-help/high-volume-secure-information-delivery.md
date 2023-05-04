@@ -1,8 +1,8 @@
 ---
 title: Säker informationsleverans i stora volymer
-seo-title: Säker informationsleverans i stora volymer
+seo-title: High-volume secure information delivery
 description: Dokumentsäkerhet gör det möjligt att koppla licenser till användare i stället för till dokument i massproduktionsmiljöer.
-seo-description: Dokumentsäkerhet gör det möjligt att koppla licenser till användare i stället för till dokument i massproduktionsmiljöer.
+seo-description: Document security supports the association of licenses to users, rather than to the documents in mass production environments.
 uuid: 9747d283-506c-434e-9850-e50b95290cc8
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,19 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: b76d7d93-23a5-4c08-81f5-a56267b1556a
 feature: Document Security
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 78fc7c4a-a634-4628-927a-c9622bdc13fc
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '360'
 ht-degree: 0%
 
 ---
 
+# Säker informationsleverans i stora volymer {#high-volume-secure-information-delivery}
 
-# Säker informationsleverans för stora volymer {#high-volume-secure-information-delivery}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 I en massproduktionsmiljö, t.ex. en som genererar säkra månadsfakturor för ett telekomföretag, kan det bli en resurskrävande process att skapa licenser som är specifika för varje dokument. I sådana fall kan dokumentsäkerheten användas för att koppla licenser till användare i stället för till dokument. Licensen som skapas för en användare används för alla dokument som är skyddade för den användaren.
 
@@ -31,4 +34,4 @@ Vid generering av månadsfakturor för ett telekomföretag skapar du en abstrakt
 
 Det går bara att skapa en abstrakt profil via Java SDK för dokumentsäkerhet. Du kan dock administrera profilerna som du skapar utifrån den abstrakta profilen från dokumentsäkerhetswebbsidorna. Profiler som skapas med den här metoden har samma beteende som de som skapas från webbsidor för dokumentsäkerhet.
 
-Mer information finns i [Programmera med AEM formulär](https://www.adobe.com/go/learn_aemforms_programming_63).
+Se [Programmera med AEM](https://www.adobe.com/go/learn_aemforms_programming_63) för mer information.

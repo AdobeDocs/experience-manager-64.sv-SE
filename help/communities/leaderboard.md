@@ -1,28 +1,31 @@
 ---
 title: Grundläggande om Ledningsbord
-seo-title: Grundläggande om Ledningsbord
+seo-title: Leaderboard Essentials
 description: Översikt över funktionen Ledartavla
-seo-description: Översikt över funktionen Ledartavla
+seo-description: Leaderboard feature overview
 uuid: 815a6928-b147-496d-9751-13159ad1304d
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 7449f99e-77d7-4c0f-96d5-b67d5e1f124a
-translation-type: tm+mt
-source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+exl-id: 20c16e96-2ba8-4f2d-8cfa-8cd804e3441f
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 2%
+source-wordcount: '131'
+ht-degree: 0%
 
 ---
 
+# Grundläggande om Ledningsbord {#leaderboard-essentials}
 
-# Grundläggande om Leaderboard {#leaderboard-essentials}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Den här sidan innehåller viktig information om hur du arbetar med funktionen Ledpanel.
 
-Innan du inkluderar huvudpanelskomponenten på en sida måste du konfigurera [Webbgruppsbedömning och emblem](implementing-scoring.md). Se även [Betygsättning och utmärkelser Grundläggande](configure-scoring.md).
+Innan du tar med huvudpanelskomponenten på en sida måste du konfigurera [Communities Scoring and Badges](implementing-scoring.md). Se även [Grundläggande om poäng och emblem](configure-scoring.md).
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 
@@ -41,7 +44,7 @@ Innan du inkluderar huvudpanelskomponenten på en sida måste du konfigurera [We
    <td>cq.social.gamification.hbs.leaderboard</td> 
   </tr>
   <tr>
-   <td> <strong>templates</strong></td> 
+   <td> <strong>mallar</strong></td> 
    <td> /libs/social/gamification/components/hbs/leaderboard/leaderboard.hbs<br /> </td> 
   </tr>
   <tr>
@@ -50,7 +53,7 @@ Innan du inkluderar huvudpanelskomponenten på en sida måste du konfigurera [We
   </tr>
   <tr>
    <td><strong> egenskaper</strong></td> 
-   <td>Se <a href="enabling-leaderboard.md">Ledarbordsfunktion</a></td> 
+   <td>Se <a href="enabling-leaderboard.md">Funktion för resultatavla</a></td> 
   </tr>
  </tbody>
 </table>
@@ -59,4 +62,4 @@ Innan du inkluderar huvudpanelskomponenten på en sida måste du konfigurera [We
 
 ### Filbiblioteksfunktion {#file-library-function}
 
-En community-platsstruktur som innehåller [Ledarpanelsfunktionen](functions.md#leaderboard-function) innehåller en konfigurerad `leaderboard`-komponent.
+En community-webbplatsstruktur som innehåller [Ledningsfunktion](functions.md#leaderboard-function), innehåller en konfigurerad `leaderboard` -komponenten.

@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
 feature: Language Copy
 exl-id: e68b5a5c-e12a-4b7b-b607-451ef8fdeff0
-source-git-commit: a9459872f9ce8e68dccb46e7dfddebe9eeb39bd4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1586'
 ht-degree: 0%
 
 ---
 
 # Konfigurera översättningsintegreringsramverket{#configuring-the-translation-integration-framework}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Översättningsintegreringsramverket integreras med översättningstjänster från tredje part för att samordna översättningen av AEM.
 
@@ -26,14 +30,14 @@ ht-degree: 0%
 * Skapa en konfiguration för Translation Integration Framework.
 * Associera molnkonfigurationerna med sidorna.
 
-En översikt över funktionerna för översättning av innehåll i AEM finns i [Översätta innehåll för flerspråkiga platser](/help/sites-administering/translation.md).
+En översikt över funktionerna för innehållsöversättning i AEM finns på [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md).
 
 ## Ansluta till en översättningstjänstleverantör {#connecting-to-a-translation-service-provider}
 
 Skapa en molnkonfiguration som ansluter AEM till översättningstjänstleverantören. AEM kan ansluta till Microsoft Translator som standard.
 Följande översättningsleverantörer tillhandahåller en implementering av det nya API:t för översättningsprojekten. Länkar för mer information om integrationen:
 
-* [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html)  (Adobe Exchange Premier Partner)
+* [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html) (Adobe Exchange Premier Partner)
 * [Clay Tablet Technologies](https://exchange.adobe.com/experiencecloud.details.90064.clay-tablet-translation-for-experience-manager.html)
 * [Lionbridge](https://exchange.adobe.com/experiencecloud.details.100064.lionbridge-connector-for-experience-manager-63.html)
 * [Memsource](https://exchange.adobe.com/experiencecloud.details.103166.memsource-connector-for-adobe-experience-manager.html)
@@ -53,7 +57,6 @@ Följande översättningsleverantörer tillhandahåller en implementering av det
 >
 >* [AEM mänsklig översättning](https://www.adobe.com/go/aem-human-translation-connectors)
 >* [AEM maskinöversättning](https://www.adobe.com/go/aem-machine-translation-connectors)
-
 >
 
 
@@ -75,9 +78,9 @@ När du har skapat en ramverkskonfiguration associerar du molnkonfigurationen me
 
 Om olika delar av webbplatsen har olika översättningskrav skapar du flera ramverkskonfigurationer utifrån detta. En flerspråkig webbplats innehåller t.ex. engelska, spanska och japanska språkkopior. Webbplatsägaren använder två olika översättningstjänstleverantörer för spanska och japanska översättningar. Därför är två konfigurationer av ramverket konfigurerade. Varje konfiguration använder en annan översättningstjänstleverantör.
 
-När du har konfigurerat ett ramverk för översättningsintegrering kan du [associera det med de sidor](/help/sites-administering/tc-prep.md) som använder det.
+När du har konfigurerat ett ramverk för översättningsintegrering kan du [associera den med sidorna](/help/sites-administering/tc-prep.md) som använder den.
 
-**Obs!** En översikt över funktionerna för översättning av innehåll i AEM finns i  [Översätta innehåll för flerspråkiga platser](/help/sites-administering/translation.md).
+**Obs!** En översikt över funktionerna för innehållsöversättning i AEM finns på [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md).
 
 En enda konfiguration av ramverket styr hur sidinnehåll, communityinnehåll och resurser ska översättas.
 ![chlimage_1-386](assets/translation-config-64.jpg)
@@ -131,13 +134,13 @@ Webbplatsegenskaperna styr hur översättning av sidinnehåll utförs.
 
 ### Egenskaper för webbkonfiguration {#communities-configuration-properties}
 
-Communities-egenskaper styr hur översättning av användargenererat innehåll utförs. Översättningen av användargenererat innehåll använder alltid maskinöversättning. Mer information finns i [Översätta användargenererat innehåll](/help/communities/translate-ugc.md).
+Communities-egenskaper styr hur översättning av användargenererat innehåll utförs. Översättningen av användargenererat innehåll använder alltid maskinöversättning. Mer information finns i [Översätter användargenererat innehåll](/help/communities/translate-ugc.md).
 
 | Egenskap | Beskrivning |
 |---|---|
 | Översättningsprovider | Välj översättningsprovidern som ska utföra översättningen. Providern som molnkonfigurationer skapas för visas i listan. |
 | Innehållskategori | En kategori som beskriver innehållet som du översätter. Kategorin kan påverka valet av terminologi och fraser när innehåll översätts. |
-| Välj en språkinställning som ska användas som globalt resurslager | (Valfritt) Genom att välja en språkinställning för lagring av UGC, visas inlägg från alla språkkopior i en global konversation. Välj språkinställning för [basspråket](/help/communities/sites-console.md#translation) för webbplatsen. Om du väljer Ingen gemensam lagringsplats inaktiveras global översättning. Som standard är global översättning inaktiverat. |
+| Välj en språkinställning som ska användas som globalt resurslager | (Valfritt) Genom att välja en språkinställning för lagring av UGC, visas inlägg från alla språkkopior i en global konversation. Välj språkområde för [basspråk](/help/communities/sites-console.md#translation) för webbplatsen. Om du väljer Ingen gemensam lagringsplats inaktiveras global översättning. Som standard är global översättning inaktiverat. |
 
 ### Egenskaper för resurskonfiguration {#assets-configuration-properties}
 
@@ -207,7 +210,7 @@ När du associerar en sida med en molnkonfiguration ärver de underordnade sidor
 
 Vid behov kan du åsidosätta associationen på en underordnad sida. Innehållet på en webbplats handlar till exempel mest om kläder. En av sidorna beskriver dock företaget. Webbplatsens rotsida är associerad med ett Translation Integration Framework som anger maskinöversättning med kategorin Clothing. Den gren som beskriver företaget använder ett ramverk som utför maskinöversättning med kategorin Allmänt.
 
-Dessutom, för alla communities [SCF-komponenter](/help/communities/scf.md) på sidorna, kommer det användargenererade innehållet (UGC) att innehålla möjligheten för användare att översätta innehåll. Mer information finns i [Översättning av användargenererat innehåll](/help/communities/translate-ugc.md).
+Dessutom, för alla communities [SCF-komponenter](/help/communities/scf.md) på sidorna kommer det användargenererade innehållet (UGC) att innehålla möjligheten för användare att översätta innehåll. Mer information finns i [Översättning av användargenererat innehåll](/help/communities/translate-ugc.md).
 
 ### Koppla en sida till en översättningsleverantör {#associating-a-page-with-a-translation-provider}
 

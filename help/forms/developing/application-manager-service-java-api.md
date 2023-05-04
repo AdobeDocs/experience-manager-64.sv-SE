@@ -1,8 +1,8 @@
 ---
 title: JavaAPI-snabbstart (SOAP) för Application Manager-tjänsten
-seo-title: JavaAPI-snabbstart (SOAP) för Application Manager-tjänsten
+seo-title: Application Manager Service JavaAPI Quick Start(SOAP)
 description: Använd Application Manager-tjänsten för att distribuera och ta bort program med Java API Quick Start.
-seo-description: Använd Application Manager-tjänsten för att distribuera och ta bort program med Java API Quick Start.
+seo-description: Use the Application Manager service to deploy and remove applications using the Java API Quick Start.
 uuid: 01a9bce3-868b-495b-bdee-bc60f029129e
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 12da2a9b-4009-496e-953f-c2ae0352f59f
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 1d93a7c2-631a-4cf7-938f-0133536c7e09
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
 
-
 # JavaAPI-snabbstart (SOAP) för Application Manager-tjänsten {#application-manager-service-javaapi-quick-start-soap}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Java API Quick Start (SOAP) är tillgängligt för tjänsten Application Manager.
 
@@ -141,7 +144,7 @@ I följande Java-kodexempel importeras ett program baserat på en befintlig LCA-
 
 ## Snabbstart (SOAP-läge): Ta bort ett program med Java API {#quick-start-soap-mode-removing-an-application-using-the-java-api}
 
-I följande Java-kodexempel tas programmet *EncryptDocument* bort.
+I följande Java-kodexempel tas ett program med namnet bort *EncryptDocument*.
 
 ```as3
  /* 
@@ -250,4 +253,3 @@ I följande Java-kodexempel tas programmet *EncryptDocument* bort.
  } 
  
 ```
-

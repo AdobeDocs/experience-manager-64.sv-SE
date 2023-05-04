@@ -10,14 +10,18 @@ topic-tags: publish
 discoiquuid: 7387dfe8-0029-4ad0-b319-fc519928318b
 feature: Forms Portal
 exl-id: 4d66ab64-a132-4f2a-89ca-3fbd8dc56ce2
-source-git-commit: 977ada5fefe476c7cd2fe1470eb024a517a681d2
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1603'
-ht-degree: 1%
+source-wordcount: '1639'
+ht-degree: 0%
 
 ---
 
 # Skapa en formulärportalsida {#creating-a-forms-portal-page}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Forms portalkomponenter förser webbutvecklare med komponenter för att skapa och anpassa en formulärportal på webbplatser som skapats med Adobe Experience Manager (AEM). En snabb översikt av formulärportalen finns på [Introduktion till att publicera formulär på en portal](/help/forms/using/introduction-publishing-forms.md).
 
@@ -140,7 +144,7 @@ The **[!UICONTROL Edit]** innehåller flera flikar med konfigurationsalternativ 
    <td>Konfigurerar texten för verktygstipset, som visas när du håller pekaren över den <img height="16" src="assets/aem6forms_panel-pdf.png" width="14" /> (PDF-ikonen).</td>
   </tr>
   <tr>
-   <td><span class="uicontrol"><strong>Format</strong></span></td>
+   <td><span class="uicontrol"><strong>Stil</strong></span></td>
    <td>Formattyp</td>
    <td>Gör att du kan ange <strong>Inget format, standardformat</strong>, eller <strong>Eget format </strong>för att lista formulären.</td>
   </tr>

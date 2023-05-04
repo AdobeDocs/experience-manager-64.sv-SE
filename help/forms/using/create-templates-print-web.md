@@ -1,29 +1,32 @@
 ---
-title: '"Självstudiekurs: Skapa mallar"'
-seo-title: Skapa utskrifts- och webbmallar för interaktiv kommunikation
+title: "Självstudiekurs: Skapa mallar"
+seo-title: Create Print and Web templates for Interactive Communication
 description: Skapa utskrifts- och webbmallar för interaktiv kommunikation
-seo-description: Skapa utskrifts- och webbmallar för interaktiv kommunikation
+seo-description: Create Print and Web templates for Interactive Communication
 uuid: d7b0d9a5-f5f0-4c21-a6f8-622bf94f4491
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 40c0a17b-6894-44cc-b1f7-490913061532
 feature: Interactive Communication
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 5822145f-d317-4807-a3f0-1d2aea0a779b
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1849'
 ht-degree: 0%
 
 ---
 
-
 # Självstudiekurs: Skapa mallar {#tutorial-create-templates}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Skapa utskrifts- och webbmallar för interaktiv kommunikation
 
 ![07-apply-rules-to-adaptive-form_small](assets/07-apply-rules-to-adaptive-form_small.png)
 
-Den här självstudiekursen är ett steg i [Skapa din första serie med interaktiv kommunikation](/help/forms/using/create-your-first-interactive-communication.md). Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
+Den här självstudiekursen är ett steg i [Skapa din första interaktiva kommunikation](/help/forms/using/create-your-first-interactive-communication.md) serie. Vi rekommenderar att du följer serien i kronologisk ordning för att förstå, utföra och demonstrera det fullständiga exemplet på självstudiekurser.
 
 Om du vill skapa en interaktiv kommunikation måste du ha mallar tillgängliga på AEM server för utskrifts- och webbkanaler.
 
@@ -37,7 +40,7 @@ I den här självstudiekursen får du hjälp med att skapa mallar för utskrifts
 * Överför XDP-mallarna till AEM Forms Server
 * Skapa och aktivera mallar för webbkanalen
 
-## Skapa mall för utskriftskanalen {#create-template-for-print-channel}
+## Skapa mall för utskriftskanal {#create-template-for-print-channel}
 
 Skapa och hantera mallar för tryckkanalen i interaktiv kommunikation med hjälp av följande uppgifter:
 
@@ -47,7 +50,7 @@ Skapa och hantera mallar för tryckkanalen i interaktiv kommunikation med hjälp
 
 ### Skapa XDP-mall med Forms Designer {#create-xdp-template-using-forms-designer}
 
-Baserat på [användningsfallet](/help/forms/using/create-your-first-interactive-communication.md) och [anatomi](/help/forms/using/planning-interactive-communications.md) skapar du följande delformulär i XDP-mallen:
+Baserat på [användningsfall](/help/forms/using/create-your-first-interactive-communication.md) och [anatomi](/help/forms/using/planning-interactive-communications.md)skapar du följande delformulär i XDP-mallen:
 
 * Fakturainformation: Inkluderar ett dokumentfragment
 * Kundinformation: Inkluderar ett dokumentfragment
@@ -63,24 +66,24 @@ Dessa delformulär visas som målområden i utskriftsmallen när XDP-filen har �
 
 Så här skapar du en XDP-mall för utskriftskanalen:
 
-1. Öppna Forms Designer, välj **Arkiv** > **Nytt** > **Använd ett tomt formulär,** tryck på **Nästa** och sedan på **Slutför** för att öppna formuläret för att skapa en mall.
+1. Öppna Forms Designer och välj **Fil** > **Nytt** > **Använd ett tomt formulär,** tryck **Nästa** och sedan trycka **Slutför** om du vill öppna formuläret för att skapa en mall.
 
-   Kontrollera att alternativen **Objektbibliotek** och **Objekt** är markerade på menyn **Fönster**.
+   Se till att **Objektbibliotek** och **Objekt** alternativ är markerade på **Fönster** -menyn.
 
-1. Dra och släpp **delformuläret**-komponenten från **objektbiblioteket** till formuläret.
-1. Markera delformuläret för att visa alternativen för delformuläret i fönstret **Objekt** i den högra rutan.
-1. Välj fliken **Delformulär** och välj **Flödat** i listrutan **Innehåll**. Dra delformulärets vänstra slutpunkt för att justera längden.
-1. På fliken **Bindningar**:
+1. Dra och släpp **Delformulär** från **Objektbibliotek** till formuläret.
+1. Markera delformuläret för att visa alternativen för delformuläret i **Objekt** i den högra rutan.
+1. Välj **Delformulär** och markera **Flödat** från **Innehåll** nedrullningsbar lista. Dra delformulärets vänstra slutpunkt för att justera längden.
+1. I **Bindningar** tab:
 
-   1. Ange **BillDetails** i fältet **Namn**.
-   1. Välj **Ingen databindning** i listrutan **Databindning**.
+   1. Ange **BillDetails** i **Namn** fält.
+   1. Välj **Ingen databindning** från **Databindning** nedrullningsbar lista.
 
    ![forms_designer_subform](assets/forms_designer_subform.png)
 
-1. Markera på samma sätt rotdelformuläret, välj fliken **Delformulär** och välj **Flödat** i listrutan **Innehåll**. På fliken **Bindningar**:
+1. Markera på samma sätt rotdelformuläret och markera **Delformulär** och markera **Flödat** från **Innehåll** nedrullningsbar lista. I **Bindningar** tab:
 
-   1. Ange **TelecaBill** i fältet **Namn**.
-   1. Välj **Ingen databindning** i listrutan **Databindning**.
+   1. Ange **TelecaBill** i **Namn** fält.
+   1. Välj **Ingen databindning** från **Databindning** nedrullningsbar lista.
 
    ![root_subform_print_template](assets/root_subform_print_template.png)
 
@@ -89,7 +92,7 @@ Så här skapar du en XDP-mall för utskriftskanalen:
    * BillDetails
    * CustomerDetails
    * BillSummary
-   * Sammanfattning - Välj fliken **Delformulär** och välj **Placerad** i listrutan **Innehåll** för det här delformuläret. Infoga följande delformulär i delformuläret **Sammanfattning**.
+   * Sammanfattning - Välj **Delformulär** och markera **Placerad** från **Innehåll** nedrullningsbar lista för det här delformuläret. Infoga följande delformulär i **Sammanfattning** delformulär.
 
       * Avgifter
       * Diagram
@@ -99,69 +102,69 @@ Så här skapar du en XDP-mall för utskriftskanalen:
 
    För att spara tid kan du även kopiera och klistra in befintliga delformulär för att skapa nya delformulär.
 
-   Om du vill flytta delformuläret **Diagram** till höger om delformuläret Diagram väljer du delformuläret **Diagram** i den vänstra rutan, väljer fliken **Layout** och anger ett värde för fältet **AnchorX**. Värdet måste vara större än värdet för fältet **Bredd** för delformuläret **Avgifter**. Markera delformuläret **Avgifter** och välj fliken **Layout** för att visa värdet för fältet **Bredd**.
+   Om du vill ändra **Diagram** till höger om delformuläret Charges väljer du **Diagram** i den vänstra rutan väljer du **Layout** och ange ett värde för **AnkarpunktX** fält. Värdet måste vara större än värdet för **Bredd** fält för **Avgifter** delformulär. Välj **Avgifter** delformulär och markera **Layout** för att visa värdet på **Bredd** fält.
 
-1. Dra och släpp **Text**-objektet från **objektbiblioteket** till formuläret och ange **Dial XXXX för att prenumerera**-texten i rutan.
-1. Högerklicka på textobjektet i den vänstra rutan, välj **Byt namn på objekt** och ange namnet på textobjektet som **Prenumerera**.
+1. Dra och släpp **Text** objekt från **Objektbibliotek** till formuläret och ange **Ring XXXX för att prenumerera** text i rutan.
+1. Högerklicka på textobjektet i den vänstra rutan och välj **Byt namn på objekt** och ange namnet på textobjektet som **Prenumerera**.
 
    ![print_xdp_template_subform](assets/print_xdp_template_subform.png)
 
-1. Välj **Arkiv** > **Spara som** om du vill spara filen i det lokala filsystemet:
+1. Välj **Fil** > **Spara som** så här sparar du filen i det lokala filsystemet:
 
-   1. Navigera till den plats där du vill spara filen och ange namnet som **create_first_ic_print_template**.
-   1. Välj **.xdp** i listrutan **Spara som typ**.
-   1. Tryck på **Spara**.
+   1. Navigera till platsen där du vill spara filen och ange namnet som **create_first_ic_print_template**.
+   1. Välj **.xdp** från **Spara som typ** nedrullningsbar lista.
+   1. Tryck **Spara**.
 
 ### Överför XDP-mall till AEM Forms-servern {#upload-xdp-template-to-the-aem-forms-server}
 
 När du har skapat en XDP-mall med Forms Designer måste du överföra den till AEM Forms-servern så att mallen kan användas när du skapar den interaktiva kommunikationen.
 
 1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
-1. Tryck på **Create** > **Filöverföring**.
+1. Tryck **Skapa** > **Filöverföring**.
 
-   Navigera till och välj mallen **create_first_ic_print_template** (XDP) och tryck på **Öppna** för att importera XDP-mallen till AEM Forms-servern.
+   Navigera och markera **create_first_ic_print_template** mall (XDP) och tryck på **Öppna** om du vill importera XDP-mallen till AEM Forms-servern.
 
 ### Skapa XDP-mall för layoutfragment {#create-xdp-template-for-layout-fragments}
 
 Om du vill skapa ett layoutfragment för tryckkanalen i den interaktiva kommunikationen skapar du en XDP-fil med Forms Designer och överför den till AEM Forms-servern.
 
-1. Öppna Forms Designer, välj **Arkiv** > **Nytt** > **Använd ett tomt formulär,** tryck på **Nästa** och sedan på **Slutför** för att öppna formuläret för att skapa en mall.
+1. Öppna Forms Designer och välj **Fil** > **Nytt** > **Använd ett tomt formulär,** tryck **Nästa** och sedan trycka **Slutför** om du vill öppna formuläret för att skapa en mall.
 
-   Kontrollera att alternativen **Objektbibliotek** och **Objekt** är markerade på menyn **Fönster**.
+   Se till att **Objektbibliotek** och **Objekt** alternativ är markerade på **Fönster** -menyn.
 
-1. Dra och släpp komponenten **Tabell** från **objektbiblioteket** till formuläret.
+1. Dra och släpp **Tabell** från **Objektbibliotek** till formuläret.
 1. I dialogrutan Infoga tabell:
 
    1. Ange antalet kolumner som **5**.
    1. Ange antalet innehållsrader som **1**.
-   1. Markera kryssrutan **Inkludera rubrikrad i tabell**.
+   1. Välj **Inkludera rubrikrad i tabell** kryssrutan.
    1. Tabb **OK**.
 
-1. Tryck på **+** i den vänstra rutan bredvid **Tabell** 1 och högerklicka på **Cell1** och välj **Byt namn på objekt** till **Datum**.
+1. Tryck **+** i den vänstra rutan bredvid **Tabell** 1 och högerklicka **Cell1** och markera **Byt namn på objekt** till **Datum**.
 
-   Byt namn på **Cell2**, **Cell3**, **Cell4** och **Cell5** till **Tid**, **Tal**, **Varaktighet Åtgärd** och **Avgifter**.
+   Byt namn på samma sätt **Cell2**, **Cell3**, **Cell4** och **Cell5** till **Tid**, **Nummer**, **Varaktighet** och **Avgifter** respektive.
 
-1. Klicka på rubriktextfälten i **designervyn** och byt namn på dem till **Time**, **Number**, **Duration** och **Charges**.
+1. Klicka på rubriktextfälten i dialogrutan **Designervy** och döpa om dem till **Tid**, **Nummer**, **Varaktighet** och **Avgifter**.
 
    ![layout_fragment_print](assets/layout_fragment_print.png)
 
-1. Välj **Rad 1** i den vänstra rutan och välj **Objekt** > **Bindning** > **Upprepa rad för varje dataobjekt**.
+1. Välj **Rad 1** i den vänstra rutan och väljer **Objekt** > **Bindning** > **Upprepa rad för varje dataobjekt**.
 
    ![layout_fragment_print_repeat](assets/layout_fragment_print_repeat.png)
 
-1. Dra och släpp **textfältet**-komponenten från **objektbiblioteket** till **designvyn**.
+1. Dra och släpp **Textfält** från **Objektbibliotek** till **Designervy**.
 
    ![layout_fragment_print_text_field](assets/layout_fragment_print_text_field.png)
 
-   Dra och släpp **Textfält**-komponenten till **Tid**, **Tal**, **Varaktighet** och **Avgifter** rader.
+   På samma sätt kan du dra och släppa **Textfält** till **Tid**, **Nummer**, **Varaktighet** och **Avgifter** rader.
 
-1. Välj **Arkiv** > **Spara som** om du vill spara filen i det lokala filsystemet:
+1. Välj **Fil** > **Spara som** så här sparar du filen i det lokala filsystemet:
 
    1. Navigera till platsen där du vill spara filen och ange namnet som **table_lf**.
-   1. Välj **.xdp** i listrutan **Spara som typ**.
-   1. Tryck på **Spara**.
+   1. Välj **.xdp** från **Spara som typ** nedrullningsbar lista.
+   1. Tryck **Spara**.
 
-   När du har skapat en XDP-mall för layoutfragment med Forms Designer måste du [överföra den till AEM Forms-servern så att mallen är tillgänglig för användning när du skapar layoutfragment.](/help/forms/using/create-templates-print-web.md#upload-xdp-template-to-the-aem-forms-server)
+   När du har skapat en XDP-mall för layoutfragment med Forms Designer måste du [ladda upp](/help/forms/using/create-templates-print-web.md#upload-xdp-template-to-the-aem-forms-server) till AEM Forms-servern så att mallen är tillgänglig för användning när du skapar layoutfragment.
 
 ## Skapa mall för webbkanal {#create-template-for-web-channel}
 
@@ -178,60 +181,60 @@ Om du vill skapa en webbkanalmall definierar du en mapp där du kan spara de ska
 
 Så här skapar du en mapp för de redigerbara mallarna:
 
-1. Tryck på **Verktyg** ![Verktyg](assets/tools-icon.svg) > **Konfigurationsläsaren**.
-   * Mer information finns i [Configuration Browser-dokumentationen](/help/sites-administering/configurations.md).
-1. Tryck på **Create** på sidan Configuration Browser.
-1. I dialogrutan **Skapa konfiguration** anger du **Create_First_IC_templates** som mappens titel, markerar **Redigerbara mallar** och trycker på **Skapa**.
+1. Tryck **verktyg** ![verktyg](assets/tools-icon.svg) > **Konfigurationsläsaren**.
+   * Se [Configuration Browser-dokumentation](/help/sites-administering/configurations.md) för mer information.
+1. Tryck på **Skapa**.
+1. I **Skapa konfiguration** dialogruta, ange **Create_First_IC_templates** som mappens titel, kontrollera **Redigerbara mallar** och trycka **Skapa**.
 
    ![create_first_ic_web_template](assets/create_first_ic_web_template.png)
 
-   Mappen **Create_First_IC_templates** skapas och visas på sidan **Configuration Browser**.
+   The **Create_First_IC_templates** mappen skapas och visas på **Konfigurationsläsaren** sida.
 
 ### Skapa mallen {#create-the-template}
 
-Baserat på [användningsfallet](/help/forms/using/create-your-first-interactive-communication.md) och [anatomi](/help/forms/using/planning-interactive-communications.md) skapar du följande paneler i webbmallen:
+Baserat på [användningsfall](/help/forms/using/create-your-first-interactive-communication.md) och [anatomi](/help/forms/using/planning-interactive-communications.md)skapar du följande paneler i webbmallen:
 
 * Fakturainformation: Inkluderar ett dokumentfragment
 * Kundinformation: Inkluderar ett dokumentfragment
 * Fakturasammanfattning: Inkluderar ett dokumentfragment
 * Sammanfattning av avgifter: Innehåller ett dokumentfragment och ett diagram (layout med två kolumner)
 * Specificerade samtal: Innehåller en tabell
-* Betala nu: Innehåller en **Pay Now**-knapp och en bild
-* Mervärdestjänster: Innehåller en bild och en **prenumerationsknapp**.
+* Betala nu: Innehåller en **Betala nu** knapp och en bild
+* Mervärdestjänster: Innehåller en bild och en **Prenumerera** -knappen.
 
 ![create_web_template](assets/create_web_template.gif)
 
 Alla entiteter som dokumentfragment, diagram, tabeller, bilder och knappar läggs till när interaktiv kommunikation skapas.
 
-Utför följande steg för att skapa en mall för webbkanalen i mappen **Create_First_IC_templates**:
+Så här skapar du en mall för webbkanalen i **Create_First_IC_templates** mapp:
 
-1. Navigera till rätt mallmapp genom att välja **Verktyg** > **Mallar** > **Create_First_IC_templates**.
-1. Tryck på **Skapa**.
-1. I konfigurationsguiden **Välj en malltyp** väljer du **Interaktiv kommunikation - webbkanal** och trycker på **Nästa**.
-1. I konfigurationsguiden **Mallinformation** anger du **Create_First_IC_Web_Template** som malltitel. Ange en valfri beskrivning och tryck på **Create**.
+1. Navigera till rätt mallmapp genom att välja **verktyg** > **Mallar** > **Create_First_IC_templates** mapp.
+1. Tryck **Skapa**.
+1. På **Välj en malltyp** konfigurationsguide, välja **Interaktiv kommunikation - webbkanal** och trycka **Nästa**.
+1. På **Mallinformation** konfigurationsguide, ange **Create_First_IC_Web_Template** som malltitel. Ange en valfri beskrivning och tryck **Skapa**.
 
    Ett bekräftelsemeddelande om att **Create_First_IC_Web_Template** visas.
 
-1. Tryck på **Öppna** för att öppna mallen i mallredigeraren.
-1. Välj **Ursprungligt innehåll** i listrutan bredvid alternativet **Förhandsgranska**.
+1. Tryck **Öppna** om du vill öppna mallen i mallredigeraren.
+1. Välj **Ursprungligt innehåll** från listrutan bredvid **Förhandsgranska** alternativ.
 
    ![template_editor_initial_content](assets/template_editor_initial_content.png)
 
-1. Tryck på **Rotpanelen** och tryck sedan på **+** för att visa listan med komponenter som du kan lägga till i mallen.
-1. Välj **Panel** i listan om du vill lägga till en panel ovanför **rotpanelen**.
-1. Välj fliken **Innehåll** i den vänstra rutan. Den nya panelen som lagts till i steg 8 visas under **rotpanelen** i innehållsträdet.
+1. Tryck **Rotpanelen** och sedan trycka **+** om du vill visa en lista med komponenter som du kan lägga till i mallen.
+1. Välj **Panel** från listan för att lägga till en panel ovanför **Rotpanelen**.
+1. Välj **Innehåll** i den vänstra rutan. Den nya panelen som lagts till i steg 8 visas under **Rotpanelen** i innehållsträdet.
 
    ![content_tree_root_panel](assets/content_tree_root_panel.png)
 
-1. Markera panelen och tryck på ![configure_icon](assets/configure_icon.png) (Configure).
+1. Markera panelen och tryck på ![configure_icon](assets/configure_icon.png) (Konfigurera).
 1. I rutan Egenskaper:
 
-   1. Ange **faktureringsinformation** i fältet Namn.
+   1. Ange **fakturainformation** i fältet Namn.
    1. Ange **Fakturainformation** i fältet Titel.
-   1. Välj **1** i listrutan **Antal kolumner**.
-   1. Tryck på ![ready_icon](assets/done_icon.png) för att spara egenskaperna.
+   1. Välj **1** från **Antal kolumner** nedrullningsbar lista.
+   1. Tryck ![ready_icon](assets/done_icon.png) för att spara egenskaperna.
 
-   Panelens namn uppdateras till **Fakturainformation** i innehållsträdet.
+   Namnet på panelen uppdateras till **Fakturainformation** i innehållsträdet.
 
 1. Upprepa steg 7-11 om du vill lägga till paneler med följande egenskaper i mallen:
 
@@ -254,24 +257,23 @@ När du har skapat webbmallen måste du aktivera den för användning när du sk
 
 Aktivera webbmallen genom att utföra följande steg:
 
-1. Tryck på **Verktyg** ![Verktyg](assets/tools-icon.svg) > **Mallar**.
-1. Navigera till mallen **Create_First_IC_Web_Template**, markera den och tryck på **Aktivera**.
-1. Tryck på **Aktivera** igen för att bekräfta.
+1. Tryck **verktyg** ![verktyg](assets/tools-icon.svg) > **Mallar**.
+1. Navigera till **Create_First_IC_Web_Template** mall, markera den och trycka på **Aktivera**.
+1. Tabb **Aktivera** igen för att bekräfta.
 
    Mallen är aktiverad och dess status visas som Aktiverad. Du kan använda den här mallen när du skapar interaktiv kommunikation för webbkanalen.
 
 ### Aktivera knappar i interaktiv kommunikation {#enabling-buttons-in-interactive-communications}
 
-Baserat på användningsexemplet måste du inkludera knapparna **Betala nu** och **Prenumerera** (adaptiva formulärkomponenter) i Interaktiv kommunikation. Så här aktiverar du de här knapparna i den interaktiva kommunikationen:
+Baserat på användningsfallet måste du inkludera **Betala nu** och **Prenumerera** knappar (adaptiva formulärkomponenter) i Interactive Communication. Så här aktiverar du de här knapparna i den interaktiva kommunikationen:
 
-1. Välj **Struktur** i listrutan bredvid alternativet **Förhandsgranska**.
-1. Välj rotpanelen **Dokumentbehållare** med innehållsträdet och tryck på **Policy** för att välja de komponenter som får användas i den interaktiva kommunikationen.
+1. Välj **Struktur** från listrutan bredvid **Förhandsgranska** alternativ.
+1. Välj **Dokumentbehållare** rotpanelen med innehållsträdet och tryck på **Policy** för att välja vilka komponenter som får användas i interaktiv kommunikation.
 
    ![structure_configure_policy](assets/structure_configure_policy.png)
 
-1. I **fliken Tillåtna komponenter** i **Egenskaper** väljer du **Knapp** i **adaptiva formulär**-komponenterna.
+1. I **Tillåtna komponenter** flik för **Egenskaper** avsnitt, markera **Knapp** från **Adaptiv form** -komponenter.
 
    ![allowed_components_af](assets/allowed_components_af.png)
 
-1. Tryck på ![ready_icon](assets/done_icon.png) för att spara egenskaperna.
-
+1. Tryck ![ready_icon](assets/done_icon.png) för att spara egenskaperna.

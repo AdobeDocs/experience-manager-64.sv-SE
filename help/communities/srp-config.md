@@ -1,8 +1,8 @@
 ---
 title: Lagringskonfiguration
-seo-title: Lagringskonfiguration
+seo-title: Storage Configuration
 description: Åtkomst till lagringskonsolen
-seo-description: Åtkomst till lagringskonsolen
+seo-description: How to access the Storage Configuration Console
 uuid: 6a5a71d5-6aaa-4635-8852-4dae33c497a9
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -11,14 +11,18 @@ content-type: reference
 discoiquuid: 71fac7e9-814a-48b5-b816-9bdcb2a05190
 role: Admin
 exl-id: 905b6dc5-cf17-4f58-a687-27e2910a0729
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
 
 # Lagringskonfiguration {#storage-configuration}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Lagringskonfiguration är ett sätt att identifiera det lagringsutrymme som valts för communityinnehåll, som också kallas användargenererat innehåll (UGC).
 
@@ -42,9 +46,9 @@ Så här väljer du ett annat lagringsalternativ än standard-JCR:
 * välj ett alternativ
 * Konfigurera korrekt
 
-   * Se information om [val av MSRP](msrp.md#select-msrp)
-   * Se information om [val av DSRP](dsrp.md#select-dsrp)
-   * Se information om [val av ASRP](asrp.md#select-asrp)
+   * Mer information finns i [välja MSRP](msrp.md#select-msrp)
+   * Mer information finns i [välja DSRP](dsrp.md#select-dsrp)
+   * Mer information finns i [markera ASRP](asrp.md#select-asrp)
 
 * Välj **[!UICONTROL Submit]**
 
@@ -52,10 +56,10 @@ Så här väljer du ett annat lagringsalternativ än standard-JCR:
 
 Observera att om inget val görs är standarddatabasen AEM JCR.
 
-JCR är *inte* en gemensam lagringsplats som delas av författar- och publiceringsmiljöerna. Community-innehåll visas bara i den författar- eller publiceringsmiljö där det skapades.
+JCR är *not* en gemensam lagringsplats som delas av författaren och publiceringsmiljöer. Community-innehåll visas bara i den författar- eller publiceringsmiljö där det skapades.
 
-Mer information finns i [JCR Store](jsrp.md).
+Besök [JCR Store](jsrp.md) för ytterligare information.
 
 >[!NOTE]
 >
->Om noden `srpc`saknas under `/etc/socialconfig` indikerar standardlagret för [JCR](jsrp.md).
+>Nodens frånvaro `srpc`under `/etc/socialconfig` anger standardvärdet [JCR-butik](jsrp.md).

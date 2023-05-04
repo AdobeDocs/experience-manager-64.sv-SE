@@ -1,24 +1,27 @@
 ---
 title: SSL som standard
-seo-title: SSL som standard
+seo-title: SSL By Default
 description: Lär dig hur du använder SSL som standard i AEM.
-seo-description: Lär dig hur du använder SSL som standard i AEM.
+seo-description: Learn how to use SSL by Default in AEM.
 uuid: 262474b0-f5fa-4cff-8727-9f39c5b5f760
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 discoiquuid: 3a1817cd-357b-473d-9a09-e18bbfc60dfd
-translation-type: tm+mt
-source-git-commit: eb3ac73ebe3189c144dafa02a2596ea5d512ffba
+exl-id: 07f89673-125b-4205-bc54-c90287a1e9a5
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '797'
 ht-degree: 0%
 
 ---
 
-
 # SSL som standard{#ssl-by-default}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 I ett försök att kontinuerligt förbättra AEM säkerhet har Adobe introducerat en funktion som kallas SSL som standard. Syftet är att uppmuntra användningen av HTTPS för att ansluta till AEM instanser.
 
@@ -26,17 +29,17 @@ I ett försök att kontinuerligt förbättra AEM säkerhet har Adobe introducera
 
 Du kan börja konfigurera SSL som standard genom att klicka på det relevanta inkorgsmeddelandet från AEM startskärm. Tryck på klockikonen i skärmens övre högra hörn för att nå Inkorgen. Klicka sedan på **Visa alla**. Då visas en lista med alla aviseringar som har beställts i en listvy.
 
-Markera och öppna **Konfigurera HTTPS**-varningen i listan:
+Markera och öppna **Konfigurera HTTPS** varning:
 
 ![chlimage_1-341](assets/chlimage_1-341.png)
 
 >[OBS!]
 >
->Om **Konfigurera HTTPS**-varningen inte finns i Inkorgen kan du navigera direkt till HTTPS-guiden genom att gå till *<http://serveraddress:serverport/libs/granite/security/content/sslConfig.html?item=configuration%2fconfiguressl&_charset_=utf-8>*
+>Om **Konfigurera HTTPS** ingen varning finns i Inkorgen. Du kan navigera direkt till HTTPS-guiden genom att gå till *<http://serveraddress:serverport/libs/granite/security/content/sslConfig.html?item=configuration%2fconfiguressl&_charset_=utf-8>*
 
-En tjänstanvändare med namnet **ssl-service** har skapats för den här funktionen. När du har öppnat aviseringen vägleds du genom följande konfigurationsguide:
+En tjänstanvändare ringde **ssl-service** har skapats för den här funktionen. När du har öppnat aviseringen vägleds du genom följande konfigurationsguide:
 
-1. Konfigurera först arkivautentiseringsuppgifterna. Detta är autentiseringsuppgifterna för **ssl-service**-systemanvändarens nyckelarkiv som kommer att innehålla den privata nyckeln och förtroendearkivet för HTTPS-avlyssnaren.
+1. Konfigurera först arkivautentiseringsuppgifterna. Detta är autentiseringsuppgifterna för **ssl-service** systemanvändarens nyckelarkiv som kommer att innehålla den privata nyckeln och förtroendearkivet för HTTPS-avlyssnaren.
 
    ![chlimage_1-342](assets/chlimage_1-342.png)
 
@@ -46,7 +49,7 @@ En tjänstanvändare med namnet **ssl-service** har skapats för den här funkti
 
    >[!NOTE]
    >
-   >Mer information om hur du skapar en privat nyckel och ett certifikat som ska användas med guiden finns i [den här proceduren](/help/sites-administering/ssl-by-default.md#generating-a-private-key-certificate-pair-to-use-with-the-wizard) nedan.
+   >Mer information om hur du skapar en privat nyckel och ett certifikat som ska användas med guiden finns i [detta förfarande](/help/sites-administering/ssl-by-default.md#generating-a-private-key-certificate-pair-to-use-with-the-wizard) nedan.
 
 1. Slutligen anger du HTTPS-värdnamnet och TCP-porten för HTTPS-avlyssnaren.
 
@@ -93,11 +96,11 @@ Content-Disposition: form-data; name="httpsPort"
 8443
 ```
 
-Servern kommer, precis som vilken server som helst för POST av sling, att svara med 200 OK eller en felkod för HTTP-status. Du hittar information om status i svarets HTML-brödtext.
+Servern kommer, precis som vilken server som helst för POST av sling, att svara med 200 OK eller en felkod för HTTP-status. Du hittar information om status i svarets HTML.
 
 Nedan finns exempel på både ett lyckat svar och ett fel.
 
-**EXEMPEL**  (status = 200):
+**EXEMPEL** (status = 200):
 
 ```xml
 <!DOCTYPE html>
@@ -154,10 +157,10 @@ it for any subsequent updating of the private key or certificate.</dd>
 
 Du kan också automatisera SSL-konfigurationen genom att överföra ett paket som redan innehåller följande obligatoriska objekt:
 
-* SSL-service-användarens nyckelbehållare. Detta finns under */home/users/system/security/ssl-service/keystore* i databasen.
-* Konfigurationen `GraniteSslConnectorFactory`
+* SSL-service-användarens nyckelbehållare. Det här finns under */home/users/system/security/ssl-service/keystore* i databasen.
+* The `GraniteSslConnectorFactory` konfiguration
 
-### Genererar en privat nyckel/ett certifikatpar som ska användas med guiden {#generating-a-private-key-certificate-pair-to-use-with-the-wizard}
+### Skapa en privat nyckel/ett certifikatpar som ska användas med guiden {#generating-a-private-key-certificate-pair-to-use-with-the-wizard}
 
 Här nedan hittar du ett exempel på hur du skapar ett självsignerat certifikat i DER-format som kan användas i SSL-guiden.
 
@@ -190,13 +193,13 @@ Konvertera den privata nyckeln till DER-format. Detta beror på att SSL-guiden k
 openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out localhostprivate.der -nocrypt
 ```
 
-Ladda slutligen upp **localhostprivate.der** som den privata nyckeln och **localhost.crt** som SSL-certifikat i steg 2 i den grafiska SSL-guiden som beskrivs i början av den här sidan.
+Till sist skickar du **localhostprivate.der** som den privata nyckeln och **localhost.crt** som SSL-certifikat i steg 2 i den grafiska SSL-guiden som beskrivs i början av den här sidan.
 
-### Uppdaterar SSL-konfigurationen via cURL {#updating-the-ssl-configuration-via-curl}
+### Uppdatera SSL-konfigurationen via cURL {#updating-the-ssl-configuration-via-curl}
 
 >[!NOTE]
 >
->En centraliserad lista över användbara cURL-kommandon i AEM finns i [Använda cURL med AEM](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/curl.html).
+>Se [Använda cURL med AEM](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/curl.html) om du vill ha en centraliserad lista med användbara cURL-kommandon i AEM.
 
 Du kan också automatisera SSL-konfigurationen med verktyget cURL. Du kan göra detta genom att skicka konfigurationsparametrarna till den här URL:en:
 
@@ -221,9 +224,9 @@ Nedan visas de parametrar du kan använda för att ändra de olika inställninga
 
 >[!NOTE]
 >
->Det snabbaste sättet att köra cURL för att automatisera SSL-konfigurationen är från den mapp där DER- och CRT-filerna finns. Du kan också ange den fullständiga sökvägen i argumenten `privatekeyFile` och certificateFile.
+>Det snabbaste sättet att köra cURL för att automatisera SSL-konfigurationen är från den mapp där DER- och CRT-filerna finns. Du kan också ange den fullständiga sökvägen i `privatekeyFile` och certificateFile-argument.
 >
->Du måste också autentiseras för att kunna utföra uppdateringen, så se till att du lägger till cURL-kommandot med parametern `-u user:passeword`.
+>Du måste också vara autentiserad för att kunna utföra uppdateringen, så se till att du lägger till cURL-kommandot med `-u user:passeword` parameter.
 >
 >Ett korrekt cURL-postkommando ska se ut så här:
 

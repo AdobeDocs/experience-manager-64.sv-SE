@@ -12,14 +12,18 @@ topic-tags: operations
 discoiquuid: ddbb2b82-4c57-4845-a5be-2435902d312b
 role: Developer
 exl-id: 50c34781-45e3-4255-a997-44f694527c92
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1821'
+source-wordcount: '1857'
 ht-degree: 0%
 
 ---
 
 # Återger Forms efter värde {#rendering-forms-by-value}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Vanligtvis skickas en formulärdesign som har skapats i Designer med referens till Forms-tjänsten. Formulärdesigner kan vara stora och därför är det mer effektivt att skicka dem med referens för att undvika att behöva konvertera byte för formulärdesign efter värde. Forms-tjänsten kan även cachelagra formulärdesignen så att den inte behöver läsa formulärdesignen kontinuerligt när den cache-lagras.
 
@@ -35,11 +39,11 @@ Följande begränsningar gäller när en formulärdesign skickas med värde:
 
 * Inget relativt länkat innehåll kan finnas i formulärdesignen. Alla bilder och fragment måste vara inbäddade i formulärdesignen eller refereras till absolut.
 * Det går inte att utföra beräkningar på serversidan efter att formuläret har återgetts. Om formuläret skickas tillbaka till Forms-tjänsten extraheras data och returneras utan några beräkningar på serversidan.
-* Eftersom länkade bilder bara kan användas i HTML vid körning går det inte att generera HTML med inbäddade bilder. Detta beror på att Forms-tjänsten stöder inbäddade bilder med HTML genom att hämta bilderna från en refererad formulärdesign. Eftersom en formulärdesign som skickas med värde inte har någon referensplats, kan inbäddade bilder inte extraheras när HTML-sidan visas. Därför måste bildreferenser vara absoluta sökvägar för att kunna återges i HTML.
+* Eftersom HTML bara kan använda länkade bilder vid körning går det inte att generera HTML med inbäddade bilder. Detta beror på att Forms-tjänsten stöder inbäddade bilder med HTML genom att hämta bilderna från en refererad formulärdesign. Eftersom en formulärdesign som skickas med värde inte har någon referensplats, kan inbäddade bilder inte extraheras när HTML-sidan visas. Därför måste bildreferenser vara absoluta sökvägar för att kunna återges i HTML.
 
 >[!NOTE]
 >
->Även om du kan återge olika typer av formulär efter värde (t.ex. HTML-formulär eller formulär som innehåller användarrättigheter) beskrivs återgivningen av interaktiv PDF forms i det här avsnittet.
+>Även om du kan återge olika typer av formulär efter värde (t.ex. HTML-formulär eller formulär som innehåller användarrättigheter) behandlas återgivningen av interaktiv PDF forms i det här avsnittet.
 
 >[!NOTE]
 >
@@ -61,11 +65,11 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa ett Forms Client API-objekt**
 
-Innan du kan importera data programmatiskt till ett PDF-formulär-klient-API måste du skapa en klient för dataintegrering. När du skapar en tjänstklient definierar du de anslutningsinställningar som krävs för att anropa en tjänst.
+Innan du programmässigt kan importera data till ett klient-API i PDF måste du skapa en dataintegreringstjänstklient. När du skapar en tjänstklient definierar du de anslutningsinställningar som krävs för att anropa en tjänst.
 
 **Referera till formulärdesignen**
 
-När du återger ett formulär efter värde måste du skapa ett `com.adobe.idp.Document`-objekt som innehåller den formulärdesign som ska återges. Du kan referera till en befintlig XDP-fil eller så kan du dynamiskt skapa en formulärdesign vid körning och fylla i en `com.adobe.idp.Document` med dessa data.
+När du återger ett formulär efter värde måste du skapa en `com.adobe.idp.Document` objekt som innehåller formulärdesignen som ska återges. Du kan referera till en befintlig XDP-fil eller skapa en formulärdesign dynamiskt vid körning och fylla i en `com.adobe.idp.Document` med dessa data.
 
 >[!NOTE]
 >
@@ -73,11 +77,11 @@ När du återger ett formulär efter värde måste du skapa ett `com.adobe.idp.D
 
 **Återge ett formulär efter värde**
 
-Om du vill återge ett formulär med hjälp av ett värde skickar du en `com.adobe.idp.Document`-instans som innehåller formulärdesignen till återgivningsmetodens `inDataDoc`-parameter (kan vara någon av `FormsServiceClient`-objektets återgivningsmetoder som t.ex. `renderPDFForm`, `(Deprecated) renderHTMLForm`). Det här parametervärdet är vanligtvis reserverat för data som sammanfogas med formuläret. På samma sätt skickar du ett tomt strängvärde till parametern `formQuery`. I vanliga fall kräver den här parametern ett strängvärde som anger namnet på formulärdesignen.
+Om du vill återge ett formulär utifrån värde skickar du ett `com.adobe.idp.Document` instans som innehåller formulärdesignen till återgivningsmetodens `inDataDoc` parameter (kan vara någon av `FormsServiceClient` objektets återgivningsmetoder som `renderPDFForm`, `(Deprecated) renderHTMLForm`och så vidare). Det här parametervärdet är vanligtvis reserverat för data som sammanfogas med formuläret. På samma sätt skickar du ett tomt strängvärde till `formQuery` parameter. I vanliga fall kräver den här parametern ett strängvärde som anger namnet på formulärdesignen.
 
 >[!NOTE]
 >
->Om du vill visa data i formuläret måste data anges i `xfa:datasets`-elementet. Mer information om XFA-arkitekturen finns på [https://www.pdfa.org/norm-refs/XFA-3_3.pdf](https://www.pdfa.org/norm-refs/XFA-3_3.pdf).
+>Om du vill visa data i formuläret måste dessa anges i `xfa:datasets` -element. Mer information om XFA-arkitekturen finns på [https://www.pdfa.org/norm-refs/XFA-3_3.pdf](https://www.pdfa.org/norm-refs/XFA-3_3.pdf).
 
 **Skriv formulärdataströmmen till klientens webbläsare**
 
@@ -109,36 +113,36 @@ När Forms-tjänsten återger ett formulär efter värde returneras en formulär
 
 1. Skapa ett Forms Client API-objekt
 
-   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
-   * Skapa ett `FormsServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
+   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   * Skapa en `FormsServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
 
 1. Referera till formulärdesignen
 
-   * Skapa ett `java.io.FileInputStream`-objekt som representerar formulärdesignen som ska återges med hjälp av dess konstruktor och genom att skicka ett strängvärde som anger platsen för XDP-filen.
-   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
+   * Skapa en `java.io.FileInputStream` objekt som representerar formulärdesignen som ska återges med hjälp av dess konstruktor och som skickar ett strängvärde som anger platsen för XDP-filen.
+   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
 
 1. Återge ett formulär efter värde
 
-   Anropa `FormsServiceClient`-objektets `renderPDFForm`-metod och skicka följande värden:
+   Anropa `FormsServiceClient` objektets `renderPDFForm` och skicka följande värden:
 
    * Ett tomt strängvärde. (Den här parametern kräver vanligtvis ett strängvärde som anger formulärdesignens namn.)
-   * Ett `com.adobe.idp.Document`-objekt som innehåller formulärdesignen. Normalt är det här parametervärdet reserverat för data som sammanfogas med formuläret.
-   * Ett `PDFFormRenderSpec`-objekt som lagrar körningsalternativ. Det här är en valfri parameter och du kan ange `null` om du inte vill ange körningsalternativ.
-   * Ett `URLSpec`-objekt som innehåller URI-värden som krävs av Forms-tjänsten.
-   * Ett `java.util.HashMap`-objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
+   * A `com.adobe.idp.Document` objekt som innehåller formulärdesignen. Normalt är det här parametervärdet reserverat för data som sammanfogas med formuläret.
+   * A `PDFFormRenderSpec` objekt som lagrar körningsalternativ. Det här är en valfri parameter och du kan ange `null` om du inte vill ange körningsalternativ.
+   * A `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten.
+   * A `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
 
-   Metoden `renderPDFForm` returnerar ett `FormsResult`-objekt som innehåller en formulärdataström som kan skrivas till klientens webbläsare.
+   The `renderPDFForm` returnerar en `FormsResult` objekt som innehåller en formulärdataström som kan skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
 
-   * Skapa ett `com.adobe.idp.Document`-objekt genom att anropa `FormsResult`-objektets `getOutputContent`-metod.
-   * Hämta innehållstypen för `com.adobe.idp.Document`-objektet genom att anropa dess `getContentType`-metod.
-   * Ange `javax.servlet.http.HttpServletResponse`-objektets innehållstyp genom att anropa dess `setContentType`-metod och skicka innehållstypen för `com.adobe.idp.Document`-objektet.
-   * Skapa ett `javax.servlet.ServletOutputStream`-objekt som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse`-objektets `getOutputStream`-metod.
-   * Skapa ett `java.io.InputStream`-objekt genom att anropa `com.adobe.idp.Document`-objektets `getInputStream`-metod.
-   * Skapa en bytearray och tilldela storleken på `InputStream`-objektet. Anropa `InputStream`-objektets `available`-metod för att hämta storleken på `InputStream`-objektet.
-   * Fyll i bytearrayen med formulärdataströmmen genom att anropa `InputStream`-objektets `read`metod och skicka bytearrayen som ett argument.
-   * Anropa `javax.servlet.ServletOutputStream`-objektets `write`-metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till metoden `write`.
+   * Skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objekt&quot;s `getOutputContent` -metod.
+   * Hämta innehållstypen för `com.adobe.idp.Document` genom att anropa dess `getContentType` -metod.
+   * Ange `javax.servlet.http.HttpServletResponse` objektets innehållstyp genom att anropa dess `setContentType` metoden och skicka innehållstypen för `com.adobe.idp.Document` -objekt.
+   * Skapa en `javax.servlet.ServletOutputStream` som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse` objektets `getOutputStream` -metod.
+   * Skapa en `java.io.InputStream` genom att anropa `com.adobe.idp.Document` objektets `getInputStream` -metod.
+   * Skapa en bytearray och tilldela storleken på `InputStream` -objekt. Anropa `InputStream` objektets `available` metod för att få fram storleken på `InputStream` -objekt.
+   * Fylla i bytearrayen med formulärdataströmmen genom att anropa `InputStream` objektets `read`och skicka bytearrayen som ett argument.
+   * Anropa `javax.servlet.ServletOutputStream` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` -metod.
 
 **Se även**
 
@@ -161,41 +165,41 @@ När Forms-tjänsten återger ett formulär efter värde returneras en formulär
 
 1. Skapa ett Forms Client API-objekt
 
-   Skapa ett `FormsService`-objekt och ange autentiseringsvärden.
+   Skapa en `FormsService` och ange autentiseringsvärden.
 
 1. Referera till formulärdesignen
 
-   * Skapa ett `java.io.FileInputStream`-objekt med hjälp av dess konstruktor. Skicka ett strängvärde som anger platsen för XDP-filen.
-   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra ett PDF-dokument som är krypterat med ett lösenord.
-   * Skapa en bytearray som lagrar innehållet i `java.io.FileInputStream`-objektet. Du kan bestämma storleken på bytearrayen genom att hämta storleken på `java.io.FileInputStream`-objektet med hjälp av dess `available`-metod.
-   * Fyll i bytearrayen med strömdata genom att anropa `java.io.FileInputStream`-objektets `read`-metod och skicka bytearrayen.
-   * Fyll i `BLOB`-objektet genom att anropa dess `setBinaryData`-metod och skicka bytearrayen.
+   * Skapa en `java.io.FileInputStream` genom att använda dess konstruktor. Skicka ett strängvärde som anger platsen för XDP-filen.
+   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` används för att lagra ett PDF-dokument som är krypterat med ett lösenord.
+   * Skapa en bytearray som lagrar innehållet i `java.io.FileInputStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `java.io.FileInputStream` objektets storlek med dess `available` -metod.
+   * Fylla i bytearrayen med strömdata genom att anropa `java.io.FileInputStream` objektets `read` och skicka bytearrayen.
+   * Fyll i `BLOB` genom att anropa dess `setBinaryData` och skicka bytearrayen.
 
 1. Återge ett formulär efter värde
 
-   Anropa `FormsService`-objektets `renderPDFForm`-metod och skicka följande värden:
+   Anropa `FormsService` objektets `renderPDFForm` och skicka följande värden:
 
    * Ett tomt strängvärde. (Den här parametern kräver vanligtvis ett strängvärde som anger formulärdesignens namn.)
-   * Ett `BLOB`-objekt som innehåller formulärdesignen. Normalt är det här parametervärdet reserverat för data som sammanfogas med formuläret.
-   * Ett `PDFFormRenderSpec`-objekt som lagrar körningsalternativ. Det här är en valfri parameter och du kan ange `null` om du inte vill ange körningsalternativ.
-   * Ett `URLSpec`-objekt som innehåller URI-värden som krävs av Forms-tjänsten.
-   * Ett `java.util.HashMap`-objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
-   * Ett tomt `com.adobe.idp.services.holders.BLOBHolder`-objekt som fylls i av metoden. Detta används för att lagra det återgivna PDF-formuläret.
-   * Ett tomt `javax.xml.rpc.holders.LongHolder`-objekt som fylls i av metoden. (Det här argumentet lagrar antalet sidor i formuläret.)
-   * Ett tomt `javax.xml.rpc.holders.StringHolder`-objekt som fylls i av metoden. (Det här argumentet lagrar språkets värde.)
-   * Ett tomt `com.adobe.idp.services.holders.FormsResultHolder`-objekt som kommer att innehålla resultatet av den här åtgärden.
+   * A `BLOB` objekt som innehåller formulärdesignen. Normalt är det här parametervärdet reserverat för data som sammanfogas med formuläret.
+   * A `PDFFormRenderSpec` objekt som lagrar körningsalternativ. Det här är en valfri parameter och du kan ange `null` om du inte vill ange körningsalternativ.
+   * A `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten.
+   * A `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
+   * En tom `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av metoden. Detta används för att lagra det återgivna PDF-formuläret.
+   * En tom `javax.xml.rpc.holders.LongHolder` objekt som fylls i av metoden. (Det här argumentet lagrar antalet sidor i formuläret.)
+   * En tom `javax.xml.rpc.holders.StringHolder` objekt som fylls i av metoden. (Det här argumentet lagrar språkets värde.)
+   * En tom `com.adobe.idp.services.holders.FormsResultHolder` objekt som innehåller resultatet av den här åtgärden.
 
-   Metoden `renderPDFForm` fyller i det `com.adobe.idp.services.holders.FormsResultHolder`-objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
+   The `renderPDFForm` metoden fyller i `com.adobe.idp.services.holders.FormsResultHolder` objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
 
-   * Skapa ett `FormResult`-objekt genom att hämta värdet för `com.adobe.idp.services.holders.FormsResultHolder`-objektets `value`-datamedlem.
-   * Skapa ett `BLOB`-objekt som innehåller formulärdata genom att anropa `FormsResult`-objektets `getOutputContent`-metod.
-   * Hämta innehållstypen för `BLOB`-objektet genom att anropa dess `getContentType`-metod.
-   * Ange `javax.servlet.http.HttpServletResponse`-objektets innehållstyp genom att anropa dess `setContentType`-metod och skicka innehållstypen för `BLOB`-objektet.
-   * Skapa ett `javax.servlet.ServletOutputStream`-objekt som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse`-objektets `getOutputStream`-metod.
-   * Skapa en bytearray och fyll i den genom att anropa `BLOB`-objektets `getBinaryData`-metod. Den här aktiviteten tilldelar innehållet i `FormsResult`-objektet till bytearrayen.
-   * Anropa `javax.servlet.http.HttpServletResponse`-objektets `write`-metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till metoden `write`.
+   * Skapa en `FormResult` genom att hämta värdet för `com.adobe.idp.services.holders.FormsResultHolder` objektets `value` datamedlem.
+   * Skapa en `BLOB` objekt som innehåller formulärdata genom att anropa `FormsResult` objektets `getOutputContent` -metod.
+   * Hämta innehållstypen för `BLOB` genom att anropa dess `getContentType` -metod.
+   * Ange `javax.servlet.http.HttpServletResponse` objektets innehållstyp genom att anropa dess `setContentType` metoden och skicka innehållstypen för `BLOB` -objekt.
+   * Skapa en `javax.servlet.ServletOutputStream` som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse` objektets `getOutputStream` -metod.
+   * Skapa en bytearray och fylla i den genom att anropa `BLOB` objektets `getBinaryData` -metod. Den här aktiviteten tilldelar innehållet i `FormsResult` till bytearrayen.
+   * Anropa `javax.servlet.http.HttpServletResponse` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` -metod.
 
 **Se även**
 

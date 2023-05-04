@@ -2,23 +2,26 @@
 title: Enterprise DevOps
 seo-title: Enterprise DevOps
 description: Läs om processer, metoder och kommunikation som krävs för att underlätta driftsättning och samarbete.
-seo-description: Läs om processer, metoder och kommunikation som krävs för att underlätta driftsättning och samarbete.
+seo-description: Learn about the processes, methods and communication required to ease deployment and simplify collaboration.
 uuid: ca4806d2-c845-4c18-9498-4b66f0980a5e
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/MANAGING
 topic-tags: managing
 content-type: reference
 discoiquuid: 934eda2a-bd3b-4018-86dc-dbb01d246386
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 7d1145e8-d7f7-4cc7-9dd9-ee8ce04e43d4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1005'
-ht-degree: 94%
+source-wordcount: '1025'
+ht-degree: 90%
 
 ---
 
-
 # Enterprise DevOps{#enterprise-devops}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 DevOps omfattar processer, metoder och kommunikation som krävs för att:
 
@@ -63,7 +66,7 @@ Beroende på hur omfattande ditt system är kan utvecklingsmiljön ha både för
 
 ### Kvalitetssäkring {#quality-assurance}
 
-Den här miljön används av kvalitetssäkringsteamet för att på ett heltäckande sätt [testa](/help/sites-developing/test-plan.md) ditt nya system. både design och funktion. Den bör ha både författar- och publiceringsmiljöer med lämpligt innehåll och tillhandahålla alla tjänster som behövs för att möjliggöra en komplett serie tester.
+Den här miljön används av kvalitetssäkringsteamet för att [test](/help/sites-developing/test-plan.md) ditt nya system, både design och funktion. Den bör ha både författar- och publiceringsmiljöer med lämpligt innehåll och tillhandahålla alla tjänster som behövs för att möjliggöra en komplett serie tester.
 
 ### Mellanlagring {#staging}
 
@@ -141,6 +144,6 @@ Produktionsinnehållet bör flyttas från produktionsmiljön till mellanlagrings
 Innehåll kan överföras:
 
 * Mellan olika miljöer – genom exporter och importer av paket.
-* Mellan olika instanser - genom direkt replikering ([AEM replikering](/help/sites-deploying/replication.md)) av innehållet (med HTTP-, eller HTTPS-anslutning).
+* Mellan olika instanser - genom direktreplikering ([AEM](/help/sites-deploying/replication.md)) innehållet (med en HTTP- eller HTTPS-anslutning).
 
 ![chlimage_1-1](assets/chlimage_1-1.png)

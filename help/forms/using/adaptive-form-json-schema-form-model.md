@@ -1,23 +1,26 @@
 ---
 title: Skapa anpassningsbara formulär med JSON-schema
-seo-title: Skapa anpassningsbara formulär med JSON-schema
-description: 'Anpassningsbara formulär kan använda JSON-schema som formulärmodell, vilket gör att du kan använda befintliga JSON-scheman för att skapa anpassningsbara formulär. '
-seo-description: 'Anpassningsbara formulär kan använda JSON-schema som formulärmodell, vilket gör att du kan använda befintliga JSON-scheman för att skapa anpassningsbara formulär. '
+seo-title: Creating adaptive forms using JSON Schema
+description: Anpassningsbara formulär kan använda JSON-schema som formulärmodell, vilket gör att du kan använda befintliga JSON-scheman för att skapa anpassningsbara formulär.
+seo-description: Adaptive forms can use JSON schema as form model, allowing you to leverage existing JSON schemas to create adaptive forms.
 uuid: e73b4b4c-6ad7-4400-b776-5892549970c3
 topic-tags: develop
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: bcda96ff-6c7d-46c4-a9e8-7e0fb245cde9
 feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 42c41625-7441-479c-bd07-7e96e867cc0a
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1235'
-ht-degree: 1%
+source-wordcount: '1243'
+ht-degree: 0%
 
 ---
 
+# Skapa anpassningsbara formulär med JSON-schema {#creating-adaptive-forms-using-json-schema}
 
-# Skapa adaptiva formulär med JSON Schema {#creating-adaptive-forms-using-json-schema}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Förutsättningar {#prerequisites}
 
@@ -26,15 +29,15 @@ Om du skapar ett anpassat formulär med ett JSON-schema som formulärmodell mås
 * [Skapa ett anpassat formulär](/help/forms/using/creating-adaptive-form.md)
 * [JSON-schema](https://json-schema.org/)
 
-## Använda ett JSON-schema som formulärmodell {#using-a-json-schema-as-form-model}
+## Använda ett JSON-schema som formulärmodell  {#using-a-json-schema-as-form-model}
 
-AEM Forms har stöd för att skapa ett adaptivt formulär genom att använda ett befintligt JSON-schema som formulärmodell. Detta JSON-schema representerar strukturen i vilken data produceras eller används av det bakomliggande systemet i din organisation. Det JSON-schema som du använder ska vara kompatibelt med [v4-specifikationerna](https://json-schema.org/draft-04/schema).
+AEM Forms har stöd för att skapa ett adaptivt formulär genom att använda ett befintligt JSON-schema som formulärmodell. Detta JSON-schema representerar strukturen i vilken data produceras eller används av det bakomliggande systemet i din organisation. Det JSON-schema som du använder ska vara kompatibelt med [v4-specifikationer](https://json-schema.org/draft-04/schema).
 
 De viktigaste funktionerna i ett JSON-schema är:
 
 * Strukturen för JSON visas som ett träd på fliken Innehållssökning i redigeringsläget för ett anpassat formulär. Du kan dra och lägga till element från JSON-hierarkin i det adaptiva formuläret.
 * Du kan fylla i formuläret i förväg med JSON som är kompatibel med det associerade schemat.
-* När data skickas skickas skickas de som anges av användaren som JSON som är anpassad efter det associerade schemat.
+* När data skickas skickas skickas de som anges av användaren som JSON som är i linje med det associerade schemat.
 
 Ett JSON-schema består av enkla och komplexa elementtyper. Elementen har attribut som lägger till regler i elementet. När dessa element och attribut dras till ett adaptivt formulär mappas de automatiskt till motsvarande adaptiv formulärkomponent.
 
@@ -67,7 +70,7 @@ Den här mappningen av JSON-element med adaptiva formulärkomponenter är följa
    <td><br /> <br /> Textfält<br /> <br /> <br /> </td> 
   </tr> 
   <tr> 
-   <td>talegenskap<br /> </td> 
+   <td>number, egenskap<br /> </td> 
    <td>Numeriskt fält med undertyp inställd på flytande<br /> </td> 
   </tr> 
   <tr> 
@@ -76,10 +79,10 @@ Den här mappningen av JSON-element med adaptiva formulärkomponenter är följa
   </tr> 
   <tr> 
    <td>boolesk egenskap<br /> </td> 
-   <td>Växla<br /> </td> 
+   <td>Byt<br /> </td> 
   </tr> 
   <tr> 
-   <td>objektegenskap<br /> </td> 
+   <td>object, egenskap<br /> </td> 
    <td>Panel<br /> </td> 
   </tr> 
   <tr> 
@@ -103,7 +106,7 @@ Det adaptiva formuläret använder information som finns i JSON-schemat för att
 * Egenskapen readOnly anger det skrivskyddade attributet för en adaptiv formulärkomponent.
 * Den obligatoriska egenskapen anger att det adaptiva formulärfältet är obligatoriskt, medan det för panel (där typen är objekt) finns fält med tomma värden som motsvarar det objektet i de slutliga skickade JSON-data.
 * Egenskapen pattern anges som valideringsmönster (reguljärt uttryck) i adaptiv form.
-* Tillägget för JSON-schemafilen måste behållas som .schema.json. Till exempel &lt;filnamn>.schema.json.
+* Tillägget för JSON-schemafilen måste behållas som .schema.json. Till exempel: &lt;filename>.schema.json.
 
 ## Exempel på JSON-schema {#sample-json-schema}
 
@@ -318,9 +321,9 @@ Definitionsnycklar används för att identifiera återanvändbara scheman. Åter
 
 Exemplet ovan definierar en kundpost där varje kund har både en leveransadress och en faktureringsadress. Adressernas struktur är densamma - adresserna har en gatuadress, ort och delstat - så det är en bra idé att inte duplicera adresserna. Det gör det också enkelt att lägga till och ta bort fält för framtida ändringar.
 
-## Förkonfigurerar fält i JSON-schemadefinitionen {#pre-configuring-fields-in-json-schema-definition}
+## Förkonfigurerar fält i JSON-schemadefinition {#pre-configuring-fields-in-json-schema-definition}
 
-Du kan använda egenskapen **aem:afProperties** för att förkonfigurera JSON-schemafältet för att mappa till en anpassad adaptiv formulärkomponent. Ett exempel visas nedan:
+Du kan använda **aem:afProperties** för att förkonfigurera JSON-schemafältet för mappning till en anpassad adaptiv formulärkomponent. Ett exempel visas nedan:
 
 ```
 {
@@ -359,7 +362,7 @@ Du kan lägga till följande begränsningar i JSON-schemaelement för att begrä
    <td> 
     <ul> 
      <li>Numerisk ruta</li> 
-     <li>Numerisk nummerlista<br /> </li> 
+     <li>Numerisk stege<br /> </li> 
      <li>Datumväljaren</li> 
     </ul> </td> 
   </tr> 
@@ -376,7 +379,7 @@ Du kan lägga till följande begränsningar i JSON-schemaelement för att begrä
   </tr> 
   <tr> 
    <td><p><code>exclusiveMaximum</code></p> </td> 
-   <td><p>Boolesk</p> </td> 
+   <td><p>Boolean</p> </td> 
    <td><p>Om true måste det numeriska värdet eller datumet som anges i formulärets komponent vara mindre än det numeriska värdet eller datumet som anges för egenskapen maximum.</p> <p>Om värdet är false måste det numeriska värdet eller datumet som anges i formulärets komponent vara mindre än eller lika med det numeriska värdet eller datumet som anges för egenskapen maximum.</p> </td> 
    <td> 
     <ul> 
@@ -387,7 +390,7 @@ Du kan lägga till följande begränsningar i JSON-schemaelement för att begrä
   </tr> 
   <tr> 
    <td><p><code>exclusiveMinimum</code></p> </td> 
-   <td><p>Boolesk</p> </td> 
+   <td><p>Boolean</p> </td> 
    <td><p>Om true måste det numeriska värdet eller datumet som anges i formulärets komponent vara större än det numeriska värdet eller datumet som anges för egenskapen minimum.</p> <p>Om värdet är false måste det numeriska värdet eller datumet som anges i formulärets komponent vara större än eller lika med det numeriska värdet eller datumet som anges för egenskapen minimum.</p> </td> 
    <td> 
     <ul> 
@@ -438,7 +441,7 @@ Du kan lägga till följande begränsningar i JSON-schemaelement för att begrä
  </tbody> 
 </table>
 
-## Konstruktioner som inte stöds {#non-supported-constructs}
+## Konstruktioner som inte stöds  {#non-supported-constructs}
 
 Adaptiva formulär stöder inte följande JSON-schemakonstruktioner:
 
@@ -459,4 +462,3 @@ Du har två alternativ:
 
 * Bläddra genom trädstrukturen
 * Använd sökrutan för att hitta ett element
-

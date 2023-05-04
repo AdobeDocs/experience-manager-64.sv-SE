@@ -1,28 +1,31 @@
 ---
 title: Rensa poster från Job Manager-databasen
-seo-title: Rensa poster från Job Manager-databasen
+seo-title: Purge records from the Job Manager database
 description: Stora processdata kan ge sämre prestanda AEM formulär. Det är god praxis att rensa processdata när det inte längre behövs några poster.
-seo-description: Stora processdata kan ge sämre prestanda AEM formulär. Det är god praxis att rensa processdata när det inte längre behövs några poster.
+seo-description: Large process data can result in lower AEM forms performance. It is good practice to purge process data when records are no longer necessary.
 uuid: cf214498-36e9-4dcc-b4d4-e7c46f80dbab
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/health_monitor
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 69a406f2-4fa8-40bb-b671-7b0f5b6a2c4c
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: be2e2a4b-5aac-4612-81b6-b4bbb3036d77
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
 
+# Rensa poster från Job Manager-databasen {#purge-records-from-the-job-manager-database}
 
-# Rensa poster från jobbhanterardatabasen {#purge-records-from-the-job-manager-database}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Processdata som genereras när en långvarig process anropas kan bli för stora, vilket kan ge sämre prestanda för AEM och kräver onödigt diskutrymme. Det är god praxis att rensa processdata när det inte längre behövs några poster.
 
-Du kan använda administrationskonsolen för att rensa bort inaktuella poster en gång eller för att schemalägga regelbundna automatiska rensningar. Andra metoder för att rensa inaktuella poster beskrivs i [Rensa processdata](/help/forms/using/admin-help/purging-process-data.md#purging-process-data).
+Du kan använda administrationskonsolen för att rensa bort inaktuella poster en gång eller för att schemalägga regelbundna automatiska rensningar. Andra metoder för att rensa inaktuella poster beskrivs i [Rensningsprocessdata](/help/forms/using/admin-help/purging-process-data.md#purging-process-data).
 
 **Gå till sidan Schemaläggaren för jobbrensning**
 
@@ -55,7 +58,7 @@ Information om eventuella schemalagda rensningar visas i rutan Information om sc
 **Konfigurera ett automatiskt rensningsschema**
 
 1. Välj Återskapa varje och ange antalet dagar eller veckor mellan tömningar.
-1. I området Töm slutförda poster anger du antalet dagar eller veckor efter vilka en post anses föråldrad och klar för rensning. Du kan inte ange värdet `0`.
+1. I området Töm slutförda poster anger du antalet dagar eller veckor efter vilka en post anses föråldrad och klar för rensning. Du kan inte ange värdet till `0`.
 
    >[!NOTE]
    >
@@ -68,4 +71,3 @@ Information om eventuella schemalagda rensningar visas i rutan Information om sc
    >Om du anger ett tidigare startdatum och en tidigare starttid, beräknas det logiska nästa startdatum som baseras på det angivna datumet AEM formuläret. Om du till exempel schemalägger att jobbtömningen ska ske varje vecka från den 7 april och nu är den 9 april, sker den första tömningen den 14 april.
 
 1. Klicka på Starta schemaläggare. Tidigare schemalagda schemaläggningsinställningar ersätts med de nya inställningarna.
-

@@ -1,8 +1,8 @@
 ---
 title: Konfigurera cacheminne för adaptiva formulär
-seo-title: Konfigurera cacheminne för adaptiva formulär
-description: 'Cacheminnet för anpassningsbara formulär är särskilt utformat för anpassningsbara formulär och dokument. Den cache-lagrar adaptiva formulär och adaptiva dokument i syfte att minska den tid som krävs för att återge ett adaptivt formulär eller dokument på klienten. '
-seo-description: 'Cacheminnet för anpassningsbara formulär är särskilt utformat för anpassningsbara formulär och dokument. Den cache-lagrar adaptiva formulär och adaptiva dokument i syfte att minska den tid som krävs för att återge ett adaptivt formulär eller dokument på klienten. '
+seo-title: Configure adaptive forms cache
+description: Cacheminnet för anpassningsbara formulär är särskilt utformat för anpassningsbara formulär och dokument. Den cache-lagrar adaptiva formulär och adaptiva dokument i syfte att minska den tid som krävs för att återge ett adaptivt formulär eller dokument på klienten.
+seo-description: The adaptive forms cache is designed specifically for adaptive forms and documents. It caches adaptive forms and adaptive documents with the objective of reducing the time required to render an adaptive form or document on the client.
 uuid: 3bd4e405-1eab-4e02-95cd-eb6ac25d18e3
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,16 +10,20 @@ topic-tags: Configuration
 discoiquuid: dd18f7b5-882d-4e81-ab3d-85f1e5d74992
 role: Admin
 exl-id: 6a610e9d-beec-486d-b1d2-78b5fec44c52
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 1%
+source-wordcount: '306'
+ht-degree: 0%
 
 ---
 
 # Konfigurera cacheminne för adaptiva formulär {#configure-adaptive-forms-cache}
 
-Ett cacheminne är en mekanism som förkortar dataåtkomsttider, minskar latensen och förbättrar I/O-hastigheter (input/output). Cacheminnet för adaptiva formulär lagrar endast HTML-innehåll och JSON-strukturen i ett adaptivt formulär utan att några förfyllda data sparas. Det minskar tiden som krävs för att återge ett anpassat formulär eller dokument på klienten. Den är särskilt utformad för adaptiva formulär och stöder även adaptiva dokument.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+Ett cacheminne är en mekanism som förkortar dataåtkomsttider, minskar latensen och förbättrar I/O-hastigheter (input/output). Cacheminnet för adaptiva formulär lagrar endast HTML-innehåll och JSON-struktur i ett adaptivt formulär utan att några förfyllda data sparas. Det minskar tiden som krävs för att återge ett anpassat formulär eller dokument på klienten. Den är särskilt utformad för adaptiva formulär och stöder även adaptiva dokument.
 
 >[!NOTE]
 >
@@ -34,13 +38,13 @@ Ett cacheminne är en mekanism som förkortar dataåtkomsttider, minskar latense
 Utför följande steg för att konfigurera cachen för adaptiva formulär:
 
 1. Gå till konfigurationshanteraren AEM webbkonsolen på `https://[server]:[port]/system/console/configMgr`.
-1. Klicka på **Adaptiv form och Interactive Communication Web Channel Configuration** för att redigera dess konfigurationsvärden.
-1. I dialogrutan Redigera konfigurationsvärden anger du det maximala antalet formulär eller dokument som en instans av AEM Forms-servern kan cachelagra i fältet **Antal adaptiva Forms**. Standardvärdet är 100.
+1. Klicka **Konfiguration av webbkanal för adaptiv form och interaktiv kommunikation** om du vill redigera dess konfigurationsvärden.
+1. I dialogrutan Redigera konfigurationsvärden anger du det maximala antalet formulär eller dokument som en instans av AEM Forms-servern kan cachelagra i **Antal adaptiva Forms** fält. Standardvärdet är 100.
 
    >[!NOTE]
    >
-   >Om du vill inaktivera cachen anger du värdet **0** i fältet Antal adaptiva Forms. Cacheminnet återställs och alla formulär och dokument tas bort från cacheminnet när du inaktiverar eller ändrar cachekonfigurationen.
+   >Om du vill inaktivera cachen anger du värdet i fältet Antal adaptiva Forms till **0**. Cacheminnet återställs och alla formulär och dokument tas bort från cacheminnet när du inaktiverar eller ändrar cachekonfigurationen.
 
-   ![Konfigurationsdialogruta för HTML-cache för adaptiva formulär](assets/cache-configuration-edit.png)
+   ![Konfigurationsdialogruta för HTML cache för adaptiva formulär](assets/cache-configuration-edit.png)
 
-1. Klicka på **Spara** för att spara konfigurationen.
+1. Klicka **Spara** för att spara konfigurationen.

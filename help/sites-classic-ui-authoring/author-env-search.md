@@ -1,34 +1,37 @@
 ---
 title: Sökning
-seo-title: Sökning
+seo-title: Search
 description: I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende på resurstypen.
-seo-description: I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende på resurstypen.
+seo-description: The author environment of AEM provides various mechanisms for searching for content, dependent on the resource type.
 uuid: b50c8144-1993-441d-8303-fcb6b0f24376
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: b20e0f78-9ae4-47ba-8e9a-452a0a78b663
-translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+exl-id: 9c1d8969-6aa6-41b9-a797-3e6431475fc6
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 1%
+source-wordcount: '506'
+ht-degree: 0%
 
 ---
 
-
 # Sökning{#search-features}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende på resurstypen.
 
 >[!NOTE]
 >
->Utanför författarmiljön finns det även andra sökfunktioner, till exempel [Query Builder](/help/sites-developing/querybuilder-api.md) och [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+>Utanför redigeringsmiljön finns det även andra sökfunktioner, till exempel [Query Builder](/help/sites-developing/querybuilder-api.md) och [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
-## Sökgrunder {#search-basics}
+## Grunderna i sökning {#search-basics}
 
-Om du vill komma åt sökpanelen klickar du på fliken **Sök** längst upp i den vänstra rutan i rätt konsol.
+Du öppnar sökpanelen genom att klicka på **Sök** överst i den vänstra rutan i rätt konsol.
 
 ![chlimage_1-140](assets/chlimage_1-140.png)
 
@@ -41,22 +44,18 @@ Med sökpanelen kan du söka på alla webbplatssidor. Den innehåller fält och 
 
 >[!NOTE]
 >
->När din instans har konfigurerats för [Lucene-sökning](/help/sites-deploying/queries-and-indexing.md) kan du använda följande i **Fulltext**:
+>När instansen har konfigurerats för [Lucene-sökning](/help/sites-deploying/queries-and-indexing.md) kan du använda följande i **Fulltext**:
 >
 >* [Jokertecken](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Wildcard_Searches)
 >* [Booleska operatorer](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boolean_operators)
-
-   >
-   >
-* [Reguljära uttryck](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Regexp_Searches)
+>
+>* [Reguljära uttryck](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Regexp_Searches)
 >* [Fältgruppering](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Field_Grouping)
 >* [Boosting](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boosting_a_Term)
-
 >
 
 
-
-Utför sökningen genom att klicka på **Sök** längst ned i rutan. Klicka på **Återställ** för att rensa sökvillkoren.
+Utför sökningen genom att klicka **Sök** längst ned i rutan. Klicka **Återställ** för att rensa sökvillkoren.
 
 ## Filter {#filter}
 
@@ -66,14 +65,14 @@ På olika platser kan ett filter ställas in (och rensas) för att detaljgranska
 
 ## Sök och ersätt {#find-and-replace}
 
-I konsolen **Webbplatser** med menyalternativet **Sök och ersätt** kan du söka efter och ersätta flera förekomster av en sträng i ett avsnitt på webbplatsen.
+I **Webbplatser** konsol a **Sök och ersätt** kan du söka efter och ersätta flera förekomster av en sträng i ett avsnitt på webbplatsen.
 
 1. Markera rotsidan, eller mappen, där du vill att åtgärden Sök och ersätt ska utföras.
-1. Välj **Verktyg** och **Sök och ersätt**:
+1. Välj **verktyg** sedan **Sök och ersätt**:
 
    ![screen_shot_2012-02-15at120346pm](assets/screen_shot_2012-02-15at120346pm.png)
 
-1. Dialogrutan **Sök och ersätt** gör följande:
+1. The **Sök och ersätt** gör följande:
 
    * bekräftar rotsökvägen där sökåtgärden ska starta
    * definierar den term som ska hittas
@@ -81,11 +80,11 @@ I konsolen **Webbplatser** med menyalternativet **Sök och ersätt** kan du sök
    * anger om sökningen ska vara skiftlägeskänslig
    * anger om endast hela ord ska hittas (i annat fall hittas även delsträngar)
 
-   Om du klickar på **Förhandsgranska** visas var termen har hittats. Du kan markera/rensa specifika förekomster som ska ersättas:
+   Klicka **Förhandsgranska** listor där termen har hittats. Du kan markera/rensa specifika förekomster som ska ersättas:
 
    ![screen_shot_2012-02-15at120719pm](assets/screen_shot_2012-02-15at120719pm.png)
 
-1. Klicka på **Ersätt** om du vill ersätta alla instanser. Du ombeds bekräfta åtgärden.
+1. Klicka **Ersätt** att ersätta alla instanser. Du ombeds bekräfta åtgärden.
 
 Standardomfånget för sök- och ersättningsservern omfattar följande egenskaper:
 
@@ -94,11 +93,10 @@ Standardomfånget för sök- och ersättningsservern omfattar följande egenskap
 * `jcr:text`
 * `text`
 
-Omfånget kan ändras med Apache Felix Web Management Console (till exempel `http://localhost:4502/system/console/configMgr`). Välj `CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)` och konfigurera scopet efter behov.
+Omfånget kan ändras med Apache Felix Web Management Console (till exempel på `http://localhost:4502/system/console/configMgr`). Välj `CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)` och konfigurera scopet efter behov.
 
 >[!NOTE]
 >
 >I en standardinstallation AEM Sök och ersätt används Lucene för sökfunktionen.
 >
 >Lucene indexerar strängegenskaper på upp till 16 kB. Strängar som överskrider detta söks inte igenom.
-

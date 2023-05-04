@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Video,Search
 role: User
 exl-id: d5f0beb2-e59f-47cd-8e83-698d8a1dcec3
-source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
 
 # Söka efter videoresurser {#searching-video-assets}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Om du vill spara tid och arbete genom att behöva bläddra igenom potentiellt hundratals videoklipp kan du snabbt hitta filen med hjälp av nyckelord, filegenskaper som filtyp eller nyligen ändrad tidsstämpel.
 
@@ -22,7 +26,7 @@ Du kan söka efter digitala resurser baserat på en eller flera av följande ege
 
 | Sökfält | Sök egenskapsvärden |
 |---|---|
-| Mime-typer | [!UICONTROL Images],  [!UICONTROL Documents],  [!UICONTROL Multimedia],  [!UICONTROL Archives]eller Annat. |
+| Mime-typer | [!UICONTROL Images], [!UICONTROL Documents], [!UICONTROL Multimedia], [!UICONTROL Archives]eller Annat. |
 | [!UICONTROL Last Modified] | Timme, Dag, Vecka, Månad eller År. |
 | [!UICONTROL File Size] | Liten, Medel eller Stor. |
 | [!UICONTROL Publish] Status | Publicerad eller opublicerad. |
@@ -37,7 +41,7 @@ Du kan söka efter digitala resurser baserat på en eller flera av följande ege
 | Ljudkodek | Libvorbis, Lame Mp3, AAC Encoding.Value lagras endast i metadata för videoåtergivningar. |
 | Bithastighet för ljud | Anges som lägsta och högsta värde. Värdet lagras endast i metadata för videoåtergivningar. |
 
-1. Tryck på **[!UICONTROL Assets]** på sidan **[!UICONTROL Experience Manager]** i den vänstra listen.
+1. På **[!UICONTROL Experience Manager]** sida, i den vänstra listen, knacka **[!UICONTROL Assets]**.
 
    Om den vänstra listen inte visas trycker du på ikonen Växla linje (linjerna i ikonen blir antingen mörkgrå eller blå).
 
@@ -59,4 +63,4 @@ Du kan söka efter digitala resurser baserat på en eller flera av följande ege
 
       Ange ett nyckelord, men i stället för att trycka på Retur, expanderar du en video- eller ljudegenskapslista och anger sedan önskade värden.
 
-1. (Valfritt) I närheten av sidans nederkant trycker du på **[!UICONTROL Save Smart Collection]** och anger ett namn för sökningen. Markera **[!UICONTROL Public]** om du vill att den sparade sökningen ska vara tillgänglig för andra användare av Adobe Experience Manager-kontot. Avmarkera om du bara vill att sökningen ska vara tillgänglig för dig när du är inloggad på kontot. Tryck på **[!UICONTROL Save]**.
+1. (Valfritt) I närheten av sidans nederkant trycker du på **[!UICONTROL Save Smart Collection]** anger du ett namn för sökningen. Kontrollera **[!UICONTROL Public]** om du vill att den sparade sökningen ska vara tillgänglig för andra användare av Adobe Experience Manager-kontot. Avmarkera om du bara vill att sökningen ska vara tillgänglig för dig när du är inloggad på kontot. Tryck på **[!UICONTROL Save]**.

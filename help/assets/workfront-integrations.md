@@ -4,14 +4,18 @@ description: Introduktion till integrering mellan [!DNL Assets] och [!DNL Workfr
 role: Admin,Leader,Architect
 feature: Integrations
 exl-id: 598be71d-88f1-4ace-aa99-c8ea22e907ed
-source-git-commit: 333150f824fa57f807621978612055f4929a3b69
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1135'
-ht-degree: 2%
+source-wordcount: '1171'
+ht-degree: 0%
 
 ---
 
 # [!DNL Adobe Experience Manager Assets] integrering med [!DNL Adobe Workfront] {#assets-integration-overview}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 [!DNL Adobe Workfront] är ett program för arbetshantering som hjälper dig att hantera hela arbetscykeln på ett och samma ställe. Integrationen mellan [!DNL Workfront] och [!DNL Adobe Experience Manager Assets] gör att organisationer kan förbättra innehållets hastighet och time-to-market genom att knyta samman arbete och hantering av digitala resurser. När man arbetar i Workfront får man tillgång till dokument och bilder.
 
@@ -74,6 +78,6 @@ Nedan beskrivs de funktioner som är tillgängliga genom olika typer av integrer
 | AEM metadatauppdateringar med nya versioner | En konfiguration i AEM kan göras för att avgöra om en nyversion av en resurs i Workfront också ska pushas med ändringar i dess metadata. | Nej | ✓ | Nej |
 | Uppdatera AEM metadata automatiskt vid ändringar i anpassad Forms i Workfront | AEM kan du prenumerera på uppdateringar av dokumentformulären i Workfront. Därför ändras värdena för mappade AEM metadatafält om du uppdaterar Workfront-dokumentets anpassade formulärmetadata. | Nej | ✓ | Nej |
 | **Arbetsflöden (färdiga)** |
-| Skapa ny korrekturversion på länkade resurser | När en resurs länkas i Workfront kan ett korrektur genereras automatiskt. | Nej | Anpassat | Nej |
+| Skapa ny korrekturversion på länkade resurser | När en resurs länkas i Workfront kan ett korrektur genereras automatiskt. | Nej | Egen | Nej |
 | Ange status för Workfront-objekt | Ange Workfront objektstatusbaserade konfigurerbara villkor med hjälp av AEM arbetsflöden | Nej | ✓ | Kommande |
 | Publicera resurser i AEM Publish Environment eller Brand Portal | Ge Workfront-användare möjlighet att automatiskt publicera länkade resurser i en AEM-publiceringsmiljö eller Brand Portal. | Nej | ✓ | Kommande |

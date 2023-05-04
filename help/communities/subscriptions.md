@@ -1,8 +1,8 @@
 ---
 title: Communities-prenumerationer
-seo-title: Communities-prenumerationer
-description: 'Medlemmar i communityn interagerar med andra medlemmar via e-post '
-seo-description: 'Medlemmar i communityn interagerar med andra medlemmar via e-post '
+seo-title: Communities Subscriptions
+description: Medlemmar i communityn interagerar med andra medlemmar via e-post
+seo-description: Community members interact with other members through email
 uuid: a4b98769-c219-4e18-8e80-9a806ab979ff
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -11,25 +11,29 @@ content-type: reference
 discoiquuid: 33c85af4-4c56-487a-ba60-55211cb9f72c
 role: Admin
 exl-id: 8a756328-0405-49b7-b94d-3dd5a87c782a
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '387'
 ht-degree: 1%
 
 ---
 
 # Communities-prenumerationer {#communities-subscriptions}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 ## Översikt {#overview}
 
-Från och med Communities [FP1](deploy-communities.md#latestfeaturepack) kan communitymedlemmar interagera med communityn via e-post med en funktion som kallas prenumerationer.
+Från och med Communities [FP1](deploy-communities.md#latestfeaturepack)kan communitymedlemmar interagera med communityn via e-post med en funktion som kallas prenumerationer.
 
-Prenumerationer liknar [meddelanden](notifications.md) eftersom medlemmar kan prenumerera när de följer bloggartiklar, forumämnen eller frågor om Frågor och svar.
+Prenumerationer liknar [meddelanden](notifications.md) som medlemmar kan prenumerera när de följer bloggartiklar, forumämnen eller QnA-frågor.
 
 Det som skiljer prenumerationer från meddelanden är:
 
 * Medlemmar får inte prenumerera efter andra medlemmar
-* Den enda åtgärd som medlemmar kan utföra är att välja `Email Subscriptions` när de följer
+* Den enda åtgärd som medlemmar kan utföra är att välja `Email Subscriptions` när du följer
 * När e-postsvar har konfigurerats kan medlemmar effektivt publicera innehållet genom att helt enkelt svara på det mottagna e-postmeddelandet
 
 ### Krav {#requirements}
@@ -38,21 +42,21 @@ Det som skiljer prenumerationer från meddelanden är:
 
 E-post måste konfigureras för att prenumerationerna ska fungera och för att medlemmarna ska kunna svara via e-post.
 
-Instruktioner om hur du konfigurerar e-post finns i [Konfigurera e-post](email.md).
+Instruktioner om hur du konfigurerar e-post finns i [Konfigurerar e-post](email.md).
 
 **Aktivera prenumerationer och följ**
 
-Komponenter måste konfigureras för att aktivera prenumerationer *och* följande. Funktioner som tillåter prenumerationer är [blog](blog-feature.md), [forum](forum.md) och [QnA](working-with-qna.md).
+Komponenter måste konfigureras för att aktivera prenumerationer *och* följer. Funktioner som tillåter prenumerationer är [blogg](blog-feature.md), [forum](forum.md) och [QnA](working-with-qna.md).
 
 ## Prenumerationer från följande {#subscriptions-from-following}
 
 ![chlimage_1-5](assets/chlimage_1-5.png)
 
-Med knappen **Följ** kan du följa upp aktiviteter, prenumerationer och/eller meddelanden. Varje gång knappen **Följ** är markerad går det att aktivera eller inaktivera en markering.
+The **Följ** Med knappen kan du följa upp tävlingsbidrag som aktiviteter, prenumerationer och/eller meddelanden. Varje gång **Följ** är markerad går det att aktivera eller inaktivera en markering.
 
-Om någon av följande metoder är markerad ändras knappens text till **Följande**. Du kan av praktiska skäl välja `Unfollow All` för att inaktivera alla metoder.
+Om någon av följande metoder är markerad ändras texten för knappen till **Följande**. Det går att välja `Unfollow All` för att växla mellan olika metoder.
 
-Knappen **Följ** kommer endast att innehålla alternativet `Email Subscriptions` när ett forum, QnA eller blogg har konfigurerats för att aktivera e-postprenumerationer. Den här knappen visas
+The **Följ** knappen innehåller `Email Subscriptions` bara när ett forum, QnA eller blogg har konfigurerats för att aktivera e-postprenumerationer. Den här knappen visas
 
 * På huvudfunktionssidan för det aktiverade forumet, QnA eller bloggen
 
@@ -64,7 +68,7 @@ Knappen **Följ** kommer endast att innehålla alternativet `Email Subscriptions
 
 ## Svara via e-post {#reply-by-email}
 
-När e-postmeddelandet är [konfigurerat för att svara via e-post](email.md#configure-polling-importer) får den medlem som prenumererade ett e-postmeddelande med det publicerade innehållet och en länk till onlineinnehållet.
+När e-post [konfigurerad för att svara via e-post](email.md#configure-polling-importer), får den prenumererande medlemmen ett e-postmeddelande med det publicerade innehållet och en länk till onlineinnehållet.
 
 Om de svarar på e-postmeddelandet visas det innehåll de anger i svaret som innehåll online.
 

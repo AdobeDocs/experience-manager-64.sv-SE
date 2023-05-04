@@ -1,24 +1,27 @@
 ---
 title: Redigera sidegenskaper
-seo-title: Redigera sidegenskaper
+seo-title: Editing Page Properties
 description: En sidas egenskaper kan variera beroende på sidans beskaffenhet. Vissa sidor kan till exempel vara kopplade till en live-kopia medan andra inte är det och live-kopieringsinformationen är tillgänglig efter behov.
-seo-description: En sidas egenskaper kan variera beroende på sidans beskaffenhet. Vissa sidor kan till exempel vara kopplade till en live-kopia medan andra inte är det och live-kopieringsinformationen är tillgänglig efter behov.
+seo-description: Properties of a page can vary depending on the nature of the page. For example some pages might be connected to a live copy while others are not and the live copy information will be available as appropriate.
 uuid: 63d37d1b-52da-489d-b02b-e8b3d17571d1
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 23768c73-ac64-4727-8313-160c8c131b05
-translation-type: tm+mt
-source-git-commit: 02aee2202a570320cd7eb40c2e566d886af4e163
+exl-id: 6969dc5e-f7fa-495e-8ddf-8123ca2bc9a6
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '799'
 ht-degree: 1%
 
 ---
 
-
 # Redigera sidegenskaper{#editing-page-properties}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Du kan definiera de egenskaper som krävs för en sida. Dessa kan variera beroende på sidans beskaffenhet. Vissa sidor kan till exempel vara kopplade till en live-kopia medan andra inte är det och live-kopieringsinformationen är tillgänglig efter behov.
 
@@ -30,7 +33,7 @@ Egenskaperna fördelas på flera flikar:
 
 * **Titel**
 
-   Sidans rubrik visas på olika platser. Till exempel fliklistan **Webbplatser** och vyn **Platser** kort/lista.
+   Sidans rubrik visas på olika platser. Till exempel **Webbplatser** tabblista och **Webbplatser** kort-/listvyer.
 
    Detta är ett obligatoriskt fält.
 
@@ -56,7 +59,7 @@ Egenskaperna fördelas på flera flikar:
 
 * **Navigeringsrubrik**
 
-   Du kan ange en separat rubrik som ska användas i navigeringen (om du till exempel vill ha något mer koncist). Om den är tom används **titeln**.
+   Du kan ange en separat rubrik som ska användas i navigeringen (om du till exempel vill ha något mer koncist). Om den är tom visas **Titel** kommer att användas.
 
 * **Underrubrik**
 
@@ -82,7 +85,7 @@ Egenskaperna fördelas på flera flikar:
 
    Gör att du kan ange en fågel-URL för den här sidan. Det gör att du kan ha en kortare och mer uttrycksfull URL.
 
-   Om Vanity-URL:en till exempel är inställd på w `elcome`till den sida som identifieras av sökvägen / `v1.0/startpage`för webbplatsen h `ttp://example.com,` är h `ttp://example.com/welcome`vanity-URL:en för h `ttp://example.com/content/v1.0/startpage`
+   Om Vanity-URL:en till exempel är inställd på w `elcome`till den sida som identifieras av sökvägen / `v1.0/startpage`för webbplatsen h `ttp://example.com,` sedan h `ttp://example.com/welcome`skulle vara den vanligaste URL:en för h `ttp://example.com/content/v1.0/startpage`
 
    >[!CAUTION]
    >
@@ -98,7 +101,7 @@ Egenskaperna fördelas på flera flikar:
 
 ### Avancerat {#advanced}
 
-* **Språk:**
+* **Språk**
 
    Sidspråket.
 
@@ -108,7 +111,7 @@ Egenskaperna fördelas på flera flikar:
 
 * **Design**
 
-   Ange den [design](/help/sites-developing/designer.md) som ska användas för den här sidan.
+   Ange [design](/help/sites-developing/designer.md) som ska användas för den här sidan.
 
 * **Alias**
 
@@ -158,13 +161,13 @@ Egenskaperna fördelas på flera flikar:
 
 * **Personanpassning**
 
-   Välj ett [varumärke för att ange ett omfång för målgruppsanpassning](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md).
+   Välj en [Varumärke som anger ett omfång för målanpassning](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md).
 
 ### Behörigheter {#permissions}
 
-* **Behörigheter**  (pekoptimerat gränssnitt)
+* **Behörigheter** (pekoptimerat användargränssnitt)
 
-   Visa [gällande behörigheter och lägg till nya behörigheter](/help/sites-administering/user-group-ac-admin.md).
+   Visa [effektiva behörigheter och lägga till nya behörigheter](/help/sites-administering/user-group-ac-admin.md).
 
 ### Blueprint {#blueprint}
 
@@ -172,15 +175,15 @@ Egenskaperna fördelas på flera flikar:
 
    Definiera egenskaper för en designsida i [hantering av flera webbplatser](/help/sites-administering/msm.md). Styr under vilka omständigheter ändringar ska spridas till Live Copy.
 
-### Live-kopia {#live-copy}
+### Live Copy {#live-copy}
 
 * **Livecopy**
 
    Definiera egenskaper för en Live Copy-sida i [hantering av flera webbplatser](/help/sites-administering/msm.md). Styr under vilka omständigheter ändringar ska spridas från utkast.
 
-### Platsstruktur {#site-structure}
+### Webbplatsstruktur {#site-structure}
 
-* Tillhandahåll länkar till sidor som innehåller funktioner för hela webbplatsen, till exempel **Registreringssida**, **Offline Page**.
+* Tillhandahålla länkar till sidor som innehåller funktioner för hela webbplatsen, som **Registreringssida**, **Offlinesida**, bland annat.
 
 ## Redigera sidegenskaper {#editing-page-properties-2}
 
@@ -190,9 +193,8 @@ Sidegenskaper definierar de olika egenskaperna för sidan, till exempel rubriker
 
 1. Öppna sidan som du vill redigera.
 
-1. Öppna fliken **Sida** och välj sedan **Sidegenskaper i sidöppningen..**
+1. Öppna **Sida** välj **Sidegenskaper...**
 
    Då öppnas en dialogruta med flera flikar.
 
-1. Gör de ändringar du vill och klicka sedan på **OK** för att spara.
-
+1. Gör de ändringar du vill och klicka sedan på **OK** att spara.

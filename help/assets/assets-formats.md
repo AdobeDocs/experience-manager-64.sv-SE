@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Asset Management,Renditions
 role: User,Admin
 exl-id: ee25fe8f-36fb-42b3-9f90-0ea77bc02e2f
-source-git-commit: cc47644419f7b7f4f1f00bb848050aa4a98efa09
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1635'
-ht-degree: 2%
+source-wordcount: '1671'
+ht-degree: 1%
 
 ---
 
 # Filformat som stöds i [!DNL Adobe Experience Manager Assets] {#assets-supported-formats}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 [!DNL Experience Manager Assets] har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika MIME-typer.
 
@@ -24,7 +28,7 @@ Använd teckenförklaringen för att förstå supportnivån.
 |:---:|---|
 | ✓ | Stöds |
 | &#42; | Stöds med tilläggsfunktioner |
-| - | Ej relevant |
+| − | Ej tillämpligt |
 
 ## Rasterbildformat {#supported-raster-image-formats}
 
@@ -177,16 +181,16 @@ Utöver ovanstående funktioner bör du tänka på följande:
 
 | Format | Lagring | Metadatahantering | Extrahering av metadata | Generering av miniatyrbilder | FFMPEG-omkodning |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| AAC | ✓ | ✓ |  | - | &#42; |
-| MIDI | ✓ | ✓ |  | - | &#42; |
-| 3GP | ✓ | ✓ |  | - | &#42; |
-| MP3 | ✓ | ✓ | ✓ | - | &#42; |
-| MPG | ✓ | ✓ |  | - | &#42; |
-| OGA | ✓ | ✓ |  | - | &#42; |
-| OGG | ✓ | ✓ |  | - | &#42; |
-| RA | ✓ | ✓ |  | - | &#42; |
-| WAV | ✓ | ✓ |  | - | &#42; |
-| WMA | ✓ | ✓ |  | - | &#42; |
+| AAC | ✓ | ✓ |  | − | &#42; |
+| MIDI | ✓ | ✓ |  | − | &#42; |
+| 3GP | ✓ | ✓ |  | − | &#42; |
+| MP3 | ✓ | ✓ | ✓ | − | &#42; |
+| MPG | ✓ | ✓ |  | − | &#42; |
+| OGA | ✓ | ✓ |  | − | &#42; |
+| OGG | ✓ | ✓ |  | − | &#42; |
+| RA | ✓ | ✓ |  | − | &#42; |
+| WAV | ✓ | ✓ |  | − | &#42; |
+| WMA | ✓ | ✓ |  | − | &#42; |
 | DVI | ✓ | ✓ |  | &#42; | &#42; |
 | FLV | ✓ | ✓ |  | &#42; | &#42; |
 | M4V | ✓ | ✓ |  | &#42; | &#42; |

@@ -1,8 +1,8 @@
 ---
 title: Introduktion till AEM
-seo-title: Introduktion till AEM
+seo-title: Introduction to the AEM Platform
 description: I den här artikeln finns en allmän översikt över den AEM plattformen och dess viktigaste komponenter.
-seo-description: I den här artikeln finns en allmän översikt över den AEM plattformen och dess viktigaste komponenter.
+seo-description: This article provides a general overview of the AEM platform and its most important components.
 uuid: 214d4c49-1f5c-432c-a2c0-c1fbdceee716
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,16 +10,19 @@ topic-tags: platform
 content-type: reference
 discoiquuid: fccf9a0f-ebab-45ab-8460-84c86b3c4192
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/introduction-to-oak
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: afd8f9ab-ae44-4845-9cb4-f6e28a35ad27
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
 
-
 # Introduktion till AEM{#introduction-to-the-aem-platform}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Den AEM plattformen i AEM 6 bygger på Apache Jackrabbit Oak.
 
@@ -29,14 +32,14 @@ Det är efterföljaren till Jackrabbit 2 och används av AEM 6 som standardbacke
 
 ## Utforma principer och mål {#design-principles-and-goals}
 
-Oak implementerar specifikationen [JSR-283](https://www.day.com/day/en/products/jcr/jsr-283.html) (JCR 2.0). Dess främsta designmål är att
+Oak implementerar [JSR-283](https://www.day.com/day/en/products/jcr/jsr-283.html) (JCR 2.0) spec. Dess främsta designmål är att
 
 * Bättre stöd för stora databaser
 * Flera distribuerade klusternoder för hög tillgänglighet
 * Bättre prestanda
 * Stöd för många underordnade noder och åtkomstkontrollsnivåer
 
-## Arkitekturskoncept {#architecture-concept}
+## Arkitekturbegrepp {#architecture-concept}
 
 ![chlimage_1-84](assets/chlimage_1-84.png)
 
@@ -137,4 +140,3 @@ Mer information om den AEM plattformen finns i följande artiklar:
 * [Fråga och indexering](/help/sites-deploying/queries-and-indexing.md)
 * [Lagringselement i AEM 6](/help/sites-deploying/storage-elements-in-aem-6.md)
 * [AEM med MongoDB](/help/sites-deploying/aem-with-mongodb.md)
-

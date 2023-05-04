@@ -5,55 +5,59 @@ contentOwner: AG
 feature: Search
 role: Developer
 exl-id: d68c735f-2699-4923-a7e7-4d1356eae335
-source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 11%
+source-wordcount: '856'
+ht-degree: 7%
 
 ---
 
 # Utöka resurssökning {#extending-assets-search}
 
-Du kan utöka sökfunktionerna i Adobe Experience Manager Assets. [!DNL Experience Manager] Resurser söker efter resurser efter strängar.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+Du kan utöka sökfunktionerna i Adobe Experience Manager Assets. Ut ur lådan, [!DNL Experience Manager] Resurser söker efter resurser efter strängar.
 
 Sökningen görs via gränssnittet i QueryBuilder så att sökningen kan anpassas med flera predikat. Du kan täcka över standarduppsättningen med predikat i följande katalog: `/apps/dam/content/search/searchpanel/facets`.
 
-Du kan också lägga till fler flikar i resurshanteringspanelen för [!DNL Experience Manager].
+Du kan också lägga till fler flikar i [!DNL Experience Manager] Resursadministratörspanelen.
 
 >[!CAUTION]
 >
->Från och med [!DNL Experience Manager] 6.4 är det klassiska användargränssnittet föråldrat. Information finns i [Borttagna och borttagna funktioner](../release-notes/deprecated-removed-features.md). Du rekommenderas att använda användargränssnittet med pekskärmsfunktioner. Anpassningar finns i [Sök efter ansikten](search-facets.md).
+>Från och med [!DNL Experience Manager] 6.4, Classic UI är föråldrat. Information finns på [Föråldrade och borttagna funktioner](../release-notes/deprecated-removed-features.md). Du rekommenderas att använda användargränssnittet med pekskärmsfunktioner. Information om anpassningar finns i [Sök efter ansikten](search-facets.md).
 
 ## Överläggning {#overlaying}
 
-Om du vill täcka över de förkonfigurerade predikaten kopierar du `facets`-noden från `/libs/dam/content/search/searchpanel` till `/apps/dam/content/search/searchpanel/` eller anger en annan `facetURL`-egenskap i sökpanelens konfiguration (standardvärdet är `/libs/dam/content/search/searchpanel/facets.overlay.infinity.json`).
+Om du vill täcka över de förkonfigurerade predikaten kopierar du `facets` nod från `/libs/dam/content/search/searchpanel` till `/apps/dam/content/search/searchpanel/` eller ange en annan `facetURL` i sökpanelens konfiguration (standardvärdet är `/libs/dam/content/search/searchpanel/facets.overlay.infinity.json`).
 
 ![screen_shot_2012-06-05at113619am](assets/screen_shot_2012-06-05at113619am.png)
 
 >[!NOTE]
 >
->Som standard finns inte katalogstrukturen under / `apps` och måste skapas. Kontrollera att nodtyperna matchar dem under / `libs`.
+>Som standard är katalogstrukturen under / `apps` finns inte och måste skapas. Kontrollera att nodtyperna matchar dem under / `libs`.
 
 ## Lägga till tabbar {#adding-tabs}
 
-Du kan lägga till fler sökflikar genom att konfigurera dem i [!DNL Experience Manager] Resurser Admin. Så här skapar du ytterligare flikar:
+Du kan lägga till fler sökflikar genom att konfigurera dem i [!DNL Experience Manager] Resursadministratör. Så här skapar du ytterligare flikar:
 
-1. Skapa mappstrukturen `/apps/wcm/core/content/damadmin/tabs,`om den inte redan finns, och kopiera noden `tabs` från `/libs/wcm/core/content/damadmin` och klistra in den.
+1. Skapa mappstrukturen `/apps/wcm/core/content/damadmin/tabs,`om den inte redan finns, och kopiera `tabs` nod från `/libs/wcm/core/content/damadmin` och klistra in den.
 1. Skapa och konfigurera den andra fliken efter behov.
 
    >[!NOTE]
    >
-   >När du skapar en andra platadminsearchpanel måste du ange en `id`-egenskap för att förhindra formulärkonflikter.
+   >När du skapar en andra platadminsökpanel måste du ange en `id` för att förhindra formulärkonflikter.
 
 ## Skapa anpassade predikat {#creating-custom-predicates}
 
-[!DNL Experience Manager] Resurser innehåller en uppsättning fördefinierade predikat som kan användas för att anpassa en resursdelssida. Att anpassa en resurs på det här sättet beskrivs i [Skapa och konfigurera en resursdelssida](assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
+[!DNL Experience Manager] Resurser innehåller en uppsättning fördefinierade predikat som kan användas för att anpassa en resursdelssida. Att anpassa en resurs på det här sättet beskrivs i [Skapa och konfigurera en resursdelningssida](assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
 
-Förutom att använda befintliga predikat kan [!DNL Experience Manager]-utvecklare även skapa egna predikat med [API:t för frågebyggaren](/help/sites-developing/querybuilder-api.md).
+Förutom att använda befintliga predikat [!DNL Experience Manager] utvecklare kan också skapa egna predikat med [Query Builder API](/help/sites-developing/querybuilder-api.md).
 
-Det krävs grundläggande kunskaper om [widgetramverket](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html) för att kunna skapa anpassade predikat.
+Om du vill skapa anpassade predikat måste du ha grundläggande kunskaper om [Widgetramverk](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html).
 
-Det bästa sättet är att kopiera ett befintligt predikat och justera det. Exempelpredikaten finns i `/libs/cq/search/components/predicates`.
+Det bästa sättet är att kopiera ett befintligt predikat och justera det. Exempelpredikat finns i `/libs/cq/search/components/predicates`.
 
 ### Exempel: Skapa ett enkelt egenskapspredikat {#example-build-a-simple-property-predicate}
 
@@ -142,10 +146,10 @@ Så här skapar du ett egenskapspredikat:
    </script>
    ```
 
-1. Om du vill göra komponenten tillgänglig måste du kunna redigera den. Om du vill göra en komponent redigerbar lägger du i CRXDE till en nod `cq:editConfig` av den primära typen `cq:EditConfig`. Du kan ta bort stycken genom att lägga till en egenskap med flera värden `cq:actions` med ett enda värde på **DELETE**.
-1. Navigera till webbläsaren och på exempelsidan (till exempel `press.html`) växla till designläge och aktivera den nya komponenten för prediate paragraph system (till exempel **left**).
+1. Om du vill göra komponenten tillgänglig måste du kunna redigera den. Gör en komponent redigerbar genom att lägga till en nod i CRXDE `cq:editConfig` av primär typ `cq:EditConfig`. Du kan ta bort stycken genom att lägga till en egenskap med flera värden `cq:actions` med ett enda värde på **DELETE**.
+1. Navigera till webbläsaren och till exempelsidan (till exempel `press.html`) växla till designläge och aktivera den nya komponenten för det prediktiva styckesystemet (till exempel **vänster**).
 
-1. I **redigeringsläget** är den nya komponenten nu tillgänglig i sidesparläget (finns i gruppen **Sök**). Infoga komponenten i kolumnen **Predicates** och skriv ett sökord, till exempel **Diamant**, och klicka på förstoringsglaset för att starta sökningen.
+1. I **Redigera** läge, den nya komponenten är nu tillgänglig i sidledaren (finns i **Sök** grupp). Infoga komponenten i **Predikat** kolumn och ange ett sökord, till exempel **Diamant** och klicka på förstoringsglaset för att starta sökningen.
 
    >[!NOTE]
    >
@@ -249,9 +253,9 @@ Så här skapar du ett grupppredikat:
        });
    ```
 
-1. Om du vill göra komponenten tillgänglig måste du kunna redigera den. Om du vill göra en komponent redigerbar lägger du i CRXDE till en nod `cq:editConfig` av den primära typen `cq:EditConfig`. Du kan ta bort stycken genom att lägga till en egenskap med flera värden `cq:actions` med ett enda värde på `DELETE`.
-1. Navigera till webbläsaren och på exempelsidan (till exempel `press.html`) växla till designläge och aktivera den nya komponenten för prediate paragraph system (till exempel **left**).
-1. I **redigeringsläget** är den nya komponenten nu tillgänglig i sidesparläget (finns i gruppen **Sök**). Infoga komponenten i kolumnen **Predicates**.
+1. Om du vill göra komponenten tillgänglig måste du kunna redigera den. Gör en komponent redigerbar genom att lägga till en nod i CRXDE `cq:editConfig` av primär typ `cq:EditConfig`. Du kan ta bort stycken genom att lägga till en egenskap med flera värden `cq:actions` med ett enda värde på `DELETE`.
+1. Navigera till webbläsaren och till exempelsidan (till exempel `press.html`) växla till designläge och aktivera den nya komponenten för det prediktiva styckesystemet (till exempel **vänster**).
+1. I **Redigera** läge, den nya komponenten är nu tillgänglig i sidledaren (finns i **Sök** grupp). Infoga komponenten i **Predikat** kolumn.
 
 ### Installerade prediktiva widgetar {#installed-predicate-widgets}
 
@@ -262,7 +266,7 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
 | predikateName | Sträng | Predikatets namn. Standardvärdet är `fulltext` |
-| searchCallback |  -funktion | Återanrop för att utlösa sökning vid händelse `keyup`. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
+| searchCallback |  -funktion | Återanrop för att aktivera sökning vid händelse `keyup`. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
@@ -279,7 +283,7 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 | predikateName | Sträng | Predikatets namn. Standardvärdet är `path` |
 | rootPath | Sträng | Predikatets rotsökväg. Standardvärdet är `/content/dam` |
 | pathFieldPredicateName | Sträng | Standardvärdet är `folder` |
-| showFlatOption | Boolesk | Flagga som visar kryssrutan `search in subfolders`. Standardvärdet är true. |
+| showFlatOption | Boolean | Flagga som visar kryssrutan `search in subfolders`. Standardvärdet är true. |
 
 ### DatePredicate {#datepredicate}
 
@@ -297,12 +301,12 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 | predikateName | Sträng | Predikatets namn. Standardvärdet är `daterange` |
 | egenskapsnamn | Sträng | Namn på JCR-egenskapen. Standardvärdet är `jcr:content/metadata/cq:tags` |
 | komprimera | Sträng | Komprimera nivå. Standardvärdet är `level1` |
-| triggerSearch | Boolesk | Flagga för att utlösa sökning vid kontroll. Standardvärdet är false |
+| triggerSearch | Boolean | Flagga för att utlösa sökning vid kontroll. Standardvärdet är false |
 | searchCallback |  -funktion | Återanrop för att utlösa sökning. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
 | searchTimeoutTime | Siffra | Timeout innan searchCallback aktiveras. Standardvärdet är 800 ms |
 
 ## Anpassa sökresultat {#customizing-search-results}
 
-Presentationen av sökresultaten på en resursdelningssida styrs av det valda objektivet. [!DNL Experience Manager] Resurser innehåller en uppsättning fördefinierade objektiv som kan användas för att anpassa en resursdelssida. Att anpassa en resurs på det här sättet beskrivs i [Skapa och konfigurera en resursdelssida](assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
+Presentationen av sökresultaten på en resursdelningssida styrs av det valda objektivet. [!DNL Experience Manager] Resurser innehåller en uppsättning fördefinierade objektiv som kan användas för att anpassa en resursdelssida. Att anpassa en resurs på det här sättet beskrivs i [Skapa och konfigurera en resursdelningssida](assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
 
-Förutom att använda befintliga linser kan [!DNL Experience Manager]-utvecklare även skapa egna linser.
+Förutom att använda befintliga linser, [!DNL Experience Manager] utvecklare kan också skapa egna objektiv.

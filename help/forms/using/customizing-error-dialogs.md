@@ -1,29 +1,32 @@
 ---
 title: Anpassa feldialogrutor
-seo-title: Anpassa feldialogrutor
+seo-title: Customizing error dialogs
 description: Anpassa feldialogrutorna på arbetsytan i LiveCycle AEM Forms för att lägga till olika felbeskrivningar.
-seo-description: Anpassa feldialogrutorna på arbetsytan i LiveCycle AEM Forms för att lägga till olika felbeskrivningar.
+seo-description: How-to customize the error dialogs of LiveCycle AEM Forms workspace to add different fault descriptions.
 uuid: 5ed1da68-bd5b-4a36-9a14-9d61733237e6
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: f547c0c1-3917-4092-9d63-c1b3aaefcef0
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: e45f7f79-a5c3-439c-bf6c-7b14590cd3fc
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '184'
 ht-degree: 1%
 
 ---
 
-
 # Anpassa feldialogrutor {#customizing-error-dialogs}
 
-Med AEM Forms arbetsyta kan du anpassa feldialogrutor. Utför de allmänna [stegen för anpassning av arbetsytan i AEM Forms](/help/forms/using/generic-steps-html-workspace-customization.md) följt av stegen nedan för att anpassa feldialogrutorna.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+Med AEM Forms arbetsyta kan du anpassa feldialogrutor. Utför [Allmänna steg för anpassning av AEM Forms arbetsyta](/help/forms/using/generic-steps-html-workspace-customization.md) följt av stegen nedan för att anpassa feldialogrutor.
 
 ## Anpassa text {#customizing-text}
 
-1. I filen `/apps/ws/locales/en-US/translation.json` ändrar du värdena för `wserror` till de anpassade värdena. Till exempel:
+1. I `/apps/ws/locales/en-US/translation.json` fil, ändra värdena för `wserror` till de anpassade värdena. Till exempel:
 
    ```
    "wserror" : {
@@ -50,7 +53,7 @@ Med AEM Forms arbetsyta kan du anpassa feldialogrutor. Utför de allmänna [steg
 
 ## Anpassa CSS {#customizing-css}
 
-1. Du kan uppdatera dialogruta, rubrik, innehållsområde, fotstreck, fotfältsknappar och andra kollateraler genom att lägga till följande kodutdrag i `/apps/ws/css/newStyle.css`-filen:
+1. Du kan uppdatera dialogruta, rubrik, innehållsområde, fotstangent, fotfältsknappar och andra kollaterala genom att lägga till följande utdrag i dialogrutan `/apps/ws/css/newStyle.css` fil:
 
    ```css
    /*-------- Error Dialog -------------------------------------------------------------------------------------------------------------------*/
@@ -185,7 +188,7 @@ Med AEM Forms arbetsyta kan du anpassa feldialogrutor. Utför de allmänna [steg
    }
    ```
 
-1. Avgränsa knappintervallen `.error-dialog` och `.foot-bar` för fotfältets knappintervall från den sammansatta listan. Om du vill göra den här ändringen lägger du till följande i filen newStyle.css:
+1. Avgränsa `.error-dialog` och `.foot-bar` i den sammansatta listan. Om du vill göra den här ändringen lägger du till följande i filen newStyle.css:
 
    ```css
    .browse-btn span, .attachementbtn span, .cancelAttachmentUpdate span, #taskAttachmentsContainer .uploadStatus span, .submitNoteButton span, .updateNoteButton span, .cancelNoteUpdate span,

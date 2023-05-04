@@ -1,8 +1,8 @@
 ---
 title: Modereringskonsol
-seo-title: Modereringskonsol
+seo-title: Moderation Console
 description: Åtkomst till modereringskonsolen
-seo-description: Åtkomst till modereringskonsolen
+seo-description: How to access the Moderation console
 uuid: 920124b9-af6f-4622-adb6-b8e294c5607d
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -11,24 +11,28 @@ content-type: reference
 discoiquuid: 6c405543-e339-4916-aa0f-b61d0b798cf3
 role: Admin
 exl-id: ded38cee-fbce-46cc-974f-38d3a293a55d
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1851'
+source-wordcount: '1879'
 ht-degree: 1%
 
 ---
 
 # Modereringskonsol {#moderation-console}
 
-I AEM Communities går det att moderera [communityinnehåll](moderate-ugc.md) satsvis både från författar- och publiceringsmiljöer av administratörer och community-moderatorer (betrodda communitymedlemmar tilldelade som moderatorer).
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+I AEM Communities: bulk [moderering av communityinnehåll](moderate-ugc.md) är möjligt både från författaren och publiceringsmiljöer av administratörer och community moderators (betrodda communitymedlemmar som tilldelats som moderatorer).
 
 Administratörer och community-moderatorer kan även utföra [sammanhangsbaserad moderering](in-context.md) i publiceringsmiljön.
 
-En funktion för alla [communitywebbplatser](sites-console.md) är ett `Administration`menyalternativ som är tillgängligt för användare som loggar in med administratörsbehörighet. Länken `Administration`ger åtkomst till modereringskonsolen.
+En funktion i alla [communitysajter](sites-console.md) är en `Administration`menyalternativ som är tillgängliga för användare som loggar in med administratörsbehörighet. The `Administration`-länken ger åtkomst till modereringskonsolen.
 
 Från modereringskonsolen har administratörer och moderatorer åtkomst till allt användargenererat innehåll (UGC) som de har behörighet att moderera. Om du tillåter att flera webbplatser modereras kan du visa inlägg på alla webbplatser eller filtrera efter utvalda communityplatser.
 
-Mer information finns på [Hantera användare och användargrupper](users.md).
+Mer detaljerad information finns på [Hantera användare och användargrupper](users.md).
 
 Moderationskonsolen har stöd för:
 * Utföra flera modereringsuppgifter samtidigt
@@ -36,7 +40,7 @@ Moderationskonsolen har stöd för:
 * Visa UGC-information
 * Visa information om UGC-författare
 
-Modereringsåtgärder kan endast utföras om du är inloggad som administratör, eller som medlem med ` [moderator permissions](in-context.md#identifyingtrustedmembers)`.
+Endast när du är inloggad som administratör eller som medlem med ` [moderator permissions](in-context.md#identifyingtrustedmembers)`kan modereringsuppgifter utföras.
 
 ## Publiceringsmiljöåtkomst {#publish-environment-access}
 
@@ -54,11 +58,11 @@ I författarmiljön kan du nå Kontrollen för moderering
 
 * Från global navigering: **[!UICONTROL Navigation > Communities > Moderation]**
 
-Modereringsåtgärder kan endast utföras om du är inloggad som administratör, eller som medlem med ` [moderator permissions](in-context.md#identifyingtrustedmembers)`. Det enda communityinnehåll som visas är det som den inloggade medlemmen får moderera.
+Endast när du är inloggad som administratör eller som medlem med ` [moderator permissions](in-context.md#identifyingtrustedmembers)`kan modereringsuppgifter utföras. Det enda communityinnehåll som visas är det som den inloggade medlemmen får moderera.
 
 >[!NOTE]
 >
->UGC från publiceringsmiljön visas bara för författaren om den valda SRP implementerar en gemensam butik. Som standard är exempelvis lagringen JSRP, som inte är en gemensam butik för författare och publicering. Se [Community Content Storage](working-with-srp.md).
+>UGC från publiceringsmiljön visas bara för författaren om den valda SRP implementerar en gemensam butik. Som standard är exempelvis lagringen JSRP, som inte är en gemensam butik för författare och publicering. Se [Community-innehåll](working-with-srp.md).
 
 ![moderationkonsoleförfattare](assets/moderationconsoleauthor.png)
 
@@ -78,7 +82,7 @@ Det övre navigeringsfältet är konstant för alla konsoler. Mer information fi
 
 Verktygsfältet, som finns under det övre navigeringsfältet, har följande växlingsknapp till vänster:
 
-* [Filtrera ](moderation.md#filter-rail) räls öppnar en räl som du kan välja vilka egenskaper som innehållet ska filtreras efter.
+* [Filterspår](moderation.md#filter-rail) öppnar en räl som gör det möjligt att välja vilka egenskaper som innehållet ska filtreras efter.
 
 Verktygsfältet, som finns under det övre navigeringsfältet, har följande växlingsknapp till vänster:
 
@@ -99,7 +103,7 @@ Innehållsområdet innehåller information för publicerad UGC:
 * Postens plats
 * När den bokförs
 * Antal svar i posten
-* [Känslighet ](moderate-ugc.md#sentiment) som är kopplad till posten
+* [Sentiment](moderate-ugc.md#sentiment) associerat med inlägget
 * Om det godkänns visas en bock
 * Om det finns en bifogad fil visas ett gem
 
@@ -113,11 +117,11 @@ Innehållsområdet innehåller information för publicerad UGC:
 
 Ikonen för sidopanelen öppnar filterlisten. Filtercirkeln, som visas till vänster om innehållsområdet, innehåller olika filter, som båda har en omedelbar effekt på den refererade UGC:n som visas i innehållsområdet.
 
-Filtren i varje kategori är **OR** uppdelade och filtren i olika kategorier är **AND** uppdelade.
+Filtren inom varje kategori är **ELLER** och filtren i olika kategorier är **OCH** tillsammans.
 
-Om du till exempel markerar både **Fråga** och **Svar**, kommer du att se innehåll som antingen är en **fråga** *eller* ett **svar**.
+Om du till exempel markerar båda **Fråga** och **Svar** kommer du att se innehåll som antingen **Fråga** *eller* en **Svar**.
 
-Om du däremot markerar **Fråga** och **Väntande**, visas endast innehåll som är en **fråga** och är **Väntande**.
+Om du markerar **Fråga** och **Väntande**, kommer du bara att se innehåll som **Fråga** och är **Väntande**.
 
 >[!NOTE]
 >
@@ -147,7 +151,7 @@ Webbplatsen begränsar den refererade UGC som visas till inlägg på valda commu
 
 >[!NOTE]
 >
->När en administratör öppnar konsolen för gruppmoderering visas alla referenser till UGC, inklusive webbplatser som inte skapats med guiden [Skapa plats](sites-console.md), till exempel Geometrixx.
+>När en administratör öppnar konsolen för gruppmoderering visas alla referenser till UGC, även webbplatser som inte skapats med [guide för att skapa webbplatser](sites-console.md), t.ex. Geometrixx.
 >
 >När gruppmodereringskonsolen öppnas vid publicering av en betrodd community-medlem visas endast referenser till UGC som skapats för communitywebbplatser som medlemmen har behörighet att moderera och kan filtreras med platsfiltret.
 
@@ -177,8 +181,8 @@ Så här lägger du till ytterligare resurser att filtrera:
 
 * På en författarinstans
 * Logga in som administratör
-* Öppna [webbkonsolen](http://localhost:4502/system/console/configMgr)
-* Sök efter `AEM Communities Moderation Dashboard Filters`
+* Öppna [Webbkonsol](http://localhost:4502/system/console/configMgr)
+* Sök `AEM Communities Moderation Dashboard Filters`
 * Välj konfigurationen som ska öppnas i redigeringsläge
 * Ange den ResourceType för en komponent som ska filtreras
    * Om du till exempel vill filtrera på de medföljande röstkomponenterna anger du:\
@@ -189,7 +193,7 @@ Så här lägger du till ytterligare resurser att filtrera:
 * Välj Spara
 * Uppdatera webbgrupperna - modereringskonsolen
 
-Resultatet är ett nytt valbart filter för `Voting`under filtergruppen `Content Type`.
+Resultatet är ett nytt valbart filter för `Voting`under `Content Type` filtergrupp.
 
 När det filtret är markerat visar kontrollpanelens innehåll UGC som matchar någon av de ResourceTypes som har angetts.
 
@@ -207,7 +211,7 @@ Status begränsar den refererade UGC:n som visas till inlägg med den valda stat
 
 Flaggning begränsar det refererade användargenererat innehåll som visas till inlägg som är flaggade eller dolda.
 
-När ett innehåll har flaggats förblir det flaggat tills du bryter flaggan för det enskilda innehållet genom att markera **[!UICONTROL Flag]**-knappen en gång till. Observera att det inte finns några flaggningsnivåer, som important eller följup.
+När ett innehåll har flaggats förblir det flaggat tills du bryter flaggan för det enskilda innehållet genom att markera **[!UICONTROL Flag]** igen. Observera att det inte finns några flaggningsnivåer, som important eller följup.
 
 ![chlimage_1-476](assets/chlimage_1-476.png)
 
@@ -225,21 +229,21 @@ Bokförd i sista begränsa hur den refererade UGC:n visas för inlägg gjorda i 
 
 #### Sentiment {#sentiment}
 
-[](moderate-ugc.md#sentiment) Sentimentbegränsar den refererade UGC-enheten som visas till inlägg med ett känslomässigt värde som är antingen positivt, negativt eller neutralt.
+[Sentiment](moderate-ugc.md#sentiment) begränsar den refererade UGC som visas till inlägg med ett känslomässigt värde som är antingen positivt, negativt eller neutralt.
 
 ![chlimage_1-479](assets/chlimage_1-479.png)
 
 ## Modereringsåtgärder {#moderation-actions}
 
-[Modereringsåtgärder ](moderate-ugc.md#moderation-actions) kan utföras på en eller flera markeringar som gjorts i innehållsområdet eller när du visar innehållsdetaljer.
+[Modereringsåtgärder](moderate-ugc.md#moderation-actions) kan utföras på en eller flera markeringar som gjorts i innehållsområdet eller när du visar innehållsdetaljer.
 
-Om du vill moderera inläggen i stor skala klickar du i innehållsområdet på ikonen Markera ( ![markering](assets/selecticon.png)) på ett inlägg, som visas när du håller muspekaren över det (skrivbordet) eller trycker på och håller ett finger på inlägget (mobilen). Genom att göra detta aktiverar du flervalsläget och kan nu välja de efterföljande inlägg som ska gruppmodereras genom att klicka på dem. Använd de knappar som visas i verktygsfältet för att utföra modereringsåtgärder för de valda inläggen. Alla åtgärder uppmanas att bekräfta.
+Om du vill moderera inläggen i stor skala klickar du på Välj ( ![selecticon](assets/selecticon.png)) på ett inlägg, som visas när du hovrar över det med musen (skrivbordet) eller när du trycker och håller ett finger på inlägget (mobilen). Genom att göra detta aktiverar du flervalsläget och kan nu välja de efterföljande inlägg som ska gruppmodereras genom att klicka på dem. Använd de knappar som visas i verktygsfältet för att utföra modereringsåtgärder för de valda inläggen. Alla åtgärder uppmanas att bekräfta.
 
 Om du vill ändra ett inlägg i innehållsområdet till en viss nivå håller du pekaren över det med musen (skrivbordet) eller trycker och håller ned ett finger på posten (mobilen) så att knapparna visas på posten. När du arbetar med en enskild innehållsdetalj uppmanas du bara att bekräfta borttagningsåtgärden.
 
 ### Moderering av flera inlägg {#moderating-multiple-posts}
 
-Ange läget för gruppval genom att klicka på ikonen `Select` för ett inlägg:
+Ange gruppmarkeringsläget genom att klicka på `Select` ikon i ett inlägg:
 
 ![select-icon](assets/select-icon.png)
 
@@ -294,7 +298,7 @@ När du arbetar med ett enstaka inlägg visas ikonen Tillåt när inlägget anti
 
 ![chlimage_1-482](assets/chlimage_1-482.png)
 
-Modereringsåtgärden **Neka** är bara tillgänglig för innehåll som är modererat och visas inte för omodererat innehåll förutom i flervalsläge.
+The **Neka** modereringsåtgärden är bara tillgänglig för innehåll som är modererat och inte visas på omodererat innehåll förutom i flervalsläge.
 
 Innehåll som inte är modererat godkänns alltid.
 
@@ -332,7 +336,7 @@ Till exempel:
 
 När du arbetar med ett enstaka inlägg kan du visa mer information genom att öppna UGC i detaljerat läge.
 
-Om du vill göra det för du markören över inlägget för att visa ikonen `View Detail` och markerar det för att visa en panel med mer information om inlägget.
+Om du vill göra det håller du pekaren över inlägget för att visa `View Detail` och markera den för att visa en panel med mer information om inlägget.
 
 Om du vill återgå till visning av flera UGC-inlägg i innehållsområdet markerar du X:et i det övre högra hörnet av rutan med vydetaljer.
 

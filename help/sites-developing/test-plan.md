@@ -1,24 +1,27 @@
 ---
 title: Kompilera testplanen
-seo-title: Kompilera testplanen
+seo-title: Compiling your Test Plan
 description: De enskilda testfallen samlas i din testplan
-seo-description: De enskilda testfallen samlas i din testplan
+seo-description: The individual test cases are amalgamated into your Test Plan
 uuid: 99822b02-7b75-422d-ae21-16c4af742567
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: testing
 content-type: reference
 discoiquuid: 3a8302e8-bc61-402c-a9f2-5db3dfa6dd6d
-translation-type: tm+mt
-source-git-commit: d6c10927d437cfc9371e4baeff5a91ed9a0503c8
+exl-id: 913e1fee-b071-4152-94c3-dd7b8900e5ed
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
 
-
 # Kompilera testplanen{#compiling-your-test-plan}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 De enskilda testfallen sammanförs sedan i din testplan, som också kommer att definiera:
 

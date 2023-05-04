@@ -8,14 +8,18 @@ discoiquuid: a5aab094-8b2d-4a23-890f-be6f9e5137bd
 feature: Tagging,Metadata,Smart Tags
 role: User
 exl-id: 14241f8d-fd0b-4bcf-b2bb-1d0e52bf7748
-source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 12%
+source-wordcount: '491'
+ht-degree: 11%
 
 ---
 
 # Riktlinjer för utbildning i smarta innehållstjänster {#smart-content-service-training-guidelines}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 För att effektivt märka upp varumärkesbilderna kräver Smart Content Service att utbildningsbilderna följer vissa riktlinjer.
 
@@ -31,15 +35,15 @@ Det är till exempel ingen bra idé att tagga alla dessa bilder som *min grupp* 
 
 ![Illustrativa bilder som exempel på riktlinjer för utbildning](assets/do-not-localize/coherence.png)
 
-**Täckning**: Det ska finnas tillräckligt med variation i bilderna i utbildningen. Tanken är att ge några exempel som är ganska olika, men som ändå är ganska olika, så att [!DNL Experience Manager] lär sig att fokusera på rätt saker. Om du använder samma tagg på bilder som ser olika ut bör du ta med minst fem exempel av varje typ.
+**Täckning**: Det ska finnas tillräckligt med variation i bilderna i utbildningen. Tanken är att ge några men relativt olika exempel så att [!DNL Experience Manager] lär sig att fokusera på rätt saker. Om du använder samma tagg på bilder som ser olika ut bör du ta med minst fem exempel av varje typ.
 
-För taggen *model-down-pose* kan du t.ex. inkludera fler utbildningsbilder som liknar den markerade bilden nedan för att tjänsten ska kunna identifiera liknande bilder mer exakt under taggningen.
+För taggen *model-down-pose* innehåller du fler utbildningsbilder som liknar den markerade bilden nedan för att tjänsten ska kunna identifiera liknande bilder mer exakt under taggningen.
 
 ![Illustrativa bilder som exempel på riktlinjer för utbildning](assets/do-not-localize/coverage_1.png)
 
 **Distraktion/obstruktion**: Tjänsten tränar bättre på bilder som inte är så distraherande (framträdande bakgrunder, icke-relaterade komponenter, t.ex. objekt/personer med huvudmotivet).
 
-För taggen *casual-shoe* är den andra bilden till exempel inte en bra träningskandidat.
+För taggen *semester*&#x200B;är den andra bilden inte en bra träningskandidat.
 
 ![Illustrativa bilder som exempel på riktlinjer för utbildning](assets/do-not-localize/distraction.png)
 
@@ -53,7 +57,7 @@ Förbättrade smarta taggar bygger på utbildningsmodeller för varumärkesbilde
 
 * Oförmåga att identifiera små skillnader i bilder. Till exempel tunna eller jämna skjortor.
 * Oförmåga att identifiera taggar baserat på små mönster/delar av en bild. Till exempel logotyper på T-shirts.
-* Taggning stöds i de språkområden som [!DNL Experience Manager] stöds i. En lista över språk finns i [Versionsinformation för Smart Content Services](/help/release-notes/smart-content-service-release-notes.md).
+* Taggning stöds i de språkområden som [!DNL Experience Manager] stöds i. En lista med språk finns på [Versionsinformation för Smart Content Services](/help/release-notes/smart-content-service-release-notes.md).
 
 Om du vill söka efter resurser med smarta taggar (vanliga eller förbättrade) använder du Omni-search för resurser (fulltextsökning). Det finns inget separat sökpredikat för smarta taggar.
 

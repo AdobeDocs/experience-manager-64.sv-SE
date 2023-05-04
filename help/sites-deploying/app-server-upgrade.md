@@ -1,8 +1,8 @@
 ---
 title: Uppgradera steg för programserverinstallationer
-seo-title: Uppgradera steg för programserverinstallationer
+seo-title: Upgrade Steps for Application Server Installations
 description: Lär dig hur du uppgraderar instanser av AEM som distribueras via programservrar.
-seo-description: Lär dig hur du uppgraderar instanser av AEM som distribueras via programservrar.
+seo-description: Learn how to upgrade instances of AEM that are deployed via Application Servers.
 uuid: df3fa715-af4b-4c81-b2c5-130fbc82f395
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,22 +10,25 @@ topic-tags: upgrading
 content-type: reference
 discoiquuid: c427c8b6-eb94-45fa-908f-c3d5a337427d
 feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 1c72093e-82c8-49ad-bd3c-d61904aaab28
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
 
-
 # Uppgradera steg för programserverinstallationer{#upgrade-steps-for-application-server-installations}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 I det här avsnittet beskrivs den procedur som måste följas för att uppdatera AEM för programserverinstallationer.
 
-I alla exemplen i den här proceduren används JBoss som Application Server och du antyder att du har en fungerande version av AEM redan distribuerad. Proceduren är avsedd att dokumentera uppgraderingar som utförts från **AEM version 5.6 till 6.3**.
+I alla exemplen i den här proceduren används JBoss som Application Server och du antyder att du har en fungerande version av AEM redan distribuerad. Proceduren är avsedd att dokumentera uppgraderingar som gjorts från **AEM version 5.6 till 6.3**.
 
-1. Börja med JBoss. I de flesta fall kan du göra detta genom att köra startskriptet `standalone.sh` genom att köra det här kommandot från terminalen:
+1. Börja med JBoss. I de flesta fall kan du göra detta genom att köra `standalone.sh` startskript genom att köra det här kommandot från terminalen:
 
    ```shell
    jboss-install-folder/bin/standalone.sh
@@ -71,9 +74,9 @@ I alla exemplen i den här proceduren används JBoss som Application Server och 
 
 1. Ta bort filer och mappar som inte längre behövs. De objekt du behöver ta bort är:
 
-   * Mappen **launchpad/startup**. Du kan ta bort den genom att köra följande kommando i terminalen: `rm -rf crx-quickstart/launchpad/startup`
-   * Filen **base.jar**: `find crx-quickstart/launchpad -type f -name "org.apache.sling.launchpad.base.jar*" -exec rm -f {} \`
-   * Filen **BootstrapCommandFile_timestamp.txt**: `rm -f crx-quickstart/launchpad/felix/bundle0/BootstrapCommandFile_timestamp.txt`
+   * The **startplatta/startmapp**. Du kan ta bort den genom att köra följande kommando i terminalen: `rm -rf crx-quickstart/launchpad/startup`
+   * The **base.jar-fil**: `find crx-quickstart/launchpad -type f -name "org.apache.sling.launchpad.base.jar*" -exec rm -f {} \`
+   * The **BootstrapCommandFile_timestamp.txt, fil**: `rm -f crx-quickstart/launchpad/felix/bundle0/BootstrapCommandFile_timestamp.txt`
 
 1. Kopiera det nyligen migrerade segmentlagret till rätt plats:
 
@@ -116,13 +119,13 @@ I alla exemplen i den här proceduren används JBoss som Application Server och 
    find crx-quickstart/launchpad -type f -name "sling.options.file" -exec rm -rf {} \
    ```
 
-1. Nu måste du ändra körningslägena i AEM 6.3-filen. För att göra det skapar du först en tillfällig mapp som ska rymma AEM 6.3-kriget. Namnet på mappen i det här exemplet är **temp**. När krigsfilen har kopierats kan du extrahera innehållet genom att köra det inifrån den tillfälliga mappen:
+1. Nu måste du ändra körningslägena i AEM 6.3-filen. För att göra det skapar du först en tillfällig mapp som ska rymma AEM 6.3-kriget. Namnet på mappen i det här exemplet blir **temp**. När krigsfilen har kopierats kan du extrahera innehållet genom att köra det inifrån den tillfälliga mappen:
 
    ```shell
    jar xvf aem-quickstart-6.3.0.war
    ```
 
-1. När innehållet har extraherats går du till mappen **WEB-INF** och redigerar filen `web.xml` och ändrar körningslägena. Om du vill hitta platsen där de anges i XML söker du efter strängen `sling.run.modes`. När du har hittat den ändrar du körningslägena i nästa kodrad, som som standard är inställd på författare:
+1. När innehållet har extraherats går du till **WEB-INF** och redigera `web.xml` om du vill ändra körningslägena. Om du vill hitta den plats där de finns i XML-filen söker du efter `sling.run.modes` sträng. När du har hittat den ändrar du körningslägena i nästa kodrad, som som standard är inställd på författare:
 
    ```shell
    <param-value >author</param-value>
@@ -150,4 +153,3 @@ I alla exemplen i den här proceduren används JBoss som Application Server och 
    ```shell
    cp temp/aem62.war jboss-install-folder/standalone/deployments/aem61.war
    ```
-

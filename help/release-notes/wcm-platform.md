@@ -2,25 +2,28 @@
 title: AEM Foundation & Repository
 seo-title: AEM Foundation & Repository
 description: Versionsinformation om Adobe Experience Manager 6.3 AEM Platform och Repository.
-seo-description: Versionsinformation om Adobe Experience Manager 6.3 AEM Platform och Repository.
+seo-description: Release notes specific to Adobe Experience Manager 6.3 AEM Platform and Repository.
 uuid: 147b38d0-cf87-467c-a52d-3399d4af7e6e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 content-type: reference
 discoiquuid: e5dd9d0d-6d67-4430-aeb3-2be91356f624
-translation-type: tm+mt
-source-git-commit: 966263cc94f44bcad76e7e9ba5c6ecdc93574348
+exl-id: 6f131247-d35e-4298-958f-35b94ff08c58
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '733'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
 
-
 # AEM Foundation &amp; Repository {#aem-foundation-repository}
 
-## Lista över ändringar {#list-of-changes}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+## Ändringslista {#list-of-changes}
 
 ### Databas {#repository}
 
@@ -40,10 +43,8 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->* Den nya versionen av Oak Segment-taggen som finns sedan AEM 6.3 kräver en databasmigrering. Det här steget är obligatoriskt om du uppgraderar från en äldre version av tarMK eller vill växla den nya segmenttaggen från en annan typ av beständighet. Mer information om fördelarna med de nya segmenttjärna finns i [Vanliga frågor och svar om migrering till Oak Segment-tjära](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar).
-
+>* Den nya versionen av Oak Segment-taggen som finns sedan AEM 6.3 kräver en databasmigrering. Det här steget är obligatoriskt om du uppgraderar från en äldre version av tarMK eller vill växla den nya segmenttaggen från en annan typ av beständighet. Mer information om fördelarna med den nya segmenttaggen finns i [Migrering till Oak Segment tar - frågor och svar](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar).
 >
-
 
 
 ### Sökning och indexering {#search-amp-indexing}
@@ -72,10 +73,8 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->* Adobe planerar inte att göra fler förbättringar av det klassiska användargränssnittet. AEM 6.4 har det klassiska användargränssnittet och kunder som uppgraderar från tidigare versioner kan fortsätta använda det som det är. Observera att Classic UI fortfarande stöds fullt ut när [Läs mer](/help/sites-deploying/ui-recommendations.md) är föråldrat.
-
+>* Adobe planerar inte att göra fler förbättringar av det klassiska användargränssnittet. AEM 6.4 har det klassiska användargränssnittet och kunder som uppgraderar från tidigare versioner kan fortsätta använda det som det är. Observera att Classic UI fortfarande stöds fullt ut när det är föråldrat [Läs mer](/help/sites-deploying/ui-recommendations.md).
 >
-
 
 
 ### Innehållsdistribution {#content-distribution}
@@ -114,7 +113,7 @@ ht-degree: 0%
 * Utvärdering av komplexitet för uppgradering: Det nya mönsterdetektorverktyget som du kan använda för att bedöma hur komplexa dina uppgraderingar är.
 * Hållbara uppgraderingar: API-gränssnitt och innehållsklassificering introducerades för att hjälpa er att enkelt följa bästa praxis för en effektiv och sömlös uppgradering till nästa version under hela utvecklingscykeln.
 * Omstrukturering av lager: Betydande omstrukturering (främst /etc) för att underlätta enklare uppgraderingar och främja bästa praxis för implementering. [Läs mer.](/help/sites-deploying/repository-restructuring.md)
-* Mer information om dessa funktioner finns i [Uppgraderingsdokumentationen](/help/sites-deploying/upgrade.md).
+* Se [Uppgraderingsdokumentation](/help/sites-deploying/upgrade.md) för mer information om dessa funktioner.
 
 ### Cloud Services {#cloud-services}
 
@@ -130,4 +129,3 @@ ht-degree: 0%
 
 * Touch UI-baserad arbetsflödesredigerare för att hantera arbetsflödesmodeller på ett effektivare sätt.
 * Stöd för rensning av projektaktiviteter i underhållsuppgifter.
-

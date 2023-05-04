@@ -1,8 +1,8 @@
 ---
 title: Lista över föråldrade paket som avinstallerats efter uppgraderingen
-seo-title: Lista över föråldrade paket som avinstallerats efter uppgraderingen
+seo-title: List of Obsolete Bundles Uninstalled After the Upgrade
 description: En lista över de paket som automatiskt avinstalleras vid uppgradering till AEM 6.3.
-seo-description: En lista över de paket som automatiskt avinstalleras vid uppgradering till AEM 6.3.
+seo-description: A list detailing the bundles that are automatically uninstalled when upgrading to AEM 6.3.
 uuid: b015e857-31c1-4982-b71c-f3201b49ec8e
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,22 +10,25 @@ topic-tags: upgrading
 content-type: reference
 discoiquuid: 797a6f3b-d2a8-4835-81ab-a1602677417f
 feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 0f075a01-f286-4e16-9061-4e902c553eb9
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
 
-
 # Lista över föråldrade paket som avinstallerats efter uppgraderingen{#list-of-obsolete-bundles-uninstalled-after-the-upgrade}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
 >Om koden är beroende av dessa paket ska du kontakta Adobe Support och be om ett kompatibilitetspaket för det drabbade området.
 
-När du uppgraderar till AEM 6.3 avinstalleras följande paket automatiskt beroende på vilken AEM uppgraderingen gjordes:
+När du uppgraderar till AEM 6.3 avinstalleras följande paket automatiskt, beroende på vilken AEM uppgraderingen gjordes:
 
 **AEM 6.1:**
 
@@ -68,4 +71,3 @@ När du uppgraderar till AEM 6.3 avinstalleras följande paket automatiskt beroe
 * com.day.cq.cq-pinauthhandler, version 1.0.0, Active
 * com.day.cq.dam.commons.nekohtml, version 0.9.5, Active
 * com.day.crx.crxde-support, version 2.3.14, installerad
-

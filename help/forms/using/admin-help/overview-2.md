@@ -10,16 +10,20 @@ geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 986d16fc-4c81-4785-b1f3-fe8bd7ff669e
 exl-id: 4817d150-9bfe-4cb9-8f06-6ff4eaaa6f55
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
 
 # Grunderna för hantering av certifikat och autentiseringsuppgifter {#basics-of-managing-certificates-and-credentials}
 
-En *autentiseringsuppgift* innehåller den privata nyckelinformation som behövs för att signera eller identifiera dokument. Ett *certifikat* är information om offentlig nyckel som du konfigurerar för förtroende. AEM använder certifikat och autentiseringsuppgifter för flera syften:
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+A *autentiseringsuppgifter* innehåller den privata nyckelinformation som behövs för att signera eller identifiera dokument. A *certifikat* är information om offentlig nyckel som du konfigurerar för förtroende. AEM använder certifikat och autentiseringsuppgifter för flera syften:
 
 * Acrobat Reader DC-tillägg använder en autentiseringsuppgift för att aktivera Adobe Reader användarrättigheter i PDF-dokument. (Se [Konfigurera autentiseringsuppgifter för användning med Acrobat Reader DC-tillägg](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions).)
 * Du kan konfigurera Rights Management så att autentiseringsuppgifter endast visas för användning i Acrobat från betrodda utfärdare. (Se [Konfigurera visningsinställningar för Rights Management](/help/forms/using/admin-help/configuring-client-server-options.md#configure-document-security-display-settings).) Det allmänna namnet (CN) måste finnas i certifikatet.

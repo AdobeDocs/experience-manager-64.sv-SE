@@ -1,24 +1,27 @@
 ---
 title: Innehållsegenskaper och noder
-seo-title: Innehållsegenskaper och noder
-description: 'Följ den här sidan om du vill veta mer om innehållsegenskaper och noder.  '
-seo-description: 'Följ den här sidan om du vill veta mer om innehållsegenskaper och noder.  '
+seo-title: Content Properties and Nodes
+description: Följ den här sidan om du vill veta mer om innehållsegenskaper och noder.
+seo-description: Follow this page to learn about content properties and nodes.
 uuid: 2dad52c8-5b6c-4b90-8498-62217a9a27fc
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: f5721ddc-df5c-496c-be61-38d1cab63ad4
-translation-type: tm+mt
-source-git-commit: 3b26eacff87d3ce84cf5db6133b44c955055c737
+exl-id: 85a367fe-a124-42af-ae3e-fe4d10425ea1
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 11%
+source-wordcount: '391'
+ht-degree: 1%
 
 ---
 
-
 # Innehållsegenskaper och noder {#content-properties-and-nodes}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
@@ -37,7 +40,7 @@ I följande tabeller beskrivs innehållsegenskaperna och noderna.
 | dps-id | Sträng |  | som tilldelats av AEM Mobile och lagras av AEM när de överförts till AEM Mobile eller importerats från AEM Mobile |
 | dps-resourceType | Sträng | dps:artikel | dps:Banner | dps:Samling | entitetstyp, egenskap |
 | dps-version | Sträng |  | version av AEM Mobile-enhet (ingår också i det fullständiga aemm-id:t) |
-| dps-lastSynced | Date |  | datum för senaste synkronisering/import från AEM Mobile till AEM |
+| dps-lastSynced | Datum |  | datum för senaste synkronisering/import från AEM Mobile till AEM |
 | dps-lastUploaded | Datum |  | datum för senaste överföring från AEM till AEM Mobile |
 | dps-lastUploadedBy | String:userid |  | ID-användare som utförde den senaste överföringsbegäran från AEM till AEM Mobile |
 
@@ -61,7 +64,7 @@ I följande tabeller beskrivs innehållsegenskaperna och noderna.
 |---|---|---|
 | dps-author | Sträng |  |
 | dps-authorURL | Sträng |  |
-| dps-hideFromBrowsePage | Boolesk |  |
+| dps-hideFromBrowsePage | Boolean |  |
 | dps-access | Sträng | ProtectedAccess från {&quot;protected&quot;, &quot;metered&quot;, &quot;free&quot;} |
 | **Social** |  |  |
 | dps-socialShareURL | Sträng |  |
@@ -81,14 +84,14 @@ I följande tabeller beskrivs innehållsegenskaperna och noderna.
 |--- |--- |--- |
 | dps-productId | Sträng |  |
 | dps-readingPosition | Sträng | från {&quot;reset&quot;,&quot;keep&quot;} |
-| dps-horizontalSwipe | Boolesk |  |
-| dps-allowDownload | Boolesk |  |
+| dps-horizontalSwipe | Boolean |  |
+| dps-allowDownload | Boolean |  |
 | dps-openDefault | Sträng | från {&quot;browsePage&quot;,&quot;contentView&quot;} |
 | dps-layout | Sträng |  |
 
 ## Innehållsnoder {#content-nodes}
 
-### Gemensamma noder {#common-nodes}
+### Vanliga noder {#common-nodes}
 
 | Nodnamn | Typ | Standardvärden eller förväntade värden | Beskrivning |
 |--- |--- |--- |--- |

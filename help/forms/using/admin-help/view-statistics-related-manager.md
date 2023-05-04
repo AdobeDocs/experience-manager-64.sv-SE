@@ -1,24 +1,27 @@
 ---
 title: Visa statistik för Work Manager
-seo-title: Visa statistik för Work Manager
+seo-title: View statistics related to Work Manager
 description: Fliken Arbetshanterare visar statistik som relaterar till Work Manager-objekt. Lär dig hur du kan visa och filtrera arbetsobjekten.
-seo-description: Fliken Arbetshanterare visar statistik som relaterar till Work Manager-objekt. Lär dig hur du kan visa och filtrera arbetsobjekten.
+seo-description: The Work Manager tab displays statistics that relate to Work Manager items. Learn how you can view and filter the work items.
 uuid: c3a575c7-773d-477a-bc75-6cbcf8b836b8
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/health_monitor
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 8e1b2f7c-2609-474b-a1b2-fa820df74ae3
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 642f5ee3-c991-4238-9b82-f0e19a6d8e2d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1249'
 ht-degree: 0%
 
 ---
 
-
 # Visa statistik för Work Manager {#view-statistics-related-to-work-manager}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Fliken Arbetshanterare visar statistik som relaterar till Work Manager-objekt. Dessa arbetsobjekt är i olika lägen beroende på var de befinner sig i processen. (Se [Status (endast för kategorierna Standard, Arbetsflöde och Händelser)](view-statistics-related-manager.md#status-for-default-workflow-or-events-categories-only).) Du kan filtrera informationen så att endast en delmängd av objekten visas genom att använda de olika alternativ som är tillgängliga (till exempel Status eller Kategori). Du kan sortera resulterande arbete eller jobbobjekt (i stigande eller fallande ordning) genom att klicka på en av kolumnrubrikerna. Du kan också hantera arbetsobjekten med de åtgärdsverktyg som visas ovanför listan med arbetsobjekt.
 
@@ -41,13 +44,13 @@ Fliken Arbetshanterare visar statistik som relaterar till Work Manager-objekt. D
 
 **Visa alla:** Visar alla aktuella arbetsobjekt.
 
-**Schemalagd:** Visar alla arbetsobjekt som kan köras av programservern men som inte har startats ännu.
+**Schemalagd:** Visar alla arbetsobjekt som är klara för körning av programservern men som ännu inte startats.
 
 **Pausad:** Visar alla schemalagda arbetsobjekt som klientprogrammet har pausat. Dessa objekt kan köras eller tas bort. (Se Hantera arbetsobjekt eller jobb.)
 
-**Pågår:** Visar alla arbetsobjekt som programserverns Work Manager har hämtat och som kommer att slutföras eller misslyckas. Du kan inte använda åtgärder för dessa arbetsobjekt.
+**Pågår:** Visar alla arbetsobjekt som programserverns Work Manager har hämtat och som antingen kommer att slutföras eller misslyckas. Du kan inte använda åtgärder för dessa arbetsobjekt.
 
-**Slutförd:** Visar alla arbetsobjekt som har körts. Beständiga arbetsobjekt behålls i det här läget och icke-beständiga objekt tas bort när återanrop till återanropshanterarna slutförs. Du kan ta bort dessa objekt genom att använda åtgärden Ta bort objekt. (Se Hantera arbetsobjekt eller jobb.)
+**Fullständigt:** Visar alla arbetsobjekt som har körts. Beständiga arbetsobjekt behålls i det här läget och icke-beständiga objekt tas bort när återanrop till återanropshanterarna slutförs. Du kan ta bort dessa objekt genom att använda åtgärden Ta bort objekt. (Se Hantera arbetsobjekt eller jobb.)
 
 **Misslyckades:** Visar alla arbetsobjekt som inte slutfördes korrekt på grund av ett feltillstånd. Du kan göra om de här arbetsobjekten några gånger genom att använda åtgärden Försök igen. (Se Hantera arbetsobjekt eller jobb.) En fellänk i statuskolumnen ger dig åtkomst till information om felet.
 
@@ -55,27 +58,27 @@ Fliken Arbetshanterare visar statistik som relaterar till Work Manager-objekt. D
 
 ### Status (endast för jobbhanterarkategorin) {#status-for-job-manager-category-only}
 
-**Slutfört:** Visar alla jobb som har slutförts. Beständiga arbetsobjekt behålls i det här läget och icke-beständiga objekt tas bort när återanrop till återanropshanterarna slutförs.
+**Slutförd:** Visar alla jobb som har slutförts. Beständiga arbetsobjekt behålls i det här läget och icke-beständiga objekt tas bort när återanrop till återanropshanterarna slutförs.
 
-**Slutförd begärd:** Visar jobb för vilka en fullständig begäran har gjorts.
+**Fullständigt begärt:** Visar jobb för vilka en fullständig begäran har gjorts.
 
-**Misslyckades begärd:** Visar jobb som har fått en misslyckad begäran.
+**Misslyckades:** Visar jobb för vilka en misslyckad begäran har gjorts.
 
 **Misslyckades:** Visar jobb som inte slutfördes korrekt på grund av ett feltillstånd. En fellänk i statuskolumnen ger dig åtkomst till information om felet.
 
 **Avsluta begärd:** Visar jobb för vilka en avslutningsbegäran har gjorts.
 
-**Avslutad:** Visar jobb som avslutades utan att slutföras.
+**Avbruten:** Visar jobb som avslutats utan att slutföras.
 
-**Pausa begärd:** Visar jobb som har pausats.
+**Begärt uppehåll:** Visar jobb för vilka en pausbegäran har gjorts.
 
-**Pausad:** Visar jobb som har pausats.
+**Avbruten:** Visar jobb som har pausats.
 
-**Återuppta begärd:** Visar jobb för vilka en CV-begäran gjordes.
+**Återuppta begärd:** Visar jobb för vilka en CV-begäran har gjorts.
 
 **Köad:** Visar jobb som finns i kön.
 
-**Kör:** Visar jobb som körs.
+**Körs:** Visar jobb som körs.
 
 ### Servernamn {#server-name}
 
@@ -93,15 +96,15 @@ Om du till exempel väljer Skapa tid = 1 dag och Föregående = Använd aktuellt
 
 >[!NOTE]
 >
->I Oracle-databasdistributioner fungerar datumintervallfilter (d.v.s. Skapa tid och Före inställningar) inte korrekt. Använd ett annat filter för att hämta arbetsobjekt.
+>Vid distribution av Oracle-databaser fungerar datumintervallfilter (d.v.s. Skapa tid och Före inställningar) inte korrekt. Använd ett annat filter för att hämta arbetsobjekt.
 
-## Om flikgränssnittet {#about-the-work-manager-tab-interface} i Arbetshanteraren
+## Om flikgränssnittet Arbetshanteraren {#about-the-work-manager-tab-interface}
 
 När du kör en arbetshanterarfråga eller utför en åtgärd på ett arbetsobjekt eller jobb visas ett meddelande ovanför listan. Det här meddelandet ger feedback om den åtgärd du har initierat och i vissa fall en länk till Mer information som ger information. Om den åtgärd du initierade till exempel misslyckades, anges så mycket som möjligt i meddelandet och en länk för att få information om felet.
 
 När du klickar på Mer information visas en lista med de arbetsobjekt eller jobb som valdes under åtgärden i dialogrutan Åtgärdsinformation. Du kan klicka på varje listobjekt för att visa felinformationen längst ned i dialogrutan.
 
-### Hantera arbetsobjekt eller jobb {#manage-the-work-items-or-jobs}
+### Hantera arbetsuppgifter {#manage-the-work-items-or-jobs}
 
 1. Använd åtgärdsverktygen som beskrivs nedan för att hantera arbetsobjekten eller jobben i listan.
 
@@ -109,7 +112,7 @@ När du klickar på Mer information visas en lista med de arbetsobjekt eller job
    >
    >Åtgärderna är tillgängliga beroende på objektets status.
 
-   **Ta bort objekt:** Tar bort det markerade arbetsobjektet eller jobbet.
+   **Ta bort objekt:** Tar bort den valda arbetsuppgiften eller jobbet.
 
    **Pausa objekt:** Pausar det markerade arbetsobjektet eller jobbet.
 

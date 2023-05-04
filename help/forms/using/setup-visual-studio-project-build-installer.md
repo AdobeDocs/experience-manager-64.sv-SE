@@ -9,14 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 85048fe4-ca1b-41fa-8e19-6eeb8dd09962
 exl-id: ae0463de-271f-47c0-b947-f6d149ded8ab
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '930'
 ht-degree: 0%
 
 ---
 
 # Konfigurera Visual Studio-projektet och bygg Windows-appen {#set-up-the-visual-studio-project-and-build-the-windows-app}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 AEM Forms tillhandahåller den fullständiga källkoden för AEM Forms-appen. Källan innehåller alla komponenter för att skapa ett anpassat arbetsyteprogram. Källkodsarkivet `adobe-lc-mobileworkspace-src-<version>.zip`är en del av `adobe-aemfd-forms-app-src-pkg-<version>.zip` paket om programvarudistribution.
 
@@ -85,11 +89,11 @@ Utför följande steg för att skapa och distribuera AEM Forms-program.
 
 1. I guiden Skapa appaket väljer du väder eller inte det väder som du vill överföra din app till Windows Store och klickar sedan på **Nästa**.
 
-   ![createapppackagesguide1](assets/createapppackageswizard1.png)
+   ![createapppackageswizard1](assets/createapppackageswizard1.png)
 
 1. Gör önskade ändringar i parametrarna, till exempel version och utdataplats för appbygget.
 
-   ![createapppackagesguide2](assets/createapppackageswizard2.png)
+   ![createapppackageswizard2](assets/createapppackageswizard2.png)
 
 1. När projektet har byggts kan du installera programmet med:
 

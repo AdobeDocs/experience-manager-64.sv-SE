@@ -1,23 +1,26 @@
 ---
 title: Skapa en ny inloggningsskärm
-seo-title: Skapa en ny inloggningsskärm
+seo-title: Creating a new login screen
 description: Så här ändrar du inloggningssidan för moduler i LiveCycle, till exempel AEM Forms Workspace eller Forms Manager.
-seo-description: Så här ändrar du inloggningssidan för moduler i LiveCycle, till exempel AEM Forms Workspace eller Forms Manager.
+seo-description: How-to modify the login page of LiveCycle modules, for example of AEM Forms workspace or Forms Manager.
 uuid: c7643f87-4a08-4c63-b87c-f987dbe18ece
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: cfaa6b49-3fd0-4c08-84a2-e86c7e7e3532
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: caa4f835-c353-49d5-b18c-4d0538c1136f
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 2%
+source-wordcount: '504'
+ht-degree: 1%
 
 ---
 
+# Skapa en ny inloggningsskärm {#creating-a-new-login-screen}
 
-# Skapar en ny inloggningsskärm {#creating-a-new-login-screen}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inloggningsskärmen för AEM Forms. Ändringarna påverkar till exempel inloggningsskärmen för både Forms Manager och AEM Forms.
 
@@ -26,32 +29,32 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
 1. Logga in på `/lc/crx/de` med administratörsbehörighet.
 1. Utför följande åtgärder:
 
-   1. Replikera den hierarkiska strukturen: av `/libs/livecycle/core/content` klockan `/apps/livecycle/core/content`. Behåll samma egenskaper (nod/mapp) och åtkomstkontroll.
+   1. Replikera den hierarkiska strukturen: av `/libs/livecycle/core/content` på `/apps/livecycle/core/content`. Behåll samma egenskaper (nod/mapp) och åtkomstkontroll.
    1. Kopiera innehållsmappen: från `/libs/livecycle/core` till `/apps/livecycle/core`.
-   1. Ta bort innehållet i mappen `/apps/livecycle/core`.
+   1. Ta bort innehållet i `/apps/livecycle/core` mapp.
 
 1. Utför följande åtgärder:
 
-   1. Replikera den hierarkiska strukturen: av `/libs/livecycle/core/components/login` klockan `/apps/livecycle/core/components/login`. Behåll samma egenskaper (nod/mapp) och åtkomstkontroll.
+   1. Replikera den hierarkiska strukturen: av `/libs/livecycle/core/components/login` på `/apps/livecycle/core/components/login`. Behåll samma egenskaper (nod/mapp) och åtkomstkontroll.
    1. Kopiera komponentmappen: från `/libs/livecycle/core` till `/apps/livecycle/core`.
    1. Ta bort innehållet i mappen: `/apps/livecycle/core/components/login`.
 
 ## Lägga till en ny språkinställning {#adding-a-new-locale}
 
-1. Kopiera mappen `i18n`:
+1. Kopiera `i18n` mapp:
 
    * från `/libs/livecycle/core/components/login`
    * till `/apps/livecycle/core/components/login`
 
-1. Ta bort alla mappar i `i18n` utom en, till exempel `en`.
-1. Utför följande åtgärder i mappen `en`:
+1. Ta bort alla mappar i `i18n` förutom en, säg `en`.
+1. I mappen `en`utför du följande åtgärder:
 
    1. Byt namn på mappen till det språknamn som du vill ha stöd för. Till exempel, `ar`.
-   1. Ändra värdet för egenskapen `jcr:language` till `ar`(för mappen `ar`).
+   1. Ändra egenskapen `jcr:language` värde till `ar`(för `ar` mapp).
 
    >[!NOTE]
    >
-   >Om språkinställningen är en kombination av språkkod, till exempel `ar-DZ`, ändrar du mappnamnet och egenskapsvärdet till `ar-DZ`.
+   >Om språkinställningen är en kombination av språkkoder, till exempel `ar-DZ`ändrar du sedan mappnamnet och egenskapsvärdet till `ar-DZ`.
 
 1. Kopiera `login.jsp`:
 
@@ -182,20 +185,20 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
 
 ## Lägga till ny text eller ändra befintlig text {#adding-new-text-or-modifying-existing-text}
 
-1. Kopiera `i18n`-mapp:
+1. Kopiera `i18n` mapp:
 
    * från `/libs/livecycle/core/components/login`
    * till `/apps/livecycle/core/components/login`
 
-1. Ändra nu värdet för egenskapen `sling:message` för noden (under den önskade språkkodsmappen) som du vill ändra texten för. Översättningen görs via den nyckel som anges i värdet för egenskapen `sling:key` för noden.
+1. Ändra nu värdet för egenskapen `sling:message` för noden (under den önskade språkkodsmappen) som du vill ändra texten för. Översättningen görs via nyckeln som anges i värdet av `sling:key` -egenskap för noden.
 1. Utför följande åtgärder om du vill lägga till ett nytt nyckelvärdepar. Markera ett exempel i skärmbilden som följer.
 
-   1. Skapa en nod av typen `sling:MessageEntry`, eller kopiera en befintlig nod och byt namn på den, under alla språkmappar.
+   1. Skapa en nod av typen `sling:MessageEntry`, eller kopiera en befintlig nod och ändra namn på den, under alla språkmappar.
    1. Kopiera `login.jsp` :
 
       * från `/libs/livecycle/core/components/login`
       * till `/apps/livecycle/core/components/login`
-   1. Ändra `/apps/livecycle/core/components/login/login.jsp` om du vill ta med den nya texten.
+   1. Ändra `/apps/livecycle/core/components/login/login.jsp` för att lägga till den nya texten.
 
    ![hämtning](assets/capture.png)
 
@@ -218,12 +221,12 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
 
 ## Lägga till ett nytt format eller ändra ett befintligt format {#adding-new-style-or-modifying-existing-style}
 
-1. Kopiera `login`-nod:
+1. Kopiera `login` nod:
 
    * från `/libs/livecycle/core/content`
    * till `/apps/livecycle/core/content`
 
-1. Ta bort filer `login.js` och `jquery-1.8.0.min.js` från noden `/apps/livecycle/core/content/login.`
+1. Ta bort filer `login.js` och `jquery-1.8.0.min.js`från noden `/apps/livecycle/core/content/login.`
 1. Ändra formaten i CSS-filen.
 1. Så här lägger du till nya format:
 
@@ -258,7 +261,7 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
 
 >[!NOTE]
 >
->Om de befintliga bilderna i `/apps/livecycle/core/content/login` (kopierade från `/libs/livecycle/core/content/login`) tas bort tar du bort motsvarande referenser i CSS.
+>Om de befintliga bilderna i `/apps/livecycle/core/content/login` (kopierad från `/libs/livecycle/core/content/login`) tas bort och därefter tas motsvarande referenser bort i CSS.
 
 ## Lägg till nya bilder {#add-new-images}
 
@@ -266,10 +269,10 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
 1. Lägg till nya bilder i `/apps/livecycle/core/content/login`. Så här lägger du till bild:
 
    1. Installera WebDAV-klienten.
-   1. Navigera till mappen `/apps/livecycle/core/content/login` med hjälp av webDAV-klienten. Mer information finns i: [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
+   1. Navigera till `/apps/livecycle/core/content/login` mapp med hjälp av webDAV-klienten. Mer information finns i: [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
    1. Lägg till nya bilder.
 
-1. Lägg till nya format i `/apps/livecycle/core/content/login/login.css,` som motsvarar nya bilder som lagts till i `/apps/livecycle/core/content/login`.
+1. Lägg till nya format i `/apps/livecycle/core/content/login/login.css,` motsvarar nya bilder som lagts till i `/apps/livecycle/core/content/login`.
 1. Använd de nya formaten i `login.jsp` på `/apps/livecycle/core/components`.
 1. Exempel:
 

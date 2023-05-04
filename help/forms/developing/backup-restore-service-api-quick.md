@@ -1,8 +1,8 @@
 ---
 title: APIQuick Starts för säkerhetskopiering och återställning
-seo-title: APIQuick Starts för säkerhetskopiering och återställning
+seo-title: Backup and Restore Service APIQuick Starts
 description: Använd API:t för säkerhetskopiering och återställning för att gå över till och lämna säkerhetskopieringsläget med Java API Quick Start.
-seo-description: Använd API:t för säkerhetskopiering och återställning för att gå över till och lämna säkerhetskopieringsläget med Java API Quick Start.
+seo-description: Use the Backup and Restore Service API to enter and leave backup mode using the Java API Quick Start.
 uuid: c3992be2-ceb4-480d-9c8f-71eb0ea66dde
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 813162be-dbf5-4dc1-80ff-e37dbc25ef60
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: b4fa018f-48a6-4991-9f80-d2d6e0b30555
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '285'
 ht-degree: 0%
 
 ---
 
-
 # Snabbstart för tjänst-API för säkerhetskopiering och återställning {#backup-and-restore-service-apiquick-starts}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Java API Quick Start (SOAP) är tillgängligt för API:t för säkerhetskopiering och återställning.
 
@@ -33,9 +36,9 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typade API och anslutning
 >
 >Snabbstarter i Programmering med AEM Forms är baserade på Forms operativsystem. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## Snabbstart (SOAP-läge): Gå in i säkerhetskopieringsläge med Java API {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}
+## Snabbstart (SOAP-läge): Ange säkerhetskopieringsläge med Java API {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}
 
-Följande Java-kodexempel försätts i säkerhetskopieringsläge med en unik etikett i två timmar. När säkerhetskopieringstiden har gått ut eller om säkerhetskopieringsläget uttryckligen har avslutats, återgår formulärservern till att rensa filer från den globala dokumentlagringen. (Se [Ange säkerhetskopieringsläge på formulärservern](/help/forms/developing/preparing-aem-forms-backup.md#entering-backup-mode-on-the-forms-server).)
+Följande Java-kodexempel försätts i säkerhetskopieringsläge med en unik etikett i två timmar. När säkerhetskopieringstiden har gått ut eller om säkerhetskopieringsläget uttryckligen har avslutats, återgår formulärservern till att rensa filer från den globala dokumentlagringen. (Se [Läget Säkerhetskopiera på formulärservern aktiveras](/help/forms/developing/preparing-aem-forms-backup.md#entering-backup-mode-on-the-forms-server).)
 
 ```as3
  /* 
@@ -151,7 +154,7 @@ Följande Java-kodexempel försätts i säkerhetskopieringsläge med en unik eti
 
 ## Snabbstart (SOAP-läge): Lämna säkerhetskopieringsläge med Java API {#quick-start-soap-mode-leaving-backup-mode-using-the-java-api}
 
-Följande Java-kodexempel gör att en Forms-server lämnar säkerhetskopieringsläget och återgår till att rensa filer från den globala dokumentlagringen. (Se [Lämna säkerhetskopieringsläge på formulärservern](/help/forms/developing/preparing-aem-forms-backup.md#leaving-backup-mode-on-the-forms-server).)
+Följande Java-kodexempel gör att en Forms-server lämnar säkerhetskopieringsläget och återgår till att rensa filer från den globala dokumentlagringen. (Se [Avslutar säkerhetskopieringsläge på formulärservern](/help/forms/developing/preparing-aem-forms-backup.md#leaving-backup-mode-on-the-forms-server).)
 
 ```as3
  /* 
@@ -253,4 +256,3 @@ Följande Java-kodexempel gör att en Forms-server lämnar säkerhetskopieringsl
  } 
  
 ```
-

@@ -1,24 +1,27 @@
 ---
 title: Personanpassning
-seo-title: Personanpassning
+seo-title: Personalization
 description: Läs om personalisering i AEM.
-seo-description: Läs om personalisering i AEM.
+seo-description: Learn about personalization in AEM.
 uuid: 5790a3e0-f0ec-4785-b915-330a10dea30c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: 03ebc494-8baa-4741-b8de-dac5ace743c8
-translation-type: tm+mt
-source-git-commit: e24f308c72c8ad4a6ac93efa74c8e63a4ded6700
+exl-id: 841f54da-962a-4fa7-a295-571e2178ed23
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1723'
 ht-degree: 0%
 
 ---
 
-
 # Personanpassning {#personalization}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Vad är personalisering? {#what-is-personalization}
 
@@ -45,7 +48,7 @@ Personaliseringen består av tre huvuddelar:
 
 Personalisering kan antingen vara:
 
-#### Specifik {#explicit}
+#### Explicit {#explicit}
 
 * Anpassning: där användaren gör val från ett urval av innehållskällor.
 
@@ -64,7 +67,7 @@ Personalisering kan användas i många fall, till exempel:
 * Innehåll kan erbjudas baserat på en användares plats, avdelning och/eller roll, som redan definierats i ett internt nätverk.
 * Beroende på vilket alternativ som är tillgängligt kan användaren göra fler val.
 
-#### Specifik, begränsad, målanvändargrupper - extranät {#extranets}
+#### Specifika, begränsade, målanvändargrupper - extranät {#extranets}
 
 * Användarna måste logga in för att kunna godkänna. Detta kommer att kopplas till en profil som tillhandahåller den information som krävs för personalisering. möjliga detaljer som plats, relation till produkten, användningshistorik, budgeteringsansvar osv.
 * Sådana instanser kan variera mellan webbplatser som:
@@ -101,14 +104,14 @@ Tänk på följande när du använder personalisering:
 
 * Personalisering kräver en inloggningsfunktion eftersom webbplatsen måste kunna identifiera användaren.
 
-#### Cachelagra {#caching}
+#### Cachelagring {#caching}
 
 * Cachelagring är en aspekt som användaren kommer att se när det gäller prestanda och precision - hur snabbt levererar webbplatsen personaliserat innehåll, och är det alltid aktuellt.
 * Cachelagring är en viktig faktor när personalisering konfigureras och man måste se till att rätt implementering används.
 
 >[!TIP]
 >
->Personaliseringens effekt på prestanda och relaterade cachelagringsämnen beskrivs närmare i dokumentet [Prestandaoptimering.](/help/sites-deploying/configuring-performance.md)
+>Personaliseringens effekt på prestanda och relaterade cachelagringsämnen diskuteras vidare i dokumentet [Prestandaoptimering.](/help/sites-deploying/configuring-performance.md)
 
 ##### Regelernas exakthet {#accuracy}
 
@@ -116,7 +119,7 @@ Tänk på följande när du använder personalisering:
 * Det finns inget mer frustrerande för användaren än att ha innehåll som tvingats på eller nekats till dem på grund av den felaktiga logiken i en regel.
 * Därför måste regler vara väl genomtänkta - med användarens krav i förgrunden. Detta kan kräva mycket arbete och ska inte underskattas. Att definiera affärsreglerna uppväger ofta den tekniska ansträngningen vid personalisering.
 
-#### Använd {#when-to-use}
+#### När ska användas {#when-to-use}
 
 * Precis som många andra funktioner på webben bör personalisering användas med försiktighet. Kommer användandet verkligen att gynna användaren? ska alltid vara det första övervägandet - eller om det önskade målet kan uppnås med mindre ansträngning med en annan metod. Personalisering kan innebära en risk att användaren konfigurerar en funktion (för att se hur den fungerar) och bara en gång - eftersom den inte ger några verkliga fördelar.
 * Personalisering är bara meningsfullt när innehållet är dynamiskt - beroende på användaren på något sätt. Om alla användare ser samma innehåll är personaliseringen överflödig.
@@ -170,9 +173,9 @@ Det finns olika komponenter med AEM för personalisering. Vissa tillåter använ
 
 ## Personalisering och communityinnehåll {#personalization-and-community-content}
 
-Community-funktioner som bloggar, forum och kalendrar resulterar i att användargenererat innehåll skapas, vilket ofta kallas användargenererat innehåll (UGC). När UGC anges i en publiceringsmiljö som består av flera AEM instanser (en [publiceringsgrupp](/help/communities/topologies.md)) har ett stort problem varit hur UGC ska synkroniseras i alla instanser.
+Community-funktioner som bloggar, forum och kalendrar resulterar i att användargenererat innehåll skapas, vilket ofta kallas användargenererat innehåll (UGC). När UGC anges i en publiceringsmiljö som består av flera AEM (en [publicera servergrupp](/help/communities/topologies.md)) har ett stort problem varit hur UGC ska synkroniseras i alla instanser.
 
-Med tillägget [AEM Communities 6.1](/help/communities/overview.md) löses problemet genom att använda en [gemensam lagringsplats för UGC](/help/communities/working-with-srp.md). När det gäller personalisering innehåller Communities [social inloggning](/help/communities/social-login.md) - möjlighet att ge webbplatsbesökare möjlighet att logga in med Facebook och Twitter.
+Med [AEM Communities 6.1](/help/communities/overview.md) kan problemet lösas med en [gemensam butik för UGC](/help/communities/working-with-srp.md). När det gäller personalisering innehåller Communities [Social inloggning](/help/communities/social-login.md) - möjlighet att ge besökarna möjlighet att logga in med Facebook och Twitter.
 
 Utan Communities-tillägg kan olika metoder för att undersöka frågan om enhetlighet i användargenererat innehåll vara:
 

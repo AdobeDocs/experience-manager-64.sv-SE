@@ -1,34 +1,37 @@
 ---
 title: Utöka händelsespårning
-seo-title: Utöka händelsespårning
+seo-title: Extending Event Tracking
 description: Med AEM Analytics kan ni spåra användarinteraktion på er webbplats
-seo-description: Med AEM Analytics kan ni spåra användarinteraktion på er webbplats
+seo-description: AEM Analytics allows you to track user interaction on your website
 uuid: 722798ac-4043-4918-a6df-9eda2c85020b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: e0372f4a-fe7b-4526-8391-5bb345b51d70
-translation-type: tm+mt
-source-git-commit: 4e6442ec089b7d07cc68debb5a630fb474716f4d
+exl-id: 8df6b48f-b1a8-4294-a52e-dc17ab65606c
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '523'
 ht-degree: 0%
 
 ---
 
-
 # Utöka händelsespårning{#extending-event-tracking}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Med AEM Analytics kan ni spåra användarinteraktion på er webbplats. Som utvecklare kan du behöva:
 
-* Spåra hur besökarna interagerar med era komponenter. Detta kan göras med [anpassade händelser.](#custom-events)
+* Spåra hur besökarna interagerar med era komponenter. Detta kan du göra med [Anpassade händelser.](#custom-events)
 * [Åtkomstvärden i ContextHub](/help/sites-developing/extending-analytics.md#accessing-values-in-the-contexthub).
-* [Lägg till återanrop](#adding-record-callbacks) för poster.
+* [Lägg till återanrop för poster](#adding-record-callbacks).
 
 >[!NOTE]
 >
->Den här informationen är i stort sett generisk, men använder [Adobe Analytics](/help/sites-administering/adobeanalytics.md) för specifika exempel.
+>Den här informationen är i stort sett generisk, men den använder [Adobe Analytics](/help/sites-administering/adobeanalytics.md) för specifika exempel.
 >
 >Allmän information om utveckling av komponenter och dialogrutor finns i [Utveckla komponenter](/help/sites-developing/components.md).
 
@@ -38,7 +41,7 @@ Anpassade händelser spårar allt som är beroende av tillgängligheten för en 
 
 ### Spåra anpassade händelser vid sidinläsning {#tracking-custom-events-on-page-load}
 
-Detta kan göras med pseudoattributet `data-tracking` (det äldre postattributet stöds fortfarande för bakåtkompatibilitet). Du kan lägga till det här i alla HTML-taggar.
+Detta kan göras med pseudoattributet `data-tracking` (det äldre postattributet stöds fortfarande för bakåtkompatibilitet). Du kan lägga till det här till valfri HTML-tagg.
 
 Syntaxen för `data-tracking` är
 
@@ -61,11 +64,11 @@ Ett exempel kan se ut så här:
 </span>
 ```
 
-Vid sidinläsning samlas alla `data-tracking`-attribut in och läggs till i händelselagret för ContextHub, där de kan mappas till Adobe Analytics-händelser. Händelser som inte mappas kommer inte att spåras av Adobe Analytics. Mer information om mappningshändelser finns i [Ansluta till Adobe Analytics](/help/sites-administering/adobeanalytics.md).
+Vid sidinläsning, alla `data-tracking` attribut samlas in och läggs till i händelsearkivet för ContextHub, där de kan mappas till Adobe Analytics-händelser. Händelser som inte mappas kommer inte att spåras av Adobe Analytics. Se [Ansluta till Adobe Analytics](/help/sites-administering/adobeanalytics.md) om du vill ha mer information om mappningshändelser.
 
 ### Spåra anpassade händelser efter sidinläsning {#tracking-custom-events-after-page-load}
 
-Om du vill spåra händelser som inträffar efter att en sida har lästs in (till exempel användarinteraktioner) använder du JavaScript-funktionen `CQ_Analytics.record`:
+Om du vill spåra händelser som inträffar efter att en sida har lästs in (till exempel användarinteraktioner) använder du `CQ_Analytics.record` JavaScript-funktion:
 
 * `CQ_Analytics.record({event: 'eventName', values: { valueName: 'VALUE' }, collect: false, options: { obj: this, defaultLinkType: 'X' }, componentPath: '<%=resource.getResourceType()%>'})`
 
@@ -75,11 +78,11 @@ Plats
 
 * `values` innehåller alla värden som ska spåras
 * `collect` är valfri och returnerar en array som innehåller händelsen och dataobjektet.
-* `options` är valfritt och innehåller alternativ för länkspårning som HTML-element  `obj` och  ` [defaultLinkType](https://microsite.omniture.com/t2/help/en_US/sc/implement/index.html#linkType)`.
+* `options` är valfritt och innehåller alternativ för länkspårning som HTML-element `obj` och ` [defaultLinkType](https://microsite.omniture.com/t2/help/en_US/sc/implement/index.html#linkType)`.
 
-* `componentPath` är ett nödvändigt attribut och vi rekommenderar att du anger det till  `<%=resource.getResourceType()%>`
+* `componentPath` är ett nödvändigt attribut och vi rekommenderar att du anger det till `<%=resource.getResourceType()%>`
 
-Med följande definition aktiveras de två händelserna `jumptop` och `headlineclick` om användaren klickar på länken **Hoppa till översta**:
+Med följande definition klickar en användare på **Hoppa till början** länken kommer att orsaka de två händelserna, `jumptop` och `headlineclick`, ska utlösas:
 
 ```xml
 <h1 data-tracking="{event: 'headline', values: {level:'1'}, componentPath: '<%=resource.getResourceType()%>'}">
@@ -89,11 +92,11 @@ Med följande definition aktiveras de två händelserna `jumptop` och `headlinec
 
 ## Åtkomst till värden i ContextHub {#accessing-values-in-the-contexthub}
 
-ContextHub JavaScript-API:t har en `getStore(name)`-funktion som returnerar det angivna arkivet, om en sådan finns. Butiken har en `getItem(key)`-funktion som returnerar värdet för den angivna nyckeln, om en sådan finns. Med funktionen `getKeys()` är det möjligt att hämta en array med definierade nycklar för det specifika arkivet.
+ContextHub JavaScript API har en `getStore(name)` funktion som returnerar det angivna arkivet, om sådan finns. Butiken har en `getItem(key)` funktion som returnerar värdet för den angivna nyckeln, om sådan finns. Använda `getKeys()` kan du hämta en array med definierade nycklar för den specifika lagringsplatsen.
 
-Du kan meddelas om värdeändringar på en butik genom att binda en funktion med funktionen `ContextHub.getStore(name).eventing.on(ContextHub.Constants.EVENT_STORE_UPDATED, handler, selector, triggerForPastEvents)`.
+Du kan meddelas om värdeändringar på en butik genom att binda en funktion med `ContextHub.getStore(name).eventing.on(ContextHub.Constants.EVENT_STORE_UPDATED, handler, selector, triggerForPastEvents)` funktion.
 
-Det bästa sättet att bli meddelad om den initiala tillgängligheten för ContextHub är att använda funktionen `ContextHub.eventing.on(ContextHub.Constants.EVENT_ALL_STORES_READY, handler, selector, triggerForPastEvents);`.
+Det bästa sättet att meddela om ContextHub är att använda `ContextHub.eventing.on(ContextHub.Constants.EVENT_ALL_STORES_READY, handler, selector, triggerForPastEvents);` funktion.
 
 **Ytterligare händelser för ContextHub:**
 
@@ -107,11 +110,11 @@ Butiksspecifik:
 
 >[!NOTE]
 >
->Se även den fullständiga [ContextHub API Reference](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/contexthub-api.html#ContextHubJavascriptAPIReference)
+>Se även hela [ContextHub API-referens](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/contexthub-api.html#ContextHubJavascriptAPIReference)
 
-## Lägger till poståteranrop {#adding-record-callbacks}
+## Lägger till återanrop för post {#adding-record-callbacks}
 
-Före och efter att återanrop registreras med funktionerna `CQ_Analytics.registerBeforeCallback(callback,rank)` och `CQ_Analytics.registerAfterCallback(callback,rank)`.
+Före och efter återanrop registreras med funktionerna `CQ_Analytics.registerBeforeCallback(callback,rank)` och `CQ_Analytics.registerAfterCallback(callback,rank)`.
 
 Båda funktionerna tar en funktion som det första argumentet och rangordnas som det andra argumentet, som anger i vilken ordning återanropen utförs.
 

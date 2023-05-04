@@ -1,8 +1,8 @@
 ---
 title: JavaScript-API för klientkontext
-seo-title: JavaScript-API för klientkontext
+seo-title: Client Context Javascript API
 description: JavaScript-API:t för klientkontext
-seo-description: JavaScript-API:t för klientkontext
+seo-description: The Javascript API for Client Context
 uuid: be58998c-f23e-4768-8394-1f1ad3994c4c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,16 +10,19 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: a6e5810b-dac5-4137-93cf-5d8d53cacc49
 feature: Context Hub
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 6678e462-d40b-4b55-8f7e-98fab2273898
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3165'
-ht-degree: 4%
+source-wordcount: '3189'
+ht-degree: 0%
 
 ---
 
-
 # JavaScript-API för klientkontext{#client-context-javascript-api}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## CQ_Analytics.ClientContextMgr {#cq-analytics-clientcontextmgr}
 
@@ -39,7 +42,7 @@ Returnerar ett sessionsarkiv med ett angivet namn. Se även [Åtkomst till ett s
 
 **Returnerar**
 
-Ett CQ_Analytics.SessionStore-objekt som representerar sessionsarkivet för det angivna namnet. Returnerar `null` när det inte finns något arkiv med det angivna namnet.
+Ett CQ_Analytics.SessionStore-objekt som representerar sessionsarkivet för det angivna namnet. Returnerar `null` om det inte finns något arkiv med det angivna namnet.
 
 #### register(sessionstore) {#register-sessionstore}
 
@@ -79,7 +82,7 @@ När fördröjningen är inställd på `true` eller ett antal millisekunder vän
 
 * storeName: Sträng. Namnet på det sessionsarkiv som avlyssnaren ska läggas till i.
 * callback: Funktion. Funktionen som ska anropas vid arkivinitiering.
-* fördröjning: Boolean eller Number. Den tid i millisekunder som anropet till återanropsfunktionen ska fördröjas. Ett booleskt värde på `true` använder standardfördröjningen `200 ms`. Ett booleskt värde på `false` eller ett negativt tal orsakar ingen fördröjning.
+* fördröjning: Boolean eller Number. Den tid i millisekunder som anropet till återanropsfunktionen ska fördröjas. Ett booleskt värde på `true` använder standardfördröjningen för `200 ms`. Ett booleskt värde på `false` eller ett negativt tal gör att ingen fördröjning används.
 
 **Returnerar**
 
@@ -87,7 +90,7 @@ Inget returvärde.
 
 #### onStoreRegistered(storeName, callback) {#onstoreregistered-storename-callback}
 
-Registrerar en callback-funktion som anropas när ett sessionsarkiv registreras. Registreringshändelsen inträffar när ett arkiv registreras för [CQ_Analytics.ClientContextMgr](#cq-analytics-clientcontextmgr).
+Registrerar en callback-funktion som anropas när ett sessionsarkiv registreras. Registreringshändelsen inträffar när en butik är registrerad på [CQ_Analytics.ClientContextMgr](#cq-analytics-clientcontextmgr).
 
 **Parametrar**
 
@@ -100,7 +103,7 @@ Inget returvärde.
 
 ## CQ_Analytics.JSONPStore {#cq-analytics-jsonpstore}
 
-Ett icke-beständigt sessionsarkiv som innehåller JSON-data. Data hämtas från en extern JSONP-tjänst. Använd metoden `getInstance` eller `getRegisteredInstance` för att skapa en instans av den här klassen.
+Ett icke-beständigt sessionsarkiv som innehåller JSON-data. Data hämtas från en extern JSONP-tjänst. Använd `getInstance` eller `getRegisteredInstance` metod för att skapa en instans av den här klassen.
 
 Utökar CQ_Analytics.JSONStore.
 
@@ -134,7 +137,7 @@ Hämtar URL:en för den JSONP-tjänst som det här objektet använder för att h
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -195,11 +198,11 @@ Utökar CQ_Analytics.SessionStore.
 
 #### STOREKEY {#storekey}
 
-Nyckeln som identifierar butiken. Använd metoden `getInstance` för att hämta det här värdet.
+Nyckeln som identifierar butiken. Använd `getInstance` metod för att hämta det här värdet.
 
 #### STORENAME {#storename}
 
-Butikens namn. Använd metoden `getInstance` för att hämta det här värdet.
+Butikens namn. Använd `getInstance` metod för att hämta det här värdet.
 
 ### Metoder {#methods-3}
 
@@ -211,7 +214,7 @@ Tar bort sessionsarkivdata och tar bort alla initieringsegenskaper.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -236,7 +239,7 @@ Hämtar data för sessionsarkivet i JSON-format.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -244,11 +247,11 @@ Ett objekt som representerar lagringsdata i JSON-format.
 
 #### init() {#init}
 
-Rensar sessionsarkivet och initierar det med initieringsegenskapen. Anger initieringsflaggan som `true` och utlöser sedan händelserna `initialize` och `update`.
+Rensar sessionsarkivet och initierar det med initieringsegenskapen. Anger initieringsflaggan som `true` och sedan aktiveras `initialize` och `update` händelser.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -306,7 +309,7 @@ Utlöser händelser och tillåter andra objekt att lyssna på dessa händelser o
 
 #### addListener(event, fct, scope) {#addlistener-event-fct-scope}
 
-Registrerar en avlyssnare för en händelse. Se även [Skapa en avlyssnare för att reagera på en sessionsarkivuppdatering](/help/sites-developing/client-context.md#creating-a-listener-to-react-to-a-session-store-update).
+Registrerar en avlyssnare för en händelse. Se även [Skapa en avlyssnare som kan reagera på en sessionsarkivuppdatering](/help/sites-developing/client-context.md#creating-a-listener-to-react-to-a-session-store-update).
 
 **Parametrar**
 
@@ -363,7 +366,7 @@ Hämtar URL:en för den JSONP-tjänst som det här objektet använder för att h
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -420,11 +423,11 @@ Utökar `CQ_Analytics.PersistedSessionStore`.
 
 #### STOREKEY {#storekey-1}
 
-Nyckeln som identifierar butiken. Använd metoden `getInstance` för att hämta det här värdet.
+Nyckeln som identifierar butiken. Använd `getInstance` metod för att hämta det här värdet.
 
 #### STORENAME {#storename-1}
 
-Butikens namn. Använd metoden `getInstance` för att hämta det här värdet.
+Butikens namn. Använd `getInstance` metod för att hämta det här värdet.
 
 ### Metoder {#methods-6}
 
@@ -449,7 +452,7 @@ Hämtar data för sessionsarkivet i JSON-format.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -517,19 +520,19 @@ Standardvärdet är `key`.
 
 Se CQ_Analytics.SessionStore för ärvda metoder.
 
-När de ärvda metoderna `clear`, `setProperty`, `setProperties`, `removeProperty` används för att ändra lagringsdata, sparas ändringarna automatiskt om inte de ändrade egenskaperna flaggas som notPersisted.
+När ärvda metoder `clear`, `setProperty`, `setProperties`, `removeProperty` används för att ändra lagringsdata, ändringarna sparas automatiskt, såvida inte de ändrade egenskaperna flaggas som notPersisted.
 
 #### getStoreKey() {#getstorekey}
 
-Hämtar egenskapen `STOREKEY`.
+Hämtar `STOREKEY` -egenskap.
 
 **Parametrar**
 
-Inget
+Ingen
 
 **Returnerar**
 
-Värdet för egenskapen `STOREKEY`.
+Värdet för `STOREKEY` -egenskap.
 
 #### isPersisted(name) {#ispersisted-name}
 
@@ -545,15 +548,15 @@ Ett booleskt värde på `true` om egenskapen är beständig och värdet `false` 
 
 #### persist() {#persist}
 
-Innehåller sessionsarkivet. Standardbeständighetsläget använder webbläsaren `localStorage` med `ClientSidePersistence` som namn ( `window.localStorage.set("ClientSidePersistance", store);`)
+Innehåller sessionsarkivet. Standardbeständighetsläget använder webbläsare `localStorage` använda `ClientSidePersistence` som namn ( `window.localStorage.set("ClientSidePersistance", store);`)
 
 Om localStorage inte är tillgängligt eller skrivbart sparas arkivet som en egenskap i fönstret.
 
-Utlöser händelsen `persist` när den har slutförts.
+Aktiverar `persist` -händelse när allt är klart.
 
 **Parametrar**
 
-Inget
+Ingen
 
 **Returnerar**
 
@@ -561,11 +564,11 @@ Inget returvärde.
 
 #### reset(deferEvent) {#reset-deferevent}
 
-Tar bort alla dataegenskaper från arkivet och sparar arkivet. Alternativt utlöses inte händelsen `udpate` när den har slutförts.
+Tar bort alla dataegenskaper från arkivet och sparar arkivet. Alternativt utlöser inte `udpate` -händelse när allt är klart.
 
 **Parametrar**
 
-* deferEvent: Värdet true förhindrar att `update`-händelsen utlöses. Värdet `false` utlöser update-händelsen.
+* deferEvent: Värdet true förhindrar `update` -händelsen utlöses. Värdet för `false` aktiverar update-händelsen.
 
 **Returnerar**
 
@@ -620,7 +623,7 @@ Tar bort alla dataegenskaper från arkivet.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -628,7 +631,7 @@ Inget returvärde.
 
 #### getData(exclude) {#getdata-excluded}
 
-Returnerar lagringsdata. Namnegenskaperna kan också utelämnas från data. Anropar metoden `init` om egenskapen data för arkivet inte finns.
+Returnerar lagringsdata. Namnegenskaperna kan också utelämnas från data. Anropar `init` om egenskapen data för arkivet inte finns.
 
 **Parametrar**
 
@@ -648,7 +651,7 @@ Hämtar värdet för en data-egenskap.
 
 **Returnerar**
 
-Värdet för egenskapen data. Returnerar `null` om sessionsarkivet inte innehåller någon egenskap med det angivna namnet.
+Värdet för egenskapen data. Returnes `null` om sessionsarkivet inte innehåller någon egenskap med det angivna namnet.
 
 #### getName() {#getname}
 
@@ -656,7 +659,7 @@ Returnerar namnet på sessionsarkivet.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -664,7 +667,7 @@ Ett String-värde som representerar butiksnamnet.
 
 #### getProperty(name, raw) {#getproperty-name-raw}
 
-Returnerar värdet för en egenskap. Värdet returneras som raw-egenskapen eller det XSS-filtrerade värdet. Anropar metoden `init` om egenskapen data för arkivet inte finns.
+Returnerar värdet för en egenskap. Värdet returneras som raw-egenskapen eller det XSS-filtrerade värdet. Anropar `init` om egenskapen data för arkivet inte finns.
 
 **Parametrar**
 
@@ -677,7 +680,7 @@ Värdet för egenskapen data.
 
 #### getPropertyNames(exclude) {#getpropertynames-excluded}
 
-Returnerar namnen på de egenskaper som sessionsarkivet innehåller. Anropar metoden `init` om egenskapen data för arkivet inte finns.
+Returnerar namnen på de egenskaper som sessionsarkivet innehåller. Anropar `init` om egenskapen data för arkivet inte finns.
 
 **Parametrar**
 
@@ -693,7 +696,7 @@ Returnerar det sessionsarkiv som är kopplat till det aktuella objektet.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -701,11 +704,11 @@ this
 
 #### init() {#init-1}
 
-Markerar arkivet som initierat och utlöser händelsen `initialize`.
+Markerar butiken som initierad och aktiverar `initialize` -händelse.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -717,11 +720,11 @@ Anger om sessionslagringen har initierats.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
-Värdet `true` om arkivet har initierats och värdet `false` om arkivet inte har initierats.
+Värdet för `true` om arkivet har initierats och värdet `false` om arkivet inte har initierats.
 
 #### loadInitProperties(obj, setValues) {#loadinitproperties-obj-setvalues}
 
@@ -738,7 +741,7 @@ Inget returvärde.
 
 #### removeProperty(name) {#removeproperty-name}
 
-Tar bort en egenskap från sessionsarkivet. Utlöser händelsen `update` när den har slutförts. Anropar metoden `init` om egenskapen data för arkivet inte finns.
+Tar bort en egenskap från sessionsarkivet. Aktiverar `update` -händelse när allt är klart. Anropar `init` om egenskapen data för arkivet inte finns.
 
 **Parametrar**
 
@@ -750,11 +753,11 @@ Inget returvärde.
 
 #### reset() {#reset}
 
-Återställer de ursprungliga värdena för datalagret. Standardimplementeringen tar helt enkelt bort alla data. Utlöser händelsen `update` när den har slutförts.
+Återställer de ursprungliga värdena för datalagret. Standardimplementeringen tar helt enkelt bort alla data. Aktiverar `update` -händelse när allt är klart.
 
 **Parametrar**
 
-Inget.
+Ingen.
 
 **Returnerar**
 
@@ -762,7 +765,7 @@ Inget returvärde.
 
 #### setProperties(properties) {#setproperties-properties}
 
-Anger värden för flera egenskaper. Utlöser händelsen `update` när den har slutförts. Anropar metoden `init` om egenskapen data för arkivet inte finns.
+Anger värden för flera egenskaper. Aktiverar `update` -händelse när allt är klart. Anropar `init` om egenskapen data för arkivet inte finns.
 
 **Parametrar**
 
@@ -774,7 +777,7 @@ Inget returvärde.
 
 #### setProperty(name, value) {#setproperty-name-value}
 
-Anger värdet för en egenskap. Utlöser händelsen `update` när den har slutförts. Anropar metoden `init` om egenskapen data för arkivet inte finns.
+Anger värdet för en egenskap. Aktiverar `update` -händelse när allt är klart. Anropar `init` om egenskapen data för arkivet inte finns.
 
 **Parametrar**
 

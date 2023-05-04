@@ -2,7 +2,7 @@
 title: XMP Utilities Service Java APIQuick Start(SOAP)
 seo-title: XMP Utilities Service Java APIQuick Start(SOAP)
 description: Använd tjänsten XMP Utilities för att exportera och importera XMP metadata.
-seo-description: Använd tjänsten XMP Utilities för att exportera och importera XMP metadata.
+seo-description: Use the XMP Utilities service to export and import XMP metadata.
 uuid: 5db4c623-75db-4a34-9ad2-3c917619e296
 contentOwner: admin
 content-type: reference
@@ -10,16 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 1b229ddf-9350-40b6-8056-dcbe0c5afd5b
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: fdbf9942-7e4d-4b76-971f-d26d89c4c4cf
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
 
-
 # XMP Utilities Service Java API Quick Start (SOAP) {#xmp-utilities-service-java-apiquick-start-soap}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Följande snabbstarter är tillgängliga för tjänsten XMP Utilities.
 
@@ -140,7 +143,7 @@ I följande kodexempel hämtas, granskas och sparas XMP metadata. (Se [Exportera
 
 ## Snabbstart (SOAP-läge): Importera XMP metadata med Java API {#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api}
 
-I följande kodexempel importeras XMP metadata och den nya PDF-filen sparas på disken. PDF-dokumentet är baserat på en PDF-fil med namnet Loan.pdf. XML-dokumentet som innehåller de metadata som ska importeras till PDF-dokumentet är baserat på en XML-fil med namnet *LoanMetaData.xml*. Mer information om XML-filen finns i [Importera metadata till PDF-dokument](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents).
+I följande kodexempel importeras XMP metadata och den nya PDF-filen sparas på disken. PDF-dokumentet är baserat på en PDF-fil med namnet Loan.pdf. XML-dokumentet som innehåller de metadata som ska importeras till PDF-dokumentet baseras på en XML-fil med namnet *LoanMetaData.xml*. Mer information om XML-filen finns i [Importera metadata till PDF-dokument](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents).
 
 ```as3
  /* 
@@ -245,4 +248,3 @@ I följande kodexempel importeras XMP metadata och den nya PDF-filen sparas på 
      } 
  }
 ```
-

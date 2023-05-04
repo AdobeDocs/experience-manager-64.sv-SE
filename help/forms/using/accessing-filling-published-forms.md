@@ -1,23 +1,26 @@
 ---
 title: Åtkomst och ifyllande av publicerade formulär
-seo-title: Åtkomst och ifyllande av publicerade formulär
+seo-title: Accessing and filling published forms
 description: Forms Portal förser webbutvecklare med komponenter för att skapa och anpassa en formulärportal på webbplatser som skapats med Adobe Experience Manager (AEM).
-seo-description: Forms Portal förser webbutvecklare med komponenter för att skapa och anpassa en formulärportal på webbplatser som skapats med Adobe Experience Manager (AEM).
+seo-description: Forms Portal equips Web Developers with components to create and customize a forms portal on websites authored using Adobe Experience Manager (AEM).
 uuid: dd03a9de-b412-4d7b-befe-981cb3aa8d0a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: 0452062d-cf85-4009-a0a5-a1e891192ea8
-translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+exl-id: d68806f8-8ed8-4aff-9724-bafbe2b1f18e
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '966'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
 
+# Åtkomst och ifyllande av publicerade formulär {#accessing-and-filling-published-forms}
 
-# Åtkomst till och ifyllnad av publicerade formulär {#accessing-and-filling-published-forms}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 I en formulärcentrerad portalinstallation är formulärutveckling och portalutveckling två skilda aktiviteter. När formulärdesigners designar och lagrar formulär i en databas skapar webbutvecklare ett webbprogram som följer den listan och hanterar inskickade formulär. Forms kopieras sedan till webbnivån eftersom det inte finns någon kommunikation mellan formulärdatabasen och webbprogrammet.
 
@@ -33,7 +36,7 @@ Navigera till den publicerade formulärportalen. Mer information om hur du skapa
 
 Komponenten Search och Lister i formulärportalen visar de formulär som är tillgängliga i publiceringsinstansen på AEM. Den här listan innehåller alla formulär eller de formulär som definieras i filtret när formulärportalsidan redigeras. En formulärportalsida ser ut ungefär som i följande bild:
 
-![En exempelformulärportalsida  ](assets/forms-portal-page.png)
+![En exempelformulärportalsida ](assets/forms-portal-page.png)
 **Bild:** *En exempelformulärportalsida*
 
 ### Sök och visa {#search-and-lister}
@@ -42,7 +45,7 @@ Med komponenten Sök och Lister kan du lägga till följande funktioner i formul
 
 * Visa en lista över formulär som är tillgängliga direkt i panelen, kortet eller stödrastervyn. Det har även stöd för anpassade mallarLista formulär från specifika mappar i Forms Manager.
 * Ange hur formulär ska återges - HTML5, PDF eller båda.
-* Ange hur PDF- och XFA-formulär återges - HTML5, PDF eller båda. Icke-XFA-formulär som HTML5.
+* Ange hur PDF- och XFA-formulär ska återges - HTML5, PDF eller båda. Icke-XFA-formulär som HTML5.
 * Möjliggör sökning av formulär baserat på kriterier som formuläregenskaper, metadata och taggar.
 * Skicka formulärdata till en server.
 * Använd anpassade formatmallar (CSS) för att anpassa portalens utseende och känsla.
@@ -55,8 +58,8 @@ Du kan söka efter formulär på Forms Portal-sidan med följande alternativ:
 
 Med fulltextsökning kan du söka efter och lista formulär baserat på de angivna nyckelorden.
 
-![En avancerad ](assets/search-panel.png)
-**sökdialogrutaBild:** *En avancerad sökdialogruta*
+![En avancerad sökdialog](assets/search-panel.png)
+**Bild:** *En avancerad sökdialog*
 
 Med avancerad sökning kan du söka efter formulär baserat på angivna formuläregenskaper. Detta ger ett mer specifikt resultat än fulltextsökning. I avancerad sökning ingår sökning baserat på taggar, egenskaper (till exempel Författare, Beskrivning och Titel), ändringsdatum och fullständig text.
 
@@ -64,14 +67,14 @@ Lister visar formulär baserade på sökparametrar. Varje formulär i sökresult
 
 ### Fylla i ett formulär {#filling-a-form}
 
-![Ett adaptivt ](assets/filling_a_form.png)
-**exempelformulärFigur:** *Ett adaptivt exempelformulär*
+![Ett adaptivt exempelformulär](assets/filling_a_form.png)
+**Bild:** *Ett adaptivt exempelformulär*
 
 Formulären kan nås via länken som medföljer formuläret i sid- och listkomponenten.
 
 Varje formulär innehåller hjälpinformation som gör att användaren kan fylla i formuläret.
 
-#### Utkast och inskickning {#drafts-and-submission}
+#### Utkast och inlämning {#drafts-and-submission}
 
 En användare kan spara ett utkast av ett formulär genom att klicka på knappen Spara. Detta gör att användaren kan arbeta med ett formulär under en tidsperiod innan formuläret skickas.
 
@@ -81,16 +84,16 @@ När formuläret har fyllts i skickar användaren formulären genom att klicka p
 
 >[!NOTE]
 >
->Skickade formulär visas bara på fliken Skickat Forms om skicka-åtgärden för det adaptiva formuläret har konfigurerats som Forms Portal Submit Action (Skicka-åtgärd). Mer information om Skicka-åtgärder finns i [Konfigurera Skicka-åtgärden](/help/forms/using/configuring-submit-actions.md).
+>Skickade formulär visas bara på fliken Skickat Forms om skicka-åtgärden för det adaptiva formuläret har konfigurerats som Forms Portal Submit Action (Skicka-åtgärd). Mer information om Skicka-åtgärder finns i [Konfigurera åtgärden Skicka](/help/forms/using/configuring-submit-actions.md).
 
-![Komponenten för utkast och inskickning:](assets/draft-submission.png)
-**Komponenten** *för utkast och inskickning*
+![Komponenten Utkast och inskickat material](assets/draft-submission.png)
+**Bild:** *Komponenten Utkast och inskickat material*
 
 ## Starta ett nytt formulär med skickade formulärdata {#start-a-new-form-using-submitted-form-data}
 
 Det finns vissa formulär som du behöver fylla i och skicka in ganska ofta. Formuläret för att skicka in individuell skattedeklaration skickas till exempel varje år. I sådana fall ändras en del av informationen varje gång du fyller i formuläret, men de flesta av dem, som personuppgifter och familjeuppgifter, ändras inte. Du måste dock ändå fylla i hela formuläret från grunden.
 
-AEM Forms kan hjälpa till att optimera formulärifyllningen och avsevärt minska tiden för att fylla i och skicka in ett formulär igen. Slutanvändare kan påbörja ett nytt formulär med data från ett skickat formulär. Den här funktionen är inbyggd i [komponenten Utkast och överföringar](/help/forms/using/draft-submission-component.md). När du lägger till utkast och skicka-komponent på din formulärportalsida och publicerar den hittar slutanvändarna ett alternativ på flikarna Skickat Forms och Utkast Forms för att starta ett nytt formulär med data från ett skickat formulär. Följande bild markerar det alternativet.
+AEM Forms kan hjälpa till att optimera formulärifyllningen och avsevärt minska tiden för att fylla i och skicka in ett formulär igen. Slutanvändare kan påbörja ett nytt formulär med data från ett skickat formulär. Den här funktionen är inbyggd i [Komponenten Utkast och inskickat material](/help/forms/using/draft-submission-component.md). När du lägger till utkast och skicka-komponent på din formulärportalsida och publicerar den hittar slutanvändarna ett alternativ på flikarna Skickat Forms och Utkast Forms för att starta ett nytt formulär med data från ett skickat formulär. Följande bild markerar det alternativet.
 
 ![start-a-new-form](assets/start-a-new-form.png)
 

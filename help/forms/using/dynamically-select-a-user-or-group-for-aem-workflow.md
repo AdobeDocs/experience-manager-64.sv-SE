@@ -8,14 +8,18 @@ content-type: troubleshooting
 topic-tags: publish
 discoiquuid: e6c9f3bb-8f20-4889-86f4-d30578fb1c51
 exl-id: c63e6e5c-c4c9-45b8-8401-87ee37a30c97
-source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
 
 # Markera en användare eller grupp dynamiskt för AEM Forms-centrerade arbetsflödessteg {#dynamically-select-a-user-or-group-for-aem-forms-centric-workflow-steps}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Lär dig hur du väljer en användare eller grupp för ett AEM Forms-arbetsflöde vid körning.
 

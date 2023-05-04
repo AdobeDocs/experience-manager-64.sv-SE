@@ -1,24 +1,27 @@
 ---
 title: Integrera med Adobe Campaign
-seo-title: Integrera med Adobe Campaign
+seo-title: Integrating with Adobe Campaign
 description: Lär dig integrera AEM med Adobe Campaign.
-seo-description: Lär dig integrera AEM med Adobe Campaign.
+seo-description: Learn how to integrate AEM with Adobe Campaign.
 uuid: 6113279e-d1f5-46c3-ac94-50270fa55060
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: fd96f30c-0616-445e-adb9-050d52862ffc
-translation-type: tm+mt
-source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+exl-id: 482c5889-d756-428b-bf0c-38c372e3c8b6
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
 
-
 # Integrera med Adobe Campaign{#integrating-with-adobe-campaign}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Adobe Campaign är en uppsättning lösningar som gör att ni kan personalisera och leverera kampanjer i alla kanaler, både online och offline.
 
@@ -37,4 +40,3 @@ I den här dokumentationen beskrivs hur du integrerar AEM med Adobe Campaign. Be
 >[!NOTE]
 >
 >Om du vill granska en relaterad AEM Community-artikel kan du läsa: [Integrera Adobe Experience Manager och Adobe Campaign Standard för att skapa nyhetsbrev](https://helpx.adobe.com/experience-manager/using/aem_campaign.html).
-

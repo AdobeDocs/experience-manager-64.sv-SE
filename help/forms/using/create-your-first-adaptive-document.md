@@ -1,15 +1,14 @@
 ---
 title: PUBLICERA INTE Skapa ditt första adaptiva dokument
-seo-title: PUBLICERA INTE Skapa ditt första adaptiva dokument
+seo-title: DO NOT PUBLISH Create your first adaptive document
 description: PUBLICERA INTE
-seo-description: PUBLICERA INTE
+seo-description: DO NOT PUBLISH
 page-status-flag: de-activated
 uuid: 2cb2bf82-130f-4d6b-a711-df0b97cb0504
 discoiquuid: f3ca177f-7c0d-4b8b-ab4b-bf04668d634c
-translation-type: tm+mt
-source-git-commit: 7ec0cd95417c015565fa6e07c753c4ac6df35cdb
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '820'
 ht-degree: 0%
 
 ---
@@ -17,16 +16,20 @@ ht-degree: 0%
 
 # PUBLICERA INTE Skapa ditt första adaptiva dokument {#do-not-publish-create-your-first-adaptive-document}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 ## Användningsfall {#use-case}
 
 Vi på finansområdet är en ledande organisation inom finanssektorn som erbjuder omfattande och personaliserade finansiella lösningar för att passa behoven hos olika kundprofiler.
 
-En av kundernas automatiska försäkringsavtal upphör att gälla och de skickar en påminnelse till henne, som är interaktiv och innehåller en PDF-fil, med förnyelseofferten. Meddelandet innehåller även annan information, t.ex. om lojalitetsprogram och rabatterbjudanden.
+En av kundernas bilförsäkring upphör att gälla och de skickar en påminnelse till henne, som är interaktiv och innehåller en PDF, med förnyelseofferten. Meddelandet innehåller även annan information, t.ex. om lojalitetsprogram och rabatterbjudanden.
 
 Portalen går på Adobe AEM. Webben och utskriften av välkomstkanaler skapas med de flerkanalsfunktioner som finns i det adaptiva dokumentet.
 
 Du kommer att ha ett adaptivt dokument som liknar följande i slutet av självstudiekursen:
-[ ![ad-1](assets/ad-1.png)](https://blogs.adobe.com/contentcorner/files/2017/07/PAF_Mobile.pdf)    [ ![ad-2](assets/ad-2.png)](https://blogs.adobe.com/contentcorner/files/2017/07/PAF_Desktop.pdf)Skapa din första självstudiekurs om adaptiva dokument kategoriseras i steg. Varje steg är en komplett artikel i sig.
+[ ![ad-1](assets/ad-1.png)](https://blogs.adobe.com/contentcorner/files/2017/07/PAF_Mobile.pdf)    [ ![ad-2](assets/ad-2.png)](https://blogs.adobe.com/contentcorner/files/2017/07/PAF_Desktop.pdf)Den första självstudiekursen om adaptiva dokument är indelad i steg. Varje steg är en komplett artikel i sig.
 
 <table> 
  <tbody>
@@ -46,10 +49,10 @@ Du kommer att ha ett adaptivt dokument som liknar följande i slutet av självst
     <ul> 
      <li>AEM författarinstans. </li> 
      <li>Installera AEM Forms-tillägg. Mer information finns i <a href="/help/forms/using/installing-configuring-aem-forms-osgi.md" target="_blank">Installera och konfigurera AEM Forms</a>.</li> 
-     <li>Hämta JDBC-databasdrivrutin (JAR-fil) från databasprovidern. Exemplen i självstudien är baserade på MySQL-databasen och använder Oracle JDBC-databasdrivrutin MySQL. </li> 
+     <li>Hämta JDBC-databasdrivrutin (JAR-fil) från databasprovidern. Exemplen i självstudien är baserade på MySQL-databasen och använder Oraclets MySQL JDBC-databasdrivrutin. </li> 
      <li>Konfigurera en databas som innehåller kunddata. En databas är nödvändig för att skapa ett adaptivt dokument. I den här självstudien används en databas för att visa formulärdatamodell och beständighetsfunktioner i AEM Forms. </li> 
-     <li>Skapa/importera och aktivera <a href="/help/forms/using/web-channel-print-channel.md">mallar för utskrift och webbkanal</a>.</li> 
-     <li>Kontrollera att du har <a href="/help/forms/using/document-fragments.md">dokumentfragmenten baserade på FDM</a>.</li> 
+     <li>Skapa/importera och aktivera <a href="/help/forms/using/web-channel-print-channel.md">Mallar för tryck och webbkanal</a>.</li> 
+     <li>Se till att du har <a href="/help/forms/using/document-fragments.md">Dokumentfragment baserade på FDM</a>.</li> 
     </ul> </td> 
   </tr>
  </tbody>
@@ -57,7 +60,7 @@ Du kommer att ha ett adaptivt dokument som liknar följande i slutet av självst
 
 ## Steg 1: Skapa formulärdatamodell {#step-create-form-data-model}
 
-En formulärdatamodell gör det möjligt att koppla ett adaptivt dokument till olika datakällor. Till exempel AEM användarprofil, RESTful-webbtjänster, SOAP-baserade webbtjänster, OData-tjänster och relationsdatabaser. En formulärdatamodell är ett enhetligt datarepresentationsschema för affärsenheter och tjänster som är tillgängliga i anslutna datakällor. Du kan använda formulärdatamodellen med ett adaptivt dokument för att hämta data från anslutna datakällor. Mer information om formulärdatamodell finns i [AEM Forms Data Integration](/help/forms/using/data-integration.md).
+En formulärdatamodell gör det möjligt att koppla ett adaptivt dokument till olika datakällor. Till exempel AEM användarprofil, RESTful-webbtjänster, SOAP-baserade webbtjänster, OData-tjänster och relationsdatabaser. En formulärdatamodell är ett enhetligt datarepresentationsschema för affärsenheter och tjänster som är tillgängliga i anslutna datakällor. Du kan använda formulärdatamodellen med ett adaptivt dokument för att hämta data från anslutna datakällor. Mer information om formulärdatamodell finns i [AEM Forms dataintegrering](/help/forms/using/data-integration.md).
 
 Mål:
 
@@ -83,9 +86,9 @@ Mål:
 
 <!--![see-the-guide-sm](assets/see-the-guide-sm.png)-->
 
-## Steg 3: Tillämpa regler på adaptiva dokumentfält (endast webbkanal) {#step-apply-rules-to-adaptive-document-fields-web-channel-only}
+## Steg 3: Tillämpa regler på anpassningsbara dokumentfält (endast webbkanalen) {#step-apply-rules-to-adaptive-document-fields-web-channel-only}
 
-Med adaptiva dokument kan du redigera regler för adaptiva dokumentobjekt. Dessa regler definierar åtgärder som ska utlösas för dokumentobjekt baserat på förinställda villkor och användaråtgärder för dokumentet. Det gör att det går snabbare och exaktare att använda i webbversionen av det adaptiva dokumentet. Mer information om redigering av adaptiva dokumentregler och regler finns i [regelredigerare](/help/forms/using/rule-editor.md).
+Med adaptiva dokument kan du redigera regler för adaptiva dokumentobjekt. Dessa regler definierar åtgärder som ska utlösas för dokumentobjekt baserat på förinställda villkor och användaråtgärder för dokumentet. Det gör att det går snabbare och exaktare att använda i webbversionen av det adaptiva dokumentet. Mer information om anpassningsbara dokumentregler och regelredigerare finns i [regelredigerare](/help/forms/using/rule-editor.md).
 
 Mål:
 

@@ -1,28 +1,31 @@
 ---
 title: Grundläggande omdömen
-seo-title: Grundläggande omdömen
+seo-title: Rating Essentials
 description: Översikt över klassificeringskomponenten
-seo-description: Översikt över klassificeringskomponenten
+seo-description: Rating component overview
 uuid: 48ef61ad-be7a-4a6b-a284-23e5bb4f1671
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 7dc3ef57-05c3-45d4-ace3-bb3ba6ea768b
-translation-type: tm+mt
-source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+exl-id: f722051c-9512-4420-b12e-cb20aa6759f7
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '315'
 ht-degree: 0%
 
 ---
 
+# Grundläggande omdömen {#rating-essentials}
 
-# Värderingsgrunder {#rating-essentials}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
-Klassificeringskomponenten, en [tally](tally.md)-underklass, gör att inloggade communitymedlemmar kan betygsätta en funktion på webbplatsen.
+Klassificeringskomponenten, en [tally](tally.md) underklass, gör att inloggade communitymedlemmar kan betygsätta en funktion på webbplatsen.
 
-Det är tillåtet att placera flera instanser av en röstkomponent på samma sida. Varje instans måste konfigureras med en unik `tally name`-egenskap.
+Det är tillåtet att placera flera instanser av en röstkomponent på samma sida. varje instans måste konfigureras med en unik `tally name` -egenskap.
 
 Anonym publicering av en klassificering stöds inte. Besökare på webbplatsen måste registrera sig och logga in för att kunna delta i en klassificering endast en gång. Den inloggade besökaren (medlemmen) kan när som helst ändra sin klassificering.
 
@@ -43,7 +46,7 @@ Anonym publicering av en klassificering stöds inte. Besökare på webbplatsen m
    <td> cq.social.hbs.rating</td> 
   </tr> 
   <tr> 
-   <td> <strong>templates</strong></td> 
+   <td> <strong>mallar</strong></td> 
    <td><p> /libs/social/tally/components/hbs/rating/rating.hbs<br /> /libs/social/tally/components/hbs/rating/display.hbs<br /> /libs/social/tally/components/hbs/rating/histogram.hbs</p> </td> 
   </tr> 
   <tr> 
@@ -70,16 +73,15 @@ Anonym publicering av en klassificering stöds inte. Besökare på webbplatsen m
 ### Åtkomst till bokförda klassificeringar (UGC) {#accessing-posted-ratings-ugc}
 
 UGC bör modereras med någon av standardmetoderna för moderering.\
-Se [Moderating User Generated Content](moderate-ugc.md).
+Se [Modererar användargenererat innehåll](moderate-ugc.md).
 
-Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities används [gemensam lagringsplats](working-with-srp.md) för UGC omfattar programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (till exempel ASRP, MSRP eller JSRP).
 
 **Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
 
 Se:
 
-* [Översikt över](srp.md)  lagringsresursprovidern - introduktion och databasanvändning - översikt
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
-* [Åtkomst till UGC med riktlinjer för SRP](accessing-ugc-with-srp.md) -kodning
-* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utgått verktygsmetoder till aktuella SRP-verktygsmetoder
-
+* [Översikt över lagringsresursprovider](srp.md) - introduktion och databasanvändning - översikt
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning
+* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av borttagna verktygsmetoder till aktuella SRP-verktygsmetoder

@@ -1,24 +1,27 @@
 ---
 title: Komma igång med AEM Mobile
-seo-title: Komma igång med AEM Mobile
+seo-title: Getting Started with AEM Mobile
 description: Den här sidan fungerar som en landningssida för AEM Mobile. Följ den här sidan som utgångspunkt för att lära dig mer om de tre olika sätten att skapa appar.
-seo-description: Den här sidan fungerar som en landningssida för AEM Mobile. Följ den här sidan som utgångspunkt för att lära dig mer om de tre olika sätten att skapa appar.
+seo-description: This page serves as a landing page for AEM Mobile. Follow this page as a starting point to learn about the three different ways for creating apps.
 uuid: a5398216-f9bb-4009-a9f8-a4f0135db67c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: introduction
 content-type: reference
 discoiquuid: 724e09c2-3df3-4080-a0d4-ee2ede483791
-translation-type: tm+mt
-source-git-commit: e13927738ed34bc62c174a5be02f0f1d707e3012
+exl-id: 3c9d856e-4f94-4295-9f30-d675110016b7
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
-
 # Komma igång med AEM Mobile{#getting-started-with-aem-mobile}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
@@ -26,7 +29,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->Befintliga AEM Mobile-appskunder som migrerar från AEM 6.2 eller 6.3 till AEM 6.4 kan fortsätta använda AEM Mobile-appar genom att hämta ett [paket från PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/aem-mobile-package). Nya installationer av AEM 6.4 har dock inte stöd för AEM Mobile Apps-funktioner.
+>Befintliga AEM Mobile-appskunder som migrerar från AEM 6.2 eller 6.3 till AEM 6.4 kan fortsätta använda AEM Mobile-appar genom att ladda ned en [paket från PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/aem-mobile-package). Nya installationer av AEM 6.4 har dock inte stöd för AEM Mobile Apps-funktioner.
 
 Adobe Experience Manager (AEM) Mobile är en del av Adobe Experience Manager flerkanaliga digitala plattform som också utnyttjar AEM Assets, Sites, Screens, Workflow, User Manager, Commerce och Forms. AEM Mobile erbjuder enastående flexibilitet vid driftsättningen, vilket gör det möjligt för företag att använda olika innehållskällor.
 
@@ -38,4 +41,4 @@ AEM Mobile erbjuder flera metoder för att skapa appar. Du kan skapa appar på t
 
 >[!NOTE]
 >
->Om du inte har använt Adobe Experience Manager tidigare kan du gå igenom [Komma igång med AEM](/help/sites-deploying/deploy.md).
+>Om du inte har använt Adobe Experience Manager tidigare vill du kanske gå igenom [Komma igång med AEM](/help/sites-deploying/deploy.md).

@@ -1,29 +1,32 @@
 ---
 title: Integrera AEM Forms-arbetsytekomponenter i webbprogram
-seo-title: Integrera AEM Forms-arbetsytekomponenter i webbprogram
+seo-title: Integrating AEM Forms workspace components in web applications
 description: Hur du återanvänder AEM Forms arbetsytekomponenter i dina egna webbprogram för att utnyttja funktionaliteten och få en nära integrering.
-seo-description: Hur du återanvänder AEM Forms arbetsytekomponenter i dina egna webbprogram för att utnyttja funktionaliteten och få en nära integrering.
+seo-description: How to reuse AEM Forms workspace components in your own webapps to leverage functionality and provide tight integration.
 uuid: bb9b8aa0-3f41-4f44-8eb7-944e778ee8a6
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6be87939-007e-42c7-8a41-e34ac2b8bed4
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: 4e3ed3c8-ef77-432e-ad4d-7d341787cc5c
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
 
-
 # Integrera AEM Forms-arbetsytekomponenter i webbprogram {#integrating-aem-forms-workspace-components-in-web-applications}
 
-Du kan använda AEM Forms arbetsyta [komponenter](/help/forms/using/description-reusable-components.md) i ditt eget webbprogram. I följande exempelimplementering används komponenter från ett dev-paket för AEM Forms-arbetsytan som är installerat på en CRX™-instans för att skapa ett webbprogram. Anpassa lösningen nedan efter dina specifika behov. Implementeringen av exemplet återanvänder `UserInfo`, `FilterList` och `TaskList`komponenter i en webbportal.
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+Du kan använda arbetsytan i AEM Forms [komponenter](/help/forms/using/description-reusable-components.md) i ditt eget webbprogram. I följande exempelimplementering används komponenter från ett dev-paket för AEM Forms-arbetsytan som är installerat på en CRX™-instans för att skapa ett webbprogram. Anpassa lösningen nedan efter dina specifika behov. Exempelimplementeringen återanvänds `UserInfo`, `FilterList`och `TaskList`-komponenter i en webbportal.
 
 1. Logga in i CRXDE Lite-miljön på `https://[server]:[port]/lc/crx/de/`. Kontrollera att du har ett AEM Forms Workspace-dev-paket installerat.
-1. Skapa en sökväg `/apps/sampleApplication/wscomponents`.
+1. Skapa en bana `/apps/sampleApplication/wscomponents`.
 1. Kopiera css, bilder, js/libs, js/runtime och js/registry.js
 
    * från `/libs/ws`
@@ -43,9 +46,9 @@ Du kan använda AEM Forms arbetsyta [komponenter](/help/forms/using/description-
        });
    ```
 
-1. Skapa en nod under /content med namnet `sampleApplication` och skriv `nt:unstructured`. Lägg till `sling:resourceType` av typen String och värdet `sampleApplication` i egenskaperna för den här noden. I åtkomstkontrollistan för den här noden lägger du till en post för `PERM_WORKSPACE_USER` som tillåter jcr:läsbehörighet. I åtkomstkontrollistan för `/apps/sampleApplication` lägger du till en post för `PERM_WORKSPACE_USER` som tillåter jcr:läsbehörighet.
-1. I `/apps/sampleApplication/wscomponents/js/registry.js` uppdaterar du sökvägar från `/lc/libs/ws/` till `/lc/apps/sampleApplication/wscomponents/` för mallvärden.
-1. Lägg till följande kod i JSP-filen på din portalhemsida på `/apps/sampleApplication/GET.jsp` för att inkludera de nödvändiga komponenterna i portalen.
+1. Skapa en nod under /content efter namn `sampleApplication` och text `nt:unstructured`. Lägg till `sling:resourceType` av typen String och value `sampleApplication`. Lägg till en post för i åtkomstkontrollistan för den här noden `PERM_WORKSPACE_USER` tillåt jcr:läsbehörighet. I åtkomstkontrollistan för `/apps/sampleApplication` lägg till en post för `PERM_WORKSPACE_USER` tillåt jcr:läsbehörighet.
+1. I `/apps/sampleApplication/wscomponents/js/registry.js` uppdatera sökvägar från `/lc/libs/ws/` till `/lc/apps/sampleApplication/wscomponents/` för mallvärden.
+1. På portalstartsidan finns JSP-filen på `/apps/sampleApplication/GET.jsp`lägger du till följande kod för att inkludera de nödvändiga komponenterna i portalen.
 
    ```as3
    <script data-main="/lc/apps/sampleApplication/wscomponents/js/demomain" src="/lc/apps/sampleApplication/wscomponents/js/libs/require/require.js"></script>
@@ -58,7 +61,7 @@ Du kan använda AEM Forms arbetsyta [komponenter](/help/forms/using/description-
 
    >[!NOTE]
    >
-   >Varje komponent läggs till i komponenttaggen (med klasskomponent) vid återgivningen. Kontrollera att din hemsida innehåller dessa taggar. Se `html.jsp`-filen för AEM Forms-arbetsytan om du vill veta mer om de här grundläggande kontrolltaggarna.
+   >Varje komponent läggs till i komponenttaggen (med klasskomponent) vid återgivningen. Kontrollera att din hemsida innehåller dessa taggar. Se `html.jsp` fil med AEM Forms arbetsyta för att få mer information om dessa grundläggande kontrolltaggar.
 
 1. Om du vill anpassa komponenterna kan du utöka de befintliga vyerna för den önskade komponenten enligt följande:
 

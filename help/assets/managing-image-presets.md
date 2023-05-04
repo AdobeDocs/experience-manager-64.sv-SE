@@ -9,14 +9,18 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 exl-id: 3a666efe-1592-4425-82f5-c4d9343f65da
 feature: Image Presets
 role: Admin,User
-source-git-commit: 78e187855845046071bc7f22cd7d491d48568336
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3632'
-ht-degree: 7%
+source-wordcount: '3668'
+ht-degree: 6%
 
 ---
 
 # Hantera Dynamic Media bildförinställningar {#managing-image-presets}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Med bildförinställningar kan AEM Assets dynamiskt leverera bilder i olika storlekar, i olika format eller med andra bildegenskaper som genereras dynamiskt. Varje bildförinställning representerar en fördefinierad samling kommandon för storleksändring och formatering för visning av bilder. När du skapar en bildförinställning väljer du en storlek för bildleverans. Du kan också välja formateringskommandon så att bildens utseende optimeras när bilden levereras för visning.
 
@@ -115,12 +119,12 @@ Tryck på Adobe Experience Manager i det övre vänstra hörnet, navigera till *
    <td>Lista över dokumentMIME-typer som anses vara PDF- eller Illustrator-dokument.<br/> </td>
   </tr> 
   <tr> 
-   <td>Maxbredd</td>
+   <td>Maximal bredd</td>
    <td>2048</td>
    <td>Maximal bredd i pixlar för den genererade förhandsvisningsåtergivningen.<br/> </td>
   </tr> 
   <tr> 
-   <td>Maxhöjd</td>
+   <td>Maximal höjd</td>
    <td>2048</td>
    <td>Maximal höjd för den genererade förhandsvisningsåtergivningen, i pixlar.<br/> </td>
   </tr> 

@@ -4,14 +4,18 @@ seo-title: Best Practices for Performance Testing
 description: I den här artikeln beskrivs de övergripande strategier och metoder som används för prestandatestning samt några av de verktyg som är tillgängliga som hjälp i processen.
 seo-description: This article outlines the overall strategies and methodologies used for performance testing as well as some of the tools that are available to assist in the process.
 exl-id: 8d0863be-108d-49d8-8243-ea5e404ed64c
-source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1892'
+source-wordcount: '1928'
 ht-degree: 0%
 
 ---
 
 # Bästa metoder för prestandatestning{#best-practices-for-performance-testing}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Introduktion {#introduction}
 
@@ -43,7 +47,7 @@ Många prestandaproblem uppstår inte förrän systemet är hårt belastat. Goda
 
 Innan prestandatestning börjar måste icke-funktionella krav ställas för att specificera belastnings- och svarstider. Om du migrerar från ett befintligt system bör du se till att svarstiden liknar dina aktuella produktionsvärden. För belastning är det bäst att ta den aktuella toppbelastningen och dubbla den. Detta säkerställer att webbplatsen kan fortsätta fungera som den ska.
 
-### Verktyg {#tools}
+### verktyg {#tools}
 
 Det finns många kommersiellt tillgängliga verktyg för prestandatestning på marknaden. När du kör ett lastgenereringsverktyg är det viktigt att se till att de datorer som utför testerna har tillräcklig nätverksbandbredd. I annat fall genereras ingen ytterligare belastning i den miljö som testas när provningsmaskinen når anslutningens gränser.
 

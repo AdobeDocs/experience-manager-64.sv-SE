@@ -1,40 +1,43 @@
 ---
 title: Felsöka AEM vid redigering
-seo-title: Felsöka AEM vid redigering
+seo-title: Troubleshooting AEM when Authoring
 description: I följande avsnitt beskrivs några problem som du kan stöta på när du använder AEM, tillsammans med förslag på hur du felsöker dem.
-seo-description: I följande avsnitt beskrivs några problem som du kan stöta på när du använder AEM, tillsammans med förslag på hur du felsöker dem.
+seo-description: The following section covers some issues that you might encounter when using AEM, together with suggestions on how to troubleshoot them.
 uuid: eb95e5ba-1eed-4ffb-80c1-9b8468820c22
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 9b492b17-9029-46ae-9dc0-bb21e6b484df
-translation-type: tm+mt
-source-git-commit: 02aee2202a570320cd7eb40c2e566d886af4e163
+exl-id: 09409631-c579-4b1f-9193-1348896f6a09
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '466'
 ht-degree: 6%
 
 ---
 
+# Felsöka AEM vid redigering{#troubleshooting-aem-when-authoring}
 
-# Felsökning AEM vid redigering{#troubleshooting-aem-when-authoring}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 I följande avsnitt beskrivs några problem som du kan stöta på när du använder AEM, tillsammans med förslag på hur du felsöker dem.
 
 >[!NOTE]
 >
->När du får problem är det också värt att kontrollera listan [Kända fel](/help/release-notes/known-issues.md) för din instans (release- och service packs).
+>När du får problem är det också värt att kontrollera listan med [Kända fel](/help/release-notes/known-issues.md) för din instans (release- och servicepaket).
 
 >[!NOTE]
 >
 >Användare som har administratörsbehörighet och som vill felsöka problem med AEM kan använda felsökningsmetoderna som beskrivs i [AEM (för administratörer)](/help/sites-administering/troubleshoot.md). Om du inte har tillräcklig behörighet kontaktar du systemadministratören om felsökning AEM.
 
-## Den gamla sidversionen finns fortfarande på den publicerade webbplatsen {#old-page-version-still-on-published-site}
+## Gammal sidversion finns fortfarande på publicerad webbplats {#old-page-version-still-on-published-site}
 
 * **Problem**:
 
-   * Du har ändrat en sida och replikerat sidan till publiceringsplatsen, men den *gamla* versionen av sidan visas fortfarande på publiceringsplatsen.
+   * Du har gjort ändringar på en sida och replikerat sidan till publiceringsplatsen, men *gammal* versionen av sidan visas fortfarande på publiceringswebbplatsen.
 
 * **Orsak**:
 
@@ -45,7 +48,7 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
    * Här finns olika möjligheter:
    * Bekräfta att sidan har replikerats korrekt. Kontrollera sidstatus och, om det behövs, status för replikeringskön.
    * Rensa cacheminnet i den lokala webbläsaren och öppna sidan igen.
-   * Lägg till `?` i slutet av sid-URL:en. Till exempel:
+   * Lägg till `?` till slutet av sid-URL:en. Till exempel:
 
       `http://localhost:4502/sites.html/content?`
 
@@ -53,7 +56,7 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
 
    * Kontakta systemadministratören om det finns problem med replikeringsköerna.
 
-## Sidsparken är inte synlig {#sidekick-not-visible}
+## Sidekick inte synlig {#sidekick-not-visible}
 
 * **Problem**:
 
@@ -67,15 +70,15 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
 
    * Logga ut från den aktuella sessionen och logga in igen. Sparken återgår till standardpositionen.
 
-## Sök och ersätt - alla förekomster har inte ersatts {#find-replace-not-all-instances-are-replaced}
+## Sök och ersätt - alla förekomster ersätts inte {#find-replace-not-all-instances-are-replaced}
 
 * **Problem:**
 
-   * När du använder alternativet **Sök och ersätt** kan det hända att inte alla förekomster av `find`-termen ersätts på en sida.
+   * När du använder **Sök och ersätt** kan det hända att inte alla instanser av `find` termen ersätts på en sida.
 
 * **Orsak**:
 
-   * Funktionen för **Sök och ersätt** beror på hur innehållet sparas och om det går att söka efter det. En bloggtext sparas t.ex. i egenskapen `jcr:text` som inte är konfigurerad att genomsökas. Standardomfånget för sök- och ersättningsservern omfattar följande egenskaper:
+   * Möjligheten att **Sök och ersätt** beror på hur innehållet sparas och om det går att söka efter det. En bloggtext sparas till exempel i `jcr:text` som inte är konfigurerad att genomsökas. Standardomfånget för sök- och ersättningsservern omfattar följande egenskaper:
 
       * `jcr:title`
       * `jcr:description`
@@ -84,7 +87,6 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
 
 * **Lösning**:
 
-   * Dessa definitioner kan ändras med konfigurationen för **Day CQ WCM Find Replace Servlet** med **webbkonsolen**; till exempel
+   * Dessa definitioner kan ändras med konfigurationen för **Dag CQ WCM Sök Ersätt server** med **Webbkonsol**; till exempel
 
       `http://localhost:4502/system/console/configMgr`
-

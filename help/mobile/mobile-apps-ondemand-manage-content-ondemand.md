@@ -1,24 +1,27 @@
 ---
 title: Hantera innehåll
-seo-title: Hantera innehåll
+seo-title: Managing Content
 description: Innehållshanteringsåtgärder är byggstenar som används för att skapa och hantera innehåll i ett program. Följ den här sidan om du vill veta mer.
-seo-description: Innehållshanteringsåtgärder är byggstenar som används för att skapa och hantera innehåll i ett program. Följ den här sidan om du vill veta mer.
+seo-description: Content Management actions are the building blocks that help to create and manage content within an application. Follow this page to learn more.
 uuid: ab680836-133b-45b9-913c-e721b7e9fc04
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: 89fc3701-0472-4629-95d3-da577581a0f0
-translation-type: tm+mt
-source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+exl-id: 2721826e-fbe8-461a-9d44-a26a099005b5
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '315'
 ht-degree: 0%
 
 ---
 
-
 # Hantera innehåll{#managing-content}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 >[!NOTE]
 >
@@ -31,8 +34,8 @@ Innehållshanteringsåtgärder är byggstenar som används för att skapa och ha
 Om du tänker på en nättidskrift innehåller huvudinnehållet artiklar, annonser och omslag. Tre huvudtyper av mobilt on demand-innehåll kan skapas i AEM:
 
 * **Artiklar**: text som bygger på bilder för att förmedla information
-* **banners:** vanligtvis grafiska marknadsföringslänkar
-* **samlingar:** representerar en väldefinierad  ** bucketfylld med innehåll som artiklar eller banners som passar omslagets tema
+* **Banderoller:** vanligtvis grafiska marknadsföringslänkar
+* **Samlingar:** representerar en väldefinierad *bucket* fyllda med innehåll som artiklar eller banderoller som passar omslagets tema
 
 * **Delade resurser:** tillåter återanvändning eller delning av gemensamma delar mellan artiklar
 
@@ -52,7 +55,7 @@ I följande avsnitt beskrivs hur du skapar och hanterar innehåll: artiklar, ban
 
 >[!NOTE]
 >
->Vanligtvis bör du göra preflight innan du publicerar innehåll. Mer information finns i [Förhandsgranska med Preflight](/help/mobile/aem-mobile-manage-ondemand-services.md).
+>Vanligtvis bör du göra preflight innan du publicerar innehåll. Se [Förhandsgranska med Preflight](/help/mobile/aem-mobile-manage-ondemand-services.md) för mer information.
 
 ### Ytterligare resurser {#additional-resources}
 
@@ -60,4 +63,3 @@ Mer information om roller och ansvar för en administratör och utvecklare finns
 
 * [Utveckla AEM för AEM Mobile On-demand Services](/help/mobile/aem-mobile-on-demand.md)
 * [Administrera innehåll för användning av AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)
-

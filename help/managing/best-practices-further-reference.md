@@ -10,14 +10,18 @@ topic-tags: managing-checklist
 content-type: reference
 discoiquuid: 6fc2751e-f42a-4519-bc8c-695057f21b69
 exl-id: d561bb0a-352f-4be2-95ed-32dd1e2b4019
-source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '3741'
+source-wordcount: '3777'
 ht-degree: 0%
 
 ---
 
 # Checklista - ytterligare referens{#the-checklist-further-reference}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 På denna sida finns mer information för att gå närmare igenom och/eller förstärka de dokument och principer som omfattas av [Hantera projekt - checklista för bästa praxis](/help/managing/best-practices.md).
 

@@ -1,8 +1,8 @@
 ---
 title: Söka efter formulär och resurser
-seo-title: Söka efter formulär och resurser
+seo-title: Searching for forms and assets
 description: Du kan söka efter formulär och resurser i AEM med AEM. Med grundläggande och avancerad sökning kan du snabbt hitta dina resurser.
-seo-description: Du kan söka efter formulär och resurser i AEM med AEM. Med grundläggande och avancerad sökning kan du snabbt hitta dina resurser.
+seo-description: You can search forms and assets in your AEM instance using AEM search. Basic and advanced search allows you to quickly locate your assets.
 uuid: db6970aa-910a-4190-9790-9ffbbdc8adcc
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,26 +10,30 @@ topic-tags: forms-manager
 discoiquuid: f7f19679-cfc2-4ac0-9a26-685fad09276f
 role: Admin
 exl-id: c6e5c19a-9d93-470f-916e-7ef06c3de141
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '720'
 ht-degree: 0%
 
 ---
 
 # Söka efter formulär och resurser {#searching-for-forms-and-assets}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 Du kan söka efter formulär eller formulärresurser med hjälp av en textsträng eller textsträng tillsammans med jokertecken. Du kan även begränsa sökningen med hjälp av de villkor som finns i olika kategorier på sökpanelen.
 
 När du markerar ett eller flera villkor och även anger en textsträng, returneras skärningspunkten för texten och villkoren som sökresultat. Sökresultaten är lika bra som de metadata för formulär och resurser som finns.
 
-Klicka på ![aem6forms_search](assets/aem6forms_search.png) för att visa eller dölja sökpanelen.
+Klicka ![aem6forms_search](assets/aem6forms_search.png), om du vill visa eller dölja sökpanelen.
 
 ## Grundläggande sökning {#basic-search}
 
 En grundläggande sökning är standardsökningen, som körs utan att du behöver ange några filter. En textsökning av metadataegenskaper utförs av AEM Forms.
 
-Om du vill utföra en grundläggande sökning anger du sökfrågan i textfältet och trycker på Retur. Du kan också ange jokertecknet (&amp;ast;) så att det matchar ett valfritt antal tecken.
+Om du vill utföra en grundläggande sökning anger du sökfrågan i textfältet och trycker på Retur. Du kan även ange jokertecknet (&amp;ast;) så att det matchar ett valfritt antal tecken.
 
 Adobe Experience Manager söker efter den angivna texten i metadataegenskaperna och returnerar motsvarande resultat. Om du skriver mer än ett ord matchar sökningen hela texten.
 
@@ -37,10 +41,10 @@ Observera följande om grundsökningen:
 
 * Sökningen utförs med hjälp av egenskaperna för metadata för formulär och resurser.
 * Om du skriver mer än ett ord matchar sökningen hela texten.
-* Sökningen är inte skiftlägeskänslig. När du till exempel skriver `geometrixx` visas resurser med rubrikerna `Geometrixx`, `GEOMETRIXX` och `GeoMetRixx` i sökresultatet.
+* Sökningen är inte skiftlägeskänslig. När du t.ex. skriver `geometrixx`, resurser med titlar `Geometrixx`, `GEOMETRIXX`och `GeoMetRixx` visas i sökresultaten.
 
-* Partiella matchningar av ett ord stöds inte. Använd &amp;ast om du vill söka med partiella strängar; jokertecken. Om sökfrågan däremot matchar ett fullständigt ord visas motsvarande formulär eller resurs.
-* Extra blanksteg bevaras och trimmas inte under sökningen. `My form` är till exempel inte samma sökfråga som `My form`.
+* Partiella matchningar av ett ord stöds inte. Använd &amp;ast; om du vill söka med partiella strängar jokertecken. Om sökfrågan däremot matchar ett fullständigt ord visas motsvarande formulär eller resurs.
+* Extra blanksteg bevaras och trimmas inte under sökningen. Till exempel: `My form` är inte samma sökfråga som `My form`.
 
 * Om data- och visningsvärdena för fälten i metadataegenskaperna är olika kan du inte använda visningsvärden som sökparametrar. Du kan till exempel inte söka baserat på en status, till exempel Ändrad eller Publicerad, eftersom dessa egenskaper lagras i ett annat format.
 
@@ -56,7 +60,7 @@ Genom att använda filtret för resurssökväg kan du begränsa sökresultaten t
 
 ### Ändrad tillgång {#asset-modification}
 
-Välj ett av följande alternativ om du vill söka bland alla resurser som har ändrats inom en viss tidsperiod.
+Välj något av följande alternativ om du vill söka bland alla resurser som har ändrats inom en viss tidsperiod.
 
 | **Alternativ** | **Beskrivning** |
 |---|---|
@@ -69,7 +73,7 @@ Välj ett av följande alternativ om du vill söka bland alla resurser som har �
 
 Du kan söka efter resurser med hjälp av någon av följande statusar:
 
-* **Publicerat**: Sök efter alla resurser som har publicerats och inte ändrats efter publiceringen.
+* **Publicerad**: Sök efter alla resurser som har publicerats och inte ändrats efter publiceringen.
 
 * **Opublicerad**: Sök efter alla resurser som aldrig publicerats.
 
@@ -90,7 +94,7 @@ Du kan välja valfritt antal resurstyper. Sökningen returnerar en union av alla
    <td>Sök i alla formulärmallar.<br /> </td> 
   </tr>
   <tr>
-   <td>PDF-formulär</td> 
+   <td>PDF Form</td> 
    <td>Sök i alla PDF-dokument.</td> 
   </tr>
   <tr>
@@ -98,12 +102,12 @@ Du kan välja valfritt antal resurstyper. Sökningen returnerar en union av alla
    <td>Sök i alla dokument.</td> 
   </tr>
   <tr>
-   <td>Anpassad form<br /> </td> 
+   <td>Adaptiv form<br /> </td> 
    <td>Sök i alla anpassade formulär.</td> 
   </tr>
   <tr>
    <td>Resurs</td> 
-   <td>Sök i alla resurser.<br /> </td> 
+   <td>Sök bland alla resurser.<br /> </td> 
   </tr>
  </tbody>
 </table>

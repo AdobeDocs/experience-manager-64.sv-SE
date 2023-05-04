@@ -5,14 +5,18 @@ contentOwner: AG
 feature: Tagging, Metadata
 role: Architect, Leader
 exl-id: 05bbf89a-4cf5-49bb-aea8-a585c641eda2
-source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1446'
 ht-degree: 0%
 
 ---
 
 # Hantera metadata för dina digitala resurser {#managing-metadata-for-digital-assets}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 [!DNL Adobe Experience Manager Assets] sparar metadata för varje resurs. Det gör det enklare att kategorisera och ordna resurser och det hjälper personer som letar efter en viss resurs. Med möjlighet att extrahera metadata från filer som överförts till [!DNL Experience Manager Assets], integreras metadatahanteringen med det kreativa arbetsflödet. Med möjligheten att behålla och hantera metadata med dina resurser kan du automatiskt ordna och bearbeta resurser baserat på deras metadata.
 
@@ -151,7 +155,7 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 
 * Exif - Teknisk information från kameran, inklusive GPS-position.
 * CRS - [!DNL Camera Raw] schema.
-* `iptc4xmpCore` and `iptc4xmpExt`.
+* `iptc4xmpCore` och `iptc4xmpExt`.
 * TIFF - bildmetadata (inte bara för TIFF).
 
 ### Utskriftsspecifika metadata {#print-specific-metadata}

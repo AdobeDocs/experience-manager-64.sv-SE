@@ -1,26 +1,29 @@
 ---
 title: Integrera landningssidor med Adobe Analytics
-seo-title: Integrera landningssidor med Adobe Analytics
+seo-title: Integrating Landing Pages with Adobe Analytics
 description: Lär dig integrera landningssidor med Adobe Analytics.
-seo-description: Lär dig integrera landningssidor med Adobe Analytics.
+seo-description: Learn how to integrate landing pages with Adobe Analytics.
 uuid: 8f6672d1-497f-4ccb-b3cc-f6120fc467ba
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: 8ae7ccec-489b-4d20-ac56-6101402fb18a
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 2923ae94-375a-4c44-a08f-f992eb08000a
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '412'
 ht-degree: 0%
 
 ---
 
-
 # Integrera landningssidor med Adobe Analytics{#integrating-landing-pages-with-adobe-analytics}
 
-AEM har integrerat landningssidornas lösning med [Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst) genom att använda följande CTA-komponenter (call-to-action):
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
+AEM har integrerat landningssidorna med [Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst) genom att använda följande CTA-komponenter (Call-to-action):
 
 1. Klicka genom komponent
 1. Komponent för grafisk länk
@@ -29,11 +32,11 @@ Dessa komponenter visar vissa attribut som kan mappas via Adobe Analytics-variab
 
 ## Förutsättningar {#prerequisites}
 
-Adobe rekommenderar att du går igenom [den befintliga AEM-Adobe Analytics-integreringen](/help/sites-administering/adobeanalytics.md) för att förstå hur den här integreringen fungerar.
+Adobe rekommenderar att du går igenom [integrering med AEM-Adobe Analytics](/help/sites-administering/adobeanalytics.md) för att förstå hur den här integreringen fungerar.
 
 ## Komponenter tillgängliga för mappning {#components-available-for-mapping}
 
-I AEM kan **Call to Action**-komponenterna - **ClickThroughLink** och **GraphicalLink** - som visas här i sidosparken mappas till Adobe Analytics-variabler.
+AEM **Utlysning** komponenter - **ClickThroughLink** och **GraphicalLink** - som visas här i sidosparken kan mappas till Adobe Analytics-variabler.
 
 ![chlimage_1-21](assets/chlimage_1-21.jpeg)
 
@@ -90,9 +93,8 @@ Så här mappar du landningssidans komponenter till Adobe Analytics:
 </table>
 
 1. Mappa dessa exponerade attribut med eventuella Adobe Analytics-variabler från innehållssökaren. Ramverket är nu klart att användas.
-1. Nu kan du skapa en ny landningssida eller öppna en befintlig landningssida med befintliga CTA-komponenter och klicka på fliken **Cloud Services** i **Sidegenskaper** från sidosparken (i det pekoptimerade användargränssnittet väljer du **Öppna egenskaper** och klickar på **Cloud Services**) och konfigurera ramverket att använda med landningssidan . Välj ramverket i listrutan.
+1. Nu kan du skapa en ny landningssida eller öppna en befintlig landningssida med befintliga CTA-komponenter och klicka på **Cloud Services** tabba in **Sidegenskaper** från sidosparken (i det pekoptimerade användargränssnittet väljer du **Öppna egenskaper** och klicka **Cloud Services**) och konfigurera ramverket som ska användas med landningssidan. Välj ramverket i listrutan.
 
    ![chlimage_1-25](assets/chlimage_1-25.png)
 
 1. När du har konfigurerat ramverket med landningssidan kan du nu använda de instrumenterade komponenterna och alla klick på CTA registreras i Adobe Analytics.
-

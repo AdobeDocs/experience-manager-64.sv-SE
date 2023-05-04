@@ -1,24 +1,27 @@
 ---
 title: CRX2OAK-migreringsverktyg
-seo-title: CRX2OAK-migreringsverktyg
+seo-title: CRX2OAK Migration Tool
 description: Versionsinformation om Adobe Experience Manager 6.4 CRX2OAK-migreringsverktyget.
-seo-description: Versionsinformation om Adobe Experience Manager 6.4 CRX2OAK-migreringsverktyget.
+seo-description: Release notes specific to the Adobe Experience Manager 6.4 CRX2OAK Migration tool.
 uuid: 1b582faf-2dc6-41a2-9419-7e82347f9d6c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 content-type: reference
 discoiquuid: cfdaceac-a5b3-4070-ad4c-f1457b1e2e4b
-translation-type: tm+mt
-source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
+exl-id: 441c8ba0-f8b2-4c2c-b7be-cfdad9e1e498
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
 
-
 # CRX2OAK-migreringsverktyg {#crx-oak-migration-tool}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Lista över ändringar och korrigeringar {#list-of-changes-and-fixes}
 
@@ -49,7 +52,7 @@ ht-degree: 0%
 
 * Uppgradera Oak-version till 1.4.1
 * OAK-3846 / GRANITE-10748 Byt namn på SNS-noder om de bryter mot nodtypsbegränsningar
-* OAK-3910 / GRANITE-10730 Migrerande nod som ärver från `mix:versionable` utan versionshistorik
+* OAK-3910 / GRANITE-10730 Migrera nod från `mix:versionable` utan versionshistorik
 * OAK-4128 / GRANITE-11757 `RepositorySidegrade` kopierar inte rotnodegenskaper
 
 ### Version 1.3.4 (januari 2016) {#version-january}

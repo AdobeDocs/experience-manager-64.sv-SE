@@ -10,14 +10,18 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 358d32bc-be5f-4500-9637-525d35cdbeff
 exl-id: 269eee08-5fca-4621-a56e-93db9361fa64
-source-git-commit: 1c9da35f65b6b9edacc3d5529ee80e7be94495d2
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '2001'
+source-wordcount: '2037'
 ht-degree: 11%
 
 ---
 
 # Hantera aktiviteter{#managing-activities}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Med aktivitetskonsolen kan du skapa, ordna och hantera marknadsföring [verksamhet](/help/sites-authoring/personalization.md#activities) av era varumärken:
 

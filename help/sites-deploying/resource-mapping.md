@@ -1,8 +1,8 @@
 ---
 title: Resursmappning
-seo-title: Resursmappning
+seo-title: Resource Mapping
 description: Lär dig hur du definierar omdirigeringar, tillfälliga URL:er och virtuella värdar för AEM genom att använda resursmappning.
-seo-description: Lär dig hur du definierar omdirigeringar, tillfälliga URL:er och virtuella värdar för AEM genom att använda resursmappning.
+seo-description: Learn how to define redirects, vanity URLs and virtual hosts for AEM by using resource mapping.
 uuid: 33de7e92-8144-431b-badd-e6a667cd78e1
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,25 +10,28 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: ddfacc63-1840-407e-8802-3730009c84f0
 feature: Configuring
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 81dddbab-1a9e-49ee-b2a5-a8e4de3630d1
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
 
-
 # Resursmappning{#resource-mapping}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 Resursmappning används för att definiera omdirigeringar, tillfälliga URL:er och virtuella värdar för AEM.
 
 Du kan till exempel använda dessa mappningar för:
 
-* Använd `/content` som prefix för alla förfrågningar så att den interna strukturen döljs för besökarna på webbplatsen.
-* Definiera en omdirigering så att alla begäranden till `/content/en/gateway`-sidan på webbplatsen omdirigeras till `https://gbiv.com/`.
+* Prefix för alla begäranden med `/content` så att den interna strukturen döljs för besökarna på webbplatsen.
+* Definiera en omdirigering så att alla förfrågningar till `/content/en/gateway` webbplatsen omdirigeras till `https://gbiv.com/`.
 
-En möjlig HTTP-mappning [prefix för alla begäranden till localhost:4503 med /content](#configuring-an-internal-redirect-to-content). En sådan här mappning kan användas för att dölja den interna strukturen för besökarna på webbplatsen så som den tillåter:
+En möjlig HTTP-mappning [prefix all requests to localhost:4503 with /content](#configuring-an-internal-redirect-to-content). En sådan här mappning kan användas för att dölja den interna strukturen för besökarna på webbplatsen så som den tillåter:
 
 `localhost:4503/content/geometrixx/en/products.html`
 
@@ -44,31 +47,31 @@ eftersom mappningen automatiskt lägger till prefixet `/content` till `/geometri
 
 >[!NOTE]
 >
->Mer information finns i Samling-dokumentationen och [Mappningar för resursupplösning](https://sling.apache.org/site/resources.html) och [Resurser](https://sling.apache.org/site/mappings-for-resource-resolution.html).
+>Läs Sling-dokumentationen och [Mappningar för resursupplösning](https://sling.apache.org/site/resources.html) och [Resurser](https://sling.apache.org/site/mappings-for-resource-resolution.html) för ytterligare information.
 
 ## Visa mappningsdefinitioner {#viewing-mapping-definitions}
 
 Mappningarna består av två listor som JCR-resurslösaren utvärderar (högst upp) för att hitta en matchning.
 
-Dessa listor kan visas (tillsammans med konfigurationsinformation) under alternativet **JCR ResourceResolver** i Felix-konsolen. till exempel `https://<host>:<port>/system/console/jcrresolver`:
+De här listorna kan visas (tillsammans med konfigurationsinformation) under **JCR ResourceResolver** Valet av Felix-konsolen. till exempel `https://<host>:<port>/system/console/jcrresolver`:
 
 * Konfiguration
 
-   Visar den aktuella konfigurationen (enligt definition för [Resurslösaren för Apache Sling](/help/sites-deploying/osgi-configuration-settings.md).
+   Visar den aktuella konfigurationen (enligt definition för [Resurslösare för Apache Sling](/help/sites-deploying/osgi-configuration-settings.md).
 
 * Konfigurationstest
 
-   På så sätt kan du ange en URL eller resurssökväg. Klicka på **Lös** eller **Karta** för att bekräfta hur systemet ska omforma posten.
+   På så sätt kan du ange en URL eller resurssökväg. Klicka **Lös** eller **Karta** för att bekräfta hur systemet ska omforma posten.
 
-* **Matcha**
-mappningsposterListan med poster som används av metoderna ResourceResolver.resolve för att mappa URL:er till Resources.
+* **Matcha mappningsposter**
+Listan över poster som används av metoderna ResourceResolver.resolve för att mappa URL:er till Resources.
 
-* **Mappa**
-mappningsposterListan med poster som används av metoderna ResourceResolver.map för att mappa resurssökvägar till URL:er.
+* **Mappa mappningsposter**
+Listan över poster som används av metoderna ResourceResolver.map för att mappa resurssökvägar till URL:er.
 
 De två listorna visar olika poster, inklusive de som definieras som standardvärden av programmen. Dessa syftar ofta till att förenkla URL:er för användaren.
 
-Listparet är ett **mönster**, ett reguljärt uttryck som matchar begäran, med en **ersättning** som definierar den omdirigering som ska skjutas upp.
+Listparet a **Mönster**, ett reguljärt uttryck som matchar begäran, med **Ersättning** som definierar den omdirigering som ska skjutas in.
 
 Till exempel:
 
@@ -98,13 +101,13 @@ I en standardinstallation av AEM finns mappen:
 
 `/etc/map/http`
 
-Detta är den struktur som används för att definiera mappningar för HTTP-protokollet. Andra mappar ( `sling:Folder`) kan skapas under `/etc/map` för alla andra protokoll som du vill mappa.
+Detta är den struktur som används för att definiera mappningar för HTTP-protokollet. Andra mappar ( `sling:Folder`) kan skapas under `/etc/map` för andra protokoll som du vill mappa.
 
 ### Konfigurera en intern omdirigering till /content {#configuring-an-internal-redirect-to-content}
 
 Så här skapar du en mappning som prefixar en begäran till http://localhost:4503/ med `/content`:
 
-1. Navigera till `/etc/map/http` med CRXDE.
+1. Använda CRXDE navigera till `/etc/map/http`.
 
 1. Skapa en ny nod:
 
@@ -114,8 +117,8 @@ Så här skapar du en mappning som prefixar en begäran till http://localhost:45
 
    * **Namn** `localhost_any`
 
-1. Klicka på **Spara alla**.
-1. **Lägg** till följande egenskaper för den här noden:
+1. Klicka **Spara alla**.
+1. **Lägg till** följande egenskaper för den här noden:
 
    * **Namn** `sling:match`
 
@@ -127,7 +130,7 @@ Så här skapar du en mappning som prefixar en begäran till http://localhost:45
       * **Värde** `/content/`
 
 
-1. Klicka på **Spara alla**.
+1. Klicka **Spara alla**.
 
 Detta kommer att hantera en begäran som:\
 `localhost:4503/geometrixx/en/products.html`\
@@ -137,9 +140,8 @@ hade blivit ombedd.
 
 >[!NOTE]
 >
->Mer information om tillgängliga sling-egenskaper och hur de kan konfigureras finns i [Resources](https://sling.apache.org/site/mappings-for-resource-resolution.html) i Sling Documentation.
+>Se [Resurser](https://sling.apache.org/site/mappings-for-resource-resolution.html) I Sling Documentation finns mer information om vilka snedsättningsegenskaper som finns och hur de kan konfigureras.
 
 >[!NOTE]
 >
->Du kan använda `/etc/map.publish` för att hålla konfigurationerna för publiceringsmiljön. Dessa måste sedan replikeras och den nya platsen ( `/etc/map.publish`) konfigureras för **mappningsplatsen** för [Apache Sling Resource Resolver](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver) för publiceringsmiljön.
-
+>Du kan använda `/etc/map.publish` för att lagra konfigurationerna för publiceringsmiljön. Dessa måste sedan replikeras och den nya platsen ( `/etc/map.publish`) konfigurerad för **Mappningsplats** i [Resurslösare för Apache Sling](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver) av publiceringsmiljön.

@@ -10,14 +10,18 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 5faf6ee5-9242-48f4-87a8-ada887a3be1e
 exl-id: 1e329725-538a-4058-8832-4eba036f7972
-source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1684'
 ht-degree: 0%
 
 ---
 
 # Konfigurera LDAP med AEM 6 {#configuring-ldap-with-aem}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 LDAP **L** ightweight **D** katalog **A**&#x200B;åtkomst **P** Protokoll) används för åtkomst till centraliserade katalogtjänster. Detta minskar den arbetsinsats som krävs för att hantera användarkonton eftersom de kan nås av flera program. En sådan LDAP-server är Active Directory. LDAP används ofta för att uppnå enkel inloggning, vilket gör att en användare kan få åtkomst till flera program efter inloggning en gång.
 

@@ -1,29 +1,32 @@
 ---
 title: Skapa en anpassad verktygsfältsåtgärd
-seo-title: Skapa en anpassad verktygsfältsåtgärd
+seo-title: Creating a custom toolbar action
 description: Formulärutvecklare kan skapa anpassade verktygsfältsåtgärder för anpassningsbara formulär i AEM Forms. Med anpassade åtgärder kan formulärförfattare tillhandahålla fler arbetsflöden och alternativ till sina slutanvändare.
-seo-description: Formulärutvecklare kan skapa anpassade verktygsfältsåtgärder för anpassningsbara formulär i AEM Forms. Med anpassade åtgärder kan formulärförfattare tillhandahålla fler arbetsflöden och alternativ till sina slutanvändare.
+seo-description: Form developers can create custom toolbar actions for adaptive forms in AEM Forms. Using custom actions form authors can provide more workflows and options to their end users.
 uuid: 6761f389-1baa-4a59-a6e0-0f86f70fc692
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: customization
 discoiquuid: b80a2bfe-6f57-4229-a9ee-1ec87f3c3306
-translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+exl-id: bb0abe28-843a-4195-afd5-5ee7f0a279be
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
 
+# Skapa en anpassad verktygsfältsåtgärd {#creating-a-custom-toolbar-action}
 
-# Skapa en anpassad verktygsfältåtgärd {#creating-a-custom-toolbar-action}
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Förutsättningar {#prerequisite}
 
-Innan du skapar en anpassad verktygsfältåtgärd bör du känna till [Använda bibliotek på klientsidan](/help/sites-developing/clientlibs.md) och [Utveckla med CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+Innan du skapar en anpassad verktygsfältsåtgärd bör du känna till [Använda bibliotek på klientsidan](/help/sites-developing/clientlibs.md) och [Utveckla med CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
-## Vad är en åtgärd {#what-is-an-action-br}?
+## Vad är en åtgärd? {#what-is-an-action-br}
 
 Ett adaptivt formulär har ett verktygsfält där formulärförfattaren kan konfigurera en uppsättning alternativ. Dessa alternativ definieras som åtgärder för det adaptiva formuläret. Klicka på knappen Redigera i verktygsfältet för panelen för att ange vilka åtgärder som kan användas i adaptiva formulär.
 
@@ -31,28 +34,28 @@ Ett adaptivt formulär har ett verktygsfält där formulärförfattaren kan konf
 
 Förutom den uppsättning åtgärder som finns som standard kan du skapa anpassade åtgärder i verktygsfältet. Du kan till exempel lägga till en åtgärd som gör att användaren kan granska alla anpassningsbara formulärfält innan ett formulär skickas.
 
-## Steg för att skapa en anpassad åtgärd i en adaptiv form {#steps}
+## Steg för att skapa en anpassad åtgärd i ett anpassat formulär {#steps}
 
 Följande steg visar hur du skapar en anpassad verktygsfältåtgärd och hur du skapar en knapp där slutanvändare kan granska alla anpassningsbara formulärfält innan de skickar in ett ifyllt formulär.
 
-1. Alla standardåtgärder som stöds av adaptiva formulär finns i mappen `/libs/fd/af/components/actions`. I CRXDE kopierar du noden `fileattachmentlisting` från `/libs/fd/af/components/actions/fileattachmentlisting` till `/apps/customaction`.
+1. Alla standardåtgärder som stöds av adaptiva formulär finns i `/libs/fd/af/components/actions` mapp. I CRXDE kopierar du `fileattachmentlisting` nod från `/libs/fd/af/components/actions/fileattachmentlisting` till `/apps/customaction`.
 
-1. När du har kopierat noden till mappen `apps/customaction` byter du namn på noden till `reviewbeforesubmit`. Ändra även egenskaperna `jcr:title` och `jcr:description` för noden.
+1. Efter kopiering av noden till `apps/customaction` mapp, ändra namn på noden till `reviewbeforesubmit`. Ändra även `jcr:title` och `jcr:description` egenskaper för noden.
 
-   Egenskapen `jcr:title` innehåller namnet på åtgärden som visas i verktygsfältsdialogrutan. Egenskapen `jcr:description` innehåller mer information som visas när en användare håller pekaren över åtgärden.
+   The `jcr:title` -egenskapen innehåller namnet på den åtgärd som visas i verktygsfältsdialogrutan. The `jcr:description` -egenskapen innehåller mer information som visas när en användare håller pekaren över åtgärden.
 
    ![Hierarki med noder för anpassning av verktygsfältet](assets/action3.png)
 
-1. Välj noden `cq:template` i noden `reviewbeforesubmit`. Kontrollera att värdet för egenskapen `guideNodeClass` är `guideButton` och ändra egenskapen `jcr:title` därefter.
-1. Ändra type-egenskapen i noden `cq:Template`. I det aktuella exemplet ändrar du type-egenskapen till button.
+1. Välj `cq:template` nod i `reviewbeforesubmit` nod. Se till att värdet för `guideNodeClass` egenskapen är `guideButton` och ändra `jcr:title` egenskapen därefter.
+1. Ändra type-egenskapen i `cq:Template` nod. I det aktuella exemplet ändrar du type-egenskapen till button.
 
-   Typvärdet läggs till som en CSS-klass i den genererade HTML-koden för komponenten. Användare kan använda den CSS-klassen för att formatera sina åtgärder. Standardformatet för både mobila och stationära enheter finns för knappar, skicka, återställa och spara typvärden.
+   Typvärdet läggs till som en CSS-klass i det genererade HTML för komponenten. Användare kan använda den CSS-klassen för att formatera sina åtgärder. Standardformatet för både mobila och stationära enheter finns för knappar, skicka, återställa och spara typvärden.
 
 1. Välj den anpassade åtgärden i verktygsfältet för redigering av anpassningsbara formulär. En granskningsknapp visas i panelens verktygsfält.
 
-   ![Anpassad åtgärd är tillgänglig i ](assets/custom_action_available_in_toolbar.png) ![verktygsfältetVisa den anpassade verktygsfältsåtgärden](assets/action7.png)
+   ![Anpassad åtgärd är tillgänglig i verktygsfältet](assets/custom_action_available_in_toolbar.png) ![Visa åtgärden för det anpassade verktygsfältet](assets/action7.png)
 
-1. Om du vill lägga till funktioner till knappen Granska lägger du till JavaScript- och CSS-kod och kod på serversidan i filen init.jsp, som finns i noden `reviewbeforesubmit`.
+1. Om du vill lägga till funktioner till knappen Granska lägger du till JavaScript- och CSS-kod och kod på serversidan i filen init.jsp som finns i `reviewbeforesubmit` nod.
 
    Lägg till följande kod i `init.jsp`.
 
@@ -112,7 +115,7 @@ Följande steg visar hur du skapar en anpassad verktygsfältåtgärd och hur du 
    </div><!-- /.modal -->
    ```
 
-   Lägg till följande kod i `ReviewBeforeSubmit.js`-filen.
+   Lägg till följande kod i `ReviewBeforeSubmit.js` -fil.
 
    ```
    /*anonymous function to handle show of review before submit view */
@@ -147,7 +150,7 @@ Följande steg visar hur du skapar en anpassad verktygsfältåtgärd och hur du 
    });
    ```
 
-   Lägg till följande kod i filen `ReviewBeforeSubmit.css`.
+   Lägg till följande kod i `ReviewBeforeSubmit.css` -fil.
 
    ```css
    .modal-list .reviewlabel {
@@ -180,7 +183,7 @@ Följande steg visar hur du skapar en anpassad verktygsfältåtgärd och hur du 
 
    >[!NOTE]
    >
-   >Biblioteket `GuideBridge` har inte lästs in i redigeringsläge. Den här anpassade åtgärden fungerar därför inte i redigeringsläget.
+   >The `GuideBridge` biblioteket har inte lästs in i redigeringsläge. Den här anpassade åtgärden fungerar därför inte i redigeringsläget.
 
    ![Demonstration av åtgärden för knappen för anpassad granskning](assets/action9.png)
 

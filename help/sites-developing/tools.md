@@ -1,37 +1,40 @@
 ---
 title: Testnings- och spårningsverktyg
-seo-title: Testnings- och spårningsverktyg
+seo-title: Testing and Tracking Tools
 description: AEM tillhandahåller ett ramverk för testning av komponentens användargränssnitt och en mekanism för testning och felsökning av komponenter
-seo-description: AEM tillhandahåller ett ramverk för testning av komponentens användargränssnitt och en mekanism för testning och felsökning av komponenter
+seo-description: AEM provides a framework for testing component UI and a mechanism for testing and debugging components
 uuid: 29c43202-0a4e-41ba-9176-92fa77c627d5
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: testing
 content-type: reference
 discoiquuid: 0f977264-fe58-4478-bd38-aca5c75f36aa
-translation-type: tm+mt
-source-git-commit: 60f36a33471dbbd9ca877dbbedc82ade606a125c
+exl-id: 9387cdb4-f8de-4229-90d1-59218ac17561
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
 
-
 # Testnings- och spårningsverktyg{#testing-and-tracking-tools}
+
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
 
 ## Testning {#testing}
 
 AEM tillhandahåller:
 
 * [ett ramverk för testning av komponentens användargränssnitt](/help/sites-developing/hobbes.md).
-* [en mekanism för att testa och felsöka komponenter](/help/sites-developing/developer-mode.md).
+* [en mekanism för testning och felsökning av komponenter](/help/sites-developing/developer-mode.md).
 
 Här följer två testverktyg för öppen källkod:
 
 **Selen**
 
-Selenium används för funktionstestning i en webbläsare med en användare per aktivitet. Den registrerar teststeg (klickningar) som antingen HTML-tabeller eller Java-klasser.
+Selenium används för funktionstestning i en webbläsare med en användare per aktivitet. Det registrerar teststeg (klickningar) som HTML-tabeller eller Java-klasser.
 
 Mer information finns i [https://www.seleniumhq.org/](https://www.seleniumhq.org/).
 

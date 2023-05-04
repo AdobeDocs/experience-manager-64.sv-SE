@@ -10,45 +10,49 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: ea12035c-09b6-4197-ab23-c27fe71e7432
-source-git-commit: 3a206c2fa8c18876b6e1481e2feb86857b5219c4
+source-git-commit: c5b816d74c6f02f85476d16868844f39b4c47996
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1170'
 ht-degree: 1%
 
 ---
 
 # Konfigurerar e-postmeddelande{#configuring-email-notification}
 
+>[!CAUTION]
+>
+>AEM 6.4 har nått slutet på den utökade supporten och denna dokumentation är inte längre uppdaterad. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/).
+
 AEM skickar e-postmeddelanden till användare som:
 
-* Prenumerera på sidhändelser, t.ex. ändring eller replikering. Avsnittet [Notification Inbox](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications) beskriver hur du prenumererar på sådana händelser.
+* Prenumerera på sidhändelser, t.ex. ändring eller replikering. The [Inkorgen för meddelanden](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications) I beskrivs hur du prenumererar på sådana händelser.
 
 * Prenumerera på forumevent.
-* Måste utföra ett steg i ett arbetsflöde. Avsnittet [Deltagarsteg](/help/sites-developing/workflows-step-ref.md#participant-step) beskriver hur du utlöser e-postmeddelanden i ett arbetsflöde.
+* Måste utföra ett steg i ett arbetsflöde. The [Deltagarsteg](/help/sites-developing/workflows-step-ref.md#participant-step) beskriver hur du aktiverar e-postmeddelanden i ett arbetsflöde.
 
 Krav:
 
 * Användaren/användarna måste ha en giltig e-postadress definierad i profilen.
-* **Day CQ Mail Service** måste vara korrekt konfigurerad.
+* The **Dagens CQ-posttjänst** måste konfigureras korrekt.
 
 När en användare meddelas får han eller hon ett e-postmeddelande på det språk som definieras i hans profil. Varje språk har en egen mall som kan anpassas. Nya e-postmallar kan läggas till för nya språk.
 
 >[!NOTE]
 >
->När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information och rekommenderade metoder finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md).
+>När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
 ## Konfigurera e-posttjänsten {#configuring-the-mail-service}
 
-För att AEM ska kunna skicka e-post måste **Day CQ Mail Service** vara korrekt konfigurerad. Du kan visa konfigurationen i webbkonsolen. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information och rekommenderade metoder finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md).
+För AEM kunna skicka e-post **Dagens CQ-posttjänst** måste konfigureras korrekt. Du kan visa konfigurationen i webbkonsolen. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
 
 Följande begränsningar gäller:
 
-* SMTP-serverporten **måste vara 25 eller högre.**
+* The **SMTP-serverport** måste vara 25 eller högre.
 
-* **SMTP-servervärdnamnet** får inte vara tomt.
-* **&quot;Från&quot;-adressen** får inte vara tom.
+* The **Värdnamn för SMTP-server** får inte vara tomt.
+* The **&quot;Från&quot;-adress** får inte vara tomt.
 
-Du kan felsöka ett problem med **Day CQ Mail Service** genom att titta på loggarna för tjänsten:
+Så här felsöker du ett problem med **Dagens CQ-posttjänst** kan du titta på loggarna för tjänsten:
 
 `com.day.cq.mailer.DefaultMailService`
 
@@ -58,27 +62,27 @@ Konfigurationen ser ut så här i webbkonsolen:
 
 ## Konfigurera e-postmeddelandekanalen {#configuring-the-email-notification-channel}
 
-När du prenumererar på en sida eller ett forumhändelsemeddelande anges från-e-postadressen till `no-reply@acme.com` som standard. Du kan ändra det här värdet genom att konfigurera tjänsten **Notification Email Channel** i webbkonsolen.
+När du prenumererar på en sida eller ett forum-event-meddelande anges e-postadressen till `no-reply@acme.com` som standard. Du kan ändra det här värdet genom att konfigurera **E-postkanal för avisering** i webbkonsolen.
 
-Om du vill konfigurera from-email-adressen lägger du till en `sling:OsgiConfig`-nod i databasen. Använd följande procedur för att lägga till noden direkt med CRXDE Lite:
+Om du vill konfigurera från-e-postadressen lägger du till en `sling:OsgiConfig` till databasen. Använd följande procedur för att lägga till noden direkt med CRXDE Lite:
 
-1. I CRXDE Lite lägger du till en mapp med namnet `config` under din programmapp.
+1. Lägg till en mapp med namnet i CRXDE Lite `config` nedanför din programmapp.
 1. Lägg till en nod med namnet:
 
-   `com.day.cq.wcm.notification.email.impl.EmailChannel` av typen  `sling:OsgiConfig`
+   `com.day.cq.wcm.notification.email.impl.EmailChannel` av typen `sling:OsgiConfig`
 
-1. Lägg till en `String`-egenskap i noden `email.from`. Ange den e-postadress som du vill använda som värde.
+1. Lägg till en `String` egenskap till noden med namnet `email.from`. Ange den e-postadress som du vill använda som värde.
 
-1. Klicka på **Spara alla**.
+1. Klicka **Spara alla**.
 
 Använd följande procedur för att definiera noden i innehållspaketets källmappar:
 
-1. Skapa en fil med namnet `com.day.cq.wcm.notification.email.impl.EmailChannel.xml` i `jcr_root/apps/*app_name*/config folder`
+1. I `jcr_root/apps/*app_name*/config folder`, skapa en fil med namnet `com.day.cq.wcm.notification.email.impl.EmailChannel.xml`
 
 1. Lägg till följande XML för att representera noden:
 
    `<?xml version="1.0" encoding="UTF-8"?> <jcr:root xmlns:sling="https://sling.apache.org/jcr/sling/1.0" xmlns:jcr="https://www.jcp.org/jcr/1.0" jcr:primaryType="sling:OsgiConfig" email.from="name@server.com"/>`
-1. Ersätt värdet för attributet `email.from` ( `name@server.com`) med din e-postadress.
+1. Ersätt värdet för `email.from` attribute ( `name@server.com`) med din e-postadress.
 
 1. Spara filen.
 
@@ -96,7 +100,7 @@ E-postmallar för sidmeddelanden finns nedan:
 
 `/libs/settings/notification-templates/com.day.cq.wcm.core.page`
 
-Standardmallen för engelska ( `en.txt`) definieras så här:
+Standardmallen för engelska ( `en.txt`) definieras enligt följande:
 
 ```xml
 subject=[CQ Page Event Notification]: Page Event
@@ -135,7 +139,7 @@ Mallen måste ha följande format:
  footer=<text_4>
 ```
 
-Där &lt;text_x> kan vara en blandning av statisk text och dynamiska strängvariabler. Följande variabler kan användas i e-postmallen för sidmeddelanden:
+Plats &lt;text_x> kan vara en blandning av statisk text och dynamiska strängvariabler. Följande variabler kan användas i e-postmallen för sidmeddelanden:
 
 * `${time}`, händelsens datum och tid.
 
@@ -144,7 +148,7 @@ Där &lt;text_x> kan vara en blandning av statisk text och dynamiska strängvari
 * `${userId}`, ID:t för den användare som utlöste händelsen.
 * `${modifications}`, beskriver sidhändelsens typ och sidsökvägen i formatet:
 
-   &lt;page event=&quot;&quot; type=&quot;&quot;> =>  &lt;page path=&quot;&quot;>
+   &lt;page event=&quot;&quot; type=&quot;&quot;> => &lt;page path=&quot;&quot;>
 
    Till exempel:
 
@@ -156,7 +160,7 @@ E-postmallar för forummeddelanden finns under:
 
 `/etc/notification/email/default/com.day.cq.collab.forum`
 
-Standardmallen för engelska ( `en.txt`) definieras så här:
+Standardmallen för engelska ( `en.txt`) definieras enligt följande:
 
 ```xml
 subject=[CQ Forum Notification]
@@ -193,7 +197,7 @@ Mallen måste ha följande format:
  footer=<text_4>
 ```
 
-Där `<text_x>` kan vara en blandning av statisk text och dynamiska strängvariabler.
+Plats `<text_x>` kan vara en blandning av statisk text och dynamiska strängvariabler.
 
 Följande variabler kan användas i e-postmallen för forummeddelanden:
 
@@ -250,11 +254,11 @@ subject=<text_1>
 
 >[!NOTE]
 >
->Där `<text_x>` kan vara en blandning av statisk text och dynamiska strängvariabler. Varje rad i ett `<text_x>`-objekt måste avslutas med ett omvänt snedstreck ( `\`), utom för den sista instansen, när frånvaron av ett omvänt snedstreck anger slutet på strängvariabeln `<text_x>`.
+>Plats `<text_x>` kan vara en blandning av statisk text och dynamiska strängvariabler. Varje rad i en `<text_x>` objektet måste avslutas med ett omvänt snedstreck ( `\`), förutom för den sista förekomsten, när frånvaron av omvänt snedstreck anger slutet på `<text_x>` strängvariabel.
 >
->Mer information om mallformatet finns i [javadocs i metoden Properties.load()](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#load-java.io.InputStream-).
+>Mer information om mallformatet finns i [javadocs för Properties.load()](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#load-java.io.InputStream-) -metod.
 
-Metoden `${payload.path.open}` visar sökvägen till arbetsobjektets nyttolast. För en sida i Sites liknar till exempel `payload.path.open` `/bin/wcmcommand?cmd=open&path=…`.; detta är utan servernamnet, vilket är orsaken till att mallen anger detta med `${host.prefix}`.
+Metoden `${payload.path.open}` visar sökvägen till arbetsobjektets nyttolast. För en sida i Sites händer sedan `payload.path.open` skulle likna `/bin/wcmcommand?cmd=open&path=…`.; det här är utan servernamnet, vilket är orsaken till att mallen anger det här med `${host.prefix}`.
 
 Följande variabler kan användas i e-postmallen:
 
@@ -290,7 +294,7 @@ Följande variabler kan användas i e-postmallen:
 
 Så här lägger du till en mall för ett nytt språk:
 
-1. Lägg till en fil `<language-code>.txt` nedan i CRXDE:
+1. Lägg till en fil i CRXDE `<language-code>.txt` nedan:
 
    * `/libs/settings/notification-templates/com.day.cq.wcm.core.page` : för sidmeddelanden
    * `/etc/notification/email/default/com.day.cq.collab.forum` : för forummeddelanden
@@ -301,12 +305,12 @@ Så här lägger du till en mall för ett nytt språk:
 
 >[!NOTE]
 >
->`<language-code>` som används som filnamn för e-postmallen måste vara en språkkod med två bokstäver och gemener som känns igen av AEM. För språkkoder använder AEM ISO-639-1.
+>The `<language-code>` som används som filnamn för e-postmallen måste vara en språkkod med två bokstäver och gemener som känns igen av AEM. För språkkoder använder AEM ISO-639-1.
 
 ## Konfigurera e-postmeddelanden från AEM Assets {#assetsconfig}
 
 När samlingar i AEM Assets delas eller inte delas kan användare få e-postmeddelanden från AEM. Följ de här stegen för att konfigurera e-postmeddelanden.
 
 1. Konfigurera e-posttjänsten enligt beskrivningen ovan i [Konfigurera e-posttjänsten](/help/sites-administering/notification.md#configuring-the-mail-service).
-1. Logga in AEM som administratör. Klicka på **Verktyg** > **Åtgärder** > **Webbkonsol** för att öppna Konfiguration av webbkonsol.
-1. Redigera **Day CQ DAM Resource Collection-server**. Välj **skicka e-post**. Klicka på **Spara**.
+1. Logga in AEM som administratör. Klicka **verktyg** >  **Operationer** >  **Webbkonsol** för att öppna Konfiguration av webbkonsol.
+1. Redigera **Day CQ DAM Resource Collection Service**. Välj **skicka e-post**. Klicka **Spara**.
